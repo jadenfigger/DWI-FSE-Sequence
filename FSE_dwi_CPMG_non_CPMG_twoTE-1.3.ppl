@@ -185,12 +185,13 @@ SCROLLBAR "b-value input mode","0=DAC array, 1=b-value array","%u",0,1,0,1,b_inp
 EDITTEXT "Little delta","us","%d",200,32767,5000,1,sm_delta;
 EDITTEXT "Big delta","us","%d",200,100000,11000,1,big_delta;
 
-EDITTEXT "Number of b-values","","%d",1,16,1,1,no_b_steps;
-VAR_ARRAY "b-values array (used when b-value mode=1)", "s/mm^2","%d",0,4000,1,b_steps_array, 16, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+EDITTEXT "Number of diffusion acquisitions","(rows of the acq table)","%d",1,64,1,1,no_diff_acq;
+VAR_ARRAY "Acq table: b-value (used when b-value mode=1)", "s/mm^2","%d",0,4000,1,acq_b, 64, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
 
-VAR_ARRAY "b-values array (gradient DAC)", "DAC units","%d",0,32767,1,b_grads_array, 16, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;		
-EDITTEXT "Number of directions","","%d",1,300,1,1,no_diff_dir;
-VAR_ARRAY "Directions array", "(1000-normalised)","%d",-1000,1000,1,diff_grad_dir, 48, 1000, 0, 0, 0, 1000, 0, 0, 0, 0, 500, 700, 400, 0, 0, 0, 0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0; 
+VAR_ARRAY "Acq table: b-value (gradient DAC)", "DAC units","%d",0,32767,1,acq_grad, 64, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;		
+VAR_ARRAY "Acq table: direction X", "(1000-normalised)","%d",-1000,1000,1,acq_x, 64, 1000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0; 
+VAR_ARRAY "Acq table: direction Y", "(1000-normalised)","%d",-1000,1000,1,acq_y, 64, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0; 
+VAR_ARRAY "Acq table: direction Z", "(1000-normalised)","%d",-1000,1000,1,acq_z, 64, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0; 
 
 EDITTEXT "Diff. ramp time","us, multiple of 10 only","%d",100,5000,500,1,diff_tramp;
 EDITTEXT "Diff scale","%","%u",100,200,100,1,diff_grad_scale;
@@ -274,9 +275,7 @@ END
 #define get_gp_var_mul2(ind) 		pr(GP2OFFSET+ind, SPAGE)
 
 //Diffusion definitions
-#define MAX_BVALS 16
-#define MAX_DIRECTIONS 16
-#define MAX_DIRECTIONSX3 48
+#define MAX_DIFF_ACQ 64
 \\#define DELTAS_IN_MILLISECONDS
 
 
@@ -421,14 +420,14 @@ main(){
 	int bad_cnt;
 	
 	/*	diffusion variables */
-	int no_b_steps, b_inc, max_diff_grad, max_diff_grad_pc;
+	int b_inc, max_diff_grad, max_diff_grad_pc;
 	long b_max;  // [MERGE-2TE] F2: was int; true max b overflows 16 bit at long delta/Delta and full gradient
 	long b_kfac; // [MERGE-2TE] F3: fixed-point b-factor kernel = 39.69*delta_us^2*(Delta-delta/3)_us/1e10
 	int b_input_mode;              // [B-VALUE MODE] 0 = DAC array, 1 = b-value array
 	int b_calc_cnt;                // [B-VALUE MODE] loop counter over b entries
 	int dac_lo, dac_hi, dac_mid;   // [B-VALUE MODE] binary search bounds
-	int diff_grad, b_step_cnt;
-	int diff_list, diff_list2, diff_dir_cnt;
+	int diff_grad, diff_acq_cnt;
+	int diff_list, diff_list2;
 	int diff_slice, diff_read, diff_phase;
 	int diff_tramp, diff_clock;  /* clock time is changed for diffusion ramps*/
 	long b_diff_slice, b_diff_read, b_diff_phase;
@@ -441,14 +440,16 @@ main(){
 	long big_delta_us, sm_delta_us;
 	long b_trial, b_target;        // [B-VALUE MODE] forward-computed and requested b
 	common int diff_on, diff_non_zero;
-	int b_grads_array[MAX_BVALS];	// [TWO-TE FIX #11] DAC values are authoritative; printed Stejskal-Tanner b-value is accurate only after FIX #3/#4 make realized big_delta requested.
-	int b_steps_array[MAX_BVALS];
-	int diff_grad_dir[MAX_DIRECTIONSX3];
+	// [ACQ-TABLE] one row per acquired diffusion volume; row i is acquired as experiment
+	// volume i (and again at i+no_diff_acq, ... when no_experiments is a multiple).
+	int acq_grad[MAX_DIFF_ACQ];	// [TWO-TE FIX #11] DAC values are authoritative; printed Stejskal-Tanner b-value is accurate only after FIX #3/#4 make realized big_delta requested.
+	int acq_b[MAX_DIFF_ACQ];
+	int acq_x[MAX_DIFF_ACQ], acq_y[MAX_DIFF_ACQ], acq_z[MAX_DIFF_ACQ];
 	common int diff_tcrush, tcrush1, diff_grad_scale;
 	long space_pre, space_post, extra_te, extra_te2, extra_delta;
 	long extra_delta_us, extra_delta2_us;
 	\\void delay32(long);
-	int no_diff_dir;
+	int no_diff_acq;
 	long min_pre, min_post, true_half_te_us;
 	long te_us_long;
 	long min_te;
@@ -650,16 +651,20 @@ main(){
 	
 	//Check that the number of experiments has been set correctly:
 	
-	if (((no_experiments)%(no_b_steps*no_diff_dir))!=0)
+	// [ACQ-TABLE] The acquisition loop only returns to experiment_loop after a COMPLETE
+	// pass over the table, so the number of acquired volumes is always a multiple of
+	// no_diff_acq. The modulo test (not equality) keeps the existing outer repetition
+	// semantics: no_experiments/no_diff_acq repeats of the whole diffusion table.
+	if (((no_experiments)%(no_diff_acq))!=0)
 	{
-		printf("No expts should be divisible by no of b-steps (%d) * no directions (%d)\n", no_b_steps, no_diff_dir);
+		printf("No expts should be divisible by no of diffusion acqs (%d)\n", no_diff_acq);
 		goto end;
 	}
 	
-	if (no_experiments < no_b_steps)
+	if (no_experiments < no_diff_acq)
 	{
-		printf ("Number of expts must be = no_b_steps\n");
-		printf ("Set the Experiment Array Size to %d \n", no_b_steps);
+		printf ("Number of expts must be = no_diff_acq\n");
+		printf ("Set the Experiment Array Size to %d \n", no_diff_acq);
 		goto end;
 	}
 	max_diff_grad_pc = 0;
@@ -667,14 +672,17 @@ main(){
 		max_diff_grad_pc = 1;
 	b_calc_cnt = 0;
 b_value_direction_loop:
-		if (b_calc_cnt >= no_diff_dir)
+		if (b_calc_cnt >= no_diff_acq)
 			goto b_value_direction_done;
-		templ1 = IntToLong(diff_grad_dir[b_calc_cnt*3])*IntToLong(diff_grad_dir[b_calc_cnt*3]);
-		templ1 = templ1 + IntToLong(diff_grad_dir[b_calc_cnt*3+1])*IntToLong(diff_grad_dir[b_calc_cnt*3+1]);
-		templ1 = templ1 + IntToLong(diff_grad_dir[b_calc_cnt*3+2])*IntToLong(diff_grad_dir[b_calc_cnt*3+2]);
+		templ1 = IntToLong(acq_x[b_calc_cnt])*IntToLong(acq_x[b_calc_cnt]);
+		templ1 = templ1 + IntToLong(acq_y[b_calc_cnt])*IntToLong(acq_y[b_calc_cnt]);
+		templ1 = templ1 + IntToLong(acq_z[b_calc_cnt])*IntToLong(acq_z[b_calc_cnt]);
+		// [ACQ-TABLE] Applied to EVERY row, b=0 rows included. A b=0 row must carry a unit
+		// direction so that the DAC=1 b=0 workaround below still plays a non-zero gradient;
+		// a literal X=Y=Z=0 row is rejected here rather than silently defeating it.
 		if ((max_diff_grad_pc==1)&&((templ1 < 902500L)||(templ1 > 1102500L)))
 		{
-			printf("Dir %d not unit length: b-value mode needs\n", b_calc_cnt);
+			printf("Row %d not unit length: b-value mode needs\n", b_calc_cnt);
 			printf("all directions normalised to 1000\n");
 			goto end;
 		}
@@ -696,7 +704,7 @@ b_value_direction_done:
 			printf("Max achievable b = %ld s/mm2\n", b_max);
 		b_calc_cnt = 0;
 b_value_entry_loop:
-		b_target = IntToLong(b_steps_array[b_calc_cnt]);
+		b_target = IntToLong(acq_b[b_calc_cnt]);
 		if ((max_diff_grad_pc==1)&&(b_target > b_max))
 		{
 			printf("b=%ld too high for current delta/Delta\n", b_target);
@@ -734,9 +742,9 @@ b_value_search_done:
 		if (max_diff_grad_pc==1)
 		{
 			if (b_target <= 0)
-				b_grads_array[b_calc_cnt] = 1;
+				acq_grad[b_calc_cnt] = 1;
 			else
-				b_grads_array[b_calc_cnt] = dac_mid;
+				acq_grad[b_calc_cnt] = dac_mid;
 		}
 		// [B-VALUE MODE] Recompute from the post-scale DAC so setup and runtime reports agree.
 		dac_mid = scale(dac_mid, diff_grad_scale, 100);
@@ -751,7 +759,7 @@ b_value_search_done:
 		if ((max_diff_grad_pc==1)&&(b_target>0)&&(templ3*100L > b_target*5L))
 			printf("b[%d] differs >5%%; record achieved b\n", b_calc_cnt);
 		b_calc_cnt = b_calc_cnt+1;
-		if (b_calc_cnt >= no_b_steps)
+		if (b_calc_cnt >= no_diff_acq)
 			goto b_value_mode_done;
 		goto b_value_entry_loop;
 b_value_mode_done:
@@ -1686,7 +1694,7 @@ integer overflow errors so longs ie templ1 etc are used below */
 	if (validate==1) 
 	{
 		/* [MERGE-2TE] M1 (port): this jump lands PAST both the worst-case block and
-		   FIX #2's tcrush1 assignment inside directions_loop, so the validator ran
+		   FIX #2's tcrush1 assignment inside diff_acq_loop, so the validator ran
 		   with stale tcrush1/diff_non_zero left in dual-port RAM (possibly the
 		   previous scan's values) and its min-TE/min-TR did not match the played
 		   sequence. Set the worst case here, matching FIX #2's uniform diff_on
@@ -1924,11 +1932,15 @@ experiment_loop:
 	}
 
 	
-	b_step_cnt = 0;
-b_step_loop:
+	diff_acq_cnt = 0;
+	// [ACQ-TABLE] single loop over the acquisition table; replaces the nested
+	// b_step_loop (b_step_cnt) / directions_loop (diff_dir_cnt) pair. One pass = one
+	// diffusion volume. Kept as the FIRST statements of the loop body so that the
+	// b->DAC scaling stays exactly where it was relative to waittimer(31000) below.
+diff_acq_loop:
 	
 	// Now in DAC values
-	diff_grad = scale(b_grads_array[b_step_cnt], diff_grad_scale, 100);	
+	diff_grad = scale(acq_grad[diff_acq_cnt], diff_grad_scale, 100);	
 	if(report_on)
 		printf("diff_grad = %d\n",diff_grad);
 	
@@ -1937,9 +1949,6 @@ b_step_loop:
 		printf("Diffusion gradient amp %dDAC is too high\n", diff_grad);
 		goto end;
 	}
-
-	diff_dir_cnt = 0;
-directions_loop:
 
 	// Only consider doing Nyquist on the first loop iteration
 	
@@ -1985,9 +1994,9 @@ directions_loop:
 	tcrush1 = tcrush;
 	// Check if the diffusion gradients are zero; if they are, we switch the diffusion part off
 	diff_non_zero = 0;
-	diff_read  = diff_on*scale( diff_grad, diff_grad_dir[diff_dir_cnt*3],1000) ;
-	diff_phase = diff_on*scale( diff_grad, diff_grad_dir[diff_dir_cnt*3+1],1000) ;
-	diff_slice = diff_on*scale( diff_grad, diff_grad_dir[diff_dir_cnt*3+2],1000) ;   
+	diff_read  = diff_on*scale( diff_grad, acq_x[diff_acq_cnt],1000) ;
+	diff_phase = diff_on*scale( diff_grad, acq_y[diff_acq_cnt],1000) ;
+	diff_slice = diff_on*scale( diff_grad, acq_z[diff_acq_cnt],1000) ;   
 	\\printf("diff_read = %d, diff_phase = %d, diff_slice = %d\n",diff_read,diff_phase,diff_slice);
 	
 
@@ -2022,7 +2031,7 @@ directions_loop:
 	}
 	
 	// [TWO-TE FIX #3] The superseded first-180 list experiment is replaced by the
-	// dedicated slice_180_refocus_diff list built before directions_loop.
+	// dedicated slice_180_refocus_diff list built before diff_acq_loop.
 	//hostrequest();
 	
 	image_av = 0;
@@ -2433,7 +2442,7 @@ slice_block_loop:
 			printf("\nb-value ~ %ld (s/mm^2);\n", templ4);
 		else
 			printf("\nb report off (needs delta<=10ms, Delta<=80ms, unit dirs)\n"); // [MERGE-2TE] F3/F6
-        printf("DW grad array for this b-value:\n X=%ld, Y=%ld, Z=%ld,\n",diff_grad_dir[diff_dir_cnt*3],diff_grad_dir[diff_dir_cnt*3+1],diff_grad_dir[diff_dir_cnt*3+2]);
+        printf("DW grad array for this b-value:\n X=%ld, Y=%ld, Z=%ld,\n",acq_x[diff_acq_cnt],acq_y[diff_acq_cnt],acq_z[diff_acq_cnt]);
 
     }
     
@@ -3853,15 +3862,10 @@ de_90_pulse:
 		goto averages_loop;
 
 	completed_ex = completed_ex + 1;
-	// next direction
-	diff_dir_cnt = diff_dir_cnt + 1;
-	if (diff_dir_cnt < no_diff_dir)          // next diffusion direction 
-		goto directions_loop;
-	
-	// next b_value 
-	b_step_cnt = b_step_cnt+1;
-	if (b_step_cnt < no_b_steps) 
-		goto b_step_loop;
+	// next diffusion acquisition (next row of the acq table)
+	diff_acq_cnt = diff_acq_cnt + 1;
+	if (diff_acq_cnt < no_diff_acq)
+		goto diff_acq_loop;
 
 	if (completed_ex < no_experiments) {
 		goto experiment_loop;
@@ -4143,4 +4147,84 @@ end:
          overflow the 32-bit product and prints a notice instead.
     The pre-merge v1.2 file is retained unchanged as the rollback.
   Original sequence behaviour with diff_tcrush == tcrush is unchanged.
+
+  ============================================================================
+  [ACQ-TABLE] Explicit diffusion acquisition table / 2026 (tagged [ACQ-TABLE])
+  ============================================================================
+  Purpose: replace the rectangular (no_b_steps x no_diff_dir) diffusion grid with
+  an explicit table with ONE ROW PER ACQUIRED DIFFUSION VOLUME, so that b=0 need
+  not be repeated once per direction, each shell may carry a different number of
+  directions, and extra b=0 volumes may be inserted anywhere in the order.
+
+  Interface (PARAMLIST / PPR):
+      no_diff_acq            number of table rows (1 .. MAX_DIFF_ACQ = 64)
+      acq_b[64]              requested b, s/mm^2   (used when b_input_mode = 1)
+      acq_grad[64]           gradient DAC          (used when b_input_mode = 0;
+                             written by the setup b->DAC search when mode = 1)
+      acq_x/acq_y/acq_z[64]  direction components, 1000-normalised
+  Superseded: no_b_steps, b_steps_array[16], b_grads_array[16], no_diff_dir,
+  diff_grad_dir[48], and the runtime counters b_step_cnt / diff_dir_cnt (now the
+  single index diff_acq_cnt). MAX_BVALS / MAX_DIRECTIONS / MAX_DIRECTIONSX3 are
+  replaced by MAX_DIFF_ACQ.
+
+  Mapping from an old PPR: an old configuration with no_b_steps = B and
+  no_diff_dir = D becomes no_diff_acq = B*D rows, row (i*D + j) carrying
+  b_steps_array[i] / b_grads_array[i] and direction j - i.e. exactly the order
+  the old nested loop acquired them in, so the MRD experiment index is unchanged.
+
+  Deliberately PRESERVED:
+    - the b->DAC binary search, b_kfac kernel, max_diff_grad = 30000 cap,
+      diff_grad_scale back-conversion and achieved-b reporting (F3), all still
+      executed once per row in the setup section, never during acquisition;
+    - the DAC = 1 workaround for b = 0 in b-value mode. A b = 0 row must
+      therefore carry a UNIT direction; the normalisation check now runs over
+      every table row, so a literal X = Y = Z = 0 row is rejected in b-value mode
+      instead of silently turning the DAC = 1 lobe into a true zero gradient.
+      DAC mode (b_input_mode = 0) is unchanged and still takes acq_grad
+      literally, including 0;
+    - diff_on timing (FIX #2): tcrush1 = diff_tcrush, min_pre/min_post,
+      big_delta, extra_delta and the first-180 budget follow diff_on, not the
+      gradient amplitude, so the surviving b = 0 volume keeps the timing it had;
+    - the outer experiment repetition: the test is no_experiments % no_diff_acq,
+      NOT equality. The acquisition loop only re-enters experiment_loop after a
+      complete pass over the table, so the acquired volume count is always a
+      multiple of no_diff_acq; the modulo test makes that multiple equal
+      no_experiments, exactly as the old no_b_steps*no_diff_dir test did. This
+      keeps TR_array, Dixon W-F (needs no_experiments >= 3), MTC array indexing
+      by completed_ex and the Duration report working unchanged;
+    - the runtime scale(acq_grad[i], diff_grad_scale, 100), so the interactively
+      adjustable (common int) diff_grad_scale still applies during a scan.
+
+  Also fixed as a direct consequence (was a latent out-of-bounds):
+      EDITTEXT "Number of directions" exposed a maximum of 300 while
+      diff_grad_dir held only 48 ints (16 directions). no_diff_dir > 16 read past
+      the end of the array both in the setup normalisation loop and at
+      diff_grad_dir[diff_dir_cnt*3 + 2] during acquisition, feeding out-of-bounds
+      memory into the played gradient amplitudes (PPL performs no array bounds
+      checking - manual 4.8.5). The new EDITTEXT maximum (64) equals both the
+      VAR_ARRAY no_elements and the declared array size for all five arrays.
+
+  Execution-time accounting (manual 4.9.2), starttimer() at the end of the
+  profile loop -> waittimer(31000):
+      removed  index arithmetic diff_dir_cnt*3(+1)(+2) from 3 array reads
+               (3 * 400 ns '*' + 2 * (200 + 100) ns) ................ -2.4 us
+      added    the former b_step_loop head now runs on EVERY volume,
+               not only on b-value boundaries: scale() 11.1 us +
+               operands, if(report_on), if(diff_on && diff_grad>30000)  +16.7 us
+      loop tail is 3 statements instead of 6 ................... -3.2 us when
+               the old path had to fall through to b_step_loop
+      net    : +14.3 us worst case (multi-direction shells), and FASTER than the
+               old code whenever no_diff_dir was 1. The documented slack on that
+               window is 31000 - 29813 = 118.7 us. No statement was added to the
+               tighter waittimer(5300)/waittimer(19700) windows; the 19700 window
+               got 2.4 us cheaper. MUST BE CONFIRMED ON THE CONSOLE: an overrun
+               of a waittimer budget costs a full 5 ms (manual 4.8.x waittimer),
+               which would show as a 5 ms TR step at volume boundaries.
+
+  Nothing downstream of diff_grad / diff_read / diff_phase / diff_slice was
+  touched: RF timing, gradient lists, crushers, diffusion lobes, sm_delta,
+  big_delta, diff_tramp, tcrush1, min_pre/min_post, min TE/TR, extra_delta,
+  first-180 and subsequent-180 timing, CPMG/non-CPMG, two-TE, phase encoding,
+  echo ordering, navigators, averaging, phase cycling, MTC, Dixon and the
+  Duration formula are all byte-for-byte unchanged.
 *******************************************************************************/
