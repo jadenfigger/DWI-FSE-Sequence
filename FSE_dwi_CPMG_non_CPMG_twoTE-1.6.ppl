@@ -6,6 +6,11 @@ Author:     MR Solutions Ltd (Ruslan Garipov)
 Date:       18 March 2024
 Version:    2.7.7c / DWI For EVO systems
             + twoTE-1.3 merge / 22 August 2026 (changes tagged [MERGE-2TE])
+            + twoTE-1.5 / 24 September 2026: acq table 64 -> 512 rows
+              (changes tagged [ACQ-512])
+            + twoTE-1.6 / 29 September 2026: independent DAC crushers;
+              reverse-centric (6) and linear-interleaved (7) DWI ordering.
+              [CRUSH-PE] Source implementation; console validation required.
 
 
 FAST SPIN ECHO
@@ -102,7 +107,7 @@ SCROLLBAR "180 deg scale factor  ","rfcal","%.2f",0,300,200,100,p180_scale ;
 
 EDITTEXT  "Repetition time between shots (0=min)","ms","%d",0,32767,4000,1,tr;
 EDITTEXT  "Imaging echo spacing","ms (train spacing; sets echoes 2..N when Diffusion is ON)","%d",0,32767,25,1,esp;
-EDITTEXT  "Effective echo time","ms","%d",2,32767,125,1,te;
+EDITTEXT  "Echo time","ms (DWI: first echo; otherwise effective TE)","%d",2,32767,125,1,te;
 EDITTEXT  "PF effective number of echoes","","%d",0,128,0,1,PF_echoes;
 SCROLLBAR "Report Min TE and TR times ?","1=yes","%d",0,1,0,1,report_on;
 
@@ -110,6 +115,9 @@ EDITTEXT  "Ramp time","us, multiple of 10 only","%d",100,1000,500,1,tramp;
 EDITTEXT  "Rephase lobe duration","us","%d",100,5000,2000,1,tref_setup;
 EDITTEXT  "180 Crusher time","us","%d",0,5000,10,1,tcrush;
 EDITTEXT  "180 Crusher time diff","us","%d",0,10000,2000,1,diff_tcrush;
+SCROLLBAR "Independent 180 crushers","0=legacy, 1=separate lobes","%d",0,1,0,1,crush_independent_on;
+EDITTEXT "180 Crusher amplitude","DAC units (logical slice axis)","%d",-32767,32767,0,1,crush_amp;
+EDITTEXT "First 180 diffusion crusher amplitude","DAC units (logical slice axis)","%d",-32767,32767,0,1,diff_crush_amp;
 
 SCROLLBAR "Slice refocus lobe post 180","%","%d",0,300,100,1,gsp_lobe;
 SCROLLBAR "Slice refocus adjustment","%","%.1f",-100,100,0,10,gs_comp_scale;
@@ -138,7 +146,7 @@ SCROLLBAR "Read gradient ON","1=yes","%d",-1,1,1,1,gr_on;
 SCROLLBAR "Phase gradient ON","1=yes","%d",0,1,1,1,gp_on;
 SCROLLBAR "Slice phase gradient ON","1=yes","%u",0,1,1,1,gp_sl_on ;
 
-SCROLLBAR "PE order","0=pfgen,1=egen,2=single shot,3=tgen (disabled),4=NA,5=single echo","%d",0,5,1,1,PE_order;
+SCROLLBAR "PE order","0=pfgen,1=egen,2=single shot,3=disabled,4=NA,5=single echo,6=reverse centric,7=linear interleaved","%d",0,7,1,1,PE_order;
 SCROLLBAR "Phase steps 2 sequential/centric","seq/cen","%u",0,1,0,1,pe2_centric_on;
 SCROLLBAR "TREF setup mode","1=yes","%d",0,1,1,1,setup_mode;
 SCROLLBAR "1st Order Flow compensation ","off/on","%u",0,1,0,1,flow_comp_on;
@@ -183,15 +191,15 @@ VAR_ARRAY "CEST offset frequencies", "Hz","%d",-32767,32767,1,mtc_freq_array, 10
 SCROLLBAR "Master diffusion switch OFF/ON","0=OFF, 1=ON","%u",0,1,1,1,diff_on;
 SCROLLBAR "b-value input mode","0=DAC array, 1=b-value array","%u",0,1,0,1,b_input_mode;
 EDITTEXT "Little delta","us","%d",200,32767,5000,1,sm_delta;
-EDITTEXT "Big delta","us","%d",200,100000,11000,1,big_delta;
+EDITTEXT "Big delta","us","%d",200,65535,11000,1,big_delta;
 
-EDITTEXT "Number of diffusion acquisitions","(rows of the acq table)","%d",1,64,1,1,no_diff_acq;
-VAR_ARRAY "Acq table: b-value (used when b-value mode=1)", "s/mm^2","%d",0,4000,1,acq_b, 64, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+EDITTEXT "Number of diffusion acquisitions","(rows of the acq table)","%d",1,512,1,1,no_diff_acq;
+VAR_ARRAY "Acq table: b-value (used when b-value mode=1)", "s/mm^2","%d",0,13000,1,acq_b, 512;
 
-VAR_ARRAY "Acq table: b-value (gradient DAC)", "DAC units","%d",0,32767,1,acq_grad, 64, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;		
-VAR_ARRAY "Acq table: direction X", "(1000-normalised)","%d",-1000,1000,1,acq_x, 64, 1000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0; 
-VAR_ARRAY "Acq table: direction Y", "(1000-normalised)","%d",-1000,1000,1,acq_y, 64, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0; 
-VAR_ARRAY "Acq table: direction Z", "(1000-normalised)","%d",-1000,1000,1,acq_z, 64, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0; 
+VAR_ARRAY "Acq table: b-value (gradient DAC)", "DAC units","%d",0,32767,1,acq_grad, 512;		
+VAR_ARRAY "Acq table: direction X", "(1000-normalised)","%d",-1000,1000,1,acq_x, 512; 
+VAR_ARRAY "Acq table: direction Y", "(1000-normalised)","%d",-1000,1000,1,acq_y, 512; 
+VAR_ARRAY "Acq table: direction Z", "(1000-normalised)","%d",-1000,1000,1,acq_z, 512; 
 
 EDITTEXT "Diff. ramp time","us, multiple of 10 only","%d",100,5000,500,1,diff_tramp;
 EDITTEXT "Diff scale","%","%u",100,200,100,1,diff_grad_scale;
@@ -275,7 +283,7 @@ END
 #define get_gp_var_mul2(ind) 		pr(GP2OFFSET+ind, SPAGE)
 
 //Diffusion definitions
-#define MAX_DIFF_ACQ 64
+#define MAX_DIFF_ACQ 512
 \\#define DELTAS_IN_MILLISECONDS
 
 
@@ -312,7 +320,13 @@ main(){
 /*  misc */
 	int slice_180_refocus, stim_tcrush, temp, extra_val;
 	int slice_180_refocus_diff; // [TWO-TE FIX #3] first-180 crusher list (tcrush1 budget)
-	int this_tcrush;            // [TWO-TE FIX #3] crusher time for the 180 being played
+	int this_tcrush; // per-side pre-RF budget; includes extra ramps in independent mode
+	common int crush_independent_on, crush_amp, diff_crush_amp;
+	int crush_pre_pad, crush_post_pad, crush_rf_pad, crush_rf_flat;
+	int tcrush_play, tcrush1_play, refocus_mat, first_crush_flat;
+	long refocus_wait_ticks, min_half_te;
+	int pe_center_echo, pe_echo_index, pe_shots;
+	long pe_center_te_us;
 	int PE_order, echo, shot, cnt, nav_on, no_views_eff;
 	// gp_order[512]
 	int setup_mode;
@@ -538,11 +552,12 @@ main(){
 
 #ifdef DELTAS_IN_MILLISECONDS
 	big_delta_us = IntToLong(big_delta)*1000L;
-	sm_delta_us = IntToLong(sm_delta)*1000;
+	sm_delta_us = IntToLong(sm_delta)*1000L;
 	// Remember to change the limits in PARAMLIST header from us to ms when enabling this option!!!
 #else
 	big_delta_us = IntToLong(big_delta);
-	sm_delta_us = IntToLong(sm_delta);
+	if (big_delta_us < 0L) big_delta_us = big_delta_us + 65536L;
+	sm_delta_us = IntToLong(sm_delta);   // [FIX] was never assigned in the us build
 #endif
 
 	/* [MERGE-2TE] F3: fixed-point b-factor kernel, computed ONCE (delta and Delta
@@ -558,7 +573,7 @@ main(){
 	   b_kfac stays 0, b-value input mode aborts, and the runtime b report prints a
 	   notice instead of a wrong number. DAC-driven scanning is unaffected. */
 	b_kfac = 0;
-	if ((sm_delta_us <= 10000L)&&(big_delta_us <= 80000L))
+	if ((sm_delta_us > 0L)&&(sm_delta_us <= 10000L)&&(big_delta_us > sm_delta_us)&&(big_delta_us <= 80000L))
 	{
 		templ1 = (sm_delta_us*sm_delta_us + 500L)/1000L;   \\ delta^2/1e3      <= 1e5
 		templ2 = big_delta_us - sm_delta_us/3L;            \\ (Delta-delta/3) us
@@ -770,9 +785,9 @@ b_value_mode_done:
 
 
 
-	if ((nav_on==1)&&((no_views+views_per_seg)>MAXPESIZE)) 
+	if ((no_views<1)||(no_views>MAXPESIZE)||(views_per_seg<1)||(views_per_seg>no_views)) 
 	{
-		printf("No views + navgiators should be less than %d\n", MAXPESIZE);
+		printf("Views (including navigator) must be 1..%d; ETL must be 1..views\n", MAXPESIZE);
 		goto end;
 	}
 
@@ -796,13 +811,13 @@ b_value_mode_done:
 	}	
 	else
 	{
-		// PE_order_1 must be used with diff_on
+		// [CRUSH-PE] DWI timing always uses te as FIRST echo, independent of ordering.
 		te_eff = 1;
 		if (PE_order != 1)
 		{
-			if (PE_order != 5)
+			if ((PE_order != 5)&&(PE_order != 6)&&(PE_order != 7))
 			{
-				printf("Set PE order to 1 or 5 for DWI\n");
+				printf("Set PE order to 1, 5, 6 or 7 for DWI\n");
 				goto end;
 			}
 		}
@@ -816,10 +831,34 @@ b_value_mode_done:
 			goto end;
 		}
 	}
+	// [CRUSH-PE] New orders are full-Fourier multi-echo DWI only.
+	if ((PE_order==6)||(PE_order==7))
+	{
+		if ((diff_on!=1)||(views_per_seg<=1)||(echoes_to_discard!=0))
+		{
+			printf("PE 6/7 requires DWI ON, ETL > 1, and no discarded echoes\n");
+			goto end;
+		}
+		if ((PF_echoes!=0)&&(PF_echoes!=views_per_seg))
+		{
+			printf("PE 6/7 requires full Fourier: PF echoes = 0 or ETL\n");
+			goto end;
+		}
+	}
+	if ((PE_order<0)||(PE_order>7)||(PE_order==3)||(PE_order==4))
+	{
+		printf("Unsupported PE order\n");
+		goto end;
+	}
 	if (PE_order != 2){
 		no_views_eff = no_views;
 		if(nav_on==1) no_views_eff = no_views - views_per_seg;
 		
+		if (no_views_eff<1)
+		{
+			printf("Navigator leaves no imaging views\n");
+			goto end;
+		}
 		if ((no_views_eff%2 != 0 )&&(PE_order != 5)) {
 			printf("Effective number of views must be even number\n");
 			goto end;
@@ -907,7 +946,7 @@ b_value_mode_done:
 	}
 	
 	
-    if (PE_order <2)
+    if ((PE_order<2)||(PE_order==6))
 	{
 		if (no_views_eff%(views_per_seg*2) != 0 ) 	
 		{
@@ -916,7 +955,14 @@ b_value_mode_done:
 		}
 	}	
 
-    if (PE_order == 0) 
+	if ((PE_order==7)&&(no_views_eff%views_per_seg!=0))
+	{
+		printf("Linear interleaved requires imaging views divisible by ETL\n");
+		goto end;
+	}
+	if ((PE_order==6)||(PE_order==7))
+		goto PE_order_6_7;
+    if (PE_order == 0)
 		goto PE_order_0;
 	if (PE_order == 1) 
 		goto PE_order_1;
@@ -1041,6 +1087,39 @@ PE_order_1:
 
 	goto setup_image_params;
 
+PE_order_6_7:
+	// cnt already skips the unchanged navigator train. Zero-based imaging shot s,
+	// echo e, N imaging lines, L ETL, S=N/L. Values are gp_order, not physical DAC.
+	// Mode 6: reverse mode-1 echo assignment separately in every imaging shot.
+	// Mode 7: k(s,e) = -N/2 + s + e*S (negative to positive, interleaved).
+	pe_shots = no_views_eff/views_per_seg;
+	shot = 0;
+new_pe_shot_loop:
+	echo = 0;
+new_pe_echo_loop:
+	if (PE_order==6)
+	{
+		pe_echo_index = views_per_seg-1-echo;
+		if (shot<views_per_echo)
+			gp_mul = shot-views_per_echo-views_per_echo*pe_echo_index;
+		else
+			gp_mul = shot-views_per_echo+views_per_echo*pe_echo_index;
+	}
+	else
+		gp_mul = -no_views_eff/2 + shot + echo*pe_shots;
+	put_gp_order(cnt,gp_mul);
+	cnt = cnt+1;
+	echo = echo+1;
+	if (echo<views_per_seg) goto new_pe_echo_loop;
+	shot = shot+1;
+	if (shot<pe_shots) goto new_pe_shot_loop;
+	if (cnt!=no_views)
+	{
+		printf("Internal PE table length error\n");
+		goto end;
+	}
+	goto setup_image_params;
+
 PE_order_2:
 
 	// Single shot with centric order
@@ -1115,7 +1194,17 @@ PE_order_5:
 	
 
 	
-setup_image_params:	
+setup_image_params:
+	// Report actual zero-PE acquisition separately; never feed it into DWI timing.
+	if ((diff_on==1)&&(report_on==1))
+	{
+		pe_center_echo = 1;
+		if (PE_order==6) pe_center_echo = views_per_seg;
+		if (PE_order==7) pe_center_echo = (no_views_eff/2)/(no_views_eff/views_per_seg)+1;
+		pe_center_te_us = IntToLong(te)*1000L + IntToLong(pe_center_echo-1)*IntToLong(esp)*1000L;
+		printf("DWI PE=%d: first TE=%d ms, ESP=%d ms\n", PE_order, te, esp);
+		printf("Zero PE at echo %d; center TE=%ld us\n", pe_center_echo, pe_center_te_us);
+	}
 	
 	// Calculation of slice phase encoding (3D) steps
     // Sequential slice phase encoding
@@ -1180,6 +1269,61 @@ averages_loop_setup:
 
 	tsel90 = rf_length[rfnum];
 	tsel180 = tsel90;
+	// [CRUSH-PE] Independent waveform = SEC crusher, primary RF lobe, SEC crusher.
+	// Add a plateau margin for rfdelay and round RF flat time UP to an exact
+	// gradient raster (tramp/10 us = five gradient clock ticks), with an even flat
+	// time so the RF can be centered exactly. rfdelay is the minimum RF margin.
+	crush_pre_pad = 0;
+	crush_post_pad = 0;
+	crush_rf_pad = 0;
+	crush_rf_flat = tsel90;
+	if ((crush_independent_on!=0)&&(crush_independent_on!=1))
+	{
+		printf("Independent crusher switch must be 0 or 1\n");
+		goto end;
+	}
+	if (crush_independent_on==1)
+	{
+		if ((tramp<100)||(tramp>1000)||(tramp%10!=0))
+		{
+			printf("Independent crushers require ramp 100..1000 us, multiple of 10\n");
+			goto end;
+		}
+		if ((crush_amp==-32768)||(diff_crush_amp==-32768))
+		{
+			printf("Crusher amplitudes must be -32767..32767 DAC\n");
+			goto end;
+		}
+		if ((tcrush<=0)||(tcrush>5000)||((IntToLong(tcrush)*50L)%IntToLong(tramp)!=0L))
+		{
+			printf("tcrush must be 1..5000 us and an exact multiple of tramp/50 us\n");
+			goto end;
+		}
+		if ((diff_on==1)&&((diff_tcrush<=0)||(diff_tcrush>10000)||((IntToLong(diff_tcrush)*50L)%IntToLong(tramp)!=0L)))
+		{
+			printf("diff_tcrush must be 1..10000 us and an exact multiple of tramp/50 us\n");
+			goto end;
+		}
+		if (de_on==1)
+		{
+			printf("Independent crushers require Driven Equilibrium OFF\n");
+			goto end;
+		}
+		temp = tramp/10;
+		crush_rf_flat = ((tsel90+2*rfdelay+temp-1)/temp)*temp;
+		if (crush_rf_flat%2!=0) crush_rf_flat = crush_rf_flat+temp;
+		crush_rf_pad = crush_rf_flat-tsel90;
+		crush_pre_pad = 2*tramp+crush_rf_pad/2-rfdelay;
+		crush_post_pad = 2*tramp+crush_rf_pad/2+rfdelay;
+	}
+	tcrush_play = tcrush+crush_pre_pad;
+	tcrush1_play = tcrush_play;
+	if (diff_on==1) tcrush1_play = diff_tcrush+crush_pre_pad;
+	if ((report_on==1)&&(crush_independent_on==1))
+	{
+		printf("Independent crusher amplitudes (signed slice DAC): train=%d, first-DWI=%d\n", crush_amp, diff_crush_amp);
+		printf("Extra refocus block time=%d us; RF gradient flat=%d us\n", crush_pre_pad+crush_post_pad, crush_rf_flat);
+	}
 	if (no_views_2==1) 
 		bw_override = 71L;
 	// TODO: is this correct, or does 3D require 71L bandwidth? Answer: no it does not
@@ -1594,7 +1738,16 @@ integer overflow errors so longs ie templ1 etc are used below */
 	}
 	
 	slice_180_refocus = MR3040_InitList();
-	POSPULSE(tsel90+tcrush+tcrush, clock)
+	if (crush_independent_on==1)
+	{
+		POSPULSE_SEC(tcrush, clock)
+		POSPULSE(crush_rf_flat, clock)
+		POSPULSE_SEC(tcrush, clock)
+	}
+	else
+	{
+		POSPULSE(tsel90+tcrush+tcrush, clock)
+	}
 	// [TWO-TE FIX #3] Dedicated crusher list for the FIRST 180 only. Plateau uses the
 	// first-180 budget: diff_tcrush when diffusion mode is on, tcrush otherwise (identical
 	// to slice_180_refocus in that case). This makes the played waveform match the timing
@@ -1604,7 +1757,17 @@ integer overflow errors so longs ie templ1 etc are used below */
 	if (diff_on==1)
 		temp = diff_tcrush;
 	slice_180_refocus_diff = MR3040_InitList();
-	POSPULSE(tsel90+temp+temp, clock)
+	if (crush_independent_on==1)
+	{
+		first_crush_flat = temp;
+		POSPULSE_SEC(first_crush_flat, clock)
+		POSPULSE(crush_rf_flat, clock)
+		POSPULSE_SEC(first_crush_flat, clock)
+	}
+	else
+	{
+		POSPULSE(tsel90+temp+temp, clock)
+	}
 		
 
     slice_180_crush = MR3040_InitList();
@@ -2026,7 +2189,8 @@ diff_acq_loop:
 	// =============================================================================
 	if (validate==1)
 	{
-			tcrush1 = diff_tcrush;
+			tcrush1 = tcrush;
+			if (diff_on==1) tcrush1 = diff_tcrush;
 			diff_non_zero = diff_on;
 	}
 	
@@ -2199,15 +2363,15 @@ slice_block_loop:
 	sm_delta + diff_tramp, i.e. sm_delta is equal to the plateau plus one ramp */
 	\\printf("tacq = %ld\n",tacq);
 	templ2 = (tacq*(100))/200L;
-	min_pre = IntToLong(tsel90/2 + tramp*4 + 1000L + tsel180/2 + tcrush1 + 20); // TODO: is 20 still required?
+	min_pre = (IntToLong(tsel90/2) + 4L*tramp + 1000L + IntToLong(tsel180/2) + tcrush1 + 20L); // TODO: is 20 still required?
 	
 	// [TWO-TE FIX #2] Timing follows diff_on because zero-amplitude lobes are still played.
-	min_pre = min_pre + diff_on*(sm_delta_us + IntToLong(diff_tramp));
+	min_pre = min_pre + IntToLong(crush_pre_pad) + diff_on*(sm_delta_us + IntToLong(diff_tramp));
 
 	// 35 us for frequency reset for Rx
-	min_post = IntToLong(tsel180/2 + 3*tramp + 500L + tcrush1) + templ2 + 30L + 1L + 35L; 
+	min_post = (IntToLong(tsel180/2) + 3L*tramp + 500L + tcrush1) + templ2 + 30L + 1L + 35L; 
 	// [TWO-TE FIX #2] Timing follows diff_on because zero-amplitude lobes are still played.
-	min_post = min_post + diff_on*(sm_delta_us + IntToLong(diff_tramp));
+	min_post = min_post + IntToLong(crush_post_pad) + diff_on*(sm_delta_us + IntToLong(diff_tramp));
 	\\printf("tref1 = %d, tref3 = %d, psd/10 = %d\n",tref1,tref3,psd/10);
 
 	// How about big delta??
@@ -2273,7 +2437,7 @@ slice_block_loop:
 		// Calculate minimum big_delta. This would assume putting the diffusion gradients straight either side of the 180 and 
 		// the extra time for making up to TE before/after the diffusion gradients.
 		
-		big_delta_min = sm_delta_us + IntToLong(diff_tramp + tsel180 + 2*(tramp + tcrush1)) ;	// Minimum big_delta calculation
+		big_delta_min = sm_delta_us + (IntToLong(diff_tramp) + IntToLong(tsel180) + 2L*(IntToLong(tramp) + IntToLong(tcrush1)) + IntToLong(crush_pre_pad+crush_post_pad)) ;	// Minimum big_delta calculation
 		\\printf("sm_delta_us = %d\n",sm_delta_us);
 		\\printf("diff_tramp = %d, tsel180 = %d, tramp = %d, tcrush1 = %d\n",diff_tramp,tsel180,tramp,tcrush1);
 		\\printf("big_delta_min = %d\n",big_delta_min);
@@ -2318,7 +2482,7 @@ slice_block_loop:
 	// (enforced by FIX #4). Before FIX #3 the played crushers were tcrush, making the
 	// realized big delta short by 2*(diff_tcrush - tcrush) and the true b-value much lower
 	// than the value printed by the b-factor calculation below.
-	extra_delta = diff_on*(big_delta_us - sm_delta_us - IntToLong(diff_tramp + tsel180 + 2*tramp + 2*tcrush1));
+	extra_delta = diff_on*(big_delta_us - sm_delta_us - (IntToLong(diff_tramp) + IntToLong(tsel180) + 2L*IntToLong(tramp) + 2L*IntToLong(tcrush1) + IntToLong(crush_pre_pad+crush_post_pad)));
 	\\printf("extra_delta = %d\n",extra_delta);
 
 	space_pre = templ1;
@@ -2394,6 +2558,13 @@ slice_block_loop:
 	// [TWO-TE FIX #9] unused extra_te_us/extra_te2_us conversions removed; playout uses only extra_delta delays.
 	extra_delta_us = 10L*extra_delta_us;
 	extra_delta2_us = 10L*extra_delta2_us;
+	// Preserve odd-microsecond requested Delta exactly using half-us timer delays.
+	// Legacy path retains its existing integer-us split.
+	if (crush_independent_on==1)
+	{
+		extra_delta_us = extra_delta*5L;
+		extra_delta2_us = extra_delta_us;
+	}
 	
 	
 
@@ -2439,7 +2610,7 @@ slice_block_loop:
         \\printf("Min Big delta = %ld us, max Big delta = %ld us\n", big_delta_min, big_delta_max_4_given_TE);
         printf("\nDW grad: X=%d, Y=%d, Z=%d DAC\n",diff_read, diff_phase, diff_slice);
         if ((b_kfac > 0L)&&(templ4 >= 0L))
-			printf("\nb-value ~ %ld (s/mm^2);\n", templ4);
+			printf("\nNominal diffusion-module b ~ %ld (s/mm^2); excludes crushers/imaging gradients\n", templ4);
 		else
 			printf("\nb report off (needs delta<=10ms, Delta<=80ms, unit dirs)\n"); // [MERGE-2TE] F3/F6
         printf("DW grad array for this b-value:\n X=%ld, Y=%ld, Z=%ld,\n",acq_x[diff_acq_cnt],acq_y[diff_acq_cnt],acq_z[diff_acq_cnt]);
@@ -2455,19 +2626,19 @@ slice_block_loop:
 	
 /*  Calculation of te extend time */
 
-	te_a = tsel90 + tcrush + tref + 4*tramp;
+	te_a = IntToLong(tsel90) + tcrush + tref + 4L*tramp + crush_pre_pad;
 	t_flow = flow_comp_on*(tsel90/2 + 2*tramp); 
 	te_a = te_a + t_flow;
-	te_b = tsel90/2 + tcrush + tdp + 4*tramp + tacq_2;
+	te_b = IntToLong(tsel90/2) + tcrush + tdp + 4L*tramp + tacq_2 + crush_post_pad;
 	
 
 	// TODO Modify te_b with diff_on
 	\\if (diff_on)
 	\\	te_b = te_b + sm_delta_us + diff_tramp + (extra_delta_us + 156L)/10L;
 	
-	temp = te_a;
-	if (te_b > temp) 
-		temp = te_b;
+	min_half_te = te_a;
+	if (te_b > min_half_te)
+		min_half_te = te_b;
 	
 	
 	// [TWO-TE FIX #2] single min_te adjustment: b=0 and b>0 now share identical timing
@@ -2500,7 +2671,7 @@ slice_block_loop:
 		if(diff_on == 0)
 		{
 			\\printf("\nMinimum TE = %ld us\n", min_te);
-			printf("\nMinimum TE = %d ms (%d us)\n", (temp+21)/500 + 1, 2*(temp+21));
+			printf("\nMinimum TE = %ld ms (%ld us)\n", (min_half_te+21L)/500L + 1L, 2L*(min_half_te+21L));
 
 		}
 		else
@@ -2529,7 +2700,7 @@ slice_block_loop:
 	   long te_a/te_b to 16 bit before sign-extending (latent overflow once
 	   tsel90+tref+crushers approach 32 ms). */
 	if (templ1 - (te_a + 21L) < 0 || templ1 - (te_b + 21L) < 0 ) {
-		printf("TE is too short, increase to %d ms\n", (temp+21)/500 + 1);
+		printf("TE is too short, increase to %ld ms\n", (min_half_te+21L)/500L + 1L);
 		goto end;
 	}
 	
@@ -2906,8 +3077,19 @@ slice_block_loop:
 	CREATE_MATRIX(slice_crush,gs_on*gs_var_rescale,0,0)
 	delay(caldelay,us);
 
-	CREATE_MATRIX(slice_crush_sec, 0, 0, 0)
+	CREATE_MATRIX(slice_crush_sec, gs_on*crush_independent_on*crush_amp, 0, 0)
 	delay(caldelay,us);
+	// Reuse the already reserved matrix pair 22/278 for the first refocusing pulse.
+	// Primary always selects the slice; secondary only selects the crusher lobes.
+	refocus_mat = slice_crush;
+	if ((crush_independent_on==1)&&(diff_on==1))
+	{
+		CREATE_MATRIX(first_slice_crush,gs_on*gs_var_rescale,0,0)
+		delay(caldelay,us);
+		CREATE_MATRIX(first_slice_crush_sec,gs_on*diff_crush_amp,0,0)
+		delay(caldelay,us);
+		refocus_mat = first_slice_crush;
+	}
 	
 	CREATE_MATRIX(diff_mat, -diff_slice, -diff_phase, -diff_read)
 	delay( caldelay, us);
@@ -3346,7 +3528,7 @@ set the observe modulator level to 4 */
 	
 
 echo_loop:
-	MR3040_SelectMatrix(slice_crush);
+	MR3040_SelectMatrix(refocus_mat);
 	MR3040_Start( CHANNEL_S);
 	
 	// 180 degree pulse
@@ -3355,17 +3537,17 @@ echo_loop:
 	// rfdelay is the delay from end of ramp to start of rf pulse, not the gate
 	// [TWO-TE FIX #3] The first 180 (total_echo_cnt==0) uses the tcrush1 crusher budget
 	// played by slice_180_refocus_diff; imaging 180s (2..N) keep tcrush.
-	this_tcrush = tcrush;
+	this_tcrush = tcrush_play;
 	if ((diff_on==1) && (total_echo_cnt == 0))
-		this_tcrush = tcrush1;
+		this_tcrush = tcrush1_play;
  	temp_mac = this_tcrush+tramp-40+rfdelay-(rfgate_delay-17); // -40 gives 0 rf delay, 17 gate delay gives minimum gate delay
 	starttimer();
 #ifdef PDD
 		if (use_pdd>0)
 			userout(pdd_tx_mask);
 #endif	
-		ret = temp_mac*10;
-	waittimer(ret);
+		refocus_wait_ticks = IntToLong(temp_mac)*10L;
+	waittimer(refocus_wait_ticks);
 	NEWSHAPE_SETUP(rfnum, p180_mul)
 	rfampon(0); // this opens the gate ?)
 	if (warmup>10) 
@@ -3411,12 +3593,12 @@ echo_loop:
 
 	starttimer();
 		rfon(0);
-		ret = (tramp+this_tcrush-rfdelay)*10;
+		refocus_wait_ticks = IntToLong(tramp+this_tcrush-rfdelay+crush_post_pad-crush_pre_pad)*10L;
 #ifdef PDD
 		if (use_pdd>0)
 			userout(pdd_rx_mask);
 #endif
-	waittimer(ret);
+	waittimer(refocus_wait_ticks);
 	
 	if (diff_on && total_echo_cnt == 0)
 	{
@@ -3551,7 +3733,8 @@ echo_loop:
 		CREATE_MATRIX(aq_mat_sec,gs_on*(gsp_rp+(gp_sl_var*gp_sl_on*nav_cnt)), gp_on*gp_var, gr_on*gr_dp)
 		// ***********SLOW CODE ***********************
  		templ1 = phase_ang;
-		total_echo_cnt = total_echo_cnt+1;		
+		total_echo_cnt = total_echo_cnt+1;
+		refocus_mat = slice_crush; // next echo uses the train crusher matrix; inside acquisition timer		
 #ifdef SKIP_FIRST_ECHOES	
 		templ2 = IntToLong(total_echo_cnt);
 #else
@@ -3604,7 +3787,7 @@ echo_loop:
 		ret = gettimer()+250;
 		templ3 = te_balance_bl_temp2;
 		if (echo_cnt < views_per_seg+de_on) 
-			templ3 = templ3+te_balance_bl_esp; // [ESP MOD] esp-based imaging spacing (== te_balance_bl when diff is OFF)
+			templ3 = templ3+te_balance_bl_esp+IntToLong(crush_post_pad-crush_pre_pad); // [ESP MOD] esp-based imaging spacing (== te_balance_bl when diff is OFF)
 		templ3 = templ3*10L-ret;
 		ret = ret+25;
 	waittimer(ret-25); // 25 is the time taken by if statement before delay32;;
@@ -4157,11 +4340,11 @@ end:
   directions, and extra b=0 volumes may be inserted anywhere in the order.
 
   Interface (PARAMLIST / PPR):
-      no_diff_acq            number of table rows (1 .. MAX_DIFF_ACQ = 64)
-      acq_b[64]              requested b, s/mm^2   (used when b_input_mode = 1)
-      acq_grad[64]           gradient DAC          (used when b_input_mode = 0;
+      no_diff_acq            number of table rows (1 .. MAX_DIFF_ACQ = 512)
+      acq_b[512]             requested b, s/mm^2   (used when b_input_mode = 1)
+      acq_grad[512]          gradient DAC          (used when b_input_mode = 0;
                              written by the setup b->DAC search when mode = 1)
-      acq_x/acq_y/acq_z[64]  direction components, 1000-normalised
+      acq_x/acq_y/acq_z[512] direction components, 1000-normalised
   Superseded: no_b_steps, b_steps_array[16], b_grads_array[16], no_diff_dir,
   diff_grad_dir[48], and the runtime counters b_step_cnt / diff_dir_cnt (now the
   single index diff_acq_cnt). MAX_BVALS / MAX_DIRECTIONS / MAX_DIRECTIONSX3 are
@@ -4201,7 +4384,7 @@ end:
       the end of the array both in the setup normalisation loop and at
       diff_grad_dir[diff_dir_cnt*3 + 2] during acquisition, feeding out-of-bounds
       memory into the played gradient amplitudes (PPL performs no array bounds
-      checking - manual 4.8.5). The new EDITTEXT maximum (64) equals both the
+      checking - manual 4.8.5). The new EDITTEXT maximum (512 since [ACQ-512]) equals both the
       VAR_ARRAY no_elements and the declared array size for all five arrays.
 
   Execution-time accounting (manual 4.9.2), starttimer() at the end of the
@@ -4227,4 +4410,31 @@ end:
   first-180 and subsequent-180 timing, CPMG/non-CPMG, two-TE, phase encoding,
   echo ordering, navigators, averaging, phase cycling, MTC, Dixon and the
   Duration formula are all byte-for-byte unchanged.
+
+  ============================================================================
+  [ACQ-512] Acquisition table enlarged to 512 rows / twoTE-1.5, 24 Sep 2026
+  ============================================================================
+  Purpose: allow multi-shell protocols larger than 64 volumes in one PPR
+  (e.g. 13 b-values x 12 directions = 156 rows).
+
+  Changed (all five table arrays and their PARAMLIST entries kept in lockstep,
+  since PPL performs no array bounds checking - manual 4.8.5):
+    - #define MAX_DIFF_ACQ 64 -> 512 (declared size of acq_b, acq_grad,
+      acq_x, acq_y, acq_z)
+    - EDITTEXT no_diff_acq maximum 64 -> 512
+    - VAR_ARRAY no_elements 64 -> 512 for acq_b, acq_grad, acq_x, acq_y,
+      acq_z. The explicit 64-value initialiser lists were dropped (same form
+      as mtc_freq_array, 1000;), so all defaults are now 0. Old default was
+      acq_x[0] = 1000; a PPR always supplies the table, so this only affects a
+      scan started from bare defaults.
+    - VAR_ARRAY acq_b maximum 4000 -> 13000 s/mm^2, so b-values the hardware
+      can reach (b_max ~13342 at delta = 4 ms, Delta = 40 ms) sit inside the
+      dialog range. The runtime b > b_max abort is unchanged.
+
+  Unchanged: every loop over the table is bounded by no_diff_acq, the b->DAC
+  search runs once per row in setup (outside the timed windows), and nothing
+  in the acquisition timing depends on the array size. Old PPRs with 64-element
+  arrays should be re-saved once from the dialog, or regenerated with
+  512-element arrays, so the PPR matches the new no_elements.
+  Memory: +2240 ints over 1.4. Confirm the compile fits the image limit.
 *******************************************************************************/
