@@ -1,0 +1,106 @@
+/*******************************************************************
+
+                        OFFST_20.PPH
+
+Author:         MR Solutions Ltd
+Date:           10 February 2022
+Version:        2.1
+Modification:   Faster timing; PHASE offset original
+
+***************************************************************/ 
+
+/* Define position index for offset calculations */
+#ifdef MAO
+int OrderTimeToPos( int, int, int );
+int BatchTimeToPos( int batch_interleave, int slices, int slice_interleave, int batch_slices, int time_index);
+#define SELECTSLICE(sliceno) pos_index = OrderTimetoPos( no_slices, slice_interleave, sliceno-1 );
+#define BATCHSLICE(sliceno) pos_index = BatchTimetoPos( batch_interleave, no_slices, slice_interleave, batch_slices, sliceno-1 );
+#else
+#define SELECTSLICE(sliceno)
+#define BATCHSLICE(sliceno)
+#endif
+
+/* READ FREQUENCY OFFSETS */
+#ifdef MAO
+#define READOFF(read_off, samp_int, sc, r_f_l, f_r_f, kH, H) temp_mac_long = sc/1000L;\
+temp_mac_long = temp_mac_long*samp_int;\
+r_f_l = read_off##POS_INDEX*10000L;\
+r_f_l = r_f_l/temp_mac_long;\
+f_r_f = r_f_l;\
+kH = 0;\
+H = 0;\
+if (r_f_l < -32767L | r_f_l > 32767L) {\
+			temp_mac_long=r_f_l/32767L;\
+            kH = 32*temp_mac_long;\
+            H = 767*temp_mac_long;\
+            f_r_f = r_f_l-temp_mac_long*32767L;\
+            }
+#else
+#define READOFF(read_off, samp_int, sc, r_f_l, f_r_f, kH, H) temp_mac_long = sc/1000L;\
+temp_mac_long = temp_mac_long*samp_int;\
+r_f_l = read_off*10000L;\
+r_f_l = r_f_l/temp_mac_long;\
+f_r_f = r_f_l;\
+kH = 0;\
+H = 0;\
+if (r_f_l < -32767L | r_f_l > 32767L) {\
+			temp_mac_long=r_f_l/32767L;\
+            kH = 32*temp_mac_long;\
+            H = 767*temp_mac_long;\
+            f_r_f = r_f_l-temp_mac_long*32767L;\
+            }
+#endif
+
+/* PHASE OFFSET */
+#ifdef MAO
+#define PHASEOFF(phase_off, ph_res, sc, fov_phase_deg) temp_mac = scale(sc, ph_res, 1000);\
+fov_phase_deg = scale(phase_off##POS_INDEX, 360, temp_mac);\
+if ( fov_phase_deg < 0 ) fov_phase_deg = fov_phase_deg + scale(360,1000,ph_res);
+#else
+#define PHASEOFF(phase_off, ph_res, sc, fov_phase_deg) temp_mac = scale(sc, ph_res, 1000);\
+fov_phase_deg = scale(phase_off, 360, temp_mac);\
+if ( fov_phase_deg < 0 ) fov_phase_deg = fov_phase_deg + scale(360,1000,ph_res);
+#endif
+
+/* SLICE PHASE OFFSET */
+#define SPHASEOFF(slice_off, ph_res, sc, sl_thickness, fov_sl, fov_sl_phase_deg) temp_mac = scale(sc, ph_res, 1000);\
+temp_mac = scale(temp_mac, fov_sl*100, sl_thickness);\
+fov_sl_phase_deg = scale(slice_off##POS_INDEX, 360, temp_mac);\
+if ( fov_sl_phase_deg < 0 ) fov_sl_phase_deg = fov_sl_phase_deg + scale(360,1000,ph_res);
+
+
+/* SLICE OFFSET */
+#ifdef MAO
+#define SLICEOFF(slice_off, bwd, sc, s_f_l, f_s_f, kH, H) s_f_l = IntToLong(slice_off##POS_INDEX)*IntToLong(bwd)/IntToLong(sc);\
+f_s_f = s_f_l;\
+kH = 0;\
+H = 0;\
+if (s_f_l < -32767L | s_f_l > 32767L) {\
+	    temp_mac_long=s_f_l/32767L;\
+            kH = 32*temp_mac_long;\
+            H = 767*temp_mac_long;\
+            f_s_f = s_f_l-temp_mac_long*32767L;\
+            }
+#else
+#define SLICEOFF(slice_off, bwd, sc, s_f_l, f_s_f, kH, H) s_f_l = IntToLong(slice_off)*IntToLong(bwd)/IntToLong(sc);\
+f_s_f = s_f_l;\
+kH = 0;\
+H = 0;\
+if (s_f_l < -32767L | s_f_l > 32767L) {\
+	    temp_mac_long=s_f_l/32767L;\
+            kH = 32*temp_mac_long;\
+            H = 767*temp_mac_long;\
+            f_s_f = s_f_l-temp_mac_long*32767L;\
+            }
+#endif
+
+
+
+/***************************************************************************
+                        MODIFICATION  HISTORY
+                        
+    17 Aug 98 SR  - Extra arguments added to the SLICEOFF and READOFF macros
+    20 Feb 2017 RG - PHASE and SLICE offsets not inverted
+    29 Dec 2019 RG - more efficient calculations for SLICEOFF
+    10 Feb 2022 RG - replaces offst_bt1.pph and offst_fse.pph
+***************************************************************************/

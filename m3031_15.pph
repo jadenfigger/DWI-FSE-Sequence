@@ -1,0 +1,155 @@
+/****************************************************************
+
+                M3031_15.PPH
+
+Author:         SMIS Ltd
+Date:           13th March 2004
+Version:        1.6
+
+RF glitch in RFSPOIL fixed NMB
+
+******************************************************************/
+ 
+#define NEWSHAPE_MAC(rfnum, pf1, frame, pulse_length, pul_bwdth) rad[rfnum] = pf1.address.frame;\
+rwt[rfnum] = pf1.waits.frame;\
+rbd[rfnum] = pf1.board1;\
+rf_length[rfnum] = pulse_length;\
+rf_bwdth[rfnum] = pul_bwdth;\
+
+#define NEWSHAPE_SETUP(rfnum, rfscale) Set_Board_Multipliers( rfscale,0, rbd[rfnum]);\
+Set3031Address(rad[rfnum],rbd[rfnum]+4);\
+Set3031Waits(rwt[rfnum],rbd[rfnum]+4);\
+Append_Boards_Ready( rbd[rfnum]+4 );
+
+ 
+#define MR3031_RFSTART(rfnum, rfpw, rf_scale, pred, mod_level) temp_mac = pred - (22+warmup);\
+delay(temp_mac,us);\
+NEWSHAPE_SETUP(rfnum, rf_scale)\
+rfampon(0);\
+delay(warmup,us);\
+rfon(mod_level);\
+MR3031_go();\
+temp_mac = rfpw - 3;\
+delay(temp_mac, us);\
+rfon(0);
+
+#ifdef EVO2
+
+#define MR3031_HARDPULSE(pred, rfpw, rf_scale, mod_level) temp_mac = pred - (37+warmup);\
+delay(temp_mac, us);\
+MR3031_setup(pf1,"rf_analog_on",0,0,0,rf_scale);\
+rfampon(0);\
+delay(warmup, us);\
+rfon(mod_level);\
+MR3031_go();\
+temp_mac = rfpw -40;\
+delay(temp_mac, us);\
+noop;\
+noop;\
+noop;\
+noop;\
+rfoff();\
+MR3031_setup(pf1,"rf_off",0,0,0,0);\
+MR3031_go();
+
+#else /* EVO2 */
+
+#define MR3031_HARDPULSE(pred, rfpw, rf_scale, mod_level) temp_mac = pred - (24+warmup);\
+delay(temp_mac, us);\
+MR3031_setup(pf1,"rf_analog_on",0,0,0,rf_scale);\
+rfampon(0);\
+delay(warmup, us);\
+rfon(mod_level);\
+MR3031_go();\
+temp_mac = rfpw -3;\
+delay(temp_mac, us);\
+rfoff();\
+MR3031_setup(pf1,"rf_off",0,0,0,0);\
+MR3031_go();
+
+#endif /* EVO2 */
+
+
+/* macro for rf spoiler with DC correct*/
+#define RFSPOIL(rf_inc, phase_90, phase_117, phase_rec) rf_sp_temp = rf_inc % 42120L;\
+rf_sp_temp=rf_sp_temp * phase_117;\
+rf_sp_temp=rf_sp_temp % (phase_90*4);\
+rf_sp_angle=rf_sp_angle + rf_sp_temp;\
+rf_sp_angle=rf_sp_angle % (phase_90*4);\
+temp_mac = phase_rec + rf_sp_angle;\
+temp_mac = temp_mac%(phase_90*4);\
+rphase(temp_mac);\
+temp_mac=aqphase(no_acq,phase_cycle)*phase_90 + rf_sp_angle;\
+temp_mac=temp_mac%(phase_90*4);\
+phase(temp_mac);
+
+
+
+/* macro for rf spoiler with DC shift */
+#define RFSPOIL_DC(rf_inc, phase_90, phase_117, phase_rec, dc_shft) rf_sp_temp = rf_inc % 42120L;\
+rf_sp_temp=rf_sp_temp * phase_117;\
+rf_sp_temp=rf_sp_temp % (phase_90*4);\
+rf_sp_angle=rf_sp_angle + rf_sp_temp;\
+rf_sp_angle=rf_sp_angle % (phase_90*4);\
+temp_mac = phase_rec + rf_sp_angle;\
+temp_mac = temp_mac%(phase_90*4);\
+rphase(temp_mac);\
+temp_mac=aqphase(current_view,(dc_shft+1))*phase_90 + rf_sp_angle;\
+temp_mac=temp_mac%(phase_90*4);\
+phase(temp_mac);
+
+
+
+/* macro for rf spoiler  but not setting transmit and receive phase*/
+#define RFSPOIL_SE(rf_inc, deg_90, deg_117, phase_90, phase_180, phase_rec) rf_sp_temp = rf_inc % 42120L;\
+rf_sp_temp=rf_sp_temp * deg_117;\
+rf_sp_temp=rf_sp_temp % (deg_90*4);\
+rf_sp_angle=rf_sp_angle + rf_sp_temp;\
+rf_sp_angle=rf_sp_angle % (deg_90*4);\
+temp_mac=phase_90 + rf_sp_angle;\
+temp_mac=temp_mac%(deg_90*4);\
+phase_90 = temp_mac;\
+temp_mac=phase_180 + rf_sp_angle;\
+temp_mac=temp_mac%(deg_90*4);\
+phase_180 = temp_mac;\
+temp_mac = phase_rec + rf_sp_angle;\
+temp_mac = temp_mac%(deg_90*4);\
+phase_rec = temp_mac;
+
+#ifdef PLATO
+#define MR3031_DEGLITCH
+#else
+/* Macro to remove initial glitch from 3031 board */
+#define MR3031_DEGLITCH MR3031_setup(pf1,"rf_off",0,0,0,0);\
+MR3031_go();
+#endif
+
+/* Macro for sequences with OVS pulses */
+#define OVS_GRAD_FREQ(pulse_bwdth,slice_thickness,slice_offset,kHz_ovs,Hz_ovs,offset_freq_ovs,grad_ppl_ovs) templ1 = pulse_bwdth;\
+templ2 = slice_thickness;\
+templ3 = grad_var[0];\
+templ4 = (templ1*dacmaxlong)/(templ2*templ3);\
+ret = dacmaxlong - templ4;\
+if (ret < 0 ){\
+        printf(" OVS Slice thickness too small for pulse selected ");\
+        goto end;\
+        }\
+grad_ppl_ovs = templ4;\
+templ1 = pulse_bwdth;\
+templ2 = slice_thickness;\
+templ3 = slice_offset;\
+templ4 = (templ1*templ3)/templ2;\
+offset_freq_ovs = templ4%32767L;\
+kHz_ovs = 32*(templ4/32767);\
+Hz_ovs = 767*(templ4/32767);
+
+/************************************************************************************
+                        MODIFICATION  HISTORY
+                        
+24 Aug 98 AF  - NEWSHAPE_MAC & MR3031_RFSTART, NEWSHAPE_SETUP,  pf1 reference removed 
+                so that lots of pf files can be used. 
+                The pf1 name is now ignored in these calls so that old PPL can be used.
+                Hard pulse is unchanged therefore ROfon and RF off must be loaded to pf1.
+ 8 Oct 98 SR -  OVS slice offset macro added
+
+*************************************************************************************/

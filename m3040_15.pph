@@ -1,0 +1,311 @@
+/****************************************************************
+
+                M3040_15.PPH
+
+        Version 1.5 18th August, 1998
+
+This include file has all definitions pertaining to the 3040 board.
+It also has several macros for creating gradient shapes to be stored
+in the sequencer memory 
+
+******************************************************************/
+
+
+int  MR3040_CreateBaseMatrix( int, int, int, int, int, int, int, int, int);
+int  MR3040_CreateMatrix( int, int, int, int, int, int, int, int, int, int, int );
+void MR3040_SelectMatrix( int select );
+int  MR3040_SeqStatus( int channel );
+int  MR3040_InitList( );
+void MR3040_LoopCount( int loops );
+void MR3040_Output( int loop, int addr, int points, int waits );
+void MR3040_Hold( int loop );
+void MR3040_Start( int channel );
+void MR3040_Break( int channel );
+void MR3040_Continue( int channel );
+void MR3040_SetList( int addr, int channel);
+void MR3040_SetListAddress( int addr );
+void MR3040_Clock(int);
+
+/* constants for 3040 control */
+#define CHANNEL_R 0x0002       /* For use in MR3040_Start etc*/
+#define CHANNEL_P 0x0020
+#define CHANNEL_S 0x0200
+#define CHANNEL_PS 0x0220
+#define ALL_CHANNELS 0x0222
+#define NOLOOP 0
+#define STARTLOOP 4
+#define COUNTLOOP 8
+#define JUMPBACK 12
+#define max_waits 4095
+
+void MR3040_Delay( int md_tdel, int md_clock, int md_addr )
+{
+    if ( md_clock > 10)
+        md_tdel = scale(md_tdel, 10, md_clock);
+    if( md_tdel > max_waits) do
+    {
+        MR3040_Output(NOLOOP, md_addr, 1, max_waits);
+        md_tdel = md_tdel - max_waits;
+    } until ( md_tdel <= max_waits);
+    MR3040_Output( NOLOOP, md_addr, 1, md_tdel );
+}
+
+#define DELAY(tdel, clock, alias) MR3040_Delay( tdel,\
+clock, grad.address.alias );
+
+
+int temp_3040;
+
+
+#define PULSE(top, clock, alias_up, alias_down) MR3040_Output(NOLOOP,\
+grad.address.alias_up,grad.size.alias_up,\
+grad.waits.alias_up);\
+DELAY(top, clock, alias_down)\
+MR3040_Output( NOLOOP, grad.address.alias_down,\
+			   grad.size.alias_down,\
+			   grad.waits.alias_down); 
+
+#define POSPULSE(top, clock) MR3040_Output(NOLOOP,\
+grad.address."0_max",grad.size."0_max",\
+grad.waits."0_max");\
+DELAY(top, clock, "max_0")\
+MR3040_Output( NOLOOP, grad.address."max_0",\
+			   grad.size."max_0",\
+			   grad.waits."max_0"); 
+
+
+#define POSPULSE_SEC(top, clock) MR3040_Output(NOLOOP,\
+grad.address."0_mx_sec",grad.size."0_mx_sec",\
+grad.waits."0_mx_sec");\
+DELAY(top, clock, "mx_0_sec")\
+MR3040_Output( NOLOOP, grad.address."mx_0_sec",\
+			   grad.size."mx_0_sec",\
+			   grad.waits."mx_0_sec"); 
+
+
+
+
+#define NEGPULSE(top, clock) MR3040_Output(NOLOOP,\
+grad.address."0_min",grad.size."0_min",\
+grad.waits."0_min");\
+DELAY(top, clock, "min_0")\
+MR3040_Output( NOLOOP, grad.address."min_0",\
+			   grad.size."min_0",\
+			   grad.waits."min_0"); 
+
+
+
+#define NEGPULSE_SEC(top, clock) MR3040_Output(NOLOOP,\
+grad.address."0_mn_sec",grad.size."0_mn_sec",\
+grad.waits."0_mn_sec");\
+DELAY(top, clock, "mn_0_sec")\
+MR3040_Output( NOLOOP, grad.address."mn_0_sec",\
+			   grad.size."mn_0_sec",\
+			   grad.waits."mn_0_sec"); 
+
+
+
+
+
+#define POSPULSE_2(tplat1, tplat2, clock) MR3040_Output(NOLOOP,\
+grad.address."0_max",grad.size."0_max",grad.waits."0_max");\
+DELAY(tplat1, clock, "max_0")\
+MR3040_Output( NOLOOP, grad.address."max_p_s",\
+                           grad.size."max_p_s",\
+                           grad.waits."max_p_s");\
+DELAY(tplat2, clock, "mx_0_sec")\
+MR3040_Output( NOLOOP, grad.address."mx_0_sec",\
+                           grad.size."mx_0_sec",\
+                           grad.waits."mx_0_sec");
+
+
+#define NEGPULSE_2(tplat1, tplat2, clock) MR3040_Output(NOLOOP,\
+grad.address."0_min",grad.size."0_min", grad.waits."0_min");\
+DELAY(tplat1, clock, "min_0")\
+MR3040_Output( NOLOOP, grad.address."min_p_s",\
+                           grad.size."min_p_s",\
+                           grad.waits."min_p_s");\
+DELAY(tplat2, clock, "mn_0_sec")\
+MR3040_Output( NOLOOP, grad.address."mn_0_sec",\
+                           grad.size."mn_0_sec",\
+                           grad.waits."mn_0_sec");
+
+#define POSPULSE_HOLD() MR3040_Output(NOLOOP,\
+grad.address."0_max",grad.size."0_max",\
+grad.waits."0_max");\
+MR3040_Hold(NOLOOP);\
+MR3040_Output( NOLOOP, grad.address."max_0",\
+			   grad.size."max_0",\
+			   grad.waits."max_0"); 
+
+#define POSPULSE_SEC_HOLD() MR3040_Output(NOLOOP,\
+grad.address."0_mx_sec",grad.size."0_mx_sec",\
+grad.waits."0_mx_sec");\
+MR3040_Hold(NOLOOP);\
+MR3040_Output( NOLOOP, grad.address."mx_0_sec",\
+			   grad.size."mx_0_sec",\
+			   grad.waits."mx_0_sec"); 
+
+
+#define NEGPULSE_HOLD() MR3040_Output(NOLOOP,\
+grad.address."0_min",grad.size."0_min",\
+grad.waits."0_min");\
+MR3040_Hold(NOLOOP);\
+MR3040_Output( NOLOOP, grad.address."min_0",\
+			   grad.size."min_0",\
+			   grad.waits."min_0"); 
+
+#define NEGPULSE_SEC_HOLD() MR3040_Output(NOLOOP,\
+grad.address."0_mn_sec",grad.size."0_mn_sec",\
+grad.waits."0_mn_sec");\
+MR3040_Hold(NOLOOP);\
+MR3040_Output( NOLOOP, grad.address."mn_0_sec",\
+			   grad.size."mn_0_sec",\
+			   grad.waits."mn_0_sec");
+
+#define PULSE_HOLD(alias_up,alias_down) MR3040_Output(NOLOOP,\
+grad.address.alias_up,grad.size.alias_up,\
+grad.waits.alias_up);\
+MR3040_Hold(NOLOOP);\
+MR3040_Output( NOLOOP, grad.address.alias_down,\
+			   grad.size.alias_down,\
+			   grad.waits.alias_down); 
+
+#define POSPULSE_2_HOLD() MR3040_Output( NOLOOP,\
+grad.address."0_max",grad.size."0_max",grad.waits."0_max");\
+MR3040_Hold(NOLOOP);\
+MR3040_Output( NOLOOP, grad.address."max_p_s",\
+                           grad.size."max_p_s",\
+                           grad.waits."max_p_s");\
+MR3040_Hold(NOLOOP);\
+MR3040_Output( NOLOOP, grad.address."mx_0_sec",\
+                           grad.size."mx_0_sec",\
+                           grad.waits."mx_0_sec");
+
+
+#define NEGPULSE_2_HOLD() MR3040_Output( NOLOOP,\
+grad.address."0_min",grad.size."0_min",grad.waits."0_min");\
+MR3040_Hold(NOLOOP);\
+MR3040_Output( NOLOOP, grad.address."min_p_s",\
+                           grad.size."min_p_s",\
+                           grad.waits."min_p_s");\
+MR3040_Hold(NOLOOP);\
+MR3040_Output( NOLOOP, grad.address."mn_0_sec",\
+                           grad.size."mn_0_sec",\
+                           grad.waits."mn_0_sec");
+
+
+#define EPIREAD(top, clock) MR3040_Output(STARTLOOP,\
+grad.address."0_max",grad.size."0_max",\
+grad.waits."0_max");\
+DELAY(top, clock, "max_0")\
+MR3040_Output( NOLOOP, grad.address."max_0",\
+			   grad.size."max_0",\
+			   grad.waits."max_0");\
+MR3040_Output( NOLOOP, grad.address."0_min",\
+			   grad.size."0_min",\
+			   grad.waits."0_min");\
+DELAY(top, clock, "min_0")\
+MR3040_Output( COUNTLOOP, grad.address."min_0",\
+			   grad.size."min_0",\
+			   grad.waits."min_0");
+
+
+#define EPIPHASE(top, clock) MR3040_Output(STARTLOOP,\
+grad.address."0_max",1,top);\
+MR3040_Output( NOLOOP, grad.address."0_max",\
+			   grad.size."0_max",\
+			   grad.waits."0_max");\
+MR3040_Output( COUNTLOOP, grad.address."max_0",\
+			   grad.size."max_0",\
+			   grad.waits."max_0");
+
+/*   Matrix definition   */
+
+#define ss_mat 1
+#define ss_mat_sec 257
+#define pe_mat 2
+#define pe_mat_sec 258
+#define aq_mat 3
+#define aq_mat_sec 259
+#define crush_mat 4
+#define crush_mat_sec 260
+#define refocus_mat 5
+#define refocus_mat_sec 261
+#define chess_mat 6
+#define chess_mat_sec 262
+#define calc_mat 255  /* This is a dummy matrix to be selected during matrix calculation.*/
+#define caldelay 100  /* 100 usec neeeded by DSP for matrix calculation */
+
+
+#define BASEMATRIX(zang, yang, xang) grad_var_l[0] = UnsignedToLong(grad_var[0])/2;\
+grad_var_l[1] = UnsignedToLong(grad_var[1])/2;\
+grad_var_l[2] = UnsignedToLong(grad_var[2])/2;\
+grad_var_l[3] = UnsignedToLong(grad_var[3])/2;\
+temp_mac = MR3040_CreateBaseMatrix( zang, yang, xang,\
+grad_var_l[3],grad_var_l[0],grad_var_l[2],grad_var_l[0],grad_var_l[1],grad_var_l[0]);\
+if( temp_mac ) {\
+printf( "Could not create base matrix, status = %d\n", temp_mac);\
+goto end;}
+
+
+#ifdef MAO
+#define S_ANGLE s_angle_var##POS_INDEX
+#define P_ANGLE p_angle_var##POS_INDEX
+#define R_ANGLE r_angle_var##POS_INDEX
+#else
+#define S_ANGLE s_angle_var
+#define P_ANGLE p_angle_var
+#define R_ANGLE r_angle_var
+#endif
+
+#ifdef PLATO
+#ifdef MAO
+#define CreateMatrixTest(id, s, p, r) mr3040_creatematrix(id, dacmax, s, dacmax, p, dacmax, r, phase_var, s_angle_var[pos_index], p_angle_var[pos_index], r_angle_var[pos_index])
+#define CREATE_MATRIX(id, s, p, r) mr3040_creatematrix(id, dacmax, s, dacmax, p, dacmax, r, phase_var, s_angle_var[pos_index], p_angle_var[pos_index], r_angle_var[pos_index]);
+#else
+#define CreateMatrixTest(id, s, p, r) mr3040_creatematrix(id, dacmax, s, dacmax, p, dacmax, r, phase_var, s_angle_var, p_angle_var, r_angle_var)
+#define CREATE_MATRIX(id, s, p, r) mr3040_creatematrix(id, dacmax, s, dacmax, p, dacmax, r, phase_var, s_angle_var, p_angle_var, r_angle_var);
+#endif
+#else
+int CreateMatrixTest( int cmt_mat, int cmt_s, int cmt_p, int cmt_r )
+{
+    int cmt_i;
+    cmt_i = MR3040_CreateMatrix( cmt_mat, dacmax, cmt_s, dacmax, cmt_p, dacmax, cmt_r,
+                                 phase_var, S_ANGLE, P_ANGLE, R_ANGLE );
+    if( cmt_i )
+        printf( "Failed to create matrix = %d, return code = %d\n", cmt_mat, cmt_i );
+    return( cmt_i );
+}
+
+#define CREATE_MATRIX(mat, slice, phase, read) if( CreateMatrixTest( mat,\
+slice, phase, read )) goto end;
+
+#endif
+
+#ifdef PLATO
+#define MR3040_DEGLITCH
+#else
+#define MR3040_DEGLITCH MR3040_SetListAddress(0);\
+temp_3040 = MR3040_InitList();\
+MR3040_Output( NOLOOP, grad.address."zeros",\
+                           grad.size."zeros",\
+                           grad.waits."zeros");\
+CREATE_MATRIX(255,0,0,0)\
+delay(100,us);\
+CREATE_MATRIX(511,0,0,0)\
+delay(100,us);\
+MR3040_SetList( temp_3040, ALL_CHANNELS );\
+MR3040_SelectMatrix( 255 );\
+MR3040_Start(ALL_CHANNELS);\
+delay(1000,us);
+#endif
+
+/***************************************************************************
+						MODIFICATION  HISTORY
+						
+23 Sep 98 - MDR	Chess_mat added						
+ 9 Oct 98 - SR	Divide by 2 factor in the base matrix, for gradients with 
+ 				Gmax values greater than 32768 Hz/mm
+			
+***************************************************************************/

@@ -1,0 +1,145 @@
+/****************************************************************
+
+                StdFn_15.PPH
+
+        Version 2.0 5th January 2018
+
+Includes the StdConvs utilities
+******************************************************************/
+
+#ifdef PPLC
+
+#define ss 0
+#define ms 1
+#define us 2
+
+void delay(int, int);
+int scale(int,int,int);
+void output(int);
+int input(int);
+void __noop();
+#define noop __noop()
+
+#endif
+
+void acquire(int sample_period, int no_points);
+void append_boards_ready(int nboardaddress);
+int  aqphase(int completed_averages, int phase_cycle);
+void clear_input();
+void complete();
+void discard(int no_samples);
+void decmodcoarseoffset(int ncoarse);
+void decmodfineoffset(int nfine);
+void obsmodcoarseoffset(int ncoarse);
+void obsmodfineoffset(int nfine);
+void decrfunitenable(int non);
+void obsrfunitenable(int non);
+void disable3031(int nboardaddress);
+void enable3031(int boardaddress);
+void dphase(int multiple);
+void dphase_increment(int Inc);
+void phase(int multiple);
+void phase_increment(int Inc);
+void rphase(int multiple);
+void dummy_cycles(int);
+int  hostrequest();
+void killscan(int);
+
+void frequency_buffer(int buffer_number);
+void dfrequency(int mhz, int khz, int hz, int rx1mhz);
+void dpreset_frequency(int mhz, int khz, int hz, int rx1mhz);
+void dreset_frequency();
+void frequency(int mhz, int khz, int hz, int rx1mhz);
+void offset_frequency(int hz);
+void preset_frequency(int mhz, int khz, int hz, int rx1mhz);
+void reset_frequency();
+void setfreqcontrols(int mhz, int khz, int hz, int rx1mhz);
+int acqpad(int);
+void SelectFilterType(int);
+void setsync(int);
+
+void rfampon(int dac_value);
+void drfampon(int dac_value);
+
+void rfon(int amplitude);
+void drfon(int amplitude);
+void rfoff();
+
+void rfpulse(int duration, int amplitude);
+void drfpulse(int duration, int amplitude);
+
+void dotx();
+void tx();
+
+/* MR3031 funcs... */
+int get3031status(int nboardaddress);
+void mr3031_command(int command, int board_address);
+void mr3031_go();
+void mr3031_reset();
+void mr3031_stop();
+void runenabled3031();
+void set3031address(int frame_address, int board_address);
+void set3031loopmode(int loopmode, int boardaddress);
+void set3031waits(int waits, int board_address);
+void set_addr_and_waits(int frame_address, int no_waits, int board1, int board2);
+void set_board_multipliers(int mul1, int mul2, int baseaddress);
+void haltenabled3031();
+
+/* Timer utility functions... */
+int  gettimer();
+void starttimer();
+void waittimer(int);
+
+void sync();
+void resync();
+void initiate(int sample_period);
+void loadsynths();
+void multislice(int interleave, int offset, int number_of_slices);
+void slice(int slice_number);
+void receive();
+void sample(int sample_period, int no_points);
+void setmpy4(int z, int y, int x, int w);
+void setsamplemode(int sample_period);
+int x_grad(int read_val, int phase, int slice, int orientation);
+int y_grad(int read_val, int phase, int slice, int orientation);
+int z_grad(int read_val, int phase, int slice, int orientation);
+void transmit();
+void userout(int eightbit);
+void setdecmodgain(int db10);
+void setobsmodgain(int db10);
+void setdecmodoffsets(int nfine, int ncoarse);
+void setobsmodoffsets(int nfine, int ncoarse);
+void setobsrecvattn(int db10);
+void setobsrecvgain(int db10);
+
+int kbhit();
+
+void mr3030_addr(int address);
+void mr3030_off(int boardnum);
+void mr3030_on(int boardnum);
+void mr3030_stream(int numpoints);
+void mr3030_waits(int cycles);
+
+
+/* For 16<->32 bit conversion and math utility */
+
+long UnsignedToLong(int);
+long IntToLong(int);
+long UnitThouMillToLong(int, int, int);
+long MillThouUnitToLong(int, int, int);
+int HiWord(long);
+int LoWord(long);
+int LongToUnits(long);
+int LongToThou(long);
+int LongToMill(long);
+int QuickDiv(int, int);
+int QuickScale(int, int, int);
+int FloorDiv(int, int);
+
+/***************************************************************************
+						MODIFICATION  HISTORY
+						
+	2 Sep 98 SR - stdcn_14.pph macro merged with stdfn_14.pph macro				
+	5 Jan 2018 RG - tx and dotx functions added
+
+***************************************************************************/

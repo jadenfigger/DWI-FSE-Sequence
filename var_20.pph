@@ -1,0 +1,144 @@
+/************************************************************
+
+
+        VAR_15.PPH
+
+Author:         MR Solutions Ltd
+Date:           10 February 2022
+Version:        2.0
+
+This include file contains a set of definitions of variables for
+control of loops, timings, frequency control and gradient and RF
+amplitudes
+
+**************************************************************/
+
+
+\\ looping control
+int no_echoes, current_echo;
+int no_slices, current_slice, slice_interleave;
+int batch_slices = 0;
+int batch_interleave = 1;
+int no_averages, image_av;
+int no_views, current_view, echo_cnt;
+int sample_period, no_samples, no_discard;
+int view_block, view_av, views_per_seg;
+int slice_block, slice_av;
+int phase_cycle, no_acq;
+common int obs_mod_level;
+
+\\ temp_mac and temp_mac_long are reserved for macro usage and therefore
+\\ MUST NOT BE USED in a ppl program
+int temp_mac;
+long temp_mac_long;
+
+
+\\ timing variables
+int group_delay;
+int trmin, clock, tfilter = 373, tref, time, tr_extend;
+\\int tr_ms, tr_us, te_ms, te_us, ret, t_refocus, t_refocus_2 ;
+int te_ms, te_us, te_ms_2, te_us_2;
+int ret;
+common int tr, te, te_eff, report_on;
+long tacq;  /* Narrow bandwidths have tacq > 32767 usec !! */
+long templ1, templ2, templ3, templ4, templ5, tr_min ; /* Used for complicated calculations */
+\\long tass ;
+common int t_gs_comp, tcrush;
+int asymm;
+
+\\ Variables for RF and RF spoiling and phase control
+int rf_sp_angle;
+int deg_90, deg_117, rfsp_on ;
+long rf_inc, rf_sp_temp ;
+int deg_360, overhead; 
+long phase_ang;
+int remainder_phase, phase_correction, phase_correction_0, phase_correction_1, phase_correction_2;
+common int rf_on;
+
+\\ Patient orientation and rf calibration value
+common int subj_angle_x, subj_angle_y, subj_angle_z, rfcal;
+
+\\ frequency control
+common int MHz, kHz, Hz, rx1MHz, rec_freq;
+int pulse_bwdth, slice_offset, slice_off_freq;
+int kHz_new, Hz_new, kHz_new2, Hz_new2, kHz_new3, Hz_new3;
+long slice_freq_long, read_freq_long;
+
+\\ Gating variables
+common int gating, cardiac_del;
+
+\\ Flow compensation variables
+int  flow_comp_on, pe_flow, pe_flow_sec, gr_flow, gs_flow, flow_mat;  
+\\int t_flow_1, t_flow_2, t_flow_temp;
+\\int slice_list_1, slice_list_2, ref_list;
+
+\\ MTC pulse
+\\common int mtc_on, mtc_delay, mtc_scale, mtc_freq, mtc_tcrush, mtc_gr_amp;
+\\int mtc_delay_cal, tselmtc, mtc_delay_min, mtc_rfnum, mtc_amp, mtc_mat, mtc_list;
+
+\\ PRE-SAT pulse
+common int  p_sat_scale, sat_tcrush, sat_gr_amp;
+int rfnum_sat, tsel_sat, sat_pulse_bwdth, fov_sat_slice_freq, sat_crush_amp, satgs_on;
+int sat_list, sat_channel, gs_sat, sat_mat, sat_mat_2, sat_orient, sat_fov_scale;
+common int p_sat_mul;
+long sat_slice_freq_long;
+
+\\ Spoiler and rephase variables
+int  pe_rephase_on, grad_spoil_on, grad_spoil_amp, slice_rephase;
+common int grad_amp;
+
+/* Variables for gradient control. All the PPL variables for offsets, FOV 
+slice thickness and slice separation ar defined as common ints this is
+necessary to allow real time update of the orientation variables */
+int slice_list, read_list, phase_list;
+int scale_read_off, scale_phase_off, scale_slice_off;
+int fov_read_freq, fov_PHASE_deg, fov_slice_freq,  new_slice_offset;
+int gp_inc, gp_var, dacmax = 32767;  /* 16 bit maximum */
+int gp_init_var_rescale, gs_var_rescale;
+int oversample, oversample2, gr_oversample, gr_undersample, gp_oversample, gp_undersample;
+int grad_var[4], grad_var_l[4], tramp, gp_init_var, gr_var, gr_var_s, gs_var;
+int gr_comp, gr_comp_s, gs_comp, gs_comp_s, gr_crush, gs_crush, gp_crush;
+long dacmaxlong = 32767l;/* 16 bit maximum defined as a long */
+common int gr_comp_scale, gs_comp_scale, gr_on, gp_on, gs_on;
+
+\\ Variables for RF control and phase cycle and spoil
+int phase_90, phase_180, phase_117, tsel90, tsel180;
+common int p90_mul, p180_mul;
+int warmup    = 20;  /* Warmup time for   rf amplifier  */
+int phase_res = 225; /* Phase resolution*1000 (for PTS 310 =  0.225 deg */
+int rfnum, phase_rec, phase_rec_cal1, phase_rec_cal2, rf_length[40], rf_bwdth[40], rad[40], rwt[40], rbd[40];
+common int p180_scale, alpha;
+
+\\ orientation variables
+#ifdef MAO
+#define POS_INDEX [pos_index]
+int pos_index;
+int fov_read_off[MAX_SLICE], fov_PHASE_off[MAX_SLICE], fov_slice_off[MAX_SLICE];
+int phase_var, s_angle_var[MAX_SLICE], p_angle_var[MAX_SLICE], r_angle_var[MAX_SLICE];
+#else
+#define POS_INDEX
+int fov_read_off, fov_PHASE_off, fov_slice_off;
+common int phase_var, s_angle_var, p_angle_var, r_angle_var;
+#endif
+
+#define true -1
+#define false 0
+
+#define LONGDELAY(longval) temp_mac_long = longval - 140;\
+temp_mac = temp_mac_long/1000L;\
+if (temp_mac > 0 ) delay(temp_mac, ms);\
+temp_mac = temp_mac_long - (temp_mac*1000L);\
+if (temp_mac > 4 ) delay(temp_mac, us);  
+
+#define US_TO_MS(us,ms) ms = (us/1000L) + (us - (us/1000L)*1000L)/500L ;
+
+/***************************************************************************
+                        MODIFICATION  HISTORY
+                        
+24 Aug 98 AF - Maximum number of RF pulses increased to 32. rbd[32] added
+19 Nov 2004 GLN - Add batch control variables
+15 March 2014 RG - unused variables removed for compactness
+10 February 2022 RG - cummulative release. Includes var_15_press, var_15_fse, var_15_epi. Does not include extra variables in var_15_press.pph. 
+			Maximum number of RF pulses increased to 40. rbd[40] added
+
+***************************************************************************/
