@@ -34,12 +34,23 @@ def grad_pts(g):
     return t + g.delay, a
 
 
+def rf_flip_deg(rf, raster):
+    """Flip angle from the RF waveform. Works for sampled shapes (sample-centred t) and for
+    block pulses stored as a few corner points (piecewise-linear integral)."""
+    t, sgn = np.asarray(rf.t, float), np.asarray(rf.signal)
+    if len(t) < 2:
+        return 360 * abs(sgn.sum()) * raster
+    dts = np.diff(t)
+    if np.allclose(dts, dts[0], rtol=1e-3) and abs(t[0] - dts[0] / 2) < 1e-9:   # uniform, sample-centred
+        return 360 * abs(sgn.sum() * dts[0])
+    return 360 * abs(np.sum((sgn[1:] + sgn[:-1]) / 2 * dts))
+
+
 def describe(seq, i, b):
     parts = []
     if b.rf is not None:
         rf = b.rf
-        dt = np.diff(rf.t).mean() if len(rf.t) > 1 else seq.rf_raster_time
-        flip = 360 * abs(np.sum(rf.signal) * dt)
+        flip = rf_flip_deg(rf, seq.rf_raster_time)
         use = getattr(rf, 'use', '') or ''
         parts.append(f'RF {flip:.0f}deg ph {np.degrees(rf.phase_offset) % 360:.0f}deg {use[:3]}')
     gs = [ax for ax in 'xyz' if getattr(b, 'g' + ax, None) is not None]
@@ -61,6 +72,7 @@ def main():
     ap.add_argument('--mark', nargs='*', type=int, default=[], help='blocks to mark as "snapshot after block"')
     ap.add_argument('--snap-csv', help='koma *_snapshots.csv: mark the blocks it contains')
     ap.add_argument('--max-delay-ms', type=float, default=5.0, help='draw longer delay-only blocks this wide')
+    ap.add_argument('--max-blocks', type=int, default=150, help='cap for the default window')
     ap.add_argument('--save', help='save figure to this file')
     a = ap.parse_args()
 
@@ -78,12 +90,17 @@ def main():
         t1 = (a.t1 if a.t1 is not None else 1e9) * 1e-3
         sel = [i for i, s, d in zip(ids, start, dur) if s + d > t0 and s < t1]
     else:                                   # default: up to the first long delay after the first RF (= one TR)
-        first_rf = next(i for i in ids if blocks[i].rf is not None)
+        first_rf = next((i for i in ids if blocks[i].rf is not None), None)
         sel = []
         for i, d in zip(ids, dur):
-            if i > first_rf and d > 0.1 and describe(seq, i, blocks[i]) == 'delay':
+            if first_rf is not None and i > first_rf and d > 0.1 and describe(seq, i, blocks[i]) == 'delay':
                 break
-            sel.append(i)
+            sel.append(i)                   # no RF in the file: take every block (capped below)
+        if len(sel) > a.max_blocks:
+            print(f'(showing the first {a.max_blocks} of {len(sel)} blocks; use --blocks or --t0/--t1)')
+            sel = sel[:a.max_blocks]
+    if not sel:
+        raise SystemExit('no blocks in the selected range')
     marks = set(a.mark)
     if a.snap_csv:
         marks |= set(np.unique(np.loadtxt(a.snap_csv, delimiter=',', usecols=0)).astype(int).tolist())
@@ -118,10 +135,11 @@ def main():
         if not is_delay or d <= maxd:
             if b.rf is not None:
                 t = (b.rf.t + b.rf.delay) * 1e3 + x0
-                ax[0].plot(t, np.abs(b.rf.signal), color='C3' if (b.rf.use or '').startswith('ref') else 'C0')
-                dt = np.diff(b.rf.t).mean()
-                flip = 360 * abs(np.sum(b.rf.signal) * dt)
-                ax[0].text(t.mean(), np.abs(b.rf.signal).max(), f'{flip:.0f}°\nph {np.degrees(b.rf.phase_offset) % 360:.0f}°',
+                amp = np.abs(b.rf.signal)
+                t, amp = np.r_[t[0], t, t[-1]], np.r_[0, amp, 0]   # draw from the baseline (block pulses = boxes)
+                ax[0].plot(t, amp, color='C3' if (getattr(b.rf, 'use', '') or '').startswith('ref') else 'C0')
+                flip = rf_flip_deg(b.rf, seq.rf_raster_time)
+                ax[0].text(t.mean(), amp.max(), f'{flip:.0f}°\nph {np.degrees(b.rf.phase_offset) % 360:.0f}°',
                            ha='center', va='bottom', fontsize=7)
             for j, axn in enumerate('xyz'):
                 p = grad_pts(getattr(b, 'g' + axn, None))
