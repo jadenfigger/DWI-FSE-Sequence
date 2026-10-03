@@ -103,12 +103,14 @@ def main():
     d180 = np.diff(t_ref) * 1e3
     dech = np.diff(adc_c) * 1e3
     say(f'180_1 -> 180_2        : {d180[0]:.4f} ms (expected te/2+esp/2 = {P.te/2+P.esp/2})')
-    say(f'180_k -> 180_k+1 (k>=2): min {d180[1:].min():.4f} max {d180[1:].max():.4f} ms (PPR esp = {P.esp})')
+    if len(d180) > 1:
+        say(f'180_k -> 180_k+1 (k>=2): min {d180[1:].min():.4f} max {d180[1:].max():.4f} ms (PPR esp = {P.esp})')
     say(f'echo_k -> echo_k+1    : min {dech.min():.4f} max {dech.max():.4f} ms (PPR esp = {P.esp})')
     e2r = (t_ref[1:] - adc_c[:-1]) * 1e3
     r2e = (adc_c[1:] - t_ref[1:]) * 1e3
-    say(f'echo_k -> 180_k+1     : min {e2r.min():.4f} max {e2r.max():.4f} ms; 180_k -> echo_k (k>=2): '
-        f'min {r2e.min():.4f} max {r2e.max():.4f} ms (esp/2 = {P.esp/2})')
+    if len(e2r):
+        say(f'echo_k -> 180_k+1     : min {e2r.min():.4f} max {e2r.max():.4f} ms; 180_k -> echo_k (k>=2): '
+            f'min {r2e.min():.4f} max {r2e.max():.4f} ms (esp/2 = {P.esp/2})')
     say(f'last echo at {(adc_c[-1]-t_exc[0])*1e3:.3f} ms after 90 (te+(ETL-1)*esp = {P.te+(P.views_per_seg-1)*P.esp})')
 
     # ---- gradients on 1 us grid over the train ------------------------------
@@ -166,8 +168,9 @@ def main():
     say(f'numerical, diffusion lobes only     : {b_lobes:.1f} s/mm^2')
     say(f'numerical, ALL gradients            : {b_all:.1f} s/mm^2 (xx {bdiag[0]:.1f}, yy {bdiag[1]:.2f}, zz {bdiag[2]:.2f})')
     # b at later echoes (crushers/readouts accumulate)
-    bl = [b_value(t, g, t_exc[0], t_ref, adc_c[k])[0] for k in (1, 2, len(adc_c) - 1)]
-    say(f'numerical ALL at echo 2 / 3 / {len(adc_c)}  : {bl[0]:.1f} / {bl[1]:.1f} / {bl[2]:.1f} s/mm^2')
+    ks = sorted({1, 2, len(adc_c) - 1} & set(range(1, len(adc_c))))
+    bl = [b_value(t, g, t_exc[0], t_ref, adc_c[k])[0] for k in ks]
+    say(f'numerical ALL at echo {" / ".join(str(k + 1) for k in ks)}  : {" / ".join(f"{v:.1f}" for v in bl)} s/mm^2')
 
     # ---- k-space ---------------------------------------------------------------
     say(f'\n## k-space (reduced: shot {shot}, PE_order {P.PE_order})')
@@ -220,15 +223,16 @@ def main():
     say(f'  180_1 -> echo1  : {fmt(mom(t_ref[0], adc_c[0]))}')
     say(f'  echo1 -> 180_2  : {fmt(mom(adc_c[0], t_ref[1]))}')
     say(f'  180_2 -> echo2  : {fmt(mom(t_ref[1], adc_c[1]))}')
-    say(f'  echo2 -> 180_3  : {fmt(mom(adc_c[1], t_ref[2]))}')
+    if len(t_ref) > 2:
+        say(f'  echo2 -> 180_3  : {fmt(mom(adc_c[1], t_ref[2]))}')
     say('full intervals between successive refocusing pulses:')
     ref_m = []
     for i in range(len(t_ref) - 1):
         ref_m.append(mom(t_ref[i], t_ref[i + 1]))
     ref_m = np.array(ref_m)
-    for i in [0, 1, 2, len(ref_m) - 1]:
+    for i in sorted({0, 1, 2, len(ref_m) - 1} & set(range(len(ref_m)))):
         say(f'  180_{i+1:<2d}-> 180_{i+2:<2d}: {fmt(ref_m[i])}')
-    base = ref_m[1]
+    base = ref_m[1] if len(ref_m) > 1 else ref_m[0]   # ETL 2: only 180_1 -> 180_2 exists
     flag = [i for i in range(len(ref_m)) if np.max(np.abs(ref_m[i] - base) / dac2hz * 1e6) > 1.0]
     say(f'intervals differing from 180_2->180_3 by > 1 DAC*us: {[f"180_{i+1}->180_{i+2}" for i in flag]}')
     # slice rephasing after 90 and read balance at echo 1

@@ -43,18 +43,8 @@ DACMAX = 32767      # var_20:96, 101; CREATE_MATRIX divisor (m3040_15:274)
 PHASE_RES = 225     # var_20:108 (0.225 deg per phase unit)
 TICK = 1e-7         # 100 ns PPL timer tick (MAN 4.8)
 
-# NEWSHAPE_MAC table (PPL:598-618): rfnum -> (frame, duration us, bandwidth Hz)
-RF_TABLE = {
-    1: ('3lobe_sinc_3kHz', 1332, 3000), 2: ('3lobe_sinc_1500Hz', 2664, 1500),
-    3: ('3lobe_sinc_750Hz', 5328, 750), 4: ('5lobe_sinc_3kHz', 2000, 3000),
-    5: ('5lobe_sinc_1500Hz', 4000, 1500), 6: ('5lobe_sinc_750Hz', 8000, 750),
-    7: ('3lobe_sinc_6kHz', 666, 6000), 8: ('3lobe_sinc_4kHz', 1000, 4000),
-    9: ('hypsec_1500Hz', 10000, 1500), 10: ('hypsec_1875Hz', 8000, 1875),
-    11: ('hypsec_3000Hz', 5000, 3000), 12: ('hypsec_3750Hz', 4000, 3750),
-    13: ('hypsec_7500Hz', 2000, 7500), 14: ('gauss', 7000, 180),
-    15: ('9lobe_sinc_5kHz', 2000, 5000), 16: ('19lobe_sinc_2ms', 2000, 10000),
-    17: ('gauss', 20000, 10),
-}
+# NEWSHAPE_MAC table (PPL:598-618) and the sinc frame models live in rf_pulses.py
+from rf_pulses import RF_TABLE, profile_summary, sinc_frame  # noqa: E402
 
 # =============================================================================
 # Hardware / simulation parameters that are NOT in the PPR (all overridable)
@@ -74,8 +64,13 @@ EXTRA_DEFAULTS = dict(
     # RF
     sim_excitation_flip_deg=None,      # None -> alpha (PPR, 90 deg scale factor)
     sim_refocus_flip_deg=180.0,        # p180_scale assumed calibrated; 'linear' -> 90*p180_mul/p90_mul
-    sim_rf_shape_file=None,            # one amplitude per line; else placeholder sinc
-    sim_rf_apodization=0.0,            # placeholder sinc apodisation
+    # RF frame model (vendor frames unavailable; see rf_pulses.py). 'truncated_sinc' =
+    # N-lobe sinc, zero crossings every 1/BW, cut after N lobes (3lobe_sinc_3kHz: TBW 4).
+    # 'bw_matched_sinc' = stretched so its BW equals the PPL slice bandwidth (71 %).
+    sim_rf_model='truncated_sinc',
+    sim_rf_apodization=0.0,            # 0 = none, 0.5 = Hanning, 0.46 = Hamming
+    sim_rf_bw_fraction=None,           # bw_matched_sinc only; None -> bw_override/100 (0.71)
+    sim_rf_shape_file=None,            # one amplitude per line; overrides the model
     # v1.6 [CRUSH-PE] centres the 180s on the COMMANDED plateau (PPL:1316-1317
     # cancel rfdelay), unlike the 90 and ADC. False = replicate the PPL as
     # written. True = command the 180 slice lists (and the diffusion lobes that
@@ -853,12 +848,31 @@ def make_rf(C, ev, system, delay_s):
                                     delay=delay_s, phase_offset=ph, freq_offset=float(ev['freq']), use=use)
     frame, d_us, bw = RF_TABLE[C.rfnum]
     if 'sinc' not in frame:
-        raise PPLAbort(f'rfnum {C.rfnum} ({frame}) needs sim_rf_shape_file; only sinc placeholders exist')
-    # PLACEHOLDER: sinc with TBW = nominal BW * duration (3-lobe -> 4)
-    return pp.make_sinc_pulse(flip_angle=math.radians(ev['flip']), duration=dur,
-                              time_bw_product=bw * d_us * 1e-6, apodization=C.sim_rf_apodization,
-                              center_pos=0.5, delay=delay_s, phase_offset=ph,
-                              freq_offset=float(ev['freq']), system=system, use=use, return_gz=False)
+        raise PPLAbort(f'rfnum {C.rfnum} ({frame}) is not a sinc frame; give sim_rf_shape_file')
+    n = int(round(dur / system.rf_raster_time))
+    w = sinc_frame(C.rfnum, n, C.sim_rf_model, C.sim_rf_apodization, rf_bw_fraction(C))
+    return pp.make_arbitrary_rf(signal=w, flip_angle=math.radians(ev['flip']), system=system,
+                                delay=delay_s, phase_offset=ph, freq_offset=float(ev['freq']), use=use)
+
+
+def rf_bw_fraction(C):
+    return C.sim_rf_bw_fraction if C.sim_rf_bw_fraction is not None else 71 / 100   # bw_override, PPL:1327
+
+
+def rf_label(C, D):
+    if C.sim_rf_shape_file:
+        return str(C.sim_rf_shape_file)
+    apo = f'_apod{C.sim_rf_apodization:g}' if C.sim_rf_apodization else ''
+    return f'{D.rf_frame}_{C.sim_rf_model}{apo}'
+
+
+def slice_profiles(C, D):
+    """FWHM [mm] of the 90, 180 and spin-echo slice profiles at the PPL slice gradient."""
+    if C.sim_rf_shape_file:
+        return None
+    s = profile_summary(C.rfnum, C.sim_rf_model, C.sim_rf_apodization, D.flip180, rf_bw_fraction(C))
+    g_hz_mm = abs(D.gs_var_rescale) / DACMAX * D.G0
+    return {k: s['fwhm_' + k] / g_hz_mm for k in ('exc', 'ref', 'se')}
 
 
 def train_blocks(C, D, T, gd):
@@ -1003,7 +1017,10 @@ def build_sequence(C=None, reduced=False, ppr=None, overrides=None):
     seq.set_definition('BigDelta', C.big_delta * 1e-6)
     seq.set_definition('ExcitationFlipDeg', D.flip90)
     seq.set_definition('RefocusFlipDeg', D.flip180)
-    seq.set_definition('RFShape', C.sim_rf_shape_file or f'PLACEHOLDER_sinc_{D.rf_frame}')
+    seq.set_definition('RFShape', rf_label(C, D))
+    prof = slice_profiles(C, D)
+    if prof:
+        seq.set_definition('SliceFWHM_mm_exc_ref_SE', [round(prof[k], 4) for k in ('exc', 'ref', 'se')])
     seq.set_definition('GradientDelay_us', C.hw_grad_delay_us)
     seq.set_definition('RefocusCentering', 'fixed' if C.sim_fix_refocus_centering else 'as_PPL_v1.6')
     seq.set_definition('OffsetSlicePhaseCorr', 'NOT_APPLIED_acqpad_unknown' if unresolved else 'applied_or_not_needed')
@@ -1026,6 +1043,11 @@ def report(C, D):
               f'extra_delta {D.extra_delta} us',
               f'p90_mul {D.p90_mul}, p180_mul {D.p180_mul}; flips {D.flip90:.2f}/{D.flip180:.2f} deg',
               f'max b = {D.b_max} s/mm^2']
+    prof = slice_profiles(C, D)
+    thk = DACMAX * D.pulse_bwdth / (abs(D.gs_var_rescale) * D.G0)
+    if prof:
+        lines.append(f'RF {rf_label(C, D)}: slice FWHM 90 {prof["exc"]:.2f} mm, 180 {prof["ref"]:.2f} mm, '
+                     f'spin echo {prof["se"]:.2f} mm (PPL nominal {thk:.2f} mm)')
     for i in range(C.no_diff_acq):
         lines.append(f'row {i}: b req {C.acq_b[i]}, DAC {D.diff_grad[i]}, nominal b {D.acq_b_nominal[i]}, '
                      f'dir ({C.acq_x[i]},{C.acq_y[i]},{C.acq_z[i]})')

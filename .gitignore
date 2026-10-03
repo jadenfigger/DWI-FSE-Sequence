@@ -1,2 +1,3 @@
 __pycache__/
 pypulseq/validation/*.seq
+pypulseq/analysis/seq/
