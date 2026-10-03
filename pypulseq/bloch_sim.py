@@ -144,12 +144,50 @@ def simulate(seq_path, b1=1.0, b0=0.0, T1=1.5, T2=0.08, T2prime=0.03, n=20000, v
                 t_adc=np.concatenate(tads) if tads else s, snapshots=snaps, voxel=vox)
 
 
+def write_csvs(seq_path, res, vox, prefix='bloch'):
+    """Same CSV files koma_sim.jl writes (<name>_<prefix>_signal/echoes.csv)."""
+    import os
+    stem = os.path.splitext(seq_path)[0]
+    s = res['signal']
+    np.savetxt(f'{stem}_{prefix}_signal.csv', np.c_[res['t_adc'], s.real, s.imag], delimiter=',')
+    e = res['echo_center']
+    np.savetxt(f'{stem}_{prefix}_echoes.csv', np.c_[np.arange(1, len(e) + 1), e, res['echo_peak']], delimiter=',')
+
+
+def snapshot_csv(seq_path, vox, prefix='bloch', **kw):
+    """Simulate every <name>_snap/snap_NN.seq (from snapshot_seqs.py) to its end and write
+    <name>_<prefix>_snapshots_t.csv: snap #, z, Mxy re, Mxy im, Mz (same layout as koma_sim.jl)."""
+    import glob
+    import os
+    stem = os.path.splitext(seq_path)[0]
+    files = sorted(glob.glob(os.path.join(stem + '_snap', 'snap_*.seq')))
+    rows = []
+    for k, f in enumerate(files, 1):
+        q = pp.Sequence()
+        q.read(f)
+        nb = max(q.block_events)
+        r = simulate(f, voxel=vox, snapshot_blocks=(nb,), **kw)
+        mx, my, mz = r['snapshots'][nb]
+        rows.append(np.c_[np.full(len(mx), k), vox['z'], mx, my, mz])
+        print(f'{os.path.basename(f)}: |mean Mxy| = {abs((mx + 1j * my).mean()):.4f}, mean Mz = {mz.mean():.4f}')
+    if rows:
+        np.savetxt(f'{stem}_{prefix}_snapshots_t.csv', np.vstack(rows), delimiter=',')
+    return len(rows)
+
+
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('seq')
     ap.add_argument('--b1', type=float, default=1.0)
     ap.add_argument('--b0', type=float, default=0.0)
     ap.add_argument('--n', type=int, default=20000)
+    ap.add_argument('--csv', action='store_true',
+                    help='write <name>_bloch_signal/echoes.csv, and <name>_bloch_snapshots_t.csv if <name>_snap/ '
+                         'exists (plot with: python plot_koma.py <name> --sim bloch)')
     a = ap.parse_args()
-    r = simulate(a.seq, b1=a.b1, b0=a.b0, n=a.n)
+    vox = make_voxel(n=a.n, b0=a.b0)
+    r = simulate(a.seq, b1=a.b1, voxel=vox)
     print('echo |center| =', np.round(r['echo_center'], 4))
+    if a.csv:
+        write_csvs(a.seq, r, vox)
+        snapshot_csv(a.seq, vox, b1=a.b1)
