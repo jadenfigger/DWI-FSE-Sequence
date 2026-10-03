@@ -1,151 +1,194 @@
 # DW-FSE (twoTE-1.6) → PyPulseq
 
-Files
-
 | file | what |
 |---|---|
-| `dwfse_ppl_twoTE_1_6.py` | generator. `python dwfse_ppl_twoTE_1_6.py [--reduced]` |
-| `validate_dwfse.py` | Step-5 checks. `python validate_dwfse.py --grad-delay 0 --full` |
-| `dwfse_full.seq` | full protocol, 3 slices, 2 volumes, 4 dummy TRs, 28.0 s |
-| `dwfse_reduced.seq` | centre slice, b = 6000 row, one imaging shot (32 echoes), one 2 s TR |
-| `validation/` | reports and plots for gradient delay 0 and 60 µs |
+| `dwfse_ppl_twoTE_1_6.py` | generator. Reads a `.ppr`, applies overrides, writes `.seq` + `.params.json` |
+| `validate_dwfse.py` | Step-5 checks on the reduced sequence (same override options) |
+| `example_overrides.json` | example override file |
+| `dwfse_full.seq` / `dwfse_reduced.seq` | defaults: full protocol (28.0 s) and simulation cut (one 2 s TR) |
+| `validation/` | reports and plots: `default`, `fixed_centering`, `commanded_timing` |
 
 Citations: `PPL:n` / `PPR:n` = line numbers in the .ppl / .ppr; `var_20`, `m3040_15`, … = the .pph files; `MAN` = EVO manual.
 
----
+## Controlling the sequence
 
-## Step 1 – Branch resolution
+Every parameter is a PPR variable name, exactly as in the `.ppr` file. Extra hardware and simulation settings use the prefixes `hw_*` and `sim_*`.
+
+```bash
+python dwfse_ppl_twoTE_1_6.py                        # protocol PPR, full scan -> dwfse_full.seq
+python dwfse_ppl_twoTE_1_6.py --reduced              # simulation cut          -> dwfse_reduced.seq
+python dwfse_ppl_twoTE_1_6.py --ppr my.ppr           # any other PPR of this PPL
+python dwfse_ppl_twoTE_1_6.py --set te=60 --set esp=18 --set acq_b=0,1000,3000 \
+       --set no_diff_acq=3 --set no_experiments=3 --set acq_x=1000,1000,1000 --set acq_y=0,0,0 --set acq_z=0,0,0
+python dwfse_ppl_twoTE_1_6.py --params example_overrides.json --report --reduced
+python validate_dwfse.py --tag mytest --set sim_fix_refocus_centering=true --full
+```
+
+From Python: `seq, C, D, log = build_sequence(load_params('my.ppr', {'te': 60}), reduced=True)`.
+
+The generator runs the PPL's own set-up checks and aborts with the PPL's message. Examples: "TE is too short…", "esp too short…", "TR too short, increase to N ms", "b=… too high…". `--report` prints the values the PPL's `report_on` would print (min TE/ESP/TR, DACs, nominal b), plus the derived set-up values.
+
+**PARSETUP emulation** (`sim_parsetup=true`, default). On the scanner, the parameter editor recomputes `gs_var`, `gr_var`, `gp_init_var` and `fov_*_off` whenever you change FOV, slice thickness, offsets, views or bandwidth. The generator does the same from `fov_mm`, `slice_thickness_mm`, `fov_offsets_mm` (or `slice_separation_mm`), `no_views` and `sample_period`. These formulas are inferred, but for the protocol PPR they reproduce all stored values exactly. Set `sim_parsetup=false` to use the PPR's stored DAC values as they are.
+
+### PPR parameters that act on the sequence
+
+| group | parameters |
+|---|---|
+| geometry | `fov_mm`, `slice_thickness_mm`, `no_slices`, `slice_separation_mm`, `fov_offsets_mm`, `slice_mm_10`, `FOVf`, `oversample`, `oversample2`, `batch_slices`, `slice_clustering_on`, `interslice_delay` |
+| matrix / ordering | `no_samples`, `no_discard`, `sample_period`, `no_views`, `views_per_seg` (ETL), `nav_on`, `PE_order` (1, 6, 7), `PF_echoes` |
+| timing | `te`, `esp`, `tr` (0 = minimum), `TR_array`, `TR_array_size`, `tramp`, `tref_setup`, `post_90_delay1`, `rfdelay`, `rfgate_delay` (checked only) |
+| crushers | `crush_independent_on` (0 = legacy, 1 = v1.6), `tcrush`, `diff_tcrush`, `crush_amp`, `diff_crush_amp`, `post_crush_on`, `post_tcrush`, `post_crush_amp` |
+| compensation lobes | `gsp_lobe`, `gs_comp_scale`, `grp_lobe`, `gr_comp_scale`, `gs_on`, `gr_on`, `gp_on` |
+| diffusion | `b_input_mode`, `sm_delta`, `big_delta`, `no_diff_acq`, `acq_b`, `acq_grad`, `acq_x`, `acq_y`, `acq_z`, `diff_tramp`, `diff_grad_scale` |
+| RF | `rfnum` (sinc shapes 1-8, 15, 16 as placeholders; others need a shape file), `alpha`, `rfcal`, `p180_scale`, `phcor0` |
+| frequency / phase | `rec_freq`, `phcor_plus`, `phcor_minus`, `r_phcor`, `phase_cycle` |
+| loops | `no_experiments`, `no_averages`, `view_block`, `no_disacq` |
+| hardware | `grad_var` |
+
+Not implemented: options that select other PPL variants. These abort with a message: `diff_on=0`, ETL = 1, flow compensation, driven equilibrium, presat, fat sat, CEST, gating, Dixon, 3D, and `echoes_to_discard>0` (limited to 0 by PPL:156).
+
+### Extra parameters (not in the PPR)
+
+| parameter | default | meaning |
+|---|---|---|
+| `hw_grad_delay_us` | 60 | physical gradient lag behind the commanded waveform; see "rfdelay" below |
+| `hw_rf_dead_time_us` / `hw_rf_ringdown_time_us` / `hw_adc_dead_time_us` | 100 / 30 / 10 | typical Pulseq values (used by checks only) |
+| `hw_max_grad_hz_per_m` / `hw_max_slew_hz_per_m_per_s` | full scale / full scale per 100 µs | limits (checks only) |
+| `hw_gamma_hz_per_t` | 42.577478e6 | |
+| `sim_excitation_flip_deg` | `alpha` | 90 flip |
+| `sim_refocus_flip_deg` | 180 | `p180_scale` is treated as a calibration. `"linear"` gives 90 × p180_mul/p90_mul (166.4° for this PPR) |
+| `sim_fix_refocus_centering` | false | false = PPL v1.6 as written (replicates the 180 centring bug); true = intended behaviour |
+| `sim_rf_shape_file` | none | real RF frame (one amplitude per line). Default placeholder: sinc, TBW = nominal BW × duration |
+| `sim_rf_apodization` | 0 | placeholder sinc apodisation |
+| `sim_acqpad_ticks` | none | `acqpad(sample_period)`. Only needed for the per-echo RF/receiver phase correction of off-centre slices. The manual (5.6.4) gives tfilter ≈ 380 µs for SW < 100 kHz, i.e. ≈ 3800 ticks |
+| `sim_aqphase_table` | none | `aqphase()` steps if `phase_cycle` ≠ 1 with averages > 1 (firmware function) |
+| `sim_slice_order` | sequential | slice time order (confirmed sequential) |
+| `sim_zeros_frame_us` | one ramp | length of gradient frame "zeros" (g3040_15.seq not available) |
+| `sim_post_crush_gap_us` | 266 | last read list → post crusher (26 + 240 µs, PPL:2829, 2870) |
+| `sim_pre90_us` | 10270 | slot start → 90 gradient start (PPL:2841) |
+| `sim_reduced_slices` / `_rows` / `_shots` / `_n_dummy` / `_keep_slots` | centre slice / first b > 0 row / first imaging shot / 0 / true | the `--reduced` cut. Timing inside every TR is unchanged; other slices' slots become dead time |
+
+## rfdelay: what the PPL says, and the bug
+
+The PPL states why `rfdelay` exists: "rf delay added to compensate for (isotropic) gradient group delay" (PPL:4100; also PPL:207, 3423, 3537). Every RF pulse and the ADC are commanded `rfdelay` later than the gradient plateau they belong to:
+
+- 90: RF starts `rfdelay` after the ramp, and the ramp-down is commanded `rfdelay` before the RF ends (PPL:3425, 3443-3448).
+- ADC: starts `tramp + rfdelay` after the readout ramp starts (PPL:3726).
+- Legacy 180s (`crush_independent_on=0`): RF is centred `rfdelay` after the plateau centre (PPL:3543).
+
+So the scanner is assumed to output gradients about 60 µs late, and the simulation default models that lag (`hw_grad_delay_us=60`). With it, the 90 slice rephasing is exact (1.5 µs residual) and the readout echo sits at the ADC centre (0.8 µs).
+
+**The bug.** The v1.6 independent-crusher code removes this compensation for the 180s only. `crush_pre_pad` contains `−rfdelay` and `crush_post_pad` contains `+rfdelay` (PPL:1316-1317), and these cancel the `+rfdelay` in the RF start (PPL:3543). The result is that each 180 is centred on the *commanded* plateau. With the 60 µs lag, the physical slice-select plateau is 60 µs late relative to the 180: 4 µs margin before the RF, 124 µs after. Each spin echo then carries a through-slice moment of 331 662 DAC·µs, about 93° of phase across the 1 mm slice. No reason is given in the PPL.
+
+- `sim_fix_refocus_centering=false` (default) replicates this.
+- `true` commands the 180 slice lists, and the diffusion lobes chained to them, `rfdelay` earlier. This is the intended behaviour; it is not in any PPL. Big Δ, δ, TE and ESP are unchanged, and the slice-axis half-intervals become equal again.
+- `hw_grad_delay_us=0` plays the commanded timing literally (90 rephasing off by 58.5 µs, readout echo 60 µs before the ADC centre).
+
+## Step 1 – Branch resolution (protocol PPR)
 
 | parameter | PPR value (line) | branch it selects | PPL lines |
 |---|---|---|---|
-| diff_on | 1 (268) | DWI path everywhere: te_eff = 1, te = FIRST echo, esp = train spacing; tcrush1 = diff_tcrush; diffusion lobes played; first-180 list `slice_180_refocus_diff` | 803-833, 1321, 1756-1770, 2137-2177, 2369-2374, 2435-2461, 2485, 2541-2553, 2645, 2694-2695, 2729-2771, 2825, 3085-3092, 3467-3475, 3503-3526, 3541-3542, 3603-3622, 3644-3677, 3806-3810 |
-| views_per_seg (ETL) | 32 (8) | multi-echo train, `echo_loop` repeats; esp balance for echoes 2..32 | 3789-3790, 3842-3849 |
-| PE_order | 1 (105) | egen ordering (allowed for DWI) | 816-823, 967-968, 1058-1088 |
-| nav_on | 1 (13) | 32 navigator views (gp_order = 0) first; no_views_eff = 128 | 855, 918-926, 2214-2215, 3570, 3698, 4023-4025 |
-| no_views / no_views_2 | 160 / 1 (7, 9) | 5 shots per slice per volume (1 nav + 4 imaging); 2D (bw_override 71) | 878, 1327-1328, 1211-1221 |
-| crush_independent_on | 1 (76) | separate crusher lobes (SEC) + slice-select lobe; padded RF plateau 1460 µs | 1285-1318, 1741-1746, 1760-1766, 2563-2567, 3080, 3085-3092 |
-| crush_amp / diff_crush_amp | 5482 / 2754 (77-78) | train-180 / first-180 crusher DAC (slice axis) | 3080, 3089 |
-| tcrush / diff_tcrush | 1000 / 1000 (74-75) | crusher plateaus; equal → no warning | 1297-1306, 2142, 1319-1321 |
-| b_input_mode | 1 (269) | b-value table → DAC by binary search; b = 0 → DAC 1 | 686-687, 721-780 |
-| no_diff_acq / no_experiments | 2 / 2 (272, 15) | one pass over the 2-row table: row 0 = b 0 (DAC 1), row 1 = b 6000 (DAC 20119), both along read (acq_x = 1000) | 673-684, 2103-2177, 4047-4055 |
-| acq_b, acq_x/y/z | [0, 6000], x = [1000, 1000], y = z = 0 (273-274, 403-404, 468-469, 533-534) | diffusion on read axis only | 2160-2162, 3094 |
-| te / esp / tr | 54 / 16 / 2000 ms (67-69) | te ≠ 0 → explicit-TE branch; extra_delta split symmetrically (branch 1) | 2407-2429, 2496-2502 |
-| sm_delta / big_delta | 4000 / 40000 µs (270-271) | inside the b_kfac envelope | 576-585, 2440-2460 |
-| phase_cycle | 1 (19) | phase_90 = aqphase(no_acq = 0, ·)·deg_90 = 0; phase_180 = 270° | 2232, 2295-2296 |
-| flow_comp_on | 0 (108) | plain read prephaser, G2 = 0 | 1736-1738, 3015-3041, 3053-3064 |
-| de_on | 0 (113) | no driven equilibrium | 828, 3624, 3871 |
-| echoes_to_discard | 0 (112) | no discarded echoes | 3561-3566 |
-| no_disacq | 4 (607) | 4 dummy passes (nav train, all slices) at the very start only (disacq_cnt is set to 0 only once) | 2081, 2209-2210, 3718-3719, 3999-4006 |
-| post_crush_on | 1 (604) | post-train crusher +6000 DAC on all 3 axes, plateau 3000 µs | 2869-2870, 3939-3950 |
-| gsp_lobe / grp_lobe | 0 / 110 % (79, 81) | no slice lobe at readout; 110 % of read dephase before the 180, −10 % after | 2978-2985, 3006-3013 |
-| batch_slices / no_slices | 0 → 3 / 3 (26-27) | slices interleaved within TR, slice period = tr/3 | 1338-1339, 2929 |
-| gating, mains gating, sat_on, chess_on, mtc_on, dixon_on, TR_array_size | 0 | all skipped (MAINSGATE undefined, PPL:257) | 3186, 3213, 3277, 3349, 2091, 1666 |
-| tramp, tsel90 | 200 µs, 1332 µs | tramp ≥ 130 → no extra TR terms; tsel90 ≥ 300 → 300 µs + remainder branch | 2830-2835, 3576-3592 |
+| diff_on | 1 (268) | DWI path: te_eff = 1, te = first echo, esp = train spacing, tcrush1 = diff_tcrush, lobes played, first-180 list | 803-833, 1321, 1756-1770, 2137-2177, 2369-2374, 2435-2461, 2485, 2541-2553, 2645, 2694-2771, 2825, 3085-3092, 3467-3475, 3503-3526, 3541, 3603-3622, 3644-3677, 3806-3810 |
+| views_per_seg | 32 (8) | multi-echo train | 3789-3790, 3842-3849 |
+| PE_order | 1 (105) | egen ordering | 816-823, 1058-1088 |
+| nav_on | 1 (13) | 32 navigator views; no_views_eff 128 | 855, 918-926, 2214-2215, 3570, 4023 |
+| crush_independent_on | 1 (76) | separate crusher lobes, 1460 µs RF plateau | 1285-1318, 1741-1746, 1760-1766, 2563-2567, 3080-3092 |
+| b_input_mode | 1 (269) | b → DAC search (b = 0 → DAC 1) | 686-687, 721-780 |
+| no_diff_acq / no_experiments | 2 / 2 (272, 15) | row 0: b 0, row 1: b 6000 (DAC 20119), read axis | 673-684, 2103-2177, 4047-4055 |
+| te / esp / tr | 54 / 16 / 2000 ms | explicit-TE branch; symmetric extra_delta | 2407-2429, 2496-2502 |
+| phase_cycle | 1 (19) | phase_90 = 0, phase_180 = 270° | 2232, 2295-2296 |
+| no_disacq | 4 (607) | 4 dummy nav passes, only at scan start | 2081, 3718-3719, 3999-4006 |
+| post_crush_on | 1 (604) | +6000 DAC crusher, all axes | 3939-3950 |
+| gsp_lobe / grp_lobe | 0 / 110 % | no slice lobe at readout; 110 % read dephase before the 180 | 2978-3013 |
+| flow comp, DE, presat, CHESS, CEST, gating, Dixon, TR array | off | skipped | |
 
-Branches I cannot resolve with certainty:
+Resolved since the first version: slice order is sequential (confirmed), and `aqphase(0, ·) = 0`. Still open: `acqpad()` (off-centre slice phase only), and truncating PPL division (gp_inc = −40, which gives a phase FOV of 35.77 mm).
 
-1. **Slice time order** `BatchTimeToPos(...)` (offst_20:17). The function body isn't provided. I assume slice_interleave = 1 means sequential order (positions −1.2, 0, +1.2 mm).
-2. **`aqphase(0, 1)`**. I take it as 0, since no_acq = 0 for every train and the first step of any phase cycle is 0°.
-3. **`acqpad(500)`** (PPL:623). This is a firmware function. It only affects the per-echo phase correction of the two off-centre slices.
-4. **PPL `/` for negative operands**. I assume truncation toward zero, because `FloorDiv` exists separately (stdfn_15). It decides gp_inc = −40 (not −41), gs_var_rescale = −2741, gs_comp = −699 and grp_dp/gr_dp.
+## Step 2 – Event timeline
 
-## Step 2 – Event timeline (one TR = one slice train, t = 0 at the start of the 90 slice gradient, `MR3040_Start` PPL:3418)
-
-Amplitudes are logical-axis DAC; 1 DAC = 776.60 Hz/m = 0.018240 mT/m. Timing = the PPL's intended timing (balance equations). See assumption A3.
+t = 0 at the 90 slice-gradient start (commanded). Amplitudes are logical DAC; 1 DAC = 776.60 Hz/m = 0.018240 mT/m. With `hw_grad_delay_us=60` every gradient below is played 60 µs later; RF and ADC times do not move.
 
 | # | event | axis | start (µs) | dur (µs) | amplitude (DAC) | RF phase | PPL |
 |---|---|---|---|---|---|---|---|
-| 1 | slice select ramp/plateau/ramp | s | 0 | 200+1332+200 | −2741 (gs_var_rescale) | | 1721-1722, 3071, 3414-3445 |
-| 2 | RF 90 "3lobe_sinc_3kHz" | | 260 | 1332 | 90° | 0° | 3425-3449 |
-| 3 | slice rephaser (NEGPULSE_SEC tref) | s | 1732 | 200+2800+200 | +699 (−gs_rp) | | 1723, 3074 |
-| 4 | read prephaser (NEGPULSE_SEC tref) | r | 1732 | 200+2800+200 | −889 (−G1) | | 1726-1738, 3074 |
-| 5 | diffusion lobe 1 | r | 5826 | 200+3800+200 | −diff_grad (−20119 / −1) | | 3503-3514, 3094 |
-| 6 | first-180 crusher (POSPULSE_SEC 1000) | s | 25596 | 1400 | +2754 | | 1760-1765, 3089 |
-| 7 | 180 slice select (POSPULSE 1460) | s | 26996 | 200+1460+200 | −2741 | | 1764, 3089 |
-| 8 | RF 180 #1 | | 27260 | 1332 | 166.4° (A2) | 270° | 3459, 3530-3601 |
-| 9 | first-180 crusher | s | 28856 | 1400 | +2754 | | 1765 |
-| 10 | diffusion lobe 2 | r | 45826 | 4200 | −diff_grad | | 3603-3619 |
-| 11 | read dephase (NEGPULSE_SEC tdp) | r | 50366 | 1100 | −269 (−gr_dp) | | 1792-1795, 3733 |
-| 12 | phase encode (NEGPULSE_SEC tdp) | p | 50366 | 1100 | −gp_var = −40·gp_mul (0 on nav) | | 1797-1798, 3570-3572 |
-| 13 | readout (POSPULSE tacq) | r | 51466 | 200+6400+200 | −735 | | 1794, 3688 |
-| 14 | ADC 128 × 50 µs | | 51726 | 6400 | | rx 0° | 3722-3780 |
-| 15 | read rephase (NEGPULSE_SEC tdp) | r | 58266 | 1100 | −269 | | 1795 |
-| 16 | phase rewinder (POSPULSE_SEC tdp) | p | 58266 | 1100 | +gp_var | | 1802 |
-| 17 | train-180 crusher / select / crusher | s | 60596 | 4660 | +5482 / −2741 / +5482 | | 1740-1746, 3080 |
-| 18 | RF 180 #2 | | 62260 | 1332 | 166.4° | 270° (+corr) | 3786 |
-| … | items 11-18 repeat every 16000 µs | | | | | | |
-| 19 | post-train crusher | s, p, r | 555632 | 200+3000+200 | +6000 each | | 3939-3950 |
+| 1 | slice select | s | 0 | 200+1332+200 | −2741 | | 1721, 3071, 3414-3445 |
+| 2 | RF 90 | | 260 | 1332 | 90° | 0° | 3425-3449 |
+| 3 | slice rephaser | s | 1732 | 200+2800+200 | +699 | | 1723, 3074 |
+| 4 | read prephaser | r | 1732 | 200+2800+200 | −889 | | 1726-1738 |
+| 5 | diffusion lobe 1 | r | 5826 | 200+3800+200 | −20119 (b 6000) / −1 (b 0) | | 3503-3514, 3094 |
+| 6 | first-180 crusher / select / crusher | s | 25596 | 1400 / 1860 / 1400 | +2754 / −2741 / +2754 | | 1760-1766, 3089 |
+| 7 | RF 180 #1 | | 27260 | 1332 | 180° | 270° | 3459, 3530-3601 |
+| 8 | diffusion lobe 2 | r | 45826 | 4200 | same as 5 | | 3603-3619 |
+| 9 | read dephase / readout / rephase | r | 50366 | 1100 / 6800 / 1100 | −269 / −735 / −269 | | 1792-1795 |
+| 10 | phase encode / rewinder | p | 50366 / 58266 | 1100 each | ∓40 × gp_mul (0 on nav) | | 1797-1802, 3570 |
+| 11 | ADC 128 × 50 µs | | 51726 | 6400 | | rx 0° | 3722-3780 |
+| 12 | train-180 crusher / select / crusher | s | 60596 | 1400 / 1860 / 1400 | +5482 / −2741 / +5482 | | 1740-1746, 3080 |
+| 13 | RF 180 #2 | | 62260 | 1332 | 180° | 270° | 3786 |
+| … | 9-13 repeat every 16000 µs | | | | | | |
+| 14 | post-train crusher | s, p, r | 555632 | 200+3000+200 | +6000 | | 3939-3950 |
 
-Key times: 90 centre 926; 180₁ centre 27926; echo 1 (ADC centre) 54926; 180ₖ centre = 54926 + (k − 1.5)·16000; echo k = 54926 + (k − 1)·16000; echo 32 at 550926. Δ (lobe onset to onset) = 40000 µs and δ = 4000 µs (plateau + one ramp). Each slice train sits in a 666666 µs slot: 10270 µs pre-90 code time (PPL:2841), the train, the crusher, then the tr_extend delay (PPL:3955-3983).
+Key times: 90 centre 926; 180₁ centre 27926; echo 1 at 54926; echo k at 54926 + (k−1)·16000. Each train sits in a 666666 µs slot: 10270 µs of pre-90 code time, the train, then the TR fill.
 
-Loop structure (PPL:2082-4055, outer → inner): volume (acq-table row 0, then 1) → averages (1) → slice batch (1) → disacq/dummy loop → shot loop (5 shots: nav, then 4 imaging) → view block (1) → slices 1..3. Dummies: 4 passes of the nav shot for all 3 slices, b = 0 row, no data, only before the first volume. Per volume: 15 trains = 10 s. Total 4 × 2 s + 2 × 10 s = 28 s.
+Loops (PPL:2082-4055, outermost first): table rows → averages → slice batches → dummy (disacq) loop → shots (navigator, then 4 imaging) → view block → slices. Dummies are 4 navigator passes of all slices with the b = 0 row, before the first volume only. Total scan 28 s.
 
-PE order (PE_order 1, PPL:1058-1088), gp_mul per echo e = 1..32:
+PE order (PE_order 1), gp_mul for echo e:
 
 - shot 1: −2e
 - shot 2: −2e + 1
 - shot 3: 2(e − 1)
 - shot 4: 2(e − 1) + 1
 
-Echo 1 holds k ≈ 0 (TE_eff = 54 ms).
+The k = 0 line is in echo 1.
 
 ## Step 3 – Units
 
 | quantity | conversion | source |
 |---|---|---|
-| gradient | G = DAC/32767 × 25447 Hz/mm → 776.60 Hz/m per DAC, full scale 597.66 mT/m | PPR:5 (grad_var[0]), var_20:96 (dacmax), m3040_15:241-282 (isotropic base matrix, CREATE_MATRIX divisor) |
-| timer tick | 100 ns (waittimer/delay32) | MAN 4.8 |
-| gradient clock | tramp/5 = 40 × 100 ns = 4 µs/point, 50 points/ramp | PPL:1714, MAN 5.6.1.3 |
-| phase | 0.225° per unit; deg_90 = 400 | var_20:108, PPL:1255 |
-| sample period | 500 × 100 ns = 50 µs | PPR:4 |
-| 90° | p90_mul = 594 = rfcal → 90° | PPL:2347 |
-| 180 | p180_mul = 1098 → 166.36° if the amplifier is linear (A2) | PPL:2348 |
-| RF shape | rfnum 1: 1332 µs, nominal BW 3000 Hz (TBW 4); slice gradient uses 71 % → 2130 Hz → 1.0006 mm | PPL:598, 1327-1333, 1437-1448 |
+| gradient | DAC/32767 × 25447 Hz/mm (full scale 597.66 mT/m) | PPR:5, var_20:96, m3040_15:241-282 |
+| timer | 100 ns ticks | MAN 4.8 |
+| gradient clock | tramp/5 × 100 ns per point, 50 points per ramp | PPL:1714, MAN 5.6.1.3 |
+| phase | 0.225° per unit | var_20:108 |
+| RF | flip from `alpha` and `sim_refocus_flip_deg`; shape placeholder | PPL:598, 2347-2348 |
 
-## Step 5 – Validation (reduced .seq read back; `validation/report_gd*.txt`)
+## Step 5 – Validation (reduced sequence read back)
 
-| check | GRAD_DELAY_US = 0 | = 60 |
-|---|---|---|
-| `check_timing` (reduced and full) | PASS | PASS |
-| 90 → 180₁, 180₁ → echo 1 | 27.0000 / 27.0000 ms | same |
-| TE | 54.0000 ms (PPR 54) | same |
-| 180ₖ → 180ₖ₊₁ (k ≥ 2), echo spacing | 16.0000 ms (PPR 16) | same |
-| 180₁ → 180₂ | 35.0000 ms (= te/2 + esp/2) | same |
-| b, diffusion lobes only | 5962.3 s/mm² | 5962.3 |
-| b, all gradients, echo 1 | 6380.0 (xx 6379.3, zz 0.73) | 6380.1 |
-| b, all gradients, echo 2 / 3 / 32 | 6384 / 6389 / 6523 | same |
-| PPL nominal (39.69 kernel) / PPR | 6000 / 6000 | |
-| FOV read / phase from Δk | 35.04 / 35.77 mm (gp_inc truncation) | same |
-| ky order vs gp_order | exact, ky = −gp_order·Δky | same |
-| full protocol coverage | 128 unique ky per volume per slice | |
-| kx = 0 sample (ADC centre 63.5) | 62.28 (−60.8 µs) | 63.48 (−0.8 µs) |
-| slice residual after 90 rephase | +160483 DAC·µs (58.5 µs of plateau) | −3976 (1.5 µs) |
-| net moment 180ₖ → 180ₖ₊₁, k ≥ 2 | x −5 335 197, y 0, z 8 606 748 DAC·µs, identical for all | same |
-| 180₁ → 180₂ | x −85 811 165, z 5 333 145 → **differs (flagged)** | same |
+| check | default (lag 60, as written) | fixed centring | commanded (lag 0) |
+|---|---|---|---|
+| check_timing (reduced and full) | PASS | PASS | PASS |
+| TE / 180₁→180₂ / ESP | 54.0000 / 35.0000 / 16.0000 ms | same | same |
+| b lobes only / all gradients at TE | 5962.3 / 6380.1 s/mm² | 5962.3 / 6380.0 | 5962.3 / 6380.0 |
+| b all gradients at echo 32 | 6523.5 | | 6523.0 |
+| ky order | exact (ky = −gp_order Δky) | exact | exact |
+| kx = 0 vs ADC centre | −0.8 µs | −0.8 µs | −60.8 µs |
+| 90 slice residual | −1.5 µs of plateau | −1.5 µs | +58.5 µs |
+| slice moment 180→echo vs echo→180 | 4 137 543 vs 4 469 205 (bug) | 4 302 004 vs 4 304 745 | 4 302 004 vs 4 304 745 |
+| 180ₖ→180ₖ₊₁ net moment, k ≥ 2 | identical for all | identical | identical |
+| 180₁→180₂ | differs (diffusion lobe 2, smaller first crushers) | same | same |
+| full-protocol coverage | 128 unique ky per volume per slice | | |
 
-The b = 6000 request becomes 5962 s/mm² from the lobes. That is because the PPL kernel uses 39.69 instead of (2π)² = 39.48. Cross-terms with the 110 % read prephaser and the readout raise the echo-1 b to 6380 s/mm² (+7 %).
+The PPL's nominal b (6000) uses 39.69 instead of (2π)², so the true lobe b is 5962 s/mm². The read prephaser and readout cross-terms raise it to 6380 s/mm² at echo 1.
 
 ## Assumptions and placeholders
 
-- **A1** RF shape: placeholder sinc, TBW 4, no apodisation, 1332 µs. Real frame "3lobe_sinc_3kHz" in RFstd44.seq. Set `RF_SHAPE_FILE`.
-- **A2** Refocusing flip = 90 × 1098/594 = 166.36° (linear amplifier). Set `REFOCUS_FLIP_DEG = 180` if 185 % is an amplifier calibration.
-- **A3** Timing = the PPL's balance equations. The empirical tick constants (−21, −6, −185, −156, −36, −210, +250, tfilter) exist to cancel code overhead, so I don't model residual overhead (a few µs) or the untimed MR3040 set-up calls. The 90 and 180 RF start = list start + (crusher budget) + tramp + rfdelay, which is the intent of `temp_mac` (PPL:3425, 3543).
-- **A4** Gradients follow the commanded timing (`GRAD_DELAY_US = 0`). The PPL delays RF/ADC by rfdelay = 60 µs to offset hardware gradient delay. The 60 µs model aligns the read echo and the 90 rephasing, but makes every 180 select lobe asymmetric by 120 µs (the 180 is centred in command time).
-- **A5** Ramps are linear (frames "0_max", "max_0", "0_mx_sec", … are 50-point ramps; the actual frame data in g3040_15.seq is not available). Frame "zeros" lasts one ramp (200 µs).
-- **A6** The ADC samples the window [initiate, initiate + 6400 µs]. The filter group delay (tfilter) only shifts the `complete()` return, and the PPL subtracts it (PPL:2720).
-- **A7** Post-train crusher starts 266 µs after the last read list (26 + 240 µs, tr_min accounting PPL:2829, 2870).
-- **A8** Pre-90 code time is 10270 µs and the slice period is 666666 µs exactly (PPL:2841, 2929). The real slot = actual code time + tr_extend.
-- **A9** Off-centre slices get ±2556 Hz. Their per-echo phase correction needs acqpad(500), so it is not applied (`OffsetSlicePhaseCorr` definition). It is irrelevant for the centre slice.
-- **A10** Logical read/phase/slice → Pulseq x/y/z. The absolute polarity of all gradients (base-matrix sign) is unknown, which mirrors slice positions (−480 → +1.2 mm here). Relative signs are exact.
-- **A11** The 1 µs gradient/RF raster is finer than a vendor scanner's. The 4 µs DAC staircase is not modelled. Odd extra_delta values (half-µs delays) would need a 0.1 µs raster (the script asserts).
-- **A12** System: max grad = full scale; max slew = full scale / 100 µs (min tramp, PPL:114); rf_dead_time = warmup 20 µs (var_20:107); rf_ringdown and adc_dead_time = 0 (not in files; they don't change any waveform).
-- **A13** Dummy TRs play no ADC events (data are discarded on the scanner).
+1. RF shape: placeholder sinc, TBW = nominal BW × duration (4 for rfnum 1), no apodisation (no access to RFstd44.seq).
+2. Refocusing flip 180° (`p180_scale` treated as a calibration).
+3. Timing follows the PPL's balance equations. The empirical tick constants cancel code overhead; residual overheads of a few µs are not modelled.
+4. Hardware gradient lag = 60 µs (the PPR rfdelay), per PPL:4100.
+5. Linear ramps; frame "zeros" lasts one ramp; plateaus quantised to the gradient clock as in `MR3040_Delay`.
+6. ADC window = [initiate, initiate + tacq]; the filter delay only shifts `complete()` and is subtracted by the PPL (PPL:2720).
+7. Post crusher 266 µs after the last read list; pre-90 time 10270 µs; slot = tr/batch (or tr_min + extension with clustering).
+8. Off-centre slice phase correction needs `sim_acqpad_ticks` (not applied by default).
+9. PPL `/` truncates toward zero.
+10. PARSETUP formulas inferred (verified against the protocol PPR).
+11. Logical read/phase/slice → x/y/z. Absolute gradient polarity is unknown (only relative signs are known), which may mirror slice positions.
+12. 1 µs raster, or 0.1 µs automatically when a half-µs delay occurs (odd Δ with independent crushers).
+13. Dummy TRs carry no ADC; `no_discard` samples are included in the ADC.
 
 ## PPL items flagged (kept as written)
 
-- First-180 crushers (2754) are about half the train crushers (5482). With the diffusion lobes, the 180₁→180₂ interval moment differs from every other interval, so the CPMG condition is broken by design. All later intervals are identical.
-- The RF phases are CPMG (90 at 0°, all 180s at 270°). Nothing in this code path makes the RF phases non-CPMG; the "non-CPMG" in the file name is only the unequal first interval (te/2 ≠ esp/2).
-- `CREATE_MATRIX(aq_mat …)` (PPL:3688) and `aq_mat_sec` (PPL:3733) are recomputed while that matrix is active (MAN 3.5.19: "unpredictable"). The values are unchanged and the affected frames are zero at that moment, so I expect no effect, but it is not modelled.
-- The 90 RF ends 60 µs into the slice ramp-down in command time, because rfdelay is applied asymmetrically (PPL:3443-3448).
-- gp_inc truncates 40.86 → 40, so the phase FOV is 35.77 mm against 35.04 mm in read.
-- b = 0 rows play DAC 1 (0.018 mT/m lobes), not zero.
+- 180 centring vs rfdelay (see above).
+- First-180 crushers 2754 vs train 5482 DAC. With diffusion lobe 2, the 180₁→180₂ moment differs from all later intervals.
+- RF phases are CPMG (0° / 270°); "non-CPMG" refers only to the unequal first interval.
+- `aq_mat` / `aq_mat_sec` are recomputed while active (PPL:3688, 3733). The values are unchanged, so no effect is modelled.
+- gp_inc truncation 40.86 → 40: phase FOV 35.77 mm vs read FOV 35.04 mm.
+- b = 0 rows play DAC 1, not zero.
+- With `slice_clustering_on=1`, TR is rounded through integer ms (PPL:2946, 3976), so the real TR is 2001.1 ms for this protocol.

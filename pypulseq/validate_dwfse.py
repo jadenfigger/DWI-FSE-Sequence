@@ -6,7 +6,7 @@ reports: check_timing, one-TR plot, numerical b-value (all gradients and diffusi
 lobes alone), TE / ESP from RF and ADC centres, k-space order/coverage, and 0th
 gradient moments between refocusing pulses (CPMG condition).
 
-    python validate_dwfse.py [--grad-delay 0|60] [--full]
+    python validate_dwfse.py [--ppr F] [--params F.json] [--set key=value ...] [--tag NAME] [--full]
 """
 import argparse
 import math
@@ -51,18 +51,30 @@ def b_value(t, g, t_exc, t_refs, t_echo):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--grad-delay', type=int, default=0)
+    ap.add_argument('--ppr', default=None)
+    ap.add_argument('--params', default=None)
+    ap.add_argument('--set', action='append', default=[])
+    ap.add_argument('--tag', default='default', help='name used for output files')
     ap.add_argument('--full', action='store_true', help='also check k-space of the full protocol')
     ap.add_argument('--outdir', default='validation')
     args = ap.parse_args()
     os.makedirs(args.outdir, exist_ok=True)
 
-    gen.GRAD_DELAY_US = args.grad_delay
-    seq_b, P, D, log = gen.build_sequence(reduced=True)
-    fn = os.path.join(args.outdir, f'dwfse_reduced_gd{args.grad_delay}.seq')
+    ov = {}
+    if args.params:
+        import json
+        with open(args.params) as f:
+            ov.update(json.load(f))
+    ov.update(dict(gen.parse_set(x) for x in args.set))
+    P = gen.load_params(args.ppr, ov)
+    seq_b, P, D, log = gen.build_sequence(P, reduced=True)
+    tag = args.tag
+    fn = os.path.join(args.outdir, f'dwfse_reduced_{tag}.seq')
     seq_b.write(fn)
-    seq = pp.Sequence(gen.make_system(P))   # 1 us rasters (file definitions)
+    seq = pp.Sequence(seq_b.system)          # same rasters as written
     seq.read(fn)
+    row = log[0]['row']
+    shot = log[0]['shot']
     dac2hz = P.grad_var[0] * 1000.0 / gen.DACMAX
     hz2mTm = 1e3 / 42.577478e6
     out = []
@@ -71,14 +83,15 @@ def main():
         print(s)
         out.append(s)
 
-    say(f'# Validation (GRAD_DELAY_US = {args.grad_delay}) - reduced sequence read back from {fn}')
+    say(f'# Validation [{tag}] overrides {ov} - reduced sequence read back from {fn}')
+    say(f'gradient delay {P.hw_grad_delay_us} us, refocus centering fix {P.sim_fix_refocus_centering}, flips {D.flip90:.1f}/{D.flip180:.1f}')
     ok, rep = seq.check_timing()
     say(f'check_timing: {"PASS" if ok else "FAIL"} ({len(rep)} errors)')
 
     # ---- RF / ADC times ----------------------------------------------------
     t_exc, _, t_ref, _ = seq.rf_times()
     t_adc, _ = seq.adc_times()
-    n = P.no_samples
+    n = P.no_samples + P.no_discard
     adc_c = t_adc.reshape(-1, n).mean(axis=1)   # sample times are delay+(i+0.5)*dwell -> mean = centre
     t_exc, t_ref = np.asarray(t_exc), np.asarray(t_ref)
     say(f'excitations: {len(t_exc)}, refocusing: {len(t_ref)}, readouts: {len(adc_c)}')
@@ -124,30 +137,31 @@ def main():
     axs[0, 0].set_title('One TR, centre slice: full echo train')
     axs[0, 1].set_title('Zoom: excitation, diffusion module, echoes 1-2')
     fig.tight_layout()
-    png = os.path.join(args.outdir, f'one_TR_gd{args.grad_delay}.png')
+    png = os.path.join(args.outdir, f'one_TR_{tag}.png')
     fig.savefig(png, dpi=110)
     seq.plot(time_range=(t0, adc_c[1] + 5e-3), time_disp='ms', grad_disp='mT/m', plot_now=False)
     for i, f in enumerate(plt.get_fignums()[1:]):
-        plt.figure(f).savefig(os.path.join(args.outdir, f'seqplot_gd{args.grad_delay}_{i}.png'), dpi=100)
+        plt.figure(f).savefig(os.path.join(args.outdir, f'seqplot_{tag}_{i}.png'), dpi=100)
     plt.close('all')
-    say(f'\nplots: {png}, seqplot_gd{args.grad_delay}_*.png')
+    say(f'\nplots: {png}, seqplot_{tag}_*.png')
 
     # ---- b-value ---------------------------------------------------------------
     say('\n## b-value at echo 1 (TE), primary spin-echo pathway')
     b_all, bdiag, _ = b_value(t, g, t_exc[0], t_ref, adc_c[0])
-    T = log[[i for i, L in enumerate(log) if not L['dummy']][0]]['train']
+    T = log[0]['train']
     gl = np.zeros_like(g)
+    dr, dp_, ds = D.diff_rps[row]
     for (a, b) in (T.l1, T.l2):
-        s = log[0]['t0'] * 1e-6 + 10270e-6 + (a + args.grad_delay) * 1e-6
-        dr = D.diff_rps[gen.REDUCED_ACQ_ROWS[0]][0]
-        tt = np.array([0, P.diff_tramp, P.sm_delta, P.sm_delta + P.diff_tramp]) * 1e-6 + s
-        gl[0] += np.interp(t, tt, np.array([0, -dr, -dr, 0]) * dac2hz, left=0, right=0)
+        st = (log[0]['t0'] + P.sim_pre90_us * 10 + a + int(round(P.hw_grad_delay_us * 10))) * 1e-7
+        tt = np.array([0, P.tramp, P.sm_delta, P.sm_delta + P.tramp]) * 1e-6 + st
+        for ax, v in ((0, -dr), (1, -dp_), (2, -ds)):
+            gl[ax] += np.interp(t, tt, np.array([0, v, v, 0]) * dac2hz, left=0, right=0)
     b_lobes, _, _ = b_value(t, gl, t_exc[0], t_ref, adc_c[0])
-    G = D.diff_rps[gen.REDUCED_ACQ_ROWS[0]][0] * dac2hz
+    G = math.sqrt(dr**2 + dp_**2 + ds**2) * dac2hz
     dl, Dl, ep = P.sm_delta * 1e-6, P.big_delta * 1e-6, P.diff_tramp * 1e-6
     b_st = (2 * np.pi * G) ** 2 * (dl ** 2 * (Dl - dl / 3) + ep ** 3 / 30 - dl * ep ** 2 / 6) * 1e-6
-    say(f'PPR requested b                    : {P.acq_b[gen.REDUCED_ACQ_ROWS[0]]} s/mm^2')
-    say(f'PPL nominal b (b_kfac, 39.69 kernel): {D.acq_b_achieved_ppl[gen.REDUCED_ACQ_ROWS[0]]} s/mm^2 (DAC {D.diff_grad[gen.REDUCED_ACQ_ROWS[0]]})')
+    say(f'PPR requested b (row {row})          : {P.acq_b[row]} s/mm^2')
+    say(f'PPL nominal b (b_kfac, 39.69 kernel): {D.acq_b_nominal[row]} s/mm^2 (DAC {D.diff_grad[row]})')
     say(f'Stejskal-Tanner trapezoid, (2pi)^2  : {b_st:.1f} s/mm^2')
     say(f'numerical, diffusion lobes only     : {b_lobes:.1f} s/mm^2')
     say(f'numerical, ALL gradients            : {b_all:.1f} s/mm^2 (xx {bdiag[0]:.1f}, yy {bdiag[1]:.2f}, zz {bdiag[2]:.2f})')
@@ -156,14 +170,15 @@ def main():
     say(f'numerical ALL at echo 2 / 3 / {len(adc_c)}  : {bl[0]:.1f} / {bl[1]:.1f} / {bl[2]:.1f} s/mm^2')
 
     # ---- k-space ---------------------------------------------------------------
-    say('\n## k-space (reduced: shot %s)' % gen.REDUCED_SHOTS)
+    say(f'\n## k-space (reduced: shot {shot}, PE_order {P.PE_order})')
     ktraj_adc, _, _, _, _ = seq.calculate_kspace()
     k = ktraj_adc.reshape(3, -1, n)
     dkx = abs(D.read_amp) * dac2hz * P.sample_period * 1e-7
+    n = P.no_samples + P.no_discard
     dky = abs(D.gp_inc) * dac2hz * (D.tdp + P.tramp) * 1e-6
     say(f'read  dk = {dkx:.3f} 1/m -> FOV_read  = {1e3/dkx:.2f} mm (PPR FOV {P.fov_mm})')
-    say(f'phase dk = {dky:.3f} 1/m -> FOV_phase = {1e3/dky:.2f} mm (gp_inc {D.gp_inc}; untruncated 40.86 -> {1e3/(dky*40.8625/40):.2f} mm)')
-    gp = D.gp_order[gen.REDUCED_SHOTS[0] * P.views_per_seg:(gen.REDUCED_SHOTS[0] + 1) * P.views_per_seg]
+    say(f'phase dk = {dky:.3f} 1/m -> FOV_phase = {1e3/dky:.2f} mm (gp_inc {D.gp_inc})')
+    gp = D.gp_order[log[0]['view']:log[0]['view'] + P.views_per_seg]
     ky_lines = k[1].mean(axis=1) / dky
     say('echo : gp_order | ky/dky (measured, mean over readout) | ky spread in readout')
     bad = 0
@@ -222,13 +237,12 @@ def main():
     say(f'\nslice moment 90 centre -> end of rephaser: {m_sl[2]/dac2hz*1e6:.0f} DAC*us '
         f'(= {m_sl[2]/dac2hz*1e6/abs(D.gs_var_rescale):.1f} us of slice-select plateau)')
 
-    with open(os.path.join(args.outdir, f'report_gd{args.grad_delay}.txt'), 'w') as f:
+    with open(os.path.join(args.outdir, f'report_{tag}.txt'), 'w') as f:
         f.write('\n'.join(out) + '\n')
 
     if args.full:
         print('\n## full protocol k-space coverage')
-        gen.GRAD_DELAY_US = args.grad_delay
-        sf, _, _, logf = gen.build_sequence(reduced=False)
+        sf, _, _, logf = gen.build_sequence(gen.load_params(args.ppr, ov), reduced=False)
         okf, repf = sf.check_timing()
         print('full check_timing:', 'PASS' if okf else 'FAIL')
         kf, _, _, _, _ = sf.calculate_kspace()

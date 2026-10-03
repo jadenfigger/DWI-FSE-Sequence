@@ -1,4 +1,5 @@
-# Validation (GRAD_DELAY_US = 0) - reduced sequence read back from validation/dwfse_reduced_gd0.seq
+# Validation [commanded_timing] overrides {'hw_grad_delay_us': 0} - reduced sequence read back from validation/dwfse_reduced_commanded_timing.seq
+gradient delay 0 us, refocus centering fix False, flips 90.0/180.0
 check_timing: PASS (0 errors)
 excitations: 1, refocusing: 32, readouts: 32
 
@@ -12,19 +13,19 @@ echo_k -> echo_k+1    : min 16.0000 max 16.0000 ms (PPR esp = 16)
 echo_k -> 180_k+1     : min 8.0000 max 8.0000 ms; 180_k -> echo_k (k>=2): min 8.0000 max 8.0000 ms (esp/2 = 8.0)
 last echo at 550.000 ms after 90 (te+(ETL-1)*esp = 550)
 
-plots: validation/one_TR_gd0.png, seqplot_gd0_*.png
+plots: validation/one_TR_commanded_timing.png, seqplot_commanded_timing_*.png
 
 ## b-value at echo 1 (TE), primary spin-echo pathway
-PPR requested b                    : 6000 s/mm^2
+PPR requested b (row 1)          : 6000 s/mm^2
 PPL nominal b (b_kfac, 39.69 kernel): 6000 s/mm^2 (DAC 20119)
 Stejskal-Tanner trapezoid, (2pi)^2  : 5962.3 s/mm^2
 numerical, diffusion lobes only     : 5962.3 s/mm^2
 numerical, ALL gradients            : 6380.0 s/mm^2 (xx 6379.3, yy 0.00, zz 0.73)
 numerical ALL at echo 2 / 3 / 32  : 6384.2 / 6388.6 / 6523.0 s/mm^2
 
-## k-space (reduced: shot [1])
+## k-space (reduced: shot 1, PE_order 1)
 read  dk = 28.540 1/m -> FOV_read  = 35.04 mm (PPR FOV 35)
-phase dk = 27.958 1/m -> FOV_phase = 35.77 mm (gp_inc -40; untruncated 40.86 -> 35.01 mm)
+phase dk = 27.958 1/m -> FOV_phase = 35.77 mm (gp_inc -40)
 echo : gp_order | ky/dky (measured, mean over readout) | ky spread in readout
    1 :   -2 |    2.0000 | 0.00e+00
    2 :   -4 |    4.0000 | 0.00e+00
