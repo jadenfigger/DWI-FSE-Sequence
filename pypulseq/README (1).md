@@ -5,10 +5,11 @@ All tools read the same `.seq` file.
 | File | What it is for |
 |---|---|
 | `plot_blocks.py` | Sequence diagram with every block numbered (the numbers koma_sim.jl uses for snapshots) and a block table; `--snap-csv <name>_koma_snapshots.csv` marks the snapshot points |
+| `snapshot_seqs.py` | Cut copies of a .seq that stop at chosen times (`--at adc` = every echo centre, `--at rf`, `--times`, `--blocks`) into `<name>_snap/`; `koma_sim.jl` then writes `<name>_koma_snapshots_t.csv` (magnetization at those times) |
 | `view_seq.py` | Look at the sequence: diagram, RF flip/phase table, CPMG moment check, b-value per echo, k-space |
 | `mrzero_epg.py` | Generalized EPG (phase distribution graph) simulation: which echo pathways make each echo, B1/B0 sweeps |
-| `koma_sim.jl` | Full Bloch simulation in KomaMRI: real RF shapes and slice profile, magnetization snapshots over time |
-| `plot_koma.py` | Plots the CSV results that `koma_sim.jl` writes |
+| `koma_sim.jl` | Full Bloch simulation in KomaMRI: real RF shapes and slice profile, magnetization snapshots at the end of chosen blocks (`snap_blocks`) and at any times cut by `snapshot_seqs.py` |
+| `plot_koma.py` | Plots the CSV results that `koma_sim.jl` (or `bloch_sim.py --csv`, with `--sim bloch`) writes; `--blocks` / `--snaps` choose which snapshots to show |
 | `scale_b1.py` | Makes a copy of the .seq with all RF scaled (B1 error), for KomaMRI |
 
 Python setup: `pip install pypulseq MRzeroCore matplotlib numpy torch`

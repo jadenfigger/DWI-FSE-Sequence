@@ -7,6 +7,9 @@
 #     <name>_koma_signal.csv     ADC time, real, imag of the raw signal
 #     <name>_koma_echoes.csv     echo #, |center sample|, |peak|  (fraction of M0)
 #     <name>_koma_snapshots.csv  block, z, Mxy (re, im), Mz of every spin after selected blocks
+#     <name>_koma_snapshots_t.csv  snap #, z, Mxy (re, im), Mz at chosen TIMES (e.g. echo centres),
+#                                written when the folder <name>_snap exists. Make it with:
+#                                    python snapshot_seqs.py <name>.seq --at adc
 # Plot them with:  python plot_koma.py <name>
 # KomaMRI's own plots (sequence diagram, k-space, signal) are also saved as .html when possible.
 #
@@ -34,7 +37,9 @@ Nspins    = 20_000
 T1, T2    = 1.5, 0.08  # [s]
 T2prime   = 0.03       # [s] intravoxel B0 spread (Lorentzian)
 B0_Hz     = 0.0        # global off-resonance [Hz]
-snap_blocks = Int[]    # blocks to snapshot; empty = right after each RF pulse
+snap_blocks = Int[]    # blocks to snapshot (state at the END of the block); empty = after each RF block
+                       # numbers = Pulseq block index; see them with:  python plot_blocks.py <name>.seq
+snap_times_dir = stem * "_snap"   # cut copies from snapshot_seqs.py (any time, e.g. ADC centres)
 
 # Save a KomaMRI plot to html without needing a plot window (never stops the script)
 function save_plot(f, name)
@@ -93,4 +98,20 @@ for b in blocks
     println("after block $b: |mean Mxy| = $(round(abs(mean(M.xy)), digits=4)),  mean Mz = $(round(mean(M.z), digits=4))")
 end
 writedlm(stem * "_koma_snapshots.csv", rows, ',')
+
+# ---------------------------------------------------------------- snapshots at chosen times
+# KomaMRI can only stop at block boundaries, so snapshot_seqs.py writes copies of the
+# sequence that END at the wanted time (snap_01.seq, snap_02.seq, ... + index.csv).
+# Simulating each to its end gives the magnetization at that time.
+if isdir(snap_times_dir)
+    snap_files = sort(filter(f -> startswith(f, "snap_") && endswith(f, ".seq"), readdir(snap_times_dir)))
+    rows_t = Matrix{Float64}(undef, 0, 5)
+    for (k, f) in enumerate(snap_files)
+        cut = read_seq(joinpath(snap_times_dir, f))
+        M = simulate(obj, cut, sys; sim_params=params("state"))
+        global rows_t = vcat(rows_t, hcat(fill(k, Nspins), z, real(M.xy), imag(M.xy), M.z))
+        println("$f: |mean Mxy| = $(round(abs(mean(M.xy)), digits=4)),  mean Mz = $(round(mean(M.z), digits=4))")
+    end
+    writedlm(stem * "_koma_snapshots_t.csv", rows_t, ',')
+end
 println("done. Plot with:  python plot_koma.py \"$stem\"")
