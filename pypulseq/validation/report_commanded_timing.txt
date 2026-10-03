@@ -1,0 +1,54 @@
+# Validation [commanded_timing] overrides {'hw_grad_delay_us': 0} - reduced sequence read back from validation/dwfse_reduced_commanded_timing.seq
+gradient delay 0 us, refocus centering fix False, flips 90.0/180.0
+check_timing: PASS (0 errors)
+excitations: 1, refocusing: 32, readouts: 32
+
+## TE / echo spacing (from RF centres and ADC centres)
+90 -> 180_1           : 27.0000 ms (PPR te/2 = 27.0000)
+180_1 -> echo1 (ADC)  : 27.0000 ms (PPR te/2 = 27.0000)
+TE (90 -> echo1)      : 54.0000 ms (PPR te = 54)
+180_1 -> 180_2        : 35.0000 ms (expected te/2+esp/2 = 35.0)
+180_k -> 180_k+1 (k>=2): min 16.0000 max 16.0000 ms (PPR esp = 16)
+echo_k -> echo_k+1    : min 16.0000 max 16.0000 ms (PPR esp = 16)
+echo_k -> 180_k+1     : min 8.0000 max 8.0000 ms; 180_k -> echo_k (k>=2): min 8.0000 max 8.0000 ms (esp/2 = 8.0)
+last echo at 550.000 ms after 90 (te+(ETL-1)*esp = 550)
+
+plots: validation/one_TR_commanded_timing.png, seqplot_commanded_timing_*.png
+
+## b-value at echo 1 (TE), primary spin-echo pathway
+PPR requested b (row 1)          : 6000 s/mm^2
+PPL nominal b (b_kfac, 39.69 kernel): 6000 s/mm^2 (DAC 20119)
+Stejskal-Tanner trapezoid, (2pi)^2  : 5962.3 s/mm^2
+numerical, diffusion lobes only     : 5962.3 s/mm^2
+numerical, ALL gradients            : 6380.0 s/mm^2 (xx 6379.3, yy 0.00, zz 0.73)
+numerical ALL at echo 2 / 3 / 32  : 6384.2 / 6388.6 / 6523.0 s/mm^2
+
+## k-space (reduced: shot 1, PE_order 1)
+read  dk = 28.540 1/m -> FOV_read  = 35.04 mm (PPR FOV 35)
+phase dk = 27.958 1/m -> FOV_phase = 35.77 mm (gp_inc -40)
+echo : gp_order | ky/dky (measured, mean over readout) | ky spread in readout
+   1 :   -2 |    2.0000 | 0.00e+00
+   2 :   -4 |    4.0000 | 0.00e+00
+   3 :   -6 |    6.0000 | 0.00e+00
+   4 :   -8 |    8.0000 | 0.00e+00
+  31 :  -62 |   62.0000 | 0.00e+00
+  32 :  -64 |   64.0001 | 0.00e+00
+ky = -1 * gp_order * dky for all echoes: YES
+kx/dkx range per readout: [-64.64, 62.30] (readout direction +->-)
+kx = 0 at sample index (0-based, centre of ADC = 63.5): echo1 62.284, echoes 2..N 62.284..62.316  (offset vs ADC centre: -60.8 us)
+
+## 0th moments (DAC*us and mT/m*ms) per axis
+half-intervals:
+  90c   -> 180_1c : x=   -83142967 (-1516.5107) y=           0 (   0.0000) z=     1191624 (  21.7350)
+  180_1 -> echo1  : x=   -83187299 (-1517.3194) y=       72000 (   1.3133) z=     1028400 (  18.7578)
+  echo1 -> 180_2  : x=    -2623866 ( -47.8588) y=      -72000 (  -1.3133) z=     4304745 (  78.5177)
+  180_2 -> echo2  : x=    -2711331 ( -49.4541) y=      144000 (   2.6265) z=     4302004 (  78.4677)
+  echo2 -> 180_3  : x=    -2623866 ( -47.8588) y=     -144000 (  -2.6265) z=     4304745 (  78.5177)
+full intervals between successive refocusing pulses:
+  180_1 -> 180_2 : x=   -85811165 (-1565.1781) y=           0 (   0.0000) z=     5333145 (  97.2755)
+  180_2 -> 180_3 : x=    -5335197 ( -97.3129) y=          -0 (  -0.0000) z=     8606748 ( 156.9853)
+  180_3 -> 180_4 : x=    -5335197 ( -97.3129) y=          -0 (  -0.0000) z=     8606748 ( 156.9853)
+  180_31-> 180_32: x=    -5335197 ( -97.3129) y=           0 (   0.0000) z=     8606748 ( 156.9853)
+intervals differing from 180_2->180_3 by > 1 DAC*us: ['180_1->180_2']
+
+slice moment 90 centre -> end of rephaser: 160483 DAC*us (= 58.5 us of slice-select plateau)
