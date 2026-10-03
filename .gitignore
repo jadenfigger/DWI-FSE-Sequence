@@ -1,3 +1,6 @@
 __pycache__/
-pypulseq/validation/*.seq
-pypulseq/analysis/seq/
+# pipeline outputs (regenerate with dw.py)
+runs/
+rf/
+*_view/
+*_sim/
