@@ -62,6 +62,8 @@ EXTRA_DEFAULTS = dict(
     # RF
     sim_excitation_flip_deg=None,      # None -> alpha (PPR, 90 deg scale factor)
     sim_refocus_flip_deg=180.0,        # p180_scale assumed calibrated; 'linear' -> 90*p180_mul/p90_mul
+    sim_excitation_phase_deg=0,        # excitation-only offset, quantized to 0.225 deg hardware units
+    sim_refocus_phase_offsets_deg=None,  # None -> zero; otherwise one relative offset per echo
     # RF frame model (vendor frames unavailable; see rf_pulses.py). 'truncated_sinc' =
     # N-lobe sinc, zero crossings every 1/BW, cut after N lobes (3lobe_sinc_3kHz: TBW 4).
     # 'bw_matched_sinc' = stretched so its BW equals the PPL slice bandwidth (71 %).
@@ -80,6 +82,7 @@ EXTRA_DEFAULTS = dict(
     sim_slice_order=None,              # None -> sequential pos 0..n-1 (confirmed)
     sim_parsetup=True,                 # recompute gs_var/gr_var/gp_init_var/offsets from mm values
     sim_zeros_frame_us=None,           # duration of frame "zeros" (None -> one ramp)
+    sim_train_crusher_scales=None,     # independent mode only; one signed-DAC multiplier per refocusing RF
     sim_post_crush_gap_us=266,         # last read list end -> post crusher (26+240, PPL:2829, 2870)
     sim_pre90_us=10270,                # slot start -> 90 gradient start (10200+70, PPL:2841)
     # reduced (--reduced) cut; timing inside every TR is unchanged
@@ -211,13 +214,76 @@ def parsetup(C, D):
 def derive(C):
     """Replay the PPL set-up arithmetic and checks. Returns namespace D."""
     D = SimpleNamespace(warnings=[])
+    abort = PPLAbort
+    L = C.views_per_seg
+
+    # Resolve bounded experiment controls before replaying the PPL arithmetic.
+    # RF phase is stored in integer var_20 units (PHASE_RES = 0.225 deg/unit).
+    def phase_units(value, name):
+        try:
+            value = float(value)
+        except (TypeError, ValueError):
+            raise abort(f'{name} must be finite') from None
+        if not math.isfinite(value):
+            raise abort(f'{name} must be finite')
+        if abs(value) > 360:
+            value = math.fmod(value, 360)
+        return int(round(value * 1000 / PHASE_RES))
+
+    D.excitation_phase_offset = phase_units(C.sim_excitation_phase_deg, 'sim_excitation_phase_deg')
+    refocus_offsets = C.sim_refocus_phase_offsets_deg
+    if refocus_offsets is None:
+        D.refocus_phase_offsets = [0] * L
+    else:
+        try:
+            if len(refocus_offsets) != L:
+                raise abort(f'sim_refocus_phase_offsets_deg must contain exactly ETL={L} values')
+        except TypeError:
+            raise abort(f'sim_refocus_phase_offsets_deg must contain exactly ETL={L} values') from None
+        D.refocus_phase_offsets = [phase_units(v, f'sim_refocus_phase_offsets_deg[{k}]')
+                                   for k, v in enumerate(refocus_offsets)]
+    D.excitation_phase_offset_deg = D.excitation_phase_offset * PHASE_RES / 1000.0
+    D.refocus_phase_offsets_deg = [v * PHASE_RES / 1000.0 for v in D.refocus_phase_offsets]
+
+    crusher_scales = C.sim_train_crusher_scales
+    if crusher_scales is not None:
+        if C.crush_independent_on != 1:
+            raise abort('sim_train_crusher_scales requires crush_independent_on=1')
+        try:
+            if len(crusher_scales) != L:
+                raise abort(f'sim_train_crusher_scales must contain exactly ETL={L} values')
+        except TypeError:
+            raise abort(f'sim_train_crusher_scales must contain exactly ETL={L} values') from None
+        multipliers = []
+        for k, value in enumerate(crusher_scales):
+            try:
+                value = float(value)
+            except (TypeError, ValueError):
+                raise abort(f'sim_train_crusher_scales[{k}] must be finite') from None
+            if not math.isfinite(value):
+                raise abort(f'sim_train_crusher_scales[{k}] must be finite')
+            multipliers.append(value)
+        bases = [C.diff_crush_amp] + [C.crush_amp] * (L - 1)
+        for k, (base, multiplier) in enumerate(zip(bases, multipliers)):
+            if base and abs(multiplier) > (DACMAX + 0.5) / abs(base):
+                raise abort(f'sim_train_crusher_scales[{k}] gives an out-of-range crusher amplitude; '
+                            f'must be -{DACMAX}..{DACMAX} DAC')
+        D.train_crusher_amplitudes_dac = [int(round(base * multiplier))
+                                           for base, multiplier in zip(bases, multipliers)]
+        for k, amp in enumerate(D.train_crusher_amplitudes_dac):
+            if not -DACMAX <= amp <= DACMAX:
+                raise abort(f'sim_train_crusher_scales[{k}] gives crusher amplitude {amp} DAC; '
+                            f'must be -{DACMAX}..{DACMAX}')
+    else:
+        D.train_crusher_amplitudes_dac = ([C.diff_crush_amp] + [C.crush_amp] * (L - 1)
+                                           if C.crush_independent_on == 1 else None)
+
     if C.sim_parsetup:
         parsetup(C, D)
     else:
         D.parsetup_diffs = {}
     G0 = C.grad_var[0]
     D.G0 = G0
-    abort = PPLAbort
 
     # ---- variant / unsupported options -------------------------------------
     if C.diff_on != 1:
@@ -299,7 +365,7 @@ def derive(C):
                   for i, g in enumerate(D.diff_grad)]                          # PPL:2160-2162
 
     # ---- phase-encode table (PPL:788-1121) ----------------------------------
-    nv, L = C.no_views, C.views_per_seg
+    nv = C.no_views
     if not (1 <= nv <= 1024 and 1 <= L <= nv):
         raise abort('Views (including navigator) must be 1..1024; ETL must be 1..views')
     if C.PE_order not in (1, 6, 7):
@@ -608,7 +674,10 @@ def build_train(C, D, gp_mul_list, nav, row, pos, no_acq):
     zeros = rmp if C.sim_zeros_frame_us is None else C.sim_zeros_frame_us * us
     negr, _ = trap(t_cont + zeros, -(C.gr_on * D.G1), q(D.tref))
     T.g['r'].append(negr)
-    T.rf.append(dict(kind='exc', start=rf90, dur=D.tsel90 * us, flip=D.flip90, phase=phase_90, freq=f_slice))
+    # Keep the experimental excitation offset out of phase_90: phase_180 and
+    # receiver phase must continue to follow the original PPL phase cycle.
+    T.rf.append(dict(kind='exc', start=rf90, dur=D.tsel90 * us, flip=D.flip90,
+                     phase=phase_90 + D.excitation_phase_offset, freq=f_slice))
     c90 = rf90 + D.tsel90 * us // 2
 
     # ---- RF / echo centres (balance equations) -----------------------------
@@ -631,7 +700,10 @@ def build_train(C, D, gp_mul_list, nav, row, pos, no_acq):
         S = rf_start - (this_tcrush + C.tramp + C.rfdelay) * us - fix          # PPL:3543
         tc = C.diff_tcrush if first else C.tcrush
         if C.crush_independent_on == 1:
-            camp = C.gs_on * (C.diff_crush_amp if first else C.crush_amp)       # PPL:3080, 3089
+            # The two crusher matrices are loaded at PPL:3080/3089 and selected
+            # for playback at the refocusing-list switch (PPL:3737).  Each RF
+            # therefore uses one signed DAC value symmetrically on both sides.
+            camp = C.gs_on * D.train_crusher_amplitudes_dac[k]
             a, t = trap(S, camp, q(tc))
             b, t = trap(t, gsr, q(D.crush_rf_flat))
             cc, t = trap(t, camp, q(tc))
@@ -641,7 +713,10 @@ def build_train(C, D, gp_mul_list, nav, row, pos, no_acq):
         T.g['s'].append(seg)
         rf_end = rf_start + D.tsel180 * us
         wait = (C.tramp + this_tcrush - C.rfdelay + D.crush_post_pad - D.crush_pre_pad) * us   # PPL:3596
-        ph = (phase_180 - C.phcor0) if first else (phase_180 + corr[k])         # PPL:3459, 3786
+        # Relative per-echo offsets augment the existing phase expressions at
+        # PPL:3459/3786; they do not alter excitation or receiver phase.
+        ph = ((phase_180 - C.phcor0) if first else (phase_180 + corr[k])) \
+            + D.refocus_phase_offsets[k]
         T.rf.append(dict(kind='ref', start=rf_start, dur=D.tsel180 * us, flip=D.flip180, phase=ph,
                          freq=f_slice, list_start=S, list_end=t))
         if first:
@@ -1015,6 +1090,10 @@ def build_sequence(C=None, reduced=False, ppr=None, overrides=None):
     seq.set_definition('BigDelta', C.big_delta * 1e-6)
     seq.set_definition('ExcitationFlipDeg', D.flip90)
     seq.set_definition('RefocusFlipDeg', D.flip180)
+    seq.set_definition('ExcitationPhaseOffsetDeg', D.excitation_phase_offset_deg)
+    seq.set_definition('RefocusPhaseOffsetsDeg', D.refocus_phase_offsets_deg)
+    if D.train_crusher_amplitudes_dac is not None:
+        seq.set_definition('TrainCrusherAmplitudesDAC', D.train_crusher_amplitudes_dac)
     seq.set_definition('RFShape', rf_label(C, D))
     prof = slice_profiles(C, D)
     if prof:

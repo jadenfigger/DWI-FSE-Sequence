@@ -110,6 +110,12 @@ def read_seq(seq_or_path):
         return seq_or_path
     seq = pp.Sequence()
     seq.read(seq_or_path)
+    # PyPulseq read() restores Sequence raster attributes from the file but
+    # leaves system.* at constructor defaults. check_timing() uses system.*,
+    # producing false 10-us raster failures for our valid 1-us/0.1-us files.
+    for name in ('adc_raster_time', 'rf_raster_time', 'grad_raster_time',
+                 'block_duration_raster'):
+        setattr(seq.system, name, getattr(seq, name))
     return seq
 
 

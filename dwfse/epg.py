@@ -137,7 +137,8 @@ def decompose_state(state, level, min_frac=1e-3, max_paths=20000):
             continue
         parts = []
         for rel, anc, f in s.ancestors:
-            c = (_mag(anc, conj ^ (rel[0] == "-"))) * complex(f)
+            factor = complex(f).conjugate() if conj else complex(f)
+            c = (_mag(anc, conj ^ (rel[0] == "-"))) * factor
             parts.append((rel, anc, c))
         tot = sum(c for _, _, c in parts)
         if abs(tot) == 0:
@@ -168,7 +169,8 @@ def decompose_state(state, level, min_frac=1e-3, max_paths=20000):
 
 def pathway_report(graph, layout, top=6):
     print("=" * 78)
-    print("Echo pathway decomposition (Hennig notation, one label per RF interval, oldest first)")
+    print("HEURISTIC graph-prepass pathway weights (not acquired-sample signal fractions)")
+    print("Hennig notation, one label per RF interval, oldest first")
     print("  + / - : transverse, sign of that interval's dephasing    Z : stored    Z0 : unencoded")
     print("  share = |pathway amplitude| / sum of |all pathway amplitudes| for that echo")
     print("  phase = pathway phase relative to the strongest one (pathways near 180 deg cancel)")
@@ -226,9 +228,13 @@ def main(argv=None):
     ap.add_argument("--max-states", type=int, default=500)
     ap.add_argument("--min-mag", type=float, default=1e-4)
     ap.add_argument("--top", type=int, default=6, help="pathways listed per echo")
+    ap.add_argument("--legacy-pathways", action="store_true",
+                    help="show heuristic graph-prepass weights instead of exact sample metrics")
     ap.add_argument("--save", action="store_true", help="also save figures as PNG")
     ap.add_argument("--outdir", default=".", help="folder for --save")
     args = ap.parse_args(argv)
+    if args.save:
+        os.makedirs(args.outdir, exist_ok=True)
 
     seq = quiet(mr0.Sequence.import_file, args.seq_file)
     if args.max_reps:
@@ -249,7 +255,27 @@ def main(argv=None):
     data = make_phantom(args)
     graph, sig = simulate(seq, data, args)
     print(f"Graph size per interval: {[len(r) for r in graph[:20]]}{' ...' if len(graph) > 20 else ''}")
-    pathway_report(graph, layout, args.top)
+    if args.legacy_pathways:
+        pathway_report(graph, layout, args.top)
+    else:
+        from .pathways import enumerate_center_pathways, format_report, metric_record
+        try:
+            metrics = enumerate_center_pathways(seq, data)
+        except ValueError as exc:
+            print(f"Exact pathway metrics unavailable: {exc}")
+            print("Showing explicitly heuristic weights for this unsupported sequence scope.")
+            pathway_report(graph, layout, args.top)
+        else:
+            print(format_report(metrics, args.top))
+            print("Instantaneous RF; D in 10^-3 mm^2/s. Use --D 0 for static-spin Bloch comparison.")
+            print("Graph/sweep plots retain --max-states/--min-mag pruning; exact history metrics are unpruned.")
+            if args.save:
+                import json
+                os.makedirs(args.outdir, exist_ok=True)
+                with open(os.path.join(args.outdir, 'epg_pathways.json'), 'w') as f:
+                    json.dump({'model': 'instantaneous RF, exact center-sample enumeration',
+                               'D_MRzero_units': args.D,
+                               'echoes': [metric_record(m, args.top) for m in metrics]}, f, indent=2)
     plot_graph(graph, f"PDG  B1={args.b1}  B0={args.b0} Hz")
 
     # ---- signal vs time (main run vs ideal)

@@ -1,0 +1,15 @@
+{
+  "views_per_seg": 8,
+  "no_views": 16,
+  "te": 36,
+  "esp": 16,
+  "acq_b": [0, 1000],
+  "no_diff_acq": 2,
+  "no_experiments": 2,
+  "acq_x": [1000, 1000],
+  "acq_y": [0, 0],
+  "acq_z": [0, 0],
+  "sim_reduced_shots": [1],
+  "sim_fix_refocus_centering": true,
+  "sim_train_crusher_scales": [1, 1, 1.3, 1.7, 2.1, 2.6, 3.2, 3.9]
+}

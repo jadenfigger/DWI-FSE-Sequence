@@ -4,6 +4,10 @@ This repo turns the MR Solutions PPL sequence `FSE_dwi_CPMG_non_CPMG_twoTE-1.6` 
 
 **Findings so far:** [REPORT.md](REPORT.md). **How the PPL maps to Pulseq (branch table, timeline, assumptions):** [docs/ppl_to_pulseq.md](docs/ppl_to_pulseq.md).
 
+**ETL-8 improvement investigation:** [docs/ppl_improvement_report.md](docs/ppl_improvement_report.md)
+compares original behavior, crusher and RF-phase changes, diffusion-phase errors,
+and B1/B0 robustness. The original scanner files and generator defaults remain available.
+
 ## Setup
 
 ```bash
@@ -60,6 +64,26 @@ python dw.py epg  my.seq --b1 0.8                  # which echo pathways make ea
 python dw.py rf   [--out rf]                       # RF pulse models and their slice profiles
 ```
 
+### Exact pathway metrics
+
+For one excitation followed by at most eight acquired echoes, `dw.py epg` now
+prints exact centre-sample RF-history contributions. Larger/full protocols fall
+back to **explicitly heuristic** graph weights. `--legacy-pathways` requests that
+older presentation. Use `--D 0` for comparison with the static-spin Bloch model;
+the EPG `--D` unit remains 10^-3 mm²/s (default 2.0).
+
+To save the exact decomposition with an independent MRzero signal-closure check:
+
+```bash
+python -m dwfse.pathways runs/base/seq.seq --b1 0.8 --out runs/base/pathways.json
+python -m dwfse.pathways runs/base/seq.seq --b1 0.8 --diffusion-mm2-s 0.001 --out runs/base/pathways_diffusion.json
+python dw.py run candidate --params docs/params/improvement_candidate.json --b1 0.7 0.8 1.0 1.2 --b0 0 100
+```
+
+The explicit `--diffusion-mm2-s` option uses physical units. Both decomposition
+models treat RF as instantaneous; they do not measure finite-pulse slice profiles.
+See the improvement report for reproduction commands, trade-offs, and scanner patches.
+
 ## Changing the sequence
 
 The generator reads `scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppr`. There are three ways to change it:
@@ -84,6 +108,9 @@ Most-used parameters:
 | `sim_refocus_flip_deg`, `sim_excitation_flip_deg` | flip angles (default 180 / `alpha`) |
 | `hw_grad_delay_us` | physical gradient lag (default 60 µs = PPR `rfdelay`, PPL:4100); 0 = commanded timing |
 | `sim_fix_refocus_centering` | false = PPL v1.6 as written (180 off-centre, see REPORT); true = intended |
+| `sim_excitation_phase_deg` | excitation-only phase offset to emulate a coherent diffusion phase error; quantized to 0.225° |
+| `sim_refocus_phase_offsets_deg` | explicit ETL-sized table relative to existing refocusing phases; receiver phases unchanged |
+| `sim_train_crusher_scales` | ETL-sized table multiplying first/train crusher DACs, symmetrically around each RF; independent mode only |
 | `sim_reduced_slices/rows/shots/n_dummy` | what the reduced cut keeps (centre slice, first b > 0 row, first imaging shot, 0 dummies) |
 | `no_disacq`, `no_slices`, `no_averages` | dummies, slices, averages (used with `--full`) |
 

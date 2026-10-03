@@ -1,0 +1,16 @@
+--- a/scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppl
++++ b/scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppl
+@@ -981,6 +981,13 @@
+ 	if ((PE_order == 0)&&(views_per_seg<4))
+ 	{
+ 		printf("Minimum echo train length is 4 for selected PE order\n");
++		goto end;
++	}
++
++	// PE order 0 uses one-based, doubled scratch arrays.
++	if ((2L*IntToLong(views_per_seg)>=MAXCENTRE)||(2L*IntToLong(views_per_echo)>=MAXLOCATION))
++	{
++		printf("PE order 0 exceeds scratch table capacity\n");
+ 		goto end;
+ 	}
+ 

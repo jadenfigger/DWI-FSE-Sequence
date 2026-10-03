@@ -52,6 +52,9 @@ Not implemented: options that select other PPL variants. These abort with a mess
 | `sim_excitation_flip_deg` | `alpha` | 90 flip |
 | `sim_refocus_flip_deg` | 180 | `p180_scale` is treated as a calibration. `"linear"` gives 90 × p180_mul/p90_mul (166.4° for this PPR) |
 | `sim_fix_refocus_centering` | false | false = PPL v1.6 as written (replicates the 180 centring bug); true = intended behaviour |
+| `sim_excitation_phase_deg` | 0 | excitation-only phase-error surrogate; refocusing/receiver phases unchanged; rounded to 0.225° |
+| `sim_refocus_phase_offsets_deg` | none | explicit ETL-length relative RF phase table, rounded to hardware phase units; receiver unchanged |
+| `sim_train_crusher_scales` | none | explicit ETL-length signed first/train crusher multipliers, nearest-DAC rounding; symmetric lobes; independent mode only |
 | `sim_rf_model` | `truncated_sinc` | `truncated_sinc` (N-lobe sinc, TBW = N+1) or `bw_matched_sinc` (sinc stretched to the PPL's 71 % slice bandwidth) |
 | `sim_rf_apodization` | 0 | window (1−a) + a·cos(2πt/T): 0.5 = Hanning, 0.46 = Hamming |
 | `sim_rf_bw_fraction` | 0.71 | `bw_matched_sinc` only |

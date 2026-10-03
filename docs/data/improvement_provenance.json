@@ -1,0 +1,18 @@
+{
+  "source_sha256": {
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppl": "c0e551e76234c8113eb2953dcf9c2bc9e427eee18264199e98b3edd2c2abfd0c",
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppr": "00bd9e78573133e5df09da9fa64cf424bf6e338e05a1872ff916c3c03bc315ee"
+  },
+  "package_versions": {
+    "numpy": "2.1.0",
+    "scipy": "1.14.1",
+    "matplotlib": "3.9.2",
+    "pypulseq": "1.5.0.post1",
+    "torch": "2.14.0",
+    "MRzeroCore": "1.1.1"
+  },
+  "experiment_design": "docs/ppl_experiment_log.md",
+  "measurement_definitions": "docs/ppl_improvement_report.md",
+  "raw_run_settings": "runs/improve_*/overrides.json and sim_settings.json",
+  "baseline_source_preserved": true
+}

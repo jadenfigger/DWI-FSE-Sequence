@@ -1,5 +1,10 @@
 # Project report: DW-FSE (twoTE-1.6) in Pulseq
 
+**Follow-up:** [ETL-8 improvement investigation](docs/ppl_improvement_report.md)
+qualifies the short-train conclusions below, replaces heuristic pathway shares
+with acquired-sample decomposition, and compares crusher/phase candidates under
+B1/B0 and diffusion-phase errors. This file retains the earlier validation record.
+
 ## 1. Goal and status
 
 **Goal:** reproduce the MR Solutions DW-FSE sequence (`scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppl`) faithfully as a Pulseq file, to study stimulated/spurious echoes and B1/B0 sensitivity by simulation.

@@ -1,0 +1,14 @@
+--- a/scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppl
++++ b/scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppl
+@@ -1313,8 +1313,9 @@
+ 		crush_rf_flat = ((tsel90+2*rfdelay+temp-1)/temp)*temp;
+ 		if (crush_rf_flat%2!=0) crush_rf_flat = crush_rf_flat+temp;
+ 		crush_rf_pad = crush_rf_flat-tsel90;
+-		crush_pre_pad = 2*tramp+crush_rf_pad/2-rfdelay;
+-		crush_post_pad = 2*tramp+crush_rf_pad/2+rfdelay;
++		// Preserve the same gradient group-delay compensation as excitation/ADC.
++		crush_pre_pad = 2*tramp+crush_rf_pad/2;
++		crush_post_pad = 2*tramp+crush_rf_pad/2;
+ 	}
+ 	tcrush_play = tcrush+crush_pre_pad;
+ 	tcrush1_play = tcrush_play;
