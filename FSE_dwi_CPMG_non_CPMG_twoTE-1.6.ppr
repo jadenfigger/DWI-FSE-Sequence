@@ -4,15 +4,15 @@
 :SAMPLE_PERIOD sample_period, 500, 12, "20.0 KHz  50 µs"
 :GRADIENT_STRENGTH grad_var, 4, 25447, 25447, 25910, 25925
 :NO_SAMPLES no_samples, 128
-:NO_VIEWS no_views, 160
-:VIEWS_PER_SEGMENT views_per_seg, 32
+:NO_VIEWS no_views, 4
+:VIEWS_PER_SEGMENT views_per_seg, 2
 :NO_VIEWS_2 no_views_2, 1
 :VAR oversample, 0
 :VAR oversample2, 0
 :VAR oversample3, 0
-:VAR nav_on, 1
+:VAR nav_on, 0
 :DISCARD no_discard, 0
-:EXPERIMENT_ARRAY no_experiments, 2
+:EXPERIMENT_ARRAY no_experiments, 1
 :NO_AVERAGES no_averages, 1
 :VIEW_BLOCK view_block, 1
 :SLICE_BLOCK slice_block, 1
@@ -23,7 +23,7 @@
 :SWZ 1
 :SLICE_THICKNESS gs_var, -1377, 1
 :SLICE_SEPARATION slice_offset, 1284, 1.2
-:NO_SLICES no_slices, 3
+:NO_SLICES no_slices, 1
 :BATCH_SLICES batch_slices, 0
 :BATCH_INTERLEAVE batch_interleave, 1
 :SLICE_INTERLEAVE slice_interleave, 1
@@ -66,7 +66,7 @@
 :VAR p180_scale, 185
 :VAR tr, 2000
 :VAR esp, 16
-:VAR te, 54
+:VAR te, 36
 :VAR PF_echoes, 0
 :VAR report_on, 0
 :VAR tramp, 200
@@ -268,10 +268,10 @@
 :VAR diff_on, 1
 :VAR b_input_mode, 1
 :VAR sm_delta, 4000
-:VAR big_delta, 40000
-:VAR no_diff_acq, 2
+:VAR big_delta, 20000
+:VAR no_diff_acq, 1
 :VAR_ARRAY acq_b, 512, 0
-, 6000, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
 , 0, 0, 0, 0, 0, 0, 0, 0
 , 0, 0, 0, 0, 0, 0, 0, 0
 , 0, 0, 0, 0, 0, 0, 0, 0
@@ -604,7 +604,7 @@
 :VAR post_crush_on, 1
 :VAR post_tcrush, 3000
 :VAR post_crush_amp, -6000
-:VAR no_disacq, 4
+:VAR no_disacq, 0
 :VAR dixon_on, 0
 :VAR delta_2_90, 123
 :VAR delta_0, 0
