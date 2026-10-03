@@ -4,6 +4,7 @@ All tools read the same `.seq` file.
 
 | File | What it is for |
 |---|---|
+| `plot_blocks.py` | Sequence diagram with every block numbered (the numbers koma_sim.jl uses for snapshots) and a block table; `--snap-csv <name>_koma_snapshots.csv` marks the snapshot points |
 | `view_seq.py` | Look at the sequence: diagram, RF flip/phase table, CPMG moment check, b-value per echo, k-space |
 | `mrzero_epg.py` | Generalized EPG (phase distribution graph) simulation: which echo pathways make each echo, B1/B0 sweeps |
 | `koma_sim.jl` | Full Bloch simulation in KomaMRI: real RF shapes and slice profile, magnetization snapshots over time |
