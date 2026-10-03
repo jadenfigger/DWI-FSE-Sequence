@@ -40,7 +40,7 @@ The generator runs the PPL's own set-up checks and aborts with the PPL's message
 | crushers | `crush_independent_on` (0 = legacy, 1 = v1.6), `tcrush`, `diff_tcrush`, `crush_amp`, `diff_crush_amp`, `post_crush_on`, `post_tcrush`, `post_crush_amp` |
 | compensation lobes | `gsp_lobe`, `gs_comp_scale`, `grp_lobe`, `gr_comp_scale`, `gs_on`, `gr_on`, `gp_on` |
 | diffusion | `b_input_mode`, `sm_delta`, `big_delta`, `no_diff_acq`, `acq_b`, `acq_grad`, `acq_x`, `acq_y`, `acq_z`, `diff_tramp`, `diff_grad_scale` |
-| RF | `rfnum` (sinc shapes 1-8, 15, 16 as placeholders; others need a shape file), `alpha`, `rfcal`, `p180_scale`, `phcor0` |
+| RF | `rfnum` (sinc frames 1-8, 15, 16 are rebuilt from their names, see "RF pulse" below; others need a shape file), `alpha`, `rfcal`, `p180_scale`, `phcor0` |
 | frequency / phase | `rec_freq`, `phcor_plus`, `phcor_minus`, `r_phcor`, `phase_cycle` |
 | loops | `no_experiments`, `no_averages`, `view_block`, `no_disacq` |
 | hardware | `grad_var` |
@@ -58,8 +58,10 @@ Not implemented: options that select other PPL variants. These abort with a mess
 | `sim_excitation_flip_deg` | `alpha` | 90 flip |
 | `sim_refocus_flip_deg` | 180 | `p180_scale` is treated as a calibration. `"linear"` gives 90 × p180_mul/p90_mul (166.4° for this PPR) |
 | `sim_fix_refocus_centering` | false | false = PPL v1.6 as written (replicates the 180 centring bug); true = intended behaviour |
-| `sim_rf_shape_file` | none | real RF frame (one amplitude per line). Default placeholder: sinc, TBW = nominal BW × duration |
-| `sim_rf_apodization` | 0 | placeholder sinc apodisation |
+| `sim_rf_model` | `truncated_sinc` | `truncated_sinc` (N-lobe sinc, TBW = N+1) or `bw_matched_sinc` (sinc stretched to the PPL's 71 % slice bandwidth) |
+| `sim_rf_apodization` | 0 | window (1−a) + a·cos(2πt/T): 0.5 = Hanning, 0.46 = Hamming |
+| `sim_rf_bw_fraction` | 0.71 | `bw_matched_sinc` only |
+| `sim_rf_shape_file` | none | your own frame (one amplitude per line); overrides the model |
 | `sim_acqpad_ticks` | none | `acqpad(sample_period)`. Only needed for the per-echo RF/receiver phase correction of off-centre slices. The manual (5.6.4) gives tfilter ≈ 380 µs for SW < 100 kHz, i.e. ≈ 3800 ticks |
 | `sim_aqphase_table` | none | `aqphase()` steps if `phase_cycle` ≠ 1 with averages > 1 (firmware function) |
 | `sim_slice_order` | sequential | slice time order (confirmed sequential) |
@@ -67,6 +69,44 @@ Not implemented: options that select other PPL variants. These abort with a mess
 | `sim_post_crush_gap_us` | 266 | last read list → post crusher (26 + 240 µs, PPL:2829, 2870) |
 | `sim_pre90_us` | 10270 | slot start → 90 gradient start (PPL:2841) |
 | `sim_reduced_slices` / `_rows` / `_shots` / `_n_dummy` / `_keep_slots` | centre slice / first b > 0 row / first imaging shot / 0 / true | the `--reduced` cut. Timing inside every TR is unchanged; other slices' slots become dead time |
+
+## RF pulse (`rf_pulses.py`)
+
+The vendor RF library (`c:\smis\seqlib\RFstd44.seq`) is not published, so the sinc frames are rebuilt from their names. Every sinc frame in the PPL's table satisfies bandwidth × duration = lobes + 1:
+
+| frame | duration × BW | lobes + 1 |
+|---|---|---|
+| `3lobe_sinc_3kHz` | 1332 µs × 3000 Hz = 4 | 4 |
+| `5lobe_sinc_3kHz` | 2000 µs × 3000 Hz = 6 | 6 |
+| `9lobe_sinc_5kHz` | 2000 µs × 5000 Hz = 10 | 10 |
+| `19lobe_sinc_2ms` | 2000 µs × 10000 Hz = 20 | 20 |
+
+So `3lobe_sinc_3kHz` is a sinc with zero crossings every 333 µs, cut after the central lobe and one side lobe on each side. That is the default `truncated_sinc` model, and it is the same pulse as the earlier placeholder (within 0.1 %).
+
+**One inconsistency to know about.** MR Solutions treats this frame's slice-defining bandwidth as about 71 % of its name:
+
+- the manual's GEDEM_MC example lists it as `NEWSHAPE_MAC(1, pf1, "3lobe_sinc_3kHz", 1332, 2140)`;
+- the PPL multiplies 3000 Hz by `bw_override = 71` (PPL:1327-1333) and sets the slice gradient from the result.
+
+A plain truncated sinc's 90° profile is as wide as its full name bandwidth, so at the PPL gradient the slices come out wider than nominal (1 mm protocol, `python rf_pulses.py`):
+
+| model | 90° FWHM | 180° FWHM | spin-echo FWHM |
+|---|---|---|---|
+| `truncated_sinc` | 1.42 mm | 0.82 mm | 0.82 mm |
+| `truncated_sinc`, Hanning 0.5 | 1.55 mm | 0.94 mm | 0.89 mm |
+| `bw_matched_sinc` | 1.06 mm | 0.66 mm | 0.65 mm |
+
+For the 5-lobe default pulse (`5lobe_sinc_1500Hz`, which PARSETUP's 1070 Hz reference assumes), the 180°/spin-echo FWHM is 0.74 × its name bandwidth. So the 71 % factor may be a spin-echo slice convention rather than a different pulse shape. That is unconfirmed.
+
+The choice matters for B1 studies. Minimal protocol, echo 2 at B1 0.8 / 1.0 / 1.2:
+
+| model | echo 2 |
+|---|---|
+| truncated sinc | 0.22 / 0.19 / 0.09 |
+| Hanning | 0.15 / 0.19 / 0.14 |
+| bw-matched | 0.12 / 0.14 / 0.09 |
+
+The truncated sinc's echo peaks near B1 0.8 because of its Gibbs overshoot. `--report` prints the profile widths for the chosen model, and they are also written to the `.seq` definitions (`SliceFWHM_mm_exc_ref_SE`). `rf/` holds the shapes as text files (usable as `sim_rf_shape_file` or in KomaMRI) and a plot.
 
 ## rfdelay: what the PPL says, and the bug
 
@@ -147,7 +187,7 @@ The k = 0 line is in echo 1.
 | timer | 100 ns ticks | MAN 4.8 |
 | gradient clock | tramp/5 × 100 ns per point, 50 points per ramp | PPL:1714, MAN 5.6.1.3 |
 | phase | 0.225° per unit | var_20:108 |
-| RF | flip from `alpha` and `sim_refocus_flip_deg`; shape placeholder | PPL:598, 2347-2348 |
+| RF | flip from `alpha` and `sim_refocus_flip_deg`; shape from `rf_pulses.py` | PPL:598, 2347-2348 |
 
 ## Step 5 – Validation (reduced sequence read back)
 
@@ -169,7 +209,7 @@ The PPL's nominal b (6000) uses 39.69 instead of (2π)², so the true lobe b is 
 
 ## Assumptions and placeholders
 
-1. RF shape: placeholder sinc, TBW = nominal BW × duration (4 for rfnum 1), no apodisation (no access to RFstd44.seq).
+1. RF shape: rebuilt as a truncated sinc from the frame name (see "RF pulse"); the vendor file RFstd44.seq is not available.
 2. Refocusing flip 180° (`p180_scale` treated as a calibration).
 3. Timing follows the PPL's balance equations. The empirical tick constants cancel code overhead; residual overheads of a few µs are not modelled.
 4. Hardware gradient lag = 60 µs (the PPR rfdelay), per PPL:4100.
