@@ -65,7 +65,7 @@
 :VAR alpha, 90
 :VAR p180_scale, 185
 :VAR tr, 2000
-:VAR esp, 16
+:VAR esp, 36
 :VAR te, 36
 :VAR PF_echoes, 0
 :VAR report_on, 0
@@ -604,7 +604,7 @@
 :VAR post_crush_on, 1
 :VAR post_tcrush, 3000
 :VAR post_crush_amp, -6000
-:VAR no_disacq, 0
+:VAR no_disacq, 8
 :VAR dixon_on, 0
 :VAR delta_2_90, 123
 :VAR delta_0, 0
