@@ -85,6 +85,26 @@ def _rotate(mx, my, mz, bx, by, bz, dt):
             mz * c + cz * s + kz * kd * (1 - c))
 
 
+def _rf_step_average(rf, dt, nt):
+    """Complex B1 [Hz] averaged over each simulation step [k*dt, (k+1)*dt] of the block.
+    Exact pulse area (flip angle) for any step size: sample-centred uniform shapes are treated
+    as piecewise constant over their raster cells, corner-point shapes (block pulses) as
+    piecewise linear. Point-sampling instead over-counts a partial step at each RF edge
+    (about 10 % flip error for a 200 us hard pulse at 10 us steps)."""
+    t, sig = np.asarray(rf.t, float), np.asarray(rf.signal, complex)
+    d = np.diff(t)
+    if len(t) > 1 and np.allclose(d, d[0], rtol=1e-6) and abs(t[0] - d[0] / 2) < 1e-9:
+        edges = np.r_[t - d[0] / 2, t[-1] + d[0] / 2] + rf.delay
+        cum = np.r_[0, np.cumsum(sig * d[0])]
+    else:
+        edges = t + rf.delay
+        cum = np.r_[0, np.cumsum((sig[1:] + sig[:-1]) / 2 * d)] if len(t) > 1 else np.zeros(1, complex)
+    grid = np.arange(nt + 1) * dt
+    F = np.interp(grid, edges, cum.real, left=0, right=cum[-1].real) \
+        + 1j * np.interp(grid, edges, cum.imag, left=0, right=cum[-1].imag)
+    return np.diff(F) / dt
+
+
 def read_seq(seq_or_path):
     if isinstance(seq_or_path, pp.Sequence):
         return seq_or_path
@@ -177,9 +197,7 @@ def simulate(seq, b1=1.0, b0=0.0, T1=1.5, T2=0.08, T2prime=0.03, n=20000, voxel=
             dt = dur / nt
             tc = (np.arange(nt) + 0.5) * dt
             G = {ax: (np.interp(tc, *g[ax], left=0, right=0) if g[ax] is not None else np.zeros(nt)) for ax in 'xyz'}
-            trf = rf.t + rf.delay
-            inrf = (tc >= trf[0] - dt / 2) & (tc <= trf[-1] + dt / 2)
-            B1 = np.where(inrf, np.interp(tc, trf, rf.signal.real) + 1j * np.interp(tc, trf, rf.signal.imag), 0)
+            B1 = _rf_step_average(rf, dt, nt)
             B1 = B1 * b1 * np.exp(1j * (rf.phase_offset + 2 * np.pi * rf.freq_offset * (tc - rf.delay)))
             e2, e1 = np.exp(-dt / T2), np.exp(-dt / T1)
             for k in range(nt):
@@ -238,6 +256,19 @@ def run(seq_path, b1=(1.0,), b0=(0.0,), T1=1.5, T2=0.08, T2prime=0.03, n=20000, 
         k0 += sz
     out['echo_t'] = np.array(adc_c)
     out['t_exc'] = np.array(first_excitation(seq))
+    out['t_exc_all'] = np.array(excitation_times(seq))
+    return out
+
+
+def excitation_times(seq):
+    """Centre times [s] of every RF pulse that is not a refocusing pulse."""
+    ids, starts, _ = block_times(seq)
+    out = []
+    for i, s in zip(ids, starts):
+        rf = seq.get_block(i).rf
+        if rf is not None and not (getattr(rf, 'use', '') or '').startswith('ref'):
+            c = getattr(rf, 'center', None)
+            out.append(s + rf.delay + (c if c is not None else rf.t[int(np.argmax(np.abs(rf.signal)))]))
     return out
 
 
