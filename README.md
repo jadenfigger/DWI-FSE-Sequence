@@ -28,9 +28,12 @@ python dw.py run fix  --set sim_fix_refocus_centering=true
 python dw.py compare runs/base runs/te50 runs/fix      # overlay echoes and signal -> runs/compare_*.png
 python dw.py run b1   --b1 0.7 0.8 0.9 1.0 1.1         # B1 sweep (also --b0 0 25 50)
 python dw.py run ex3  --seq examples/ex3_cpmg_train.seq   # any existing .seq
+python dw.py run full --full                           # whole protocol (all slices, shots, dummies, b-values)
 ```
 
-A run takes seconds for the default reduced sequence. `--full` builds and simulates the whole protocol, which is slower.
+A run takes seconds for the default reduced sequence. `--full` builds and simulates the whole protocol, which is slower (about 15 s for the current PPR). To only write the `.seq`: `python dw.py gen my.seq --full`.
+
+The generator is specific to this PPL: it re-implements `FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppl` in Python and takes all its parameters from a `.ppr` (`--ppr` for another PPR of the same PPL). A different PPL needs its own generator.
 
 ### What is in `runs/NAME/`
 

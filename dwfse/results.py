@@ -26,7 +26,14 @@ def _windows(r):
 
 def _te(r):
     """Echo times relative to the first excitation (the first TR's excitation for multi-TR runs)."""
-    return r['echo_t'] - float(r.get('t_exc', 0.0))
+    return np.array([t - _last_exc(r, t) for t in r['echo_t']])
+
+
+def _last_exc(r, t):
+    """Centre of the most recent excitation before time t (each echo's own TR)."""
+    ex = np.atleast_1d(r.get('t_exc_all', r.get('t_exc', 0.0)))
+    ex = ex[ex <= t]
+    return float(ex[-1]) if len(ex) else 0.0
 
 
 def _lab(r, i):
@@ -75,7 +82,7 @@ def plot_run(run_dir, snaps=None, max_snaps=8):
             axs[0, j].plot(z[o], np.abs(mxy), '.', ms=1)
             axs[1, j].plot(z[o], np.angle(mxy), '.', ms=1)
             axs[2, j].plot(z[o], r['snap_mz'][s][o], '.', ms=1)
-            axs[0, j].set_title(f"#{s+1} {r['snap_label'][s]}\n{(r['snap_t'][s] - float(r.get('t_exc', 0)))*1e3:.2f} ms after exc.  |mean Mxy|={abs(mxy.mean()):.3f}",
+            axs[0, j].set_title(f"#{s+1} {r['snap_label'][s]}\n{(r['snap_t'][s] - _last_exc(r, r['snap_t'][s]))*1e3:.2f} ms after exc.  |mean Mxy|={abs(mxy.mean()):.3f}",
                                 fontsize=8)
             axs[2, j].set_xlabel('z [mm]')
         axs[0, 0].set_ylabel('|Mxy|'); axs[1, 0].set_ylabel('phase Mxy [rad]'); axs[2, 0].set_ylabel('Mz')

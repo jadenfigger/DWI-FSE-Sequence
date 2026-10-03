@@ -238,6 +238,19 @@ def run(seq_path, b1=(1.0,), b0=(0.0,), T1=1.5, T2=0.08, T2prime=0.03, n=20000, 
         k0 += sz
     out['echo_t'] = np.array(adc_c)
     out['t_exc'] = np.array(first_excitation(seq))
+    out['t_exc_all'] = np.array(excitation_times(seq))
+    return out
+
+
+def excitation_times(seq):
+    """Centre times [s] of every RF pulse that is not a refocusing pulse."""
+    ids, starts, _ = block_times(seq)
+    out = []
+    for i, s in zip(ids, starts):
+        rf = seq.get_block(i).rf
+        if rf is not None and not (getattr(rf, 'use', '') or '').startswith('ref'):
+            c = getattr(rf, 'center', None)
+            out.append(s + rf.delay + (c if c is not None else rf.t[int(np.argmax(np.abs(rf.signal)))]))
     return out
 
 
