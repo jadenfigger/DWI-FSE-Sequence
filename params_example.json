@@ -1,0 +1,11 @@
+{
+  "te": 40,
+  "esp": 20,
+  "views_per_seg": 4,
+  "no_views": 8,
+  "diff_crush_amp": 5482,
+  "sim_refocus_flip_deg": 180.0,
+  "sim_rf_model": "truncated_sinc",
+  "hw_grad_delay_us": 60,
+  "sim_fix_refocus_centering": false
+}

@@ -1,0 +1,8 @@
+# core pipeline
+pypulseq>=1.5
+numpy
+scipy
+matplotlib
+# optional: echo-pathway analysis (python dw.py epg)
+# MRzeroCore
+# torch
