@@ -4,6 +4,12 @@ These patches target the unchanged v1.6 source in the parent directory. They
 are **not compiled or scanner validated**. `git apply --check --ignore-space-change`
 passes against the repository source. Preserve a copy of v1.6 before applying.
 
+The [v1.7 successor](../../docs/scanner_v17.md) implements both corrections
+and bounded native signed crusher schedules without editing v1.6. Its default
+PPR uses original amplitudes; separately named experimental PPRs enable increasing
+and increasing-plus-alternating crushers. Do not apply these baseline patches
+again to v1.7. Compilation and physical qualification remain pending.
+
 * `refocus_centering.patch`: removes the opposite `rfdelay` terms from the
   independent-crusher pre/post pads. Their sum, and hence RF-block duration,
   remains constant. The RF-start and post-RF waits then provide the same physical

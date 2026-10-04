@@ -1,6 +1,6 @@
 """
-PyPulseq re-implementation of ONE variant of FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppl:
-diffusion-weighted fast spin echo, ETL > 1, diffusion on.
+PyPulseq re-implementation of FSE_dwi_CPMG_non_CPMG_twoTE versions 1.6/1.7:
+diffusion-weighted fast spin echo, diffusion on (ETL 1 uses PE order 5).
 
 Every scan parameter comes from a .ppr file (default: the protocol PPR in the
 repository root) and can be overridden, so the sequence is controlled the same
@@ -28,6 +28,7 @@ import csv
 import json
 import math
 import os
+import re
 import warnings
 from types import SimpleNamespace
 
@@ -43,11 +44,19 @@ TICK = 1e-7         # 100 ns PPL timer tick (MAN 4.8)
 
 # NEWSHAPE_MAC table (PPL:598-618) and the sinc frame models live in rf_pulses.py
 from .rf_pulses import RF_TABLE, profile_summary, sinc_frame  # noqa: E402
+from .crushers import schedule as crusher_schedule, acquisition_budget
 
 # =============================================================================
 # Hardware / simulation parameters that are NOT in the PPR (all overridable)
 # =============================================================================
 EXTRA_DEFAULTS = dict(
+    scanner_version='1.6',
+    crusher_schedule=0,
+    crusher_step_pct=0,
+    crusher_custom_count=0,
+    crusher_custom_pct=[100] + [0] * 63,
+    crusher_max_dac=32767,
+    crusher_slew_dac_100us=32767,
     # Physical gradient lag behind the commanded waveform. The PPL delays RF
     # and ADC by rfdelay "to compensate for (isotropic) gradient group delay"
     # (PPL:4100), so the scanner is assumed to lag by the PPR rfdelay (60 us).
@@ -130,6 +139,11 @@ def read_ppr(path):
         head = toks[0].split(None, 1)
         kw, name = head[0], (head[1].strip() if len(head) > 1 else '')
         vals = [_num(t) for t in toks[1:] if t.strip() != '']
+        if kw == 'PPL':
+            version = re.search(r'twoTE-(1\.[67])\.ppl$', name.strip('"'), re.I)
+            if version:
+                out['scanner_version'] = version[1]
+            continue
         if kw == 'FOV':
             out['fov_mm'] = _num(name)
             continue
@@ -154,6 +168,8 @@ def load_params(ppr_path=None, overrides=None):
     """PPR values + EXTRA_DEFAULTS + overrides -> namespace C."""
     p = read_ppr(ppr_path or DEFAULT_PPR)
     p.update({k: v for k, v in EXTRA_DEFAULTS.items() if k not in p})
+    if p['scanner_version'] == '1.7':
+        p['sim_fix_refocus_centering'] = True
     for k, v in (overrides or {}).items():
         if k not in p:
             raise KeyError(f'unknown parameter {k!r}')
@@ -216,6 +232,14 @@ def derive(C):
     D = SimpleNamespace(warnings=[])
     abort = PPLAbort
     L = C.views_per_seg
+    if not isinstance(L, int) or not 1 <= L <= 1024:
+        raise abort('ETL must be an integer in 1..1024')
+    if not isinstance(C.crusher_schedule, int) or not 0 <= C.crusher_schedule <= 5:
+        raise abort('Invalid crusher schedule')
+    if C.crusher_schedule and C.crush_independent_on != 1:
+        raise abort('Scheduled crushers require independent mode')
+    if C.crusher_schedule and (C.echoes_to_discard or C.de_on):
+        raise abort('Scheduled crushers require DE OFF and no skipped echoes')
 
     # Resolve bounded experiment controls before replaying the PPL arithmetic.
     # RF phase is stored in integer var_20 units (PHASE_RES = 0.225 deg/unit).
@@ -246,6 +270,8 @@ def derive(C):
     D.refocus_phase_offsets_deg = [v * PHASE_RES / 1000.0 for v in D.refocus_phase_offsets]
 
     crusher_scales = C.sim_train_crusher_scales
+    if crusher_scales is not None and C.crusher_schedule:
+        raise abort('Cannot combine scanner schedules with sim_train_crusher_scales')
     if crusher_scales is not None:
         if C.crush_independent_on != 1:
             raise abort('sim_train_crusher_scales requires crush_independent_on=1')
@@ -278,6 +304,24 @@ def derive(C):
         D.train_crusher_amplitudes_dac = ([C.diff_crush_amp] + [C.crush_amp] * (L - 1)
                                            if C.crush_independent_on == 1 else None)
 
+    if C.crush_independent_on == 1 and (C.scanner_version == '1.7' or C.crusher_schedule):
+        try:
+            native = crusher_schedule(
+                L, C.diff_crush_amp, C.crush_amp, C.crusher_schedule,
+                C.crusher_step_pct, C.crusher_custom_count, C.crusher_custom_pct,
+                C.crusher_max_dac, C.crusher_slew_dac_100us, C.tramp)
+            acquisition_budget(C.no_samples, C.no_discard, C.sample_period, C.crusher_schedule)
+        except ValueError as exc:
+            raise abort(str(exc)) from exc
+        if crusher_scales is None:
+            D.train_crusher_amplitudes_dac = native
+        # Simulation-only tables also obey configured ceilings in v1.7 checks.
+        for amplitude in D.train_crusher_amplitudes_dac:
+            if abs(amplitude) > C.crusher_max_dac:
+                raise abort('Crusher amplitude exceeds configured gradient amplitude limit')
+            if abs(amplitude) * 100 > C.crusher_slew_dac_100us * C.tramp:
+                raise abort('Crusher ramp exceeds configured slew limit')
+
     if C.sim_parsetup:
         parsetup(C, D)
     else:
@@ -288,8 +332,6 @@ def derive(C):
     # ---- variant / unsupported options -------------------------------------
     if C.diff_on != 1:
         raise abort('This generator implements the diffusion-ON variant only (diff_on=1)')
-    if C.views_per_seg <= 1:
-        raise abort('This generator implements ETL > 1 only')
     for k, ok in (('flow_comp_on', 0), ('de_on', 0), ('sat_on', 0), ('chess_on', 0), ('mtc_on', 0),
                   ('gating', 0), ('dixon_on', 0), ('echoes_to_discard', 0), ('no_views_2', 1),
                   ('slice_block', 1)):
@@ -368,8 +410,12 @@ def derive(C):
     nv = C.no_views
     if not (1 <= nv <= 1024 and 1 <= L <= nv):
         raise abort('Views (including navigator) must be 1..1024; ETL must be 1..views')
-    if C.PE_order not in (1, 6, 7):
-        raise abort('Set PE order to 1, 6 or 7 for multi-echo DWI (5 = single echo)')
+    if C.PE_order not in (1, 5, 6, 7):
+        raise abort('Set PE order to 1, 5, 6 or 7 for DWI')
+    if C.PE_order == 5 and (L != 1 or C.nav_on):
+        raise abort('PE order 5 requires ETL 1 and navigator OFF')
+    if C.PE_order in (6, 7) and L <= 1:
+        raise abort('PE order 6/7 requires ETL > 1')
     te_eff = 1                                                                # PPL:815
     if C.PE_order in (6, 7) and C.PF_echoes not in (0, L):
         raise abort('PE 6/7 requires full Fourier: PF echoes = 0 or ETL')
@@ -410,8 +456,8 @@ def derive(C):
                 gp.append(m)
     if len(gp) != nv:
         raise abort('Internal PE table length error')
-    D.gp_order, D.no_views_eff, D.views_per_echo = gp, nve, vpe
-    D.pe_center_echo = {1: 1, 6: L, 7: tdiv(tdiv(nve, 2), tdiv(nve, L)) + 1}[C.PE_order]   # PPL:1201-1203
+    D.gp_order, D.no_views_eff, D.views_per_echo = gp, nve, 1 if C.PE_order == 5 else vpe
+    D.pe_center_echo = {1: 1, 5: 1, 6: L, 7: tdiv(tdiv(nve, 2), tdiv(nve, L)) + 1}[C.PE_order]   # PPL:1201-1203
 
     # ---- imaging parameters (PPL:1253-1496) --------------------------------
     D.deg_90 = scale(90, 1000, PHASE_RES)
@@ -445,6 +491,9 @@ def derive(C):
         D.crush_rf_pad = D.crush_rf_flat - D.tsel90
         D.crush_pre_pad = 2 * C.tramp + D.crush_rf_pad // 2 - C.rfdelay
         D.crush_post_pad = 2 * C.tramp + D.crush_rf_pad // 2 + C.rfdelay
+        if C.scanner_version == '1.7' and C.sim_fix_refocus_centering:
+            D.crush_pre_pad += C.rfdelay
+            D.crush_post_pad -= C.rfdelay
     D.tcrush_play = C.tcrush + D.crush_pre_pad                                # PPL:1319
     D.tcrush1_play = C.diff_tcrush + D.crush_pre_pad                          # PPL:1321
     D.bw_override = 71                                                        # 2D, PPL:1327
@@ -688,7 +737,9 @@ def build_train(C, D, gp_mul_list, nav, row, pos, no_acq):
         c180.append(adc_c[-1] + C.esp * 500 * us)                # PPL:3790
         adc_c.append(c180[-1] + C.esp * 500 * us)                # PPL:2763, 3675
 
-    fix = rfd if (C.sim_fix_refocus_centering and C.crush_independent_on == 1) else 0
+    # v1.7 equal pads already implement this shift in its balance equations.
+    fix = rfd if (C.sim_fix_refocus_centering and C.crush_independent_on == 1
+                  and C.scanner_version != '1.7') else 0
     lobe = (C.sm_delta + C.tramp) * us                           # Start, delay(sm_delta), Continue, ramp
 
     # ---- refocusing pulses (PPL:1740-1770, 3530-3601) ----------------------
@@ -899,9 +950,13 @@ def reduce_slots(C, D, slots):
 # =============================================================================
 def make_system(C, raster):
     G0 = C.grad_var[0] * 1000.0
+    for name in ('hw_max_grad_hz_per_m', 'hw_max_slew_hz_per_m_per_s'):
+        value = getattr(C,name)
+        if value is not None and (not math.isfinite(value) or value <= 0):
+            raise PPLAbort(f'{name} must be finite and positive')
     return pp.Opts(
-        max_grad=C.hw_max_grad_hz_per_m or G0, grad_unit='Hz/m',
-        max_slew=C.hw_max_slew_hz_per_m_per_s or G0 / 100e-6, slew_unit='Hz/m/s',
+        max_grad=G0 if C.hw_max_grad_hz_per_m is None else C.hw_max_grad_hz_per_m, grad_unit='Hz/m',
+        max_slew=G0/100e-6 if C.hw_max_slew_hz_per_m_per_s is None else C.hw_max_slew_hz_per_m_per_s, slew_unit='Hz/m/s',
         grad_raster_time=raster, rf_raster_time=raster, adc_raster_time=TICK,
         block_duration_raster=raster, gamma=C.hw_gamma_hz_per_t,
         rf_dead_time=C.hw_rf_dead_time_us * 1e-6, rf_ringdown_time=C.hw_rf_ringdown_time_us * 1e-6,
@@ -1072,7 +1127,8 @@ def build_sequence(C=None, reduced=False, ppr=None, overrides=None):
     rows = sel['rows'] if reduced else list(range(C.no_diff_acq))
     thk = DACMAX * D.pulse_bwdth / (abs(D.gs_var_rescale) * D.G0)
     unresolved = any(not D.phase_corr_table(p)[1] for p in {s['pos'] for s, T, _ in plan if T})
-    seq.set_definition('Name', 'dwfse_ppl_twoTE_1_6' + ('_reduced' if reduced else ''))
+    seq.set_definition('Name', 'dwfse_ppl_twoTE_' + C.scanner_version.replace('.', '_')
+                       + ('_reduced' if reduced else ''))
     seq.set_definition('FOV', [C.fov_mm * 1e-3, C.fov_mm * 1e-3 * D.gp_oversample / D.gp_undersample, thk * 1e-3])
     seq.set_definition('TE', C.te * 1e-3)
     seq.set_definition('EchoSpacing', C.esp * 1e-3)
@@ -1094,6 +1150,8 @@ def build_sequence(C=None, reduced=False, ppr=None, overrides=None):
     seq.set_definition('RefocusPhaseOffsetsDeg', D.refocus_phase_offsets_deg)
     if D.train_crusher_amplitudes_dac is not None:
         seq.set_definition('TrainCrusherAmplitudesDAC', D.train_crusher_amplitudes_dac)
+    seq.set_definition('CrusherSchedule', C.crusher_schedule)
+    seq.set_definition('CrusherStepPercent', C.crusher_step_pct)
     seq.set_definition('RFShape', rf_label(C, D))
     prof = slice_profiles(C, D)
     if prof:

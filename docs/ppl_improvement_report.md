@@ -119,6 +119,13 @@ Every screening comparison changes one factor from `base`: B1=.8, B0=0,
 b=1000, ETL 8, phase 0/90°. Values below are echo 8; S is **finite-RF Bloch**.
 All rows, phases, and earlier echoes are preserved in the screening/pathway CSVs.
 
+For plain-language definitions of every alternative and an intuitive explanation
+of the important results, see [Alternatives and their physics](ppl_alternatives_explained.md).
+The subsequent [ADC snapshot comparison](echo_snapshot_comparison.md) includes
+both RF scales, a decreasing schedule, and stimulated-only spatial profiles. It
+shows destructive interference for the specific alternating-polarity pattern;
+its rejection below is not a general rejection of alternating crushers.
+
 | Modification / hypothesis | U8 (%) | P8, PDG | S8 at phase 0 / 90° | Decision |
 |---|---:|---:|---:|---|
 | Original | 91.6 | .06675 | .0704 / .0418 | Baseline |

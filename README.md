@@ -8,6 +8,13 @@ This repo turns the MR Solutions PPL sequence `FSE_dwi_CPMG_non_CPMG_twoTE-1.6` 
 compares original behavior, crusher and RF-phase changes, diffusion-phase errors,
 and B1/B0 robustness. The original scanner files and generator defaults remain available.
 
+**Scanner v1.7:** [implementation, experimental PPRs, validation and reproduction](docs/scanner_v17.md).
+Adds bounded signed crusher schedules, fixes independent-crusher centering and
+guards PE0 scratch memory. Select a `twoTE-1.7*.ppr` explicitly; defaults still
+use v1.6. `python -m dwfse.btensor file.seq --out runs/tensor` exports the complete
+modeled played waveform and per-echo b tensor. Vendor compilation and phantom
+qualification remain required.
+
 ## Setup
 
 ```bash
