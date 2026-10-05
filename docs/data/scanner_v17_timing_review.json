@@ -1,0 +1,175 @@
+{
+  "ppl_sha256": "269fe5e51eeaaa7e09787747289cda7f02b0a32e30b87d202d756c84b50d16e3",
+  "vendor_compiled": false,
+  "vendor_instruction_simulated": false,
+  "timer": {
+    "allowance_ticks": 250,
+    "expression_ticks": 54,
+    "dispatch_reserve_ticks": 30,
+    "estimate_only": true
+  },
+  "protocols": [
+    {
+      "ppr": "scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.7.ppr",
+      "schedule": 0,
+      "diffusion_dac": [
+        1
+      ],
+      "pulseq_timing_ok": true,
+      "modeled_row": 0,
+      "modeled_requested_b": 0,
+      "modeled_imaging_rf_spacing_us": [
+        14000.0,
+        14000.0,
+        14000.0,
+        14000.0,
+        14000.0,
+        14000.0
+      ],
+      "modeled_adc_midpoint_residual_us": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "ppr": "scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.7.ppr",
+      "schedule": 1,
+      "diffusion_dac": [
+        1
+      ],
+      "pulseq_timing_ok": true,
+      "modeled_row": 0,
+      "modeled_requested_b": 0,
+      "modeled_imaging_rf_spacing_us": [
+        14000.0,
+        14000.0,
+        14000.0,
+        14000.0,
+        14000.0,
+        14000.0
+      ],
+      "modeled_adc_midpoint_residual_us": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "ppr": "scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.7.ppr",
+      "schedule": 3,
+      "diffusion_dac": [
+        1
+      ],
+      "pulseq_timing_ok": true,
+      "modeled_row": 0,
+      "modeled_requested_b": 0,
+      "modeled_imaging_rf_spacing_us": [
+        14000.0,
+        14000.0,
+        14000.0,
+        14000.0,
+        14000.0,
+        14000.0
+      ],
+      "modeled_adc_midpoint_residual_us": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "ppr": "experiments\\FSE-DWI_10-04-2026_v17_test3\\FSE-DWI_10-04-2026_v17_test3.ppr",
+      "schedule": 0,
+      "diffusion_dac": [
+        1,
+        8216,
+        20119
+      ],
+      "pulseq_timing_ok": true,
+      "modeled_row": 1,
+      "modeled_requested_b": 1000,
+      "modeled_imaging_rf_spacing_us": [
+        14000.0,
+        14000.0,
+        14000.0,
+        14000.0,
+        14000.0,
+        14000.0
+      ],
+      "modeled_adc_midpoint_residual_us": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "ppr": "experiments\\FSE-DWI_10-04-2026_v17_test3\\FSE-DWI_10-04-2026_v17_test3.ppr",
+      "schedule": 1,
+      "diffusion_dac": [
+        1,
+        8216,
+        20119
+      ],
+      "pulseq_timing_ok": true,
+      "modeled_row": 1,
+      "modeled_requested_b": 1000,
+      "modeled_imaging_rf_spacing_us": [
+        14000.0,
+        14000.0,
+        14000.0,
+        14000.0,
+        14000.0,
+        14000.0
+      ],
+      "modeled_adc_midpoint_residual_us": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "ppr": "experiments\\FSE-DWI_10-04-2026_v17_test3\\FSE-DWI_10-04-2026_v17_test3.ppr",
+      "schedule": 3,
+      "diffusion_dac": [
+        1,
+        8216,
+        20119
+      ],
+      "pulseq_timing_ok": true,
+      "modeled_row": 1,
+      "modeled_requested_b": 1000,
+      "modeled_imaging_rf_spacing_us": [
+        14000.0,
+        14000.0,
+        14000.0,
+        14000.0,
+        14000.0,
+        14000.0
+      ],
+      "modeled_adc_midpoint_residual_us": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "audit_payloads": [
+    "runs\\combined_audit\\alternatives\\audit.json",
+    "runs\\combined_audit\\balanced\\audit.json",
+    "runs\\combined_audit\\centered_permutation\\audit.json",
+    "runs\\combined_audit\\new_finalists\\audit.json",
+    "runs\\combined_audit\\support_controls\\audit.json"
+  ],
+  "dependency_versions": {
+    "numpy": "2.1.0",
+    "torch": "2.14.0",
+    "MRzeroCore": "1.1.1",
+    "pypulseq": "1.5.0.post1"
+  },
+  "audit_source_sha256": "6eb103fc795352dd90a1f3a3e3989a37c94416ce8c39b1864be5d4236c098276",
+  "core_enumerator_source_sha256": "c06c2de470104b4fdd194727df5b4c8270ea31ba58864ba41d06812c660cb130",
+  "closure_cases": 528,
+  "closure_absolute_max": 1.8443041725031788e-05,
+  "closure_relative_max": 0.0005909597796979316,
+  "closure_failures": [],
+  "closure_rule": "abs<=3e-6 OR relative<=5e-4",
+  "relative_limit_exceeded_absolute_pass": [
+    {
+      "ID": "weak_increasing_centering",
+      "ETL": 8,
+      "echo": 8,
+      "total_magnitude": 0.003917568716723491,
+      "absolute": 2.313758207745815e-06,
+      "relative": 0.0005909597796979316
+    }
+  ],
+  "analytic_primary_absolute_max": 1.5161573940769557e-08,
+  "primary_longitudinal_sensitivity_absolute_max": 0.0,
+  "full_vs_numerical_10us_tensor_element_absolute_max_s_mm2": 0.0001430461446574327,
+  "full_vs_independent_gaussian_trace_absolute_max_s_mm2": 7.73070496506989e-12,
+  "max_RF_partition_full_minus_pdg_trace_s_mm2": 8.582874059470669e-06,
+  "finalist_sequence_hashes": {
+    "increasing_alternating_centering": "11cad9d9e3bdf804ec4b484713edd9de45f6bab4b0696201d11a7f246da9ed03",
+    "inc_alt_center_duration500": "ae5e453baffff372a0cf51015ea89ae3d05286641ba4d9f2e2aa4ffd1c46add5",
+    "original": "199c83b41f14deba791f25d6604347b847bd6f29e536757bc02693b1ee2b3c59",
+    "increasing_centering": "f64f730c2b8cfe81e15729ad5f8f5e774c2b96928e192c668d7097515788c0ab",
+    "high_low_permutation_alternating_centering": "f1273318d2863f9661a716f1a6bc5004a602d090881429891f21eb38c597d629",
+    "weak_increasing_centering": "9d76ec9cca53063b0932418a2ed3eefc118f09110805aeb99d3fb50a2ae791f9",
+    "high_low_permutation_alternating": "ddc16fc7846b58c995b6bf60b9d378e37563df436f2a98a47d6bb686bb3274c1"
+  }
+}

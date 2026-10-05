@@ -1,0 +1,431 @@
+{
+  "version": "combined-v2",
+  "source_sha256": {
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppl": "c0e551e76234c8113eb2953dcf9c2bc9e427eee18264199e98b3edd2c2abfd0c",
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppr": "00bd9e78573133e5df09da9fa64cf424bf6e338e05a1872ff916c3c03bc315ee",
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.7.ppl": "b415b353a2d52b253eba1c463cffb51d9ca00abf8e553bce7a3d7f314705be68",
+    "dwfse/generate.py": "43f869da90a4351917d5b32ed0179574570f19f465fc019c13a39f9e14ea0c39",
+    "dwfse/simulate.py": "7df26814d2a200a3c1ca4c135304fab68cd1a10ecbdcb00861b0d8830e81c96e",
+    "dwfse/pathways.py": "be7cb43fafed125e469c8ce45dc2badbed938c448daa3cb9d71456357304b18d",
+    "dwfse/btensor.py": "ccf9ac632c338e22ab19da80970fbe54fe680ee59a17a0deee9377318ba60f6b",
+    "dwfse/epg.py": "b14987a806b12c5890e45ea028c063e18c1cc8bdcd55dde11fecf585fb51cf30",
+    "dwfse/rf_pulses.py": "70d938d2a848c3b92481375f7b46448664e5f5d2d4f70caa15c1c75e7c8c9533",
+    "dwfse/crushers.py": "1db9f5272d95efd525b1cdc9c49c3c0d9a0f3e19c397567747a0b137ee6ca538",
+    "examples/improve_ppl.py": "b1fbd711dc6b6ca9410aa71068416cb2c82c94d5812ce0bc55b9d460c3daa415",
+    "examples/compare_echo_snapshots.py": "d34f62ccd0d7e44fb3415f691dbe9e857318dddf2e1e236689a8df6a7532740f",
+    "examples/combined_factor_study.py": "ce5cfc45c1d28e166ec6925fb8d56aea003b918e65dcb22eb29fbcbdfb1b0eb4"
+  },
+  "dependencies": {
+    "numpy": "2.1.0",
+    "matplotlib": "3.9.2",
+    "torch": "2.14.0",
+    "pypulseq": "1.5.0.post1",
+    "MRzeroCore": "1.1.1"
+  },
+  "baseline_commit": "c87b30e",
+  "baseline_source_sha256": {
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppl": "79decb2c6822e0a619356cb80bb8a93a84cea2ce9f4bedd7ed1181e02aa88d61",
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppr": "e2b4b10ec3a35f7701220875df801815020d56106f3c87d3481df6490e917471",
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.7.ppl": "6986208dc1ad90c434f564751387a375658b82568b5b4abca8b888f898b724a1",
+    "dwfse/generate.py": "f3c5a7807efaae2d7623090587b5bbd2b904126c36648d6ace5c3fcb65bcc485",
+    "dwfse/simulate.py": "bed9f6e01f761ded9814f43d2259d7b30496230ad1d8a6891353f1c35db1662b",
+    "dwfse/pathways.py": "be7cb43fafed125e469c8ce45dc2badbed938c448daa3cb9d71456357304b18d",
+    "dwfse/btensor.py": "ccf9ac632c338e22ab19da80970fbe54fe680ee59a17a0deee9377318ba60f6b",
+    "dwfse/epg.py": "c088ef854afe675c217ddf4b9ee5c81c98f46de825a057dc146e28b2614471d8",
+    "dwfse/rf_pulses.py": "773d118fc9f6b5b165d59cd80b66d858325cb0ae3880b2da05a32b94d0b8748f",
+    "dwfse/crushers.py": "1db9f5272d95efd525b1cdc9c49c3c0d9a0f3e19c397567747a0b137ee6ca538",
+    "examples/improve_ppl.py": "b1fbd711dc6b6ca9410aa71068416cb2c82c94d5812ce0bc55b9d460c3daa415",
+    "examples/compare_echo_snapshots.py": "d34f62ccd0d7e44fb3415f691dbe9e857318dddf2e1e236689a8df6a7532740f"
+  },
+  "baseline_hash_convention": "baseline_source_sha256 hashes committed Git blob bytes; source_sha256 hashes current working-file bytes. LF-normalized comparisons distinguish CRLF-only differences.",
+  "source_lf_normalized_sha256": {
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppl": "79decb2c6822e0a619356cb80bb8a93a84cea2ce9f4bedd7ed1181e02aa88d61",
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppr": "e2b4b10ec3a35f7701220875df801815020d56106f3c87d3481df6490e917471",
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.7.ppl": "514caa7866e256286e22a51c58b241b00acc0b519abed697e1bb880b8c6670e1",
+    "dwfse/generate.py": "f3c5a7807efaae2d7623090587b5bbd2b904126c36648d6ace5c3fcb65bcc485",
+    "dwfse/simulate.py": "bed9f6e01f761ded9814f43d2259d7b30496230ad1d8a6891353f1c35db1662b",
+    "dwfse/pathways.py": "be7cb43fafed125e469c8ce45dc2badbed938c448daa3cb9d71456357304b18d",
+    "dwfse/btensor.py": "ccf9ac632c338e22ab19da80970fbe54fe680ee59a17a0deee9377318ba60f6b",
+    "dwfse/epg.py": "c088ef854afe675c217ddf4b9ee5c81c98f46de825a057dc146e28b2614471d8",
+    "dwfse/rf_pulses.py": "773d118fc9f6b5b165d59cd80b66d858325cb0ae3880b2da05a32b94d0b8748f",
+    "dwfse/crushers.py": "1db9f5272d95efd525b1cdc9c49c3c0d9a0f3e19c397567747a0b137ee6ca538",
+    "examples/improve_ppl.py": "b1fbd711dc6b6ca9410aa71068416cb2c82c94d5812ce0bc55b9d460c3daa415",
+    "examples/compare_echo_snapshots.py": "d34f62ccd0d7e44fb3415f691dbe9e857318dddf2e1e236689a8df6a7532740f",
+    "examples/combined_factor_study.py": "ce5cfc45c1d28e166ec6925fb8d56aea003b918e65dcb22eb29fbcbdfb1b0eb4"
+  },
+  "baseline_lf_normalized_sha256": {
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppl": "79decb2c6822e0a619356cb80bb8a93a84cea2ce9f4bedd7ed1181e02aa88d61",
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppr": "e2b4b10ec3a35f7701220875df801815020d56106f3c87d3481df6490e917471",
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.7.ppl": "6986208dc1ad90c434f564751387a375658b82568b5b4abca8b888f898b724a1",
+    "dwfse/generate.py": "f3c5a7807efaae2d7623090587b5bbd2b904126c36648d6ace5c3fcb65bcc485",
+    "dwfse/simulate.py": "bed9f6e01f761ded9814f43d2259d7b30496230ad1d8a6891353f1c35db1662b",
+    "dwfse/pathways.py": "be7cb43fafed125e469c8ce45dc2badbed938c448daa3cb9d71456357304b18d",
+    "dwfse/btensor.py": "ccf9ac632c338e22ab19da80970fbe54fe680ee59a17a0deee9377318ba60f6b",
+    "dwfse/epg.py": "c088ef854afe675c217ddf4b9ee5c81c98f46de825a057dc146e28b2614471d8",
+    "dwfse/rf_pulses.py": "773d118fc9f6b5b165d59cd80b66d858325cb0ae3880b2da05a32b94d0b8748f",
+    "dwfse/crushers.py": "1db9f5272d95efd525b1cdc9c49c3c0d9a0f3e19c397567747a0b137ee6ca538",
+    "examples/improve_ppl.py": "b1fbd711dc6b6ca9410aa71068416cb2c82c94d5812ce0bc55b9d460c3daa415",
+    "examples/compare_echo_snapshots.py": "d34f62ccd0d7e44fb3415f691dbe9e857318dddf2e1e236689a8df6a7532740f"
+  },
+  "study_start_v17_working_sha256": "b415b353a2d52b253eba1c463cffb51d9ca00abf8e553bce7a3d7f314705be68",
+  "concurrent_change_note": "An external v1.7 timer-guard revision appeared during investigation. This runner made no scanner edits; every study sequence explicitly uses unchanged v1.6 PPR/generation controls. Baseline and final-current scanner hashes are separate.",
+  "stage_invocations": [
+    {
+      "stage": "screen",
+      "variants": [
+        "alternating_centering",
+        "high_low_permutation_alternating_centering",
+        "increasing_centering_taper"
+      ],
+      "n": 4096,
+      "elapsed_wall_s": 11.281256400048733
+    },
+    {
+      "stage": "heldout",
+      "variants": [
+        "original",
+        "increasing_centering",
+        "increasing_alternating_centering",
+        "weak_increasing_centering",
+        "high_low_permutation_alternating"
+      ],
+      "n": 4096,
+      "elapsed_wall_s": 135.26248079992365
+    },
+    {
+      "stage": "sensitivity",
+      "variants": [
+        "original",
+        "increasing_alternating_centering",
+        "weak_increasing_centering",
+        "high_low_permutation_alternating"
+      ],
+      "n": 4096,
+      "elapsed_wall_s": 60.41733219998423
+    },
+    {
+      "stage": "heldout",
+      "variants": [
+        "high_low_permutation_alternating_centering"
+      ],
+      "n": 4096,
+      "elapsed_wall_s": 39.029363900073804
+    },
+    {
+      "stage": "sensitivity",
+      "variants": [
+        "high_low_permutation_alternating_centering"
+      ],
+      "n": 4096,
+      "elapsed_wall_s": 16.658946500043385
+    },
+    {
+      "stage": "robust",
+      "variants": [
+        "high_low_permutation_alternating_centering"
+      ],
+      "n": 4096,
+      "elapsed_wall_s": 127.15608480002265
+    },
+    {
+      "stage": "rebuild",
+      "variants": [
+        "original",
+        "centering",
+        "increasing",
+        "increasing_centering",
+        "alternating",
+        "alternating_centering",
+        "increasing_alternating",
+        "increasing_alternating_centering",
+        "weak_increasing_centering",
+        "weak_increasing_alternating_centering",
+        "decreasing",
+        "high_low",
+        "high_low_alternating",
+        "high_low_permutation",
+        "high_low_permutation_alternating",
+        "high_low_permutation_alternating_centering",
+        "ramp_modulated",
+        "quadratic",
+        "geometric",
+        "irregular_seeded",
+        "high_low_energy_matched",
+        "irregular_energy_matched",
+        "original_rf180",
+        "original_rf90_exploratory",
+        "increasing_rf180",
+        "increasing_rf90_exploratory",
+        "increasing_centering_rf180",
+        "increasing_centering_rf90_exploratory",
+        "inc_alt_rf180",
+        "inc_alt_rf90_exploratory",
+        "inc_alt_center_rf180",
+        "inc_alt_center_rf90_exploratory",
+        "original_flip160",
+        "original_flip_train",
+        "inc_alt_center_flip160",
+        "inc_alt_center_flip_train",
+        "original_taper",
+        "increasing_taper",
+        "increasing_centering_taper",
+        "original_duration500",
+        "inc_alt_center_duration500"
+      ],
+      "n": 4096,
+      "elapsed_wall_s": 1.8002797999652103
+    },
+    {
+      "stage": "rebuild",
+      "variants": [
+        "original",
+        "centering",
+        "increasing",
+        "increasing_centering",
+        "alternating",
+        "alternating_centering",
+        "increasing_alternating",
+        "increasing_alternating_centering",
+        "weak_increasing_centering",
+        "weak_increasing_alternating_centering",
+        "decreasing",
+        "high_low",
+        "high_low_alternating",
+        "high_low_permutation",
+        "high_low_permutation_alternating",
+        "high_low_permutation_alternating_centering",
+        "ramp_modulated",
+        "quadratic",
+        "geometric",
+        "irregular_seeded",
+        "high_low_energy_matched",
+        "irregular_energy_matched",
+        "original_rf180",
+        "original_rf90_exploratory",
+        "increasing_rf180",
+        "increasing_rf90_exploratory",
+        "increasing_centering_rf180",
+        "increasing_centering_rf90_exploratory",
+        "inc_alt_rf180",
+        "inc_alt_rf90_exploratory",
+        "inc_alt_center_rf180",
+        "inc_alt_center_rf90_exploratory",
+        "original_flip160",
+        "original_flip_train",
+        "inc_alt_center_flip160",
+        "inc_alt_center_flip_train",
+        "original_taper",
+        "increasing_taper",
+        "increasing_centering_taper",
+        "original_duration500",
+        "inc_alt_center_duration500"
+      ],
+      "n": 4096,
+      "elapsed_wall_s": 1.6769856000319123
+    },
+    {
+      "stage": "rebuild",
+      "variants": [
+        "original",
+        "centering",
+        "increasing",
+        "increasing_centering",
+        "alternating",
+        "alternating_centering",
+        "increasing_alternating",
+        "increasing_alternating_centering",
+        "weak_increasing_centering",
+        "weak_increasing_alternating_centering",
+        "decreasing",
+        "high_low",
+        "high_low_alternating",
+        "high_low_permutation",
+        "high_low_permutation_alternating",
+        "high_low_permutation_alternating_centering",
+        "ramp_modulated",
+        "quadratic",
+        "geometric",
+        "irregular_seeded",
+        "high_low_energy_matched",
+        "irregular_energy_matched",
+        "original_rf180",
+        "original_rf90_exploratory",
+        "increasing_rf180",
+        "increasing_rf90_exploratory",
+        "increasing_centering_rf180",
+        "increasing_centering_rf90_exploratory",
+        "inc_alt_rf180",
+        "inc_alt_rf90_exploratory",
+        "inc_alt_center_rf180",
+        "inc_alt_center_rf90_exploratory",
+        "original_flip160",
+        "original_flip_train",
+        "inc_alt_center_flip160",
+        "inc_alt_center_flip_train",
+        "original_taper",
+        "increasing_taper",
+        "increasing_centering_taper",
+        "original_duration500",
+        "inc_alt_center_duration500"
+      ],
+      "n": 4096,
+      "elapsed_wall_s": 1.8542939000763
+    },
+    {
+      "stage": "rebuild",
+      "variants": [
+        "original",
+        "centering",
+        "increasing",
+        "increasing_centering",
+        "alternating",
+        "alternating_centering",
+        "increasing_alternating",
+        "increasing_alternating_centering",
+        "weak_increasing_centering",
+        "weak_increasing_alternating_centering",
+        "decreasing",
+        "high_low",
+        "high_low_alternating",
+        "high_low_permutation",
+        "high_low_permutation_alternating",
+        "high_low_permutation_alternating_centering",
+        "ramp_modulated",
+        "quadratic",
+        "geometric",
+        "irregular_seeded",
+        "high_low_energy_matched",
+        "irregular_energy_matched",
+        "original_rf180",
+        "original_rf90_exploratory",
+        "increasing_rf180",
+        "increasing_rf90_exploratory",
+        "increasing_centering_rf180",
+        "increasing_centering_rf90_exploratory",
+        "inc_alt_rf180",
+        "inc_alt_rf90_exploratory",
+        "inc_alt_center_rf180",
+        "inc_alt_center_rf90_exploratory",
+        "original_flip160",
+        "original_flip_train",
+        "inc_alt_center_flip160",
+        "inc_alt_center_flip_train",
+        "original_taper",
+        "increasing_taper",
+        "increasing_centering_taper",
+        "original_duration500",
+        "inc_alt_center_duration500"
+      ],
+      "n": 4096,
+      "elapsed_wall_s": 1.5200530999572948
+    }
+  ],
+  "counts": {
+    "combined_factor_heldout_bloch.csv": {
+      "echo_rows": 270,
+      "cases": 35
+    },
+    "combined_factor_robust_bloch.csv": {
+      "echo_rows": 960,
+      "cases": 120
+    },
+    "combined_factor_screen_bloch.csv": {
+      "echo_rows": 1312,
+      "cases": 164
+    },
+    "combined_factor_sensitivity_dense_bloch.csv": {
+      "echo_rows": 120,
+      "cases": 15
+    },
+    "combined_factor_sensitivity_dt2us_bloch.csv": {
+      "echo_rows": 80,
+      "cases": 10
+    },
+    "combined_factor_timing_transfer_bloch.csv": {
+      "echo_rows": 16,
+      "cases": 2
+    },
+    "combined_factor_timing_transfer_heldout_bloch.csv": {
+      "echo_rows": 54,
+      "cases": 7
+    },
+    "combined_factor_timing_transfer_robust_bloch.csv": {
+      "echo_rows": 192,
+      "cases": 24
+    },
+    "combined_factor_heldout_pathways.csv": {
+      "echo_rows": 210,
+      "cases": 30
+    },
+    "combined_factor_robust_pathways.csv": {
+      "echo_rows": 720,
+      "cases": 90
+    },
+    "combined_factor_screen_pathways.csv": {
+      "echo_rows": 2560,
+      "cases": 320
+    },
+    "combined_factor_timing_transfer_heldout_pathways.csv": {
+      "echo_rows": 42,
+      "cases": 6
+    },
+    "combined_factor_timing_transfer_pathways.csv": {
+      "echo_rows": 80,
+      "cases": 10
+    },
+    "combined_factor_timing_transfer_robust_pathways.csv": {
+      "echo_rows": 144,
+      "cases": 18
+    }
+  },
+  "configurations": [
+    "original",
+    "centering",
+    "increasing",
+    "increasing_centering",
+    "alternating",
+    "alternating_centering",
+    "increasing_alternating",
+    "increasing_alternating_centering",
+    "weak_increasing_centering",
+    "weak_increasing_alternating_centering",
+    "decreasing",
+    "high_low",
+    "high_low_alternating",
+    "high_low_permutation",
+    "high_low_permutation_alternating",
+    "high_low_permutation_alternating_centering",
+    "ramp_modulated",
+    "quadratic",
+    "geometric",
+    "irregular_seeded",
+    "high_low_energy_matched",
+    "irregular_energy_matched",
+    "original_rf180",
+    "original_rf90_exploratory",
+    "increasing_rf180",
+    "increasing_rf90_exploratory",
+    "increasing_centering_rf180",
+    "increasing_centering_rf90_exploratory",
+    "inc_alt_rf180",
+    "inc_alt_rf90_exploratory",
+    "inc_alt_center_rf180",
+    "inc_alt_center_rf90_exploratory",
+    "original_flip160",
+    "original_flip_train",
+    "inc_alt_center_flip160",
+    "inc_alt_center_flip_train",
+    "original_taper",
+    "increasing_taper",
+    "increasing_centering_taper",
+    "original_duration500",
+    "inc_alt_center_duration500"
+  ],
+  "sum_cached_case_elapsed_s": 2169.333751800237,
+  "observed_artifact_creation_span_s": 1113.61048579216,
+  "pruning": "none; exact all RF branches ETL<=8; ETL12 finite RF only",
+  "model_limits": "Finite_RF Bloch stationary D=0 over 2mm profile; instant_RF exact pathways one 1mm box with D0/physical .001; models are not a matched decomposition.",
+  "hardware_limits": "PPR full-scale defaults and model gradient delays; no measured scanner PNS, SAR, gradient thermal duty or RF power qualification",
+  "phase_convention": "phase column is requested offset; actual_excitation_phase_deg rounds to .225deg scanner units (30->29.925deg,60->60.075deg)",
+  "errors_file": "combined_factor_errors.json"
+}

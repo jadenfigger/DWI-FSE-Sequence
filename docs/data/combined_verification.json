@@ -1,0 +1,32 @@
+{
+  "counts": {
+    "finite": 377,
+    "exact": 474,
+    "echoes": 6760
+  },
+  "generated_sequences_readback_timing_passed": 172,
+  "primary_tensor_samples": 1364,
+  "minimum_tensor_eigenvalue_s_mm2": -1.793505019619954e-28,
+  "arithmetic_component_sum_max_absolute": 1.415534356397328e-15,
+  "component_sum_is_not_independent_signal_closure": true,
+  "screened_configurations_with_complete_table": 41,
+  "missing_report_links": [],
+  "prior_reproduction_passed": true,
+  "resolved_infrastructure_events": 1,
+  "phantom_image_sampling_qualified": false,
+  "regression_suite_last_observed_passes": 31,
+  "regression_suite_not_rerun_by_inventory": true,
+  "environment": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.1.0",
+      "scipy": "1.14.1",
+      "matplotlib": "3.9.2",
+      "pypulseq": "1.5.0.post1",
+      "MRzeroCore": "1.1.1",
+      "torch": "2.14.0"
+    }
+  },
+  "final_current_scanner17_sha256": "b415b353a2d52b253eba1c463cffb51d9ca00abf8e553bce7a3d7f314705be68"
+}

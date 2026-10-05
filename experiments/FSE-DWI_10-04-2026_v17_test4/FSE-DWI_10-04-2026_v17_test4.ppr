@@ -1,18 +1,18 @@
-:PPL FSE_dwi_CPMG_non_CPMG_twoTE-1.7.ppl
+:PPL G:\J_Figger\FSE_dwi_CPMG_non_CPMG_twoTE-1.7.ppl
 :OBSERVE_FREQUENCY "1H 0.0", 0.0, MHz, kHz, Hz, rx1MHz
 :VAR rec_freq, 0
 :SAMPLE_PERIOD sample_period, 500, 12, "20.0 KHz  50 µs"
 :GRADIENT_STRENGTH grad_var, 4, 25447, 25447, 25910, 25925
 :NO_SAMPLES no_samples, 128
-:NO_VIEWS no_views, 16
+:NO_VIEWS no_views, 136
 :VIEWS_PER_SEGMENT views_per_seg, 8
 :NO_VIEWS_2 no_views_2, 1
 :VAR oversample, 0
 :VAR oversample2, 0
 :VAR oversample3, 0
-:VAR nav_on, 0
+:VAR nav_on, 1
 :DISCARD no_discard, 0
-:EXPERIMENT_ARRAY no_experiments, 2
+:EXPERIMENT_ARRAY no_experiments, 3
 :NO_AVERAGES no_averages, 1
 :VIEW_BLOCK view_block, 1
 :SLICE_BLOCK slice_block, 1
@@ -29,34 +29,25 @@
 :SLICE_INTERLEAVE slice_interleave, 1
 :SMX 0.0224563
 :SWX 1
-:SMY 0.0359301
+:SMY 0.0305406
 :SWY 1
 :READ_VAR gr_var, -735
-:PHASE_VAR gp_init_var, -1177
+:PHASE_VAR gp_init_var, -1000
 :FOV 35
-:MULTI_ORIENTATION 3
+:MULTI_ORIENTATION 1
 , 0
-, 0, 0
-:X_ANGLE r_angle_var, 3
+:X_ANGLE r_angle_var, 1
 , 0
-, 0, 0
-:Y_ANGLE p_angle_var, 3
+:Y_ANGLE p_angle_var, 1
 , 0
-, 0, 0
-:Z_ANGLE s_angle_var, 3
+:Z_ANGLE s_angle_var, 1
 , 0
-, 0, 0
 :PHASE_ORIENTATION phase_var, 0
-:FOV_READ_OFF fov_read_off, 3, 0
-, 0, 0
-:FOV_PHASE_OFF fov_phase_off, 3, 0
-, 0, 0
-:FOV_SLICE_OFF fov_slice_off, 3, -480
-, 0, 480
-:FOV_OFFSETS 3
-, 0, 0, -1.2
+:FOV_READ_OFF fov_read_off, 1, 0
+:FOV_PHASE_OFF fov_phase_off, 1, 0
+:FOV_SLICE_OFF fov_slice_off, 1, 0
+:FOV_OFFSETS 1
 , 0, 0, 0
-, 0, 0, 1.2
 :VAR FOVf, 8
 :VAR slab_ratio, 100
 :VAR rfnum, 1
@@ -65,8 +56,8 @@
 :VAR alpha, 90
 :VAR p180_scale, 185
 :VAR tr, 2000
-:VAR esp, 16
-:VAR te, 36
+:VAR esp, 14
+:VAR te, 54
 :VAR PF_echoes, 0
 :VAR report_on, 0
 :VAR tramp, 200
@@ -74,8 +65,8 @@
 :VAR tcrush, 1000
 :VAR diff_tcrush, 1000
 :VAR crush_independent_on, 1
-:VAR crush_amp, 5482
-:VAR diff_crush_amp, 2754
+:VAR crush_amp, 2741
+:VAR diff_crush_amp, 5482
 :VAR crusher_schedule, 1
 :VAR crusher_step_pct, 40
 :VAR crusher_max_dac, 32767
@@ -282,10 +273,10 @@
 :VAR diff_on, 1
 :VAR b_input_mode, 1
 :VAR sm_delta, 4000
-:VAR big_delta, 20000
-:VAR no_diff_acq, 2
+:VAR big_delta, 40000
+:VAR no_diff_acq, 3
 :VAR_ARRAY acq_b, 512, 0
-, 1000, 0, 0, 0, 0, 0, 0, 0
+, 1000, 6000, 0, 0, 0, 0, 0, 0
 , 0, 0, 0, 0, 0, 0, 0, 0
 , 0, 0, 0, 0, 0, 0, 0, 0
 , 0, 0, 0, 0, 0, 0, 0, 0
@@ -415,7 +406,7 @@
 , 0, 0, 0, 0, 0, 0, 0, 0
 , 0, 0, 0, 0, 0, 0, 0
 :VAR_ARRAY acq_x, 512, 1000
-, 1000, 0, 0, 0, 0, 0, 0, 0
+, 1000, 1000, 0, 0, 0, 0, 0, 0
 , 0, 0, 0, 0, 0, 0, 0, 0
 , 0, 0, 0, 0, 0, 0, 0, 0
 , 0, 0, 0, 0, 0, 0, 0, 0
@@ -618,7 +609,7 @@
 :VAR post_crush_on, 1
 :VAR post_tcrush, 3000
 :VAR post_crush_amp, -6000
-:VAR no_disacq, 8
+:VAR no_disacq, 4
 :VAR dixon_on, 0
 :VAR delta_2_90, 123
 :VAR delta_0, 0

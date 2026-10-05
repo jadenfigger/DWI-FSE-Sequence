@@ -1,0 +1,21 @@
+[
+  {
+    "function": "finite",
+    "args": [
+      "screen",
+      "increasing_centering_taper",
+      1000,
+      "read",
+      90,
+      1,
+      0
+    ],
+    "kwargs": {
+      "n": 4096
+    },
+    "error": "[Errno 22] Invalid argument: 'C:\\\\Miscellaneous\\\\Coding_Projects\\\\Python\\\\mri_processing\\\\processing\\\\DWI-FSE-Sequence\\\\docs\\\\data\\\\combined_factor_screen_bloch.csv'",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\examples\\combined_factor_study.py\", line 279, in execute\n  File \"C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\examples\\combined_factor_study.py\", line 239, in finite\n    rows.append(row)\n  File \"C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\examples\\combined_factor_study.py\", line 207, in merge_table\n    with path.open(newline='',encoding='utf-8') as f: old=list(csv.DictReader(f))\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\examples\\combined_factor_study.py\", line 197, in table\n    def table(rows,path):\n             ^^^^^^^^^^^^^\n  File \"C:\\Users\\jaden\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\pathlib.py\", line 1044, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: [Errno 22] Invalid argument: 'C:\\\\Miscellaneous\\\\Coding_Projects\\\\Python\\\\mri_processing\\\\processing\\\\DWI-FSE-Sequence\\\\docs\\\\data\\\\combined_factor_screen_bloch.csv'\n",
+    "status": "resolved_infrastructure",
+    "resolution": "Cached simulation result recovered by rebuilding compact CSV; no scientific generation or simulation failure."
+  }
+]

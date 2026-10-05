@@ -20,6 +20,13 @@ BASE = dict(views_per_seg=8, no_views=16, te=36, esp=16,
             acq_x=[1000, 1000] + [0]*510, sim_reduced_shots=[1])
 
 
+def experimental_ppr(suffix):
+    # Protocols were moved into the dated scanner experiment folders.
+    name = f'FSE_dwi_CPMG_non_CPMG_twoTE-1.7{suffix}.ppr'
+    candidates = [STEM.parent/name, *sorted((ROOT/'experiments').glob(f'*/{name}'))]
+    return next(p for p in candidates if p.is_file())
+
+
 class CrusherScheduleTests(unittest.TestCase):
     def test_exact_schedules_and_signed_half_up_rounding(self):
         up = [2754, 5482, 7675, 9868, 12060, 14253, 16446, 18639]
@@ -92,13 +99,14 @@ class ScannerIntegrationTests(unittest.TestCase):
     def test_pprs_match_native_storage_and_keep_calibration(self):
         old = read_ppr(ROOT/'scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppr')
         for name,mode in [('',0),('-increasing',1),('-increasing-alternating',3)]:
-            new = read_ppr(str(STEM)+name+'.ppr')
+            path = Path(PPR) if not name else experimental_ppr(name)
+            new = read_ppr(path)
             self.assertEqual(len(new['crusher_custom_pct']),64)
             self.assertEqual(new['crusher_schedule'],mode)
             for key in ('rfnum','p180_scale','rfcal','alpha','phase_cycle','phcor0','rfdelay'):
                 self.assertEqual(new[key],old[key])
             if mode:
-                d = derive(load_params(str(STEM)+name+'.ppr'))
+                d = derive(load_params(path))
                 self.assertGreater(d.diff_grad[1],0)
                 self.assertEqual(d.diff_grad[0],1)  # preserve b=0 workaround
 
@@ -235,6 +243,20 @@ class ScannerIntegrationTests(unittest.TestCase):
             self.assertEqual(len(lobes),2)
             self.assertEqual(lobes[0],lobes[1])
 
+    def test_setup_guard_reserves_timer_overhead_without_extending_window(self):
+        source = Path(str(STEM)+'.ppl').read_text(encoding='latin-1')
+        self.assertRegex(source, r'\bint crusher_setup_ticks;')
+        setup = source.split('// [CRUSH-SCHED] DWI setup creates',1)[1].split('resync();',1)[0]
+        self.assertEqual(setup.count('gettimer()'),1)
+        self.assertIn('crusher_setup_ticks = gettimer();',setup)
+        self.assertIn('if ((crusher_setup_ticks<0)||(crusher_setup_ticks>24500))',setup)
+        self.assertIn('goto end;',setup)
+        self.assertIn('waittimer(30000);',setup)
+        self.assertLess(setup.index('goto end;'),setup.index('waittimer(30000);'))
+        self.assertNotIn('18000',setup)
+        benchmark = source.split('crusher_update_benchmark:',1)[1].split('pos_index=pos_index+1;',1)[0]
+        self.assertIn('if ((crusher_update_ticks<0L)||(crusher_update_ticks>CRUSHER_UPDATE_MAX_TICKS))',benchmark)
+
 
 class ScratchAndTensorTests(unittest.TestCase):
     def test_pe0_all_reserved_region_boundaries_and_replayed_corruption(self):
@@ -280,7 +302,7 @@ class ScratchAndTensorTests(unittest.TestCase):
         np.testing.assert_allclose(echoes[0]['B_s_mm2'],echoes[1]['B_s_mm2'],atol=1e-9)
 
     def test_complete_tensor_is_symmetric_psd_and_echo_dependent(self):
-        seq,_,_,_ = build_sequence(ppr=str(STEM)+'-increasing.ppr',reduced=True,
+        seq,_,_,_ = build_sequence(ppr=experimental_ppr('-increasing'),reduced=True,
                                    overrides={'sim_reduced_shots':[1]})
         payload,(times,left,right) = calculate(seq)
         centres = [x for x in payload['echoes'] if x['convention']=='centre']
@@ -299,7 +321,7 @@ class ScratchAndTensorTests(unittest.TestCase):
 
     def test_waveform_export_after_readback_preserves_sample_and_slice_context(self):
         import json
-        seq,_,_,_ = build_sequence(ppr=str(STEM)+'-increasing.ppr',reduced=True)
+        seq,_,_,_ = build_sequence(ppr=experimental_ppr('-increasing'),reduced=True)
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder)/'sequence.seq'
             seq.write(str(path))

@@ -1,0 +1,64 @@
+{
+  "stage": "frozen_before_robustness_and_heldout",
+  "selection_basis": "ETL8 finite_RF screen worst E8 amplitude plus incumbent purity controls and distinct gradient cost",
+  "variants": [
+    "original",
+    "increasing_centering",
+    "increasing_alternating_centering",
+    "weak_increasing_centering",
+    "high_low_permutation_alternating"
+  ],
+  "seed": 1,
+  "holdout_seed": 2,
+  "timing_transfer_supplement": {
+    "variant": "high_low_permutation_alternating_centering",
+    "timestamp_utc": "2026-10-04T15:35:20.815914+00:00",
+    "basis": "Design-requested timing correction and separate four-point screen; no parameter tuning; supplemental full panels run after original shortlist heldout and after two limited transfer points were observed.",
+    "validation_label": "timing_transfer_robust/timing_transfer_heldout"
+  },
+  "posterior_angle_qualification_notes": [
+    {
+      "variant": "original_flip160",
+      "post_screen_finite_E8_min": 0.0021568647919162917,
+      "B1_08_D_001_primary_E8": 0.008561846916257825,
+      "B1_08_D_001_unwanted_l1_share": 0.9734996196397365,
+      "qualification": "Did not advance to full panels: lower primary signal and greater nonprimary L1 at B1=.8; finite-total screen improvement alone does not establish desired pathway improvement. These are posterior notes and do not replace the initial frozen selection history."
+    },
+    {
+      "variant": "original_flip_train",
+      "post_screen_finite_E8_min": 0.001942502630942475,
+      "B1_08_D_001_primary_E8": 0.008330909558721485,
+      "B1_08_D_001_unwanted_l1_share": 0.975101465153078,
+      "qualification": "Did not advance to full panels: lower primary signal and greater nonprimary L1 at B1=.8; finite-total screen improvement alone does not establish desired pathway improvement. These are posterior notes and do not replace the initial frozen selection history."
+    },
+    {
+      "variant": "original_taper",
+      "post_screen_finite_E8_min": 0.0095626599746914,
+      "B1_08_D_001_primary_E8": 0.011557076632097398,
+      "B1_08_D_001_unwanted_l1_share": 0.9654285444691615,
+      "qualification": "Did not advance to full panels: lower primary signal and greater nonprimary L1 at B1=.8; finite-total screen improvement alone does not establish desired pathway improvement. These are posterior notes and do not replace the initial frozen selection history."
+    },
+    {
+      "variant": "increasing_centering_taper",
+      "post_screen_finite_E8_min": 0.04419668136835971,
+      "B1_08_D_001_primary_E8": 0.010596759589197575,
+      "B1_08_D_001_unwanted_l1_share": 0.8125193170106486,
+      "qualification": "Did not advance to full panels: lower primary signal and greater nonprimary L1 at B1=.8; finite-total screen improvement alone does not establish desired pathway improvement. These are posterior notes and do not replace the initial frozen selection history."
+    },
+    {
+      "variant": "inc_alt_center_flip160",
+      "post_screen_finite_E8_min": 0.02677809289348578,
+      "B1_08_D_001_primary_E8": 0.007768297453631442,
+      "B1_08_D_001_unwanted_l1_share": 0.5516429586902962,
+      "qualification": "Did not advance to full panels: lower primary signal and greater nonprimary L1 at B1=.8; finite-total screen improvement alone does not establish desired pathway improvement. These are posterior notes and do not replace the initial frozen selection history."
+    },
+    {
+      "variant": "inc_alt_center_flip_train",
+      "post_screen_finite_E8_min": 0.02426878951792054,
+      "B1_08_D_001_primary_E8": 0.007558764381615015,
+      "B1_08_D_001_unwanted_l1_share": 0.5921424325615169,
+      "qualification": "Did not advance to full panels: lower primary signal and greater nonprimary L1 at B1=.8; finite-total screen improvement alone does not establish desired pathway improvement. These are posterior notes and do not replace the initial frozen selection history."
+    }
+  ],
+  "selection_objectives": "Finite total signal, absolute primary signal, true stimulated/nonprimary L1 contamination, hardware gradient/RF proxies, timing feasibility and broader phase/B1/B0/direction/ETL transfer considered jointly; no universal winner or published-method completeness claim."
+}

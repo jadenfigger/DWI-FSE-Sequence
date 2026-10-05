@@ -1,0 +1,55 @@
+{
+  "audit": [
+    {
+      "case": "original",
+      "center_slice_encoding_signal_nrmse": 0.003845887212886654,
+      "rf_dt_10us_vs_5us_signal_nrmse": 0.0004758692586275392,
+      "second_seed_image_nrmse": 0.5553439283552742,
+      "second_seed_peak_common_scale": 0.2720150740463884
+    },
+    {
+      "case": "centered_increasing",
+      "center_slice_encoding_signal_nrmse": 0.0038458872128852815,
+      "rf_dt_10us_vs_5us_signal_nrmse": 0.0004446083147274086,
+      "second_seed_image_nrmse": 0.5430528453709524,
+      "second_seed_peak_common_scale": 0.26208521161184223
+    },
+    {
+      "case": "centered_increasing_alternating",
+      "center_slice_encoding_signal_nrmse": 0.0038458872128852815,
+      "rf_dt_10us_vs_5us_signal_nrmse": 0.00045717071152097773,
+      "second_seed_image_nrmse": 0.5381043639812613,
+      "second_seed_peak_common_scale": 0.2631265655660633
+    }
+  ],
+  "model": "stationary finite-duration sinc-RF Bloch; actual imaging ADC acquisition",
+  "conditions": [
+    [
+      1.0,
+      0.0
+    ],
+    [
+      0.8,
+      0.0
+    ],
+    [
+      0.8,
+      90.0
+    ]
+  ],
+  "n": 8192,
+  "seed": 11,
+  "xy_fov_mm": 35,
+  "grid": [
+    128,
+    16
+  ],
+  "ideal_reference": "analytic Fourier transform, ideal instantaneous RF, uniform 2-mm z support",
+  "limitations": [
+    "16 PE lines limit resolution and cause ringing",
+    "Finite-RF slice profile differs from instantaneous-RF ideal reference",
+    "Diffusion gradients play; molecular motion and diffusion attenuation absent",
+    "No noise, coil response, motion, hardware imperfections, or scanner reconstruction",
+    "Metrics have a single analytic encoding-reference scale; no per-image gain fit"
+  ]
+}

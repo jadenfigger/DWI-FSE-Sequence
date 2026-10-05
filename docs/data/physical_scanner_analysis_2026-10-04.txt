@@ -1,0 +1,286 @@
+test0 dims [2, 1, 1, 1, 160, 128] b [   0. 6000.] header differences ['MULTI_ORIENTATION', 'X_ANGLE', 'Y_ANGLE', 'Z_ANGLE', 'FOV_READ_OFF', 'FOV_PHASE_OFF', 'FOV_SLICE_OFF', 'FOV_OFFSETS', 'VAR:esp'] NIfTI {'off': 0.4203898071927483, 'deramp_mag': 0.4514813143753939, 'deramp': 1.1401281013980718e-07, 'flatten': 0.21369862379105492}
+nav relative amps [[1.    0.645 0.663 0.593 0.585 0.563 0.554 0.534 0.526 0.509 0.5   0.486
+  0.476 0.463 0.454 0.441 0.433 0.421 0.413 0.402 0.393 0.383 0.375 0.366
+  0.358 0.348 0.341 0.332 0.325 0.317 0.31  0.303]
+ [1.    1.453 1.5   1.512 1.662 1.473 1.449 1.446 1.403 1.44  1.409 1.342
+  1.359 1.282 1.385 1.304 1.32  1.264 1.373 1.345 1.333 1.359 1.353 1.296
+  1.287 1.222 1.24  1.181 1.271 1.252 1.173 1.245]]
+test1 dims [2, 1, 1, 1, 160, 128] b [   0. 6000.] header differences ['MULTI_ORIENTATION', 'X_ANGLE', 'Y_ANGLE', 'Z_ANGLE', 'FOV_READ_OFF', 'FOV_PHASE_OFF', 'FOV_SLICE_OFF', 'FOV_OFFSETS'] NIfTI {'off': 0.3973149454262633, 'deramp_mag': 0.41672754087509556, 'deramp': 1.059905976288661e-07, 'flatten': 0.19465572428899072}
+nav relative amps [[1.    0.691 0.648 0.58  0.578 0.555 0.544 0.527 0.514 0.499 0.488 0.476
+  0.464 0.451 0.441 0.43  0.419 0.408 0.399 0.389 0.378 0.367 0.357 0.349
+  0.34  0.331 0.321 0.314 0.305 0.298 0.289 0.283]
+ [1.    1.187 1.449 1.703 1.507 1.378 1.315 1.275 1.363 1.242 1.316 1.279
+  1.294 1.268 1.284 1.27  1.214 1.299 1.191 1.383 1.251 1.235 1.182 1.302
+  1.184 1.245 1.213 1.278 1.219 1.272 1.268 1.187]]
+test2 dims [3, 1, 1, 1, 160, 128] b [   0. 1000. 6000.] header differences [] NIfTI {'off': 0.4791683185075053, 'deramp_mag': 0.4827313359451585, 'deramp': 1.0722300514940463e-07, 'flatten': 0.10293584755447735}
+nav relative amps [[1.    0.924 0.752 0.699 0.685 0.665 0.651 0.636 0.621 0.605 0.591 0.577
+  0.565 0.551 0.538 0.525 0.513 0.501 0.49  0.478 0.467 0.457 0.446 0.436
+  0.425 0.416 0.406 0.397 0.388 0.379 0.37  0.361]
+ [1.    0.685 0.557 0.488 0.481 0.463 0.456 0.441 0.43  0.421 0.414 0.4
+  0.392 0.382 0.373 0.364 0.358 0.348 0.343 0.332 0.325 0.318 0.311 0.304
+  0.298 0.29  0.284 0.276 0.27  0.265 0.258 0.253]
+ [1.    1.203 1.323 1.52  1.625 1.334 1.306 1.245 1.223 1.253 1.301 1.23
+  1.224 1.139 1.189 1.139 1.174 1.224 1.122 1.092 1.163 1.153 1.164 1.167
+  1.103 1.104 1.132 1.138 1.198 1.1   1.256 1.155]]
+test3 dims [3, 1, 1, 1, 136, 128] b [   0. 1000. 6000.] header differences [] NIfTI {'off': 0.12184789389698149, 'deramp_mag': 0.1252292122306944, 'deramp': 1.0553744704266405e-07, 'flatten': 0.05607329172189026}
+nav relative amps [[1.    0.696 0.631 0.57  0.564 0.551 0.542 0.529]
+ [1.    0.706 0.569 0.504 0.5   0.488 0.483 0.47 ]
+ [1.    4.989 3.645 4.405 4.583 5.061 5.133 4.809]]
+test4 dims [3, 1, 1, 1, 136, 128] b [   0. 1000. 6000.] header differences [] NIfTI {'off': 0.10944266556889083, 'deramp_mag': 0.11211731951483309, 'deramp': 1.041767252480886e-07, 'flatten': 0.0588805122693787}
+nav relative amps [[1.    0.698 0.562 0.444 0.469 0.414 0.416 0.388]
+ [1.    0.706 0.573 0.421 0.459 0.41  0.419 0.381]
+ [1.    4.621 2.472 3.33  3.317 1.827 1.895 1.708]]
+test5 dims [3, 1, 1, 1, 136, 128] b [   0. 1000. 6000.] header differences [] NIfTI None
+nav relative amps [[1.    0.664 0.791 0.695 0.689 0.669 0.655 0.636]
+ [1.    0.715 0.825 0.762 0.75  0.729 0.716 0.696]
+ [1.    0.992 0.959 1.001 0.962 0.908 0.983 0.996]]
+test6 dims [3, 1, 1, 1, 136, 128] b [   0. 1000. 6000.] header differences [] NIfTI {'off': 0.09592895999861537, 'deramp_mag': 0.09723650403232945, 'deramp': 1.0390081256045487e-07, 'flatten': 0.06254393034504215}
+nav relative amps [[1.    0.697 0.549 0.451 0.377 0.322 0.278 0.241]
+ [1.    0.695 0.543 0.446 0.372 0.317 0.274 0.244]
+ [1.    1.036 2.193 1.154 1.274 1.123 1.152 1.08 ]]
+increasing dims [2, 1, 1, 1, 16, 128] b [   0. 1000.] header differences ['SMY', 'PHASE_VAR', 'MULTI_ORIENTATION', 'X_ANGLE', 'Y_ANGLE', 'Z_ANGLE', 'FOV_READ_OFF', 'FOV_PHASE_OFF', 'FOV_SLICE_OFF', 'FOV_OFFSETS'] NIfTI {'off': 9.558744412423311e-08, 'deramp_mag': 9.558744412423311e-08, 'deramp': 9.558744412423311e-08, 'flatten': 9.558744412423311e-08}
+increasing-alternating dims [2, 1, 1, 1, 16, 128] b [   0. 1000.] header differences ['SMY', 'PHASE_VAR', 'MULTI_ORIENTATION', 'X_ANGLE', 'Y_ANGLE', 'Z_ANGLE', 'FOV_READ_OFF', 'FOV_PHASE_OFF', 'FOV_SLICE_OFF', 'FOV_OFFSETS'] NIfTI {'off': 9.833484000010333e-08, 'deramp_mag': 9.833484000010333e-08, 'deramp': 9.833484000010333e-08, 'flatten': 9.833484000010333e-08}
+test7 dims [3, 1, 1, 1, 136, 128] b [   0. 1000. 6000.] header differences [] NIfTI {'off': 0.08467325949670756, 'deramp_mag': 0.08594170116571939, 'deramp': 1.0633182296104483e-07, 'flatten': 0.05997183502494194}
+nav relative amps [[1.    0.652 0.491 0.4   0.385 0.354 0.342 0.35 ]
+ [1.    0.65  0.493 0.402 0.387 0.361 0.346 0.335]
+ [1.    0.955 1.007 1.047 0.961 1.079 1.135 1.336]]
+test8 dims [3, 1, 1, 1, 136, 128] b [   0. 1000. 6000.] header differences [] NIfTI {'off': 0.09964864754921192, 'deramp_mag': 0.10062832533993687, 'deramp': 1.0685260199377336e-07, 'flatten': 0.059685418151058496}
+nav relative amps [[1.    0.687 0.5   0.389 0.431 0.419 0.426 0.378]
+ [1.    0.688 0.49  0.404 0.43  0.391 0.405 0.375]
+ [1.    0.91  0.964 0.964 1.225 1.468 1.852 2.489]]
+test9 dims [3, 1, 1, 1, 160, 128] b [   0. 1000. 6000.] header differences [] NIfTI {'off': 0.5628787902649813, 'deramp_mag': 0.5667687215843742, 'deramp': 1.0411265519921114e-07, 'flatten': 0.12631063205204482}
+nav relative amps [[1.    0.945 0.722 0.623 0.61  0.588 0.578 0.562 0.551 0.537 0.525 0.513
+  0.502 0.49  0.478 0.467 0.457 0.447 0.436 0.426 0.416 0.407 0.397 0.388
+  0.378 0.368 0.361 0.352 0.344 0.336 0.328 0.32 ]
+ [1.    0.688 0.541 0.477 0.468 0.453 0.445 0.433 0.422 0.412 0.405 0.394
+  0.385 0.377 0.366 0.357 0.352 0.341 0.334 0.324 0.318 0.312 0.304 0.301
+  0.291 0.282 0.275 0.271 0.265 0.258 0.25  0.246]
+ [1.    1.13  1.236 1.361 1.555 1.349 1.293 1.222 1.194 1.215 1.142 1.169
+  1.176 1.178 1.163 1.086 1.215 1.214 1.253 1.114 1.178 1.176 1.283 1.138
+  1.134 1.132 1.18  1.181 1.188 1.134 1.21  1.12 ]]
+Pairs: {
+  "test2_vs_test9": {
+    "embedded_differences": {
+      "AcquisitionStartTime": [
+        "5929077617238",
+        "5955891358702"
+      ]
+    },
+    "metrics": [
+      {
+        "norm_ratio": 0.9480046033859253,
+        "complex_correlation": 0.9714736342430115,
+        "complex_residual_after_scalar": 0.23714159429073334,
+        "scalar_phase_deg": -7.222579002380371,
+        "image_correlation": 0.9881575239436966
+      },
+      {
+        "norm_ratio": 1.0262020826339722,
+        "complex_correlation": 0.985904335975647,
+        "complex_residual_after_scalar": 0.16730822622776031,
+        "scalar_phase_deg": -5.566634654998779,
+        "image_correlation": 0.9876069490416317
+      },
+      {
+        "norm_ratio": 0.9845679998397827,
+        "complex_correlation": 0.20719119906425476,
+        "complex_residual_after_scalar": 0.9783005714416504,
+        "scalar_phase_deg": -2.1322896480560303,
+        "image_correlation": 0.058340294457258884
+      }
+    ]
+  },
+  "test0_vs_test1": {
+    "embedded_differences": {
+      "VAR_ARRAY:crusher_custom_pct": [
+        null,
+        "crusher_custom_pct, 64, 100 , 0, 0, 0, 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0, 0, 0"
+      ],
+      "AcquisitionStartTime": [
+        "5922029328087",
+        "5924616407296"
+      ],
+      "PPL": [
+        "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppl",
+        "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.7.ppl"
+      ],
+      "VAR:crusher_step_pct": [
+        null,
+        "crusher_step_pct, 0"
+      ],
+      "VAR:crusher_slew_dac_100us": [
+        null,
+        "crusher_slew_dac_100us, 32767"
+      ],
+      "VAR:crusher_max_dac": [
+        null,
+        "crusher_max_dac, 32767"
+      ],
+      "VAR:crusher_custom_count": [
+        null,
+        "crusher_custom_count, 0"
+      ],
+      "VAR:esp": [
+        "esp, 14",
+        "esp, 16"
+      ],
+      "VAR:crusher_schedule": [
+        null,
+        "crusher_schedule, 0"
+      ]
+    },
+    "metrics": [
+      {
+        "norm_ratio": 0.9201915264129639,
+        "complex_correlation": 0.9889141917228699,
+        "complex_residual_after_scalar": 0.14848393201828003,
+        "scalar_phase_deg": -9.45275592803955,
+        "image_correlation": 0.9819668042664759
+      },
+      {
+        "norm_ratio": 1.0062955617904663,
+        "complex_correlation": 0.2028251439332962,
+        "complex_residual_after_scalar": 0.9792149662971497,
+        "scalar_phase_deg": 163.57208251953125,
+        "image_correlation": 0.11085788155719378
+      }
+    ]
+  },
+  "test3_vs_test4": {
+    "embedded_differences": {
+      "AcquisitionStartTime": [
+        "5933553720064",
+        "5940112051673"
+      ],
+      "VAR:crusher_step_pct": [
+        "crusher_step_pct, 0",
+        "crusher_step_pct, 40"
+      ],
+      "VAR:crusher_schedule": [
+        "crusher_schedule, 0",
+        "crusher_schedule, 1"
+      ]
+    },
+    "metrics": [
+      {
+        "norm_ratio": 0.9331919550895691,
+        "complex_correlation": 0.9492669701576233,
+        "complex_residual_after_scalar": 0.314471036195755,
+        "scalar_phase_deg": 137.26820373535156,
+        "image_correlation": 0.9976569600883313
+      },
+      {
+        "norm_ratio": 0.9666791558265686,
+        "complex_correlation": 0.909156084060669,
+        "complex_residual_after_scalar": 0.4164552390575409,
+        "scalar_phase_deg": 136.4554901123047,
+        "image_correlation": 0.9797507942750702
+      },
+      {
+        "norm_ratio": 0.7204323410987854,
+        "complex_correlation": 0.47158780694007874,
+        "complex_residual_after_scalar": 0.8818191289901733,
+        "scalar_phase_deg": 140.94183349609375,
+        "image_correlation": 0.5173777538253362
+      }
+    ]
+  },
+  "test4_vs_test6": {
+    "embedded_differences": {
+      "AcquisitionStartTime": [
+        "5940112051673",
+        "5947157765018"
+      ],
+      "VAR:crusher_schedule": [
+        "crusher_schedule, 1",
+        "crusher_schedule, 3"
+      ]
+    },
+    "metrics": [
+      {
+        "norm_ratio": 0.983120322227478,
+        "complex_correlation": 0.9832795858383179,
+        "complex_residual_after_scalar": 0.18210266530513763,
+        "scalar_phase_deg": -0.8637965321540833,
+        "image_correlation": 0.9969911208350788
+      },
+      {
+        "norm_ratio": 0.9847552180290222,
+        "complex_correlation": 0.9748054146766663,
+        "complex_residual_after_scalar": 0.22305810451507568,
+        "scalar_phase_deg": -0.03740672022104263,
+        "image_correlation": 0.9858695046472101
+      },
+      {
+        "norm_ratio": 0.6159381866455078,
+        "complex_correlation": 0.06892848014831543,
+        "complex_residual_after_scalar": 0.9976215362548828,
+        "scalar_phase_deg": 17.500709533691406,
+        "image_correlation": 0.17471015933331088
+      }
+    ]
+  },
+  "test7_vs_test8": {
+    "embedded_differences": {
+      "AcquisitionStartTime": [
+        "5952400755317",
+        "5953886495402"
+      ],
+      "VAR:crush_amp": [
+        "crush_amp, 5482",
+        "crush_amp, 2741"
+      ]
+    },
+    "metrics": [
+      {
+        "norm_ratio": 1.0200893878936768,
+        "complex_correlation": 0.9862390756607056,
+        "complex_residual_after_scalar": 0.16532421112060547,
+        "scalar_phase_deg": -0.9641072154045105,
+        "image_correlation": 0.9978063388380005
+      },
+      {
+        "norm_ratio": 1.0128107070922852,
+        "complex_correlation": 0.9839653372764587,
+        "complex_residual_after_scalar": 0.17836017906665802,
+        "scalar_phase_deg": -2.541257619857788,
+        "image_correlation": 0.992655704308995
+      },
+      {
+        "norm_ratio": 1.1030193567276,
+        "complex_correlation": 0.004751820117235184,
+        "complex_residual_after_scalar": 0.9999887347221375,
+        "scalar_phase_deg": -177.6401824951172,
+        "image_correlation": 0.0214924868887418
+      }
+    ]
+  },
+  "increasing_vs_increasing-alternating": {
+    "embedded_differences": {
+      "AcquisitionStartTime": [
+        "5948509361040",
+        "5949672051260"
+      ],
+      "VAR:crusher_schedule": [
+        "crusher_schedule, 1",
+        "crusher_schedule, 3"
+      ]
+    },
+    "metrics": [
+      {
+        "norm_ratio": 1.0009524822235107,
+        "complex_correlation": 0.9836095571517944,
+        "complex_residual_after_scalar": 0.18031182885169983,
+        "scalar_phase_deg": -1.8932363986968994,
+        "image_correlation": 0.9787294586814997
+      },
+      {
+        "norm_ratio": 1.0092387199401855,
+        "complex_correlation": 0.959229052066803,
+        "complex_residual_after_scalar": 0.2826296091079712,
+        "scalar_phase_deg": 1.2362842559814453,
+        "image_correlation": 0.9564518615052163
+      }
+    ]
+  }
+}

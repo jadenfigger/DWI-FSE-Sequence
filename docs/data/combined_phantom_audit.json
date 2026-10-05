@@ -1,0 +1,128 @@
+{
+  "audit": [
+    {
+      "case": "original",
+      "center_slice_encoding_signal_nrmse": 0.003845887212886654,
+      "rf_dt_10us_vs_5us_signal_nrmse": 0.00028919529733157387,
+      "second_seed_image_nrmse": 0.28553450152953047,
+      "spins_8192_vs_final_image_nrmse": 0.36809173956195673,
+      "spins_8192_peak_common_scale": 0.26602921393267737,
+      "second_seed_peak_common_scale": 0.21105839270431026
+    },
+    {
+      "case": "centered_increasing",
+      "center_slice_encoding_signal_nrmse": 0.0038458872128852815,
+      "rf_dt_10us_vs_5us_signal_nrmse": 0.00028095194128617475,
+      "second_seed_image_nrmse": 0.2818321208516354,
+      "spins_8192_vs_final_image_nrmse": 0.3587516276326749,
+      "spins_8192_peak_common_scale": 0.2612954457514572,
+      "second_seed_peak_common_scale": 0.21159769231964326
+    },
+    {
+      "case": "centered_increasing_alternating",
+      "center_slice_encoding_signal_nrmse": 0.0038458872128852815,
+      "rf_dt_10us_vs_5us_signal_nrmse": 0.0002848277047042114,
+      "second_seed_image_nrmse": 0.2739286156869554,
+      "spins_8192_vs_final_image_nrmse": 0.36550271076036644,
+      "spins_8192_peak_common_scale": 0.274535610578848,
+      "second_seed_peak_common_scale": 0.22119238307051806
+    },
+    {
+      "case": "centered_weak_ramp",
+      "center_slice_encoding_signal_nrmse": 0.0038458872128852815,
+      "rf_dt_10us_vs_5us_signal_nrmse": 0.00028207832153038354,
+      "second_seed_image_nrmse": 0.28555343193432287,
+      "spins_8192_vs_final_image_nrmse": 0.3643062071142337,
+      "spins_8192_peak_common_scale": 0.26472807982185054,
+      "second_seed_peak_common_scale": 0.22280863104834037
+    },
+    {
+      "case": "centered_highlow_alternating",
+      "center_slice_encoding_signal_nrmse": 0.0038458872128852815,
+      "rf_dt_10us_vs_5us_signal_nrmse": 0.0002823254181414542,
+      "second_seed_image_nrmse": 0.2820897372271215,
+      "spins_8192_vs_final_image_nrmse": 0.36896430317708,
+      "spins_8192_peak_common_scale": 0.27571033501440034,
+      "second_seed_peak_common_scale": 0.2119602291898632
+    }
+  ],
+  "image_sampling_qualified": false,
+  "second_seed_image_nrmse_tolerance": 0.05,
+  "claim": "image-quality ranking unverified; unconverged spatial quadrature",
+  "model": "stationary finite-duration sinc-RF Bloch; actual imaging ADC acquisition",
+  "conditions": [
+    [
+      1.0,
+      0.0
+    ],
+    [
+      0.8,
+      0.0
+    ],
+    [
+      0.8,
+      90.0
+    ],
+    [
+      0.9,
+      22.5
+    ]
+  ],
+  "n": 32768,
+  "seed": 11,
+  "xy_fov_mm": 35,
+  "grid": [
+    128,
+    16
+  ],
+  "dependency_versions": {
+    "numpy": "2.1.0",
+    "scipy": "1.14.1",
+    "pypulseq": "1.5.0.post1",
+    "matplotlib": "3.9.2"
+  },
+  "ideal_reference": "analytic Fourier transform, ideal instantaneous RF, uniform 2-mm z support",
+  "limitations": [
+    "16 PE lines limit resolution and cause ringing",
+    "Finite-RF slice profile differs from instantaneous-RF ideal reference",
+    "Diffusion gradients play; molecular motion and diffusion attenuation absent",
+    "No noise, coil response, motion, hardware imperfections, or scanner reconstruction",
+    "Metrics have a single analytic encoding-reference scale; no per-image gain fit"
+  ],
+  "audit_conditions": {
+    "center_slice": {
+      "n": 512,
+      "seed": 17,
+      "b1": 1,
+      "phase": 0,
+      "z_m": 0,
+      "rf_dt": 1e-06
+    },
+    "rf_steps": {
+      "b1": 0.8,
+      "phase": 0,
+      "steps_s": [
+        1e-05,
+        5e-06
+      ]
+    },
+    "seeds": {
+      "b1": 0.8,
+      "phase": 0,
+      "seeds": [
+        11,
+        12
+      ],
+      "n": 32768
+    },
+    "spatial_density": {
+      "b1": 0.8,
+      "phase": 0,
+      "seed": 11,
+      "n": [
+        8192,
+        32768
+      ]
+    }
+  }
+}

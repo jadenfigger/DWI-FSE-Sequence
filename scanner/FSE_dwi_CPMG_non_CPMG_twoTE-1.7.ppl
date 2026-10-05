@@ -349,12 +349,14 @@ main(){
 	int crush_pre_pad, crush_post_pad, crush_rf_pad, crush_rf_flat;
 	int tcrush_play, tcrush1_play, crusher_play_mat, first_crush_flat;
 	long refocus_wait_ticks, min_half_te;
+	long post_adc_base_ticks, post_adc_train_ticks;
 	// Immutable run controls (native VAR_ARRAY cannot be common int).
 	int crusher_schedule, crusher_step_pct, crusher_custom_count;
 	int crusher_saved_train, crusher_saved_first;
 	int crusher_max_dac, crusher_slew_dac_100us;
 	int crusher_custom_pct[MAX_CUSTOM_CRUSHERS], crusher_dac[MAX_CRUSHER_ETL];
 	int crusher_etl, crusher_i, crusher_sign, crusher_base;
+	int crusher_setup_ticks;
 	long crusher_factor, crusher_steps, crusher_mag, crusher_result;
 	long crusher_update_ticks, crusher_update_max_ticks, crusher_adc_remaining;
 	int pe_center_echo, pe_echo_index, pe_shots;
@@ -473,6 +475,8 @@ main(){
 	int b_calc_cnt;                // [B-VALUE MODE] loop counter over b entries
 	int dac_lo, dac_hi, dac_mid;   // [B-VALUE MODE] binary search bounds
 	int diff_grad, diff_acq_cnt;
+	int diff_scale_saved; // fixed for the validated acquisition table
+	int diff_abs_read, diff_abs_phase, diff_abs_slice;
 	int diff_list, diff_list2;
 	int diff_slice, diff_read, diff_phase;
 	int diff_tramp, diff_clock;  /* clock time is changed for diffusion ramps*/
@@ -714,6 +718,10 @@ main(){
 		printf ("Set the Experiment Array Size to %d \n", no_diff_acq);
 		goto end;
 	}
+	// [V17-REVIEW] Snapshot scale; preflight must cover the value used at runtime.
+	if ((diff_grad_scale<100)||(diff_grad_scale>200))
+	{ printf("Invalid diffusion scale\n"); goto end; }
+	diff_scale_saved = diff_grad_scale;
 	max_diff_grad_pc = 0;
 	if ((diff_on==1) && (b_input_mode==1))
 		max_diff_grad_pc = 1;
@@ -721,12 +729,16 @@ main(){
 b_value_direction_loop:
 		if (b_calc_cnt >= no_diff_acq)
 			goto b_value_direction_done;
+		if ((acq_x[b_calc_cnt]<-1000)||(acq_x[b_calc_cnt]>1000)||
+		    (acq_y[b_calc_cnt]<-1000)||(acq_y[b_calc_cnt]>1000)||
+		    (acq_z[b_calc_cnt]<-1000)||(acq_z[b_calc_cnt]>1000))
+		{ printf("Invalid diffusion direction\n"); goto end; }
 		templ1 = IntToLong(acq_x[b_calc_cnt])*IntToLong(acq_x[b_calc_cnt]);
 		templ1 = templ1 + IntToLong(acq_y[b_calc_cnt])*IntToLong(acq_y[b_calc_cnt]);
 		templ1 = templ1 + IntToLong(acq_z[b_calc_cnt])*IntToLong(acq_z[b_calc_cnt]);
 		// [ACQ-TABLE] Applied to EVERY row, b=0 rows included. A b=0 row must carry a unit
-		// direction so that the DAC=1 b=0 workaround below still plays a non-zero gradient;
-		// a literal X=Y=Z=0 row is rejected here rather than silently defeating it.
+		// direction; runtime also handles DAC-1 component truncation on oblique rows.
+		// A literal X=Y=Z=0 row is rejected here.
 		if ((max_diff_grad_pc==1)&&((templ1 < 902500L)||(templ1 > 1102500L)))
 		{
 			printf("Row %d not unit length: b-value mode needs\n", b_calc_cnt);
@@ -779,7 +791,7 @@ b_value_search_loop:
 			goto b_value_search_done;
 		goto b_value_search_loop;
 b_value_search_done:
-		dac_mid = scale(dac_lo, 100, diff_grad_scale);
+		dac_mid = scale(dac_lo, 100, diff_scale_saved);
 		if ((dac_mid < 0)||(dac_mid > 32767))
 		{
 			printf("b-value DAC conversion outside array limits\n");
@@ -793,9 +805,13 @@ b_value_search_done:
 			else
 				acq_grad[b_calc_cnt] = dac_mid;
 		}
-		// [B-VALUE MODE] Recompute from the post-scale DAC so setup and runtime reports agree.
-		dac_mid = scale(dac_mid, diff_grad_scale, 100);
-		templ3 = (1L*dac_mid*grad_var[0]/32767L)*(1L*dac_mid*grad_var[0]/32767L);
+		// [V17-REVIEW] Report the actual row components with the existing kernel.
+		// Search remains the nominal unit-direction approximation; no calibration change.
+		dac_mid = scale(dac_mid, diff_scale_saved, 100);
+		b_diff_read = (1L*scale(dac_mid,acq_x[b_calc_cnt],1000)*grad_var[0])/32767L;
+		b_diff_phase = (1L*scale(dac_mid,acq_y[b_calc_cnt],1000)*grad_var[0])/32767L;
+		b_diff_slice = (1L*scale(dac_mid,acq_z[b_calc_cnt],1000)*grad_var[0])/32767L;
+		templ3 = b_diff_read*b_diff_read+b_diff_phase*b_diff_phase+b_diff_slice*b_diff_slice;
 		b_trial = (((templ3+5000L)/10000L)*b_kfac + 5000L)/10000L; // [MERGE-2TE] F3 kernel
 		if ((max_diff_grad_pc==1)&&(report_on==1)&&(b_target>0))
 			printf("b[%d]: want %ld, got %ld, DAC %d\n", b_calc_cnt, b_target, b_trial, dac_lo);
@@ -810,6 +826,17 @@ b_value_search_done:
 			goto b_value_mode_done;
 		goto b_value_entry_loop;
 b_value_mode_done:
+		// [V17-REVIEW] scale() returns a 16-bit int. Check the LONG result
+		// before runtime scale() can narrow it (e.g. 20000 DAC at 200%).
+		b_calc_cnt=0;
+diffusion_scale_check:
+		templ1=(IntToLong(acq_grad[b_calc_cnt])*IntToLong(diff_scale_saved))/100L;
+		if ((acq_grad[b_calc_cnt]<0)||((diff_on==1)&&(templ1>30000L)))
+		{ printf("Diffusion DAC exceeds limit\n"); goto end; }
+		if (templ1>32767L)
+		{ printf("Diffusion DAC overflows int\n"); goto end; }
+		b_calc_cnt=b_calc_cnt+1;
+		if (b_calc_cnt<no_diff_acq) goto diffusion_scale_check;
 		// [B-VALUE MODE] end
 
 	
@@ -1369,7 +1396,7 @@ averages_loop_setup:
 	}
 
 	// [CRUSH-SCHED] Validate/build once, BEFORE any acquisition/validator exit.
-	// Pulse k is stored at k-1. Constant diffusion-OFF retains v1.6's first
+	// Pulse k is stored at k-1. Constant diffusion-OFF retains v1.6s first
 	// train baseline; DWI (including nominal b=0) uses diff_crush_amp first.
 	crusher_etl = views_per_seg;
 	crusher_saved_train=crush_amp;
@@ -1487,6 +1514,19 @@ crusher_schedule_loop:
 	tcrush_play = tcrush+crush_pre_pad;
 	tcrush1_play = tcrush_play;
 	if (diff_on==1) tcrush1_play = diff_tcrush+crush_pre_pad;
+	// [V17-REVIEW] waittimer has a 16-bit argument and a 65500-tick
+	// documented maximum. Validate BOTH pulse types before any acquisition.
+	// Evaluate in long before multiplication or narrowing; do not wrap/clamp.
+	crusher_i=0;
+refocus_timer_check:
+	templ1=IntToLong(tcrush_play);
+	if (crusher_i==1) templ1=IntToLong(tcrush1_play);
+	templ2=(templ1+IntToLong(tramp)-40L+IntToLong(rfdelay)-IntToLong(rfgate_delay-17))*10L;
+	templ3=(templ1+IntToLong(tramp)-IntToLong(rfdelay)+IntToLong(crush_post_pad-crush_pre_pad))*10L;
+	if ((templ2<50L)||(templ2>65500L)||(templ3<50L)||(templ3>65500L))
+	{ printf("Refocus wait exceeds timer range\n"); goto end; }
+	crusher_i=crusher_i+1;
+	if (crusher_i<2) goto refocus_timer_check;
 	if ((report_on==1)&&(crush_independent_on==1))
 	{
 		printf("Independent crusher amplitudes (signed slice DAC): train=%d, first-DWI=%d\n", crush_amp, diff_crush_amp);
@@ -2042,7 +2082,7 @@ crusher_update_benchmark:
 		starttimer();
 		PREPARE_NEXT_CRUSHER
 		crusher_update_ticks=gettimer();
-		if (crusher_update_ticks>CRUSHER_UPDATE_MAX_TICKS)
+		if ((crusher_update_ticks<0L)||(crusher_update_ticks>CRUSHER_UPDATE_MAX_TICKS))
 		{
 			printf("Crusher update exceeds reserved ADC instruction budget\n");
 			goto end;
@@ -2306,7 +2346,7 @@ experiment_loop:
 diff_acq_loop:
 	
 	// Now in DAC values
-	diff_grad = scale(acq_grad[diff_acq_cnt], diff_grad_scale, 100);	
+	diff_grad = scale(acq_grad[diff_acq_cnt], diff_scale_saved, 100);
 	if(report_on)
 		printf("diff_grad = %d\n",diff_grad);
 	
@@ -2362,7 +2402,38 @@ diff_acq_loop:
 	diff_non_zero = 0;
 	diff_read  = diff_on*scale( diff_grad, acq_x[diff_acq_cnt],1000) ;
 	diff_phase = diff_on*scale( diff_grad, acq_y[diff_acq_cnt],1000) ;
-	diff_slice = diff_on*scale( diff_grad, acq_z[diff_acq_cnt],1000) ;   
+	diff_slice = diff_on*scale( diff_grad, acq_z[diff_acq_cnt],1000) ;
+	// [V17-REVIEW] DAC 1 truncates to zero on every oblique component.
+	// Preserve the b=0 workaround on the largest signed direction component;
+	// deterministic ties prefer read, then phase, then slice. No RF/timing change.
+	if ((max_diff_grad_pc==1)&&(diff_grad>0)&&
+	    (diff_read==0)&&(diff_phase==0)&&(diff_slice==0))
+	{
+		diff_abs_read=acq_x[diff_acq_cnt];
+		diff_abs_phase=acq_y[diff_acq_cnt];
+		diff_abs_slice=acq_z[diff_acq_cnt];
+		if (diff_abs_read<0) diff_abs_read=0-diff_abs_read;
+		if (diff_abs_phase<0) diff_abs_phase=0-diff_abs_phase;
+		if (diff_abs_slice<0) diff_abs_slice=0-diff_abs_slice;
+		if ((diff_abs_read>=diff_abs_phase)&&(diff_abs_read>=diff_abs_slice))
+		{
+			diff_read=1;
+			if (acq_x[diff_acq_cnt]<0) diff_read=-1;
+		}
+		else
+		{
+			if (diff_abs_phase>=diff_abs_slice)
+			{
+				diff_phase=1;
+				if (acq_y[diff_acq_cnt]<0) diff_phase=-1;
+			}
+			else
+			{
+				diff_slice=1;
+				if (acq_z[diff_acq_cnt]<0) diff_slice=-1;
+			}
+		}
+	}
 	\\printf("diff_read = %d, diff_phase = %d, diff_slice = %d\n",diff_read,diff_phase,diff_slice);
 	
 
@@ -2813,7 +2884,7 @@ slice_block_loop:
         \\printf("Min Big delta = %ld us, max Big delta = %ld us\n", big_delta_min, big_delta_max_4_given_TE);
         printf("\nDW grad: X=%d, Y=%d, Z=%d DAC\n",diff_read, diff_phase, diff_slice);
         if ((b_kfac > 0L)&&(templ4 >= 0L))
-			printf("\nNominal diffusion-module b ~ %ld (s/mm^2); excludes crushers/imaging gradients\n", templ4);
+			printf("\nNominal diffusion b ~ %ld; excludes crusher\n", templ4);
 		else
 			printf("\nb report off (needs delta<=10ms, Delta<=80ms, unit dirs)\n"); // [MERGE-2TE] F3/F6
         printf("DW grad array for this b-value:\n X=%ld, Y=%ld, Z=%ld,\n",acq_x[diff_acq_cnt],acq_y[diff_acq_cnt],acq_z[diff_acq_cnt]);
@@ -3038,10 +3109,10 @@ slice_block_loop:
 		templ1 = templ1 + 30;
 	// Base TR is verified as correct
 	// Add overheads - timed and untimed
-	// 102000 (102000 us) = 31000+5300+19700+27500+18500 waittimer above and below
+	// 113500 ticks (11350 us) = 31000+5300+19700+27500+30000 waittimer above and below
 	// 698 (70 us) extra overhead from unaccounted part before 90
 	// 690 (69 us) is post echo train waittimer code
-	templ1 = templ1 + 10200L + 70L + 69L; 
+	templ1 = templ1 + 11350L + 70L + 69L;
 	
 	// CHESS duration = 30+t_chess+40+2*tramp+tcrush_chess [us]
 #ifdef CHESS
@@ -3263,6 +3334,10 @@ slice_block_loop:
 	waittimer(templ1);
 	
 	starttimer();
+	// [V17-TIMER] Compute complete targets inside the existing setup budget.
+	// Long multiplication and the echo branch must NOT follow gettimer()+250.
+	post_adc_base_ticks=te_balance_bl_temp2*10L;
+	post_adc_train_ticks=(te_balance_bl_temp2+te_balance_bl_esp+IntToLong(crush_post_pad-crush_pre_pad))*10L;
 	G1 = grp_dp; /* if flow_comp_on = 0 */
 	G2 = grp_dp_1; /* or 0 if flow_comp_on = 0 */
 	
@@ -3345,8 +3420,17 @@ set the observe modulator level to 4 */
 	// [CRUSH-SCHED] DWI setup creates the same six FSE/crusher matrices as
 	// v1.6. Diffusion-OFF scheduled mode needs two more: reject a setup
 	// overrun here, BEFORE the excitation/ADC, rather than lengthening TR.
-	if (gettimer()>18000L) { printf("Matrix setup exceeds 1850 us window\n"); goto end; }
-	waittimer(18500); // unchanged setup/TR window
+	// Reserve 550 us for timer/check overhead within the 3000 us setup window.
+	// MAN 4.8.1 documents timing-function overhead of 360.2 +/- 5.0 us;
+	// the assignment/comparisons also consume this allowance. Target timing
+	// still requires vendor verification. Reject signed timer overrange.
+	crusher_setup_ticks = gettimer();
+	if ((crusher_setup_ticks<0)||(crusher_setup_ticks>24500))
+	{
+		printf("Matrix setup exceeds timing budget\n");
+		goto end;
+	}
+	waittimer(30000); // 3000 us; included in the 11350-us TR overhead
 
 	resync();
 
@@ -4012,22 +4096,24 @@ echo_loop:
 		frequency_buffer(0);                    /*  buffer 0 = tx freq */
 		reset_frequency();
 		phase(phase_180+phase_correction);
+		// Select BEFORE sampling the timer. Everything above is included in ret.
+		// A missed waittimer deadline adds 5 ms (EVO manual pp. 90-91).
+		templ3 = post_adc_base_ticks;
+		if (echo_cnt < views_per_seg+de_on)
+			templ3 = post_adc_train_ticks;
 		ret = gettimer()+250;
-		templ3 = te_balance_bl_temp2;
-		if (echo_cnt < views_per_seg+de_on) 
-			templ3 = templ3+te_balance_bl_esp+IntToLong(crush_post_pad-crush_pre_pad); // [ESP MOD] esp-based imaging spacing (== te_balance_bl when diff is OFF)
-		templ3 = templ3*10L-ret;
+		templ3 = templ3-ret;
 		ret = ret+25;
 	waittimer(ret-25); // 25 is the time taken by if statement before delay32;;
 	
 	// It is expected that the code above compensates for 25 clock time that the if statement below takes to avoid introducing additional delay		
 	
-	/* [MERGE-2TE] M4 (port): factory two-branch structure restored so the
-	   diffusion-OFF path is INSTRUCTION-IDENTICAL to the original (its empirical
-	   constants -21-16 and the +250 pad were calibrated against this exact
-	   57-tick pattern: if(diff_on) 13 + if(diff_on==0) 19 + if(templ3>25) 25).
+	/* [MERGE-2TE] M4 (port): retain the factory two-branch structure below.
+	   Its empirical
+	   constants -21-16 and the +250 pad retain the existing
+	   57-tick branch pattern: if(diff_on) 13 + if(diff_on==0) 19 + if(templ3>25) 25.
 	   In diffusion mode the same balance delay32(templ3) plays (FIX #7 logic:
-	   templ3 = te_balance_bl_temp2 + te_balance_bl_esp while echoes remain), so
+	   templ3 = post_adc_train_ticks - ret while echoes remain), so
 	   echo->next-180 = esp/2 for every train interval including echo1->180_2.
 	   The diffusion path evaluates the false if(diff_on==0) AFTER its delay32,
 	   so the TOTAL interval overhead is the same 57 ticks in both modes. */

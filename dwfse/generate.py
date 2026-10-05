@@ -170,6 +170,7 @@ def load_params(ppr_path=None, overrides=None):
     p.update({k: v for k, v in EXTRA_DEFAULTS.items() if k not in p})
     if p['scanner_version'] == '1.7':
         p['sim_fix_refocus_centering'] = True
+        p['sim_pre90_us'] = 11420  # 11350-us setup + existing 70-us overhead
     for k, v in (overrides or {}).items():
         if k not in p:
             raise KeyError(f'unknown parameter {k!r}')
@@ -371,6 +372,12 @@ def derive(C):
     D.b_of_dac = b_of_dac
     acq_grad = list(C.acq_grad[:C.no_diff_acq])
     bmode = (C.b_input_mode == 1)
+    if C.scanner_version == '1.7':
+        if not 100 <= C.diff_grad_scale <= 200:
+            raise abort('Invalid diffusion scale')
+        for i in range(C.no_diff_acq):
+            if any(not -1000 <= x <= 1000 for x in (C.acq_x[i], C.acq_y[i], C.acq_z[i])):
+                raise abort('Invalid diffusion direction')
     if bmode:
         for i in range(C.no_diff_acq):                 # PPL:689-705
             s2 = C.acq_x[i] ** 2 + C.acq_y[i] ** 2 + C.acq_z[i] ** 2
@@ -399,12 +406,26 @@ def derive(C):
             acq_grad[i] = 1 if target <= 0 else dac
     D.acq_grad = acq_grad
     D.diff_grad = [scale(g, C.diff_grad_scale, 100) for g in acq_grad]       # PPL:2106
+    if C.scanner_version == '1.7':
+        from .scanner_checks import scaled_diffusion_dac
+        try:
+            D.diff_grad = [scaled_diffusion_dac(g, C.diff_grad_scale, C.diff_on == 1)
+                           for g in acq_grad]
+        except ValueError as exc:
+            raise abort(str(exc)) from exc
     for g in D.diff_grad:
         if g > 30000:
             raise abort(f'Diffusion gradient amp {g}DAC is too high')
     D.acq_b_nominal = [b_of_dac(g) for g in D.diff_grad]
     D.diff_rps = [(scale(g, C.acq_x[i], 1000), scale(g, C.acq_y[i], 1000), scale(g, C.acq_z[i], 1000))
                   for i, g in enumerate(D.diff_grad)]                          # PPL:2160-2162
+    if C.scanner_version == '1.7':
+        from .scanner_checks import diffusion_components
+        D.diff_rps = [diffusion_components(g, (C.acq_x[i], C.acq_y[i], C.acq_z[i]),
+                                           bmode and C.diff_on == 1)
+                      for i, g in enumerate(D.diff_grad)]
+        D.acq_b_nominal = [(((sum(tdiv(x * G0, 32767) ** 2 for x in row) + 5000)
+                            // 10000) * b_kfac + 5000) // 10000 for row in D.diff_rps]
 
     # ---- phase-encode table (PPL:788-1121) ----------------------------------
     nv = C.no_views
@@ -496,6 +517,14 @@ def derive(C):
             D.crush_post_pad -= C.rfdelay
     D.tcrush_play = C.tcrush + D.crush_pre_pad                                # PPL:1319
     D.tcrush1_play = C.diff_tcrush + D.crush_pre_pad                          # PPL:1321
+    if C.scanner_version == '1.7':
+        from .scanner_checks import refocus_timer_targets
+        try:
+            for duration in (C.tcrush, C.diff_tcrush if C.diff_on == 1 else C.tcrush):
+                refocus_timer_targets(duration, C.tramp, D.crush_pre_pad,
+                                      D.crush_post_pad, C.rfdelay, C.rfgate_delay)
+        except ValueError as exc:
+            raise abort(str(exc)) from exc
     D.bw_override = 71                                                        # 2D, PPL:1327
     D.pulse_bwdth = tdiv(D.bw_override * rf_bw, 100)
     batch = C.batch_slices or C.no_slices
@@ -605,7 +634,7 @@ def derive(C):
     t1 = C.te * 1000 + (L - 1) * C.esp * 1000 + C.tramp + D.tsel90 // 2
     t1 += 3 * C.tramp + C.tref_setup + D.tacq_2 + 26
     t1 += 17 * (C.tramp < 130) + 30 * (C.tramp < 120) + 30 * (C.tramp < 110)
-    t1 += 10200 + 70 + 69
+    t1 += (11350 if C.scanner_version == '1.7' else 10200) + 70 + 69
     t3 = (2 * C.tramp + C.post_tcrush + 240) if C.post_crush_on else 0
     D.tr_min_us = t1 + t3
 

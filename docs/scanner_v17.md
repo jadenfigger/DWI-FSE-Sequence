@@ -8,9 +8,9 @@ new arithmetic and centering correction, even if the protocol file is renamed.
 
 - [v1.7 PPL](../scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.7.ppl) and
   [default PPR](../scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.7.ppr): original schedule.
-- [Increasing PPR](../scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.7-increasing.ppr):
+- [Increasing PPR](../experiments/FSE-DWI_10-04-2026_v17_increasing/FSE_dwi_CPMG_non_CPMG_twoTE-1.7-increasing.ppr):
   ETL 8, TE 36 ms, ESP 16 ms, diffusion rows 0/1000, read direction, step 40%.
-- [Increasing + alternating PPR](../scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.7-increasing-alternating.ppr):
+- [Increasing + alternating PPR](../experiments/FSE-DWI_10-04-2026_v17_increasing-alternating/FSE_dwi_CPMG_non_CPMG_twoTE-1.7-increasing-alternating.ppr):
   the same protocol with alternating crusher polarity.
 
 PPR `:PPL` paths are local filenames; set them to the installed v1.7 scanner
@@ -86,10 +86,19 @@ extra ADC budget is 10000 ticks (1000 us), leaving 100 us for dispatch/check
 overhead. The padded ADC calculation window grows from 8997 to 18997 ticks;
 the remaining delay decreases by exactly 1 ms. **Sample duration and centres,
 TE, ESP and TR do not grow.** Unsupported sampling-window splits abort in
-setup. Matrix setup keeps its original 18500-tick window and aborts above
-18000 ticks, leaving 50 us for the guard. DWI creates the same matrix count
+setup. Following the measured 22413-tick setup, matrix setup uses a
+30000-tick window, reads `gettimer()` once into an `int`, and aborts on a
+negative reading or above 24500 ticks.
+This leaves 550 us for timer/check overhead, including the manual's documented
+360.2 +/- 5.0 us timing-function overhead and the assignment/comparisons.
+The crusher-update benchmark also rejects negative readings. These signed
+checks do not detect an entire timer wrap; compiler/runtime timing still needs
+verification. DWI creates the same matrix count
 as v1.6; scheduled diffusion-OFF needs two more setup calculations and must
-fit that same window. The global preflight benchmark precedes acquisition and
+fit that window. The extra 1150 us versus the original 18500-tick window is
+included in minimum TR and taken from TR idle time; RF/ADC intervals remain
+unchanged. The offline v1.7 absolute pre-excitation start is updated too.
+The global preflight benchmark precedes acquisition and
 is outside the requested TR. DSP settling follows the supplied include's
 `caldelay=100`; instruction/settling budgets still need vendor validation.
 
@@ -114,10 +123,15 @@ slice plateau; commanded timing alone uses lag 0. The lag and empirical
 instruction constants have not been measured here.
 
 Model setup recomputes minimum TE 33652→33532 us and minimum ESP
-13822→13702 us. Both protocol ESPs remain 16 ms; minimum per-slice TR remains
-167371 us. The baseline event hash test still passes. Disabling the centering
+13822→13702 us. Both protocol ESPs remain 16 ms; after the setup-window revision,
+minimum per-slice TR is 168521 us (previously 167371 us). The v1.6 baseline
+event hash test still passes. Disabling the centering
 correction **only in the simulator** reproduces v1.6 gradient events exactly;
-the actual v1.7 PPL always includes the correction.
+the actual v1.7 PPL always includes the correction. The later setup-window
+revision separately shifts absolute v1.7 shot starts by 1150 us.
+
+The 4 October timer/diffusion corrections and review limitations are documented
+in [scanner_v17_timing_review.md](scanner_v17_timing_review.md).
 
 PE0 reserves centre addresses 0..511, location 512..1023, GP 1024..2047 and
 GP2 2048..3071. Centre indices are 1..2*ETL; location indices 1..2*views_per_echo;
@@ -160,7 +174,7 @@ diffusion-amplitude adjustment cannot generally recover this tensor.
 ```powershell
 python -m unittest discover -s tests -v
 python examples/validate_scanner_v17.py
-python dw.py gen runs/v17.seq --ppr scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.7-increasing.ppr
+python dw.py gen runs/v17.seq --ppr experiments/FSE-DWI_10-04-2026_v17_increasing/FSE_dwi_CPMG_non_CPMG_twoTE-1.7-increasing.ppr
 python -m dwfse.btensor runs/v17.seq --out runs/v17_tensor
 # Use --full with dw.py gen to export every slice/shot/row/dummy.
 # Commanded timing: append --set hw_grad_delay_us=0 to dw.py gen.
@@ -174,7 +188,9 @@ contains settings, hashes, versions, tensors and compact grid summaries.
 Raw readback sequences, exact parameters, signals and waveform exports are in
 `runs/scanner_v17`. Existing investigation tables are preserved.
 
-30 tests pass: baseline event identity, native signed schedules/rounding,
+39 tests pass after the 4 October review: timer critical-window checks,
+diffusion overflow/b=0 regressions, setup allowance and signed timer checks,
+baseline event identity, native signed schedules/rounding,
 invalid/overflow/ceiling rejection, ETL 1/2/1024, table capacity, matched pairs,
 matrix lifetime/reset source checks, full protocol/navigators/dummies,
 RF/ADC timing, fine-raster readback, PE0 alias replay, analytic ramp/cross-term
@@ -210,6 +226,9 @@ candidate. Neither alternating mode is universally superior; reconstruction,
 more RF conditions, diffusion directions and phantom tests remain necessary.
 
 All specifically requested evidence files were available and inspected.
+The 4 October 2026 timing-guard revision retains v1.7 and changes no generated
+waveforms or requested timing. Archived signal results above precede this guard
+revision; they do not validate its execution time on the scanner.
 No vendor compiler was found in the executable path or expected scanner
 installation directories. Vendor RF/gradient waveform libraries and
 `tstex_15.pph` are absent. **Scanner compilation, target RAM/linking, exact

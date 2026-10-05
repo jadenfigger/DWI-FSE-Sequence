@@ -1,0 +1,765 @@
+{
+  "version": "combined-v2",
+  "base": {
+    "views_per_seg": 8,
+    "no_views": 16,
+    "te": 36,
+    "esp": 16,
+    "acq_b": [
+      0,
+      1000
+    ],
+    "no_diff_acq": 2,
+    "no_experiments": 2,
+    "acq_x": [
+      1000,
+      1000
+    ],
+    "acq_y": [
+      0,
+      0
+    ],
+    "acq_z": [
+      0,
+      0
+    ],
+    "sim_reduced_shots": [
+      1
+    ]
+  },
+  "configs": {
+    "original": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "centering": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": true,
+      "sim_train_crusher_scales": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "increasing": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        1,
+        1.4,
+        1.8,
+        2.2,
+        2.6,
+        3,
+        3.4
+      ]
+    },
+    "increasing_centering": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": true,
+      "sim_train_crusher_scales": [
+        1,
+        1,
+        1.4,
+        1.8,
+        2.2,
+        2.6,
+        3,
+        3.4
+      ]
+    },
+    "alternating": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    "alternating_centering": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": true,
+      "sim_train_crusher_scales": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    "increasing_alternating": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        -1,
+        1.4,
+        -1.8,
+        2.2,
+        -2.6,
+        3,
+        -3.4
+      ]
+    },
+    "increasing_alternating_centering": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": true,
+      "sim_train_crusher_scales": [
+        1,
+        -1,
+        1.4,
+        -1.8,
+        2.2,
+        -2.6,
+        3,
+        -3.4
+      ]
+    },
+    "weak_increasing_centering": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": true,
+      "sim_train_crusher_scales": [
+        1,
+        1,
+        1.2,
+        1.4,
+        1.6,
+        1.8,
+        2,
+        2.2
+      ]
+    },
+    "weak_increasing_alternating_centering": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": true,
+      "sim_train_crusher_scales": [
+        1,
+        -1,
+        1.2,
+        -1.4,
+        1.6,
+        -1.8,
+        2,
+        -2.2
+      ]
+    },
+    "decreasing": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        3.4,
+        3,
+        2.6,
+        2.2,
+        1.8,
+        1.4,
+        1
+      ]
+    },
+    "high_low": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        3.4,
+        1,
+        3.4,
+        1,
+        3.4,
+        1,
+        3.4
+      ]
+    },
+    "high_low_alternating": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        -3.4,
+        1,
+        -3.4,
+        1,
+        -3.4,
+        1,
+        -3.4
+      ]
+    },
+    "high_low_permutation": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        1,
+        3.4,
+        1.4,
+        3,
+        1.8,
+        2.6,
+        2.2
+      ]
+    },
+    "high_low_permutation_alternating": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        -1,
+        3.4,
+        -1.4,
+        3,
+        -1.8,
+        2.6,
+        -2.2
+      ]
+    },
+    "high_low_permutation_alternating_centering": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": true,
+      "sim_train_crusher_scales": [
+        1,
+        -1,
+        3.4,
+        -1.4,
+        3,
+        -1.8,
+        2.6,
+        -2.2
+      ]
+    },
+    "ramp_modulated": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        1.0,
+        0.9306394529484362,
+        1.4618802153517005,
+        1.4788225099390857,
+        2.3063945294843613,
+        2.2605934866804427,
+        3.4
+      ]
+    },
+    "quadratic": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        1.0,
+        1.0666666666666667,
+        1.2666666666666666,
+        1.6,
+        2.0666666666666664,
+        2.666666666666666,
+        3.4
+      ]
+    },
+    "geometric": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        1.0,
+        1.226252256350615,
+        1.5036945962049748,
+        1.8439088914585775,
+        2.261097438656042,
+        2.7726758359805683,
+        3.4
+      ]
+    },
+    "irregular_seeded": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        1.1176887559281652,
+        1.975258210357762,
+        2.4951082390656283,
+        3.4,
+        1.2093946173854577,
+        3.2814400398865784,
+        1.6141974545868143
+      ]
+    },
+    "high_low_energy_matched": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        3.4,
+        1,
+        3.4,
+        1,
+        3.4,
+        1,
+        3.4
+      ],
+      "energy_match": true
+    },
+    "irregular_energy_matched": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        1.1176887559281652,
+        1.975258210357762,
+        2.4951082390656283,
+        3.4,
+        1.2093946173854577,
+        3.2814400398865784,
+        1.6141974545868143
+      ],
+      "energy_match": true
+    },
+    "original_rf180": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "sim_refocus_phase_offsets_deg": [
+        0,
+        180,
+        0,
+        180,
+        0,
+        180,
+        0,
+        180
+      ]
+    },
+    "original_rf90_exploratory": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "sim_refocus_phase_offsets_deg": [
+        0,
+        90,
+        0,
+        90,
+        0,
+        90,
+        0,
+        90
+      ]
+    },
+    "increasing_rf180": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        1,
+        1.4,
+        1.8,
+        2.2,
+        2.6,
+        3,
+        3.4
+      ],
+      "sim_refocus_phase_offsets_deg": [
+        0,
+        180,
+        0,
+        180,
+        0,
+        180,
+        0,
+        180
+      ]
+    },
+    "increasing_rf90_exploratory": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        1,
+        1.4,
+        1.8,
+        2.2,
+        2.6,
+        3,
+        3.4
+      ],
+      "sim_refocus_phase_offsets_deg": [
+        0,
+        90,
+        0,
+        90,
+        0,
+        90,
+        0,
+        90
+      ]
+    },
+    "increasing_centering_rf180": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": true,
+      "sim_train_crusher_scales": [
+        1,
+        1,
+        1.4,
+        1.8,
+        2.2,
+        2.6,
+        3,
+        3.4
+      ],
+      "sim_refocus_phase_offsets_deg": [
+        0,
+        180,
+        0,
+        180,
+        0,
+        180,
+        0,
+        180
+      ]
+    },
+    "increasing_centering_rf90_exploratory": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": true,
+      "sim_train_crusher_scales": [
+        1,
+        1,
+        1.4,
+        1.8,
+        2.2,
+        2.6,
+        3,
+        3.4
+      ],
+      "sim_refocus_phase_offsets_deg": [
+        0,
+        90,
+        0,
+        90,
+        0,
+        90,
+        0,
+        90
+      ]
+    },
+    "inc_alt_rf180": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        -1,
+        1.4,
+        -1.8,
+        2.2,
+        -2.6,
+        3,
+        -3.4
+      ],
+      "sim_refocus_phase_offsets_deg": [
+        0,
+        180,
+        0,
+        180,
+        0,
+        180,
+        0,
+        180
+      ]
+    },
+    "inc_alt_rf90_exploratory": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        -1,
+        1.4,
+        -1.8,
+        2.2,
+        -2.6,
+        3,
+        -3.4
+      ],
+      "sim_refocus_phase_offsets_deg": [
+        0,
+        90,
+        0,
+        90,
+        0,
+        90,
+        0,
+        90
+      ]
+    },
+    "inc_alt_center_rf180": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": true,
+      "sim_train_crusher_scales": [
+        1,
+        -1,
+        1.4,
+        -1.8,
+        2.2,
+        -2.6,
+        3,
+        -3.4
+      ],
+      "sim_refocus_phase_offsets_deg": [
+        0,
+        180,
+        0,
+        180,
+        0,
+        180,
+        0,
+        180
+      ]
+    },
+    "inc_alt_center_rf90_exploratory": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": true,
+      "sim_train_crusher_scales": [
+        1,
+        -1,
+        1.4,
+        -1.8,
+        2.2,
+        -2.6,
+        3,
+        -3.4
+      ],
+      "sim_refocus_phase_offsets_deg": [
+        0,
+        90,
+        0,
+        90,
+        0,
+        90,
+        0,
+        90
+      ]
+    },
+    "original_flip160": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "sim_refocus_flip_deg": 160
+    },
+    "original_flip_train": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "refocus_train_deg": [
+        180,
+        170,
+        160,
+        150,
+        145,
+        150,
+        160,
+        170
+      ]
+    },
+    "inc_alt_center_flip160": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": true,
+      "sim_train_crusher_scales": [
+        1,
+        -1,
+        1.4,
+        -1.8,
+        2.2,
+        -2.6,
+        3,
+        -3.4
+      ],
+      "sim_refocus_flip_deg": 160
+    },
+    "inc_alt_center_flip_train": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": true,
+      "sim_train_crusher_scales": [
+        1,
+        -1,
+        1.4,
+        -1.8,
+        2.2,
+        -2.6,
+        3,
+        -3.4
+      ],
+      "refocus_train_deg": [
+        180,
+        170,
+        160,
+        150,
+        145,
+        150,
+        160,
+        170
+      ]
+    },
+    "original_taper": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "refocus_train_deg": [
+        180,
+        180,
+        175,
+        170,
+        165,
+        160,
+        155,
+        150
+      ]
+    },
+    "increasing_taper": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        1,
+        1.4,
+        1.8,
+        2.2,
+        2.6,
+        3,
+        3.4
+      ],
+      "refocus_train_deg": [
+        180,
+        180,
+        175,
+        170,
+        165,
+        160,
+        155,
+        150
+      ]
+    },
+    "increasing_centering_taper": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": true,
+      "sim_train_crusher_scales": [
+        1,
+        1,
+        1.4,
+        1.8,
+        2.2,
+        2.6,
+        3,
+        3.4
+      ],
+      "refocus_train_deg": [
+        180,
+        180,
+        175,
+        170,
+        165,
+        160,
+        155,
+        150
+      ]
+    },
+    "original_duration500": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": false,
+      "sim_train_crusher_scales": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "tcrush": 500,
+      "crush_amp": 9398
+    },
+    "inc_alt_center_duration500": {
+      "scanner_version": "1.6",
+      "sim_fix_refocus_centering": true,
+      "sim_train_crusher_scales": [
+        1,
+        -1,
+        1.4,
+        -1.8,
+        2.2,
+        -2.6,
+        3,
+        -3.4
+      ],
+      "tcrush": 500,
+      "crush_amp": 9398
+    }
+  },
+  "design_notes": "Legacy1.6 explicit timing controls; first crusher unchanged; finite-RF and exact pathway models separate; peak3.4 ramps; energy matches full played G squared; 500us amplitude compensates 200us ramp area; physical D is .001*MRzero D."
+}
