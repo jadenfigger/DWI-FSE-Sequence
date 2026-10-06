@@ -1,0 +1,640 @@
+{
+  "scope": "RF requirements, bounded author-toolbox designs and sampled validation; no console qualification",
+  "source_repository": "https://github.com/LarsonLab/Spectral-Spatial-RF-Pulse-Design",
+  "source_commit": "59f4f3a2f404dad147ef292a16cc00be63a77cd7",
+  "source_archive_sha256": "21ccaecbbb6cd1e99a0e5384b2d0a34cbbb2d066cf8a277dc8a16fd6815d18f2",
+  "runtime_preferences_excluded": "tmp/v19_matlab_prefs",
+  "runtime_cache_excluded": "tmp/v19_rf_python_cache",
+  "exact_Gibbons_replication": false,
+  "console_verified": false,
+  "files": {
+    "candidate.mat": {
+      "sha256": "f111554e88785617a60a31273ea54b89725bee8c47a500ac45bc0d1f4c6663e1",
+      "bytes": 11975
+    },
+    "candidate_long.mat": {
+      "sha256": "b7cc466912d980c37653c3279ba747272cfceb9780f6cff7b4ec3dd759df9c60",
+      "bytes": 16300
+    },
+    "candidate_long_t_B1realT_B1imagT_GzTm.csv": {
+      "sha256": "87356f00c91d81c12e8185a0b4f248e2888ae026500f259bf6f1dc7052535094",
+      "bytes": 91388
+    },
+    "candidate_long_t_B1realT_B1imagT_GzTm_transfer.npz": {
+      "sha256": "74f5319c56ce844614651675692116ab34ef99ebb3548612183150e330de53b0",
+      "bytes": 355981
+    },
+    "candidate_long_t_B1realT_B1imagT_GzTm_transfer.png": {
+      "sha256": "0c35baaeb8b2dda99053bf0edabc2cf3c59beaebff3f92c11c529c3a07522018",
+      "bytes": 151372
+    },
+    "candidate_t_B1realT_B1imagT_GzTm.csv": {
+      "sha256": "8f2830c5b78ad8b183fe301f1085533e1287a86ffbbdb938d2a2c97fe09b9223",
+      "bytes": 67290
+    },
+    "candidate_t_B1realT_B1imagT_GzTm_transfer.npz": {
+      "sha256": "79c4ef85639fac74dd6fbcfafacabea45f241ce3be08e17421073413121eb61b",
+      "bytes": 356845
+    },
+    "candidate_t_B1realT_B1imagT_GzTm_transfer.png": {
+      "sha256": "bf0743566fdb1331b0d87e03446348c951150dbf1b082dfddbe3768994b97618",
+      "bytes": 152015
+    },
+    "design_attempt.log": {
+      "sha256": "d395cabd0adf4bf7e02a4c99ae126a8d49b413c143c53bf0c109d57a4c9782db",
+      "bytes": 2346
+    },
+    "design_candidate.m": {
+      "sha256": "319d4d3dc8ff511b5e84f667a979f25ed012490b4968f49296c7ff5d89a157b2",
+      "bytes": 1527
+    },
+    "design_long_attempt.log": {
+      "sha256": "99aa296ad80cc05488c89090b667896fe19e9a9aa9b96be8dc6d64ba7f24bad8",
+      "bytes": 905
+    },
+    "design_spatial.log": {
+      "sha256": "fbc09ae7ca4cc38ef9ab39669571175f617fc0e4856c7d88c2b7919dd58b87d5",
+      "bytes": 238
+    },
+    "design_spatial.m": {
+      "sha256": "e1261c3397260ec084aded41041bc92676baec3501dede127de24add44b763b2",
+      "bytes": 1199
+    },
+    "make_provenance.py": {
+      "sha256": "24fdf5a0275a31fe5bfd96eeded2116fc099ad0b42bf2614302df9c7c5cc4a95",
+      "bytes": 1342
+    },
+    "make_real_contract.py": {
+      "sha256": "8005a0ffe4a01962a6b6faecc2e80e4ab252a116bb4e1b706da68b6181dbd0ba",
+      "bytes": 3460
+    },
+    "matlab_startup.log": {
+      "sha256": "0422890bdc6e3c41439b99fc004ee31229c583a9d1b709520a288ab738cb7f99",
+      "bytes": 49
+    },
+    "real_rf_contract.json": {
+      "sha256": "86b3f78ed93854f82255a4bcef0a883c6e678a2d0ea6b42d2fa70b39735303c4",
+      "bytes": 7551
+    },
+    "real_rf_contract.npz": {
+      "sha256": "6fe60835a2916ac960d28fe8fbce1c889f75cbbc5598ed1cc0fefb77136fb446",
+      "bytes": 26487
+    },
+    "real_rf_transfer_results.json": {
+      "sha256": "d45ec96d5d1251f5ca56fda69aa242514292d08d6390ff1ce06b4f97be7af146",
+      "bytes": 16459
+    },
+    "slr_elim90_3p2ms.csv": {
+      "sha256": "2077b2e269b0057ddcc883b359016238572c91555365ac6039ad95bc132f5793",
+      "bytes": 23286
+    },
+    "slr_elim90_3p2ms_transfer.npz": {
+      "sha256": "61b028f2053d0c17b7b23227281f2744449d92b14cafc61706c2adaffe445868",
+      "bytes": 280675
+    },
+    "slr_elim90_3p2ms_transfer.png": {
+      "sha256": "e9411f9b8e17a79ae35ab1c2d734e94b27db2153a8e7aabec2443ce57cb4347d",
+      "bytes": 148639
+    },
+    "slr_prep180_3p2ms.csv": {
+      "sha256": "b127322c341d413a122f361122a1a68b6df97f161313b42406bd4996967973bf",
+      "bytes": 23266
+    },
+    "slr_prep180_3p2ms_transfer.npz": {
+      "sha256": "5b2e47ccec1442a124edd79a28ea3fda7bf422bb2a70c6ebfd49ef7a03ad7b0d",
+      "bytes": 346282
+    },
+    "slr_prep180_3p2ms_transfer.png": {
+      "sha256": "7d56d2e7a6fdb87072a09d3fb9f7bd73ed5260c335fcde63a26cb82a556b6d09",
+      "bytes": 165671
+    },
+    "slr_prep90_3p2ms.csv": {
+      "sha256": "8229d7ec779314ddbaf79a122a0bb684bc699b4ea11550a9773bdd579139504b",
+      "bytes": 23260
+    },
+    "slr_prep90_3p2ms_transfer.npz": {
+      "sha256": "91bc89c8a474d3e4e7a4412b08c018cb17119b59a73156cae577e7df6262cc20",
+      "bytes": 280215
+    },
+    "slr_prep90_3p2ms_transfer.png": {
+      "sha256": "fe9fd539bb5d38c69fe09231be78cea648d671e69477ff5e1f669f74d2881fbc",
+      "bytes": 150677
+    },
+    "spectral_spatial_source.zip": {
+      "sha256": "21ccaecbbb6cd1e99a0e5384b2d0a34cbbb2d066cf8a277dc8a16fd6815d18f2",
+      "bytes": 631602
+    },
+    "ss_design_batch.m": {
+      "sha256": "d20d422d9c6bb7141906ce2c47ea5c0b2e81095e30b81fabd392387bc6c6c898",
+      "bytes": 15572
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/Copyright_Information": {
+      "sha256": "f53ad755d42cbd89f5ac6b7e24a2fb597d8bb78926bd52572aabdb909e048113",
+      "bytes": 2033
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/create_freq_specs.m": {
+      "sha256": "ec35f133ed0824a7c0c499269fc189f746b96d5ce12cce58fcbf521b99c632c9",
+      "bytes": 1555
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/examples/demo_7T.m": {
+      "sha256": "058cf7a51ad97552db676a7923aee413634f0af2cdf674b35e972cfb7cc6f2ed",
+      "bytes": 3207
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/examples/demo_C13_multiband.m": {
+      "sha256": "49a4cc828f961bf7d6e33f3c281ef781f79358cd6d075fde7a4cd7bc5abcb4d1",
+      "bytes": 10549
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/examples/demo_C13_singleband.m": {
+      "sha256": "94cd7a921c263c08ca8d36f9e75536a7c112c4aabf74eb2d2e84c630c28cdfe6",
+      "bytes": 6267
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/examples/demo_general.m": {
+      "sha256": "97a426815f6dd2177363ed6fa3be1b9f2a4231df66991eaa730af2a4321c9cb5",
+      "bytes": 10574
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/examples/demo_mband_phs.m": {
+      "sha256": "6d3a6faf3a3730e42043c246a811f919a3dd8847e100afaa736b8da9320dca45",
+      "bytes": 4176
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/examples/demo_multiband_spinecho.m": {
+      "sha256": "00740db76f829d4126fcebb8b9f110215dfa698d3290cea53f6bd04b41d71430",
+      "bytes": 3408
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/examples/demo_ss_shifting.m": {
+      "sha256": "5146b39d0403a37e30aecd9a56720e290573bf863e2aaeefd4a76f6fb16eba31",
+      "bytes": 3981
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/examples/singleband_C1_Pyr_demo.m": {
+      "sha256": "280522e85b116fb4e2be59461e815b4fff3c4d24c42f2ed5cbbf866479f4601f",
+      "bytes": 5400
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/fftf.m": {
+      "sha256": "d42caa877a7b87910fd6adfb7bb95ca2f0abb71fb75b96c0433c17403c525163",
+      "bytes": 2098
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/fftr.m": {
+      "sha256": "6a9a9e853e271160face94c3a2ffff44d07792f969bc71b7de48f22734e4cb87",
+      "bytes": 2033
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/fir_expand.m": {
+      "sha256": "34310abe19da641c379dfe75ead7e0ff5164744113adad46d8973255c70008d2",
+      "bytes": 9421
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/fir_linprog.m": {
+      "sha256": "259d60695d904fbe9208ef395b6d8630843e50fa063420a63bd2f1813084a5da",
+      "bytes": 9280
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/fir_min_order.m": {
+      "sha256": "585753aa5479840131630690c12f47292c1d45c6229885a188a9cc72730426a5",
+      "bytes": 5482
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/fir_min_order_linprog.m": {
+      "sha256": "5027b1c2d598196033737e867e4dee38a5cb7c6378e4b68edf144ecb67ca4de6",
+      "bytes": 5311
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/fir_min_order_qprog.m": {
+      "sha256": "cd2363758d4254141184aed14884174f11ab09f070622546efc780d90e64d843",
+      "bytes": 5336
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/fir_min_order_qprog_phs.m": {
+      "sha256": "0a51140b2b2a02886132c679ec314b755eda34ff1434a5051fdc1b8a26d7e74c",
+      "bytes": 5144
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/fir_minphase.m": {
+      "sha256": "20c004f4ff2684a3550cd49679b482a75b7658f3380e554ce1292beffcd000c8",
+      "bytes": 5784
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/fir_minphase_power.m": {
+      "sha256": "1444239e1415768b423cc138d4c1a9a74b410113ffd4cb9927467f13772be39a",
+      "bytes": 5730
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/fir_pm.m": {
+      "sha256": "df6ad2441865323421ae534b412949b058de3b1dbcb1edbbb3e6f6e0a2a5c4de",
+      "bytes": 6112
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/fir_pm_minpow.m": {
+      "sha256": "fd3e8dc6e4fc7c751cc7458dc4329e7a7a49cc9ed29abcbeb07d69b01e4e6170",
+      "bytes": 9931
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/fir_qprog.m": {
+      "sha256": "fe9f43ea9a58181bab579e07cb410ad8cbea844d5aa2466ecbea0b04c2940e74",
+      "bytes": 8235
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/fir_qprog_phs.m": {
+      "sha256": "30d479720365723906559eed4cd607ce90be507adea5f14bc215a4a9b1a0b462",
+      "bytes": 12596
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/grad_min_bridge.m": {
+      "sha256": "f1d5a89d2efaae89568bcb73380748845950d9207f7d319ef731370dbb89ebcc",
+      "bytes": 3029
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/grad_mintrap.m": {
+      "sha256": "c72f22dad35e19b405851e17a4ab4882a2114e27c81e53aacfa96871ab102917",
+      "bytes": 1624
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/grad_ss.m": {
+      "sha256": "effc0c4c37e6384d32aed8356412366208c843e92dcd477657bbfa107e51e040",
+      "bytes": 4565
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/LICENSE": {
+      "sha256": "f9b80255e62ccb4559a23b03e3620b5f6a62cdcb191dff9c5296ed709c3e7389",
+      "bytes": 1598
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/plot_spec.m": {
+      "sha256": "cf7d048b9182cd410cac19a1badd2eaaf5e8cd02d35e8735eddf92f104b977c0",
+      "bytes": 1065
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/plot_spec_phs.m": {
+      "sha256": "dc2013e73778d49cd4cb6119dd1bf3811946cfa8d858e6b78f0c2cae1846bac9",
+      "bytes": 1434
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/README.md": {
+      "sha256": "5b9ab346cf60a9be88d2b56100ca5d0f3c97967df96225b02f78a7f3d42824db",
+      "bytes": 2102
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_ripple.m": {
+      "sha256": "75fd50753efcd77c45b58123c34c391aa3c37e008b0df537164eb7abdf3d9638",
+      "bytes": 3929
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/ab2ex.m": {
+      "sha256": "b4dc5f0123645b2ac98f979fde848fe0ba3eed62b441a643c6887c38fa41ec6f",
+      "bytes": 320
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/ab2inv.m": {
+      "sha256": "ec7441bbb7ee8c7e6eb0818eb605b0ff95042005e0bb5287948467916a840847",
+      "bytes": 326
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/ab2sat.m": {
+      "sha256": "86c432a850d99fbf0a8770b82f8f31f295dba348f1c8e217d0235fb552878f92",
+      "bytes": 327
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/ab2se.m": {
+      "sha256": "65ead4a5be4417b395f7b9c08001dd79273f51c031783fc72bd9b91684efd86c",
+      "bytes": 306
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/ab2st.m": {
+      "sha256": "dc704a25b41db65993f50802b2e0d3c991b0117e4eb89899a0f74e9753b05648",
+      "bytes": 317
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/abr.m": {
+      "sha256": "7e2cc058450fbfe143f83b5dca96c7de08fdfee03bafd43acbe78149aabf05bc",
+      "bytes": 864
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/cplot.m": {
+      "sha256": "9c2cb287945b087cbd3e2a7f3aeaa189606816c7855702142fde898a6c5fc62c",
+      "bytes": 401
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/csg.m": {
+      "sha256": "48086659884bef4d541318731dcd79c4be05717da15b34434cf1a225bcd3b830",
+      "bytes": 1664
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/csg2.m": {
+      "sha256": "303f6aaa1e93c7fd50840f5fd3d401f213b5bbc2b112ff2a4e8f2826ea0463b3",
+      "bytes": 1107
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/dimp.m": {
+      "sha256": "e38a70cc9b4ddecbc39e63d365c130f3b2ff998e649863251315ca98164b802a",
+      "bytes": 208
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/dinf.m": {
+      "sha256": "55716c2330afd11d48784422546bc5332b3df78edfd2de18481aa8082a782c87",
+      "bytes": 525
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/dz2d.m": {
+      "sha256": "161937757fc17e3eba3de8d3fe08861a602d441a3bfc72d2181bc45787485985",
+      "bytes": 1352
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/dzbeta.m": {
+      "sha256": "aa134607fb5f41edbdd81ccf2b84899bd7957c0895fd4148f1ce6b472fe2aa23",
+      "bytes": 1370
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/dzepse.m": {
+      "sha256": "a03d93d848b82215ab951151e11cdbbc96290280992db4a26c5cd4af78e0f811",
+      "bytes": 1414
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/dzlp.m": {
+      "sha256": "3e43c880211da6cab31eedb50326314e6dd809efc5e2695aad32e8112204022a",
+      "bytes": 472
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/dzls.m": {
+      "sha256": "cc897e02f51d2bdbb0d5b0df96c73fa50aa60ea05db47148cc5d70dbb0f0034e",
+      "bytes": 442
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/dzmp.m": {
+      "sha256": "f1762fb12222fbdee278ccf4fe3e1651322f4aa1aec9ddf3d8b537203e3bb95a",
+      "bytes": 674
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/dzrf.m": {
+      "sha256": "7e990e9220efbab9711dec53586c0cef947dfc96b996be06b4f52b718e12bea1",
+      "bytes": 2268
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/dzsr.m": {
+      "sha256": "23bbd87bcb18f6b46e98d8a997acda5e0d317f22f226e9a5a8ee6c9c65e44f57",
+      "bytes": 213
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/fftc.m": {
+      "sha256": "14379d68a4db6df518e7629a271089be970d03ea5e09415408cb311c5b5a14c3",
+      "bytes": 630
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/fmp.m": {
+      "sha256": "46a966715d866c6ee5a58a6e90dda32c1b947e0d35aad1367d22a1d3f19e232a",
+      "bytes": 561
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/gt2cm.m": {
+      "sha256": "a6842b8cf1c4458b2bb2f32be3000de36c4d7e888cceb3817b4a9d1759fcb8a0",
+      "bytes": 460
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/ifftc.m": {
+      "sha256": "a0f59b0c077b28fe3f37df9906686155afc5e9258b894dd8aefa5c1891638295",
+      "bytes": 417
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/iq2ap.m": {
+      "sha256": "33efa21c33751377c9e5d7dd2a4b8270dc3cb99f4b0f5726ecfeb2cacf710653",
+      "bytes": 183
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/ktog.m": {
+      "sha256": "99c48a1dd336f04bf6b95c68350ae5c837a6e59affe99e0b41d9a01acb5f529a",
+      "bytes": 50
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/ktos.m": {
+      "sha256": "370229d561e399a3b2fb3bd7bac5da7cb85795bd9635615cda6ddbf130deb9ea",
+      "bytes": 58
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/loadwave.m": {
+      "sha256": "c2624c8e36b8ac8720ab5583de2c572859163d8379cf0bf57fd96874a0408518",
+      "bytes": 317
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/mag2mp.m": {
+      "sha256": "413a4d9175e06442c223bfd846dab0c5ca8ba6ae1b94638ecdee671a4cb29881",
+      "bytes": 1167
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/mex_files/abrx.c": {
+      "sha256": "c0ceb3a04478b985423bd2ec322d4b01f5707e79c442887bb37c3772169f378c",
+      "bytes": 3137
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/mex_files/abrx.m": {
+      "sha256": "2e23f7074be42cfc3b66c6d5ab2631a0824f4f6e130885e81d40b60527c853f9",
+      "bytes": 742
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/mex_files/abrx.mexmaci64": {
+      "sha256": "d90bd53017c9af4d76c3101a9081aa34d816cef548ccc5f191bf491649bf9404",
+      "bytes": 9220
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/mex_files/abrx.mexw64": {
+      "sha256": "5146947dc6e1a9b71937192563d7d7141c4e8396c295606ccf1f93d3507076c6",
+      "bytes": 19456
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/mex_files/b2a.c": {
+      "sha256": "cec6b4d4c3dae45d6b02c60add920605364eb899bc96744b7d5214b087b9320e",
+      "bytes": 1591
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/mex_files/b2a.code.c": {
+      "sha256": "1fbf701b77a691c9d402ad23c94e1789339004a45b9c7640770ff8cf94fe4743",
+      "bytes": 2527
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/mex_files/b2rf.c": {
+      "sha256": "dfc081076feab709509ad3b2a76e5c2f27c74cdeb0152084beb9a0015ff9263c",
+      "bytes": 1657
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/mex_files/b2rf.m": {
+      "sha256": "a23a481d7ce190efcbf2c08fa760e0c22d482ea4eb73da3f2fa8be8fd731bfd7",
+      "bytes": 742
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/mex_files/b2rf.mexmaci64": {
+      "sha256": "333e84593f0260c6d784981b161a097afe21f0662b640ca9d8a6e690bdfde8c6",
+      "bytes": 13272
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/mex_files/b2rf.mexw64": {
+      "sha256": "8e3b57ae3e70fce735d91eddfca5fd303f44fead0251431e2532765c0ad5bbf5",
+      "bytes": 21504
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/mex_files/cabc2rf.c": {
+      "sha256": "e15aeae2f0d9caf7316a5ac4fe93c8b0358667c8fdcfa9b5011726b9d139306e",
+      "bytes": 1804
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/mex_files/cabc2rf.code.c": {
+      "sha256": "3693f141e97232d05e53ab648b9c14d16dac25eed23eab2f549d6e582425bdca",
+      "bytes": 2047
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/mex_files/four1.c": {
+      "sha256": "e3921bd941d02a3173221aaf51dcfdde5e2d60f6c1a6d4582ced2906290104d0",
+      "bytes": 905
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/mex_files/minpeakrf.c": {
+      "sha256": "52c9fcb138a26ccef7d286114795300b21b78c1917ca6b2919c39e428ebab07a",
+      "bytes": 13062
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/msinc.m": {
+      "sha256": "70a2666c10d3b84f71a62631810bfd06555cb689b0e801d7bcc8914c9032e54b",
+      "bytes": 372
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/README": {
+      "sha256": "baa69fd093d61b4cb6ebdabb4062190c486c8056c084f2d3928d7300d4c593b9",
+      "bytes": 1693
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/remod.m": {
+      "sha256": "3db6d78c363c2e59222e6e392215d73b7721f597502af10eb0ad7988c9c87229",
+      "bytes": 156
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/rf_tools manual.pdf": {
+      "sha256": "d2652391fe05b0c87c52bdaa2f7549412aad7a597eb5268aa9be840df5c93801",
+      "bytes": 1833628
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/rfscale.m": {
+      "sha256": "4910b4d261f22aefcbaac11c0381f526928e33415c3b2106c7de6e708d615c5e",
+      "bytes": 329
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/signa.m": {
+      "sha256": "803edf5b8c48540c7fe1099d4b540f218085f623bf6483ebad00700c069f0912",
+      "bytes": 1526
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/t2hz.m": {
+      "sha256": "706aeb81ffdc995c905f0640fdb1cedfa2552025cc06671d81f06fd9b61e88fd",
+      "bytes": 423
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/verse.m": {
+      "sha256": "8b1c7e100b61a845d6ad4024daadc69d1e9c70daa1ab79a45948ae8f9b03c386",
+      "bytes": 598
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/versec.m": {
+      "sha256": "bd4c73fe80455938d3fdac318b571a9ef40d98359cd0d967af56d865d0f727e3",
+      "bytes": 233
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/rf_tools/zpl.m": {
+      "sha256": "44edeacf9ee073fcbaf9c78623a7fa57becc3eac5fe3f8ede51d2e1195e1ce70",
+      "bytes": 426
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/signa.m": {
+      "sha256": "70fd7be044252419042e334ce417adcd9303a4b2d048d39f34cf96fc645108b2",
+      "bytes": 1650
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/spec_interp.m": {
+      "sha256": "f31addb8b6f3024003bc4955027f6997b177eb9f8bf1fe069546ce88e98be72c",
+      "bytes": 3159
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/spec_interp_nonuniform.m": {
+      "sha256": "70139195b6ce9ce1a8a5d8c5240873118ac6a0219bf61b1543aef7f6b51a9d9b",
+      "bytes": 3362
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/spectral_fact.m": {
+      "sha256": "9a6c1ce3c2dff1aeb0d1ca93294e0d6e8404e8987a3babe41d4811475e4bde0e",
+      "bytes": 1878
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_alias.m": {
+      "sha256": "ad7d860c463eb9c014ab3948aa83b19eee0566d7c78b0dc26b7e40c7d7300dd1",
+      "bytes": 15514
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_b1verse.m": {
+      "sha256": "04a2789981a3bbb6c36a7e9adb7390ed300aae62ddafbf47bb9dc504e005e542",
+      "bytes": 5982
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_band_plot.m": {
+      "sha256": "3adb244fb1338924357dab9261e964e398dcad27d7dd97572ac257480d9da0b4",
+      "bytes": 2661
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_band_plot_phs.m": {
+      "sha256": "6efefac5637ade085d3cd24da5cf9f706c904cdd887422e3296b716c42189e11",
+      "bytes": 2719
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_design.m": {
+      "sha256": "b5a5d66485eeaecc627fa359f6fd30c060d4ed9fb94762c953c29e1b44fcb692",
+      "bytes": 15172
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_design_dyn.m": {
+      "sha256": "b15a60285b226b3ddb2a6e9ad6cdf6945d5908e1e223c5ad1081cae8a6af9ddb",
+      "bytes": 17359
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_design_phs.m": {
+      "sha256": "2f90c5340cd92e9a6525f0981ca317455109cbd7211b78f29f627aa2862398d9",
+      "bytes": 15535
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_ep.m": {
+      "sha256": "b032bc891af457d369dc362a7b1b659cab4303cccad2fd5c133492bb0420df49",
+      "bytes": 16120
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_ep_phs.m": {
+      "sha256": "9c631174573847324d5c1835e7ae89f2f0c7e29b0fc394f356299e60cd1ba32f",
+      "bytes": 16584
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_flyback.m": {
+      "sha256": "d0343777ed3db1b2c02e11ef63c7f74c2f8a865717274179ef720fe6e388e933",
+      "bytes": 13998
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_flyback_phs.m": {
+      "sha256": "39c304b5ad4fe32667528a99045c5690e9fae9f16825da1a3d6e4e38d44de0d0",
+      "bytes": 15345
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_globals.m": {
+      "sha256": "377c09b2538b7aaf6cc4b48a5a48ecf54ac8d764a938e688718261c839e56385",
+      "bytes": 3869
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_opt.m": {
+      "sha256": "6d37828dbbd9d275d5b2446696da7ed8563c031b51ddf15e0b91f002d6d7b080",
+      "bytes": 4506
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_plot.m": {
+      "sha256": "303fec3e6ad85fedbab03cbbc520690607932422184879f318698b27298873e2",
+      "bytes": 6437
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_response_mxy.m": {
+      "sha256": "fe9275f6124a93eb5906502c0b44b7008483c6ee5c64ca5a6225b75eb1711613",
+      "bytes": 1907
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_save.m": {
+      "sha256": "7dcc94e2232db0c7192b0cba38fa5cb2205202c3e684af8f262a3939c6a30122",
+      "bytes": 14695
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_save_dyn.m": {
+      "sha256": "bbb57b2868ac6d585ce906f27fcc3a10895588593318b8e724d6ea1ba3cedf2e",
+      "bytes": 15623
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_shift.m": {
+      "sha256": "844936035615499f1f840665fb78f511b5ee749cd91e737ce36b557051383fbc",
+      "bytes": 2268
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_spect_correct.m": {
+      "sha256": "92faa2806e8b1a6fbc46ee02f6a2599119e22a1f903b9ba29284cf8722d94c96",
+      "bytes": 9304
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_verse.m": {
+      "sha256": "8d72c48814a972066c7f2c294d7a8deed7493386aff1fb3245b68a0b3265d9eb",
+      "bytes": 1174
+    },
+    "toolbox/Spectral-Spatial-RF-Pulse-Design-master/ss_xlatebin.m": {
+      "sha256": "ae87e12311b465f50c7bfc2a86997bb42ee3b3f21822fb5ea65eae78072cfb4e",
+      "bytes": 716
+    },
+    "transfer_results.json": {
+      "sha256": "46a5c16297cb2e3ffe22ad9488c18a8a9c4f94dc05b04fda26682a0b2d03229c",
+      "bytes": 7466
+    },
+    "v19_imaging180.csv": {
+      "sha256": "fe571fc37537a06960e7625e12f753917ab66f94ffe6c03bd7087387d3e78b1f",
+      "bytes": 8103
+    },
+    "v19_imaging180_basis_transfer.npz": {
+      "sha256": "531b25cb3e0f7427a79cb140f3ba591300c1d8d5825e72ad6f3cce88b132cfcf",
+      "bytes": 367456
+    },
+    "v19_reexc90.csv": {
+      "sha256": "8f5c47bb7a26140557628eacb09982ae9cb749b93c1e5eba219d5e9a245ac6f0",
+      "bytes": 8103
+    },
+    "v19_reexc90_basis_transfer.npz": {
+      "sha256": "530171c1d31e3bf2b3736fdf2ad49e5c2f61b3752069068c19f9a28afae05fcc",
+      "bytes": 366102
+    },
+    "v19_slrelim90.csv": {
+      "sha256": "f7f93f210288556c34f09547f85da329a3c00f9708d6435e03e519b5367ac252",
+      "bytes": 21434
+    },
+    "v19_slrelim90_basis_transfer.npz": {
+      "sha256": "4ef24dc166e6187f4ea86f1472bad15bc8c66ab9dfbe8d354762985b693b35c9",
+      "bytes": 368281
+    },
+    "v19_slrprep180.csv": {
+      "sha256": "9aa0e79b8213cbdde883f85ff7b0ef8798225a18ab7a4b6f4f00b62f231c6c4a",
+      "bytes": 20812
+    },
+    "v19_slrprep180_basis_transfer.npz": {
+      "sha256": "d381d915346bbe5902dcfce547634fbf82182fa2500e36866c1dac6c063a3fb5",
+      "bytes": 457952
+    },
+    "v19_slrprep90.csv": {
+      "sha256": "66a2f4576fc9584920986b89873c4c311acada354d155f3bceae39cf9aefeade",
+      "bytes": 20770
+    },
+    "v19_slrprep90_basis_transfer.npz": {
+      "sha256": "0198e2f8b6a955dc7f70d79fd096d2cb11ece04d168edf3d85a5abceb76da7db",
+      "bytes": 369718
+    },
+    "v19_slrtip90.csv": {
+      "sha256": "26bc43927484f8485f7fd8d2ee7640e9c72659d6980ed2a48a836b253f09ef2f",
+      "bytes": 21434
+    },
+    "v19_slrtip90_basis_transfer.npz": {
+      "sha256": "47d36d77acdda3ef32671007ae800c582d81e06c1502dd6fd4be3c4dda310601",
+      "bytes": 369994
+    },
+    "validate_real_contract.py": {
+      "sha256": "f02741166b439dc974f22155b48c0c13883017a3c1310c09b93fff987ee8dc1a",
+      "bytes": 6295
+    },
+    "validate_rf.py": {
+      "sha256": "6d04d42b6820bcae3a2e819c5d84cceed6051d174b41545fad2e235de99e2e32",
+      "bytes": 7557
+    },
+    "windowed_reexc90_1p2ms.csv": {
+      "sha256": "e63e98709e6604a8fdc68b413c7a9c516512dab5dd7484ee75e8a0440c623f17",
+      "bytes": 6335
+    },
+    "windowed_reexc90_1p2ms_transfer.npz": {
+      "sha256": "bad2eea7ecbdbd8827fcb56edda6c6c6018ee967bf8062b7aef9ccf901262b5d",
+      "bytes": 274391
+    },
+    "windowed_reexc90_1p2ms_transfer.png": {
+      "sha256": "4553a9db2169696330f2b53860c729f97b35b2195b0318dfe515eeba128ba82d",
+      "bytes": 140103
+    }
+  }
+}

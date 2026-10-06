@@ -1,0 +1,126 @@
+{
+  "scope": "Partial source-derived Alsop tip macro/list mapping ONLY; complete PPL event and compiler verification unavailable",
+  "source_sha256": "540ac8237aee5a1a5ab945045122102d92f176772bfcc14f2c44ae86806410ef",
+  "ppr_sha256": "77e0a76500fae4a7b100f8e35c54db75810880e458923726bd00ffdc5fd8e7d4",
+  "source_params": {
+    "tramp_us": 200,
+    "tref_us": 2800,
+    "rfdelay_us": 60,
+    "rf_flat_us": 1460,
+    "rf_pred_us": 264.0,
+    "selector_dac": -2741,
+    "compensation_dac": -758,
+    "exact_sampled_compensation_area_cycles_per_m": 1765.998657185583
+  },
+  "assumptions": "MR3040 constant sample holds at tramp/50 dwell; pure delays include B0; no physical gradient delay or instruction time; nominal90 integral B1 calibration; compare fullRF frame and declared RF gate boundaries",
+  "finite_tip_metrics": [
+    {
+      "gate": "native_full1336us",
+      "b1": 1.0,
+      "b0_hz": -128.0,
+      "in_slice_rms_retainedMy_error": 0.14622648118530554,
+      "in_slice_rms_unwantedMx_fromMy": 0.24273329384844589,
+      "in_slice_rms_residualMx_fromMx": 0.26736546255775434,
+      "in_slice_mean_storedMz_fromMx": 0.9279240283276429
+    },
+    {
+      "gate": "native_full1336us",
+      "b1": 1.0,
+      "b0_hz": 0.0,
+      "in_slice_rms_retainedMy_error": 0.07099317204574952,
+      "in_slice_rms_unwantedMx_fromMy": 0.16740761522890954,
+      "in_slice_rms_residualMx_fromMx": 0.23742880364593885,
+      "in_slice_mean_storedMz_fromMx": -0.95461361944795
+    },
+    {
+      "gate": "native_full1336us",
+      "b1": 1.0,
+      "b0_hz": 128.0,
+      "in_slice_rms_retainedMy_error": 0.1462264811853055,
+      "in_slice_rms_unwantedMx_fromMy": 0.2427332938484461,
+      "in_slice_rms_residualMx_fromMx": 0.26736546255775445,
+      "in_slice_mean_storedMz_fromMx": 0.9279240283276425
+    },
+    {
+      "gate": "native_full1336us",
+      "b1": 0.8,
+      "b0_hz": -128.0,
+      "in_slice_rms_retainedMy_error": 0.10115404722757278,
+      "in_slice_rms_unwantedMx_fromMy": 0.26896749428741107,
+      "in_slice_rms_residualMx_fromMx": 0.14487569653787963,
+      "in_slice_mean_storedMz_fromMx": 0.9494320425993743
+    },
+    {
+      "gate": "native_full1336us",
+      "b1": 0.8,
+      "b0_hz": 0.0,
+      "in_slice_rms_retainedMy_error": 0.03157526004203779,
+      "in_slice_rms_unwantedMx_fromMy": 0.1350627384994929,
+      "in_slice_rms_residualMx_fromMx": 0.17340243366656963,
+      "in_slice_mean_storedMz_fromMx": -0.9744531043619381
+    },
+    {
+      "gate": "native_full1336us",
+      "b1": 0.8,
+      "b0_hz": 128.0,
+      "in_slice_rms_retainedMy_error": 0.10115404722757293,
+      "in_slice_rms_unwantedMx_fromMy": 0.2689674942874112,
+      "in_slice_rms_residualMx_fromMx": 0.14487569653787968,
+      "in_slice_mean_storedMz_fromMx": 0.9494320425993739
+    },
+    {
+      "gate": "declared_gate1332us",
+      "b1": 1.0,
+      "b0_hz": -128.0,
+      "in_slice_rms_retainedMy_error": 0.14622140615556575,
+      "in_slice_rms_unwantedMx_fromMy": 0.24273678732850143,
+      "in_slice_rms_residualMx_fromMx": 0.2673523275115486,
+      "in_slice_mean_storedMz_fromMx": 0.9279299467360375
+    },
+    {
+      "gate": "declared_gate1332us",
+      "b1": 1.0,
+      "b0_hz": 0.0,
+      "in_slice_rms_retainedMy_error": 0.07098903364679915,
+      "in_slice_rms_unwantedMx_fromMy": 0.16741202121291268,
+      "in_slice_rms_residualMx_fromMx": 0.23741379375391025,
+      "in_slice_mean_storedMz_fromMx": -0.9546189737042439
+    },
+    {
+      "gate": "declared_gate1332us",
+      "b1": 1.0,
+      "b0_hz": 128.0,
+      "in_slice_rms_retainedMy_error": 0.14622140615556578,
+      "in_slice_rms_unwantedMx_fromMy": 0.24273678732850168,
+      "in_slice_rms_residualMx_fromMx": 0.2673523275115487,
+      "in_slice_mean_storedMz_fromMx": 0.9279299467360371
+    },
+    {
+      "gate": "declared_gate1332us",
+      "b1": 0.8,
+      "b0_hz": -128.0,
+      "in_slice_rms_retainedMy_error": 0.10115135686040828,
+      "in_slice_rms_unwantedMx_fromMy": 0.2689693133659216,
+      "in_slice_rms_residualMx_fromMx": 0.14486823455032433,
+      "in_slice_mean_storedMz_fromMx": 0.9494346360245592
+    },
+    {
+      "gate": "declared_gate1332us",
+      "b1": 0.8,
+      "b0_hz": 0.0,
+      "in_slice_rms_retainedMy_error": 0.031573303326948715,
+      "in_slice_rms_unwantedMx_fromMy": 0.13506480331715173,
+      "in_slice_rms_residualMx_fromMx": 0.1733974786231091,
+      "in_slice_mean_storedMz_fromMx": -0.9744549809244911
+    },
+    {
+      "gate": "declared_gate1332us",
+      "b1": 0.8,
+      "b0_hz": 128.0,
+      "in_slice_rms_retainedMy_error": 0.10115135686040845,
+      "in_slice_rms_unwantedMx_fromMy": 0.2689693133659218,
+      "in_slice_rms_residualMx_fromMx": 0.14486823455032433,
+      "in_slice_mean_storedMz_fromMx": 0.9494346360245594
+    }
+  ]
+}

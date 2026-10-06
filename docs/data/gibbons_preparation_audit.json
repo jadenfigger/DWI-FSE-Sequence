@@ -1,0 +1,217 @@
+{
+  "traces": [
+    {
+      "key": "alsop",
+      "b1": 1.0,
+      "metrics": [
+        {
+          "landmark": "Before added dephasing",
+          "time_ms": 44.7,
+          "max_abs_mx": 0.4736704496872133,
+          "rms_mx": 0.32183924525789886,
+          "rms_my": 0.37868179563899496
+        },
+        {
+          "landmark": "After added dephasing",
+          "time_ms": 45.50000000000001,
+          "max_abs_mx": 0.569638432862381,
+          "rms_mx": 0.3449907886148722,
+          "rms_my": 0.35081507703903114
+        },
+        {
+          "landmark": "After compensated tip",
+          "time_ms": 50.43200000000001,
+          "max_abs_mx": 0.6434561613712751,
+          "rms_mx": 0.31250492216209674,
+          "rms_my": 0.3349468944113811
+        },
+        {
+          "landmark": "Before imaging crusher",
+          "time_ms": 53.67000000000001,
+          "max_abs_mx": 0.617932296840489,
+          "rms_mx": 0.30010884333448745,
+          "rms_my": 0.3216606137427114
+        },
+        {
+          "landmark": "Before RF waveform (old snapshot)",
+          "time_ms": 55.330000000000005,
+          "max_abs_mx": 0.6093014665898958,
+          "rms_mx": 0.3012936913635563,
+          "rms_my": 0.3080354223102543
+        }
+      ],
+      "leading_gz_moment_cycles_m": 4768.227438581501
+    },
+    {
+      "key": "ss_mgot",
+      "b1": 1.0,
+      "metrics": [
+        {
+          "landmark": "Before added dephasing",
+          "time_ms": 32.699999999999996,
+          "max_abs_mx": 0.48103917214185576,
+          "rms_mx": 0.47219018604100477,
+          "rms_my": 0.46653265323257676
+        },
+        {
+          "landmark": "After added dephasing",
+          "time_ms": 33.49999999999999,
+          "max_abs_mx": 0.6593522057359644,
+          "rms_mx": 0.46556680529041994,
+          "rms_my": 0.46383084315926776
+        },
+        {
+          "landmark": "After compensated tip",
+          "time_ms": 38.432,
+          "max_abs_mx": 0.6190535082041093,
+          "rms_mx": 0.43476218286378665,
+          "rms_my": 0.07326158422629234
+        },
+        {
+          "landmark": "After Gy spoiler",
+          "time_ms": 44.432,
+          "max_abs_mx": 1.1536270752881583e-16,
+          "rms_mx": 7.399083063055781e-17,
+          "rms_my": 1.5658329468386423e-17
+        },
+        {
+          "landmark": "After re-excitation / compensation",
+          "time_ms": 52.066,
+          "max_abs_mx": 0.23535510430214962,
+          "rms_mx": 0.09049446391698165,
+          "rms_my": 0.4064893209980158
+        },
+        {
+          "landmark": "Before imaging crusher",
+          "time_ms": 53.669999999999995,
+          "max_abs_mx": 0.2306832265432541,
+          "rms_mx": 0.08869811845623415,
+          "rms_my": 0.39842037163900323
+        },
+        {
+          "landmark": "Before RF waveform (old snapshot)",
+          "time_ms": 55.32999999999999,
+          "max_abs_mx": 0.5815657791787432,
+          "rms_mx": 0.2861174936341789,
+          "rms_my": 0.27923158472503445
+        }
+      ],
+      "leading_gz_moment_cycles_m": 4768.227438581501
+    },
+    {
+      "key": "alsop",
+      "b1": 0.8,
+      "metrics": [
+        {
+          "landmark": "Before added dephasing",
+          "time_ms": 44.7,
+          "max_abs_mx": 0.5815770025418026,
+          "rms_mx": 0.40842618033134087,
+          "rms_my": 0.36244515019422274
+        },
+        {
+          "landmark": "After added dephasing",
+          "time_ms": 45.50000000000001,
+          "max_abs_mx": 0.5871258511997457,
+          "rms_mx": 0.38599839931239177,
+          "rms_my": 0.37852257379061377
+        },
+        {
+          "landmark": "After compensated tip",
+          "time_ms": 50.43200000000001,
+          "max_abs_mx": 0.6316420297239851,
+          "rms_mx": 0.28355519191630496,
+          "rms_my": 0.34888859325566735
+        },
+        {
+          "landmark": "Before imaging crusher",
+          "time_ms": 53.67000000000001,
+          "max_abs_mx": 0.6065867943148344,
+          "rms_mx": 0.2723074570433509,
+          "rms_my": 0.33504928962445074
+        },
+        {
+          "landmark": "Before RF waveform (old snapshot)",
+          "time_ms": 55.330000000000005,
+          "max_abs_mx": 0.6004568359496423,
+          "rms_mx": 0.29701930674165633,
+          "rms_my": 0.3010170160677741
+        }
+      ],
+      "leading_gz_moment_cycles_m": 4768.227438581501
+    },
+    {
+      "key": "ss_mgot",
+      "b1": 0.8,
+      "metrics": [
+        {
+          "landmark": "Before added dephasing",
+          "time_ms": 32.699999999999996,
+          "max_abs_mx": 0.5348775830039973,
+          "rms_mx": 0.5071182313189222,
+          "rms_my": 0.44058947142233623
+        },
+        {
+          "landmark": "After added dephasing",
+          "time_ms": 33.49999999999999,
+          "max_abs_mx": 0.6778641546346766,
+          "rms_mx": 0.4705647175044041,
+          "rms_my": 0.4700220513154841
+        },
+        {
+          "landmark": "After compensated tip",
+          "time_ms": 38.432,
+          "max_abs_mx": 0.637073851723859,
+          "rms_mx": 0.4423679638120272,
+          "rms_my": 0.20998300368221925
+        },
+        {
+          "landmark": "After Gy spoiler",
+          "time_ms": 44.432,
+          "max_abs_mx": 1.2143537242010328e-16,
+          "rms_mx": 7.644347614500206e-17,
+          "rms_my": 3.675671912683976e-17
+        },
+        {
+          "landmark": "After re-excitation / compensation",
+          "time_ms": 52.066,
+          "max_abs_mx": 0.12158842868896398,
+          "rms_mx": 0.04480070648096621,
+          "rms_my": 0.38749098878611377
+        },
+        {
+          "landmark": "Before imaging crusher",
+          "time_ms": 53.669999999999995,
+          "max_abs_mx": 0.11917485759852454,
+          "rms_mx": 0.04391139743108672,
+          "rms_my": 0.37979916269358
+        },
+        {
+          "landmark": "Before RF waveform (old snapshot)",
+          "time_ms": 55.32999999999999,
+          "max_abs_mx": 0.5649502673081004,
+          "rms_mx": 0.2686004682784012,
+          "rms_my": 0.2609353700611258
+        }
+      ],
+      "leading_gz_moment_cycles_m": 4768.227438581501
+    }
+  ],
+  "phase_rotation_prediction_max_error": 1.8207657603852567e-14,
+  "removed_crusher_metrics": {
+    "landmark": "Before RF waveform (old snapshot)",
+    "time_ms": 55.32999999999999,
+    "max_abs_mx": 0.22974270102250496,
+    "rms_mx": 0.08850750510946158,
+    "rms_my": 0.3898716706954446
+  },
+  "source_sha256": {
+    "examples/audit_gibbons_preparation.py": "0558d88f68134c7b331bcb7515ab65a74607c06b2d1a759cf6c8e0f1f3cbfd1c",
+    "examples/compare_prepared_fse.py": "b07e598687d76eec18dde6c53bf565db22a9c5f118cc51452a1e16804b3d22bf",
+    "dwfse/simulate.py": "7df26814d2a200a3c1ca4c135304fab68cd1a10ecbdcb00861b0d8830e81c96e"
+  },
+  "source_pdf_sha256": {
+    "C:/Users/jaden/Downloads/Gibbons_2017.pdf": "21755b13d6feeeac4602267d64793042853b1463adcb04f2e63f2d3af4abdf33",
+    "C:/Users/jaden/Downloads/mrm26971-sup-0001-suppinfo01.pdf": "be49843dacec68f1e31fe023911b11071daead19dbc83a406b536e2dabeaa9e8"
+  }
+}

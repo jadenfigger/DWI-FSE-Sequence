@@ -1,0 +1,1783 @@
+{
+  "scope": "Exact binary library decode/encode and independent embedded-formula oracles; no vendor load/compile/hardware validation",
+  "codec_sha256": "712d17f55491011bec1d78d98cff59512d7b62bc7c670f23e328d5379c1bc3b9",
+  "libraries": [
+    {
+      "name": "19lobsinb.seq",
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45",
+      "bytes": 8178,
+      "format_id": 6,
+      "header_value_retained": 3,
+      "byte_identical_roundtrip": true,
+      "frames": [
+        {
+          "name": "19lobe_sinc_2ms",
+          "wait_ticks": 20,
+          "record_count": 1000,
+          "stored_record_span_us": 2000.0,
+          "expressions_latin1": [
+            "1000, 2047*sinc((\u00d1-500)*10*PI/500);",
+            "1000F,0",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "ca93b9295e7751fe65781200505e8dad9d4ad904fed56093053bbc3aa2ffa8ba",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -444,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 100293
+        }
+      ]
+    },
+    {
+      "name": "9lobsinb.seq",
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403",
+      "bytes": 8177,
+      "format_id": 6,
+      "header_value_retained": 3,
+      "byte_identical_roundtrip": true,
+      "frames": [
+        {
+          "name": "9lobe_sinc_5kHz",
+          "wait_ticks": 20,
+          "record_count": 1000,
+          "stored_record_span_us": 2000.0,
+          "expressions_latin1": [
+            "1000, 2047*sinc((\u00d1-500)*5*PI/500);",
+            "1000F,0",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "aab5abbac40fc7b4e412ed830348467677da8adf957ac862168950ecfbeda10c",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -445,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 212939
+        }
+      ]
+    },
+    {
+      "name": "asym.seq",
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5",
+      "bytes": 8277,
+      "format_id": 6,
+      "header_value_retained": 3,
+      "byte_identical_roundtrip": true,
+      "frames": [
+        {
+          "name": "assym_sinc_1500Hz",
+          "wait_ticks": 40,
+          "record_count": 500,
+          "stored_record_span_us": 2000.0,
+          "expressions_latin1": [
+            "500,2047*sinc((\u00d1-333)*2*PI/333);",
+            "500F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "e4b689874b8bd8a81b5bc51a09012501b41d9acc5dfa85e67a9f295f20b1739f",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -445,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 354768
+        },
+        {
+          "name": "assym_sinc_3kHz",
+          "wait_ticks": 20,
+          "record_count": 500,
+          "stored_record_span_us": 1000.0,
+          "expressions_latin1": [
+            "500,2047*sinc((\u00d1-333)*2*PI/333);",
+            "500F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "e4b689874b8bd8a81b5bc51a09012501b41d9acc5dfa85e67a9f295f20b1739f",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -445,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 354768
+        }
+      ]
+    },
+    {
+      "name": "g3040_15.seq",
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b",
+      "bytes": 28493,
+      "format_id": 5,
+      "header_value_retained": 2,
+      "byte_identical_roundtrip": true,
+      "frames": [
+        {
+          "name": "0_max",
+          "wait_ticks": 1,
+          "record_count": 50,
+          "stored_record_span_us": 5.0,
+          "expressions_latin1": [
+            "50,ramp(0,32767);",
+            ""
+          ],
+          "raw_records_sha256": "844882cf20220489aee48622a49b956bceb38d5cc27ef519ca281654185a0f37",
+          "raw_tail_bytes": 8,
+          "control_word_upper_nibbles": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0
+            ]
+          ],
+          "gradient_signed16_minmax": [
+            [
+              0,
+              32767
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "gradient_normalized_sums": [
+            24.520004882961516,
+            0.0
+          ]
+        },
+        {
+          "name": "max_0",
+          "wait_ticks": 1,
+          "record_count": 50,
+          "stored_record_span_us": 5.0,
+          "expressions_latin1": [
+            "50,ramp(32767,0);",
+            ""
+          ],
+          "raw_records_sha256": "443e0b32e704691f5d56c7694434142c92ff9a95812d94710a969e907ba0f969",
+          "raw_tail_bytes": 8,
+          "control_word_upper_nibbles": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0
+            ]
+          ],
+          "gradient_signed16_minmax": [
+            [
+              0,
+              32767
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "gradient_normalized_sums": [
+            25.48002563554796,
+            0.0
+          ]
+        },
+        {
+          "name": "0_min",
+          "wait_ticks": 1,
+          "record_count": 50,
+          "stored_record_span_us": 5.0,
+          "expressions_latin1": [
+            "50,ramp(0,-32767)",
+            ""
+          ],
+          "raw_records_sha256": "cdb9f9a787c0e0771c0a42773b16263d2d2d4e06d3cb696d875c8434d556943f",
+          "raw_tail_bytes": 8,
+          "control_word_upper_nibbles": [
+            [
+              0,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            [
+              0
+            ]
+          ],
+          "gradient_signed16_minmax": [
+            [
+              -32767,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "gradient_normalized_sums": [
+            -24.520004882961516,
+            0.0
+          ]
+        },
+        {
+          "name": "min_0",
+          "wait_ticks": 1,
+          "record_count": 50,
+          "stored_record_span_us": 5.0,
+          "expressions_latin1": [
+            "50,ramp(-32767,0);",
+            ""
+          ],
+          "raw_records_sha256": "8706c2834154b2cc17ced540ffc8531953743099791442a6f2da7b77d9143d2c",
+          "raw_tail_bytes": 8,
+          "control_word_upper_nibbles": [
+            [
+              0,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            [
+              0
+            ]
+          ],
+          "gradient_signed16_minmax": [
+            [
+              -32767,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "gradient_normalized_sums": [
+            -25.48002563554796,
+            0.0
+          ]
+        },
+        {
+          "name": "max_p_s",
+          "wait_ticks": 1,
+          "record_count": 50,
+          "stored_record_span_us": 5.0,
+          "expressions_latin1": [
+            "50,ramp(32767,0);",
+            "50,ramp(0,32767);"
+          ],
+          "raw_records_sha256": "950157ed509325ea3dd346608f8ede72454f71bc700c0bdd1cc98bc3d5f94eb1",
+          "raw_tail_bytes": 8,
+          "control_word_upper_nibbles": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "gradient_signed16_minmax": [
+            [
+              0,
+              32767
+            ],
+            [
+              0,
+              32767
+            ]
+          ],
+          "gradient_normalized_sums": [
+            25.48002563554796,
+            24.520004882961516
+          ]
+        },
+        {
+          "name": "mx_0_sec",
+          "wait_ticks": 1,
+          "record_count": 50,
+          "stored_record_span_us": 5.0,
+          "expressions_latin1": [
+            "",
+            "50,ramp(32767,0);"
+          ],
+          "raw_records_sha256": "e6d0b898f92ed79281f71dc4e22e68b6b2803f6a98c20e6ae6968c0e3815ddfd",
+          "raw_tail_bytes": 8,
+          "control_word_upper_nibbles": [
+            [
+              0
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "gradient_signed16_minmax": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              32767
+            ]
+          ],
+          "gradient_normalized_sums": [
+            0.0,
+            25.48002563554796
+          ]
+        },
+        {
+          "name": "0_max_50",
+          "wait_ticks": 20,
+          "record_count": 50,
+          "stored_record_span_us": 100.0,
+          "expressions_latin1": [
+            "50,ramp(0,32767);",
+            ""
+          ],
+          "raw_records_sha256": "844882cf20220489aee48622a49b956bceb38d5cc27ef519ca281654185a0f37",
+          "raw_tail_bytes": 8,
+          "control_word_upper_nibbles": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0
+            ]
+          ],
+          "gradient_signed16_minmax": [
+            [
+              0,
+              32767
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "gradient_normalized_sums": [
+            24.520004882961516,
+            0.0
+          ]
+        },
+        {
+          "name": "max_0_50",
+          "wait_ticks": 20,
+          "record_count": 50,
+          "stored_record_span_us": 100.0,
+          "expressions_latin1": [
+            "50,ramp(32767,0);",
+            ""
+          ],
+          "raw_records_sha256": "443e0b32e704691f5d56c7694434142c92ff9a95812d94710a969e907ba0f969",
+          "raw_tail_bytes": 8,
+          "control_word_upper_nibbles": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0
+            ]
+          ],
+          "gradient_signed16_minmax": [
+            [
+              0,
+              32767
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "gradient_normalized_sums": [
+            25.48002563554796,
+            0.0
+          ]
+        },
+        {
+          "name": "min_p_s",
+          "wait_ticks": 1,
+          "record_count": 50,
+          "stored_record_span_us": 5.0,
+          "expressions_latin1": [
+            "50,ramp(-32767,0);",
+            "50,ramp(0,-32767);"
+          ],
+          "raw_records_sha256": "96a2d167848f00199b1d50ae934d124cc88f04bfaca7da7dbebd13055c7c8026",
+          "raw_tail_bytes": 8,
+          "control_word_upper_nibbles": [
+            [
+              0,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            [
+              0,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          ],
+          "gradient_signed16_minmax": [
+            [
+              -32767,
+              0
+            ],
+            [
+              -32767,
+              0
+            ]
+          ],
+          "gradient_normalized_sums": [
+            -25.48002563554796,
+            -24.520004882961516
+          ]
+        },
+        {
+          "name": "mn_0_sec",
+          "wait_ticks": 1,
+          "record_count": 50,
+          "stored_record_span_us": 5.0,
+          "expressions_latin1": [
+            "",
+            "50,ramp(-32767,0);"
+          ],
+          "raw_records_sha256": "2fd47f801500d900d54546afb56898936719e09306bbb126db201cd95a4ab250",
+          "raw_tail_bytes": 8,
+          "control_word_upper_nibbles": [
+            [
+              0
+            ],
+            [
+              0,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          ],
+          "gradient_signed16_minmax": [
+            [
+              0,
+              0
+            ],
+            [
+              -32767,
+              0
+            ]
+          ],
+          "gradient_normalized_sums": [
+            0.0,
+            -25.0
+          ]
+        },
+        {
+          "name": "zeros",
+          "wait_ticks": 1,
+          "record_count": 50,
+          "stored_record_span_us": 5.0,
+          "expressions_latin1": [
+            "50,0;",
+            "50,0;"
+          ],
+          "raw_records_sha256": "6d9c54dee5660c46886f32d80e57e9dd0ffa57ee0cd2a762b036d9c8e0c3a33a",
+          "raw_tail_bytes": 8,
+          "control_word_upper_nibbles": [
+            [
+              0
+            ],
+            [
+              0
+            ]
+          ],
+          "gradient_signed16_minmax": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "gradient_normalized_sums": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "0_mx_sec",
+          "wait_ticks": 1,
+          "record_count": 50,
+          "stored_record_span_us": 5.0,
+          "expressions_latin1": [
+            "",
+            "50,ramp(0,32767);"
+          ],
+          "raw_records_sha256": "f1f966249067b6fcde43d59000a5cddc1a801ec3cb15a9bbfc907eb8d1536560",
+          "raw_tail_bytes": 8,
+          "control_word_upper_nibbles": [
+            [
+              0
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "gradient_signed16_minmax": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              32767
+            ]
+          ],
+          "gradient_normalized_sums": [
+            0.0,
+            25.0
+          ]
+        },
+        {
+          "name": "0_mn_sec",
+          "wait_ticks": 1,
+          "record_count": 50,
+          "stored_record_span_us": 5.0,
+          "expressions_latin1": [
+            "",
+            "50,ramp(0,-32767);"
+          ],
+          "raw_records_sha256": "0c850869f17aa72d291279655d06ce4b9592236d68d7d43a23e1ee41cb1845e5",
+          "raw_tail_bytes": 8,
+          "control_word_upper_nibbles": [
+            [
+              0
+            ],
+            [
+              0,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          ],
+          "gradient_signed16_minmax": [
+            [
+              0,
+              0
+            ],
+            [
+              -32767,
+              0
+            ]
+          ],
+          "gradient_normalized_sums": [
+            0.0,
+            -25.0
+          ]
+        },
+        {
+          "name": "EPI_100us_3loop",
+          "wait_ticks": 1,
+          "record_count": 6172,
+          "stored_record_span_us": 617.2,
+          "expressions_latin1": [
+            "866,0;100,ramp(0,-32767);1280,-32767;100,ramp(-32767,0); 100,ramp(0,32767);1280,32767;100,ramp(32767,0); 100,ramp(0,-32767);1280,-32767;100,ramp(-32767,0);866,0;",
+            "100,ramp(0,32767);666,32767;100,ramp(32767,0); 4440,0;100,ramp(0,32767);666,32767;100,ramp(32767,0);"
+          ],
+          "raw_records_sha256": "51736c2665e7a86b3bc60233a265a3bed7d2bb19e060be45d6b8bbd0bdeeed74",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "gradient_signed16_minmax": [
+            [
+              -32767,
+              32767
+            ],
+            [
+              0,
+              32767
+            ]
+          ],
+          "gradient_normalized_sums": [
+            -1380.0,
+            1532.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "gs_240hz.seq",
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef",
+      "bytes": 8179,
+      "format_id": 6,
+      "header_value_retained": 3,
+      "byte_identical_roundtrip": true,
+      "frames": [
+        {
+          "name": "gauss_240Hz",
+          "wait_ticks": 75,
+          "record_count": 1000,
+          "stored_record_span_us": 7500.0,
+          "expressions_latin1": [
+            "1000, 2047*exp(-PI*((\u00d1-500)^2)/261800);",
+            "1000F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "7f4728e96dcf2abcb80c1f6726830214491a512b9ea15c4ded821d23bd20c4e9",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": 102,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 1032387
+        }
+      ]
+    },
+    {
+      "name": "hypsec.seq",
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8",
+      "bytes": 20916,
+      "format_id": 6,
+      "header_value_retained": 3,
+      "byte_identical_roundtrip": true,
+      "frames": [
+        {
+          "name": "hypsec_1500Hz",
+          "wait_ticks": 200,
+          "record_count": 500,
+          "stored_record_span_us": 10000.0,
+          "expressions_latin1": [
+            "500AP,\r\n2047*(1/cosh(1250*0.016*(\u00d1-250)/1000))\r\n^(1+i*5);",
+            "500AP,\r\n2047*(1/cosh(1250*0.016*(\u00d1-250)/1000))\r\n^(1+i*5);",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "7dce652908c239273b22911c9b21d600ddd50c532f40f18cde74e97e57488f5a",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              4
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0
+            ]
+          ],
+          "amplitude_signed12_min": 28,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 318761
+        },
+        {
+          "name": "hypsec_1875Hz",
+          "wait_ticks": 160,
+          "record_count": 500,
+          "stored_record_span_us": 8000.0,
+          "expressions_latin1": [
+            "500AP,\r\n2047*(1/cosh(1250*0.016*(\u00d1-250)/1000))\r\n^(1+i*5);",
+            "500AP,\r\n2047*(1/cosh(1250*0.016*(\u00d1-250)/1000))\r\n^(1+i*5);",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "7dce652908c239273b22911c9b21d600ddd50c532f40f18cde74e97e57488f5a",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              4
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0
+            ]
+          ],
+          "amplitude_signed12_min": 28,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 318761
+        },
+        {
+          "name": "hypsec_3000Hz",
+          "wait_ticks": 100,
+          "record_count": 500,
+          "stored_record_span_us": 5000.0,
+          "expressions_latin1": [
+            "500AP,2047*(1/cosh(1250*0.016*(\u00d1-250)/1000))^(1+i*5);",
+            "500AP,2047*(1/cosh(1250*0.016*(\u00d1-250)/1000))^(1+i*5);",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "7dce652908c239273b22911c9b21d600ddd50c532f40f18cde74e97e57488f5a",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              4
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0
+            ]
+          ],
+          "amplitude_signed12_min": 28,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 318761
+        },
+        {
+          "name": "hypsec_3750Hz",
+          "wait_ticks": 80,
+          "record_count": 500,
+          "stored_record_span_us": 4000.0,
+          "expressions_latin1": [
+            "500AP,2047*(1/cosh(1250*0.016*(\u00d1-250)/1000))^(1+i*5);",
+            "500AP,2047*(1/cosh(1250*0.016*(\u00d1-250)/1000))^(1+i*5);",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "7dce652908c239273b22911c9b21d600ddd50c532f40f18cde74e97e57488f5a",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              4
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0
+            ]
+          ],
+          "amplitude_signed12_min": 28,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 318761
+        },
+        {
+          "name": "hypsec_7500Hz",
+          "wait_ticks": 40,
+          "record_count": 500,
+          "stored_record_span_us": 2000.0,
+          "expressions_latin1": [
+            "500AP,2047*(1/cosh(1250*0.016*(\u00d1-250)/1000))^(1+i*5);",
+            "500AP,2047*(1/cosh(1250*0.016*(\u00d1-250)/1000))^(1+i*5);",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "7dce652908c239273b22911c9b21d600ddd50c532f40f18cde74e97e57488f5a",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              4
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0
+            ]
+          ],
+          "amplitude_signed12_min": 28,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 318761
+        }
+      ]
+    },
+    {
+      "name": "opt90_a.seq",
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444",
+      "bytes": 4189,
+      "format_id": 6,
+      "header_value_retained": 3,
+      "byte_identical_roundtrip": true,
+      "frames": [
+        {
+          "name": "ord90_1500Hz",
+          "wait_ticks": 20,
+          "record_count": 500,
+          "stored_record_span_us": 1000.0,
+          "expressions_latin1": [
+            "500,user(\"ord90.txt\");",
+            "500 F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "497b0790b15df35dde2a2a2d58ae551c8173f96f93f5af5a8565911b7342d84e",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -304,
+          "amplitude_signed12_max": 2032,
+          "amplitude_signed12_sum": 194688
+        }
+      ]
+    },
+    {
+      "name": "opt90_as.seq",
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff",
+      "bytes": 5323,
+      "format_id": 6,
+      "header_value_retained": 3,
+      "byte_identical_roundtrip": true,
+      "frames": [
+        {
+          "name": "ord90_1500Hz_short",
+          "wait_ticks": 70,
+          "record_count": 376,
+          "stored_record_span_us": 2632.0,
+          "expressions_latin1": [
+            "500,user(\"ord90s.txt\");",
+            "376 F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "f47e95da110f5449f67535870d90e24da877f3d4a1f0c9a9ec174bb84811e42a",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -304,
+          "amplitude_signed12_max": 2032,
+          "amplitude_signed12_sum": 187664
+        }
+      ]
+    },
+    {
+      "name": "presat.seq",
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134",
+      "bytes": 52650,
+      "format_id": 6,
+      "header_value_retained": 3,
+      "byte_identical_roundtrip": true,
+      "frames": [
+        {
+          "name": "5sinc_7_5cos_6ms",
+          "wait_ticks": 30,
+          "record_count": 2000,
+          "stored_record_span_us": 6000.0,
+          "expressions_latin1": [
+            "2000,2047*sinc((\u00d1-1000)*3*PI/1000)*cos((\u00d1-1000)*7.5*PI/1000);",
+            "2000F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "edcf80ce2f5c3af8736a37f4128958755a2da283e045473c06495684638d8f8e",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -1575,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 851
+        },
+        {
+          "name": "5sinc_5_5cos_2ms",
+          "wait_ticks": 20,
+          "record_count": 1000,
+          "stored_record_span_us": 2000.0,
+          "expressions_latin1": [
+            "1000,2047*sinc((\u00d1-500)*3*PI/500)*cos((\u00d1-500)*5.5*PI/500);",
+            "1000F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "e70e04932fc21a6210ab2de7573adb10b1e47c41e9353bd0a14299ed88fb6267",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -1262,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 1453
+        },
+        {
+          "name": "7sinc_8cos_4ms_gw",
+          "wait_ticks": 20,
+          "record_count": 2000,
+          "stored_record_span_us": 4000.0,
+          "expressions_latin1": [
+            "2000,2047*sinc((\u00d1-1000)*4*PI/1000)*cos((\u00d1-1000)*8*PI/1000)*exp( -(1.1* (\u00d1-1000)/1000)^2);",
+            "2000F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "db89f19a56816691851affb04ce08ceb4d028ec842cb2781f0462168da375fe2",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -1340,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 2351
+        },
+        {
+          "name": "13sinc_18cos_6ms_gw",
+          "wait_ticks": 40,
+          "record_count": 1500,
+          "stored_record_span_us": 6000.0,
+          "expressions_latin1": [
+            "1500,2047*sinc((\u00d1-750)*7*PI/750)*cos((\u00d1-750)*18*PI/750)*exp( -(1.1* (\u00d1-750)/750)^2);",
+            "1500F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "295c7a7d1a631d16c3c9e4ca0a777ec160f4f143c7e40a5ae242c0b449b7b013",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -1591,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": -329
+        }
+      ]
+    },
+    {
+      "name": "rfchess.seq",
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b",
+      "bytes": 8179,
+      "format_id": 6,
+      "header_value_retained": 3,
+      "byte_identical_roundtrip": true,
+      "frames": [
+        {
+          "name": "gauss",
+          "wait_ticks": 200,
+          "record_count": 1000,
+          "stored_record_span_us": 20000.0,
+          "expressions_latin1": [
+            "1,0;998,2047*exp(-PI*((\u00d1-500)^2)/261800);1,0;",
+            "1000F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "3d9a5bcaef205d2f0a159373500bf5b4002aad987ef721c17edb774dbb6378a9",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": 0,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 1032180
+        }
+      ]
+    },
+    {
+      "name": "rfstd44.seq",
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29",
+      "bytes": 62325,
+      "format_id": 6,
+      "header_value_retained": 3,
+      "byte_identical_roundtrip": true,
+      "frames": [
+        {
+          "name": "rf_analog_on",
+          "wait_ticks": 20,
+          "record_count": 4,
+          "stored_record_span_us": 8.0,
+          "expressions_latin1": [
+            "3,0;1,2047;",
+            "4F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "d4766c9f773e9cc68d5218f19ef1f43000944de0e131ca33b191e603ee411306",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": 0,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 2047
+        },
+        {
+          "name": "rf_off",
+          "wait_ticks": 20,
+          "record_count": 4,
+          "stored_record_span_us": 8.0,
+          "expressions_latin1": [
+            "4,0;",
+            "",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "af31b06a503ab312a1d2138ff678ad4cb38c3e69d6d8d55e526a9bc706507b40",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              1
+            ],
+            [
+              4
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0
+            ]
+          ],
+          "amplitude_signed12_min": 0,
+          "amplitude_signed12_max": 0,
+          "amplitude_signed12_sum": 0
+        },
+        {
+          "name": "5lobe_sinc_750Hz",
+          "wait_ticks": 80,
+          "record_count": 1000,
+          "stored_record_span_us": 8000.0,
+          "expressions_latin1": [
+            "1000,2047*sinc((\u00d1-500)*3*PI/500);",
+            "1000F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "dac23a4e5b4ffe31d0b57934eeb753ad64d0cc9072e00b1c6db26b3db684433c",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -445,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 363743
+        },
+        {
+          "name": "5lobe_sinc_1500Hz",
+          "wait_ticks": 40,
+          "record_count": 1000,
+          "stored_record_span_us": 4000.0,
+          "expressions_latin1": [
+            "1000,2047*sinc((\u00d1-500)*3*PI/500);",
+            "1000F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "dac23a4e5b4ffe31d0b57934eeb753ad64d0cc9072e00b1c6db26b3db684433c",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -445,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 363743
+        },
+        {
+          "name": "3lobe_sinc_750Hz",
+          "wait_ticks": 80,
+          "record_count": 668,
+          "stored_record_span_us": 5344.0,
+          "expressions_latin1": [
+            "1,0;666,2047*sinc((\u00d1-333)*2*PI/333);1,0;",
+            "668F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "03a505f1bd42ff6c9faa16139904181a57e184347cfc7ffd56d89091d0756c21",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -445,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 307705
+        },
+        {
+          "name": "3lobe_sinc_1500Hz",
+          "wait_ticks": 40,
+          "record_count": 668,
+          "stored_record_span_us": 2672.0,
+          "expressions_latin1": [
+            "1,0;666,2047*sinc((\u00d1-333)*2*PI/333);1,0;",
+            "668F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "03a505f1bd42ff6c9faa16139904181a57e184347cfc7ffd56d89091d0756c21",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -445,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 307705
+        },
+        {
+          "name": "3lobe_sinc_3kHz",
+          "wait_ticks": 20,
+          "record_count": 668,
+          "stored_record_span_us": 1336.0,
+          "expressions_latin1": [
+            "1,0;666,2047*sinc((\u00d1-333)*2*PI/333);1,0;",
+            "668F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "03a505f1bd42ff6c9faa16139904181a57e184347cfc7ffd56d89091d0756c21",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -445,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 307705
+        },
+        {
+          "name": "5lobe_sinc_3kHz",
+          "wait_ticks": 20,
+          "record_count": 1000,
+          "stored_record_span_us": 2000.0,
+          "expressions_latin1": [
+            "1000,2047*sinc((\u00d1-500)*3*PI/500);",
+            "1000F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "dac23a4e5b4ffe31d0b57934eeb753ad64d0cc9072e00b1c6db26b3db684433c",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -445,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 363743
+        },
+        {
+          "name": "5lobe_sinc_6KHz",
+          "wait_ticks": 20,
+          "record_count": 500,
+          "stored_record_span_us": 1000.0,
+          "expressions_latin1": [
+            "500,2047*sinc((\u00d1-250)*3*PI/250);",
+            "500F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "a0fb071624e476f94a617b59472c8b1ab8fe1b491a2e52dc0fd78c853c699750",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -445,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 181883
+        },
+        {
+          "name": "3lobe_sinc_6kHz",
+          "wait_ticks": 20,
+          "record_count": 332,
+          "stored_record_span_us": 664.0,
+          "expressions_latin1": [
+            "332,2047*sinc((\u00d1-166)*2*PI/166);",
+            "332F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "de371685814930cc8ad6c1ccf35d1231017c10eb613bc42c24670a32fcd7f7b7",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -445,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 153405
+        },
+        {
+          "name": "3lobe_sinc_4kHz",
+          "wait_ticks": 20,
+          "record_count": 500,
+          "stored_record_span_us": 1000.0,
+          "expressions_latin1": [
+            "500,2047*sinc((\u00d1-250)*2*PI/250);",
+            "500F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "062b27b409b41e179bf43b56e06ecb22bd709e5504df8c0f7dc48f07b50c2975",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -445,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 231013
+        },
+        {
+          "name": "3lobe_sinc_8kHz",
+          "wait_ticks": 20,
+          "record_count": 248,
+          "stored_record_span_us": 496.0,
+          "expressions_latin1": [
+            "248,2047*sinc((\u00d1-124)*2*PI/124)",
+            "",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "afb00de6ae85811085155297fdbfc3205cb0b45c8f89a8e92904c4f43a7e0fc5",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              1
+            ],
+            [
+              4
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0
+            ]
+          ],
+          "amplitude_signed12_min": -445,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 114589
+        },
+        {
+          "name": "5lobe_sinc_12kHz",
+          "wait_ticks": 20,
+          "record_count": 248,
+          "stored_record_span_us": 496.0,
+          "expressions_latin1": [
+            "248,2047*sinc((\u00d1-124)*3*PI/124)",
+            "",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "9cdcc28bb2334651f3b8c4468f19234c40a372124b184978e3fc2ccb41b3d138",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              1
+            ],
+            [
+              4
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0
+            ]
+          ],
+          "amplitude_signed12_min": -445,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 90209
+        },
+        {
+          "name": "3lobe_sinc_11800Hz",
+          "wait_ticks": 20,
+          "record_count": 168,
+          "stored_record_span_us": 336.0,
+          "expressions_latin1": [
+            "248,2047*sinc((\u00d1-84)*2*PI/84)",
+            "",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "40e933564f3051fe49964e3d3552034c4ecc2e3b3c234b82b1adf67b36f3006f",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              1
+            ],
+            [
+              4
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0
+            ]
+          ],
+          "amplitude_signed12_min": -445,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 77619
+        },
+        {
+          "name": "5lobe_sinc_5kHz",
+          "wait_ticks": 20,
+          "record_count": 320,
+          "stored_record_span_us": 640.0,
+          "expressions_latin1": [
+            "320,2047*sinc((\u00d1-160)*3*PI/160);",
+            "320F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "bb27d45e702c85cfae1ececfeb30b17edb80bcad2b70377c7b35e1ea8185e187",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -445,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 116403
+        },
+        {
+          "name": "5lobe_sinc_11538Hz",
+          "wait_ticks": 20,
+          "record_count": 260,
+          "stored_record_span_us": 520.0,
+          "expressions_latin1": [
+            "260,2047*sinc((\u00d1-130)*3*PI/130)",
+            "260F,0;",
+            "",
+            ""
+          ],
+          "raw_records_sha256": "ac185963f8325dae6bec41587fcadaa5cf8140ac6767d202982d281a2f875db8",
+          "raw_tail_bytes": 0,
+          "control_word_upper_nibbles": [
+            [
+              3
+            ],
+            [
+              13
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ]
+          ],
+          "amplitude_signed12_min": -445,
+          "amplitude_signed12_max": 2047,
+          "amplitude_signed12_sum": 94575
+        }
+      ]
+    }
+  ],
+  "embedded_formula_checks": {
+    "rf_sinc_exact_all_668_records": true,
+    "primary_ramp_exact_50_records": true,
+    "rf_active_interior_us": 1332.0,
+    "rf_stored_span_us": 1336.0,
+    "rf_gate_note": "Active interior 1332us vs stored span1336us. Do not add guard records to nominal PPL RF length or infer physical gate latency.",
+    "gradient_note": "Primary0_max is j/50 with forced final endpoint, not linspace(j/49). Integrate actual samples using verified hold/continuation semantics.",
+    "complex_phase_encoding": "Unresolved for AP frames; raw bits retained. No new complex RF encoding asserted."
+  }
+}

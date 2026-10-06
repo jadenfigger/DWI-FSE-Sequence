@@ -1,0 +1,51 @@
+{
+  "scope": "source preservation and explicit execution blocking only",
+  "ss_mgot_mechanism_implemented": false,
+  "vendor_compilation_attempted": false,
+  "played_event_mapping_verified": false,
+  "ppl_scheduled_waveforms_simulated": false,
+  "scanner_verified": false,
+  "supplied_v18_hashes_match": true,
+  "v191_ppl_only_header_and_gates_changed": true,
+  "v191_ppr_only_ppl_reference_changed": true,
+  "compile_gate_deliberately_absent": true,
+  "runtime_gate_before_hardware_statement": true,
+  "input_and_output_sha256": {
+    "scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl": "3b420376331e918b4c864e9b37937ef35fd9f49066b8d6402e44aae9da598db2",
+    "scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppr": "78c9845d090183d59cba956f36305e0e19d4a8dcdb3ae707062839159fd904da",
+    "scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppl": "9506f8feb989fec09cc1d4a3063a73d5aa63aff7932f50dedef5c726f7b54519",
+    "scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppr": "0085c4ea4567ab34b184e9e5a1420e9013cd1d70899889a918433da2fdc491af"
+  },
+  "includes": {
+    "stdfn_15.pph": {
+      "present": true,
+      "path": "scanner\\utilities\\stdfn_15.pph",
+      "sha256": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3"
+    },
+    "var_20.pph": {
+      "present": true,
+      "path": "scanner\\utilities\\var_20.pph",
+      "sha256": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb"
+    },
+    "offst_20.pph": {
+      "present": true,
+      "path": "scanner\\utilities\\offst_20.pph",
+      "sha256": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516"
+    },
+    "m3040_15.pph": {
+      "present": true,
+      "path": "scanner\\utilities\\m3040_15.pph",
+      "sha256": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d"
+    },
+    "m3031_15.pph": {
+      "present": true,
+      "path": "scanner\\utilities\\m3031_15.pph",
+      "sha256": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c"
+    },
+    "tstex_15.pph": {
+      "present": true,
+      "path": "scanner\\utilities\\tstex_15.pph",
+      "sha256": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    }
+  }
+}

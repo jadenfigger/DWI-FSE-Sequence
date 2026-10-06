@@ -1,0 +1,17 @@
+Iterating on spectral sampling frequency to reduce B1
+Note: Spectral Correction for SLR pulses only corrects base bandwidth (not aliased bands)
+Band: 1/1 Iter: 1/5 Fs:  954.2 B1: 0.227G Power: 1.003e-05 G^2 ms Dur:  6.1ms
+Note: Spectral Correction for SLR pulses only corrects base bandwidth (not aliased bands)
+Band: 1/1 Iter: 2/5 Fs:  874.1 B1: 0.175G Power: 7.679e-06 G^2 ms Dur:  6.7ms
+Failed to get filter
+Band: 1/1 Iter: 3/5 Fs:  811.7 *** No Soln ***
+Failed to get filter
+Band: 1/1 Iter: 4/5 Fs:  746.3 *** No Soln ***
+Failed to get filter
+Band: 1/1 Iter: 5/5 Fs:  683.1 *** No Soln ***
+
+Solution(s) exists!
+1) Fs:  954.2 B1: 0.227G Power: 1.003e-05 G^2 ms Dur:  6.1ms
+2) Fs:  874.1 B1: 0.175G Power: 7.679e-06 G^2 ms Dur:  6.7ms
+Returning Fs:  874.1 B1: 0.175G Power: 7.679e-06 G^2 ms Dur:  6.7ms
+Duration 0.006676 s; spectral sampling 874.125874 Hz; peak B1 0.174739279 G; peak G 2.27942399 G/cm

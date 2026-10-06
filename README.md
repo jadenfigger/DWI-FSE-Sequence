@@ -12,6 +12,18 @@ and B1/B0 robustness. The original scanner files and generator defaults remain a
 Tests 41 configurations with held-out validation, independent pathway/tensor audits,
 and a spatial phantom whose sampling failure prevents image-quality ranking.
 
+**Signed magnetization profiles:** [Mx, My and Mz explanation and Figure 3 comparison](docs/magnetization_components.md),
+with a [figure gallery](docs/figures/magnetization_components/index.html) for crusher
+and RF variants before refocusing/acquisition and at ADC centers.
+
+**Alsop and ss-MGOT preparation models:** [comparison and limitations](docs/prepared_fse_comparison.md),
+with [two simulation `.seq` files](examples/sequences) and a
+[figure gallery](docs/figures/prepared_fse_comparison/index.html) against the original,
+increasing, decreasing and alternating crusher schedules.
+
+**Gibbons replication audit (6 October):** [measured causes of the mismatch](docs/gibbons_replication_audit.md),
+including corrected preparation-endpoint plots, a crusher phase control and an independent Bloch ODE check.
+
 **Scanner v1.7:** [implementation, experimental PPRs, validation and reproduction](docs/scanner_v17.md).
 Adds bounded signed crusher schedules, fixes independent-crusher centering and
 guards PE0 scratch memory. Select a `twoTE-1.7*.ppr` explicitly; defaults still

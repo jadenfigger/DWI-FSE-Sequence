@@ -1,0 +1,7684 @@
+{
+  "protocol": "v1.6 ETL8 controlled comparison, original centering",
+  "paper_reference_status": "Gibbons et al., DOI 10.1002/mrm.26971, Figure 3 inspected; not a reproduction of their sequences",
+  "paper_source_sha256": "21755b13d6feeeac4602267d64793042853b1463adcb04f2e63f2d3af4abdf33",
+  "grid_count": 8193,
+  "ensemble_count": 8192,
+  "seed": 1,
+  "rf_step_s": 2e-06,
+  "T1_s": 1.5,
+  "T2_s": 0.08,
+  "T2prime_ensemble_s": 0.03,
+  "line": {
+    "x_m": 0,
+    "y_m": 0,
+    "df_hz": 0,
+    "z_range_mm": [
+      -1,
+      1
+    ]
+  },
+  "normalization": "individual equilibrium M0=1",
+  "frame": "common simulation rotating frame, Mxy=Mx+iMy, free precession exp(-i phi); no receiver rotation of plots",
+  "diffusion": "stationary spins; played diffusion gradients, no molecular diffusion attenuation",
+  "sources": {
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppl": "c0e551e76234c8113eb2953dcf9c2bc9e427eee18264199e98b3edd2c2abfd0c",
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppr": "00bd9e78573133e5df09da9fa64cf424bf6e338e05a1872ff916c3c03bc315ee",
+    "dwfse/generate.py": "afff13793b7d326a43423cf193751d8de4c82f0ffbcef83915c9a5f4766b6990",
+    "dwfse/simulate.py": "7df26814d2a200a3c1ca4c135304fab68cd1a10ecbdcb00861b0d8830e81c96e",
+    "examples/compare_magnetization_components.py": "840660dd203c46157d168bb22c0d35eb3ac30c83122ed258d7535925446d565d"
+  },
+  "dependencies": {
+    "numpy": "2.1.0",
+    "matplotlib": "3.9.2",
+    "pypulseq": "1.5.0.post1"
+  },
+  "timing": [
+    {
+      "key": "original",
+      "phase": 0.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 270.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 0.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "sequence_sha256": "99f60a390a0254ed3fa4c2d157847468ca5dff9b891eb2c7461b4854fc2ad947"
+    },
+    {
+      "key": "original",
+      "phase": 45.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 270.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 45.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "sequence_sha256": "ce788646b7334cab5b06c80a7f34987379f3be31fea2baedf3087cfa18cecfae"
+    },
+    {
+      "key": "original",
+      "phase": 90.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 270.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 90.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "sequence_sha256": "199c83b41f14deba791f25d6604347b847bd6f29e536757bc02693b1ee2b3c59"
+    },
+    {
+      "key": "increasing",
+      "phase": 0.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 270.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        7675,
+        9868,
+        12060,
+        14253,
+        16446,
+        18639
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 0.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1.4,
+          1.8,
+          2.2,
+          2.6,
+          3,
+          3.4
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "sequence_sha256": "05fb1ba5f10cf419feb28f356fc13684682b75c93bcd25e5df9c09f02ca1c94f"
+    },
+    {
+      "key": "increasing",
+      "phase": 45.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 270.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        7675,
+        9868,
+        12060,
+        14253,
+        16446,
+        18639
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 45.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1.4,
+          1.8,
+          2.2,
+          2.6,
+          3,
+          3.4
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "sequence_sha256": "96925ef7cca218c48f39595ee6c063d94eaeff9553088b7a66f35d8715fb5243"
+    },
+    {
+      "key": "increasing",
+      "phase": 90.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 270.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        7675,
+        9868,
+        12060,
+        14253,
+        16446,
+        18639
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 90.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1.4,
+          1.8,
+          2.2,
+          2.6,
+          3,
+          3.4
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "sequence_sha256": "0749d325027e8aafa2a8056dae5e9e49ccc123794758357c31183a27e5c92baf"
+    },
+    {
+      "key": "increasing_alternating",
+      "phase": 0.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 270.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        -5482,
+        7675,
+        -9868,
+        12060,
+        -14253,
+        16446,
+        -18639
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 0.0,
+        "sim_train_crusher_scales": [
+          1,
+          -1,
+          1.4,
+          -1.8,
+          2.2,
+          -2.6,
+          3,
+          -3.4
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "sequence_sha256": "a3b0fedec2a5783aabccef3dba3c39781a0807a4eeb75b4313e1b2a71000da9a"
+    },
+    {
+      "key": "increasing_alternating",
+      "phase": 45.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 270.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        -5482,
+        7675,
+        -9868,
+        12060,
+        -14253,
+        16446,
+        -18639
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 45.0,
+        "sim_train_crusher_scales": [
+          1,
+          -1,
+          1.4,
+          -1.8,
+          2.2,
+          -2.6,
+          3,
+          -3.4
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "sequence_sha256": "4f32e16e755625542a94d5a9b6aafd299f963ca0e1052a0e5131618003d1b085"
+    },
+    {
+      "key": "increasing_alternating",
+      "phase": 90.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 270.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        -5482,
+        7675,
+        -9868,
+        12060,
+        -14253,
+        16446,
+        -18639
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 90.0,
+        "sim_train_crusher_scales": [
+          1,
+          -1,
+          1.4,
+          -1.8,
+          2.2,
+          -2.6,
+          3,
+          -3.4
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "sequence_sha256": "8ffb4fcdec7c44ccff0fa194973fb85777ba6db2f9bf53239c1952475bb34702"
+    },
+    {
+      "key": "decreasing",
+      "phase": 0.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 270.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        18639,
+        16446,
+        14253,
+        12060,
+        9868,
+        7675,
+        5482
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 0.0,
+        "sim_train_crusher_scales": [
+          1,
+          3.4,
+          3,
+          2.6,
+          2.2,
+          1.8,
+          1.4,
+          1
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "sequence_sha256": "73092edacd2fd5d862e588c9b2c14ab636fe5276207e16d0ec12d2d7c000ab3f"
+    },
+    {
+      "key": "decreasing",
+      "phase": 45.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 270.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        18639,
+        16446,
+        14253,
+        12060,
+        9868,
+        7675,
+        5482
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 45.0,
+        "sim_train_crusher_scales": [
+          1,
+          3.4,
+          3,
+          2.6,
+          2.2,
+          1.8,
+          1.4,
+          1
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "sequence_sha256": "a6cfeac406e5e483f20abc00cbcd29c0221542c05248ac54b830621644c0ce36"
+    },
+    {
+      "key": "decreasing",
+      "phase": 90.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 270.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        18639,
+        16446,
+        14253,
+        12060,
+        9868,
+        7675,
+        5482
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 90.0,
+        "sim_train_crusher_scales": [
+          1,
+          3.4,
+          3,
+          2.6,
+          2.2,
+          1.8,
+          1.4,
+          1
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "sequence_sha256": "155d3cb1b66ad3f5048bcf735d33ff040f4e989cd4a80f4e8e65e76dee78d591"
+    },
+    {
+      "key": "decreasing_alternating",
+      "phase": 0.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 270.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        -18639,
+        16446,
+        -14253,
+        12060,
+        -9868,
+        7675,
+        -5482
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 0.0,
+        "sim_train_crusher_scales": [
+          1,
+          -3.4,
+          3,
+          -2.6,
+          2.2,
+          -1.8,
+          1.4,
+          -1
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "sequence_sha256": "0406415000ef92b853b75def54f9cff64ee93875ac1f6d1f96f06ea8e2535fdb"
+    },
+    {
+      "key": "decreasing_alternating",
+      "phase": 45.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 270.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        -18639,
+        16446,
+        -14253,
+        12060,
+        -9868,
+        7675,
+        -5482
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 45.0,
+        "sim_train_crusher_scales": [
+          1,
+          -3.4,
+          3,
+          -2.6,
+          2.2,
+          -1.8,
+          1.4,
+          -1
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "sequence_sha256": "6c4a9790388a0a7da0c070baaf9914a8b0c12fdc74b09c48b91ad07b800525ff"
+    },
+    {
+      "key": "decreasing_alternating",
+      "phase": 90.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 270.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        -18639,
+        16446,
+        -14253,
+        12060,
+        -9868,
+        7675,
+        -5482
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 90.0,
+        "sim_train_crusher_scales": [
+          1,
+          -3.4,
+          3,
+          -2.6,
+          2.2,
+          -1.8,
+          1.4,
+          -1
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "sequence_sha256": "22296dd6115566b28d9d9abf8a3215307c26841da23bf05d828074c272c643fd"
+    },
+    {
+      "key": "rf_xy",
+      "phase": 0.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 360.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 360.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 360.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 360.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        90.0,
+        0.0,
+        90.0,
+        0.0,
+        90.0,
+        0.0,
+        90.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 0.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          90,
+          0,
+          90,
+          0,
+          90,
+          0,
+          90
+        ]
+      },
+      "sequence_sha256": "5503c953a2b90be62c5d4d2c72a22c155c6e68a8e6c79db27cbfb2a2ad12d835"
+    },
+    {
+      "key": "rf_xy",
+      "phase": 45.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 360.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 360.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 360.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 360.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        90.0,
+        0.0,
+        90.0,
+        0.0,
+        90.0,
+        0.0,
+        90.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 45.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          90,
+          0,
+          90,
+          0,
+          90,
+          0,
+          90
+        ]
+      },
+      "sequence_sha256": "f295bb87fc43d219169a17180f4dbd2243a8c8187f2f230a688681e045ed47ba"
+    },
+    {
+      "key": "rf_xy",
+      "phase": 90.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 360.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 360.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 360.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 360.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        90.0,
+        0.0,
+        90.0,
+        0.0,
+        90.0,
+        0.0,
+        90.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 90.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          90,
+          0,
+          90,
+          0,
+          90,
+          0,
+          90
+        ]
+      },
+      "sequence_sha256": "e36e995b9b6446c15ad28936cd1938bb3e95d7eaed829537c538e2fbd3cddfef"
+    },
+    {
+      "key": "rf_180",
+      "phase": 0.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 450.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 450.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 450.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 450.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        180.0,
+        0.0,
+        180.0,
+        0.0,
+        180.0,
+        0.0,
+        180.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 0.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          180,
+          0,
+          180,
+          0,
+          180,
+          0,
+          180
+        ]
+      },
+      "sequence_sha256": "82d7070f9efc82c621be544f2327cc8552a5d4307a150fa1aef95caa0a33ee39"
+    },
+    {
+      "key": "rf_180",
+      "phase": 45.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 450.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 450.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 450.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 450.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        180.0,
+        0.0,
+        180.0,
+        0.0,
+        180.0,
+        0.0,
+        180.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 45.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          180,
+          0,
+          180,
+          0,
+          180,
+          0,
+          180
+        ]
+      },
+      "sequence_sha256": "c6134ec24111f0befe2e05b23e13be7742d54c7077a631de2b9ad33b1ffc23d3"
+    },
+    {
+      "key": "rf_180",
+      "phase": 90.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 450.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 450.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 450.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 450.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        180.0,
+        0.0,
+        180.0,
+        0.0,
+        180.0,
+        0.0,
+        180.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 90.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          180,
+          0,
+          180,
+          0,
+          180,
+          0,
+          180
+        ]
+      },
+      "sequence_sha256": "cf2e81fb4c9724b37c5a3bbbde72831bffba6ec31818f14d2e9c55a0f402ed7d"
+    },
+    {
+      "key": "rf_quadratic",
+      "phase": 0.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 335.025
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 530.1
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 495.00000000000006
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 589.95
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 454.95
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 450.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 575.1
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        65.025,
+        260.1,
+        225.0,
+        319.95,
+        184.95,
+        180.0,
+        305.1
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 0.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          65,
+          260,
+          225,
+          320,
+          185,
+          180,
+          305
+        ]
+      },
+      "sequence_sha256": "401e29748b3008a78ae8fcc97722eba4142b1891cdb1e950610d642e591d10da"
+    },
+    {
+      "key": "rf_quadratic",
+      "phase": 45.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 335.025
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 530.1
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 495.00000000000006
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 589.95
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 454.95
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 450.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 575.1
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        65.025,
+        260.1,
+        225.0,
+        319.95,
+        184.95,
+        180.0,
+        305.1
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 45.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          65,
+          260,
+          225,
+          320,
+          185,
+          180,
+          305
+        ]
+      },
+      "sequence_sha256": "ef84304e1fb83890f60876c2bb0529bd25d41f3f12fb933b62a2e3260d3e783f"
+    },
+    {
+      "key": "rf_quadratic",
+      "phase": 90.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 335.025
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 530.1
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 495.00000000000006
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 589.95
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 454.95
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 450.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 575.1
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482,
+        5482
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        65.025,
+        260.1,
+        225.0,
+        319.95,
+        184.95,
+        180.0,
+        305.1
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 90.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          65,
+          260,
+          225,
+          320,
+          185,
+          180,
+          305
+        ]
+      },
+      "sequence_sha256": "199a1fccfb26eb40ba9691a87dca6163546994a2380a4b5b367fdbd7f70134c0"
+    },
+    {
+      "key": "increasing_rf_xy",
+      "phase": 0.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 360.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 360.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 360.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 360.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        7675,
+        9868,
+        12060,
+        14253,
+        16446,
+        18639
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        90.0,
+        0.0,
+        90.0,
+        0.0,
+        90.0,
+        0.0,
+        90.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 0.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1.4,
+          1.8,
+          2.2,
+          2.6,
+          3,
+          3.4
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          90,
+          0,
+          90,
+          0,
+          90,
+          0,
+          90
+        ]
+      },
+      "sequence_sha256": "013a96ca2820ebd37803346a357007b6b035934cbd4250aed0915ab19aedf830"
+    },
+    {
+      "key": "increasing_rf_xy",
+      "phase": 45.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 360.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 360.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 360.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 360.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        7675,
+        9868,
+        12060,
+        14253,
+        16446,
+        18639
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        90.0,
+        0.0,
+        90.0,
+        0.0,
+        90.0,
+        0.0,
+        90.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 45.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1.4,
+          1.8,
+          2.2,
+          2.6,
+          3,
+          3.4
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          90,
+          0,
+          90,
+          0,
+          90,
+          0,
+          90
+        ]
+      },
+      "sequence_sha256": "54d8332388ee6084703954be9ec48f5028558ca0b73c2c4f6e9d00b49ea4de10"
+    },
+    {
+      "key": "increasing_rf_xy",
+      "phase": 90.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 360.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 360.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 360.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 360.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        7675,
+        9868,
+        12060,
+        14253,
+        16446,
+        18639
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        90.0,
+        0.0,
+        90.0,
+        0.0,
+        90.0,
+        0.0,
+        90.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 90.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1.4,
+          1.8,
+          2.2,
+          2.6,
+          3,
+          3.4
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          90,
+          0,
+          90,
+          0,
+          90,
+          0,
+          90
+        ]
+      },
+      "sequence_sha256": "0525f098b4ace5ae973ebe1617ee589a988b1b9fa649e0828a2d7180fb16d9ef"
+    },
+    {
+      "key": "increasing_rf_taper",
+      "phase": 0.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 270.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        7675,
+        9868,
+        12060,
+        14253,
+        16446,
+        18639
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        175,
+        170,
+        165,
+        160,
+        155,
+        150
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 0.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1.4,
+          1.8,
+          2.2,
+          2.6,
+          3,
+          3.4
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "sequence_sha256": "8dde3406623b1cb9c0ce69fc09cfaf9c5f62fd82332e996ece92f2a7bc448205"
+    },
+    {
+      "key": "increasing_rf_taper",
+      "phase": 45.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 270.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        7675,
+        9868,
+        12060,
+        14253,
+        16446,
+        18639
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        175,
+        170,
+        165,
+        160,
+        155,
+        150
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 45.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1.4,
+          1.8,
+          2.2,
+          2.6,
+          3,
+          3.4
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "sequence_sha256": "e3b69b4859d37ac0c544415a3b2c3e2e52788bdb76d2e1c1c15c02e699cd8b82"
+    },
+    {
+      "key": "increasing_rf_taper",
+      "phase": 90.0,
+      "times_s": [
+        0.028527999999999998,
+        0.043995,
+        0.047221,
+        0.063221,
+        0.15599499999999997,
+        0.15922099999999997
+      ],
+      "relative_ms": [
+        17.332,
+        32.799,
+        36.025,
+        52.025,
+        144.79899999999995,
+        148.02499999999995
+      ],
+      "labels": [
+        "Before RF1",
+        "Before ADC1",
+        "Middle ADC1",
+        "Middle ADC2",
+        "Before ADC8",
+        "Middle ADC8"
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.043996,
+          "midpoint_s": 0.047196,
+          "sample_s": 0.047221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 15,
+          "start_s": 0.059996,
+          "midpoint_s": 0.063196,
+          "sample_s": 0.063221,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 19,
+          "start_s": 0.07599599999999998,
+          "midpoint_s": 0.07919599999999997,
+          "sample_s": 0.07922099999999999,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 23,
+          "start_s": 0.09199599999999997,
+          "midpoint_s": 0.09519599999999996,
+          "sample_s": 0.09522099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 27,
+          "start_s": 0.10799599999999995,
+          "midpoint_s": 0.11119599999999995,
+          "sample_s": 0.11122099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 31,
+          "start_s": 0.12399599999999994,
+          "midpoint_s": 0.12719599999999995,
+          "sample_s": 0.12722099999999995,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 35,
+          "start_s": 0.13999599999999995,
+          "midpoint_s": 0.14319599999999996,
+          "sample_s": 0.14322099999999996,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        },
+        {
+          "block": 39,
+          "start_s": 0.15599599999999997,
+          "midpoint_s": 0.15919599999999998,
+          "sample_s": 0.15922099999999997,
+          "sample_index": 64,
+          "dwell_s": 4.9999999999999996e-05,
+          "num_samples": 128,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0
+        }
+      ],
+      "rf": [
+        {
+          "block": 7,
+          "start_s": 0.028529999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 13,
+          "start_s": 0.05453,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 17,
+          "start_s": 0.07052999999999998,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 21,
+          "start_s": 0.08652999999999997,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 25,
+          "start_s": 0.10252999999999995,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 29,
+          "start_s": 0.11852999999999994,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 33,
+          "start_s": 0.13452999999999996,
+          "phase_deg": 270.0
+        },
+        {
+          "block": 37,
+          "start_s": 0.15052999999999997,
+          "phase_deg": 270.0
+        }
+      ],
+      "crusher_dac": [
+        2754,
+        5482,
+        7675,
+        9868,
+        12060,
+        14253,
+        16446,
+        18639
+      ],
+      "rf_offsets_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rf_angles_deg": [
+        180,
+        180,
+        175,
+        170,
+        165,
+        160,
+        155,
+        150
+      ],
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 90.0,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1.4,
+          1.8,
+          2.2,
+          2.6,
+          3,
+          3.4
+        ],
+        "sim_refocus_phase_offsets_deg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "sequence_sha256": "74f8c06e406f644e278eba2e61fca35f8c2713b6a6873ae5a9e6da10b602eb8e"
+    }
+  ],
+  "checks": [
+    {
+      "tag": "original_rf080_phase000",
+      "adc_complex_closure_max": 1.734723475976807e-18,
+      "max_spin_norm": 0.9998207904508435
+    },
+    {
+      "tag": "original_rf100_phase000",
+      "adc_complex_closure_max": 2.8609792490763984e-17,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "original_rf080_phase045",
+      "adc_complex_closure_max": 2.7755575615628914e-17,
+      "max_spin_norm": 0.999820790450843
+    },
+    {
+      "tag": "original_rf100_phase045",
+      "adc_complex_closure_max": 7.152448122690996e-18,
+      "max_spin_norm": 0.9997258368642743
+    },
+    {
+      "tag": "original_rf080_phase090",
+      "adc_complex_closure_max": 9.75781955236954e-19,
+      "max_spin_norm": 0.9998207904508432
+    },
+    {
+      "tag": "original_rf100_phase090",
+      "adc_complex_closure_max": 3.3777074116476645e-18,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "increasing_rf080_phase000",
+      "adc_complex_closure_max": 1.734723475976807e-18,
+      "max_spin_norm": 0.9998207904508435
+    },
+    {
+      "tag": "increasing_rf100_phase000",
+      "adc_complex_closure_max": 2.8609792490763984e-17,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "increasing_rf080_phase045",
+      "adc_complex_closure_max": 2.7755575615628914e-17,
+      "max_spin_norm": 0.999820790450843
+    },
+    {
+      "tag": "increasing_rf100_phase045",
+      "adc_complex_closure_max": 0.0,
+      "max_spin_norm": 0.9997258368642743
+    },
+    {
+      "tag": "increasing_rf080_phase090",
+      "adc_complex_closure_max": 9.75781955236954e-19,
+      "max_spin_norm": 0.9998207904508432
+    },
+    {
+      "tag": "increasing_rf100_phase090",
+      "adc_complex_closure_max": 1.463672932855431e-18,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "increasing_alternating_rf080_phase000",
+      "adc_complex_closure_max": 7.05981306231723e-18,
+      "max_spin_norm": 0.9998207904508435
+    },
+    {
+      "tag": "increasing_alternating_rf100_phase000",
+      "adc_complex_closure_max": 2.8609792490763984e-17,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "increasing_alternating_rf080_phase045",
+      "adc_complex_closure_max": 2.7755575615628914e-17,
+      "max_spin_norm": 0.999820790450843
+    },
+    {
+      "tag": "increasing_alternating_rf100_phase045",
+      "adc_complex_closure_max": 0.0,
+      "max_spin_norm": 0.9997258368642743
+    },
+    {
+      "tag": "increasing_alternating_rf080_phase090",
+      "adc_complex_closure_max": 2.775558885051556e-17,
+      "max_spin_norm": 0.9998207904508432
+    },
+    {
+      "tag": "increasing_alternating_rf100_phase090",
+      "adc_complex_closure_max": 1.463672932855431e-18,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "decreasing_rf080_phase000",
+      "adc_complex_closure_max": 0.0,
+      "max_spin_norm": 0.9998207904508435
+    },
+    {
+      "tag": "decreasing_rf100_phase000",
+      "adc_complex_closure_max": 2.8609792490763984e-17,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "decreasing_rf080_phase045",
+      "adc_complex_closure_max": 2.7755575615628914e-17,
+      "max_spin_norm": 0.999820790450843
+    },
+    {
+      "tag": "decreasing_rf100_phase045",
+      "adc_complex_closure_max": 1.3877787807814457e-17,
+      "max_spin_norm": 0.9997258368642743
+    },
+    {
+      "tag": "decreasing_rf080_phase090",
+      "adc_complex_closure_max": 6.946513017424995e-18,
+      "max_spin_norm": 0.9998207904508432
+    },
+    {
+      "tag": "decreasing_rf100_phase090",
+      "adc_complex_closure_max": 6.942281208919283e-18,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "decreasing_alternating_rf080_phase000",
+      "adc_complex_closure_max": 2.7809732887839817e-17,
+      "max_spin_norm": 0.9998207904508435
+    },
+    {
+      "tag": "decreasing_alternating_rf100_phase000",
+      "adc_complex_closure_max": 2.8609792490763984e-17,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "decreasing_alternating_rf080_phase045",
+      "adc_complex_closure_max": 2.7755575615628914e-17,
+      "max_spin_norm": 0.999820790450843
+    },
+    {
+      "tag": "decreasing_alternating_rf100_phase045",
+      "adc_complex_closure_max": 3.469446951953614e-18,
+      "max_spin_norm": 0.9997258368642743
+    },
+    {
+      "tag": "decreasing_alternating_rf080_phase090",
+      "adc_complex_closure_max": 7.318364664277155e-19,
+      "max_spin_norm": 0.9998207904508432
+    },
+    {
+      "tag": "decreasing_alternating_rf100_phase090",
+      "adc_complex_closure_max": 1.463672932855431e-18,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "rf_xy_rf080_phase000",
+      "adc_complex_closure_max": 1.734723475976807e-18,
+      "max_spin_norm": 0.9998207904508435
+    },
+    {
+      "tag": "rf_xy_rf100_phase000",
+      "adc_complex_closure_max": 2.8609792490763984e-17,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "rf_xy_rf080_phase045",
+      "adc_complex_closure_max": 2.7755575615628914e-17,
+      "max_spin_norm": 0.999820790450843
+    },
+    {
+      "tag": "rf_xy_rf100_phase045",
+      "adc_complex_closure_max": 0.0,
+      "max_spin_norm": 0.9997258368642743
+    },
+    {
+      "tag": "rf_xy_rf080_phase090",
+      "adc_complex_closure_max": 3.469446951953614e-18,
+      "max_spin_norm": 0.9998207904508432
+    },
+    {
+      "tag": "rf_xy_rf100_phase090",
+      "adc_complex_closure_max": 2.7809732887839817e-17,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "rf_180_rf080_phase000",
+      "adc_complex_closure_max": 1.734723475976807e-18,
+      "max_spin_norm": 0.9998207904508435
+    },
+    {
+      "tag": "rf_180_rf100_phase000",
+      "adc_complex_closure_max": 2.8609792490763984e-17,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "rf_180_rf080_phase045",
+      "adc_complex_closure_max": 2.7755575615628914e-17,
+      "max_spin_norm": 0.999820790450843
+    },
+    {
+      "tag": "rf_180_rf100_phase045",
+      "adc_complex_closure_max": 1.734723475976807e-18,
+      "max_spin_norm": 0.9997258368642743
+    },
+    {
+      "tag": "rf_180_rf080_phase090",
+      "adc_complex_closure_max": 1.8431436932253575e-18,
+      "max_spin_norm": 0.9998207904508432
+    },
+    {
+      "tag": "rf_180_rf100_phase090",
+      "adc_complex_closure_max": 6.980275126496363e-18,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "rf_quadratic_rf080_phase000",
+      "adc_complex_closure_max": 0.0,
+      "max_spin_norm": 0.9998207904508435
+    },
+    {
+      "tag": "rf_quadratic_rf100_phase000",
+      "adc_complex_closure_max": 2.8609792490763984e-17,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "rf_quadratic_rf080_phase045",
+      "adc_complex_closure_max": 2.7755575615628914e-17,
+      "max_spin_norm": 0.999820790450843
+    },
+    {
+      "tag": "rf_quadratic_rf100_phase045",
+      "adc_complex_closure_max": 1.734723475976807e-18,
+      "max_spin_norm": 0.9997258368642743
+    },
+    {
+      "tag": "rf_quadratic_rf080_phase090",
+      "adc_complex_closure_max": 2.7755575615628914e-17,
+      "max_spin_norm": 0.9998207904508432
+    },
+    {
+      "tag": "rf_quadratic_rf100_phase090",
+      "adc_complex_closure_max": 1.463672932855431e-18,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "increasing_rf_xy_rf080_phase000",
+      "adc_complex_closure_max": 1.734723475976807e-18,
+      "max_spin_norm": 0.9998207904508435
+    },
+    {
+      "tag": "increasing_rf_xy_rf100_phase000",
+      "adc_complex_closure_max": 2.8609792490763984e-17,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "increasing_rf_xy_rf080_phase045",
+      "adc_complex_closure_max": 2.7755575615628914e-17,
+      "max_spin_norm": 0.999820790450843
+    },
+    {
+      "tag": "increasing_rf_xy_rf100_phase045",
+      "adc_complex_closure_max": 3.469446951953614e-18,
+      "max_spin_norm": 0.9997258368642743
+    },
+    {
+      "tag": "increasing_rf_xy_rf080_phase090",
+      "adc_complex_closure_max": 3.469446951953614e-18,
+      "max_spin_norm": 0.9998207904508432
+    },
+    {
+      "tag": "increasing_rf_xy_rf100_phase090",
+      "adc_complex_closure_max": 2.7809732887839817e-17,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "increasing_rf_taper_rf080_phase000",
+      "adc_complex_closure_max": 1.734723475976807e-18,
+      "max_spin_norm": 0.9998207904508435
+    },
+    {
+      "tag": "increasing_rf_taper_rf100_phase000",
+      "adc_complex_closure_max": 2.8609792490763984e-17,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "increasing_rf_taper_rf080_phase045",
+      "adc_complex_closure_max": 2.7755575615628914e-17,
+      "max_spin_norm": 0.999820790450843
+    },
+    {
+      "tag": "increasing_rf_taper_rf100_phase045",
+      "adc_complex_closure_max": 0.0,
+      "max_spin_norm": 0.9997258368642743
+    },
+    {
+      "tag": "increasing_rf_taper_rf080_phase090",
+      "adc_complex_closure_max": 1.3552527156068805e-18,
+      "max_spin_norm": 0.9998207904508432
+    },
+    {
+      "tag": "increasing_rf_taper_rf100_phase090",
+      "adc_complex_closure_max": 1.463672932855431e-18,
+      "max_spin_norm": 0.9997258368642752
+    },
+    {
+      "tag": "original",
+      "rf_step_2us_vs_1us_max_component_error": 5.5252001302613825e-05
+    },
+    {
+      "tag": "original",
+      "half_grid_interpolation_max_component_error": 0.0005590797148168902
+    },
+    {
+      "tag": "original",
+      "cached_vs_independent_full_simulation_max_component_error": 3.8413716652030416e-14
+    },
+    {
+      "tag": "increasing_alternating",
+      "rf_step_2us_vs_1us_max_component_error": 4.0918916104804026e-05
+    },
+    {
+      "tag": "increasing_alternating",
+      "half_grid_interpolation_max_component_error": 0.0003636047280115573
+    },
+    {
+      "tag": "increasing_alternating",
+      "cached_vs_independent_full_simulation_max_component_error": 3.8413716652030416e-14
+    },
+    {
+      "tag": "decreasing_alternating",
+      "rf_step_2us_vs_1us_max_component_error": 4.616345792106402e-05
+    },
+    {
+      "tag": "decreasing_alternating",
+      "half_grid_interpolation_max_component_error": 0.0008264311150699699
+    },
+    {
+      "tag": "decreasing_alternating",
+      "cached_vs_independent_full_simulation_max_component_error": 3.8413716652030416e-14
+    },
+    {
+      "tag": "rf_quadratic",
+      "rf_step_2us_vs_1us_max_component_error": 5.097992952673991e-05
+    },
+    {
+      "tag": "rf_quadratic",
+      "half_grid_interpolation_max_component_error": 0.0006410263177599185
+    },
+    {
+      "tag": "rf_quadratic",
+      "cached_vs_independent_full_simulation_max_component_error": 3.8413716652030416e-14
+    },
+    {
+      "tag": "increasing_rf_taper",
+      "rf_step_2us_vs_1us_max_component_error": 5.352795227410098e-05
+    },
+    {
+      "tag": "increasing_rf_taper",
+      "half_grid_interpolation_max_component_error": 0.005819649688647177
+    },
+    {
+      "tag": "increasing_rf_taper",
+      "cached_vs_independent_full_simulation_max_component_error": 3.8413716652030416e-14
+    },
+    {
+      "tag": "early_causality_rf0.8_phase0.0",
+      "max_component_error": 0.0
+    },
+    {
+      "tag": "early_causality_rf0.8_phase45.0",
+      "max_component_error": 0.0
+    },
+    {
+      "tag": "early_causality_rf0.8_phase90.0",
+      "max_component_error": 0.0
+    },
+    {
+      "tag": "early_causality_rf1.0_phase0.0",
+      "max_component_error": 0.0
+    },
+    {
+      "tag": "early_causality_rf1.0_phase45.0",
+      "max_component_error": 0.0
+    },
+    {
+      "tag": "early_causality_rf1.0_phase90.0",
+      "max_component_error": 0.0
+    }
+  ]
+}

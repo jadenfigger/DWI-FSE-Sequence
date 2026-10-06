@@ -1,0 +1,4 @@
+slr_prep90_3p2ms peakB1=6.80616532 uT, Gz=1.44757479 mT/m
+slr_prep180_3p2ms peakB1=20.6269677 uT, Gz=1.44757479 mT/m
+slr_elim90_3p2ms peakB1=7.28830446 uT, Gz=4.34272438 mT/m
+windowed_reexc90_1p2ms peakB1=10.5301578 uT Gz=5.02369619 mT/m

@@ -1,0 +1,462 @@
+{
+  "status": "quantized_numerical_RF_only_not_played_PPL",
+  "convention": "rows initial Mx/My/Mz; columns output; dM=-2pi(B cross M)",
+  "sample_time": "centers of complete piecewise constant 10us rectangles",
+  "gamma_Hz_T": 42576000.0,
+  "phase_reference": "RF real positive=phase0; phase180 reverses B1; phase270 negative imaginary B1",
+  "compensation_scope": "fitted at B0=0 over imaging6mm; physical pre/post gradient cycles/m with no ramps; gradient correction must include separately scheduled actual ramps",
+  "pulses": {
+    "v19_slrprep90": {
+      "source_sha256": "66a2f4576fc9584920986b89873c4c311acada354d155f3bceae39cf9aefeade",
+      "RFphase0_center_basis": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -3.3312111749617124e-16,
+          -0.9999999999999982
+        ],
+        [
+          0.0,
+          0.9999999999999982,
+          -3.3312111749617124e-16
+        ]
+      ],
+      "net_RF_gradient_cycles_m": 197.22222222222223,
+      "pre_RF_correction_cycles_m": -104.83667480279288,
+      "post_RF_correction_cycles_m": -104.83667480279288,
+      "adaptation_pre_RF_correction_cycles_m": -629.0200488167573,
+      "adaptation_post_RF_correction_cycles_m": -629.0200488167573,
+      "max_basis_component_error_in_6mm": 0.011023855745139033,
+      "Mz_to_Mxy_abs_range_in_6mm": [
+        0.9999392354560873,
+        0.9999999999999964
+      ],
+      "phase0_My_to_Mz_range_in_6mm": [
+        -0.9999999997031233,
+        -0.9999088501944945
+      ],
+      "phase0_Mx_to_Mz_absmax_in_6mm": 0.007795249016552051,
+      "phase0_Mx_retained_range_in_6mm": [
+        0.9999385567512579,
+        0.9999999994371359
+      ],
+      "phase0_My_remaining_transverse_absmax_in_6mm": 0.013501529643698175,
+      "orthogonality_error": 8.770761894538737e-15,
+      "input_phase_fit_intercept_rad": 4.712388980384687,
+      "output_phase_fit_intercept_rad": -4.712388980384687,
+      "spectral_z0_raw_water_My_to_Mz_range": [
+        -0.9999999999999982,
+        -0.2028678959694869
+      ],
+      "spectral_z0_raw_fat_My_to_Mz_absmax": 0.9771426569101189,
+      "B1_sensitivity_fixed_nominal_compensation": {
+        "0.8": {
+          "max_basis_component_error_in_6mm": 0.3108465016606687,
+          "Mz_to_Mxy_abs_range": [
+            0.9504601266782953,
+            0.9525218276394394
+          ]
+        },
+        "1.0": {
+          "max_basis_component_error_in_6mm": 0.011023855745139033,
+          "Mz_to_Mxy_abs_range": [
+            0.9999392354560873,
+            0.9999999999999964
+          ]
+        }
+      },
+      "spectral_linear_input_phase_reference": {
+        "scope": "diagnostic linear input time/phase reference fitted across water at z0; not independent programmable B0 correction",
+        "effective_input_time_s": 0.001695112219424656,
+        "water_selected_storage_range": [
+          0.9999920797382266,
+          0.9999999999999982
+        ],
+        "water_unwanted_storage_absmax": 0.003219774980803669,
+        "fat_selected_storage_range": [
+          0.6442201268607401,
+          0.9889094542843516
+        ],
+        "fat_unwanted_storage_absmax": 0.05436352493238236,
+        "water_axis_phase_residual_deg": 0.18448034101161115
+      }
+    },
+    "v19_slrprep180": {
+      "source_sha256": "9aa0e79b8213cbdde883f85ff7b0ef8798225a18ab7a4b6f4f00b62f231c6c4a",
+      "RFphase0_center_basis": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0000000000000009,
+          -1.2214892725764814e-15
+        ],
+        [
+          0.0,
+          1.2214892725764814e-15,
+          -1.0000000000000009
+        ]
+      ],
+      "net_RF_gradient_cycles_m": 197.22222222222223,
+      "pre_RF_correction_cycles_m": -98.61111111111111,
+      "post_RF_correction_cycles_m": -98.61111111111111,
+      "adaptation_pre_RF_correction_cycles_m": -591.6666666666667,
+      "adaptation_post_RF_correction_cycles_m": -591.6666666666667,
+      "max_basis_component_error_in_6mm": 0.3389851955733222,
+      "Mz_to_Mxy_abs_range_in_6mm": [
+        0.00025974968294317845,
+        0.3443335299885871
+      ],
+      "phase0_My_to_Mz_range_in_6mm": [
+        1.191048954014502e-06,
+        0.33898519557332096
+      ],
+      "phase0_Mx_to_Mz_absmax_in_6mm": 0.060453428823500126,
+      "phase0_Mx_retained_range_in_6mm": [
+        0.9980791444962626,
+        0.999999966255138
+      ],
+      "phase0_My_remaining_transverse_absmax_in_6mm": 0.9999999999992906,
+      "orthogonality_error": 7.771561172376096e-15,
+      "input_phase_fit_intercept_rad": 0.0,
+      "output_phase_fit_intercept_rad": 0.0,
+      "spectral_z0_raw_water_My_to_Mz_range": [
+        -1.2214892725764814e-15,
+        0.023977805969592196
+      ],
+      "spectral_z0_raw_fat_My_to_Mz_absmax": 0.9991655272370137,
+      "B1_sensitivity_fixed_nominal_compensation": {
+        "0.8": {
+          "max_basis_component_error_in_6mm": 0.5877844528484547,
+          "Mz_to_Mxy_abs_range": [
+            0.33382589212420727,
+            0.5877845101238758
+          ]
+        },
+        "1.0": {
+          "max_basis_component_error_in_6mm": 0.3389851955733222,
+          "Mz_to_Mxy_abs_range": [
+            0.00025974968294317845,
+            0.3443335299885871
+          ]
+        }
+      },
+      "spectral_linear_input_phase_reference": {}
+    },
+    "v19_slrtip90": {
+      "source_sha256": "26bc43927484f8485f7fd8d2ee7640e9c72659d6980ed2a48a836b253f09ef2f",
+      "RFphase0_center_basis": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -3.6483403104137224e-17,
+          -0.9999999999999993
+        ],
+        [
+          0.0,
+          0.9999999999999993,
+          -3.6483403104137224e-17
+        ]
+      ],
+      "net_RF_gradient_cycles_m": 355.0,
+      "pre_RF_correction_cycles_m": -188.78848993873748,
+      "post_RF_correction_cycles_m": -188.78848993873757,
+      "adaptation_pre_RF_correction_cycles_m": -1132.730939632425,
+      "adaptation_post_RF_correction_cycles_m": -1132.7309396324254,
+      "max_basis_component_error_in_6mm": 0.09166740732438444,
+      "Mz_to_Mxy_abs_range_in_6mm": [
+        0.9957896798191987,
+        0.9999999999998542
+      ],
+      "phase0_My_to_Mz_range_in_6mm": [
+        -0.9999999914174337,
+        -0.995503332676513
+      ],
+      "phase0_Mx_to_Mz_absmax_in_6mm": 0.02387888323148648,
+      "phase0_Mx_retained_range_in_6mm": [
+        0.9993722551970714,
+        0.9999999984737448
+      ],
+      "phase0_My_remaining_transverse_absmax_in_6mm": 0.09472652548234582,
+      "orthogonality_error": 9.325873406851315e-15,
+      "input_phase_fit_intercept_rad": 4.712388980384687,
+      "output_phase_fit_intercept_rad": -4.712388980384686,
+      "spectral_z0_raw_water_My_to_Mz_range": [
+        -0.9999999999999993,
+        -0.21977701206449576
+      ],
+      "spectral_z0_raw_fat_My_to_Mz_absmax": 0.9876345704778898,
+      "B1_sensitivity_fixed_nominal_compensation": {
+        "0.8": {
+          "max_basis_component_error_in_6mm": 0.35489907745156873,
+          "Mz_to_Mxy_abs_range": [
+            0.934904618035457,
+            0.9589946036277395
+          ]
+        },
+        "1.0": {
+          "max_basis_component_error_in_6mm": 0.09166740732438444,
+          "Mz_to_Mxy_abs_range": [
+            0.9957896798191987,
+            0.9999999999998542
+          ]
+        }
+      },
+      "spectral_linear_input_phase_reference": {
+        "scope": "diagnostic linear input time/phase reference fitted across water at z0; not independent programmable B0 correction",
+        "effective_input_time_s": 0.001672424094739038,
+        "water_selected_storage_range": [
+          0.9997736582460346,
+          0.9999999999999993
+        ],
+        "water_unwanted_storage_absmax": 0.004117173467007962,
+        "fat_selected_storage_range": [
+          0.7508477231967662,
+          0.9959009573578356
+        ],
+        "fat_unwanted_storage_absmax": 0.09344657168010961,
+        "water_axis_phase_residual_deg": 0.23594873473921796
+      }
+    },
+    "v19_slrelim90": {
+      "source_sha256": "f7f93f210288556c34f09547f85da329a3c00f9708d6435e03e519b5367ac252",
+      "RFphase0_center_basis": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -3.6483403104137224e-17,
+          -0.9999999999999993
+        ],
+        [
+          0.0,
+          0.9999999999999993,
+          -3.6483403104137224e-17
+        ]
+      ],
+      "net_RF_gradient_cycles_m": 591.6666666666666,
+      "pre_RF_correction_cycles_m": -314.1266521767678,
+      "post_RF_correction_cycles_m": -314.1266521767678,
+      "adaptation_pre_RF_correction_cycles_m": -1884.7599130606068,
+      "adaptation_post_RF_correction_cycles_m": -1884.7599130606068,
+      "max_basis_component_error_in_6mm": 0.6731821840647737,
+      "Mz_to_Mxy_abs_range_in_6mm": [
+        0.7394766710706839,
+        0.9999999999988788
+      ],
+      "phase0_My_to_Mz_range_in_6mm": [
+        -0.9999999795994765,
+        -0.73766023941585
+      ],
+      "phase0_Mx_to_Mz_absmax_in_6mm": 0.05179882472342995,
+      "phase0_Mx_retained_range_in_6mm": [
+        0.9917901714291474,
+        0.9999999997277048
+      ],
+      "phase0_My_remaining_transverse_absmax_in_6mm": 0.6751721048628625,
+      "orthogonality_error": 9.325873406851315e-15,
+      "input_phase_fit_intercept_rad": 4.712388980384687,
+      "output_phase_fit_intercept_rad": -4.712388980384687,
+      "spectral_z0_raw_water_My_to_Mz_range": [
+        -0.9999999999999993,
+        -0.21977701206449576
+      ],
+      "spectral_z0_raw_fat_My_to_Mz_absmax": 0.9876345704778898,
+      "B1_sensitivity_fixed_nominal_compensation": {
+        "0.8": {
+          "max_basis_component_error_in_6mm": 0.7561327800055346,
+          "Mz_to_Mxy_abs_range": [
+            0.6544182294229763,
+            0.9589945536327598
+          ]
+        },
+        "1.0": {
+          "max_basis_component_error_in_6mm": 0.6731821840647737,
+          "Mz_to_Mxy_abs_range": [
+            0.7394766710706839,
+            0.9999999999988788
+          ]
+        }
+      },
+      "spectral_linear_input_phase_reference": {
+        "scope": "diagnostic linear input time/phase reference fitted across water at z0; not independent programmable B0 correction",
+        "effective_input_time_s": 0.001672424094739038,
+        "water_selected_storage_range": [
+          0.9997736582460346,
+          0.9999999999999993
+        ],
+        "water_unwanted_storage_absmax": 0.004117173467007962,
+        "fat_selected_storage_range": [
+          0.7508477231967662,
+          0.9959009573578356
+        ],
+        "fat_unwanted_storage_absmax": 0.09344657168010961,
+        "water_axis_phase_residual_deg": 0.23594873473921796
+      }
+    },
+    "v19_reexc90": {
+      "source_sha256": "8f5c47bb7a26140557628eacb09982ae9cb749b93c1e5eba219d5e9a245ac6f0",
+      "RFphase0_center_basis": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -5.5185890579512176e-17,
+          -0.9999999999999997
+        ],
+        [
+          0.0,
+          0.9999999999999997,
+          -5.5185890579512176e-17
+        ]
+      ],
+      "net_RF_gradient_cycles_m": 256.66666666666646,
+      "pre_RF_correction_cycles_m": -142.38032417411713,
+      "post_RF_correction_cycles_m": -142.38032417411713,
+      "adaptation_pre_RF_correction_cycles_m": -854.2819450447028,
+      "adaptation_post_RF_correction_cycles_m": -854.2819450447028,
+      "max_basis_component_error_in_6mm": 0.5347925167868081,
+      "Mz_to_Mxy_abs_range_in_6mm": [
+        0.8449834104814314,
+        0.9999999999978331
+      ],
+      "phase0_My_to_Mz_range_in_6mm": [
+        -0.9999999760430845,
+        -0.8434862405021168
+      ],
+      "phase0_Mx_to_Mz_absmax_in_6mm": 0.05027848518438416,
+      "phase0_Mx_retained_range_in_6mm": [
+        0.9945660244865888,
+        0.9999999962051241
+      ],
+      "phase0_My_remaining_transverse_absmax_in_6mm": 0.5371507815163313,
+      "orthogonality_error": 5.329070518200751e-15,
+      "input_phase_fit_intercept_rad": 10.995574287564278,
+      "output_phase_fit_intercept_rad": -10.995574287564278,
+      "spectral_z0_raw_water_My_to_Mz_range": [
+        -0.9999999999999997,
+        -0.8473895739966317
+      ],
+      "spectral_z0_raw_fat_My_to_Mz_absmax": 0.5846357306134459,
+      "B1_sensitivity_fixed_nominal_compensation": {
+        "0.8": {
+          "max_basis_component_error_in_6mm": 0.6758526628345837,
+          "Mz_to_Mxy_abs_range": [
+            0.7370367549446927,
+            0.951056053591144
+          ]
+        },
+        "1.0": {
+          "max_basis_component_error_in_6mm": 0.5347925167868081,
+          "Mz_to_Mxy_abs_range": [
+            0.8449834104814314,
+            0.9999999999978331
+          ]
+        }
+      },
+      "spectral_linear_input_phase_reference": {
+        "scope": "diagnostic linear input time/phase reference fitted across water at z0; not independent programmable B0 correction",
+        "effective_input_time_s": 0.0006963441130869044,
+        "water_selected_storage_range": [
+          0.9995676257832563,
+          0.9999999999999997
+        ],
+        "water_unwanted_storage_absmax": 0.0009758844787202681,
+        "fat_selected_storage_range": [
+          0.8965710411018574,
+          0.9871893927130895
+        ],
+        "fat_unwanted_storage_absmax": 0.11530175549082328,
+        "water_axis_phase_residual_deg": 0.055938230406267116
+      }
+    },
+    "v19_imaging180": {
+      "source_sha256": "fe571fc37537a06960e7625e12f753917ab66f94ffe6c03bd7087387d3e78b1f",
+      "RFphase0_center_basis": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.9999999999999992,
+          -3.365363543395006e-16
+        ],
+        [
+          0.0,
+          3.365363543395006e-16,
+          -0.9999999999999992
+        ]
+      ],
+      "net_RF_gradient_cycles_m": 256.66666666666646,
+      "pre_RF_correction_cycles_m": -128.33333333333323,
+      "post_RF_correction_cycles_m": -128.33333333333323,
+      "adaptation_pre_RF_correction_cycles_m": -769.9999999999993,
+      "adaptation_post_RF_correction_cycles_m": -769.9999999999993,
+      "max_basis_component_error_in_6mm": 1.1490578523196673,
+      "Mz_to_Mxy_abs_range_in_6mm": [
+        0.0030318144577420676,
+        0.999999586891523
+      ],
+      "phase0_My_to_Mz_range_in_6mm": [
+        -0.6276590941098188,
+        -3.7152356358666746e-06
+      ],
+      "phase0_Mx_to_Mz_absmax_in_6mm": 0.835947671881207,
+      "phase0_Mx_retained_range_in_6mm": [
+        0.31390656834357167,
+        0.9999954040468868
+      ],
+      "phase0_My_remaining_transverse_absmax_in_6mm": 0.9999999999930981,
+      "orthogonality_error": 5.551115123125783e-15,
+      "input_phase_fit_intercept_rad": 0.0,
+      "output_phase_fit_intercept_rad": 0.0,
+      "spectral_z0_raw_water_My_to_Mz_range": [
+        -3.365363543395006e-16,
+        0.11686744314270987
+      ],
+      "spectral_z0_raw_fat_My_to_Mz_absmax": 0.9921413889690153,
+      "B1_sensitivity_fixed_nominal_compensation": {
+        "0.8": {
+          "max_basis_component_error_in_6mm": 1.1925379660760014,
+          "Mz_to_Mxy_abs_range": [
+            0.5877906876316368,
+            0.9999992127085612
+          ]
+        },
+        "1.0": {
+          "max_basis_component_error_in_6mm": 1.1490578523196673,
+          "Mz_to_Mxy_abs_range": [
+            0.0030318144577420676,
+            0.999999586891523
+          ]
+        }
+      },
+      "spectral_linear_input_phase_reference": {}
+    }
+  },
+  "long_candidate_independent_continuous_ODE_comparison": {
+    "cases": 14,
+    "max_component_error": 2.708944180085382e-14,
+    "independent_file": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\docs\\v19\\physics_validation\\candidate_long_independent_ode.json",
+    "independent_file_sha256": "9480b436444e83cc44bb4699b4fb30e31613cbf4e4a8644b4c466b33d20d1bab"
+  }
+}

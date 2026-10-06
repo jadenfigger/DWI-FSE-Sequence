@@ -1,0 +1,352 @@
+{
+  "scope": "Actual vendor baseline waveform decode/finite transfer only; no v191/v192 PPL event mapping or scanner calibration validation",
+  "independently_decoded_libraries": [
+    {
+      "file": "rfstd44.seq",
+      "frame_count": 16,
+      "independent_raw_records_match": true,
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+    },
+    {
+      "file": "g3040_15.seq",
+      "frame_count": 14,
+      "independent_raw_records_match": true,
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+    }
+  ],
+  "sinc_formula_exact_quantized_match": true,
+  "sinc_records": 668,
+  "dwell_us": 2.0,
+  "full_sample_duration_us": 1336.0,
+  "source_declared_rf_duration_us": 1332,
+  "guard_zero_records": 2,
+  "signed_amplitude_encoding": "low12bits two's-complement; high control bits retained separately",
+  "phase_control_note": "ordinary word0x2000 and terminal0x6000 share low phase bits0; terminal0x4000 is a control flag, not180degree phase",
+  "ramp_sample_statistics": [
+    {
+      "name": "0_max",
+      "wait_ticks": 1,
+      "record_count": 50,
+      "mean_primary": 16068.94,
+      "mean_secondary": 0.0,
+      "endpoint_primary": [
+        0,
+        32767
+      ],
+      "endpoint_secondary": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "max_0",
+      "wait_ticks": 1,
+      "record_count": 50,
+      "mean_primary": 16698.08,
+      "mean_secondary": 0.0,
+      "endpoint_primary": [
+        32767,
+        0
+      ],
+      "endpoint_secondary": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "0_min",
+      "wait_ticks": 1,
+      "record_count": 50,
+      "mean_primary": -16068.94,
+      "mean_secondary": 0.0,
+      "endpoint_primary": [
+        0,
+        -32767
+      ],
+      "endpoint_secondary": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "min_0",
+      "wait_ticks": 1,
+      "record_count": 50,
+      "mean_primary": -16698.08,
+      "mean_secondary": 0.0,
+      "endpoint_primary": [
+        -32767,
+        0
+      ],
+      "endpoint_secondary": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "max_p_s",
+      "wait_ticks": 1,
+      "record_count": 50,
+      "mean_primary": 16698.08,
+      "mean_secondary": 16068.94,
+      "endpoint_primary": [
+        32767,
+        0
+      ],
+      "endpoint_secondary": [
+        0,
+        32767
+      ]
+    },
+    {
+      "name": "mx_0_sec",
+      "wait_ticks": 1,
+      "record_count": 50,
+      "mean_primary": 0.0,
+      "mean_secondary": 16698.08,
+      "endpoint_primary": [
+        0,
+        0
+      ],
+      "endpoint_secondary": [
+        32767,
+        0
+      ]
+    },
+    {
+      "name": "0_max_50",
+      "wait_ticks": 20,
+      "record_count": 50,
+      "mean_primary": 16068.94,
+      "mean_secondary": 0.0,
+      "endpoint_primary": [
+        0,
+        32767
+      ],
+      "endpoint_secondary": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "max_0_50",
+      "wait_ticks": 20,
+      "record_count": 50,
+      "mean_primary": 16698.08,
+      "mean_secondary": 0.0,
+      "endpoint_primary": [
+        32767,
+        0
+      ],
+      "endpoint_secondary": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "min_p_s",
+      "wait_ticks": 1,
+      "record_count": 50,
+      "mean_primary": -16698.08,
+      "mean_secondary": -16068.94,
+      "endpoint_primary": [
+        -32767,
+        0
+      ],
+      "endpoint_secondary": [
+        0,
+        -32767
+      ]
+    },
+    {
+      "name": "mn_0_sec",
+      "wait_ticks": 1,
+      "record_count": 50,
+      "mean_primary": 0.0,
+      "mean_secondary": -16383.5,
+      "endpoint_primary": [
+        0,
+        0
+      ],
+      "endpoint_secondary": [
+        -32767,
+        0
+      ]
+    },
+    {
+      "name": "zeros",
+      "wait_ticks": 1,
+      "record_count": 50,
+      "mean_primary": 0.0,
+      "mean_secondary": 0.0,
+      "endpoint_primary": [
+        0,
+        0
+      ],
+      "endpoint_secondary": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "0_mx_sec",
+      "wait_ticks": 1,
+      "record_count": 50,
+      "mean_primary": 0.0,
+      "mean_secondary": 16383.5,
+      "endpoint_primary": [
+        0,
+        0
+      ],
+      "endpoint_secondary": [
+        0,
+        32767
+      ]
+    },
+    {
+      "name": "0_mn_sec",
+      "wait_ticks": 1,
+      "record_count": 50,
+      "mean_primary": 0.0,
+      "mean_secondary": -16383.5,
+      "endpoint_primary": [
+        0,
+        0
+      ],
+      "endpoint_secondary": [
+        0,
+        -32767
+      ]
+    },
+    {
+      "name": "EPI_100us_3loop",
+      "wait_ticks": 1,
+      "record_count": 6172,
+      "mean_primary": -7326.386908619572,
+      "mean_secondary": 8133.351263771873,
+      "endpoint_primary": [
+        0,
+        0
+      ],
+      "endpoint_secondary": [
+        0,
+        0
+      ]
+    }
+  ],
+  "finite_transfer_geometry_mm": 10,
+  "selector_dac": -2741,
+  "selector_hz_per_m": -2128672.9636524552,
+  "rf_scale_assumption": "Full668sample signed integral normalized to90degree on resonance; no absolute calibrated B1 asserted",
+  "compensation": "No post-RF gradient compensation in isolated transfer matrices; raw pulse transfer includes spatial phase",
+  "independent_piecewise_continuous_ode_checks": [
+    {
+      "axis_deg": 0.0,
+      "b1": 1.0,
+      "z_m": -0.004998333333333334,
+      "max_component_error": 5.164202399043916e-13
+    },
+    {
+      "axis_deg": 0.0,
+      "b1": 1.0,
+      "z_m": 1.6666666666663096e-06,
+      "max_component_error": 2.886579864025407e-15
+    },
+    {
+      "axis_deg": 0.0,
+      "b1": 1.0,
+      "z_m": 0.004998333333333333,
+      "max_component_error": 5.203892872174265e-13
+    },
+    {
+      "axis_deg": 0.0,
+      "b1": 0.8,
+      "z_m": -0.004998333333333334,
+      "max_component_error": 5.10924635932497e-13
+    },
+    {
+      "axis_deg": 0.0,
+      "b1": 0.8,
+      "z_m": 1.6666666666663096e-06,
+      "max_component_error": 4.6629367034256575e-15
+    },
+    {
+      "axis_deg": 0.0,
+      "b1": 0.8,
+      "z_m": 0.004998333333333333,
+      "max_component_error": 5.167810623873947e-13
+    },
+    {
+      "axis_deg": 180.0,
+      "b1": 1.0,
+      "z_m": -0.004998333333333334,
+      "max_component_error": 5.185851748024106e-13
+    },
+    {
+      "axis_deg": 180.0,
+      "b1": 1.0,
+      "z_m": 1.6666666666663096e-06,
+      "max_component_error": 2.886579864025407e-15
+    },
+    {
+      "axis_deg": 180.0,
+      "b1": 1.0,
+      "z_m": 0.004998333333333333,
+      "max_component_error": 5.211109321834329e-13
+    },
+    {
+      "axis_deg": 180.0,
+      "b1": 0.8,
+      "z_m": -0.004998333333333334,
+      "max_component_error": 5.115907697472721e-13
+    },
+    {
+      "axis_deg": 180.0,
+      "b1": 0.8,
+      "z_m": 1.6666666666663096e-06,
+      "max_component_error": 4.6629367034256575e-15
+    },
+    {
+      "axis_deg": 180.0,
+      "b1": 0.8,
+      "z_m": 0.004998333333333333,
+      "max_component_error": 5.163369731775447e-13
+    },
+    {
+      "axis_deg": 270.0,
+      "b1": 1.0,
+      "z_m": -0.004998333333333334,
+      "max_component_error": 5.196398866758045e-13
+    },
+    {
+      "axis_deg": 270.0,
+      "b1": 1.0,
+      "z_m": 1.6666666666663096e-06,
+      "max_component_error": 2.7755575615628914e-15
+    },
+    {
+      "axis_deg": 270.0,
+      "b1": 1.0,
+      "z_m": 0.004998333333333333,
+      "max_component_error": 5.206668429735828e-13
+    },
+    {
+      "axis_deg": 270.0,
+      "b1": 0.8,
+      "z_m": -0.004998333333333334,
+      "max_component_error": 5.115907697472721e-13
+    },
+    {
+      "axis_deg": 270.0,
+      "b1": 0.8,
+      "z_m": 1.6666666666663096e-06,
+      "max_component_error": 4.6629367034256575e-15
+    },
+    {
+      "axis_deg": 270.0,
+      "b1": 0.8,
+      "z_m": 0.004998333333333333,
+      "max_component_error": 5.166422845093166e-13
+    }
+  ]
+}

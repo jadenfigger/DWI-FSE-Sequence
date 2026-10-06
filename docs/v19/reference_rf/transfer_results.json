@@ -1,0 +1,197 @@
+{
+  "status": "research_RF_samples_only",
+  "rotation_convention": "left_handed_Mx_plus_iMy",
+  "gamma_Hz_T": 42576000.0,
+  "original_Gibbons_coefficients": false,
+  "pulses": {
+    "candidate_t_B1realT_B1imagT_GzTm.csv": {
+      "sample_sha256": "8f2830c5b78ad8b183fe301f1085533e1287a86ffbbdb938d2a2c97fe09b9223",
+      "samples": 1264,
+      "duration_s": 0.005056000000000001,
+      "peak_B1_uT": 28.07586233521249,
+      "peak_Gz_mTm": 22.8954996025868,
+      "peak_slew_Tm_s": 147.46092981542546,
+      "rf_area_rad": 1.438239059313847,
+      "net_gradient_cycles_m": 175.63702244132736,
+      "fitted_input_axis_rad_intercept": 10.806790745113759,
+      "fitted_input_phase_cycles_m": 184.29888015176695,
+      "in_6mm_storage_range": [
+        0.9447824995206846,
+        0.9940552238636632
+      ],
+      "in_6mm_unwanted_storage_max": 0.009283675381581466,
+      "in_6mm_axis_residual_deg_max": 0.551516035899054,
+      "water_center_slice_storage_range": [
+        0.10647177882811201,
+        0.9953182491484114
+      ],
+      "fat_center_slice_storage_range": [
+        -0.12235916367094052,
+        0.03409015138355341
+      ],
+      "water_center_unwanted_storage_max": 0.9908778125593048,
+      "rotation_orthogonality_error": 4.063416270128073e-14
+    },
+    "candidate_long_t_B1realT_B1imagT_GzTm.csv": {
+      "sample_sha256": "87356f00c91d81c12e8185a0b4f248e2888ae026500f259bf6f1dc7052535094",
+      "samples": 1669,
+      "duration_s": 0.006676000000000001,
+      "peak_B1_uT": 17.473927854898957,
+      "peak_Gz_mTm": 22.7942399392971,
+      "peak_slew_Tm_s": 146.54862934975006,
+      "rf_area_rad": 1.516301300612865,
+      "net_gradient_cycles_m": 180.3122392620095,
+      "fitted_input_axis_rad_intercept": 29.848247631898566,
+      "fitted_input_phase_cycles_m": 183.68837422991916,
+      "in_6mm_storage_range": [
+        0.9598173504234867,
+        0.9985271422534546
+      ],
+      "in_6mm_unwanted_storage_max": 0.00713407970832447,
+      "in_6mm_axis_residual_deg_max": 0.4258572016709863,
+      "water_center_slice_storage_range": [
+        -0.07358985993087806,
+        0.9985150951737801
+      ],
+      "fat_center_slice_storage_range": [
+        -0.03385033052487257,
+        0.05766589903219907
+      ],
+      "water_center_unwanted_storage_max": 0.9929648664205419,
+      "rotation_orthogonality_error": 4.75175454539567e-14,
+      "independent_ODE_max_error": 2.5957285991196066e-06,
+      "B1_sensitivity": {
+        "0.8": {
+          "selected_range": [
+            0.857994874670261,
+            0.9367469271022395
+          ],
+          "quadrature_max": 0.031166290151365406
+        },
+        "1.0": {
+          "selected_range": [
+            0.9598173504234867,
+            0.9985271422534546
+          ],
+          "quadrature_max": 0.00713407970832447
+        }
+      },
+      "passes_published_B1_cap": true,
+      "passes_published_duration": false,
+      "passes_water_signed_storage_at_center": false,
+      "passes_fat_signed_storage_at_center": false
+    },
+    "slr_prep90_3p2ms.csv": {
+      "sample_sha256": "8229d7ec779314ddbaf79a122a0bb684bc699b4ea11550a9773bdd579139504b",
+      "samples": 320,
+      "duration_s": 0.0032,
+      "peak_B1_uT": 6.8061653229323,
+      "peak_Gz_mTm": 1.44757479435467,
+      "peak_slew_Tm_s": 144.757479435467,
+      "rf_area_rad": 1.5932534770275373,
+      "net_gradient_cycles_m": 197.22222222222223,
+      "fitted_input_axis_rad_intercept": 4.712388980384687,
+      "fitted_input_phase_cycles_m": 105.08117768272461,
+      "in_6mm_storage_range": [
+        0.9996673360880555,
+        0.9999134661092006
+      ],
+      "in_6mm_unwanted_storage_max": 0.008035759491705097,
+      "in_6mm_axis_residual_deg_max": 0.46044503663187386,
+      "water_center_slice_storage_range": [
+        0.19972707552424296,
+        0.9997478487991337
+      ],
+      "fat_center_slice_storage_range": [
+        -0.9781878704838335,
+        0.5670193233221098
+      ],
+      "water_center_unwanted_storage_max": 0.9795462631276556,
+      "rotation_orthogonality_error": 9.547918011776346e-15
+    },
+    "slr_prep180_3p2ms.csv": {
+      "sample_sha256": "b127322c341d413a122f361122a1a68b6df97f161313b42406bd4996967973bf",
+      "samples": 320,
+      "duration_s": 0.0032,
+      "peak_B1_uT": 20.6269677206835,
+      "peak_Gz_mTm": 1.44757479435467,
+      "peak_slew_Tm_s": 144.757479435467,
+      "rf_area_rad": 2.882997229873525,
+      "net_gradient_cycles_m": 197.22222222222223,
+      "fitted_input_axis_rad_intercept": 4.712388980448073,
+      "fitted_input_phase_cycles_m": 9.473256621309378,
+      "in_6mm_storage_range": [
+        -0.02232503143679012,
+        0.25572162452975644
+      ],
+      "in_6mm_unwanted_storage_max": 0.08367780439512736,
+      "in_6mm_axis_residual_deg_max": 108.28086513485295,
+      "water_center_slice_storage_range": [
+        0.06891691573737499,
+        0.25572293030568816
+      ],
+      "fat_center_slice_storage_range": [
+        0.2807068409081001,
+        0.9909995423726784
+      ],
+      "water_center_unwanted_storage_max": 0.09692873862370564,
+      "rotation_orthogonality_error": 8.43769498715119e-15
+    },
+    "slr_elim90_3p2ms.csv": {
+      "sample_sha256": "2077b2e269b0057ddcc883b359016238572c91555365ac6039ad95bc132f5793",
+      "samples": 320,
+      "duration_s": 0.0032,
+      "peak_B1_uT": 7.2883044574630995,
+      "peak_Gz_mTm": 4.34272438306401,
+      "peak_slew_Tm_s": 434.272438306401,
+      "rf_area_rad": 1.5583471851671469,
+      "net_gradient_cycles_m": 591.6666666666666,
+      "fitted_input_axis_rad_intercept": 4.712388980384689,
+      "fitted_input_phase_cycles_m": 313.79794554387917,
+      "in_6mm_storage_range": [
+        0.735100649231656,
+        0.9999948058902692
+      ],
+      "in_6mm_unwanted_storage_max": 0.05020076328860243,
+      "in_6mm_axis_residual_deg_max": 3.9067207835308735,
+      "water_center_slice_storage_range": [
+        0.2211385916217392,
+        0.9999225104371589
+      ],
+      "fat_center_slice_storage_range": [
+        -0.9876704178685418,
+        0.6595300342232603
+      ],
+      "water_center_unwanted_storage_max": 0.9752063114377423,
+      "rotation_orthogonality_error": 8.659739592076221e-15
+    },
+    "windowed_reexc90_1p2ms.csv": {
+      "sample_sha256": "e63e98709e6604a8fdc68b413c7a9c516512dab5dd7484ee75e8a0440c623f17",
+      "samples": 120,
+      "duration_s": 0.0012000000000000001,
+      "peak_B1_uT": 10.530157818867,
+      "peak_Gz_mTm": 5.023696187732259,
+      "peak_slew_Tm_s": 502.3696187732259,
+      "rf_area_rad": 1.5707963267948957,
+      "net_gradient_cycles_m": 256.66666666666646,
+      "fitted_input_axis_rad_intercept": 10.995574287564278,
+      "fitted_input_phase_cycles_m": 142.38028429805368,
+      "in_6mm_storage_range": [
+        0.8434865129244274,
+        0.9999999760426438
+      ],
+      "in_6mm_unwanted_storage_max": 0.05027868160538801,
+      "in_6mm_axis_residual_deg_max": 3.41125976914744,
+      "water_center_slice_storage_range": [
+        0.8473895395317392,
+        0.9999999999999993
+      ],
+      "fat_center_slice_storage_range": [
+        -0.5846350728101727,
+        0.25254523745588847
+      ],
+      "water_center_unwanted_storage_max": 0.5301578520533947,
+      "rotation_orthogonality_error": 5.329070518200751e-15
+    }
+  }
+}

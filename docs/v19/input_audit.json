@@ -1,0 +1,481 @@
+{
+  "scope": "Lexical input inventory and preservation checks; not compilation or played-event validation",
+  "baseline": {
+    "1.8.ppl": {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl",
+      "exists": true,
+      "sha256": "3b420376331e918b4c864e9b37937ef35fd9f49066b8d6402e44aae9da598db2",
+      "bytes": 180304,
+      "expected_sha256": "3b420376331e918b4c864e9b37937ef35fd9f49066b8d6402e44aae9da598db2",
+      "unchanged": true
+    },
+    "1.8.ppr": {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppr",
+      "exists": true,
+      "sha256": "78c9845d090183d59cba956f36305e0e19d4a8dcdb3ae707062839159fd904da",
+      "bytes": 16017,
+      "expected_sha256": "78c9845d090183d59cba956f36305e0e19d4a8dcdb3ae707062839159fd904da",
+      "unchanged": true
+    }
+  },
+  "companion_ppr_pointer": "FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl",
+  "historical_source_identity": "PPR path labels identify version; acquisition-time PPL bytes not embedded or verified",
+  "includes": [
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\utilities\\stdfn_15.pph",
+      "exists": true,
+      "sha256": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+      "bytes": 4219,
+      "declared_name": "stdfn_15.pph"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\utilities\\var_20.pph",
+      "exists": true,
+      "sha256": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+      "bytes": 5504,
+      "declared_name": "var_20.pph"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\utilities\\offst_20.pph",
+      "exists": true,
+      "sha256": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+      "bytes": 3965,
+      "declared_name": "offst_20.pph"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\utilities\\m3040_15.pph",
+      "exists": true,
+      "sha256": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+      "bytes": 10409,
+      "declared_name": "m3040_15.pph"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\utilities\\m3031_15.pph",
+      "exists": true,
+      "sha256": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+      "bytes": 4891,
+      "declared_name": "m3031_15.pph"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\utilities\\tstex_15.pph",
+      "exists": true,
+      "sha256": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af",
+      "bytes": 998,
+      "declared_name": "tstex_15.pph"
+    }
+  ],
+  "libraries": [
+    {
+      "path": "c:\\smis\\seqlib\\RFstd44.seq",
+      "exists": false,
+      "sha256": null,
+      "bytes": null,
+      "board": "RF1",
+      "declared_path": "c:\\smis\\seqlib\\RFstd44.seq",
+      "alias": "pf1",
+      "uploaded_local_copy": {
+        "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\utilities\\RFstd44.seq",
+        "exists": true,
+        "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29",
+        "bytes": 62325
+      },
+      "available_for_local_inspection": true
+    },
+    {
+      "path": "c:\\smis\\seqlib\\gs_240Hz.seq",
+      "exists": false,
+      "sha256": null,
+      "bytes": null,
+      "board": "RF1",
+      "declared_path": "c:\\smis\\seqlib\\gs_240Hz.seq",
+      "alias": "pf7",
+      "uploaded_local_copy": {
+        "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\utilities\\gs_240Hz.seq",
+        "exists": true,
+        "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef",
+        "bytes": 8179
+      },
+      "available_for_local_inspection": true
+    },
+    {
+      "path": "c:\\smis\\seqlib\\presat.seq",
+      "exists": false,
+      "sha256": null,
+      "bytes": null,
+      "board": "RF1",
+      "declared_path": "c:\\smis\\seqlib\\presat.seq",
+      "alias": "pf8",
+      "uploaded_local_copy": {
+        "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\utilities\\presat.seq",
+        "exists": true,
+        "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134",
+        "bytes": 52650
+      },
+      "available_for_local_inspection": true
+    },
+    {
+      "path": "c:\\smis\\seqlib\\opt90_a.seq",
+      "exists": false,
+      "sha256": null,
+      "bytes": null,
+      "board": "RF1",
+      "declared_path": "c:\\smis\\seqlib\\opt90_a.seq",
+      "alias": "pf10",
+      "uploaded_local_copy": {
+        "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\utilities\\opt90_a.seq",
+        "exists": true,
+        "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444",
+        "bytes": 4189
+      },
+      "available_for_local_inspection": true
+    },
+    {
+      "path": "c:\\smis\\seqlib\\opt90_as.seq",
+      "exists": false,
+      "sha256": null,
+      "bytes": null,
+      "board": "RF1",
+      "declared_path": "c:\\smis\\seqlib\\opt90_as.seq",
+      "alias": "pf11",
+      "uploaded_local_copy": {
+        "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\utilities\\opt90_as.seq",
+        "exists": true,
+        "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff",
+        "bytes": 5323
+      },
+      "available_for_local_inspection": true
+    },
+    {
+      "path": "c:\\smis\\seqlib\\asym.seq",
+      "exists": false,
+      "sha256": null,
+      "bytes": null,
+      "board": "RF1",
+      "declared_path": "c:\\smis\\seqlib\\asym.seq",
+      "alias": "pf12",
+      "uploaded_local_copy": {
+        "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\utilities\\asym.seq",
+        "exists": true,
+        "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5",
+        "bytes": 8277
+      },
+      "available_for_local_inspection": true
+    },
+    {
+      "path": "c:\\smis\\seqlib\\hypsec.seq",
+      "exists": false,
+      "sha256": null,
+      "bytes": null,
+      "board": "RF1",
+      "declared_path": "c:\\smis\\seqlib\\hypsec.seq",
+      "alias": "pf14",
+      "uploaded_local_copy": {
+        "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\utilities\\hypsec.seq",
+        "exists": true,
+        "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8",
+        "bytes": 20916
+      },
+      "available_for_local_inspection": true
+    },
+    {
+      "path": "c:\\smis\\seqlib\\rfchess.seq",
+      "exists": false,
+      "sha256": null,
+      "bytes": null,
+      "board": "RF1",
+      "declared_path": "c:\\smis\\seqlib\\rfchess.seq",
+      "alias": "pf15",
+      "uploaded_local_copy": {
+        "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\utilities\\rfchess.seq",
+        "exists": true,
+        "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b",
+        "bytes": 8179
+      },
+      "available_for_local_inspection": true
+    },
+    {
+      "path": "c:\\smis\\seqlib\\9lobsinb.seq",
+      "exists": false,
+      "sha256": null,
+      "bytes": null,
+      "board": "RF1",
+      "declared_path": "c:\\smis\\seqlib\\9lobsinb.seq",
+      "alias": "pf16",
+      "uploaded_local_copy": {
+        "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\utilities\\9lobsinb.seq",
+        "exists": true,
+        "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403",
+        "bytes": 8177
+      },
+      "available_for_local_inspection": true
+    },
+    {
+      "path": "c:\\smis\\seqlib\\19lobsinb.seq",
+      "exists": false,
+      "sha256": null,
+      "bytes": null,
+      "board": "RF1",
+      "declared_path": "c:\\smis\\seqlib\\19lobsinb.seq",
+      "alias": "pf17",
+      "uploaded_local_copy": {
+        "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\utilities\\19lobsinb.seq",
+        "exists": true,
+        "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45",
+        "bytes": 8178
+      },
+      "available_for_local_inspection": true
+    },
+    {
+      "path": "c:\\smis\\seqlib\\g3040_15.seq",
+      "exists": false,
+      "sha256": null,
+      "bytes": null,
+      "board": "GRAD",
+      "declared_path": "c:\\smis\\seqlib\\g3040_15.seq",
+      "alias": "grad",
+      "uploaded_local_copy": {
+        "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\utilities\\g3040_15.seq",
+        "exists": true,
+        "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b",
+        "bytes": 28493
+      },
+      "available_for_local_inspection": true
+    }
+  ],
+  "references": [
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\EVO Pulse Sequence Program Manual.pdf",
+      "exists": true,
+      "sha256": "02c41bcbae9577ba7f3d6d696cb6a34f39cccccb9e58abe9727af07ec45807c4",
+      "bytes": 2382412
+    },
+    {
+      "path": "C:\\Users\\jaden\\Downloads\\Gibbons_2017.pdf",
+      "exists": true,
+      "sha256": "21755b13d6feeeac4602267d64793042853b1463adcb04f2e63f2d3af4abdf33",
+      "bytes": 1354056
+    },
+    {
+      "path": "C:\\Users\\jaden\\Downloads\\mrm26971-sup-0001-suppinfo01.pdf",
+      "exists": true,
+      "sha256": "be49843dacec68f1e31fe023911b11071daead19dbc83a406b536e2dabeaa9e8",
+      "bytes": 641498
+    }
+  ],
+  "acquisition_sidecar_pprs": [
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test0\\FSE-DWI_10-05-2026_v18_test0.ppr",
+      "exists": true,
+      "sha256": "e5aac7f2a7228630d71b3d679ab836f8de97e494864e568ffc888f2200b0f363",
+      "bytes": 15951,
+      "ppl_pointer": "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test1\\FSE-DWI_10-05-2026_v18_test1.ppr",
+      "exists": true,
+      "sha256": "8e22dab9ffb30b7bcb779c4107d4502b9e49100e9d9307f147074b1bc5833d13",
+      "bytes": 15952,
+      "ppl_pointer": "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test1b\\FSE-DWI_10-05-2026_v18_test1b.ppr",
+      "exists": true,
+      "sha256": "d212e8f2f6fa1e74d88dd9ec3d9bb2600687d5c764acb6ee24959cad9eda5694",
+      "bytes": 15952,
+      "ppl_pointer": "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test1c\\FSE-DWI_10-05-2026_v18_test1c.ppr",
+      "exists": true,
+      "sha256": "fb357cff00dbc255edd49cf084b26c71efa1496e0393b10ff50ff35c0ea82050",
+      "bytes": 15954,
+      "ppl_pointer": "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test1d\\FSE-DWI_10-05-2026_v18_test1d.ppr",
+      "exists": true,
+      "sha256": "fb3f99d6fa491b8d91bf92a5ea23b72a18eb876b5657335fc67ca070c258763c",
+      "bytes": 15954,
+      "ppl_pointer": "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test1e\\FSE-DWI_10-05-2026_v18_test1.ppr",
+      "exists": true,
+      "sha256": "84611fcb854deab5e9e7110aa7fdd68cfed25ba17d988231ab092c51a66b8fbc",
+      "bytes": 15954,
+      "ppl_pointer": "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test1f\\FSE-DWI_10-05-2026_v18_test1.ppr",
+      "exists": true,
+      "sha256": "3437ab4c8053ebab7d9ead3c171894ded333e6c9488681e6e6c8d881650133ce",
+      "bytes": 15954,
+      "ppl_pointer": "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test1g\\FSE-DWI_10-05-2026_v18_test1.ppr",
+      "exists": true,
+      "sha256": "b9647298828485a80004ed223b69b3a70f6d96adcfac6b9ee6b7c33c4d8d8340",
+      "bytes": 15954,
+      "ppl_pointer": "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test2\\FSE-DWI_10-05-2026_v18_test2.ppr",
+      "exists": true,
+      "sha256": "8083adeecf58a3b30e9a0dd5777c15d2079dfed76465947d043f725355be3b02",
+      "bytes": 15951,
+      "ppl_pointer": "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test2b\\FSE-DWI_10-05-2026_v18_test2b.ppr",
+      "exists": true,
+      "sha256": "c2778ccffeb32878cda4ab8a2fc4e6dc7768901ed4fe0615a71e2fd56cdd7e21",
+      "bytes": 15955,
+      "ppl_pointer": "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test2c\\FSE-DWI_10-05-2026_v18_test2c.ppr",
+      "exists": true,
+      "sha256": "09e3bcfa5a19c83ac5830188d993cb565f2164cbf8f87668e722d4902c2f99e5",
+      "bytes": 15955,
+      "ppl_pointer": "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test2d\\FSE-DWI_10-05-2026_v18_test2d.ppr",
+      "exists": true,
+      "sha256": "5afb7ceb20da46a2bef1c2bbe1845676f4afc4f6cb6ca5efa3dbb2ca3d30bb21",
+      "bytes": 15955,
+      "ppl_pointer": "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test3\\FSE-DWI_10-05-2026_v18_test3.ppr",
+      "exists": true,
+      "sha256": "350ee825e86fcce39b965884c1334d338d01a1ca782df60bc6e1b844f3c2dc52",
+      "bytes": 15951,
+      "ppl_pointer": "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test3b\\FSE-DWI_10-05-2026_v18_test3b.ppr",
+      "exists": true,
+      "sha256": "1aac71dd213aec1a74a0f9ba086b209d6029778685c38c0afca228f6b23879e6",
+      "bytes": 15955,
+      "ppl_pointer": "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test4\\FSE-DWI_10-05-2026_v18_test4.ppr",
+      "exists": true,
+      "sha256": "e0be3094809807848c35fdfe9dd4faf965f3d783fef65ce9c885dfb352f36d8b",
+      "bytes": 15955,
+      "ppl_pointer": "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test4b\\FSE-DWI_10-05-2026_v18_test4b.ppr",
+      "exists": true,
+      "sha256": "5425a3650054ffd48a81de2afb2b4ff07fe8cadd5322802b039588a7fba882e6",
+      "bytes": 15955,
+      "ppl_pointer": "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test5\\FSE-DWI_10-05-2026_v18_test5.ppr",
+      "exists": true,
+      "sha256": "497a44b58b0dcff1c70ab429bc60b1ef1639766bcb86d153498904986dd11317",
+      "bytes": 15955,
+      "ppl_pointer": "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test6\\FSE-DWI_10-05-2026_v18_test6.ppr",
+      "exists": true,
+      "sha256": "fe4c4e4ba5e4891e4cc78a96980072932ecc616fc8d678133ad0584c047869de",
+      "bytes": 15967,
+      "ppl_pointer": "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl"
+    },
+    {
+      "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test7\\FSE-DWI_10-05-2026_v18_test7.ppr",
+      "exists": true,
+      "sha256": "f8645db2a99ae22aca5ebf546cb5f6b2106c9b9101df536c9027e70ec41cb844",
+      "bytes": 15971,
+      "ppl_pointer": "G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl"
+    }
+  ],
+  "compiler_path_probe": {
+    "ppl": null,
+    "pplc": null,
+    "pfgen": null,
+    "specsim": null
+  },
+  "missing_includes": [],
+  "missing_libraries": [
+    "c:\\smis\\seqlib\\RFstd44.seq",
+    "c:\\smis\\seqlib\\gs_240Hz.seq",
+    "c:\\smis\\seqlib\\presat.seq",
+    "c:\\smis\\seqlib\\opt90_a.seq",
+    "c:\\smis\\seqlib\\opt90_as.seq",
+    "c:\\smis\\seqlib\\asym.seq",
+    "c:\\smis\\seqlib\\hypsec.seq",
+    "c:\\smis\\seqlib\\rfchess.seq",
+    "c:\\smis\\seqlib\\9lobsinb.seq",
+    "c:\\smis\\seqlib\\19lobsinb.seq",
+    "c:\\smis\\seqlib\\g3040_15.seq"
+  ],
+  "missing_uploaded_libraries": [],
+  "upload_directory": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\utilities",
+  "scanner_tree_listing": {
+    "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\utilities\\tree_output.txt",
+    "exists": true,
+    "sha256": "7bf39815ad334568ad80ada676fb7fb7295363cdac31413b1421c49e017cc6b0",
+    "bytes": 470584
+  },
+  "reservations": [
+    {
+      "version": "1.91",
+      "ppl": {
+        "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppl",
+        "exists": true,
+        "sha256": "9506f8feb989fec09cc1d4a3063a73d5aa63aff7932f50dedef5c726f7b54519",
+        "bytes": 180920
+      },
+      "ppr": {
+        "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppr",
+        "exists": true,
+        "sha256": "0085c4ea4567ab34b184e9e5a1420e9013cd1d70899889a918433da2fdc491af",
+        "bytes": 16018
+      },
+      "first_directive": "#include \"V191_SS_MGOT_NOT_IMPLEMENTED_REQUIRES_VALIDATED_RF.pph\"",
+      "pre_library_compile_gate": true,
+      "compile_gate_semantics": "Intentionally missing include; documented directive, vendor diagnostic untested",
+      "reservation_header": true,
+      "ppr_pointer": "FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppl",
+      "baseline_parameters_preserved": true
+    },
+    {
+      "version": "1.92",
+      "ppl": {
+        "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppl",
+        "exists": true,
+        "sha256": "45a4b2967b7c950a56400319bab3d959f7846d9a04da387527c6b988b99df352",
+        "bytes": 180954
+      },
+      "ppr": {
+        "path": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppr",
+        "exists": true,
+        "sha256": "8221fcce829722448a0dc301495b75ac2c2f4ad6055b5b45ac6d0d80c7103a3a",
+        "bytes": 16018
+      },
+      "first_directive": "#include \"V192_METHOD_NOT_IMPLEMENTED_BLOCK.pph\"",
+      "pre_library_compile_gate": true,
+      "compile_gate_semantics": "Intentionally missing include; documented directive, vendor diagnostic untested",
+      "reservation_header": true,
+      "ppr_pointer": "FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppl",
+      "baseline_parameters_preserved": true
+    }
+  ],
+  "failures": [],
+  "status": {
+    "method_implemented": "See per-method source and final review; inventory does not infer implementation",
+    "vendor_compiled": false,
+    "played_event_trace_verified": false,
+    "finite_rf_validated": false,
+    "scanner_verified": false
+  },
+  "script_sha256": "44db4f67a7bbca9b0cb7135fe69f2074d120502c376e97cda4a0a9d8ed5d45f6"
+}

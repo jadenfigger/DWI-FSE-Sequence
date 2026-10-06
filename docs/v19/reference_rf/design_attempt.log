@@ -1,0 +1,38 @@
+Iterating on spectral sampling frequency to reduce B1
+Failed to get filter
+Band: 1/1 Iter: 1/5 Fs:  954.2 *** No Soln ***
+Failed to get filter
+Band: 1/1 Iter: 2/5 Fs:  874.1 *** No Soln ***
+Failed to get filter
+Band: 1/1 Iter: 3/5 Fs:  811.7 *** No Soln ***
+Failed to get filter
+Band: 1/1 Iter: 4/5 Fs:  746.3 *** No Soln ***
+Failed to get filter
+Band: 1/1 Iter: 5/5 Fs:  683.1 *** No Soln ***
+No solution found! Trying to increase band ripples to determine limiting
+ frequency specifications...
+Note: Spectral Correction for SLR pulses only corrects base bandwidth (not aliased bands)
+Note: Spectral Correction for SLR pulses only corrects base bandwidth (not aliased bands)
+Note: Spectral Correction for SLR pulses only corrects base bandwidth (not aliased bands)
+Note: Spectral Correction for SLR pulses only corrects base bandwidth (not aliased bands)
+Note: Spectral Correction for SLR pulses only corrects base bandwidth (not aliased bands)
+Note: Spectral Correction for SLR pulses only corrects base bandwidth (not aliased bands)
+Failed to get filter
+Note: Spectral Correction for SLR pulses only corrects base bandwidth (not aliased bands)
+Note: Spectral Correction for SLR pulses only corrects base bandwidth (not aliased bands)
+Note: Spectral Correction for SLR pulses only corrects base bandwidth (not aliased bands)
+Note: Spectral Correction for SLR pulses only corrects base bandwidth (not aliased bands)
+Note: Spectral Correction for SLR pulses only corrects base bandwidth (not aliased bands)
+Note: Spectral Correction for SLR pulses only corrects base bandwidth (not aliased bands)
+Failed to get filter
+Note: Spectral Correction for SLR pulses only corrects base bandwidth (not aliased bands)
+Note: Spectral Correction for SLR pulses only corrects base bandwidth (not aliased bands)
+Failed to get filter
+Solution found by increasing ripples in bands 1  2
+Returning pulse with increased ripple in band 1 (-549.0 to -306.0 Hz):
+Note: Spectral Correction for SLR pulses only corrects base bandwidth (not aliased bands)
+Fs:  954.2 B1: 0.281G Power: 1.168e-05 G^2 ms Dur:  5.1ms
+
+Pulse specs should be modified by reducing bandwidths or increasing ripple in bands 1  2
+Increasing the max pulse duration or slice thickness may also help
+Duration 0.005056 s; spectral sampling 954.198473 Hz; peak B1 0.280758623 G; peak G 2.28954996 G/cm

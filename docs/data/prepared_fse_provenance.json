@@ -1,0 +1,3575 @@
+{
+  "protocol": "TE64ms ESP16ms ETL8 fixed180 imaging; water-only stationary mechanism models",
+  "source_sha256": {
+    "examples/compare_prepared_fse.py": "b07e598687d76eec18dde6c53bf565db22a9c5f118cc51452a1e16804b3d22bf",
+    "dwfse/generate.py": "afff13793b7d326a43423cf193751d8de4c82f0ffbcef83915c9a5f4766b6990",
+    "dwfse/simulate.py": "7df26814d2a200a3c1ca4c135304fab68cd1a10ecbdcb00861b0d8830e81c96e",
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppl": "c0e551e76234c8113eb2953dcf9c2bc9e427eee18264199e98b3edd2c2abfd0c",
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.6.ppr": "00bd9e78573133e5df09da9fa64cf424bf6e338e05a1872ff916c3c03bc315ee"
+  },
+  "dependencies": {
+    "numpy": "2.1.0",
+    "matplotlib": "3.9.2",
+    "pypulseq": "1.5.0.post1"
+  },
+  "grid": 4097,
+  "ensemble_n": 8192,
+  "rf_dt_s": 4e-06,
+  "voxel_xy_mm": 0.2,
+  "voxel_z_mm": 2,
+  "T1_s": 1.5,
+  "T2_s": 0.08,
+  "T2prime_s": 0.03,
+  "line": "x=y=df=0; mean-y profiles use analytic harmonic integration including PE, checked against 256 points",
+  "reference": "Gibbons et al. DOI 10.1002/mrm.26971; Alsop DOI 10.1002/mrm.1910380404",
+  "paper_sha256": "21755b13d6feeeac4602267d64793042853b1463adcb04f2e63f2d3af4abdf33",
+  "configurations": [
+    {
+      "key": "original",
+      "title": "Original",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.011196,
+      "imaging_rf_blocks": [
+        7,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37
+      ],
+      "preparation_echo_ms": null,
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 64.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 0.0,
+        "sim_fix_refocus_centering": false,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "centering": "v1.6 as written",
+      "phase": 0.0,
+      "snapshot_times_s": [
+        0.042526,
+        0.07199499999999999,
+        0.075221,
+        0.09122099999999998,
+        0.183995,
+        0.187221
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.07199599999999999,
+          "midpoint_s": 0.07519599999999999,
+          "sample_s": 0.075221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 15,
+          "start_s": 0.08799599999999998,
+          "midpoint_s": 0.09119599999999997,
+          "sample_s": 0.09122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 19,
+          "start_s": 0.10399599999999996,
+          "midpoint_s": 0.10719599999999996,
+          "sample_s": 0.10722099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 23,
+          "start_s": 0.11999599999999995,
+          "midpoint_s": 0.12319599999999994,
+          "sample_s": 0.12322099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 27,
+          "start_s": 0.13599599999999995,
+          "midpoint_s": 0.13919599999999996,
+          "sample_s": 0.13922099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 31,
+          "start_s": 0.15199599999999996,
+          "midpoint_s": 0.15519599999999997,
+          "sample_s": 0.15522099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 35,
+          "start_s": 0.16799599999999998,
+          "midpoint_s": 0.171196,
+          "sample_s": 0.17122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 39,
+          "start_s": 0.183996,
+          "midpoint_s": 0.187196,
+          "sample_s": 0.187221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "2606938e71f9871329400171c707c67396abf8acc4d803c9c213e7db06c61421",
+      "seq_path": "runs\\prepared_fse_comparison\\original_phase000.seq"
+    },
+    {
+      "key": "original",
+      "title": "Original",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.011196,
+      "imaging_rf_blocks": [
+        7,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37
+      ],
+      "preparation_echo_ms": null,
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 64.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 45.0,
+        "sim_fix_refocus_centering": false,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "centering": "v1.6 as written",
+      "phase": 45.0,
+      "snapshot_times_s": [
+        0.042526,
+        0.07199499999999999,
+        0.075221,
+        0.09122099999999998,
+        0.183995,
+        0.187221
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.07199599999999999,
+          "midpoint_s": 0.07519599999999999,
+          "sample_s": 0.075221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 15,
+          "start_s": 0.08799599999999998,
+          "midpoint_s": 0.09119599999999997,
+          "sample_s": 0.09122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 19,
+          "start_s": 0.10399599999999996,
+          "midpoint_s": 0.10719599999999996,
+          "sample_s": 0.10722099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 23,
+          "start_s": 0.11999599999999995,
+          "midpoint_s": 0.12319599999999994,
+          "sample_s": 0.12322099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 27,
+          "start_s": 0.13599599999999995,
+          "midpoint_s": 0.13919599999999996,
+          "sample_s": 0.13922099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 31,
+          "start_s": 0.15199599999999996,
+          "midpoint_s": 0.15519599999999997,
+          "sample_s": 0.15522099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 35,
+          "start_s": 0.16799599999999998,
+          "midpoint_s": 0.171196,
+          "sample_s": 0.17122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 39,
+          "start_s": 0.183996,
+          "midpoint_s": 0.187196,
+          "sample_s": 0.187221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "2bff0a19f9e3f8ebc4d1fdc8d30cd85cd6825ccafa5443b2294d3491400081f4",
+      "seq_path": "runs\\prepared_fse_comparison\\original_phase045.seq"
+    },
+    {
+      "key": "original",
+      "title": "Original",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.011196,
+      "imaging_rf_blocks": [
+        7,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37
+      ],
+      "preparation_echo_ms": null,
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 64.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 90.0,
+        "sim_fix_refocus_centering": false,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "centering": "v1.6 as written",
+      "phase": 90.0,
+      "snapshot_times_s": [
+        0.042526,
+        0.07199499999999999,
+        0.075221,
+        0.09122099999999998,
+        0.183995,
+        0.187221
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.07199599999999999,
+          "midpoint_s": 0.07519599999999999,
+          "sample_s": 0.075221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 15,
+          "start_s": 0.08799599999999998,
+          "midpoint_s": 0.09119599999999997,
+          "sample_s": 0.09122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 19,
+          "start_s": 0.10399599999999996,
+          "midpoint_s": 0.10719599999999996,
+          "sample_s": 0.10722099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 23,
+          "start_s": 0.11999599999999995,
+          "midpoint_s": 0.12319599999999994,
+          "sample_s": 0.12322099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 27,
+          "start_s": 0.13599599999999995,
+          "midpoint_s": 0.13919599999999996,
+          "sample_s": 0.13922099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 31,
+          "start_s": 0.15199599999999996,
+          "midpoint_s": 0.15519599999999997,
+          "sample_s": 0.15522099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 35,
+          "start_s": 0.16799599999999998,
+          "midpoint_s": 0.171196,
+          "sample_s": 0.17122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 39,
+          "start_s": 0.183996,
+          "midpoint_s": 0.187196,
+          "sample_s": 0.187221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "4073f428faf65517f5115bb5a0e125fa77c35382e525f8d20a2fe8b2a8855da1",
+      "seq_path": "runs\\prepared_fse_comparison\\original_phase090.seq"
+    },
+    {
+      "key": "increasing",
+      "title": "Increasing",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.011196,
+      "imaging_rf_blocks": [
+        7,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37
+      ],
+      "preparation_echo_ms": null,
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 64.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 0.0,
+        "sim_fix_refocus_centering": false,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1.4,
+          1.8,
+          2.2,
+          2.6,
+          3,
+          3.4
+        ]
+      },
+      "centering": "v1.6 as written",
+      "phase": 0.0,
+      "snapshot_times_s": [
+        0.042526,
+        0.07199499999999999,
+        0.075221,
+        0.09122099999999998,
+        0.183995,
+        0.187221
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.07199599999999999,
+          "midpoint_s": 0.07519599999999999,
+          "sample_s": 0.075221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 15,
+          "start_s": 0.08799599999999998,
+          "midpoint_s": 0.09119599999999997,
+          "sample_s": 0.09122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 19,
+          "start_s": 0.10399599999999996,
+          "midpoint_s": 0.10719599999999996,
+          "sample_s": 0.10722099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 23,
+          "start_s": 0.11999599999999995,
+          "midpoint_s": 0.12319599999999994,
+          "sample_s": 0.12322099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 27,
+          "start_s": 0.13599599999999995,
+          "midpoint_s": 0.13919599999999996,
+          "sample_s": 0.13922099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 31,
+          "start_s": 0.15199599999999996,
+          "midpoint_s": 0.15519599999999997,
+          "sample_s": 0.15522099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 35,
+          "start_s": 0.16799599999999998,
+          "midpoint_s": 0.171196,
+          "sample_s": 0.17122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 39,
+          "start_s": 0.183996,
+          "midpoint_s": 0.187196,
+          "sample_s": 0.187221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "9a6f3bdc3c8c4142045cfc61f4703e8b7ecdb880f31efd3ef8669f46a8549d2b",
+      "seq_path": "runs\\prepared_fse_comparison\\increasing_phase000.seq"
+    },
+    {
+      "key": "increasing",
+      "title": "Increasing",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.011196,
+      "imaging_rf_blocks": [
+        7,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37
+      ],
+      "preparation_echo_ms": null,
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 64.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 45.0,
+        "sim_fix_refocus_centering": false,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1.4,
+          1.8,
+          2.2,
+          2.6,
+          3,
+          3.4
+        ]
+      },
+      "centering": "v1.6 as written",
+      "phase": 45.0,
+      "snapshot_times_s": [
+        0.042526,
+        0.07199499999999999,
+        0.075221,
+        0.09122099999999998,
+        0.183995,
+        0.187221
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.07199599999999999,
+          "midpoint_s": 0.07519599999999999,
+          "sample_s": 0.075221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 15,
+          "start_s": 0.08799599999999998,
+          "midpoint_s": 0.09119599999999997,
+          "sample_s": 0.09122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 19,
+          "start_s": 0.10399599999999996,
+          "midpoint_s": 0.10719599999999996,
+          "sample_s": 0.10722099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 23,
+          "start_s": 0.11999599999999995,
+          "midpoint_s": 0.12319599999999994,
+          "sample_s": 0.12322099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 27,
+          "start_s": 0.13599599999999995,
+          "midpoint_s": 0.13919599999999996,
+          "sample_s": 0.13922099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 31,
+          "start_s": 0.15199599999999996,
+          "midpoint_s": 0.15519599999999997,
+          "sample_s": 0.15522099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 35,
+          "start_s": 0.16799599999999998,
+          "midpoint_s": 0.171196,
+          "sample_s": 0.17122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 39,
+          "start_s": 0.183996,
+          "midpoint_s": 0.187196,
+          "sample_s": 0.187221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "71f278f71f9e8c8160893db3a3bc98421e725cf66ea05a3f15bdc3acb8b6fecf",
+      "seq_path": "runs\\prepared_fse_comparison\\increasing_phase045.seq"
+    },
+    {
+      "key": "increasing",
+      "title": "Increasing",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.011196,
+      "imaging_rf_blocks": [
+        7,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37
+      ],
+      "preparation_echo_ms": null,
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 64.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 90.0,
+        "sim_fix_refocus_centering": false,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1.4,
+          1.8,
+          2.2,
+          2.6,
+          3,
+          3.4
+        ]
+      },
+      "centering": "v1.6 as written",
+      "phase": 90.0,
+      "snapshot_times_s": [
+        0.042526,
+        0.07199499999999999,
+        0.075221,
+        0.09122099999999998,
+        0.183995,
+        0.187221
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.07199599999999999,
+          "midpoint_s": 0.07519599999999999,
+          "sample_s": 0.075221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 15,
+          "start_s": 0.08799599999999998,
+          "midpoint_s": 0.09119599999999997,
+          "sample_s": 0.09122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 19,
+          "start_s": 0.10399599999999996,
+          "midpoint_s": 0.10719599999999996,
+          "sample_s": 0.10722099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 23,
+          "start_s": 0.11999599999999995,
+          "midpoint_s": 0.12319599999999994,
+          "sample_s": 0.12322099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 27,
+          "start_s": 0.13599599999999995,
+          "midpoint_s": 0.13919599999999996,
+          "sample_s": 0.13922099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 31,
+          "start_s": 0.15199599999999996,
+          "midpoint_s": 0.15519599999999997,
+          "sample_s": 0.15522099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 35,
+          "start_s": 0.16799599999999998,
+          "midpoint_s": 0.171196,
+          "sample_s": 0.17122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 39,
+          "start_s": 0.183996,
+          "midpoint_s": 0.187196,
+          "sample_s": 0.187221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "21ca289ac708634242f76cfc741d09d0911271488678a92a3a6c3182287b876b",
+      "seq_path": "runs\\prepared_fse_comparison\\increasing_phase090.seq"
+    },
+    {
+      "key": "decreasing",
+      "title": "Decreasing",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.011196,
+      "imaging_rf_blocks": [
+        7,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37
+      ],
+      "preparation_echo_ms": null,
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 64.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 0.0,
+        "sim_fix_refocus_centering": false,
+        "sim_train_crusher_scales": [
+          1,
+          3.4,
+          3,
+          2.6,
+          2.2,
+          1.8,
+          1.4,
+          1
+        ]
+      },
+      "centering": "v1.6 as written",
+      "phase": 0.0,
+      "snapshot_times_s": [
+        0.042526,
+        0.07199499999999999,
+        0.075221,
+        0.09122099999999998,
+        0.183995,
+        0.187221
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.07199599999999999,
+          "midpoint_s": 0.07519599999999999,
+          "sample_s": 0.075221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 15,
+          "start_s": 0.08799599999999998,
+          "midpoint_s": 0.09119599999999997,
+          "sample_s": 0.09122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 19,
+          "start_s": 0.10399599999999996,
+          "midpoint_s": 0.10719599999999996,
+          "sample_s": 0.10722099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 23,
+          "start_s": 0.11999599999999995,
+          "midpoint_s": 0.12319599999999994,
+          "sample_s": 0.12322099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 27,
+          "start_s": 0.13599599999999995,
+          "midpoint_s": 0.13919599999999996,
+          "sample_s": 0.13922099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 31,
+          "start_s": 0.15199599999999996,
+          "midpoint_s": 0.15519599999999997,
+          "sample_s": 0.15522099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 35,
+          "start_s": 0.16799599999999998,
+          "midpoint_s": 0.171196,
+          "sample_s": 0.17122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 39,
+          "start_s": 0.183996,
+          "midpoint_s": 0.187196,
+          "sample_s": 0.187221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "5b0d139741d67b4819dfb758ab7cfe2672e372f75631772f560cd5af9795da36",
+      "seq_path": "runs\\prepared_fse_comparison\\decreasing_phase000.seq"
+    },
+    {
+      "key": "decreasing",
+      "title": "Decreasing",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.011196,
+      "imaging_rf_blocks": [
+        7,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37
+      ],
+      "preparation_echo_ms": null,
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 64.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 45.0,
+        "sim_fix_refocus_centering": false,
+        "sim_train_crusher_scales": [
+          1,
+          3.4,
+          3,
+          2.6,
+          2.2,
+          1.8,
+          1.4,
+          1
+        ]
+      },
+      "centering": "v1.6 as written",
+      "phase": 45.0,
+      "snapshot_times_s": [
+        0.042526,
+        0.07199499999999999,
+        0.075221,
+        0.09122099999999998,
+        0.183995,
+        0.187221
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.07199599999999999,
+          "midpoint_s": 0.07519599999999999,
+          "sample_s": 0.075221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 15,
+          "start_s": 0.08799599999999998,
+          "midpoint_s": 0.09119599999999997,
+          "sample_s": 0.09122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 19,
+          "start_s": 0.10399599999999996,
+          "midpoint_s": 0.10719599999999996,
+          "sample_s": 0.10722099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 23,
+          "start_s": 0.11999599999999995,
+          "midpoint_s": 0.12319599999999994,
+          "sample_s": 0.12322099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 27,
+          "start_s": 0.13599599999999995,
+          "midpoint_s": 0.13919599999999996,
+          "sample_s": 0.13922099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 31,
+          "start_s": 0.15199599999999996,
+          "midpoint_s": 0.15519599999999997,
+          "sample_s": 0.15522099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 35,
+          "start_s": 0.16799599999999998,
+          "midpoint_s": 0.171196,
+          "sample_s": 0.17122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 39,
+          "start_s": 0.183996,
+          "midpoint_s": 0.187196,
+          "sample_s": 0.187221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "75137baac14b0bcd7d5c8e5bb436650d5a084c9e8819f44c777bd7b84e3219dd",
+      "seq_path": "runs\\prepared_fse_comparison\\decreasing_phase045.seq"
+    },
+    {
+      "key": "decreasing",
+      "title": "Decreasing",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.011196,
+      "imaging_rf_blocks": [
+        7,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37
+      ],
+      "preparation_echo_ms": null,
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 64.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 90.0,
+        "sim_fix_refocus_centering": false,
+        "sim_train_crusher_scales": [
+          1,
+          3.4,
+          3,
+          2.6,
+          2.2,
+          1.8,
+          1.4,
+          1
+        ]
+      },
+      "centering": "v1.6 as written",
+      "phase": 90.0,
+      "snapshot_times_s": [
+        0.042526,
+        0.07199499999999999,
+        0.075221,
+        0.09122099999999998,
+        0.183995,
+        0.187221
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.07199599999999999,
+          "midpoint_s": 0.07519599999999999,
+          "sample_s": 0.075221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 15,
+          "start_s": 0.08799599999999998,
+          "midpoint_s": 0.09119599999999997,
+          "sample_s": 0.09122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 19,
+          "start_s": 0.10399599999999996,
+          "midpoint_s": 0.10719599999999996,
+          "sample_s": 0.10722099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 23,
+          "start_s": 0.11999599999999995,
+          "midpoint_s": 0.12319599999999994,
+          "sample_s": 0.12322099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 27,
+          "start_s": 0.13599599999999995,
+          "midpoint_s": 0.13919599999999996,
+          "sample_s": 0.13922099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 31,
+          "start_s": 0.15199599999999996,
+          "midpoint_s": 0.15519599999999997,
+          "sample_s": 0.15522099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 35,
+          "start_s": 0.16799599999999998,
+          "midpoint_s": 0.171196,
+          "sample_s": 0.17122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 39,
+          "start_s": 0.183996,
+          "midpoint_s": 0.187196,
+          "sample_s": 0.187221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "897264f4f35e505df642f288fb4f854209e400489f516161c962682ca91e9cc9",
+      "seq_path": "runs\\prepared_fse_comparison\\decreasing_phase090.seq"
+    },
+    {
+      "key": "alternating",
+      "title": "Alternating polarity",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.011196,
+      "imaging_rf_blocks": [
+        7,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37
+      ],
+      "preparation_echo_ms": null,
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 64.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 0.0,
+        "sim_fix_refocus_centering": false,
+        "sim_train_crusher_scales": [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1
+        ]
+      },
+      "centering": "v1.6 as written",
+      "phase": 0.0,
+      "snapshot_times_s": [
+        0.042526,
+        0.07199499999999999,
+        0.075221,
+        0.09122099999999998,
+        0.183995,
+        0.187221
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.07199599999999999,
+          "midpoint_s": 0.07519599999999999,
+          "sample_s": 0.075221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 15,
+          "start_s": 0.08799599999999998,
+          "midpoint_s": 0.09119599999999997,
+          "sample_s": 0.09122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 19,
+          "start_s": 0.10399599999999996,
+          "midpoint_s": 0.10719599999999996,
+          "sample_s": 0.10722099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 23,
+          "start_s": 0.11999599999999995,
+          "midpoint_s": 0.12319599999999994,
+          "sample_s": 0.12322099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 27,
+          "start_s": 0.13599599999999995,
+          "midpoint_s": 0.13919599999999996,
+          "sample_s": 0.13922099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 31,
+          "start_s": 0.15199599999999996,
+          "midpoint_s": 0.15519599999999997,
+          "sample_s": 0.15522099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 35,
+          "start_s": 0.16799599999999998,
+          "midpoint_s": 0.171196,
+          "sample_s": 0.17122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 39,
+          "start_s": 0.183996,
+          "midpoint_s": 0.187196,
+          "sample_s": 0.187221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "6c234e9471d98a9a15e869090ccf772d3dd7c5f916fd891375a992f71e613cd6",
+      "seq_path": "runs\\prepared_fse_comparison\\alternating_phase000.seq"
+    },
+    {
+      "key": "alternating",
+      "title": "Alternating polarity",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.011196,
+      "imaging_rf_blocks": [
+        7,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37
+      ],
+      "preparation_echo_ms": null,
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 64.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 45.0,
+        "sim_fix_refocus_centering": false,
+        "sim_train_crusher_scales": [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1
+        ]
+      },
+      "centering": "v1.6 as written",
+      "phase": 45.0,
+      "snapshot_times_s": [
+        0.042526,
+        0.07199499999999999,
+        0.075221,
+        0.09122099999999998,
+        0.183995,
+        0.187221
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.07199599999999999,
+          "midpoint_s": 0.07519599999999999,
+          "sample_s": 0.075221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 15,
+          "start_s": 0.08799599999999998,
+          "midpoint_s": 0.09119599999999997,
+          "sample_s": 0.09122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 19,
+          "start_s": 0.10399599999999996,
+          "midpoint_s": 0.10719599999999996,
+          "sample_s": 0.10722099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 23,
+          "start_s": 0.11999599999999995,
+          "midpoint_s": 0.12319599999999994,
+          "sample_s": 0.12322099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 27,
+          "start_s": 0.13599599999999995,
+          "midpoint_s": 0.13919599999999996,
+          "sample_s": 0.13922099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 31,
+          "start_s": 0.15199599999999996,
+          "midpoint_s": 0.15519599999999997,
+          "sample_s": 0.15522099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 35,
+          "start_s": 0.16799599999999998,
+          "midpoint_s": 0.171196,
+          "sample_s": 0.17122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 39,
+          "start_s": 0.183996,
+          "midpoint_s": 0.187196,
+          "sample_s": 0.187221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "1426fc49e6d1e9cbfed7bb86ae94622caf3b90e9d2c39fba5483dfd5f74534e5",
+      "seq_path": "runs\\prepared_fse_comparison\\alternating_phase045.seq"
+    },
+    {
+      "key": "alternating",
+      "title": "Alternating polarity",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.011196,
+      "imaging_rf_blocks": [
+        7,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37
+      ],
+      "preparation_echo_ms": null,
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 64.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 90.0,
+        "sim_fix_refocus_centering": false,
+        "sim_train_crusher_scales": [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1
+        ]
+      },
+      "centering": "v1.6 as written",
+      "phase": 90.0,
+      "snapshot_times_s": [
+        0.042526,
+        0.07199499999999999,
+        0.075221,
+        0.09122099999999998,
+        0.183995,
+        0.187221
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.07199599999999999,
+          "midpoint_s": 0.07519599999999999,
+          "sample_s": 0.075221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 15,
+          "start_s": 0.08799599999999998,
+          "midpoint_s": 0.09119599999999997,
+          "sample_s": 0.09122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 19,
+          "start_s": 0.10399599999999996,
+          "midpoint_s": 0.10719599999999996,
+          "sample_s": 0.10722099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 23,
+          "start_s": 0.11999599999999995,
+          "midpoint_s": 0.12319599999999994,
+          "sample_s": 0.12322099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 27,
+          "start_s": 0.13599599999999995,
+          "midpoint_s": 0.13919599999999996,
+          "sample_s": 0.13922099999999996,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 31,
+          "start_s": 0.15199599999999996,
+          "midpoint_s": 0.15519599999999997,
+          "sample_s": 0.15522099999999997,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 35,
+          "start_s": 0.16799599999999998,
+          "midpoint_s": 0.171196,
+          "sample_s": 0.17122099999999998,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 39,
+          "start_s": 0.183996,
+          "midpoint_s": 0.187196,
+          "sample_s": 0.187221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "fad5ceb3bcefa5483591b2d8616fcad7b3fb97dbcee8cfcf5ea0dc6cfdde48de",
+      "seq_path": "runs\\prepared_fse_comparison\\alternating_phase090.seq"
+    },
+    {
+      "key": "centered_original",
+      "title": "Centered original",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.011196,
+      "imaging_rf_blocks": [
+        7,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37
+      ],
+      "preparation_echo_ms": null,
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 64.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 0.0,
+        "sim_fix_refocus_centering": true,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "centering": "corrected",
+      "phase": 0.0,
+      "snapshot_times_s": [
+        0.042526,
+        0.07199499999999999,
+        0.075221,
+        0.091221,
+        0.18399500000000005,
+        0.18722100000000005
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.07199599999999999,
+          "midpoint_s": 0.07519599999999999,
+          "sample_s": 0.075221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 15,
+          "start_s": 0.08799599999999999,
+          "midpoint_s": 0.09119599999999999,
+          "sample_s": 0.091221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 19,
+          "start_s": 0.10399599999999999,
+          "midpoint_s": 0.10719599999999999,
+          "sample_s": 0.107221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 23,
+          "start_s": 0.11999599999999999,
+          "midpoint_s": 0.12319599999999999,
+          "sample_s": 0.123221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 27,
+          "start_s": 0.135996,
+          "midpoint_s": 0.13919600000000001,
+          "sample_s": 0.139221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 31,
+          "start_s": 0.15199600000000002,
+          "midpoint_s": 0.15519600000000003,
+          "sample_s": 0.15522100000000003,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 35,
+          "start_s": 0.16799600000000003,
+          "midpoint_s": 0.17119600000000004,
+          "sample_s": 0.17122100000000004,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 39,
+          "start_s": 0.18399600000000005,
+          "midpoint_s": 0.18719600000000006,
+          "sample_s": 0.18722100000000005,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "00c86294a9f2b0d79c90b76189f85755415c01eaca7f766d33574f6e1e4f8376",
+      "seq_path": "runs\\prepared_fse_comparison\\centered_original_phase000.seq"
+    },
+    {
+      "key": "centered_original",
+      "title": "Centered original",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.011196,
+      "imaging_rf_blocks": [
+        7,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37
+      ],
+      "preparation_echo_ms": null,
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 64.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 45.0,
+        "sim_fix_refocus_centering": true,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "centering": "corrected",
+      "phase": 45.0,
+      "snapshot_times_s": [
+        0.042526,
+        0.07199499999999999,
+        0.075221,
+        0.091221,
+        0.18399500000000005,
+        0.18722100000000005
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.07199599999999999,
+          "midpoint_s": 0.07519599999999999,
+          "sample_s": 0.075221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 15,
+          "start_s": 0.08799599999999999,
+          "midpoint_s": 0.09119599999999999,
+          "sample_s": 0.091221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 19,
+          "start_s": 0.10399599999999999,
+          "midpoint_s": 0.10719599999999999,
+          "sample_s": 0.107221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 23,
+          "start_s": 0.11999599999999999,
+          "midpoint_s": 0.12319599999999999,
+          "sample_s": 0.123221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 27,
+          "start_s": 0.135996,
+          "midpoint_s": 0.13919600000000001,
+          "sample_s": 0.139221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 31,
+          "start_s": 0.15199600000000002,
+          "midpoint_s": 0.15519600000000003,
+          "sample_s": 0.15522100000000003,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 35,
+          "start_s": 0.16799600000000003,
+          "midpoint_s": 0.17119600000000004,
+          "sample_s": 0.17122100000000004,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 39,
+          "start_s": 0.18399600000000005,
+          "midpoint_s": 0.18719600000000006,
+          "sample_s": 0.18722100000000005,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "49dacbb720007ff6a455c3d2cd21a0d298fafa5c5949dfc7ea7733ad66f485b4",
+      "seq_path": "runs\\prepared_fse_comparison\\centered_original_phase045.seq"
+    },
+    {
+      "key": "centered_original",
+      "title": "Centered original",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.011196,
+      "imaging_rf_blocks": [
+        7,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37
+      ],
+      "preparation_echo_ms": null,
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 64.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 90.0,
+        "sim_fix_refocus_centering": true,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "centering": "corrected",
+      "phase": 90.0,
+      "snapshot_times_s": [
+        0.042526,
+        0.07199499999999999,
+        0.075221,
+        0.091221,
+        0.18399500000000005,
+        0.18722100000000005
+      ],
+      "adc": [
+        {
+          "block": 11,
+          "start_s": 0.07199599999999999,
+          "midpoint_s": 0.07519599999999999,
+          "sample_s": 0.075221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 15,
+          "start_s": 0.08799599999999999,
+          "midpoint_s": 0.09119599999999999,
+          "sample_s": 0.091221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 19,
+          "start_s": 0.10399599999999999,
+          "midpoint_s": 0.10719599999999999,
+          "sample_s": 0.107221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 23,
+          "start_s": 0.11999599999999999,
+          "midpoint_s": 0.12319599999999999,
+          "sample_s": 0.123221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 27,
+          "start_s": 0.135996,
+          "midpoint_s": 0.13919600000000001,
+          "sample_s": 0.139221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 31,
+          "start_s": 0.15199600000000002,
+          "midpoint_s": 0.15519600000000003,
+          "sample_s": 0.15522100000000003,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 35,
+          "start_s": 0.16799600000000003,
+          "midpoint_s": 0.17119600000000004,
+          "sample_s": 0.17122100000000004,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 39,
+          "start_s": 0.18399600000000005,
+          "midpoint_s": 0.18719600000000006,
+          "sample_s": 0.18722100000000005,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "fb47684e99999220985fc99151aee7e258f0db76777aa8d57fce5994c9aa0039",
+      "seq_path": "runs\\prepared_fse_comparison\\centered_original_phase090.seq"
+    },
+    {
+      "key": "alsop",
+      "title": "Alsop adaptation",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.059196,
+      "preparation_echo_ms": 48.0,
+      "imaging_rf_blocks": [
+        17,
+        21,
+        25,
+        29,
+        33,
+        37,
+        41,
+        45
+      ],
+      "tip_block": 13,
+      "reexcitation_block": null,
+      "spoiler_block": null,
+      "after_tip_s": 0.06162800000000001,
+      "after_spoiler_s": null,
+      "prefix_end_s": 0.047296,
+      "read_prephaser_cycles_m": -2071.6701925717944,
+      "dephase_cycles": 2,
+      "slab_scale": 1,
+      "spoiler_cycles_y": 0,
+      "centering": "corrected",
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 48.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 0.0,
+        "sim_fix_refocus_centering": true,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "adaptations": [
+        "spatial sinc instead of spectral-spatial tip-up",
+        "common fixed-180 imaging train",
+        "ETL8; 1mm slice; 16ms ESP; common 64ms total first ADC TE",
+        "slab widening scales all prefix z gradients including preparation crushers"
+      ],
+      "phase": 0.0,
+      "snapshot_times_s": [
+        0.066526,
+        0.071995,
+        0.07522100000000001,
+        0.09122100000000001,
+        0.18399500000000005,
+        0.18722100000000005
+      ],
+      "adc": [
+        {
+          "block": 19,
+          "start_s": 0.071996,
+          "midpoint_s": 0.075196,
+          "sample_s": 0.07522100000000001,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 23,
+          "start_s": 0.087996,
+          "midpoint_s": 0.091196,
+          "sample_s": 0.09122100000000001,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 27,
+          "start_s": 0.103996,
+          "midpoint_s": 0.107196,
+          "sample_s": 0.10722100000000001,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 31,
+          "start_s": 0.119996,
+          "midpoint_s": 0.123196,
+          "sample_s": 0.12322100000000001,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 35,
+          "start_s": 0.135996,
+          "midpoint_s": 0.13919600000000001,
+          "sample_s": 0.139221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 39,
+          "start_s": 0.15199600000000002,
+          "midpoint_s": 0.15519600000000003,
+          "sample_s": 0.15522100000000003,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 43,
+          "start_s": 0.16799600000000003,
+          "midpoint_s": 0.17119600000000004,
+          "sample_s": 0.17122100000000004,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 47,
+          "start_s": 0.18399600000000005,
+          "midpoint_s": 0.18719600000000006,
+          "sample_s": 0.18722100000000005,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "8b1a93e32eebad457edd660755a6225b0c31a7f9e6ba91c7293abcbd21b4ca18",
+      "seq_path": "runs\\prepared_fse_comparison\\alsop_phase000.seq"
+    },
+    {
+      "key": "alsop",
+      "title": "Alsop adaptation",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.059196,
+      "preparation_echo_ms": 48.0,
+      "imaging_rf_blocks": [
+        17,
+        21,
+        25,
+        29,
+        33,
+        37,
+        41,
+        45
+      ],
+      "tip_block": 13,
+      "reexcitation_block": null,
+      "spoiler_block": null,
+      "after_tip_s": 0.06162800000000001,
+      "after_spoiler_s": null,
+      "prefix_end_s": 0.047296,
+      "read_prephaser_cycles_m": -2071.6701925717944,
+      "dephase_cycles": 2,
+      "slab_scale": 1,
+      "spoiler_cycles_y": 0,
+      "centering": "corrected",
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 48.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 45.0,
+        "sim_fix_refocus_centering": true,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "adaptations": [
+        "spatial sinc instead of spectral-spatial tip-up",
+        "common fixed-180 imaging train",
+        "ETL8; 1mm slice; 16ms ESP; common 64ms total first ADC TE",
+        "slab widening scales all prefix z gradients including preparation crushers"
+      ],
+      "phase": 45.0,
+      "snapshot_times_s": [
+        0.066526,
+        0.071995,
+        0.07522100000000001,
+        0.09122100000000001,
+        0.18399500000000005,
+        0.18722100000000005
+      ],
+      "adc": [
+        {
+          "block": 19,
+          "start_s": 0.071996,
+          "midpoint_s": 0.075196,
+          "sample_s": 0.07522100000000001,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 23,
+          "start_s": 0.087996,
+          "midpoint_s": 0.091196,
+          "sample_s": 0.09122100000000001,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 27,
+          "start_s": 0.103996,
+          "midpoint_s": 0.107196,
+          "sample_s": 0.10722100000000001,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 31,
+          "start_s": 0.119996,
+          "midpoint_s": 0.123196,
+          "sample_s": 0.12322100000000001,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 35,
+          "start_s": 0.135996,
+          "midpoint_s": 0.13919600000000001,
+          "sample_s": 0.139221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 39,
+          "start_s": 0.15199600000000002,
+          "midpoint_s": 0.15519600000000003,
+          "sample_s": 0.15522100000000003,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 43,
+          "start_s": 0.16799600000000003,
+          "midpoint_s": 0.17119600000000004,
+          "sample_s": 0.17122100000000004,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 47,
+          "start_s": 0.18399600000000005,
+          "midpoint_s": 0.18719600000000006,
+          "sample_s": 0.18722100000000005,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "1aac2ff21fb3954bcee294ee86ea911fcb750f612372222034cabec159e1e5b1",
+      "seq_path": "runs\\prepared_fse_comparison\\alsop_phase045.seq"
+    },
+    {
+      "key": "alsop",
+      "title": "Alsop adaptation",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.059196,
+      "preparation_echo_ms": 48.0,
+      "imaging_rf_blocks": [
+        17,
+        21,
+        25,
+        29,
+        33,
+        37,
+        41,
+        45
+      ],
+      "tip_block": 13,
+      "reexcitation_block": null,
+      "spoiler_block": null,
+      "after_tip_s": 0.06162800000000001,
+      "after_spoiler_s": null,
+      "prefix_end_s": 0.047296,
+      "read_prephaser_cycles_m": -2071.6701925717944,
+      "dephase_cycles": 2,
+      "slab_scale": 1,
+      "spoiler_cycles_y": 0,
+      "centering": "corrected",
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 48.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 90.0,
+        "sim_fix_refocus_centering": true,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "adaptations": [
+        "spatial sinc instead of spectral-spatial tip-up",
+        "common fixed-180 imaging train",
+        "ETL8; 1mm slice; 16ms ESP; common 64ms total first ADC TE",
+        "slab widening scales all prefix z gradients including preparation crushers"
+      ],
+      "phase": 90.0,
+      "snapshot_times_s": [
+        0.066526,
+        0.071995,
+        0.07522100000000001,
+        0.09122100000000001,
+        0.18399500000000005,
+        0.18722100000000005
+      ],
+      "adc": [
+        {
+          "block": 19,
+          "start_s": 0.071996,
+          "midpoint_s": 0.075196,
+          "sample_s": 0.07522100000000001,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 23,
+          "start_s": 0.087996,
+          "midpoint_s": 0.091196,
+          "sample_s": 0.09122100000000001,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 27,
+          "start_s": 0.103996,
+          "midpoint_s": 0.107196,
+          "sample_s": 0.10722100000000001,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 31,
+          "start_s": 0.119996,
+          "midpoint_s": 0.123196,
+          "sample_s": 0.12322100000000001,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 35,
+          "start_s": 0.135996,
+          "midpoint_s": 0.13919600000000001,
+          "sample_s": 0.139221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 39,
+          "start_s": 0.15199600000000002,
+          "midpoint_s": 0.15519600000000003,
+          "sample_s": 0.15522100000000003,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 43,
+          "start_s": 0.16799600000000003,
+          "midpoint_s": 0.17119600000000004,
+          "sample_s": 0.17122100000000004,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 47,
+          "start_s": 0.18399600000000005,
+          "midpoint_s": 0.18719600000000006,
+          "sample_s": 0.18722100000000005,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "a0edde0074b75d9fa48dedc6467bde45e655f41c1d365ec2cb2ab85be610d7ce",
+      "seq_path": "runs\\prepared_fse_comparison\\alsop_phase090.seq"
+    },
+    {
+      "key": "ss_mgot",
+      "title": "ss-MGOT adaptation",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.059196,
+      "preparation_echo_ms": 36.0,
+      "imaging_rf_blocks": [
+        20,
+        24,
+        28,
+        32,
+        36,
+        40,
+        44,
+        48
+      ],
+      "tip_block": 13,
+      "reexcitation_block": 17,
+      "spoiler_block": 15,
+      "after_tip_s": 0.049628,
+      "after_spoiler_s": 0.055628,
+      "prefix_end_s": 0.04129599999999999,
+      "read_prephaser_cycles_m": -2071.6701925717944,
+      "dephase_cycles": 2,
+      "slab_scale": 3,
+      "spoiler_cycles_y": 8,
+      "centering": "corrected",
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 0.0,
+        "sim_fix_refocus_centering": true,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "adaptations": [
+        "spatial sinc instead of spectral-spatial tip-up",
+        "common fixed-180 imaging train",
+        "ETL8; 1mm slice; 16ms ESP; common 64ms total first ADC TE",
+        "slab widening scales all prefix z gradients including preparation crushers"
+      ],
+      "phase": 0.0,
+      "snapshot_times_s": [
+        0.06652599999999999,
+        0.07199499999999999,
+        0.075221,
+        0.091221,
+        0.18399500000000005,
+        0.18722100000000005
+      ],
+      "adc": [
+        {
+          "block": 22,
+          "start_s": 0.07199599999999999,
+          "midpoint_s": 0.07519599999999999,
+          "sample_s": 0.075221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 26,
+          "start_s": 0.08799599999999999,
+          "midpoint_s": 0.09119599999999999,
+          "sample_s": 0.091221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 30,
+          "start_s": 0.10399599999999999,
+          "midpoint_s": 0.10719599999999999,
+          "sample_s": 0.107221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 34,
+          "start_s": 0.11999599999999999,
+          "midpoint_s": 0.12319599999999999,
+          "sample_s": 0.123221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 38,
+          "start_s": 0.135996,
+          "midpoint_s": 0.13919600000000001,
+          "sample_s": 0.139221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 42,
+          "start_s": 0.15199600000000002,
+          "midpoint_s": 0.15519600000000003,
+          "sample_s": 0.15522100000000003,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 46,
+          "start_s": 0.16799600000000003,
+          "midpoint_s": 0.17119600000000004,
+          "sample_s": 0.17122100000000004,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 50,
+          "start_s": 0.18399600000000005,
+          "midpoint_s": 0.18719600000000006,
+          "sample_s": 0.18722100000000005,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "8986f7ec96f850699569416cd9ac151a6c8a67e71f9a9099eb82ad706892ef29",
+      "seq_path": "runs\\prepared_fse_comparison\\ss_mgot_phase000.seq"
+    },
+    {
+      "key": "ss_mgot",
+      "title": "ss-MGOT adaptation",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.059196,
+      "preparation_echo_ms": 36.0,
+      "imaging_rf_blocks": [
+        20,
+        24,
+        28,
+        32,
+        36,
+        40,
+        44,
+        48
+      ],
+      "tip_block": 13,
+      "reexcitation_block": 17,
+      "spoiler_block": 15,
+      "after_tip_s": 0.049628,
+      "after_spoiler_s": 0.055628,
+      "prefix_end_s": 0.04129599999999999,
+      "read_prephaser_cycles_m": -2071.6701925717944,
+      "dephase_cycles": 2,
+      "slab_scale": 3,
+      "spoiler_cycles_y": 8,
+      "centering": "corrected",
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 45.0,
+        "sim_fix_refocus_centering": true,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "adaptations": [
+        "spatial sinc instead of spectral-spatial tip-up",
+        "common fixed-180 imaging train",
+        "ETL8; 1mm slice; 16ms ESP; common 64ms total first ADC TE",
+        "slab widening scales all prefix z gradients including preparation crushers"
+      ],
+      "phase": 45.0,
+      "snapshot_times_s": [
+        0.06652599999999999,
+        0.07199499999999999,
+        0.075221,
+        0.091221,
+        0.18399500000000005,
+        0.18722100000000005
+      ],
+      "adc": [
+        {
+          "block": 22,
+          "start_s": 0.07199599999999999,
+          "midpoint_s": 0.07519599999999999,
+          "sample_s": 0.075221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 26,
+          "start_s": 0.08799599999999999,
+          "midpoint_s": 0.09119599999999999,
+          "sample_s": 0.091221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 30,
+          "start_s": 0.10399599999999999,
+          "midpoint_s": 0.10719599999999999,
+          "sample_s": 0.107221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 34,
+          "start_s": 0.11999599999999999,
+          "midpoint_s": 0.12319599999999999,
+          "sample_s": 0.123221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 38,
+          "start_s": 0.135996,
+          "midpoint_s": 0.13919600000000001,
+          "sample_s": 0.139221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 42,
+          "start_s": 0.15199600000000002,
+          "midpoint_s": 0.15519600000000003,
+          "sample_s": 0.15522100000000003,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 46,
+          "start_s": 0.16799600000000003,
+          "midpoint_s": 0.17119600000000004,
+          "sample_s": 0.17122100000000004,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 50,
+          "start_s": 0.18399600000000005,
+          "midpoint_s": 0.18719600000000006,
+          "sample_s": 0.18722100000000005,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "3ae42137dc9816f169e8e49c86ae592c681338dc7f6b41805ad0f3f8de75809f",
+      "seq_path": "runs\\prepared_fse_comparison\\ss_mgot_phase045.seq"
+    },
+    {
+      "key": "ss_mgot",
+      "title": "ss-MGOT adaptation",
+      "initial_excitation_s": 0.011196,
+      "imaging_origin_s": 0.059196,
+      "preparation_echo_ms": 36.0,
+      "imaging_rf_blocks": [
+        20,
+        24,
+        28,
+        32,
+        36,
+        40,
+        44,
+        48
+      ],
+      "tip_block": 13,
+      "reexcitation_block": 17,
+      "spoiler_block": 15,
+      "after_tip_s": 0.049628,
+      "after_spoiler_s": 0.055628,
+      "prefix_end_s": 0.04129599999999999,
+      "read_prephaser_cycles_m": -2071.6701925717944,
+      "dephase_cycles": 2,
+      "slab_scale": 3,
+      "spoiler_cycles_y": 8,
+      "centering": "corrected",
+      "overrides": {
+        "views_per_seg": 8,
+        "no_views": 16,
+        "te": 36.0,
+        "esp": 16,
+        "acq_b": [
+          0,
+          1000
+        ],
+        "no_diff_acq": 2,
+        "no_experiments": 2,
+        "acq_x": [
+          1000,
+          1000
+        ],
+        "acq_y": [
+          0,
+          0
+        ],
+        "acq_z": [
+          0,
+          0
+        ],
+        "sim_reduced_shots": [
+          1
+        ],
+        "sim_reduced_rows": [
+          1
+        ],
+        "sim_excitation_phase_deg": 90.0,
+        "sim_fix_refocus_centering": true,
+        "sim_train_crusher_scales": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "adaptations": [
+        "spatial sinc instead of spectral-spatial tip-up",
+        "common fixed-180 imaging train",
+        "ETL8; 1mm slice; 16ms ESP; common 64ms total first ADC TE",
+        "slab widening scales all prefix z gradients including preparation crushers"
+      ],
+      "phase": 90.0,
+      "snapshot_times_s": [
+        0.06652599999999999,
+        0.07199499999999999,
+        0.075221,
+        0.091221,
+        0.18399500000000005,
+        0.18722100000000005
+      ],
+      "adc": [
+        {
+          "block": 22,
+          "start_s": 0.07199599999999999,
+          "midpoint_s": 0.07519599999999999,
+          "sample_s": 0.075221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 26,
+          "start_s": 0.08799599999999999,
+          "midpoint_s": 0.09119599999999999,
+          "sample_s": 0.091221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 30,
+          "start_s": 0.10399599999999999,
+          "midpoint_s": 0.10719599999999999,
+          "sample_s": 0.107221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 34,
+          "start_s": 0.11999599999999999,
+          "midpoint_s": 0.12319599999999999,
+          "sample_s": 0.123221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 38,
+          "start_s": 0.135996,
+          "midpoint_s": 0.13919600000000001,
+          "sample_s": 0.139221,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 42,
+          "start_s": 0.15199600000000002,
+          "midpoint_s": 0.15519600000000003,
+          "sample_s": 0.15522100000000003,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 46,
+          "start_s": 0.16799600000000003,
+          "midpoint_s": 0.17119600000000004,
+          "sample_s": 0.17122100000000004,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        },
+        {
+          "block": 50,
+          "start_s": 0.18399600000000005,
+          "midpoint_s": 0.18719600000000006,
+          "sample_s": 0.18722100000000005,
+          "phase_rad": 0.0,
+          "frequency_hz": 0.0,
+          "sample_index": 64,
+          "num_samples": 128
+        }
+      ],
+      "seq_sha256": "95a0ffe59eb5b8ad630e27a6f95e55ffe923165c0bfe2cfa95f8f4b748f13efe",
+      "seq_path": "runs\\prepared_fse_comparison\\ss_mgot_phase090.seq"
+    }
+  ],
+  "checks": [
+    {
+      "tag": "original_rf080_phase000",
+      "complex_adc_closure_max": 1.734723475976807e-18
+    },
+    {
+      "tag": "original_rf100_phase000",
+      "complex_adc_closure_max": 4.336808689942018e-19
+    },
+    {
+      "tag": "original_rf080_phase045",
+      "complex_adc_closure_max": 0.0
+    },
+    {
+      "tag": "original_rf100_phase045",
+      "complex_adc_closure_max": 1.3877787807814457e-17
+    },
+    {
+      "tag": "original_rf080_phase090",
+      "complex_adc_closure_max": 7.050024105536333e-18
+    },
+    {
+      "tag": "original_rf100_phase090",
+      "complex_adc_closure_max": 2.3852447794681098e-18
+    },
+    {
+      "tag": "increasing_rf080_phase000",
+      "complex_adc_closure_max": 1.734723475976807e-18
+    },
+    {
+      "tag": "increasing_rf100_phase000",
+      "complex_adc_closure_max": 4.336808689942018e-19
+    },
+    {
+      "tag": "increasing_rf080_phase045",
+      "complex_adc_closure_max": 0.0
+    },
+    {
+      "tag": "increasing_rf100_phase045",
+      "complex_adc_closure_max": 1.3877787807814457e-17
+    },
+    {
+      "tag": "increasing_rf080_phase090",
+      "complex_adc_closure_max": 1.6263032587282567e-18
+    },
+    {
+      "tag": "increasing_rf100_phase090",
+      "complex_adc_closure_max": 2.3852447794681098e-18
+    },
+    {
+      "tag": "decreasing_rf080_phase000",
+      "complex_adc_closure_max": 1.734723475976807e-18
+    },
+    {
+      "tag": "decreasing_rf100_phase000",
+      "complex_adc_closure_max": 6.505213034913027e-19
+    },
+    {
+      "tag": "decreasing_rf080_phase045",
+      "complex_adc_closure_max": 0.0
+    },
+    {
+      "tag": "decreasing_rf100_phase045",
+      "complex_adc_closure_max": 6.938893903907228e-18
+    },
+    {
+      "tag": "decreasing_rf080_phase090",
+      "complex_adc_closure_max": 1.6263032587282567e-18
+    },
+    {
+      "tag": "decreasing_rf100_phase090",
+      "complex_adc_closure_max": 3.471140604459642e-18
+    },
+    {
+      "tag": "alternating_rf080_phase000",
+      "complex_adc_closure_max": 0.0
+    },
+    {
+      "tag": "alternating_rf100_phase000",
+      "complex_adc_closure_max": 1.734723475976807e-18
+    },
+    {
+      "tag": "alternating_rf080_phase045",
+      "complex_adc_closure_max": 1.3877787807814457e-17
+    },
+    {
+      "tag": "alternating_rf100_phase045",
+      "complex_adc_closure_max": 0.0
+    },
+    {
+      "tag": "alternating_rf080_phase090",
+      "complex_adc_closure_max": 2.2497195079074217e-18
+    },
+    {
+      "tag": "alternating_rf100_phase090",
+      "complex_adc_closure_max": 1.3884562417838567e-17
+    },
+    {
+      "tag": "centered_original_rf080_phase000",
+      "complex_adc_closure_max": 1.734723475976807e-18
+    },
+    {
+      "tag": "centered_original_rf100_phase000",
+      "complex_adc_closure_max": 0.0
+    },
+    {
+      "tag": "centered_original_rf080_phase045",
+      "complex_adc_closure_max": 3.469446951953614e-18
+    },
+    {
+      "tag": "centered_original_rf100_phase045",
+      "complex_adc_closure_max": 1.3877787807814457e-17
+    },
+    {
+      "tag": "centered_original_rf080_phase090",
+      "complex_adc_closure_max": 3.928643636968952e-18
+    },
+    {
+      "tag": "centered_original_rf100_phase090",
+      "complex_adc_closure_max": 2.320870275476783e-18
+    },
+    {
+      "tag": "alsop_rf080_phase000",
+      "complex_adc_closure_max": 3.469446951953614e-18
+    },
+    {
+      "tag": "alsop_rf100_phase000",
+      "complex_adc_closure_max": 4.336808689942018e-18
+    },
+    {
+      "tag": "alsop_rf080_phase045",
+      "complex_adc_closure_max": 1.3877787807814457e-17
+    },
+    {
+      "tag": "alsop_rf100_phase045",
+      "complex_adc_closure_max": 2.7755575615628914e-17
+    },
+    {
+      "tag": "alsop_rf080_phase090",
+      "complex_adc_closure_max": 1.4094628242311558e-18
+    },
+    {
+      "tag": "alsop_rf100_phase090",
+      "complex_adc_closure_max": 1.3884562417838567e-17
+    },
+    {
+      "tag": "ss_mgot_rf080_phase000",
+      "complex_adc_closure_max": 2.7769124835677133e-17
+    },
+    {
+      "tag": "ss_mgot_rf100_phase000",
+      "complex_adc_closure_max": 3.469446951953614e-18
+    },
+    {
+      "tag": "ss_mgot_rf080_phase045",
+      "complex_adc_closure_max": 1.3877787807814457e-17
+    },
+    {
+      "tag": "ss_mgot_rf100_phase045",
+      "complex_adc_closure_max": 1.3877787807814457e-17
+    },
+    {
+      "tag": "ss_mgot_rf080_phase090",
+      "complex_adc_closure_max": 2.8189256484623115e-18
+    },
+    {
+      "tag": "ss_mgot_rf100_phase090",
+      "complex_adc_closure_max": 8.673617379884035e-19
+    },
+    {
+      "tag": "alsop",
+      "analytic_y_mean_vs_256_point_max_component_error": 9.14931252982143e-09
+    },
+    {
+      "tag": "alsop",
+      "rf_step_4us_vs_2us_max_component_error": 0.00019053660409491628
+    },
+    {
+      "tag": "alsop",
+      "independent_voxel_adc_magnitude_max_error": 1.3877787807814457e-17
+    },
+    {
+      "tag": "ss_mgot",
+      "analytic_y_mean_vs_256_point_max_component_error": 1.6074102538177204e-06
+    },
+    {
+      "tag": "ss_mgot",
+      "rf_step_4us_vs_2us_max_component_error": 0.0017417604652089184
+    },
+    {
+      "tag": "ss_mgot",
+      "independent_voxel_adc_magnitude_max_error": 6.938893903907228e-18
+    },
+    {
+      "tag": "centered_original",
+      "analytic_y_mean_vs_256_point_max_component_error": 1.214469014243491e-08
+    },
+    {
+      "tag": "centered_original",
+      "rf_step_4us_vs_2us_max_component_error": 0.000186979341281993
+    },
+    {
+      "tag": "centered_original",
+      "independent_voxel_adc_magnitude_max_error": 0.0
+    },
+    {
+      "tag": "original",
+      "half_grid_interpolation_max_component_error": 0.0020879911670345364
+    },
+    {
+      "tag": "increasing",
+      "half_grid_interpolation_max_component_error": 0.022663255925124193
+    },
+    {
+      "tag": "increasing",
+      "display_grid_interpolation_vs_doubled_grid_max_component_error": 0.005753386526847537
+    },
+    {
+      "tag": "decreasing",
+      "half_grid_interpolation_max_component_error": 0.0152933814990667
+    },
+    {
+      "tag": "decreasing",
+      "display_grid_interpolation_vs_doubled_grid_max_component_error": 0.0038233197364077043
+    },
+    {
+      "tag": "alternating",
+      "half_grid_interpolation_max_component_error": 0.000643239302937415
+    },
+    {
+      "tag": "alsop",
+      "half_grid_interpolation_max_component_error": 0.002599847664045904
+    },
+    {
+      "tag": "ss_mgot",
+      "half_grid_interpolation_max_component_error": 0.002427221296868176
+    }
+  ]
+}
