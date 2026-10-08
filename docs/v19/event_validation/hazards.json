@@ -1,0 +1,154 @@
+{
+ "v191": {
+  "narrowing": {
+   "count": 8,
+   "examples": [
+    "value 33075 narrowed to int -32461",
+    "value 33275 narrowed to int -32261",
+    "value 40000 narrowed to int -25536",
+    "value 40540 narrowed to int -24996"
+   ]
+  },
+  "timer_arg": {
+   "count": 7,
+   "examples": [
+    "waittimer argument -24996 outside 0..65500 (16-bit narrowing)",
+    "waittimer argument -32261 outside 0..65500 (16-bit narrowing)",
+    "waittimer argument -32461 outside 0..65500 (16-bit narrowing)"
+   ]
+  },
+  "matrix_active": {
+   "count": 16,
+   "examples": [
+    "CREATE_MATRIX(259) while matrix 3 active",
+    "CREATE_MATRIX(3) while matrix 3 active"
+   ]
+  },
+  "matrix_use_issues": {
+   "S": 0,
+   "P": 0,
+   "R": 0
+  },
+  "setlist_ignored": 0,
+  "timer_overruns": 0
+ },
+ "v192": {
+  "narrowing": {
+   "count": 7,
+   "examples": [
+    "value 33075 narrowed to int -32461",
+    "value 33275 narrowed to int -32261",
+    "value 40000 narrowed to int -25536"
+   ]
+  },
+  "timer_arg": {
+   "count": 6,
+   "examples": [
+    "waittimer argument -32261 outside 0..65500 (16-bit narrowing)",
+    "waittimer argument -32461 outside 0..65500 (16-bit narrowing)"
+   ]
+  },
+  "matrix_active": {
+   "count": 16,
+   "examples": [
+    "CREATE_MATRIX(259) while matrix 3 active",
+    "CREATE_MATRIX(3) while matrix 3 active"
+   ]
+  },
+  "matrix_use_issues": {
+   "S": 0,
+   "P": 0,
+   "R": 0
+  },
+  "setlist_ignored": 0,
+  "timer_overruns": 0
+ },
+ "v18_original": {
+  "narrowing": {
+   "count": 1,
+   "examples": [
+    "value 40000 narrowed to int -25536"
+   ]
+  },
+  "matrix_active": {
+   "count": 16,
+   "examples": [
+    "CREATE_MATRIX(259) while matrix 3 active",
+    "CREATE_MATRIX(3) while matrix 3 active"
+   ]
+  },
+  "matrix_use_issues": {
+   "S": 0,
+   "P": 0,
+   "R": 0
+  },
+  "setlist_ignored": 0,
+  "timer_overruns": 0
+ },
+ "v18_increasing": {
+  "narrowing": {
+   "count": 1,
+   "examples": [
+    "value 40000 narrowed to int -25536"
+   ]
+  },
+  "matrix_active": {
+   "count": 16,
+   "examples": [
+    "CREATE_MATRIX(259) while matrix 3 active",
+    "CREATE_MATRIX(3) while matrix 3 active"
+   ]
+  },
+  "matrix_use_issues": {
+   "S": 0,
+   "P": 0,
+   "R": 0
+  },
+  "setlist_ignored": 0,
+  "timer_overruns": 0
+ },
+ "v18_decreasing": {
+  "narrowing": {
+   "count": 1,
+   "examples": [
+    "value 40000 narrowed to int -25536"
+   ]
+  },
+  "matrix_active": {
+   "count": 16,
+   "examples": [
+    "CREATE_MATRIX(259) while matrix 3 active",
+    "CREATE_MATRIX(3) while matrix 3 active"
+   ]
+  },
+  "matrix_use_issues": {
+   "S": 0,
+   "P": 0,
+   "R": 0
+  },
+  "setlist_ignored": 0,
+  "timer_overruns": 0
+ },
+ "v18_alternating": {
+  "narrowing": {
+   "count": 1,
+   "examples": [
+    "value 40000 narrowed to int -25536"
+   ]
+  },
+  "matrix_active": {
+   "count": 16,
+   "examples": [
+    "CREATE_MATRIX(259) while matrix 3 active",
+    "CREATE_MATRIX(3) while matrix 3 active"
+   ]
+  },
+  "matrix_use_issues": {
+   "S": 0,
+   "P": 0,
+   "R": 0
+  },
+  "setlist_ignored": 0,
+  "timer_overruns": 0
+ }
+}

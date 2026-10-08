@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-07",
+  "scope": "Fourth trial: PPLC 'Too many errors - aborting' after 20 W007/W008 warnings",
+  "vendor_compile_success_confirmed": false,
+  "E106_cleared_by_v3": true,
+  "console_report": "v3 compiled past the former E106 sites; both methods aborted after 20 messages (v191 at line 4902, v192 at 4839)",
+  "diagnosis": "PPLC counts warnings toward a 20-message abort. W008 is emitted for every long expression passed to an int parameter (waittimer(int exit_time) per manual p90); W007 for a long delay() count. The v19 method shot passed long tick expressions to waittimer 46 times (v191) / 37 (v192), on top of v18's 11 inherited W007/W008.",
+  "predictor_validation": "A static AST check reproduced all 20 console messages per method exactly (line = statement end + 1, same order); scale() accepts a long first argument without warning, as in v18.",
+  "predicted_W007_W008": {
+    "v18": 11,
+    "v191_v3": 57,
+    "v192_v3": 48,
+    "v191_current": 11,
+    "v192_current": 11
+  },
+  "fix": "Generator pass int_timer_arguments(): each long waittimer argument in the method shot is assigned once to an int (v19_i_*) in setup immediately before v19_mode=1, after every feasibility check; long-to-int assignment keeps the same low 16 bits without a warning. Constant arguments become int literals (1000, 8997). v19_wait_next becomes int and is loaded from v19_i_first_wait/v19_i_post_b. The unreferenced v19_shot label (would be W003) is removed.",
+  "timing": "waittimer arguments are evaluated before the wait, so exits are unchanged; int reads are cheaper than long read plus truncation, so timed windows only gain slack",
+  "added_variables": "37 ints in v191 (74 bytes), fewer in v192; v19_wait_next long->int saves 2 bytes",
+  "other_warning_checks": "No identifiers > 31 chars (W002), no unused labels (W003), no assignment conditions (W005), no long array index arguments (W006)",
+  "event_identity_vs_v3": "RF, gradient memory/samples/segments, ADC timing, printed output, v19_error_code and timer-overrun flags identical over two shots in 14 cases per method",
+  "forward_gotos": 22,
+  "mapper_regression_tests_passed": 10,
+  "unchanged_assets": [
+    "v18 source",
+    "both PPRs",
+    "RF library",
+    "error-code tables"
+  ],
+  "upload": "docs/v19/compiler_compatibility/v19_warning_fix_v4.zip",
+  "generator_sha256": "ba583e490046b1f40337d1a1f178cf169c006f66504ad798298f47185d40328b",
+  "methods": {
+    "v191": {
+      "prior_sha256": "bd969bf4ddc7cd4edc1677371d7bfa1ede2aade525ff35a34d481310b9db6155",
+      "current_sha256": "c3693cd6cf9ce74f08c1ca4e0fad0f052e37e3286636f99afa014d1e11af80ab"
+    },
+    "v192": {
+      "prior_sha256": "812348a6ae3350d0cc9203bf03b75ca7bfc419e02dfa9bad5f4b4e52dfef4b75",
+      "current_sha256": "4e69bffaa59d8b95e6f4135fdea2a501a2b714e5b31b42b36e550ab6be0aa5be"
+    }
+  }
+}

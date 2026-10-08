@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-07",
+  "scope": "Third E106 trial: root cause identified as PPLC forward label-reference capacity",
+  "vendor_compile_success_confirmed": false,
+  "console_report": {
+    "v191": "E106 at line 2974 (goto end)",
+    "v192": "E106 at line 3247 (goto v19_skip_te2); inherited W008 at 2951"
+  },
+  "diagnosis": "In all six failing console compiles (two methods x three trials) E106 was raised at exactly the 147th forward goto of the preprocessed stream. String, token, if, conversion and pending-reference counts all differ between those sites. v18 compiles with 145 forward gotos. PPLC keeps a far-scratch record for each goto whose label is not yet defined; v19 added error-guard jumps to the shared end label and exhausted it.",
+  "forward_goto_at_error": {
+    "v191_pre_scratch": 147,
+    "v192_pre_scratch": 147,
+    "v191_pre_compact": 147,
+    "v192_pre_compact": 147,
+    "v191_compact_v2": 147,
+    "v192_compact_v2": 147
+  },
+  "forward_gotos_total": {
+    "v18": 145,
+    "v191_compact_v2": 215,
+    "v192_compact_v2": 202,
+    "v191_current": 22,
+    "v192_current": 22
+  },
+  "fix": "end and v19_fail now label a hub immediately after the first statement (v19_error_code=0). Every later jump to them, including goto end expanded from vendor macros (CREATE_MATRIX, BASEMATRIX, MR3040_DEGLITCH) and tstex_15.pph, is a backward reference. The hub forwards once to v19_exit, the unchanged shared exit at the old end position. No other source line changed.",
+  "event_identity_vs_compact_v2": "RF, gradient memory/samples, ADC timing, printed output and v19_error_code identical over two shots in 10 cases per method (nominal, rfcal 550, v19_cycles 4, te 52, crusher_schedule 1, validate 1, v19_on 2, control PPR nominal/validate/te 10)",
+  "mapper_regression_tests_passed": 9,
+  "unchanged_assets": [
+    "v18 source",
+    "both PPRs",
+    "RF library",
+    "error-code tables"
+  ],
+  "upload": "docs/v19/compiler_compatibility/v19_label_fix_v3.zip",
+  "generator_sha256": "4432889382f3a8f8cf81641f8af9179dd83e65df56e96a0e169f28da402e4f9c",
+  "methods": {
+    "v191": {
+      "prior_sha256": "cc452f0f8bd14e1934f0dcfcaf614ddd652ffe9546ea283b978e2ea6e75674b6",
+      "current_sha256": "bd969bf4ddc7cd4edc1677371d7bfa1ede2aade525ff35a34d481310b9db6155"
+    },
+    "v192": {
+      "prior_sha256": "f2ce7ccbd70fbfdb09fe2da925356d61fee2e6d5a5012eeaffa87888766616b8",
+      "current_sha256": "812348a6ae3350d0cc9203bf03b75ca7bfc419e02dfa9bad5f4b4e52dfef4b75"
+    }
+  },
+  "W008": "Inherited v192 offset_frequency long-to-int warning; unrelated to E106 and unchanged"
+}

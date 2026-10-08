@@ -1,0 +1,309 @@
+{
+ "status": "nominal source-level PPL-to-event mapping; NOT compiled, NOT console-verified",
+ "cost_model": {
+  "stmt_cost_us": 0.0,
+  "expr_costs": true,
+  "expr_scale": 0.8
+ },
+ "inputs": {
+  "v191": {
+   "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppl",
+   "ppl_sha256": "ada0e02cf3aab961393721ae2ea90acbe223ca18b6223507d090828dec88cac6",
+   "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppr",
+   "ppr_sha256": "faa77a11c2da4c5fe9876d6a842b9bc3025c66ddc09eaa4e8270dec9350faf0c",
+   "includes": {
+    "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+    "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+    "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+    "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+    "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+    "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+   },
+   "libraries": {
+    "pf1": {
+     "file": "scanner/utilities/rfstd44.seq",
+     "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+    },
+    "pf7": {
+     "file": "scanner/utilities/gs_240hz.seq",
+     "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+    },
+    "pf8": {
+     "file": "scanner/utilities/presat.seq",
+     "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+    },
+    "pf10": {
+     "file": "scanner/utilities/opt90_a.seq",
+     "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+    },
+    "pf11": {
+     "file": "scanner/utilities/opt90_as.seq",
+     "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+    },
+    "pf12": {
+     "file": "scanner/utilities/asym.seq",
+     "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+    },
+    "pf14": {
+     "file": "scanner/utilities/hypsec.seq",
+     "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+    },
+    "pf15": {
+     "file": "scanner/utilities/rfchess.seq",
+     "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+    },
+    "pf16": {
+     "file": "scanner/utilities/9lobsinb.seq",
+     "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+    },
+    "pf17": {
+     "file": "scanner/utilities/19lobsinb.seq",
+     "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+    },
+    "pf19": {
+     "file": "scanner/rf/v19_research_rf.seq",
+     "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+    },
+    "grad": {
+     "file": "scanner/utilities/g3040_15.seq",
+     "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+    }
+   },
+   "overrides": {},
+   "unused_ppr_params": [],
+   "assumptions": [
+    "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+    "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+    "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+    "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+    "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+    "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+    "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+    "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+    "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+    "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+    "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+    "hostrequest() returns 1 (no host update).",
+    "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+    "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+    "input#n reads 0 (no gating/mains trigger hardware).",
+    "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+   ],
+   "stmt_cost_us": 0.0,
+   "manual_expression_costs": true,
+   "manual_expression_cost_scale": 0.8
+  },
+  "v192": {
+   "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppl",
+   "ppl_sha256": "f75914d08a79a480dd83bd5c9f0135aec9952ce4500b6759be39bc5d3be6df42",
+   "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppr",
+   "ppr_sha256": "678f2af5bb2fa205c2b7cb9402879d9ce1e98ed8e2c5fa4264c318b3e6898fbf",
+   "includes": {
+    "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+    "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+    "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+    "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+    "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+    "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+   },
+   "libraries": {
+    "pf1": {
+     "file": "scanner/utilities/rfstd44.seq",
+     "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+    },
+    "pf7": {
+     "file": "scanner/utilities/gs_240hz.seq",
+     "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+    },
+    "pf8": {
+     "file": "scanner/utilities/presat.seq",
+     "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+    },
+    "pf10": {
+     "file": "scanner/utilities/opt90_a.seq",
+     "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+    },
+    "pf11": {
+     "file": "scanner/utilities/opt90_as.seq",
+     "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+    },
+    "pf12": {
+     "file": "scanner/utilities/asym.seq",
+     "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+    },
+    "pf14": {
+     "file": "scanner/utilities/hypsec.seq",
+     "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+    },
+    "pf15": {
+     "file": "scanner/utilities/rfchess.seq",
+     "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+    },
+    "pf16": {
+     "file": "scanner/utilities/9lobsinb.seq",
+     "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+    },
+    "pf17": {
+     "file": "scanner/utilities/19lobsinb.seq",
+     "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+    },
+    "pf19": {
+     "file": "scanner/rf/v19_research_rf.seq",
+     "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+    },
+    "grad": {
+     "file": "scanner/utilities/g3040_15.seq",
+     "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+    }
+   },
+   "overrides": {},
+   "unused_ppr_params": [],
+   "assumptions": [
+    "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+    "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+    "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+    "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+    "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+    "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+    "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+    "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+    "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+    "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+    "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+    "hostrequest() returns 1 (no host update).",
+    "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+    "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+    "input#n reads 0 (no gating/mains trigger hardware).",
+    "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+   ],
+   "stmt_cost_us": 0.0,
+   "manual_expression_costs": true,
+   "manual_expression_cost_scale": 0.8
+  },
+  "v18": {
+   "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl",
+   "ppl_sha256": "3b420376331e918b4c864e9b37937ef35fd9f49066b8d6402e44aae9da598db2",
+   "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test1e\\FSE-DWI_10-05-2026_v18_test1.ppr",
+   "ppr_sha256": "84611fcb854deab5e9e7110aa7fdd68cfed25ba17d988231ab092c51a66b8fbc",
+   "includes": {
+    "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+    "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+    "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+    "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+    "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+    "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+   },
+   "libraries": {
+    "pf1": {
+     "file": "scanner/utilities/rfstd44.seq",
+     "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+    },
+    "pf7": {
+     "file": "scanner/utilities/gs_240hz.seq",
+     "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+    },
+    "pf8": {
+     "file": "scanner/utilities/presat.seq",
+     "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+    },
+    "pf10": {
+     "file": "scanner/utilities/opt90_a.seq",
+     "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+    },
+    "pf11": {
+     "file": "scanner/utilities/opt90_as.seq",
+     "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+    },
+    "pf12": {
+     "file": "scanner/utilities/asym.seq",
+     "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+    },
+    "pf14": {
+     "file": "scanner/utilities/hypsec.seq",
+     "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+    },
+    "pf15": {
+     "file": "scanner/utilities/rfchess.seq",
+     "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+    },
+    "pf16": {
+     "file": "scanner/utilities/9lobsinb.seq",
+     "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+    },
+    "pf17": {
+     "file": "scanner/utilities/19lobsinb.seq",
+     "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+    },
+    "grad": {
+     "file": "scanner/utilities/g3040_15.seq",
+     "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+    }
+   },
+   "overrides": {},
+   "unused_ppr_params": [],
+   "assumptions": [
+    "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+    "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+    "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+    "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+    "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+    "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+    "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+    "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+    "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+    "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+    "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+    "hostrequest() returns 1 (no host update).",
+    "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+    "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+    "input#n reads 0 (no gating/mains trigger hardware).",
+    "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+   ],
+   "stmt_cost_us": 0.0,
+   "manual_expression_costs": true,
+   "manual_expression_cost_scale": 0.8
+  }
+ },
+ "control_identity_all": true,
+ "elapsed_s": 695.1277010440826,
+ "outputs": [
+  "adc1_slice_echo_v191.npy",
+  "adc1_slice_echo_v192.npy",
+  "bloch_results.json",
+  "btensor.json",
+  "control_identity.json",
+  "convergence.json",
+  "crusher_geometry_boundary_scan.json",
+  "crusher_geometry_scan.json",
+  "crusher_scan_inputs",
+  "diagram_v191.png",
+  "diagram_v191_zoom.png",
+  "diagram_v192.png",
+  "diagram_v192_zoom.png",
+  "echo_amplitudes.png",
+  "hazards.json",
+  "landmark_summary.json",
+  "moments.json",
+  "profiles_v191_phase000.npz",
+  "profiles_v191_phase000.png",
+  "profiles_v191_phase045.npz",
+  "profiles_v191_phase045.png",
+  "profiles_v191_phase090.npz",
+  "profiles_v191_phase090.png",
+  "profiles_v192_phase000.npz",
+  "profiles_v192_phase000.png",
+  "profiles_v192_phase045.npz",
+  "profiles_v192_phase045.png",
+  "profiles_v192_phase090.npz",
+  "profiles_v192_phase090.png",
+  "rejection_tests.json",
+  "summary.json",
+  "timing_summary.json",
+  "timing_v18_alternating.csv",
+  "timing_v18_decreasing.csv",
+  "timing_v18_increasing.csv",
+  "timing_v18_original.csv",
+  "timing_v191.csv",
+  "timing_v192.csv"
+ ]
+}

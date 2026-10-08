@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-06",
+  "scope": "E106 far scratch reduction trial and W010 signed-minimum comparisons",
+  "vendor_compile_success_confirmed": false,
+  "vendor_E106_resolution_confirmed": false,
+  "W008": "Inherited v192 long-to-int frequency argument; not changed in this trial",
+  "mapper_regression_tests_passed": 6,
+  "event_equivalence_cases_per_method": 4,
+  "event_time_comparison_precision_us": 1e-06,
+  "event_comparison_scope": "RF frame/amplitude/phase/relative timing; gradient memory, samples and relative segments/starts; ADC relative timing; all v19 setup variables",
+  "int_conversion_replacement": "Verified signed16-bit argument remains parenthesized, then promoted via 0L+; complete assignment to long uses implicit widening; constants <=32767 use literalL",
+  "timed_pulse_gradient_ADC_source_unchanged": true,
+  "unchanged_assets": [
+    "v18 PPL",
+    "v191/v192 PPRs",
+    "research RF library"
+  ],
+  "review": "docs/v19/review/ppl_review_scratch_reduction.md",
+  "methods": {
+    "v191": {
+      "previous_sha256": "78ca063f914561513fb6967d76e93cbc9829542b2346e507b4640846843b8e06",
+      "current_sha256": "ada0e02cf3aab961393721ae2ea90acbe223ca18b6223507d090828dec88cac6",
+      "IntToLong_calls_removed": 167
+    },
+    "v192": {
+      "previous_sha256": "83d669c59b412c5f0da833e4ff6280dd1a0b9b9c5229f764663a812486b601e4",
+      "current_sha256": "f75914d08a79a480dd83bd5c9f0135aec9952ce4500b6759be39bc5d3be6df42",
+      "IntToLong_calls_removed": 128
+    }
+  },
+  "signed_minimum_check": "Both methods reject crush_amp=-32768 and diff_crush_amp=-32768 with zero ADC events; source comparisons remain equivalent",
+  "independent_review_completed": true,
+  "full_validation_completed": true,
+  "full_validation_elapsed_s": 695.1277010440826,
+  "full_validation_summary": "docs/v19/event_validation/summary.json",
+  "full_validation_input_hashes": {
+    "v191": "ada0e02cf3aab961393721ae2ea90acbe223ca18b6223507d090828dec88cac6",
+    "v192": "f75914d08a79a480dd83bd5c9f0135aec9952ce4500b6759be39bc5d3be6df42",
+    "v18": "3b420376331e918b4c864e9b37937ef35fd9f49066b8d6402e44aae9da598db2"
+  },
+  "all_19_rejections_per_method_zero_rf_and_adc": true
+}

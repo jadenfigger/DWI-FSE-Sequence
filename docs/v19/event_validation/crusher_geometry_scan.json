@@ -1,0 +1,2323 @@
+{
+ "settings": {
+  "z_points": 3000,
+  "z_extent_mm": 5,
+  "v191_y_points": 16,
+  "gradient_latency_us": 60,
+  "phases_deg": [
+   0,
+   45,
+   90
+  ],
+  "B1": 1.0,
+  "B0_hz": 0,
+  "relaxation": false
+ },
+ "rows": [
+  {
+   "method": "v191",
+   "C_DAC": -7700,
+   "C1_DAC": -5150,
+   "inputs": {
+    "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppl",
+    "ppl_sha256": "f0156b48a1b9ff648dba7d69e508629b6fc51bebfcb27d91c5f9fc46ee205f2d",
+    "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppr",
+    "ppr_sha256": "faa77a11c2da4c5fe9876d6a842b9bc3025c66ddc09eaa4e8270dec9350faf0c",
+    "includes": {
+     "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+     "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+     "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+     "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+     "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+     "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    },
+    "libraries": {
+     "pf1": {
+      "file": "scanner/utilities/rfstd44.seq",
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+     },
+     "pf7": {
+      "file": "scanner/utilities/gs_240hz.seq",
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+     },
+     "pf8": {
+      "file": "scanner/utilities/presat.seq",
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+     },
+     "pf10": {
+      "file": "scanner/utilities/opt90_a.seq",
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+     },
+     "pf11": {
+      "file": "scanner/utilities/opt90_as.seq",
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+     },
+     "pf12": {
+      "file": "scanner/utilities/asym.seq",
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+     },
+     "pf14": {
+      "file": "scanner/utilities/hypsec.seq",
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+     },
+     "pf15": {
+      "file": "scanner/utilities/rfchess.seq",
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+     },
+     "pf16": {
+      "file": "scanner/utilities/9lobsinb.seq",
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+     },
+     "pf17": {
+      "file": "scanner/utilities/19lobsinb.seq",
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+     },
+     "pf19": {
+      "file": "scanner/rf/v19_research_rf.seq",
+      "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+     },
+     "grad": {
+      "file": "scanner/utilities/g3040_15.seq",
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+     }
+    },
+    "overrides": {
+     "crush_amp": -7700,
+     "diff_crush_amp": -5150
+    },
+    "unused_ppr_params": [],
+    "assumptions": [
+     "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+     "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+     "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+     "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+     "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+     "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+     "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+     "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+     "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+     "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+     "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+     "hostrequest() returns 1 (no host update).",
+     "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+     "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+     "input#n reads 0 (no gating/mains trigger hardware).",
+     "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+    ],
+    "stmt_cost_us": 0.0,
+    "manual_expression_costs": true,
+    "manual_expression_cost_scale": 0.8
+   },
+   "abs_by_phase": [
+    [
+     0.3869784940608093,
+     0.40734313573448555,
+     0.351863105709257,
+     0.343314675532622,
+     0.3426652934924226,
+     0.3464900312142939,
+     0.3473674219423619,
+     0.34536253869750555
+    ],
+    [
+     0.3863569593334173,
+     0.40628110184941413,
+     0.35093741884222707,
+     0.34277165335115206,
+     0.3424916754303288,
+     0.34662500693317017,
+     0.34787265582063664,
+     0.3464494898654049
+    ],
+    [
+     0.38635223070226915,
+     0.4066426964531648,
+     0.35204350533772094,
+     0.3442623353569224,
+     0.3438193334157241,
+     0.3472712767652843,
+     0.3476257237054379,
+     0.3456729122204028
+    ]
+   ],
+   "max_phase_spread": 0.0014906820057703496
+  },
+  {
+   "method": "v191",
+   "C_DAC": -7700,
+   "C1_DAC": -5482,
+   "inputs": {
+    "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppl",
+    "ppl_sha256": "f0156b48a1b9ff648dba7d69e508629b6fc51bebfcb27d91c5f9fc46ee205f2d",
+    "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppr",
+    "ppr_sha256": "faa77a11c2da4c5fe9876d6a842b9bc3025c66ddc09eaa4e8270dec9350faf0c",
+    "includes": {
+     "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+     "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+     "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+     "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+     "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+     "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    },
+    "libraries": {
+     "pf1": {
+      "file": "scanner/utilities/rfstd44.seq",
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+     },
+     "pf7": {
+      "file": "scanner/utilities/gs_240hz.seq",
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+     },
+     "pf8": {
+      "file": "scanner/utilities/presat.seq",
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+     },
+     "pf10": {
+      "file": "scanner/utilities/opt90_a.seq",
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+     },
+     "pf11": {
+      "file": "scanner/utilities/opt90_as.seq",
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+     },
+     "pf12": {
+      "file": "scanner/utilities/asym.seq",
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+     },
+     "pf14": {
+      "file": "scanner/utilities/hypsec.seq",
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+     },
+     "pf15": {
+      "file": "scanner/utilities/rfchess.seq",
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+     },
+     "pf16": {
+      "file": "scanner/utilities/9lobsinb.seq",
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+     },
+     "pf17": {
+      "file": "scanner/utilities/19lobsinb.seq",
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+     },
+     "pf19": {
+      "file": "scanner/rf/v19_research_rf.seq",
+      "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+     },
+     "grad": {
+      "file": "scanner/utilities/g3040_15.seq",
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+     }
+    },
+    "overrides": {
+     "crush_amp": -7700,
+     "diff_crush_amp": -5482
+    },
+    "unused_ppr_params": [],
+    "assumptions": [
+     "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+     "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+     "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+     "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+     "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+     "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+     "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+     "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+     "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+     "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+     "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+     "hostrequest() returns 1 (no host update).",
+     "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+     "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+     "input#n reads 0 (no gating/mains trigger hardware).",
+     "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+    ],
+    "stmt_cost_us": 0.0,
+    "manual_expression_costs": true,
+    "manual_expression_cost_scale": 0.8
+   },
+   "abs_by_phase": [
+    [
+     0.38689608643041823,
+     0.41040954916543615,
+     0.35960360088624227,
+     0.35617630535198574,
+     0.36084134551922536,
+     0.3699527939463505,
+     0.3757397000155806,
+     0.37800819197796937
+    ],
+    [
+     0.38738630361797893,
+     0.4104542190267237,
+     0.35968743421866173,
+     0.3563398887875856,
+     0.3608560406001957,
+     0.36960546675714456,
+     0.3750335956637486,
+     0.3772770027340146
+    ],
+    [
+     0.38642424417917814,
+     0.40996931712114987,
+     0.36000542782497014,
+     0.3571836739136484,
+     0.3618028984539542,
+     0.3701890292514433,
+     0.37501757816979336,
+     0.37685810345471743
+    ]
+   ],
+   "max_phase_spread": 0.0011500885232519353
+  },
+  {
+   "method": "v191",
+   "C_DAC": -7700,
+   "C1_DAC": -5800,
+   "inputs": {
+    "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppl",
+    "ppl_sha256": "f0156b48a1b9ff648dba7d69e508629b6fc51bebfcb27d91c5f9fc46ee205f2d",
+    "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppr",
+    "ppr_sha256": "faa77a11c2da4c5fe9876d6a842b9bc3025c66ddc09eaa4e8270dec9350faf0c",
+    "includes": {
+     "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+     "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+     "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+     "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+     "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+     "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    },
+    "libraries": {
+     "pf1": {
+      "file": "scanner/utilities/rfstd44.seq",
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+     },
+     "pf7": {
+      "file": "scanner/utilities/gs_240hz.seq",
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+     },
+     "pf8": {
+      "file": "scanner/utilities/presat.seq",
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+     },
+     "pf10": {
+      "file": "scanner/utilities/opt90_a.seq",
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+     },
+     "pf11": {
+      "file": "scanner/utilities/opt90_as.seq",
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+     },
+     "pf12": {
+      "file": "scanner/utilities/asym.seq",
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+     },
+     "pf14": {
+      "file": "scanner/utilities/hypsec.seq",
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+     },
+     "pf15": {
+      "file": "scanner/utilities/rfchess.seq",
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+     },
+     "pf16": {
+      "file": "scanner/utilities/9lobsinb.seq",
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+     },
+     "pf17": {
+      "file": "scanner/utilities/19lobsinb.seq",
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+     },
+     "pf19": {
+      "file": "scanner/rf/v19_research_rf.seq",
+      "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+     },
+     "grad": {
+      "file": "scanner/utilities/g3040_15.seq",
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+     }
+    },
+    "overrides": {
+     "crush_amp": -7700,
+     "diff_crush_amp": -5800
+    },
+    "unused_ppr_params": [],
+    "assumptions": [
+     "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+     "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+     "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+     "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+     "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+     "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+     "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+     "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+     "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+     "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+     "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+     "hostrequest() returns 1 (no host update).",
+     "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+     "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+     "input#n reads 0 (no gating/mains trigger hardware).",
+     "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+    ],
+    "stmt_cost_us": 0.0,
+    "manual_expression_costs": true,
+    "manual_expression_cost_scale": 0.8
+   },
+   "abs_by_phase": [
+    [
+     0.3868955555992489,
+     0.4029744256306866,
+     0.34685390468520316,
+     0.3394179744857551,
+     0.34125418825671266,
+     0.3483075661375906,
+     0.35275597184516433,
+     0.35424060420611486
+    ],
+    [
+     0.38686973875338115,
+     0.40256427730767746,
+     0.346567513898164,
+     0.3392019359618165,
+     0.3408935981949029,
+     0.34765687762378594,
+     0.35194907896519256,
+     0.3537427145433979
+    ],
+    [
+     0.38647694129168814,
+     0.4021217968112707,
+     0.34641488796748643,
+     0.33914060592956236,
+     0.340506354162481,
+     0.3464386886006745,
+     0.34962793145663595,
+     0.35052596982598355
+    ]
+   ],
+   "max_phase_spread": 0.0037146343801313098
+  },
+  {
+   "method": "v191",
+   "C_DAC": -8223,
+   "C1_DAC": -5150,
+   "inputs": {
+    "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppl",
+    "ppl_sha256": "f0156b48a1b9ff648dba7d69e508629b6fc51bebfcb27d91c5f9fc46ee205f2d",
+    "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppr",
+    "ppr_sha256": "faa77a11c2da4c5fe9876d6a842b9bc3025c66ddc09eaa4e8270dec9350faf0c",
+    "includes": {
+     "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+     "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+     "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+     "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+     "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+     "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    },
+    "libraries": {
+     "pf1": {
+      "file": "scanner/utilities/rfstd44.seq",
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+     },
+     "pf7": {
+      "file": "scanner/utilities/gs_240hz.seq",
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+     },
+     "pf8": {
+      "file": "scanner/utilities/presat.seq",
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+     },
+     "pf10": {
+      "file": "scanner/utilities/opt90_a.seq",
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+     },
+     "pf11": {
+      "file": "scanner/utilities/opt90_as.seq",
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+     },
+     "pf12": {
+      "file": "scanner/utilities/asym.seq",
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+     },
+     "pf14": {
+      "file": "scanner/utilities/hypsec.seq",
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+     },
+     "pf15": {
+      "file": "scanner/utilities/rfchess.seq",
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+     },
+     "pf16": {
+      "file": "scanner/utilities/9lobsinb.seq",
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+     },
+     "pf17": {
+      "file": "scanner/utilities/19lobsinb.seq",
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+     },
+     "pf19": {
+      "file": "scanner/rf/v19_research_rf.seq",
+      "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+     },
+     "grad": {
+      "file": "scanner/utilities/g3040_15.seq",
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+     }
+    },
+    "overrides": {
+     "crush_amp": -8223,
+     "diff_crush_amp": -5150
+    },
+    "unused_ppr_params": [],
+    "assumptions": [
+     "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+     "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+     "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+     "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+     "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+     "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+     "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+     "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+     "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+     "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+     "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+     "hostrequest() returns 1 (no host update).",
+     "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+     "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+     "input#n reads 0 (no gating/mains trigger hardware).",
+     "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+    ],
+    "stmt_cost_us": 0.0,
+    "manual_expression_costs": true,
+    "manual_expression_cost_scale": 0.8
+   },
+   "abs_by_phase": [
+    [
+     0.38724532469331063,
+     0.403708534835492,
+     0.34684993818671594,
+     0.33815617957309757,
+     0.3384601967133532,
+     0.34409533891474503,
+     0.34757660760108616,
+     0.34877118639553756
+    ],
+    [
+     0.3904457062748259,
+     0.4052274691464384,
+     0.34646523703650317,
+     0.3366550197698757,
+     0.33602013684762855,
+     0.3407596341982893,
+     0.343512292313499,
+     0.3444629145502599
+    ],
+    [
+     0.38639313582829443,
+     0.40179911106483535,
+     0.3449172298593676,
+     0.33609618676010594,
+     0.33575469647930606,
+     0.34012892493144725,
+     0.3422632898068764,
+     0.34286997827362753
+    ]
+   ],
+   "max_phase_spread": 0.005901208121910029
+  },
+  {
+   "method": "v191",
+   "C_DAC": -8223,
+   "C1_DAC": -5482,
+   "inputs": {
+    "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppl",
+    "ppl_sha256": "f0156b48a1b9ff648dba7d69e508629b6fc51bebfcb27d91c5f9fc46ee205f2d",
+    "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppr",
+    "ppr_sha256": "faa77a11c2da4c5fe9876d6a842b9bc3025c66ddc09eaa4e8270dec9350faf0c",
+    "includes": {
+     "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+     "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+     "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+     "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+     "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+     "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    },
+    "libraries": {
+     "pf1": {
+      "file": "scanner/utilities/rfstd44.seq",
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+     },
+     "pf7": {
+      "file": "scanner/utilities/gs_240hz.seq",
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+     },
+     "pf8": {
+      "file": "scanner/utilities/presat.seq",
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+     },
+     "pf10": {
+      "file": "scanner/utilities/opt90_a.seq",
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+     },
+     "pf11": {
+      "file": "scanner/utilities/opt90_as.seq",
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+     },
+     "pf12": {
+      "file": "scanner/utilities/asym.seq",
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+     },
+     "pf14": {
+      "file": "scanner/utilities/hypsec.seq",
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+     },
+     "pf15": {
+      "file": "scanner/utilities/rfchess.seq",
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+     },
+     "pf16": {
+      "file": "scanner/utilities/9lobsinb.seq",
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+     },
+     "pf17": {
+      "file": "scanner/utilities/19lobsinb.seq",
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+     },
+     "pf19": {
+      "file": "scanner/rf/v19_research_rf.seq",
+      "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+     },
+     "grad": {
+      "file": "scanner/utilities/g3040_15.seq",
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+     }
+    },
+    "overrides": {
+     "crush_amp": -8223,
+     "diff_crush_amp": -5482
+    },
+    "unused_ppr_params": [],
+    "assumptions": [
+     "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+     "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+     "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+     "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+     "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+     "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+     "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+     "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+     "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+     "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+     "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+     "hostrequest() returns 1 (no host update).",
+     "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+     "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+     "input#n reads 0 (no gating/mains trigger hardware).",
+     "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+    ],
+    "stmt_cost_us": 0.0,
+    "manual_expression_costs": true,
+    "manual_expression_cost_scale": 0.8
+   },
+   "abs_by_phase": [
+    [
+     0.38717868313537196,
+     0.4042127494579303,
+     0.34637165333978587,
+     0.3359014608090044,
+     0.33377127158987896,
+     0.33645217902454067,
+     0.336566797378673,
+     0.3341608899300944
+    ],
+    [
+     0.3867865252101076,
+     0.40330622999010346,
+     0.3457820842308806,
+     0.3358894629275392,
+     0.3342517832477894,
+     0.33716649989681197,
+     0.3372902027125163,
+     0.33489398528093584
+    ],
+    [
+     0.3862938241410306,
+     0.4027674652595405,
+     0.34539764259249606,
+     0.3353245272367168,
+     0.3331211116677799,
+     0.33518927368676826,
+     0.33457059708867337,
+     0.3320849905278435
+    ]
+   ],
+   "max_phase_spread": 0.00280899475309232
+  },
+  {
+   "method": "v191",
+   "C_DAC": -8223,
+   "C1_DAC": -5800,
+   "inputs": {
+    "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppl",
+    "ppl_sha256": "f0156b48a1b9ff648dba7d69e508629b6fc51bebfcb27d91c5f9fc46ee205f2d",
+    "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppr",
+    "ppr_sha256": "faa77a11c2da4c5fe9876d6a842b9bc3025c66ddc09eaa4e8270dec9350faf0c",
+    "includes": {
+     "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+     "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+     "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+     "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+     "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+     "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    },
+    "libraries": {
+     "pf1": {
+      "file": "scanner/utilities/rfstd44.seq",
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+     },
+     "pf7": {
+      "file": "scanner/utilities/gs_240hz.seq",
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+     },
+     "pf8": {
+      "file": "scanner/utilities/presat.seq",
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+     },
+     "pf10": {
+      "file": "scanner/utilities/opt90_a.seq",
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+     },
+     "pf11": {
+      "file": "scanner/utilities/opt90_as.seq",
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+     },
+     "pf12": {
+      "file": "scanner/utilities/asym.seq",
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+     },
+     "pf14": {
+      "file": "scanner/utilities/hypsec.seq",
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+     },
+     "pf15": {
+      "file": "scanner/utilities/rfchess.seq",
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+     },
+     "pf16": {
+      "file": "scanner/utilities/9lobsinb.seq",
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+     },
+     "pf17": {
+      "file": "scanner/utilities/19lobsinb.seq",
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+     },
+     "pf19": {
+      "file": "scanner/rf/v19_research_rf.seq",
+      "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+     },
+     "grad": {
+      "file": "scanner/utilities/g3040_15.seq",
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+     }
+    },
+    "overrides": {
+     "crush_amp": -8223,
+     "diff_crush_amp": -5800
+    },
+    "unused_ppr_params": [],
+    "assumptions": [
+     "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+     "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+     "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+     "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+     "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+     "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+     "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+     "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+     "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+     "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+     "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+     "hostrequest() returns 1 (no host update).",
+     "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+     "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+     "input#n reads 0 (no gating/mains trigger hardware).",
+     "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+    ],
+    "stmt_cost_us": 0.0,
+    "manual_expression_costs": true,
+    "manual_expression_cost_scale": 0.8
+   },
+   "abs_by_phase": [
+    [
+     0.3868586473228983,
+     0.40975357190570716,
+     0.356709628864585,
+     0.3504811048457464,
+     0.3519943902240504,
+     0.35785421270283996,
+     0.3605338641349326,
+     0.36002403214949585
+    ],
+    [
+     0.3870080250796743,
+     0.4094535167560744,
+     0.3567959446763364,
+     0.3510124865329336,
+     0.35267858159412147,
+     0.35835844910499476,
+     0.36067536633311087,
+     0.3599454942748955
+    ],
+    [
+     0.38631103784133736,
+     0.4092488799489962,
+     0.3572278027938942,
+     0.3518554307747774,
+     0.35359372393882443,
+     0.3590525396799835,
+     0.36112578953237734,
+     0.36052715805638
+    ]
+   ],
+   "max_phase_spread": 0.0015993337147740538
+  },
+  {
+   "method": "v191",
+   "C_DAC": -8750,
+   "C1_DAC": -5150,
+   "inputs": {
+    "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppl",
+    "ppl_sha256": "f0156b48a1b9ff648dba7d69e508629b6fc51bebfcb27d91c5f9fc46ee205f2d",
+    "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppr",
+    "ppr_sha256": "faa77a11c2da4c5fe9876d6a842b9bc3025c66ddc09eaa4e8270dec9350faf0c",
+    "includes": {
+     "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+     "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+     "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+     "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+     "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+     "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    },
+    "libraries": {
+     "pf1": {
+      "file": "scanner/utilities/rfstd44.seq",
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+     },
+     "pf7": {
+      "file": "scanner/utilities/gs_240hz.seq",
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+     },
+     "pf8": {
+      "file": "scanner/utilities/presat.seq",
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+     },
+     "pf10": {
+      "file": "scanner/utilities/opt90_a.seq",
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+     },
+     "pf11": {
+      "file": "scanner/utilities/opt90_as.seq",
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+     },
+     "pf12": {
+      "file": "scanner/utilities/asym.seq",
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+     },
+     "pf14": {
+      "file": "scanner/utilities/hypsec.seq",
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+     },
+     "pf15": {
+      "file": "scanner/utilities/rfchess.seq",
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+     },
+     "pf16": {
+      "file": "scanner/utilities/9lobsinb.seq",
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+     },
+     "pf17": {
+      "file": "scanner/utilities/19lobsinb.seq",
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+     },
+     "pf19": {
+      "file": "scanner/rf/v19_research_rf.seq",
+      "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+     },
+     "grad": {
+      "file": "scanner/utilities/g3040_15.seq",
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+     }
+    },
+    "overrides": {
+     "crush_amp": -8750,
+     "diff_crush_amp": -5150
+    },
+    "unused_ppr_params": [],
+    "assumptions": [
+     "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+     "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+     "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+     "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+     "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+     "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+     "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+     "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+     "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+     "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+     "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+     "hostrequest() returns 1 (no host update).",
+     "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+     "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+     "input#n reads 0 (no gating/mains trigger hardware).",
+     "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+    ],
+    "stmt_cost_us": 0.0,
+    "manual_expression_costs": true,
+    "manual_expression_cost_scale": 0.8
+   },
+   "abs_by_phase": [
+    [
+     0.3870945731819167,
+     0.4051932494792374,
+     0.350271852777055,
+     0.34347013930033116,
+     0.3453491684231192,
+     0.35205783474862834,
+     0.3557951546283928,
+     0.35624326262742423
+    ],
+    [
+     0.38119398451964537,
+     0.4044549339995138,
+     0.35243247374701225,
+     0.3465379392038672,
+     0.34853430080493253,
+     0.3546171980449534,
+     0.3572898578709604,
+     0.35672399994933696
+    ],
+    [
+     0.38634461352395877,
+     0.40507072278178785,
+     0.3514642259091951,
+     0.34569608518891576,
+     0.34793008816817445,
+     0.35425630393739976,
+     0.3573544514821098,
+     0.35775778983837897
+    ]
+   ],
+   "max_phase_spread": 0.005900588662271333
+  },
+  {
+   "method": "v191",
+   "C_DAC": -8750,
+   "C1_DAC": -5482,
+   "inputs": {
+    "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppl",
+    "ppl_sha256": "f0156b48a1b9ff648dba7d69e508629b6fc51bebfcb27d91c5f9fc46ee205f2d",
+    "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppr",
+    "ppr_sha256": "faa77a11c2da4c5fe9876d6a842b9bc3025c66ddc09eaa4e8270dec9350faf0c",
+    "includes": {
+     "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+     "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+     "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+     "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+     "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+     "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    },
+    "libraries": {
+     "pf1": {
+      "file": "scanner/utilities/rfstd44.seq",
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+     },
+     "pf7": {
+      "file": "scanner/utilities/gs_240hz.seq",
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+     },
+     "pf8": {
+      "file": "scanner/utilities/presat.seq",
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+     },
+     "pf10": {
+      "file": "scanner/utilities/opt90_a.seq",
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+     },
+     "pf11": {
+      "file": "scanner/utilities/opt90_as.seq",
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+     },
+     "pf12": {
+      "file": "scanner/utilities/asym.seq",
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+     },
+     "pf14": {
+      "file": "scanner/utilities/hypsec.seq",
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+     },
+     "pf15": {
+      "file": "scanner/utilities/rfchess.seq",
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+     },
+     "pf16": {
+      "file": "scanner/utilities/9lobsinb.seq",
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+     },
+     "pf17": {
+      "file": "scanner/utilities/19lobsinb.seq",
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+     },
+     "pf19": {
+      "file": "scanner/rf/v19_research_rf.seq",
+      "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+     },
+     "grad": {
+      "file": "scanner/utilities/g3040_15.seq",
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+     }
+    },
+    "overrides": {
+     "crush_amp": -8750,
+     "diff_crush_amp": -5482
+    },
+    "unused_ppr_params": [],
+    "assumptions": [
+     "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+     "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+     "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+     "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+     "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+     "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+     "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+     "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+     "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+     "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+     "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+     "hostrequest() returns 1 (no host update).",
+     "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+     "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+     "input#n reads 0 (no gating/mains trigger hardware).",
+     "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+    ],
+    "stmt_cost_us": 0.0,
+    "manual_expression_costs": true,
+    "manual_expression_cost_scale": 0.8
+   },
+   "abs_by_phase": [
+    [
+     0.3871249219334303,
+     0.4047113206204044,
+     0.3493781386396385,
+     0.34242266150907924,
+     0.3445630785463526,
+     0.3520754080504918,
+     0.35731294119470614,
+     0.3599804226093011
+    ],
+    [
+     0.38812594181857357,
+     0.4040119017676959,
+     0.3475976532335732,
+     0.34022776311735925,
+     0.3420255287502852,
+     0.34913652077571794,
+     0.35412333966940046,
+     0.35705225321874695
+    ],
+    [
+     0.3863850239585719,
+     0.40334976105420167,
+     0.3483695492751531,
+     0.3415911215507097,
+     0.3432804922112118,
+     0.3496552252126814,
+     0.3536357268507354,
+     0.3557540080126195
+    ]
+   ],
+   "max_phase_spread": 0.004226414596681549
+  },
+  {
+   "method": "v191",
+   "C_DAC": -8750,
+   "C1_DAC": -5800,
+   "inputs": {
+    "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppl",
+    "ppl_sha256": "f0156b48a1b9ff648dba7d69e508629b6fc51bebfcb27d91c5f9fc46ee205f2d",
+    "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppr",
+    "ppr_sha256": "faa77a11c2da4c5fe9876d6a842b9bc3025c66ddc09eaa4e8270dec9350faf0c",
+    "includes": {
+     "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+     "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+     "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+     "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+     "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+     "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    },
+    "libraries": {
+     "pf1": {
+      "file": "scanner/utilities/rfstd44.seq",
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+     },
+     "pf7": {
+      "file": "scanner/utilities/gs_240hz.seq",
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+     },
+     "pf8": {
+      "file": "scanner/utilities/presat.seq",
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+     },
+     "pf10": {
+      "file": "scanner/utilities/opt90_a.seq",
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+     },
+     "pf11": {
+      "file": "scanner/utilities/opt90_as.seq",
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+     },
+     "pf12": {
+      "file": "scanner/utilities/asym.seq",
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+     },
+     "pf14": {
+      "file": "scanner/utilities/hypsec.seq",
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+     },
+     "pf15": {
+      "file": "scanner/utilities/rfchess.seq",
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+     },
+     "pf16": {
+      "file": "scanner/utilities/9lobsinb.seq",
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+     },
+     "pf17": {
+      "file": "scanner/utilities/19lobsinb.seq",
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+     },
+     "pf19": {
+      "file": "scanner/rf/v19_research_rf.seq",
+      "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+     },
+     "grad": {
+      "file": "scanner/utilities/g3040_15.seq",
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+     }
+    },
+    "overrides": {
+     "crush_amp": -8750,
+     "diff_crush_amp": -5800
+    },
+    "unused_ppr_params": [],
+    "assumptions": [
+     "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+     "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+     "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+     "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+     "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+     "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+     "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+     "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+     "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+     "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+     "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+     "hostrequest() returns 1 (no host update).",
+     "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+     "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+     "input#n reads 0 (no gating/mains trigger hardware).",
+     "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+    ],
+    "stmt_cost_us": 0.0,
+    "manual_expression_costs": true,
+    "manual_expression_cost_scale": 0.8
+   },
+   "abs_by_phase": [
+    [
+     0.3872659904026453,
+     0.40330294337603445,
+     0.34555289837564135,
+     0.33570171683104094,
+     0.33465463672173046,
+     0.3387854563676426,
+     0.3406671474017257,
+     0.3402562388421333
+    ],
+    [
+     0.3870121161095882,
+     0.40247218262659723,
+     0.3451178937837793,
+     0.33579783331360946,
+     0.3349933665211961,
+     0.3389722539360164,
+     0.34043547392023527,
+     0.33964846893895123
+    ],
+    [
+     0.38634167732629104,
+     0.4012909727996765,
+     0.34363663173546993,
+     0.333770641550905,
+     0.33216633765568915,
+     0.3351989445221676,
+     0.33594125136592706,
+     0.3350992083104625
+    ]
+   ],
+   "max_phase_spread": 0.00515703053167077
+  },
+  {
+   "method": "v192",
+   "C_DAC": -7700,
+   "C1_DAC": -5150,
+   "inputs": {
+    "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppl",
+    "ppl_sha256": "35d0eeaa0c60dc1d95f9bbb9c44881e65bc9a58d533aa3636031b4273d15e855",
+    "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppr",
+    "ppr_sha256": "678f2af5bb2fa205c2b7cb9402879d9ce1e98ed8e2c5fa4264c318b3e6898fbf",
+    "includes": {
+     "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+     "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+     "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+     "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+     "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+     "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    },
+    "libraries": {
+     "pf1": {
+      "file": "scanner/utilities/rfstd44.seq",
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+     },
+     "pf7": {
+      "file": "scanner/utilities/gs_240hz.seq",
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+     },
+     "pf8": {
+      "file": "scanner/utilities/presat.seq",
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+     },
+     "pf10": {
+      "file": "scanner/utilities/opt90_a.seq",
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+     },
+     "pf11": {
+      "file": "scanner/utilities/opt90_as.seq",
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+     },
+     "pf12": {
+      "file": "scanner/utilities/asym.seq",
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+     },
+     "pf14": {
+      "file": "scanner/utilities/hypsec.seq",
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+     },
+     "pf15": {
+      "file": "scanner/utilities/rfchess.seq",
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+     },
+     "pf16": {
+      "file": "scanner/utilities/9lobsinb.seq",
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+     },
+     "pf17": {
+      "file": "scanner/utilities/19lobsinb.seq",
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+     },
+     "pf19": {
+      "file": "scanner/rf/v19_research_rf.seq",
+      "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+     },
+     "grad": {
+      "file": "scanner/utilities/g3040_15.seq",
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+     }
+    },
+    "overrides": {
+     "crush_amp": -7700,
+     "diff_crush_amp": -5150
+    },
+    "unused_ppr_params": [],
+    "assumptions": [
+     "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+     "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+     "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+     "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+     "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+     "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+     "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+     "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+     "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+     "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+     "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+     "hostrequest() returns 1 (no host update).",
+     "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+     "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+     "input#n reads 0 (no gating/mains trigger hardware).",
+     "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+    ],
+    "stmt_cost_us": 0.0,
+    "manual_expression_costs": true,
+    "manual_expression_cost_scale": 0.8
+   },
+   "abs_by_phase": [
+    [
+     0.30030530305990133,
+     0.2736592007997034,
+     0.22139594965951967,
+     0.22290928016658468,
+     0.23415757918992824,
+     0.2470664306292864,
+     0.25296191649138505,
+     0.25137056749555664
+    ],
+    [
+     0.28640221617591854,
+     0.28546346301685893,
+     0.22978280065362477,
+     0.22484333683608096,
+     0.23072990359864864,
+     0.23899604604056074,
+     0.24182612481620813,
+     0.2400030800490603
+    ],
+    [
+     0.2822816581446817,
+     0.29026309537210476,
+     0.23365145677842003,
+     0.2266646957578465,
+     0.23063075344027315,
+     0.23681748572048406,
+     0.23786091420880245,
+     0.23539445290256095
+    ]
+   ],
+   "max_phase_spread": 0.018023644915219628
+  },
+  {
+   "method": "v192",
+   "C_DAC": -7700,
+   "C1_DAC": -5482,
+   "inputs": {
+    "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppl",
+    "ppl_sha256": "35d0eeaa0c60dc1d95f9bbb9c44881e65bc9a58d533aa3636031b4273d15e855",
+    "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppr",
+    "ppr_sha256": "678f2af5bb2fa205c2b7cb9402879d9ce1e98ed8e2c5fa4264c318b3e6898fbf",
+    "includes": {
+     "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+     "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+     "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+     "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+     "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+     "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    },
+    "libraries": {
+     "pf1": {
+      "file": "scanner/utilities/rfstd44.seq",
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+     },
+     "pf7": {
+      "file": "scanner/utilities/gs_240hz.seq",
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+     },
+     "pf8": {
+      "file": "scanner/utilities/presat.seq",
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+     },
+     "pf10": {
+      "file": "scanner/utilities/opt90_a.seq",
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+     },
+     "pf11": {
+      "file": "scanner/utilities/opt90_as.seq",
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+     },
+     "pf12": {
+      "file": "scanner/utilities/asym.seq",
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+     },
+     "pf14": {
+      "file": "scanner/utilities/hypsec.seq",
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+     },
+     "pf15": {
+      "file": "scanner/utilities/rfchess.seq",
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+     },
+     "pf16": {
+      "file": "scanner/utilities/9lobsinb.seq",
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+     },
+     "pf17": {
+      "file": "scanner/utilities/19lobsinb.seq",
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+     },
+     "pf19": {
+      "file": "scanner/rf/v19_research_rf.seq",
+      "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+     },
+     "grad": {
+      "file": "scanner/utilities/g3040_15.seq",
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+     }
+    },
+    "overrides": {
+     "crush_amp": -7700,
+     "diff_crush_amp": -5482
+    },
+    "unused_ppr_params": [],
+    "assumptions": [
+     "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+     "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+     "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+     "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+     "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+     "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+     "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+     "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+     "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+     "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+     "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+     "hostrequest() returns 1 (no host update).",
+     "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+     "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+     "input#n reads 0 (no gating/mains trigger hardware).",
+     "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+    ],
+    "stmt_cost_us": 0.0,
+    "manual_expression_costs": true,
+    "manual_expression_cost_scale": 0.8
+   },
+   "abs_by_phase": [
+    [
+     0.3006041976214265,
+     0.27342835108150193,
+     0.21105271966506614,
+     0.19509328281667235,
+     0.19081769251435157,
+     0.19508123887132783,
+     0.2010249564212893,
+     0.20555283011330797
+    ],
+    [
+     0.3029297824075784,
+     0.28666371158847076,
+     0.21611089823033083,
+     0.1942477182912519,
+     0.18660143472455407,
+     0.1890372595674645,
+     0.19441271628559095,
+     0.2003193607769419
+    ],
+    [
+     0.30488723197398465,
+     0.2919769975386849,
+     0.2187139177334449,
+     0.19450671579593728,
+     0.18525437191790714,
+     0.18642825743306463,
+     0.19106385527543487,
+     0.19749186935685253
+    ]
+   ],
+   "max_phase_spread": 0.01854864645718296
+  },
+  {
+   "method": "v192",
+   "C_DAC": -7700,
+   "C1_DAC": -5800,
+   "inputs": {
+    "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppl",
+    "ppl_sha256": "35d0eeaa0c60dc1d95f9bbb9c44881e65bc9a58d533aa3636031b4273d15e855",
+    "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppr",
+    "ppr_sha256": "678f2af5bb2fa205c2b7cb9402879d9ce1e98ed8e2c5fa4264c318b3e6898fbf",
+    "includes": {
+     "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+     "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+     "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+     "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+     "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+     "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    },
+    "libraries": {
+     "pf1": {
+      "file": "scanner/utilities/rfstd44.seq",
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+     },
+     "pf7": {
+      "file": "scanner/utilities/gs_240hz.seq",
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+     },
+     "pf8": {
+      "file": "scanner/utilities/presat.seq",
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+     },
+     "pf10": {
+      "file": "scanner/utilities/opt90_a.seq",
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+     },
+     "pf11": {
+      "file": "scanner/utilities/opt90_as.seq",
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+     },
+     "pf12": {
+      "file": "scanner/utilities/asym.seq",
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+     },
+     "pf14": {
+      "file": "scanner/utilities/hypsec.seq",
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+     },
+     "pf15": {
+      "file": "scanner/utilities/rfchess.seq",
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+     },
+     "pf16": {
+      "file": "scanner/utilities/9lobsinb.seq",
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+     },
+     "pf17": {
+      "file": "scanner/utilities/19lobsinb.seq",
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+     },
+     "pf19": {
+      "file": "scanner/rf/v19_research_rf.seq",
+      "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+     },
+     "grad": {
+      "file": "scanner/utilities/g3040_15.seq",
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+     }
+    },
+    "overrides": {
+     "crush_amp": -7700,
+     "diff_crush_amp": -5800
+    },
+    "unused_ppr_params": [],
+    "assumptions": [
+     "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+     "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+     "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+     "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+     "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+     "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+     "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+     "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+     "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+     "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+     "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+     "hostrequest() returns 1 (no host update).",
+     "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+     "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+     "input#n reads 0 (no gating/mains trigger hardware).",
+     "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+    ],
+    "stmt_cost_us": 0.0,
+    "manual_expression_costs": true,
+    "manual_expression_cost_scale": 0.8
+   },
+   "abs_by_phase": [
+    [
+     0.31630323674286936,
+     0.27091712919715605,
+     0.20803182328784517,
+     0.19311946726851617,
+     0.1937374327236554,
+     0.2049471028371433,
+     0.21682167333953725,
+     0.22362531906289476
+    ],
+    [
+     0.3524337655857006,
+     0.2953131689181161,
+     0.21218022876075365,
+     0.1921500274526016,
+     0.19300477857521706,
+     0.20682882461862118,
+     0.22118133092398193,
+     0.23016362771609292
+    ],
+    [
+     0.36311058144987857,
+     0.308297380503272,
+     0.21701446003034366,
+     0.19454880523635354,
+     0.19442816851449762,
+     0.20771639868911884,
+     0.22155603615800218,
+     0.2307583468583463
+    ]
+   ],
+   "max_phase_spread": 0.0468073447070092
+  },
+  {
+   "method": "v192",
+   "C_DAC": -8223,
+   "C1_DAC": -5150,
+   "inputs": {
+    "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppl",
+    "ppl_sha256": "35d0eeaa0c60dc1d95f9bbb9c44881e65bc9a58d533aa3636031b4273d15e855",
+    "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppr",
+    "ppr_sha256": "678f2af5bb2fa205c2b7cb9402879d9ce1e98ed8e2c5fa4264c318b3e6898fbf",
+    "includes": {
+     "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+     "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+     "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+     "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+     "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+     "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    },
+    "libraries": {
+     "pf1": {
+      "file": "scanner/utilities/rfstd44.seq",
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+     },
+     "pf7": {
+      "file": "scanner/utilities/gs_240hz.seq",
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+     },
+     "pf8": {
+      "file": "scanner/utilities/presat.seq",
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+     },
+     "pf10": {
+      "file": "scanner/utilities/opt90_a.seq",
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+     },
+     "pf11": {
+      "file": "scanner/utilities/opt90_as.seq",
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+     },
+     "pf12": {
+      "file": "scanner/utilities/asym.seq",
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+     },
+     "pf14": {
+      "file": "scanner/utilities/hypsec.seq",
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+     },
+     "pf15": {
+      "file": "scanner/utilities/rfchess.seq",
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+     },
+     "pf16": {
+      "file": "scanner/utilities/9lobsinb.seq",
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+     },
+     "pf17": {
+      "file": "scanner/utilities/19lobsinb.seq",
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+     },
+     "pf19": {
+      "file": "scanner/rf/v19_research_rf.seq",
+      "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+     },
+     "grad": {
+      "file": "scanner/utilities/g3040_15.seq",
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+     }
+    },
+    "overrides": {
+     "crush_amp": -8223,
+     "diff_crush_amp": -5150
+    },
+    "unused_ppr_params": [],
+    "assumptions": [
+     "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+     "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+     "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+     "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+     "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+     "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+     "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+     "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+     "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+     "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+     "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+     "hostrequest() returns 1 (no host update).",
+     "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+     "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+     "input#n reads 0 (no gating/mains trigger hardware).",
+     "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+    ],
+    "stmt_cost_us": 0.0,
+    "manual_expression_costs": true,
+    "manual_expression_cost_scale": 0.8
+   },
+   "abs_by_phase": [
+    [
+     0.294143623693538,
+     0.28620910051533677,
+     0.2366197160201972,
+     0.22717439676485146,
+     0.22544617040732304,
+     0.22748739021950445,
+     0.22808372501277213,
+     0.22823983356359204
+    ],
+    [
+     0.31974095683270204,
+     0.29171912437692504,
+     0.22613526857082947,
+     0.21184659862105318,
+     0.21272327753039796,
+     0.2202824238781924,
+     0.22552691969198174,
+     0.22705424091152543
+    ],
+    [
+     0.3346000167671591,
+     0.2925717808354121,
+     0.21790566168527228,
+     0.20321427077647397,
+     0.20816991974098661,
+     0.22061616812940193,
+     0.2287378039092658,
+     0.22976501620383194
+    ]
+   ],
+   "max_phase_spread": 0.04045639307362109
+  },
+  {
+   "method": "v192",
+   "C_DAC": -8223,
+   "C1_DAC": -5482,
+   "inputs": {
+    "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppl",
+    "ppl_sha256": "35d0eeaa0c60dc1d95f9bbb9c44881e65bc9a58d533aa3636031b4273d15e855",
+    "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppr",
+    "ppr_sha256": "678f2af5bb2fa205c2b7cb9402879d9ce1e98ed8e2c5fa4264c318b3e6898fbf",
+    "includes": {
+     "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+     "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+     "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+     "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+     "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+     "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    },
+    "libraries": {
+     "pf1": {
+      "file": "scanner/utilities/rfstd44.seq",
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+     },
+     "pf7": {
+      "file": "scanner/utilities/gs_240hz.seq",
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+     },
+     "pf8": {
+      "file": "scanner/utilities/presat.seq",
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+     },
+     "pf10": {
+      "file": "scanner/utilities/opt90_a.seq",
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+     },
+     "pf11": {
+      "file": "scanner/utilities/opt90_as.seq",
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+     },
+     "pf12": {
+      "file": "scanner/utilities/asym.seq",
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+     },
+     "pf14": {
+      "file": "scanner/utilities/hypsec.seq",
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+     },
+     "pf15": {
+      "file": "scanner/utilities/rfchess.seq",
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+     },
+     "pf16": {
+      "file": "scanner/utilities/9lobsinb.seq",
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+     },
+     "pf17": {
+      "file": "scanner/utilities/19lobsinb.seq",
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+     },
+     "pf19": {
+      "file": "scanner/rf/v19_research_rf.seq",
+      "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+     },
+     "grad": {
+      "file": "scanner/utilities/g3040_15.seq",
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+     }
+    },
+    "overrides": {
+     "crush_amp": -8223,
+     "diff_crush_amp": -5482
+    },
+    "unused_ppr_params": [],
+    "assumptions": [
+     "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+     "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+     "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+     "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+     "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+     "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+     "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+     "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+     "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+     "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+     "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+     "hostrequest() returns 1 (no host update).",
+     "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+     "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+     "input#n reads 0 (no gating/mains trigger hardware).",
+     "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+    ],
+    "stmt_cost_us": 0.0,
+    "manual_expression_costs": true,
+    "manual_expression_cost_scale": 0.8
+   },
+   "abs_by_phase": [
+    [
+     0.3032408632315419,
+     0.27500637512779286,
+     0.22028906210348917,
+     0.22211706419163676,
+     0.23580497444812346,
+     0.2513611698763393,
+     0.25876531555784077,
+     0.2572317945932171
+    ],
+    [
+     0.29325358579722594,
+     0.28386773995057496,
+     0.22547787894800866,
+     0.2208408211605286,
+     0.22956417145925048,
+     0.24094734251767103,
+     0.24561404623915797,
+     0.2438318091842395
+    ],
+    [
+     0.28864178787915573,
+     0.286316090942416,
+     0.227449417486432,
+     0.2209864193333824,
+     0.22792016895717737,
+     0.23716502377401366,
+     0.23979121574509335,
+     0.23697866506975715
+    ]
+   ],
+   "max_phase_spread": 0.02025312952345995
+  },
+  {
+   "method": "v192",
+   "C_DAC": -8223,
+   "C1_DAC": -5800,
+   "inputs": {
+    "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppl",
+    "ppl_sha256": "35d0eeaa0c60dc1d95f9bbb9c44881e65bc9a58d533aa3636031b4273d15e855",
+    "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppr",
+    "ppr_sha256": "678f2af5bb2fa205c2b7cb9402879d9ce1e98ed8e2c5fa4264c318b3e6898fbf",
+    "includes": {
+     "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+     "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+     "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+     "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+     "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+     "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    },
+    "libraries": {
+     "pf1": {
+      "file": "scanner/utilities/rfstd44.seq",
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+     },
+     "pf7": {
+      "file": "scanner/utilities/gs_240hz.seq",
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+     },
+     "pf8": {
+      "file": "scanner/utilities/presat.seq",
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+     },
+     "pf10": {
+      "file": "scanner/utilities/opt90_a.seq",
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+     },
+     "pf11": {
+      "file": "scanner/utilities/opt90_as.seq",
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+     },
+     "pf12": {
+      "file": "scanner/utilities/asym.seq",
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+     },
+     "pf14": {
+      "file": "scanner/utilities/hypsec.seq",
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+     },
+     "pf15": {
+      "file": "scanner/utilities/rfchess.seq",
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+     },
+     "pf16": {
+      "file": "scanner/utilities/9lobsinb.seq",
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+     },
+     "pf17": {
+      "file": "scanner/utilities/19lobsinb.seq",
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+     },
+     "pf19": {
+      "file": "scanner/rf/v19_research_rf.seq",
+      "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+     },
+     "grad": {
+      "file": "scanner/utilities/g3040_15.seq",
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+     }
+    },
+    "overrides": {
+     "crush_amp": -8223,
+     "diff_crush_amp": -5800
+    },
+    "unused_ppr_params": [],
+    "assumptions": [
+     "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+     "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+     "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+     "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+     "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+     "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+     "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+     "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+     "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+     "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+     "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+     "hostrequest() returns 1 (no host update).",
+     "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+     "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+     "input#n reads 0 (no gating/mains trigger hardware).",
+     "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+    ],
+    "stmt_cost_us": 0.0,
+    "manual_expression_costs": true,
+    "manual_expression_cost_scale": 0.8
+   },
+   "abs_by_phase": [
+    [
+     0.3027165316217994,
+     0.2738310679921101,
+     0.21866755028158685,
+     0.2150309214957247,
+     0.22111412338652642,
+     0.2306530265649498,
+     0.23578124625150212,
+     0.23533105863695816
+    ],
+    [
+     0.2881277688022185,
+     0.2863904114084758,
+     0.22760423974017624,
+     0.21708194297846017,
+     0.21726356248056564,
+     0.22193668685856313,
+     0.2243042592479856,
+     0.2245557824150375
+    ],
+    [
+     0.28204487830181835,
+     0.29165246601665534,
+     0.23222580139524018,
+     0.21903378512939264,
+     0.21639914615866473,
+     0.21830862794432745,
+     0.21886763946342191,
+     0.21937231759275974
+    ]
+   ],
+   "max_phase_spread": 0.020671653319981054
+  },
+  {
+   "method": "v192",
+   "C_DAC": -8750,
+   "C1_DAC": -5150,
+   "inputs": {
+    "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppl",
+    "ppl_sha256": "35d0eeaa0c60dc1d95f9bbb9c44881e65bc9a58d533aa3636031b4273d15e855",
+    "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppr",
+    "ppr_sha256": "678f2af5bb2fa205c2b7cb9402879d9ce1e98ed8e2c5fa4264c318b3e6898fbf",
+    "includes": {
+     "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+     "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+     "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+     "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+     "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+     "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    },
+    "libraries": {
+     "pf1": {
+      "file": "scanner/utilities/rfstd44.seq",
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+     },
+     "pf7": {
+      "file": "scanner/utilities/gs_240hz.seq",
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+     },
+     "pf8": {
+      "file": "scanner/utilities/presat.seq",
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+     },
+     "pf10": {
+      "file": "scanner/utilities/opt90_a.seq",
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+     },
+     "pf11": {
+      "file": "scanner/utilities/opt90_as.seq",
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+     },
+     "pf12": {
+      "file": "scanner/utilities/asym.seq",
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+     },
+     "pf14": {
+      "file": "scanner/utilities/hypsec.seq",
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+     },
+     "pf15": {
+      "file": "scanner/utilities/rfchess.seq",
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+     },
+     "pf16": {
+      "file": "scanner/utilities/9lobsinb.seq",
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+     },
+     "pf17": {
+      "file": "scanner/utilities/19lobsinb.seq",
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+     },
+     "pf19": {
+      "file": "scanner/rf/v19_research_rf.seq",
+      "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+     },
+     "grad": {
+      "file": "scanner/utilities/g3040_15.seq",
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+     }
+    },
+    "overrides": {
+     "crush_amp": -8750,
+     "diff_crush_amp": -5150
+    },
+    "unused_ppr_params": [],
+    "assumptions": [
+     "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+     "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+     "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+     "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+     "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+     "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+     "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+     "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+     "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+     "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+     "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+     "hostrequest() returns 1 (no host update).",
+     "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+     "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+     "input#n reads 0 (no gating/mains trigger hardware).",
+     "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+    ],
+    "stmt_cost_us": 0.0,
+    "manual_expression_costs": true,
+    "manual_expression_cost_scale": 0.8
+   },
+   "abs_by_phase": [
+    [
+     0.29815015743330897,
+     0.30726898815455644,
+     0.27365541672585714,
+     0.26583231100305893,
+     0.25655335910539645,
+     0.24982795040021646,
+     0.24545369447061255,
+     0.24569473151506271
+    ],
+    [
+     0.34578126888897476,
+     0.32029283830397276,
+     0.25543632915754894,
+     0.24042452904975722,
+     0.23861093120141566,
+     0.2466303423129115,
+     0.2561660153917677,
+     0.26273475777557265
+    ],
+    [
+     0.3683286288745689,
+     0.3286145920161361,
+     0.24285129469532638,
+     0.22311263465636338,
+     0.22742493347981454,
+     0.2458347249704552,
+     0.26381140338600195,
+     0.2733876852409485
+    ]
+   ],
+   "max_phase_spread": 0.07017847144125994
+  },
+  {
+   "method": "v192",
+   "C_DAC": -8750,
+   "C1_DAC": -5482,
+   "inputs": {
+    "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppl",
+    "ppl_sha256": "35d0eeaa0c60dc1d95f9bbb9c44881e65bc9a58d533aa3636031b4273d15e855",
+    "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppr",
+    "ppr_sha256": "678f2af5bb2fa205c2b7cb9402879d9ce1e98ed8e2c5fa4264c318b3e6898fbf",
+    "includes": {
+     "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+     "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+     "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+     "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+     "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+     "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    },
+    "libraries": {
+     "pf1": {
+      "file": "scanner/utilities/rfstd44.seq",
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+     },
+     "pf7": {
+      "file": "scanner/utilities/gs_240hz.seq",
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+     },
+     "pf8": {
+      "file": "scanner/utilities/presat.seq",
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+     },
+     "pf10": {
+      "file": "scanner/utilities/opt90_a.seq",
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+     },
+     "pf11": {
+      "file": "scanner/utilities/opt90_as.seq",
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+     },
+     "pf12": {
+      "file": "scanner/utilities/asym.seq",
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+     },
+     "pf14": {
+      "file": "scanner/utilities/hypsec.seq",
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+     },
+     "pf15": {
+      "file": "scanner/utilities/rfchess.seq",
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+     },
+     "pf16": {
+      "file": "scanner/utilities/9lobsinb.seq",
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+     },
+     "pf17": {
+      "file": "scanner/utilities/19lobsinb.seq",
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+     },
+     "pf19": {
+      "file": "scanner/rf/v19_research_rf.seq",
+      "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+     },
+     "grad": {
+      "file": "scanner/utilities/g3040_15.seq",
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+     }
+    },
+    "overrides": {
+     "crush_amp": -8750,
+     "diff_crush_amp": -5482
+    },
+    "unused_ppr_params": [],
+    "assumptions": [
+     "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+     "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+     "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+     "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+     "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+     "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+     "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+     "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+     "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+     "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+     "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+     "hostrequest() returns 1 (no host update).",
+     "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+     "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+     "input#n reads 0 (no gating/mains trigger hardware).",
+     "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+    ],
+    "stmt_cost_us": 0.0,
+    "manual_expression_costs": true,
+    "manual_expression_cost_scale": 0.8
+   },
+   "abs_by_phase": [
+    [
+     0.3022298261252355,
+     0.3038558636611806,
+     0.25507241390014257,
+     0.24235832418906592,
+     0.23585777932868474,
+     0.23530521515343936,
+     0.23707130017159558,
+     0.24102709689640195
+    ],
+    [
+     0.3340645561713587,
+     0.3039601320426782,
+     0.23984377954820146,
+     0.22452494537499257,
+     0.22331955180502716,
+     0.23019241573167665,
+     0.23662437845153417,
+     0.24030747339303998
+    ],
+    [
+     0.3479698908424127,
+     0.30046200620397434,
+     0.23011754773233023,
+     0.21680772861502612,
+     0.22084926990151882,
+     0.23207566814252945,
+     0.23943649086455804,
+     0.24026911830166756
+    ]
+   ],
+   "max_phase_spread": 0.045740064717177176
+  },
+  {
+   "method": "v192",
+   "C_DAC": -8750,
+   "C1_DAC": -5800,
+   "inputs": {
+    "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppl",
+    "ppl_sha256": "35d0eeaa0c60dc1d95f9bbb9c44881e65bc9a58d533aa3636031b4273d15e855",
+    "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppr",
+    "ppr_sha256": "678f2af5bb2fa205c2b7cb9402879d9ce1e98ed8e2c5fa4264c318b3e6898fbf",
+    "includes": {
+     "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+     "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+     "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+     "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+     "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+     "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    },
+    "libraries": {
+     "pf1": {
+      "file": "scanner/utilities/rfstd44.seq",
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+     },
+     "pf7": {
+      "file": "scanner/utilities/gs_240hz.seq",
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+     },
+     "pf8": {
+      "file": "scanner/utilities/presat.seq",
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+     },
+     "pf10": {
+      "file": "scanner/utilities/opt90_a.seq",
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+     },
+     "pf11": {
+      "file": "scanner/utilities/opt90_as.seq",
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+     },
+     "pf12": {
+      "file": "scanner/utilities/asym.seq",
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+     },
+     "pf14": {
+      "file": "scanner/utilities/hypsec.seq",
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+     },
+     "pf15": {
+      "file": "scanner/utilities/rfchess.seq",
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+     },
+     "pf16": {
+      "file": "scanner/utilities/9lobsinb.seq",
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+     },
+     "pf17": {
+      "file": "scanner/utilities/19lobsinb.seq",
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+     },
+     "pf19": {
+      "file": "scanner/rf/v19_research_rf.seq",
+      "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c"
+     },
+     "grad": {
+      "file": "scanner/utilities/g3040_15.seq",
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+     }
+    },
+    "overrides": {
+     "crush_amp": -8750,
+     "diff_crush_amp": -5800
+    },
+    "unused_ppr_params": [],
+    "assumptions": [
+     "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+     "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+     "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+     "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+     "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+     "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+     "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+     "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+     "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+     "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+     "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+     "hostrequest() returns 1 (no host update).",
+     "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+     "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+     "input#n reads 0 (no gating/mains trigger hardware).",
+     "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+    ],
+    "stmt_cost_us": 0.0,
+    "manual_expression_costs": true,
+    "manual_expression_cost_scale": 0.8
+   },
+   "abs_by_phase": [
+    [
+     0.30491211182590283,
+     0.27992553759440625,
+     0.22222508364468593,
+     0.21737107809788503,
+     0.22473381010095353,
+     0.23594709788142704,
+     0.2420168492488118,
+     0.24183546918769291
+    ],
+    [
+     0.30873448022130895,
+     0.2866475505398514,
+     0.22213123185220243,
+     0.21070884876968324,
+     0.21488128325609646,
+     0.22438026441615255,
+     0.2296687619043215,
+     0.23000406735435025
+    ],
+    [
+     0.3089174396434494,
+     0.28788696108942574,
+     0.22218490281204556,
+     0.20898133426805524,
+     0.2119441355134792,
+     0.2200065914351414,
+     0.22369816720557145,
+     0.2230727481682878
+    ]
+   ],
+   "max_phase_spread": 0.018762721019405126
+  }
+ ],
+ "elapsed_s": 266.2537715435028
+}

@@ -1,6 +1,8 @@
 __pycache__/
 # pipeline outputs (regenerate with dw.py)
 runs/
-rf/
+/rf/
+# Native RF source libraries in scanner/rf are project artifacts.
 *_view/
 *_sim/
+tmp/

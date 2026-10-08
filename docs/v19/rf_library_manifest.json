@@ -3,7 +3,7 @@
   "template_sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29",
   "sample_contract_sha256": "86b3f78ed93854f82255a4bcef0a883c6e678a2d0ea6b42d2fa70b39735303c4",
   "sample_npz_sha256": "6fe60835a2916ac960d28fe8fbce1c889f75cbbc5598ed1cc0fefb77136fb446",
-  "encoder_sha256": "712d17f55491011bec1d78d98cff59512d7b62bc7c670f23e328d5379c1bc3b9",
+  "encoder_sha256": "bfeb4a330dd69def8f95e653f71700280a405d147315083253f8f3d80d373139",
   "original_Gibbons_coefficients": false,
   "spectral_spatial_tip": false,
   "rf_amplitude_calibration_assumption": "Linear signed DAC x board multiplier; rfcal gives90deg on the supplied stock3lobe1332us interior. Per-pulse ratio is an inference, not measured transmit gain.",
@@ -215,7 +215,79 @@
       "RF_board_flags": "Known realF0 word controls; lastphase-control0x6000 copied from stock. AP phase encoding unused."
     }
   },
-  "asset_sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c",
-  "asset_path": "scanner/rf/v19_research_rf.seq",
+  "assets": {
+    "v19_slrprep90": {
+      "path": "scanner/rf/v19_slrprep90.seq",
+      "install_path": "g:\\J_Figger\\seqlib\\v19_slrprep90.seq",
+      "sha256": "ba1c47b36159676f3b1ede6be0166222a3115e29e8dd160d3f91d60d429d610e",
+      "user_file": "v19ex90.txt",
+      "expressions": [
+        "320,user(\"v19ex90.txt\");",
+        "320F,0;",
+        "",
+        ""
+      ]
+    },
+    "v19_slrprep180": {
+      "path": "scanner/rf/v19_slrprep180.seq",
+      "install_path": "g:\\J_Figger\\seqlib\\v19_slrprep180.seq",
+      "sha256": "12893aa1c5b41b8e6b413d2c66309e1ec04be5ab0c183c68bbe77655863de432",
+      "user_file": "v19rf180.txt",
+      "expressions": [
+        "320,user(\"v19rf180.txt\");",
+        "320F,0;",
+        "",
+        ""
+      ]
+    },
+    "v19_slrtip90": {
+      "path": "scanner/rf/v19_slrtip90.seq",
+      "install_path": "g:\\J_Figger\\seqlib\\v19_slrtip90.seq",
+      "sha256": "12011e69db23614590d9f1d8b7222d28667c49e54c2a387a7f30b130a584f6df",
+      "user_file": "v19tip90.txt",
+      "expressions": [
+        "320,user(\"v19tip90.txt\");",
+        "320F,0;",
+        "",
+        ""
+      ]
+    },
+    "v19_slrelim90": {
+      "path": "scanner/rf/v19_slrelim90.seq",
+      "install_path": "g:\\J_Figger\\seqlib\\v19_slrelim90.seq",
+      "sha256": "14065908df72390a8032c1a0ebc50c60cd0281d18d9d82b03c9d50365b77c1f0",
+      "user_file": "v19elm90.txt",
+      "expressions": [
+        "320,user(\"v19elm90.txt\");",
+        "320F,0;",
+        "",
+        ""
+      ]
+    },
+    "v19_reexc90": {
+      "path": "scanner/rf/v19_reexc90.seq",
+      "install_path": "g:\\J_Figger\\seqlib\\v19_reexc90.seq",
+      "sha256": "3c5c0b893c7568c72dbba2aa457ba73b7df2bd59e0e610c12437d13644688e29",
+      "user_file": "v19re90.txt",
+      "expressions": [
+        "120,user(\"v19re90.txt\");",
+        "120F,0;",
+        "",
+        ""
+      ]
+    },
+    "v19_imaging180": {
+      "path": "scanner/rf/v19_imaging180.seq",
+      "install_path": "g:\\J_Figger\\seqlib\\v19_imaging180.seq",
+      "sha256": "b79da53484e0df66e7296db0896f0f73506a9b680b48779d3c1c4cc4db8f5cc9",
+      "user_file": "v19im180.txt",
+      "expressions": [
+        "120,user(\"v19im180.txt\");",
+        "120F,0;",
+        "",
+        ""
+      ]
+    }
+  },
   "all_samples_roundtrip_exact": true
 }

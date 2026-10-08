@@ -1,0 +1,271 @@
+Keep the existing PPRs and RF library. Use the original PPL filenames.
+Fatal messages use V19 error E<number>; find the code under the correct version below.
+Numeric values formerly embedded in fatal messages are omitted.
+Successful validator Duration reporting remains unchanged.
+
+v191 / 1.91
+E1: V19 method switch must be 0 or 1
+E2: V19 needs DWI ON, independent constant crushers, DE OFF
+E3: V19 rejects flow comp, Dixon, 3D, skipped echoes, TREF setup
+E4: V19 supports one centred slice (fixed tx frequency for all widths)
+E5: V19 rejects presat, CHESS, CEST, gating and TR arrays
+E6: V19 needs slice/read ON, gsp_lobe 0, no post-90/phcor0 trims
+E7: V19 needs ETL 1..64 and 1..8 dephasing cycles
+E8: V19 supports only 2 dephasing cycles; re-validate other values with examples/v19_validate_events.py
+E9: V19 needs diff_tramp=tramp, rfgate_delay>=17, tramp+rfdelay>=163 us
+E10: V19 slice selector outside 1..12000 DAC, or warmup outside 0..200 us
+E11: V19 compensation flat must be a multiple of tramp/50
+E12: V19 tdp and little delta-tramp must be multiples of tramp/50
+E13: V19 RF multiplier outside 1..2047
+E14: V19 refocusing flip [value] outside 0.1..180 deg
+E15: V19 selector DAC [value] outside amplitude/slew ceiling
+E16: V19 added-dephasing DAC [value] outside ceiling
+E17: V19 needs a nonzero train crusher
+E18: V19 train crusher area must be >= 3x added dephasing (C=[value], D=[value] DAC.us)
+E19: V19 crusher geometry unvalidated; use C/D=3.83 and C1/D=2.55, then re-validate with examples/v19_validate_events.py
+E20: V19 needs imaging <= tip-up <= slab width
+E21: V19 compensation DAC [value] outside amplitude/slew ceiling
+E22: V19 spoiler amplitude outside ceiling
+E23: V19 spoiler moment too large for this gradient
+E24: V19 spoiler flat [value] us outside tramp..6000 us
+E25: V19 RF block window infeasible (rf [value])
+E26: V19 RF block window infeasible (rf [value])
+E27: V19 RF block window infeasible (rf [value])
+E28: V19 RF block window infeasible (rf [value])
+E29: V19 RF block window infeasible (rf [value])
+E30: V19 spoiler window [value] us exceeds the 4.9-ms timer budget; raise spoiler DAC
+E31: V19 TE/Delta/delta too short for prep (gaps [value] [value] [value] [value] ticks)
+E32: V19 ESP too short after method block or before readout ([value] [value])
+E33: V19 ESP/ADC too short for readout and restoration ([value] [value] [value])
+E34: V19 readout/imaging/D windows outside budget (need 2*tramp+tdp>=400 us)
+E35: V19 ESP too short for crusher + readout
+E36: V19 matrix window 1 overrun
+E37: V19 read prephaser DAC [value] outside ceiling
+E38: V19 matrix window 2 overrun
+E39: Illegal parameter
+E40: Illegal parameter (2)
+E41: Illegal parameter (3)
+E42: No expts should be divisible by no of diffusion acqs ([value])
+E43: Set the Experiment Array Size to [value]
+E44: Invalid diffusion scale
+E45: Invalid diffusion direction
+E46: all directions normalised to 1000
+E47: b-value mode needs delta <= 10 ms and Delta <= 80 ms
+E48: Max b = [value]. Raise delta, Delta or grads
+E49: b-value DAC search did not converge
+E50: b-value DAC conversion outside array limits
+E51: Diffusion DAC exceeds limit
+E52: Diffusion DAC overflows int
+E53: Views (including navigator) must be 1..[value]; ETL must be 1..views
+E54: Base TE (esp) be a multiple of eff. echo time (TE) when Diffusion is OFF
+E55: Set PE order to 1, 5, 6 or 7 for DWI
+E56: Set Driven Equilibrium OFF when Diffusion is ON
+E57: PE 6/7 requires DWI ON, ETL > 1, and no discarded echoes
+E58: PE 6/7 requires full Fourier: PF echoes = 0 or ETL
+E59: Unsupported PE order
+E60: Navigator leaves no imaging views
+E61: Effective number of views must be even number
+E62: PF eff echoes must be >= VPS
+E63: PF eff echoes must be < 2*VPS
+E64: no_views must be > te_eff
+E65: te_eff must be >0
+E66: The eff echo time is too large
+E67: Set PE order to 5 for single echo
+E68: Set Echo train to 1 for single echo
+E69: Number of views / (2*views per segment) must be an integer
+E70: Linear interleaved requires imaging views divisible by ETL
+E71: Minimum echo train length is 4 for selected PE order
+E72: PE order 0 exceeds scratch table capacity
+E73: PE order 0 exceeds GP table capacity
+E74: Internal PE table length error
+E75: Navigators are not supported with selected PE order
+E76: Views per segment (ETL) must be equal number of Views for this PE order
+E77: Sampling time too long
+E78: Independent crusher switch must be 0 or 1
+E79: Independent crushers require ramp 100..1000 us, multiple of 10
+E80: Crusher amplitudes must be -32767..32767 DAC
+E81: tcrush must be 1..5000 us and an exact multiple of tramp/50 us
+E82: diff_tcrush must be 1..10000 us and an exact multiple of tramp/50 us
+E83: Independent crushers require Driven Equilibrium OFF
+E84: Invalid independent-crusher RF timing
+E85: Independent-crusher RF plateau overflow
+E86: Invalid crusher schedule or additive step
+E87: Crusher ETL exceeds storage capacity
+E88: Scheduled crushers require independent mode, DE OFF, no skipped echoes
+E89: Crusher orientation count exceeds storage
+E90: Invalid scheduled-crusher sampling parameters
+E91: ADC window too short for scheduled crusher update
+E92: Crusher amplitude/slew ceilings must be positive
+E93: Custom crusher count must equal ETL and be 1..64
+E94: Custom crusher storage contains invalid percentage
+E95: Crusher progression overflow
+E96: Invalid custom crusher percentage
+E97: Crusher magnitude product overflow
+E98: Crusher amplitude exceeds DAC/gradient ceiling
+E99: Crusher ramp exceeds slew ceiling
+E100: Refocus wait exceeds timer range
+E101: No of slices should be an integer number of batch size
+E102: Can't do phase oversampling with rect FOV - adjust FOVf!
+E103: FOV too small in PE dir
+E104: FOV too small in slice direction
+E105: Slice thickness too small for pulse selected
+E106: FOV too small for read comp
+E107: Flow comp grad amp caused overflow
+E108: Decrease bw or select a longer pulse
+E109: PB [[value]] thk too small!
+E110: Pre-sat block thk too small!
+E111: Number of experiments must be 3 in W-F mode!
+E112: Exper array size ([value]) must be divisable by the TR array size ([value])!
+E113: Crusher update exceeds reserved ADC instruction budget
+E114: Diffusion gradient amp [value]DAC is too high
+E115: diff_tramp ([value] us) must equal tramp ([value] us) for consistent DW timing
+E116: Reduce receive frequency
+E117: Set TE explicitly when diffusion is on
+E118: TE is too short, increase to [value] ms (=[value] us)
+E119: Either reduce Big delta or increase TE to more than min. TE
+E120: Big delta is too small, min Big delta = [value] ms ([value] us)
+E121: Increase TE and Big delta by [value] us
+E122: Increase TE by [value] us
+E123: Echo time should be greater than Minimum TE (= [value] us)
+E124: TE is too short, increase to [value] ms
+E125: TE too short: pre-180 balance = [value] ticks
+E126: TE too short: first-echo balance = [value] ticks
+E127: esp too short: increase esp to at least [value] ms
+E128: Inter-CEST delay too short, extend by [value] ms
+E129: , or decrease number of slices (batch) to [value]
+E130: Reduce slice grad comp
+E131: FOV in slice direction too small
+E132: Reduce read grad comp
+E133: Matrix setup exceeds timing budget
+E134: Timing error (=[value]): first-echo post-180 balance negative. Increase TE.
+
+v192 / 1.92
+E1: V19 method switch must be 0 or 1
+E2: V19 needs DWI ON, independent constant crushers, DE OFF
+E3: V19 rejects flow comp, Dixon, 3D, skipped echoes, TREF setup
+E4: V19 supports one centred slice (fixed tx frequency for all widths)
+E5: V19 rejects presat, CHESS, CEST, gating and TR arrays
+E6: V19 needs slice/read ON, gsp_lobe 0, no post-90/phcor0 trims
+E7: V19 needs ETL 1..64 and 1..8 dephasing cycles
+E8: V19 supports only 2 dephasing cycles; re-validate other values with examples/v19_validate_events.py
+E9: V19 needs diff_tramp=tramp, rfgate_delay>=17, tramp+rfdelay>=163 us
+E10: V19 slice selector outside 1..12000 DAC, or warmup outside 0..200 us
+E11: V19 compensation flat must be a multiple of tramp/50
+E12: V19 tdp and little delta-tramp must be multiples of tramp/50
+E13: V19 RF multiplier outside 1..2047
+E14: V19 refocusing flip [value] outside 0.1..180 deg
+E15: V19 selector DAC [value] outside amplitude/slew ceiling
+E16: V19 added-dephasing DAC [value] outside ceiling
+E17: V19 needs a nonzero train crusher
+E18: V19 train crusher area must be >= 3x added dephasing (C=[value], D=[value] DAC.us)
+E19: V19 crusher geometry unvalidated; use C/D=3.83 and C1/D=2.55, then re-validate with examples/v19_validate_events.py
+E20: V19 compensation DAC [value] outside amplitude/slew ceiling
+E21: V19 RF block window infeasible (rf [value])
+E22: V19 RF block window infeasible (rf [value])
+E23: V19 RF block window infeasible (rf [value])
+E24: V19 RF block window infeasible (rf [value])
+E25: V19 TE/Delta/delta too short for prep (gaps [value] [value] [value] [value] ticks)
+E26: V19 ESP too short after method block or before readout ([value] [value])
+E27: V19 ESP/ADC too short for readout and restoration ([value] [value] [value])
+E28: V19 readout/imaging/D windows outside budget (need 2*tramp+tdp>=400 us)
+E29: V19 ESP too short for crusher + readout
+E30: V19 matrix window 1 overrun
+E31: V19 read prephaser DAC [value] outside ceiling
+E32: V19 matrix window 2 overrun
+E33: Illegal parameter
+E34: Illegal parameter (2)
+E35: Illegal parameter (3)
+E36: No expts should be divisible by no of diffusion acqs ([value])
+E37: Set the Experiment Array Size to [value]
+E38: Invalid diffusion scale
+E39: Invalid diffusion direction
+E40: all directions normalised to 1000
+E41: b-value mode needs delta <= 10 ms and Delta <= 80 ms
+E42: Max b = [value]. Raise delta, Delta or grads
+E43: b-value DAC search did not converge
+E44: b-value DAC conversion outside array limits
+E45: Diffusion DAC exceeds limit
+E46: Diffusion DAC overflows int
+E47: Views (including navigator) must be 1..[value]; ETL must be 1..views
+E48: Base TE (esp) be a multiple of eff. echo time (TE) when Diffusion is OFF
+E49: Set PE order to 1, 5, 6 or 7 for DWI
+E50: Set Driven Equilibrium OFF when Diffusion is ON
+E51: PE 6/7 requires DWI ON, ETL > 1, and no discarded echoes
+E52: PE 6/7 requires full Fourier: PF echoes = 0 or ETL
+E53: Unsupported PE order
+E54: Navigator leaves no imaging views
+E55: Effective number of views must be even number
+E56: PF eff echoes must be >= VPS
+E57: PF eff echoes must be < 2*VPS
+E58: no_views must be > te_eff
+E59: te_eff must be >0
+E60: The eff echo time is too large
+E61: Set PE order to 5 for single echo
+E62: Set Echo train to 1 for single echo
+E63: Number of views / (2*views per segment) must be an integer
+E64: Linear interleaved requires imaging views divisible by ETL
+E65: Minimum echo train length is 4 for selected PE order
+E66: PE order 0 exceeds scratch table capacity
+E67: PE order 0 exceeds GP table capacity
+E68: Internal PE table length error
+E69: Navigators are not supported with selected PE order
+E70: Views per segment (ETL) must be equal number of Views for this PE order
+E71: Sampling time too long
+E72: Independent crusher switch must be 0 or 1
+E73: Independent crushers require ramp 100..1000 us, multiple of 10
+E74: Crusher amplitudes must be -32767..32767 DAC
+E75: tcrush must be 1..5000 us and an exact multiple of tramp/50 us
+E76: diff_tcrush must be 1..10000 us and an exact multiple of tramp/50 us
+E77: Independent crushers require Driven Equilibrium OFF
+E78: Invalid independent-crusher RF timing
+E79: Independent-crusher RF plateau overflow
+E80: Invalid crusher schedule or additive step
+E81: Crusher ETL exceeds storage capacity
+E82: Scheduled crushers require independent mode, DE OFF, no skipped echoes
+E83: Crusher orientation count exceeds storage
+E84: Invalid scheduled-crusher sampling parameters
+E85: ADC window too short for scheduled crusher update
+E86: Crusher amplitude/slew ceilings must be positive
+E87: Custom crusher count must equal ETL and be 1..64
+E88: Custom crusher storage contains invalid percentage
+E89: Crusher progression overflow
+E90: Invalid custom crusher percentage
+E91: Crusher magnitude product overflow
+E92: Crusher amplitude exceeds DAC/gradient ceiling
+E93: Crusher ramp exceeds slew ceiling
+E94: Refocus wait exceeds timer range
+E95: No of slices should be an integer number of batch size
+E96: Can't do phase oversampling with rect FOV - adjust FOVf!
+E97: FOV too small in PE dir
+E98: FOV too small in slice direction
+E99: Slice thickness too small for pulse selected
+E100: FOV too small for read comp
+E101: Flow comp grad amp caused overflow
+E102: Decrease bw or select a longer pulse
+E103: PB [[value]] thk too small!
+E104: Pre-sat block thk too small!
+E105: Number of experiments must be 3 in W-F mode!
+E106: Exper array size ([value]) must be divisable by the TR array size ([value])!
+E107: Crusher update exceeds reserved ADC instruction budget
+E108: Diffusion gradient amp [value]DAC is too high
+E109: diff_tramp ([value] us) must equal tramp ([value] us) for consistent DW timing
+E110: Reduce receive frequency
+E111: Set TE explicitly when diffusion is on
+E112: TE is too short, increase to [value] ms (=[value] us)
+E113: Either reduce Big delta or increase TE to more than min. TE
+E114: Big delta is too small, min Big delta = [value] ms ([value] us)
+E115: Increase TE and Big delta by [value] us
+E116: Increase TE by [value] us
+E117: Echo time should be greater than Minimum TE (= [value] us)
+E118: TE is too short, increase to [value] ms
+E119: TE too short: pre-180 balance = [value] ticks
+E120: TE too short: first-echo balance = [value] ticks
+E121: esp too short: increase esp to at least [value] ms
+E122: Inter-CEST delay too short, extend by [value] ms
+E123: , or decrease number of slices (batch) to [value]
+E124: Reduce slice grad comp
+E125: FOV in slice direction too small
+E126: Reduce read grad comp
+E127: Matrix setup exceeds timing budget
+E128: Timing error (=[value]): first-echo post-180 balance negative. Increase TE.
+

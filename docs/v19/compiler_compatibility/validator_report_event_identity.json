@@ -1,0 +1,661 @@
+{
+  "scope": "Restore successful validator Duration report; physical-event bridge from full-run input files to final source",
+  "methods": {
+    "v191": {
+      "full_run_input_sha256": "2542cddc68a047752d8e7b92e7ef1ca5acf078dee43c5f8f8fe60d0eb1c05582",
+      "final_sha256": "cc452f0f8bd14e1934f0dcfcaf614ddd652ffe9546ea283b978e2ea6e75674b6",
+      "cases": {
+        "method": {
+          "rf": {
+            "n": [
+              24,
+              24
+            ],
+            "identical": true
+          },
+          "adc": {
+            "n": [
+              16,
+              16
+            ],
+            "identical": true
+          },
+          "grad_S": {
+            "n": [
+              10804,
+              10804
+            ],
+            "identical": true
+          },
+          "grad_P": {
+            "n": [
+              4138,
+              4138
+            ],
+            "identical": true
+          },
+          "grad_R": {
+            "n": [
+              5708,
+              5708
+            ],
+            "identical": true
+          },
+          "matrices": {
+            "identical_for_v18_ids": true,
+            "extra_ids": []
+          },
+          "sync_to_first_rf_us": [
+            -16783.8,
+            -16783.8
+          ],
+          "all_identical": true
+        },
+        "rfcal550": {
+          "rf": {
+            "n": [
+              24,
+              24
+            ],
+            "identical": true
+          },
+          "adc": {
+            "n": [
+              16,
+              16
+            ],
+            "identical": true
+          },
+          "grad_S": {
+            "n": [
+              10804,
+              10804
+            ],
+            "identical": true
+          },
+          "grad_P": {
+            "n": [
+              4138,
+              4138
+            ],
+            "identical": true
+          },
+          "grad_R": {
+            "n": [
+              5708,
+              5708
+            ],
+            "identical": true
+          },
+          "matrices": {
+            "identical_for_v18_ids": true,
+            "extra_ids": []
+          },
+          "sync_to_first_rf_us": [
+            -16783.8,
+            -16783.8
+          ],
+          "all_identical": true
+        },
+        "comp800": {
+          "rf": {
+            "n": [
+              24,
+              24
+            ],
+            "identical": true
+          },
+          "adc": {
+            "n": [
+              16,
+              16
+            ],
+            "identical": true
+          },
+          "grad_S": {
+            "n": [
+              10804,
+              10804
+            ],
+            "identical": true
+          },
+          "grad_P": {
+            "n": [
+              4138,
+              4138
+            ],
+            "identical": true
+          },
+          "grad_R": {
+            "n": [
+              5708,
+              5708
+            ],
+            "identical": true
+          },
+          "matrices": {
+            "identical_for_v18_ids": true,
+            "extra_ids": []
+          },
+          "sync_to_first_rf_us": [
+            -16783.8,
+            -16783.8
+          ],
+          "all_identical": true
+        },
+        "original": {
+          "rf": {
+            "n": [
+              18,
+              18
+            ],
+            "identical": true
+          },
+          "adc": {
+            "n": [
+              16,
+              16
+            ],
+            "identical": true
+          },
+          "grad_S": {
+            "n": [
+              9188,
+              9188
+            ],
+            "identical": true
+          },
+          "grad_P": {
+            "n": [
+              3936,
+              3936
+            ],
+            "identical": true
+          },
+          "grad_R": {
+            "n": [
+              5908,
+              5908
+            ],
+            "identical": true
+          },
+          "matrices": {
+            "identical_for_v18_ids": true,
+            "extra_ids": []
+          },
+          "sync_to_first_rf_us": [
+            -11673.9,
+            -11673.9
+          ],
+          "all_identical": true
+        },
+        "increasing": {
+          "rf": {
+            "n": [
+              18,
+              18
+            ],
+            "identical": true
+          },
+          "adc": {
+            "n": [
+              16,
+              16
+            ],
+            "identical": true
+          },
+          "grad_S": {
+            "n": [
+              9188,
+              9188
+            ],
+            "identical": true
+          },
+          "grad_P": {
+            "n": [
+              3936,
+              3936
+            ],
+            "identical": true
+          },
+          "grad_R": {
+            "n": [
+              5908,
+              5908
+            ],
+            "identical": true
+          },
+          "matrices": {
+            "identical_for_v18_ids": true,
+            "extra_ids": []
+          },
+          "sync_to_first_rf_us": [
+            -11673.9,
+            -11673.9
+          ],
+          "all_identical": true
+        },
+        "decreasing": {
+          "rf": {
+            "n": [
+              18,
+              18
+            ],
+            "identical": true
+          },
+          "adc": {
+            "n": [
+              16,
+              16
+            ],
+            "identical": true
+          },
+          "grad_S": {
+            "n": [
+              9188,
+              9188
+            ],
+            "identical": true
+          },
+          "grad_P": {
+            "n": [
+              3936,
+              3936
+            ],
+            "identical": true
+          },
+          "grad_R": {
+            "n": [
+              5908,
+              5908
+            ],
+            "identical": true
+          },
+          "matrices": {
+            "identical_for_v18_ids": true,
+            "extra_ids": []
+          },
+          "sync_to_first_rf_us": [
+            -11673.9,
+            -11673.9
+          ],
+          "all_identical": true
+        },
+        "alternating": {
+          "rf": {
+            "n": [
+              18,
+              18
+            ],
+            "identical": true
+          },
+          "adc": {
+            "n": [
+              16,
+              16
+            ],
+            "identical": true
+          },
+          "grad_S": {
+            "n": [
+              9188,
+              9188
+            ],
+            "identical": true
+          },
+          "grad_P": {
+            "n": [
+              3936,
+              3936
+            ],
+            "identical": true
+          },
+          "grad_R": {
+            "n": [
+              5908,
+              5908
+            ],
+            "identical": true
+          },
+          "matrices": {
+            "identical_for_v18_ids": true,
+            "extra_ids": []
+          },
+          "sync_to_first_rf_us": [
+            -11673.9,
+            -11673.9
+          ],
+          "all_identical": true
+        }
+      }
+    },
+    "v192": {
+      "full_run_input_sha256": "6a70f90ccf4995f322ca4aec0729b802d08309169f443f397d54ce94b0a92fc3",
+      "final_sha256": "f2ce7ccbd70fbfdb09fe2da925356d61fee2e6d5a5012eeaffa87888766616b8",
+      "cases": {
+        "method": {
+          "rf": {
+            "n": [
+              22,
+              22
+            ],
+            "identical": true
+          },
+          "adc": {
+            "n": [
+              16,
+              16
+            ],
+            "identical": true
+          },
+          "grad_S": {
+            "n": [
+              10602,
+              10602
+            ],
+            "identical": true
+          },
+          "grad_P": {
+            "n": [
+              3936,
+              3936
+            ],
+            "identical": true
+          },
+          "grad_R": {
+            "n": [
+              5708,
+              5708
+            ],
+            "identical": true
+          },
+          "matrices": {
+            "identical_for_v18_ids": true,
+            "extra_ids": []
+          },
+          "sync_to_first_rf_us": [
+            -16783.8,
+            -16783.8
+          ],
+          "all_identical": true
+        },
+        "rfcal550": {
+          "rf": {
+            "n": [
+              22,
+              22
+            ],
+            "identical": true
+          },
+          "adc": {
+            "n": [
+              16,
+              16
+            ],
+            "identical": true
+          },
+          "grad_S": {
+            "n": [
+              10602,
+              10602
+            ],
+            "identical": true
+          },
+          "grad_P": {
+            "n": [
+              3936,
+              3936
+            ],
+            "identical": true
+          },
+          "grad_R": {
+            "n": [
+              5708,
+              5708
+            ],
+            "identical": true
+          },
+          "matrices": {
+            "identical_for_v18_ids": true,
+            "extra_ids": []
+          },
+          "sync_to_first_rf_us": [
+            -16783.8,
+            -16783.8
+          ],
+          "all_identical": true
+        },
+        "comp800": {
+          "rf": {
+            "n": [
+              22,
+              22
+            ],
+            "identical": true
+          },
+          "adc": {
+            "n": [
+              16,
+              16
+            ],
+            "identical": true
+          },
+          "grad_S": {
+            "n": [
+              10602,
+              10602
+            ],
+            "identical": true
+          },
+          "grad_P": {
+            "n": [
+              3936,
+              3936
+            ],
+            "identical": true
+          },
+          "grad_R": {
+            "n": [
+              5708,
+              5708
+            ],
+            "identical": true
+          },
+          "matrices": {
+            "identical_for_v18_ids": true,
+            "extra_ids": []
+          },
+          "sync_to_first_rf_us": [
+            -16783.8,
+            -16783.8
+          ],
+          "all_identical": true
+        },
+        "original": {
+          "rf": {
+            "n": [
+              18,
+              18
+            ],
+            "identical": true
+          },
+          "adc": {
+            "n": [
+              16,
+              16
+            ],
+            "identical": true
+          },
+          "grad_S": {
+            "n": [
+              9188,
+              9188
+            ],
+            "identical": true
+          },
+          "grad_P": {
+            "n": [
+              3936,
+              3936
+            ],
+            "identical": true
+          },
+          "grad_R": {
+            "n": [
+              5908,
+              5908
+            ],
+            "identical": true
+          },
+          "matrices": {
+            "identical_for_v18_ids": true,
+            "extra_ids": []
+          },
+          "sync_to_first_rf_us": [
+            -11673.9,
+            -11673.9
+          ],
+          "all_identical": true
+        },
+        "increasing": {
+          "rf": {
+            "n": [
+              18,
+              18
+            ],
+            "identical": true
+          },
+          "adc": {
+            "n": [
+              16,
+              16
+            ],
+            "identical": true
+          },
+          "grad_S": {
+            "n": [
+              9188,
+              9188
+            ],
+            "identical": true
+          },
+          "grad_P": {
+            "n": [
+              3936,
+              3936
+            ],
+            "identical": true
+          },
+          "grad_R": {
+            "n": [
+              5908,
+              5908
+            ],
+            "identical": true
+          },
+          "matrices": {
+            "identical_for_v18_ids": true,
+            "extra_ids": []
+          },
+          "sync_to_first_rf_us": [
+            -11673.9,
+            -11673.9
+          ],
+          "all_identical": true
+        },
+        "decreasing": {
+          "rf": {
+            "n": [
+              18,
+              18
+            ],
+            "identical": true
+          },
+          "adc": {
+            "n": [
+              16,
+              16
+            ],
+            "identical": true
+          },
+          "grad_S": {
+            "n": [
+              9188,
+              9188
+            ],
+            "identical": true
+          },
+          "grad_P": {
+            "n": [
+              3936,
+              3936
+            ],
+            "identical": true
+          },
+          "grad_R": {
+            "n": [
+              5908,
+              5908
+            ],
+            "identical": true
+          },
+          "matrices": {
+            "identical_for_v18_ids": true,
+            "extra_ids": []
+          },
+          "sync_to_first_rf_us": [
+            -11673.9,
+            -11673.9
+          ],
+          "all_identical": true
+        },
+        "alternating": {
+          "rf": {
+            "n": [
+              18,
+              18
+            ],
+            "identical": true
+          },
+          "adc": {
+            "n": [
+              16,
+              16
+            ],
+            "identical": true
+          },
+          "grad_S": {
+            "n": [
+              9188,
+              9188
+            ],
+            "identical": true
+          },
+          "grad_P": {
+            "n": [
+              3936,
+              3936
+            ],
+            "identical": true
+          },
+          "grad_R": {
+            "n": [
+              5908,
+              5908
+            ],
+            "identical": true
+          },
+          "matrices": {
+            "identical_for_v18_ids": true,
+            "extra_ids": []
+          },
+          "sync_to_first_rf_us": [
+            -11673.9,
+            -11673.9
+          ],
+          "all_identical": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,313 @@
+{
+  "method": "Unweighted bounded least squares of normalized first-navigator L2. Anchored mono y=exp(-D*b); offset y=(1-f)*exp(-D*b)+f. Low-b fits use b<=1000; full fits only seven-value scans. Slopes use requested b, not verified effective b. No uncertainty estimate, physical component assignment, or noise-floor subtraction.",
+  "scans": [
+    {
+      "scan": "test0",
+      "b": [
+        0.0,
+        1000.0,
+        6000.0
+      ],
+      "first_navigator_norm": [
+        10143.2919921875,
+        1184.2034912109375,
+        7.328044891357422
+      ],
+      "ratio_to_b0": [
+        1.0,
+        0.11674745162842862,
+        0.0007224523258328342
+      ],
+      "low_b_limit": 1000,
+      "low_b_anchored_mono_slope_mm2_s": 0.002147742204662216,
+      "low_b_rms_ratio_residual": 4.625356668415504e-10,
+      "b6000_measured_ratio": 0.0007224523258328342,
+      "b6000_low_b_mono_extrapolation": 2.5321210975910795e-06,
+      "mrd_sha256": "2e2f021c9b4073fb8943a7ef650ffa56dbc7686f56c7a1666f0ff91d96489f51"
+    },
+    {
+      "scan": "test1",
+      "b": [
+        0.0,
+        1000.0,
+        6000.0
+      ],
+      "first_navigator_norm": [
+        10129.4833984375,
+        1170.090576171875,
+        7.156280994415283
+      ],
+      "ratio_to_b0": [
+        1.0,
+        0.11551335148566062,
+        0.0007064803517540844
+      ],
+      "low_b_limit": 1000,
+      "low_b_anchored_mono_slope_mm2_s": 0.002158369148553286,
+      "low_b_rms_ratio_residual": 8.061358486300181e-10,
+      "b6000_measured_ratio": 0.0007064803517540844,
+      "b6000_low_b_mono_extrapolation": 2.3757083998776397e-06,
+      "mrd_sha256": "17e211930322cc968aa7cd4015b98a26ba7113c2d723fcbb8764b7ded2f8850d"
+    },
+    {
+      "scan": "test1b",
+      "b": [
+        0.0,
+        100.0,
+        500.0,
+        1000.0,
+        2000.0,
+        3000.0,
+        6000.0
+      ],
+      "first_navigator_norm": [
+        9923.712890625,
+        7393.708984375,
+        3091.18408203125,
+        1129.7730712890625,
+        156.96188354492188,
+        24.09044647216797,
+        6.983575344085693
+      ],
+      "ratio_to_b0": [
+        1.0,
+        0.7450547054177563,
+        0.31149471131430184,
+        0.11384580385798615,
+        0.015816850535166616,
+        0.002427563829957876,
+        0.0007037260570771979
+      ],
+      "low_b_limit": 1000,
+      "low_b_anchored_mono_slope_mm2_s": 0.0023891286824710475,
+      "low_b_rms_ratio_residual": 0.024316616048135765,
+      "b6000_measured_ratio": 0.0007037260570771979,
+      "b6000_low_b_mono_extrapolation": 5.949597416238508e-07,
+      "mrd_sha256": "bacb194645e3b8e8fc13d09a1290954a024aa81714e59056e7c36bb931f142d7",
+      "full_mono_slope_mm2_s": 0.002385493418215278,
+      "full_mono_rms_ratio_residual": 0.018604197852486706,
+      "offset_slope_mm2_s": 0.0024426009678581383,
+      "offset_fraction": 0.008872136708694267,
+      "offset_rms_ratio_residual": 0.01769335220855775
+    },
+    {
+      "scan": "test2",
+      "b": [
+        0.0,
+        1000.0,
+        6000.0
+      ],
+      "first_navigator_norm": [
+        4079.16650390625,
+        655.1329345703125,
+        7.310185432434082
+      ],
+      "ratio_to_b0": [
+        1.0,
+        0.16060460732430284,
+        0.0017920782163301685
+      ],
+      "low_b_limit": 1000,
+      "low_b_anchored_mono_slope_mm2_s": 0.001828809794660426,
+      "low_b_rms_ratio_residual": 5.650530777642136e-10,
+      "b6000_measured_ratio": 0.0017920782163301685,
+      "b6000_low_b_mono_extrapolation": 1.7161213185246163e-05,
+      "mrd_sha256": "82d5ef992cb86b8c7e5b066830c670bf5c5d3f434aad1bb88e65f8c21517d144"
+    },
+    {
+      "scan": "test2b",
+      "b": [
+        0.0,
+        1000.0,
+        6000.0
+      ],
+      "first_navigator_norm": [
+        3932.2548828125,
+        625.956298828125,
+        6.9697184562683105
+      ],
+      "ratio_to_b0": [
+        1.0,
+        0.15918507764186868,
+        0.0017724482934034275
+      ],
+      "low_b_limit": 1000,
+      "low_b_anchored_mono_slope_mm2_s": 0.0018376877462653437,
+      "low_b_rms_ratio_residual": 3.2585147392546956e-10,
+      "b6000_measured_ratio": 0.0017724482934034275,
+      "b6000_low_b_mono_extrapolation": 1.6270995089657475e-05,
+      "mrd_sha256": "3f267f8493dd897866be3a3d0e4be19bf9bb08ea73cabf136ba7a7a66c9f681c"
+    },
+    {
+      "scan": "test2c",
+      "b": [
+        0.0,
+        100.0,
+        500.0,
+        1000.0,
+        2000.0,
+        3000.0,
+        6000.0
+      ],
+      "first_navigator_norm": [
+        3690.894287109375,
+        3047.17431640625,
+        1453.308837890625,
+        575.2368774414062,
+        88.86205291748047,
+        14.559566497802734,
+        6.761619567871094
+      ],
+      "ratio_to_b0": [
+        1.0,
+        0.8255924118576499,
+        0.3937552053350256,
+        0.15585298106490034,
+        0.024076022233374562,
+        0.003944725956701799,
+        0.0018319732406008955
+      ],
+      "low_b_limit": 1000,
+      "low_b_anchored_mono_slope_mm2_s": 0.0018674397968579442,
+      "low_b_rms_ratio_residual": 0.0021643732460622737,
+      "b6000_measured_ratio": 0.0018319732406008955,
+      "b6000_low_b_mono_extrapolation": 1.3610911358197523e-05,
+      "mrd_sha256": "c838bfa9a7c5e13cafcafce326128714ef8e14887de77f432b8bdea660ffb86d",
+      "full_mono_slope_mm2_s": 0.001867264720474742,
+      "full_mono_rms_ratio_residual": 0.0017787446390648489,
+      "offset_slope_mm2_s": 0.001872524141219661,
+      "offset_fraction": 0.001167773392264702,
+      "offset_rms_ratio_residual": 0.0016292818497502613
+    },
+    {
+      "scan": "test3",
+      "b": [
+        0.0,
+        1000.0,
+        6000.0
+      ],
+      "first_navigator_norm": [
+        3656.474365234375,
+        777.0347290039062,
+        351.13250732421875
+      ],
+      "ratio_to_b0": [
+        1.0,
+        0.2125092784437173,
+        0.09603034843147647
+      ],
+      "low_b_limit": 1000,
+      "low_b_anchored_mono_slope_mm2_s": 0.0015487696282560858,
+      "low_b_rms_ratio_residual": 7.549436316777729e-12,
+      "b6000_measured_ratio": 0.09603034843147647,
+      "b6000_low_b_mono_extrapolation": 9.210164355449922e-05,
+      "mrd_sha256": "cde478dff581e601591ade8d544b7b0e05d82614e4da432c4ad04ac2f9aeb540"
+    },
+    {
+      "scan": "test3b",
+      "b": [
+        0.0,
+        1000.0,
+        6000.0
+      ],
+      "first_navigator_norm": [
+        3775.53857421875,
+        729.9745483398438,
+        313.7968444824219
+      ],
+      "ratio_to_b0": [
+        1.0,
+        0.19334315727151405,
+        0.08311313427577786
+      ],
+      "low_b_limit": 1000,
+      "low_b_anchored_mono_slope_mm2_s": 0.001643288651916683,
+      "low_b_rms_ratio_residual": 1.4643271054356892e-12,
+      "b6000_measured_ratio": 0.08311313427577786,
+      "b6000_low_b_mono_extrapolation": 5.22363517639462e-05,
+      "mrd_sha256": "a215476120be0aa2138402f9e2f2c11f05abd950ca3989ee6b138f4ccc64d301"
+    },
+    {
+      "scan": "test3c",
+      "b": [
+        0.0,
+        100.0,
+        500.0,
+        1000.0,
+        2000.0,
+        3000.0,
+        6000.0
+      ],
+      "first_navigator_norm": [
+        3615.742919921875,
+        3035.41796875,
+        1528.170166015625,
+        716.0332641601562,
+        347.7792053222656,
+        319.3038024902344,
+        304.0046691894531
+      ],
+      "ratio_to_b0": [
+        1.0,
+        0.8395004943591471,
+        0.4226434787705106,
+        0.19803212784155227,
+        0.0961847158452792,
+        0.08830932108888248,
+        0.08407806526134931
+      ],
+      "low_b_limit": 1000,
+      "low_b_anchored_mono_slope_mm2_s": 0.0016832075220374627,
+      "low_b_rms_ratio_residual": 0.00792923105105121,
+      "b6000_measured_ratio": 0.08407806526134931,
+      "b6000_low_b_mono_extrapolation": 4.1110576564792496e-05,
+      "mrd_sha256": "8274f9f76c972b8787a2a69670c15661216bb9d1c0cbbb1828c0dac8a90258b0",
+      "full_mono_slope_mm2_s": 0.0016142342074711479,
+      "full_mono_rms_ratio_residual": 0.04987168798342064,
+      "offset_slope_mm2_s": 0.002002900364184053,
+      "offset_fraction": 0.08202853782640826,
+      "offset_rms_ratio_residual": 0.004438186409756815
+    },
+    {
+      "scan": "test3d",
+      "b": [
+        0.0,
+        100.0,
+        500.0,
+        1000.0,
+        2000.0,
+        3000.0,
+        6000.0
+      ],
+      "first_navigator_norm": [
+        3574.406005859375,
+        2980.78271484375,
+        1495.4141845703125,
+        703.0944213867188,
+        326.1846008300781,
+        305.7036437988281,
+        295.2809143066406
+      ],
+      "ratio_to_b0": [
+        1.0,
+        0.8339239330835605,
+        0.41836718663714817,
+        0.19670245076641135,
+        0.09125561010567275,
+        0.08552571904190538,
+        0.08260978574414851
+      ],
+      "low_b_limit": 1000,
+      "low_b_anchored_mono_slope_mm2_s": 0.0017023013221582068,
+      "low_b_rms_ratio_residual": 0.009654402192116312,
+      "b6000_measured_ratio": 0.08260978574414851,
+      "b6000_low_b_mono_extrapolation": 3.666060059116299e-05,
+      "mrd_sha256": "d8ad828f8bf56cf6bfb655831cb8ef43b0c3bfe8921b45921f52cc4f8c82ea9a",
+      "full_mono_slope_mm2_s": 0.0016378891572316825,
+      "full_mono_rms_ratio_residual": 0.04858615704735113,
+      "offset_slope_mm2_s": 0.0020202844776932172,
+      "offset_fraction": 0.07977389576943668,
+      "offset_rms_ratio_residual": 0.003513925898356499
+    }
+  ]
+}

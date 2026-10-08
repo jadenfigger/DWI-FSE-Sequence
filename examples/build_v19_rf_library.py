@@ -12,7 +12,20 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from dwfse.vendor_seq import Library, decode, real_rf_frame
+from dwfse.vendor_seq import decode, real_rf_frame, user_files, user_rf_library
+
+# One single-frame library per pulse, stored exactly as WavEd stores the vendor
+# opt90_as.seq (amplitude expression N,user("x.txt"); with the text embedded).
+# A frame without an expression displays blank in the WavEd viewer, and the
+# vendor files only show one embedded user file per library.
+FILES = {
+    "v19_slrprep90": "v19ex90.txt",
+    "v19_slrprep180": "v19rf180.txt",
+    "v19_slrtip90": "v19tip90.txt",
+    "v19_slrelim90": "v19elm90.txt",
+    "v19_reexc90": "v19re90.txt",
+    "v19_imaging180": "v19im180.txt",
+}
 
 
 def sha(path):
@@ -65,17 +78,27 @@ def main():
             "sample_record_sha256": hashlib.sha256(frame.words.tobytes()).hexdigest(),
             "RF_board_flags": "Known realF0 word controls; lastphase-control0x6000 copied from stock. AP phase encoding unused.",
         }
-    library = Library(template.format_id, template.header_value, template.titles, frames)
-    data = library.encode()
-    restored = decode(data)
-    assert restored.encode() == data
-    for frame in restored.frames:
-        assert np.array_equal(frame.samples, arrays[frame.name+"_dac"])
-    asset = ROOT/"scanner/rf/v19_research_rf.seq"
-    asset.parent.mkdir(parents=True, exist_ok=True)
-    asset.write_bytes(data)
-    manifest["asset_sha256"] = sha(asset)
-    manifest["asset_path"] = str(asset.relative_to(ROOT)).replace("\\", "/")
+    assert list(FILES) == [frame.name for frame in frames]
+    out_dir = ROOT/"scanner/rf"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    manifest["assets"] = {}
+    for frame in frames:
+        library = user_rf_library(template, frame.name, frame.samples, frame.wait_ticks, FILES[frame.name])
+        restored = decode(library.encode())
+        # Records identical to the expression-less encoding; text equals samples.
+        assert np.array_equal(restored.frames[0].words, frame.words)
+        assert np.array_equal(restored.frames[0].samples, arrays[frame.name+"_dac"])
+        text = user_files(restored)[0][1].decode("ascii").split("\r\n")
+        assert text[0] == f"{len(frame.samples)} 1"
+        assert [int(v) for v in text[1:-1]] == arrays[frame.name+"_dac"].astype(int).tolist()
+        asset = out_dir/f"{frame.name}.seq"
+        asset.write_bytes(library.encode())
+        manifest["assets"][frame.name] = {
+            "path": str(asset.relative_to(ROOT)).replace("\\", "/"),
+            "install_path": f"g:\\J_Figger\\seqlib\\{frame.name}.seq",
+            "sha256": sha(asset), "user_file": FILES[frame.name],
+            "expressions": [e[:-1].decode("ascii") for e in restored.frames[0].expressions],
+        }
     manifest["all_samples_roundtrip_exact"] = True
     manifest_path = ROOT/"docs/v19/rf_library_manifest.json"
     manifest_path.write_text(json.dumps(manifest, indent=2)+"\n", encoding="utf8")

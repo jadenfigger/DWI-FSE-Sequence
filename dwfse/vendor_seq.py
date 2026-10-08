@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
+import re
 import struct
 
 import numpy as np
@@ -188,6 +189,60 @@ def real_rf_frame(name, amplitude_dac, wait_ticks, expressions=None):
         # WavEd regeneration is unverified. Never imply an external CSV is loaded.
         expressions = (b"\0",)*4
     return Frame(name, int(wait_ticks), records.reshape(-1), tuple(expressions))
+
+
+def user_files(library):
+    """Parse the embedded user() file table of a library (opt90_a/opt90_as).
+
+    Layout seen in the vendor files, offsets absolute: u16 count, u16 name
+    length, u32 name offset, u32 text length (0xFFFFFFFF = not embedded),
+    u32 text offset, then the name and text. Only count 1 has a vendor example.
+    """
+    data = library.encode()
+    block = library.comment_data
+    if not block:
+        return []
+    base = len(data) - len(block)
+    count, name_length = struct.unpack_from("<HH", block)
+    name_at, text_length, text_at = struct.unpack_from("<III", block, 4)
+    if count != 1 or name_at != base + 16 or text_at != name_at + name_length:
+        raise ValueError("Unsupported user-file table")
+    name = block[16:16 + name_length]
+    if not name.endswith(b"\0"):
+        raise ValueError("Invalid user-file name")
+    text = b"" if text_length == 0xFFFFFFFF else block[16 + name_length:]
+    if text_length != 0xFFFFFFFF and len(text) != text_length:
+        raise ValueError("Embedded user-file length mismatch")
+    return [(name[:-1].decode("ascii"), text)]
+
+
+def user_rf_library(template, name, amplitude_dac, wait_ticks, text_name):
+    """One real RF frame stored the way WavEd stores opt90_as.seq.
+
+    The amplitude expression is ``N,user("text_name");`` and the referenced
+    text (``N 1`` then one DAC value per line) is embedded, so WavEd can
+    display and regenerate the frame. The stored records are those of
+    real_rf_frame(); the text equals their samples exactly.
+    """
+    samples = np.asarray(amplitude_dac)
+    n = len(samples)
+    if not re.fullmatch(r"[a-z0-9_]{1,8}\.txt", text_name):
+        raise ValueError("User-file name must be a short 8.3 .txt name")
+    expressions = (f'{n},user("{text_name}");\0'.encode("ascii"),
+                   f"{n}F,0;\0".encode("ascii"), b"\0", b"\0")
+    frame = real_rf_frame(name, samples, wait_ticks, expressions)
+    library = Library(template.format_id, template.header_value, template.titles, [frame])
+    base = len(library.encode())
+    file_name = text_name.encode("ascii") + b"\0"
+    text = f"{n} 1\r\n".encode("ascii") + b"".join(b"%d\r\n" % int(v) for v in samples)
+    library.comment_data = (struct.pack("<HHIII", 1, len(file_name), base + 16, len(text),
+                                        base + 16 + len(file_name)) + file_name + text)
+    restored = decode(library.encode())
+    files = user_files(restored)
+    if (len(restored.frames) != 1 or not np.array_equal(restored.frames[0].samples, samples)
+            or files != [(text_name, text)]):
+        raise ValueError("User-file RF library does not read back exactly")
+    return restored
 
 
 if __name__ == "__main__":

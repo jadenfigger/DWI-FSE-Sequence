@@ -1,0 +1,578 @@
+{
+  "date": "2026-10-06",
+  "scope": "Final v191 ss-MGOT / v192 Alsop source-level research implementation and declared validation cases",
+  "status": {
+    "implemented": true,
+    "compiled": false,
+    "simulated": "nominal source-level assumptions",
+    "independently_reviewed": true,
+    "verified_on_scanner": false,
+    "deployed": false
+  },
+  "evidence": {
+    "mapper_regression_tests_passed": 5,
+    "rejection_cases_per_method": 19,
+    "control_identity_all": true,
+    "event_validator_elapsed_s": 694.1167936325073,
+    "nominal_cost_model": {
+      "stmt_cost_us": 0.0,
+      "expr_costs": true,
+      "expr_scale": 0.8
+    },
+    "reference_grid_convergence": {
+      "y32_vs_four_phase_groups_max_complex_diff": 2.501853776554201e-17,
+      "alsop_c2": {
+        "max_abs_diff_all76": 3.2519313833412333e-06,
+        "max_abs_diff_first32": 4.4683962471814276e-07
+      },
+      "alsop_c4": {
+        "max_abs_diff_all76": 5.3657848581023515e-09,
+        "max_abs_diff_first32": 5.3657848581023515e-09
+      },
+      "ssmgot_c2": {
+        "max_abs_diff_all76": 8.612664808005377e-07,
+        "max_abs_diff_first32": 1.0210805956312186e-07
+      },
+      "ssmgot_c4": {
+        "max_abs_diff_all76": 5.058867644236464e-09,
+        "max_abs_diff_first32": 5.058867644236464e-09
+      }
+    },
+    "reference_convergence_scope": "phase 45 degrees: two cycles without relaxation; four cycles with muscle relaxation; all 76 echoes",
+    "review_reports": [
+      "docs/v19/review/ppl_review_round4.md",
+      "docs/v19/review/physics_followup.md",
+      "docs/v19/review/ppl_review_compiler_compatibility.md"
+    ],
+    "all_rejection_cases_zero_rf_and_adc": true,
+    "compiler_correction_and_rf_path_identity": "docs/v19/compiler_compatibility/rf_path_event_identity.json",
+    "full_validator_input_ppl_hashes": {
+      "v191": "41a938b532321b1b0a8554b01062f24edd79b77ab70c2e5d00303abff2ad91d7",
+      "v192": "f8b8896dc0da45d71659b9db06a318b6773b1f2075ece703f04cfddde70e6e77",
+      "v18": "3b420376331e918b4c864e9b37937ef35fd9f49066b8d6402e44aae9da598db2"
+    },
+    "final_ppl_hashes": {
+      "v191": "78ca063f914561513fb6967d76e93cbc9829542b2346e507b4640846843b8e06",
+      "v192": "83d669c59b412c5f0da833e4ff6280dd1a0b9b9c5229f764663a812486b601e4"
+    },
+    "rf_path_identity_scope": "Final files differ from full-run input files by one RF library location directive; mapped library contents and all RF, ADC, gradient, matrix and timing histories are identical over two nominal shots. Full-run summary retains original input hashes."
+  },
+  "limits": [
+    "No vendor compilation or console trace",
+    "No scanner RF/gradient calibration or physical limits verified",
+    "Selective-pulse isodelay offsets of 95/185 us remain uncorrected",
+    "Research RF and approximate flip schedule do not reproduce the publications exactly",
+    "b-tensor diagnostics cover two desired harmonic histories, not all finite-RF pathways"
+  ],
+  "inventory_note": "Includes historical review records and retained pre-restriction scan inputs; their inclusion does not make them install artifacts. This manifest does not hash itself.",
+  "files": {
+    "docs/v19/README.md": {
+      "sha256": "ade0ef528f86728aed2114cd4eabecf893ee52e5657abd87e1123ef65abda94c",
+      "category": "final_documentation"
+    },
+    "docs/v19/compiler_compatibility/compatibility_results.json": {
+      "sha256": "0026dc911974d9e9907469d0cd6a842b4f4529546fd683a91581a40cedefdc2e",
+      "category": "compiler_compatibility_evidence_or_historical_input"
+    },
+    "docs/v19/compiler_compatibility/pre_fix_token_baseline.json": {
+      "sha256": "e5a2e184822d94edb19b2326a1559966b760f9148f9e0b9e58b9804893d1f9a8",
+      "category": "compiler_compatibility_evidence_or_historical_input"
+    },
+    "docs/v19/compiler_compatibility/previous_btensor.json": {
+      "sha256": "9145856ff521c290ce5ae8c30ecda080b6c3e63e84e345d6ad74885e0099291d",
+      "category": "compiler_compatibility_evidence_or_historical_input"
+    },
+    "docs/v19/compiler_compatibility/previous_convergence.json": {
+      "sha256": "c0159e7c429ad7fc43df1befb0777acd63209f936c30220d7fd6e645bcb37438",
+      "category": "compiler_compatibility_evidence_or_historical_input"
+    },
+    "docs/v19/compiler_compatibility/previous_final_manifest.json": {
+      "sha256": "d461354ac91d7ec7c2ae3d8a7ef338559e5de8c02c23d361171a39730c63b3e4",
+      "category": "compiler_compatibility_evidence_or_historical_input"
+    },
+    "docs/v19/compiler_compatibility/previous_summary.json": {
+      "sha256": "f3946106230fee32bf86411307473991af52dd4811ca9796bf35fd14e2f8c67c",
+      "category": "compiler_compatibility_evidence_or_historical_input"
+    },
+    "docs/v19/compiler_compatibility/rf_path_event_identity.json": {
+      "sha256": "21e2eab6f1e5c66771841deee0b2c4d3483235b2c2cf5c57fc754357f09805a6",
+      "category": "compiler_compatibility_evidence_or_historical_input"
+    },
+    "docs/v19/compiler_compatibility/v19_compile_fix.zip": {
+      "sha256": "855073824bf5a2123cf34c24e8d527dac39e409a606faa051f487b4921b9ea87",
+      "category": "compiler_compatibility_evidence_or_historical_input"
+    },
+    "docs/v19/compiler_compatibility/validated_pre_path_v191.ppl.txt": {
+      "sha256": "41a938b532321b1b0a8554b01062f24edd79b77ab70c2e5d00303abff2ad91d7",
+      "category": "compiler_compatibility_evidence_or_historical_input"
+    },
+    "docs/v19/compiler_compatibility/validated_pre_path_v192.ppl.txt": {
+      "sha256": "f8b8896dc0da45d71659b9db06a318b6773b1f2075ece703f04cfddde70e6e77",
+      "category": "compiler_compatibility_evidence_or_historical_input"
+    },
+    "docs/v19/event_validation/adc1_slice_echo_v191.npy": {
+      "sha256": "0b2fbe9625f16ed8bc36ae9fa4c93721ee2657fc608668c757e5c663258a1c71",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/adc1_slice_echo_v192.npy": {
+      "sha256": "dd8f1ea380363f7436352b777d2d9ec3e11888acb0982eeff9b7931968ef9966",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/bloch_results.json": {
+      "sha256": "2a099c775f8bfb335b3ce3ab78dfacaeb7b8e2b3bb337006e4f55e0ee95e5bdd",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/btensor.json": {
+      "sha256": "9145856ff521c290ce5ae8c30ecda080b6c3e63e84e345d6ad74885e0099291d",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/control_identity.json": {
+      "sha256": "70d0172000bebd3e7668b8ecbfe6e564c4018b15d22a2a99aaedf41aae37e6a3",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/convergence.json": {
+      "sha256": "c0159e7c429ad7fc43df1befb0777acd63209f936c30220d7fd6e645bcb37438",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/crusher_geometry_boundary_scan.json": {
+      "sha256": "7fd320809d3dd26a11887a67bca9375cd92e6e72818d6cb148e6ecf7b667ad55",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/crusher_geometry_scan.json": {
+      "sha256": "d9a8b9bac9eb2e76767622920888e01e3418dcace892d92e0731e53963191501",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/crusher_scan_inputs/README.md": {
+      "sha256": "bf840878b0d43f4ee8181b3c6c976bbe05544097bdeedce4fa1bd5aee9d49239",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/crusher_scan_inputs/v191.ppl.txt": {
+      "sha256": "f0156b48a1b9ff648dba7d69e508629b6fc51bebfcb27d91c5f9fc46ee205f2d",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/crusher_scan_inputs/v191.ppr": {
+      "sha256": "faa77a11c2da4c5fe9876d6a842b9bc3025c66ddc09eaa4e8270dec9350faf0c",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/crusher_scan_inputs/v192.ppl.txt": {
+      "sha256": "35d0eeaa0c60dc1d95f9bbb9c44881e65bc9a58d533aa3636031b4273d15e855",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/crusher_scan_inputs/v192.ppr": {
+      "sha256": "678f2af5bb2fa205c2b7cb9402879d9ce1e98ed8e2c5fa4264c318b3e6898fbf",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/diagram_v191.png": {
+      "sha256": "835c0b849096dbc54bf3cb07834e8bb835307540bf0c325effe2c4b0699eead9",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/diagram_v191_zoom.png": {
+      "sha256": "e5b27797ee0b518502e138ceda81cd21f06e803904afe6ea4656d6af9ab27665",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/diagram_v192.png": {
+      "sha256": "f2472498491f34db3499b9aab249066fe9b784a68d7e8c4baa1ceee37d8debb3",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/diagram_v192_zoom.png": {
+      "sha256": "3a68ac3a8bc743390e39f621cd1689a75d3ad577cf7793f3f525872bdfbe1809",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/echo_amplitudes.png": {
+      "sha256": "6b82974288c5901268655c84ca8956f5df07edd030814dd299cf6f22f42cc842",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/hazards.json": {
+      "sha256": "48defb3c02d05f177ad5e247473d0671b1aa01c94127ae7b101328b4cf5c9e21",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/landmark_summary.json": {
+      "sha256": "2167ae364a1734bfeed910ba67ccf7b44707ada3015317cd79024b6dd3199b48",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/moments.json": {
+      "sha256": "f0ba671fd3268ed8e7306b2a316a689d7943aaff05ba4c1fd504a8b3bc8d163d",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/profiles_v191_phase000.npz": {
+      "sha256": "15546031ac8d91ffc114cb57ba5f35f637e6a6ed8d53fec9604925c2b2b36058",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/profiles_v191_phase000.png": {
+      "sha256": "fcd334bd7575a2bdeaea5a9daae5714821a1e61c4756d3b50079d20a9fbffc6c",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/profiles_v191_phase045.npz": {
+      "sha256": "52fc093ba8d81968f85eca86bb4db86809dd3a09a857fc714e8fa11605afd507",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/profiles_v191_phase045.png": {
+      "sha256": "6707af6cd3c1095da74d5923f9e7d10e900ca90041a8bf4b4104b6a611d964f0",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/profiles_v191_phase090.npz": {
+      "sha256": "92ef8b38ff45763d8b5ea7d218ccc243d74365788e756217b29799b641159a1b",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/profiles_v191_phase090.png": {
+      "sha256": "47b1de6a450271cd00c02fd242cc9958751fc5f23ad63c52b3907219baeeff42",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/profiles_v192_phase000.npz": {
+      "sha256": "31ffd07bff4f02ffa525c61550226b33b84bfd0b99d5efe725b7c1420beaaea1",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/profiles_v192_phase000.png": {
+      "sha256": "7528c01b2d41ff49bf0e80adb81926515ebe126624b6783a7e5c0f8403b977ac",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/profiles_v192_phase045.npz": {
+      "sha256": "6544843c735f329e0c3b264b84de9959ef7d0dddd16247c4c65fc686fce93f71",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/profiles_v192_phase045.png": {
+      "sha256": "e2af874516d98b39dafd270a4121a0f4c16b7e734c63e19c123ae5afe3596652",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/profiles_v192_phase090.npz": {
+      "sha256": "de4fba9b4a7b42134de8009ba1d53e498c20e803b8e0c9f21a3f66f8cec9bcbf",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/profiles_v192_phase090.png": {
+      "sha256": "2aa30d5cb15a6cc2f7ea2a4e028a00bb01ad15ea89b970b96b1a6bf1adf26a76",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/rejection_tests.json": {
+      "sha256": "7ca09702a7c292dd74f4b9876444dbec08ce0a279a70e017c33b504811a95116",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/summary.json": {
+      "sha256": "82f68a347fa871d7b462d106d932e3b260d077858c8b68771b947cc69e8ba873",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/timing_summary.json": {
+      "sha256": "b4bfe2e63ab07bfe7a4c4feb74ddf13ab0477538f053842777108e01ce56813d",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/timing_v18_alternating.csv": {
+      "sha256": "57789dbb1c83b4518ebdc5cc28061278ce3cd69142eb4ddc2fc72857cda179f0",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/timing_v18_decreasing.csv": {
+      "sha256": "57789dbb1c83b4518ebdc5cc28061278ce3cd69142eb4ddc2fc72857cda179f0",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/timing_v18_increasing.csv": {
+      "sha256": "57789dbb1c83b4518ebdc5cc28061278ce3cd69142eb4ddc2fc72857cda179f0",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/timing_v18_original.csv": {
+      "sha256": "57789dbb1c83b4518ebdc5cc28061278ce3cd69142eb4ddc2fc72857cda179f0",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/timing_v191.csv": {
+      "sha256": "3de8fb3270f95b5cac5259f61e583e385e0f3f6f3a785477a3770d20149d1d3b",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/event_validation/timing_v192.csv": {
+      "sha256": "9de42f91d4b5c414cb66fece8a08b58710c2aa8b3c005f4922adb297c3aa3c60",
+      "category": "validation_output_or_scan_input"
+    },
+    "docs/v19/implementation_report.md": {
+      "sha256": "b052061d1403b6e1fc53dae7c365411cac3a28ca5afa2bde196f99aa9616925a",
+      "category": "final_documentation"
+    },
+    "docs/v19/reference_benchmark/c1_resolution_scan.json": {
+      "sha256": "3a75c805acd420511c932121e022e0a4dcb925fc6dae5d212eaa3df505c3fea7",
+      "category": "reference_output"
+    },
+    "docs/v19/reference_benchmark/fig3_S2_endpoint_profiles.png": {
+      "sha256": "a0b2db76db0ee8d2cc0cbd3ada290810dcc0191afacab380afba28afea5d00e0",
+      "category": "reference_output"
+    },
+    "docs/v19/reference_benchmark/fig3_alsop_profiles.npz": {
+      "sha256": "14b466e5ede2b67063f9a858c17b2fc5964712e080d0a1d3e94cfa9aa8429b4a",
+      "category": "reference_output"
+    },
+    "docs/v19/reference_benchmark/fig3_ssmgot_profiles.npz": {
+      "sha256": "9465abfa361272e0c7bc81be03fb4cc529f54dcf140e95208e080ff4f5c6720c",
+      "category": "reference_output"
+    },
+    "docs/v19/reference_benchmark/fig4_echo_trains.png": {
+      "sha256": "0a74d68ad69c7bda24b9fe2828dd6614618e009b09be582ef906f1de908ef45e",
+      "category": "reference_output"
+    },
+    "docs/v19/reference_benchmark/results.json": {
+      "sha256": "a3826bc96464fecc211bc715ed0662cd02bcaf8dc447ae1b5176904e5c9d09a5",
+      "category": "reference_output"
+    },
+    "docs/v19/review/physics_checks/axes_pathways_results.json": {
+      "sha256": "12a1fd044e7838491cada58bfb3bd0b694c1371143b58f499470437be85f5dc7",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_checks/axes_pathways_stdout.txt": {
+      "sha256": "abd76c52f70ce6586251700bb421a2c3a8e2f14e0c56c28a95aece2425302569",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_checks/benchmark_c1_results.json": {
+      "sha256": "831a0e363cb6ebfab3851e987aea75d1a42e3b33eba0bf797c0d35dd6ad03931",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_checks/benchmark_c1_stdout.txt": {
+      "sha256": "162d648dd828b6fb5f997feace7af1920a14d55c1ec18cfa65205bbb0e10d1e2",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_checks/benchmark_zgrid_results.json": {
+      "sha256": "168745ebbba36cbac2ff56aeaf57cc9ca44c3c74c636a9606433bd543500bd31",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_checks/benchmark_zgrid_stdout.txt": {
+      "sha256": "68184cb58cac7519291b09776751a330ee318f9f990550ed1260ae3785659280",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_checks/btensor_independent.json": {
+      "sha256": "bfc2a4fa94b97c4ca2571a00948e16a3cd2a517aa978176fe818e186cbb81248",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_checks/btensor_stdout.txt": {
+      "sha256": "6dafac238494c34ec368cac59b27f040ac951b846b1f02b2a1428018b00622cc",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_checks/c1_v191_results.json": {
+      "sha256": "8ee19393cba58448109bb8e297242f5599069839ac36294b0dc276ca31a2a394",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_checks/c1_v191_stdout.txt": {
+      "sha256": "6a80e790c6819fa7fff7ba2bb4be6f4612fb4c66ae668f00905967d01424c414",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_checks/c1scan_stdout.txt": {
+      "sha256": "09083dfe2f4b42fda566bea5a376acd28203582a0dcd1e777d21a8f326e9a512",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_checks/check_axes_pathways.py": {
+      "sha256": "4c81ef4e0c1d3a6b99701d3e593ff9ac71df81952b70ac1c991b0d8fcd5201a9",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_checks/check_benchmark_c1.py": {
+      "sha256": "606e8b9fc83b762327211f585cbc5e397cc7ec58a98c55ca2da6d330666ee43f",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_checks/check_benchmark_zgrid.py": {
+      "sha256": "1bd353eb2f3ec0787b71987e4dfd4064eaa6b99a2461b0268ea4239937b3866e",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_checks/check_btensor.py": {
+      "sha256": "cc32ce266c0bdf3251f6cfbef5ef9d867cbb7e0b8fded4ebcf586f45f127dac8",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_checks/check_c1_v191.py": {
+      "sha256": "6031ddd8497f90fb6ddbc64917a95a7439ac253e7a7e36b6931e775c0ef0dd1d",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_checks/check_event_bloch.py": {
+      "sha256": "fb40a41b6ebde454631439bbee43893efd3de9c7650aab3b4a461be45471755f",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_checks/event_bloch_c1scan.json": {
+      "sha256": "8e5a0f5c1f0a2e056ee575495258da733e1dea4302fb3546add98679151a0b6b",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_checks/event_bloch_results.json": {
+      "sha256": "805d13d27c6672a1ce933017b566365e5f3b9446211ae96dd78a7c50e5d320f3",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_followup.md": {
+      "sha256": "d8e06b3351aff24931df679d1193173b1869913f5c92fb1991e5604f7452f02d",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/physics_review_final.md": {
+      "sha256": "841711e737f1a13263fe6017bbc9bcaa73ffafe954719f6ca468ffbacef2a970",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/ppl_review_compiler_compatibility.md": {
+      "sha256": "4b58c3234986dcc04a424359cf6caaabf56ca179f15c23979856dd78f13bad9a",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/ppl_review_round1.md": {
+      "sha256": "f3532d2bb1d766558eee0bcde958fc5f864b7f0bf1516ea47414fc36b9e38263",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/ppl_review_round2.md": {
+      "sha256": "98f4e403470b57d9912529702619742988bea9b76675cbbf8c1442a02a976c7a",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/review/ppl_review_round4.md": {
+      "sha256": "fed96e97e8f3a44de8c0fa4233226bcf79ca640f756d0848e5506bb99ee4882e",
+      "category": "independent_review_or_supporting_check"
+    },
+    "docs/v19/rf_install_calibration.md": {
+      "sha256": "77caca459eee42de1bb1eea9a870565f415502a17dcee327d5cd8d74584f0498",
+      "category": "final_documentation"
+    },
+    "docs/v19/upload_checklist.md": {
+      "sha256": "e15519453d453ddb6097443b9e13f095d0eba9994bbe3da7ea88b95a3d1bf26b",
+      "category": "final_documentation"
+    },
+    "dwfse/ppl/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "mapper_and_simulator"
+    },
+    "dwfse/ppl/analysis.py": {
+      "sha256": "104e6bfd2be908af4aaf8f1bae9e0897fb835be9d8fecbee5cca342ef7c19d02",
+      "category": "mapper_and_simulator"
+    },
+    "dwfse/ppl/bloch.py": {
+      "sha256": "daee94bc9b41b6cad88b65a7480a68fde5f9bef9a0bc3899c2b4b8fa52d38ebd",
+      "category": "mapper_and_simulator"
+    },
+    "dwfse/ppl/events.py": {
+      "sha256": "abc5f91998ecdb5c9fddd4bcf9aaaccd1f93d0b7ce50f517b55b057c1f3ea73b",
+      "category": "mapper_and_simulator"
+    },
+    "dwfse/ppl/interp.py": {
+      "sha256": "a655757cf2c4f489ab9b3ec4a5c0c517fb19abc0e1c4e4508c35fda31839e3e1",
+      "category": "mapper_and_simulator"
+    },
+    "dwfse/ppl/ledger.py": {
+      "sha256": "bcdd4c16dd2f852678a748319a6f6fafe06a005e91d0060263378536abc762ff",
+      "category": "mapper_and_simulator"
+    },
+    "dwfse/ppl/parser.py": {
+      "sha256": "a15f79732fb56fd0dc60404a3d3e307862fc0d10e37ee2e590a7fe98c19d1c2e",
+      "category": "mapper_and_simulator"
+    },
+    "dwfse/ppl/ppr.py": {
+      "sha256": "dbae188cf318c1b66ea8a300a52782ef3d6ec3a0409cb740d0c128074e18af6f",
+      "category": "mapper_and_simulator"
+    },
+    "dwfse/ppl/preprocess.py": {
+      "sha256": "b487ddf7f59e30f261e1166c46c5e3263737d0ba654a2bd171363143b8406e5d",
+      "category": "mapper_and_simulator"
+    },
+    "dwfse/ppl/run.py": {
+      "sha256": "8524c9ea6f7f4a29a83f3c463b6d464296bc1e9ba61fe85913b3a42e473551ee",
+      "category": "mapper_and_simulator"
+    },
+    "examples/build_v19_ppl.py": {
+      "sha256": "6672d304878c824de67ca88e3b66e4ef3d18bc786324f0f1de49fa127b42733b",
+      "category": "generator_or_validation_script"
+    },
+    "examples/v19_crusher_scan.py": {
+      "sha256": "3b6fb4445decd8bc05a19d76581f5ff289623854936b24c350164e53cd61e292",
+      "category": "generator_or_validation_script"
+    },
+    "examples/v19_reference_benchmark.py": {
+      "sha256": "4287c10200ec13c6224a1785ea0f790d0bb80d8632c267ef534fc23403d225dc",
+      "category": "generator_or_validation_script"
+    },
+    "examples/v19_reference_crusher_scan.py": {
+      "sha256": "e60219ac5231ccb19e39b46faa9ec4ad7c8600fe78665b9048603cf30ba4aaee",
+      "category": "generator_or_validation_script"
+    },
+    "examples/v19_validate_events.py": {
+      "sha256": "e4a6c5fc60914a7ce37b2854df9b3bb4d5d23554750276fe3396dd5fd3ea2d6b",
+      "category": "generator_or_validation_script"
+    },
+    "experiments/FSE-DWI_10-05-2026_v18_test1e/FSE-DWI_10-05-2026_v18_test1.ppr": {
+      "sha256": "84611fcb854deab5e9e7110aa7fdd68cfed25ba17d988231ab092c51a66b8fbc",
+      "category": "control_validation_input"
+    },
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl": {
+      "sha256": "3b420376331e918b4c864e9b37937ef35fd9f49066b8d6402e44aae9da598db2",
+      "category": "sequence_source"
+    },
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppl": {
+      "sha256": "78ca063f914561513fb6967d76e93cbc9829542b2346e507b4640846843b8e06",
+      "category": "sequence_source"
+    },
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppr": {
+      "sha256": "faa77a11c2da4c5fe9876d6a842b9bc3025c66ddc09eaa4e8270dec9350faf0c",
+      "category": "protocol"
+    },
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppl": {
+      "sha256": "83d669c59b412c5f0da833e4ff6280dd1a0b9b9c5229f764663a812486b601e4",
+      "category": "sequence_source"
+    },
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppr": {
+      "sha256": "678f2af5bb2fa205c2b7cb9402879d9ce1e98ed8e2c5fa4264c318b3e6898fbf",
+      "category": "protocol"
+    },
+    "scanner/rf/v19_research_rf.seq": {
+      "sha256": "cca9935e58833c3c61fb5e76cc577659914f5c250cf2449676affd12d088bf5c",
+      "category": "waveform_validation_input"
+    },
+    "scanner/utilities/19lobsinb.seq": {
+      "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45",
+      "category": "waveform_validation_input"
+    },
+    "scanner/utilities/9lobsinb.seq": {
+      "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403",
+      "category": "waveform_validation_input"
+    },
+    "scanner/utilities/asym.seq": {
+      "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5",
+      "category": "waveform_validation_input"
+    },
+    "scanner/utilities/g3040_15.seq": {
+      "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b",
+      "category": "waveform_validation_input"
+    },
+    "scanner/utilities/gs_240hz.seq": {
+      "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef",
+      "category": "waveform_validation_input"
+    },
+    "scanner/utilities/hypsec.seq": {
+      "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8",
+      "category": "waveform_validation_input"
+    },
+    "scanner/utilities/m3031_15.pph": {
+      "sha256": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+      "category": "vendor_validation_input"
+    },
+    "scanner/utilities/m3040_15.pph": {
+      "sha256": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+      "category": "vendor_validation_input"
+    },
+    "scanner/utilities/offst_20.pph": {
+      "sha256": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+      "category": "vendor_validation_input"
+    },
+    "scanner/utilities/opt90_a.seq": {
+      "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444",
+      "category": "waveform_validation_input"
+    },
+    "scanner/utilities/opt90_as.seq": {
+      "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff",
+      "category": "waveform_validation_input"
+    },
+    "scanner/utilities/presat.seq": {
+      "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134",
+      "category": "waveform_validation_input"
+    },
+    "scanner/utilities/rfchess.seq": {
+      "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b",
+      "category": "waveform_validation_input"
+    },
+    "scanner/utilities/rfstd44.seq": {
+      "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29",
+      "category": "waveform_validation_input"
+    },
+    "scanner/utilities/stdfn_15.pph": {
+      "sha256": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+      "category": "vendor_validation_input"
+    },
+    "scanner/utilities/tstex_15.pph": {
+      "sha256": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af",
+      "category": "vendor_validation_input"
+    },
+    "scanner/utilities/var_20.pph": {
+      "sha256": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+      "category": "vendor_validation_input"
+    },
+    "tests/test_v19_ppl_mapper.py": {
+      "sha256": "16caabf437b8157b3e2b1603873240c0759f1b89d11302e499482bae33315e17",
+      "category": "regression_tests"
+    }
+  }
+}

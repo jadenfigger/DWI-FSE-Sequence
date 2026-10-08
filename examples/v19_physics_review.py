@@ -345,7 +345,8 @@ def mapped_tip_checks():
 
 
 def new_disk_rf_checks():
-    path=ROOT/"scanner/rf/v19_research_rf.seq"
+    # Historical combined library; its records equal the per-pulse scanner/rf/v19_*.seq.
+    path=ROOT/"docs/v19/compiler_compatibility/superseded_v19_research_rf.seq"
     data=path.read_bytes();kind,nf,_=struct.unpack_from("<BHH",data);assert kind==6 and nf==6
     offsets=struct.unpack_from("<"+"I"*nf,data,5)
     manifest=json.loads((ROOT/"docs/v19/rf_library_manifest.json").read_text())

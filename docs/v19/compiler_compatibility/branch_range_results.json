@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-07",
+  "scope": "Fifth trial: .fth stage 'error branch is out of range'",
+  "vendor_compile_success_confirmed": false,
+  "ppl_compile_v4": "Both methods compiled successfully with exactly the 11 predicted v18-inherited W007/W008 warnings",
+  "console_report": {
+    "v191": ".fth line (10235, 4): error branch is out of range",
+    "v192": ".fth line (9405, 4): error branch is out of range"
+  },
+  "diagnosis": "The method setup was one if (v19_on==1) { ... } body of 3964 (v191) / 3230 (v192) AST nodes; v18's largest conditional body is 369. The manual times if/until as a 100-ns conditional branch and goto as a 1.1-us jump; v18 runs with gotos spanning 13050 nodes, so only the conditional branch is range-limited. The reported .fth lines fall at the end of that block in both methods (0.923 / 0.912 .fth lines per preceding AST node); the 830-line gap between methods matches the 769-node setup-size difference, while the block starts differ by only 35 nodes.",
+  "fix": "SETUP_COMMON_A opens with if (v19_on!=1) goto v19_setup_done; and SETUP_TIMING_TAIL ends with the v19_setup_done: label instead of the block braces. Setup statements are unchanged.",
+  "largest_conditional_body": {
+    "v18": 369,
+    "v191_v4": 3964,
+    "v192_v4": 3230,
+    "v191_current": 379,
+    "v192_current": 379,
+    "note": "379 is v18's crusher block with printf literals replaced by error-code assignments: one more AST node each, less compiled code"
+  },
+  "longest_goto_nodes": {
+    "v18": 13050,
+    "v191": 18918,
+    "v192": 17955,
+    "note": "exceeds v18's proven span; not reported by the .fth stage in v4"
+  },
+  "event_identity_vs_v4": "RF, gradients, ADC, output, error codes and overrun flags identical over two shots in 14 cases per method",
+  "predicted_W007_W008": 11,
+  "forward_gotos": 23,
+  "mapper_regression_tests_passed": 11,
+  "unchanged_assets": [
+    "v18 source",
+    "both PPRs",
+    "RF library",
+    "error-code tables"
+  ],
+  "upload": "docs/v19/compiler_compatibility/v19_branch_fix_v5.zip",
+  "generator_sha256": "5fa85406cf1f7089ca26831a0eb46088815ad3b44ad18d46d522558bc49cd06c",
+  "methods": {
+    "v191": {
+      "current_sha256": "fffc401b2b95d8fb4cc9c3b1df3deb3760e23feaf8ad0687853752270452a6c9"
+    },
+    "v192": {
+      "current_sha256": "d503e9389bf4573fcb87ab406ed991df1a41bbc57f81e517ee92bd03b01a1ab5"
+    }
+  }
+}

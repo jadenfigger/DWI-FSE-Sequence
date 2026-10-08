@@ -1,0 +1,196 @@
+{
+ "v191": {
+  "3D": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E2"
+  },
+  "multislice": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E3"
+  },
+  "slice offset": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E3"
+  },
+  "presat": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E4"
+  },
+  "flow comp": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E2"
+  },
+  "DE": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E57"
+  },
+  "gating": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E4"
+  },
+  "crusher schedule": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E1"
+  },
+  "crusher too small": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E17"
+  },
+  "TE too short": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E30"
+  },
+  "ESP too short": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E31"
+  },
+  "flip out of range": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E13"
+  },
+  "TR too short": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "TR too short, increase to 199 ms"
+  },
+  "cycles not validated": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E7"
+  },
+  "C1 small coincidence": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E18"
+  },
+  "C1 large coincidence": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E18"
+  },
+  "C outside validated window": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E18"
+  },
+  "C1 opposite polarity": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E18"
+  },
+  "crusher polarity not validated": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E18"
+  }
+ },
+ "v192": {
+  "3D": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E2"
+  },
+  "multislice": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E3"
+  },
+  "slice offset": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E3"
+  },
+  "presat": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E4"
+  },
+  "flow comp": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E2"
+  },
+  "DE": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E51"
+  },
+  "gating": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E4"
+  },
+  "crusher schedule": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E1"
+  },
+  "crusher too small": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E17"
+  },
+  "TE too short": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E24"
+  },
+  "ESP too short": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E25"
+  },
+  "flip out of range": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E13"
+  },
+  "TR too short": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "TR too short, increase to 193 ms"
+  },
+  "cycles not validated": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E7"
+  },
+  "C1 small coincidence": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E18"
+  },
+  "C1 large coincidence": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E18"
+  },
+  "C outside validated window": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E18"
+  },
+  "C1 opposite polarity": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E18"
+  },
+  "crusher polarity not validated": {
+   "rf_events": 0,
+   "adc_events": 0,
+   "message": "V19 error E18"
+  }
+ }
+}

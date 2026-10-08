@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-07",
+  "scope": "Seventh trial: method-only PPLs to fit the 64K RTX program image",
+  "console_report_v6": "v6 compiled and passed the .fth stage; pplsim reported 'step math opcodes not supported' for both methods, v1.91 also printed 'No. Averages is not a multiple of 2' with a PPR that sets phase_cycle=1, and a rerun crashed. v18 compiled.",
+  "diagnosis": "Program image overflow. The v6 .fth files use no Forth word or inline opcode absent from v18's console .fth, so the step-math popup is not a new instruction. v18's own history documents a hard 64K image ('too big to fit in 64K', 'default size 65490', arrays moved to extended memory). Estimated images: v18 56.7 KB (model), combined v6 67.7 / 65.2 KB (+11.1 / +8.6 KB). Corrupted parameter values and undecodable instructions are the expected symptoms. Not directly measured on the console.",
+  "size_model": "2.6 bytes per AST node (from the console .fth files) + declared array bytes + string bytes; v18 absolute value lacks fixed runtime overhead, differences are the decision quantity",
+  "estimated_image_bytes": {
+    "v18": 56664,
+    "combined_v6_v191": 67745,
+    "combined_v6_v192": 65241,
+    "method_only_v191": 48469,
+    "method_only_v192": 45965
+  },
+  "changes": [
+    "Deleted the v18 regions the method always jumped over: TE calculations, TE-extend checks and the v18 echo-train kernel (replaced by goto v19_mat_window). Preprocessor directives balanced; no deleted label referenced elsewhere.",
+    "Commented out (v18 \\\\#define style) features the method rejects: MULTIPRESAT, FSE3D, DRIVEN_EQUILIBRIUM, SKIP_FIRST_ECHOES, CHESS, AUTOGATE, MTC, PRESAT_FREQ_FLIP, DIXON3P. All PPR parameters remain declared.",
+    "MAX_DIFF_ACQ 512 -> 64 (the pre-v1.x size), PARAMLIST acq_* VAR_ARRAY counts and no_diff_acq range 1..64, PPR acq_* arrays truncated to their first 64 entries.",
+    "MAX_CRUSHER_ETL 1024 -> 64 (crusher_etl = ETL <= 64 in method mode; E87 still checks).",
+    "Early guards after the stop hub, before any table is read: v19_on must be 1; 1 <= no_diff_acq <= 64. The in-setup v19_on gate and v19_setup_done label are removed. v19_on PARAMLIST keeps its 0..1 range, default 1."
+  ],
+  "control_path": "Removed from the v19 PPLs by design. Controls run on the unchanged v18 PPL with its own PPR. A v19 PPL with v19_on=0 is rejected before any event (previously, in an intermediate prototype, it fell into the method shot without setup).",
+  "equivalence_vs_v6": "47 protocols per method (19 valid, 28 rejected): RF timing/frames/multipliers/phases, ADC timing, played gradients, printed output and error meanings identical to the v6 combined build; differences only the intended v19_on message and the removed SKIP_FIRST_ECHOES report line. Gradient list ids shift by 8 (CHESS/MTC setup lists not compiled).",
+  "static_checks": {
+    "predicted_W007_W008": 3,
+    "expected_W003": "pb_end (its goto is under the disabled MULTIPRESAT)",
+    "forward_gotos": 18,
+    "largest_conditional_body_nodes": 379,
+    "labels": 47,
+    "identifiers_over_31_chars": 0
+  },
+  "full_validator": {
+    "elapsed_s": 757.3653502464294,
+    "control_identity_all (v19_on=0 rejected)": true,
+    "control_identity": {
+      "v191": {
+        "v19_on0_rejected": true,
+        "rf_events": 0,
+        "adc_events": 0,
+        "all_identical": true
+      },
+      "v192": {
+        "v19_on0_rejected": true,
+        "rf_events": 0,
+        "adc_events": 0,
+        "all_identical": true
+      }
+    }
+  },
+  "full_validator_comparison": "Against the previous full run (pre-v4 hashes 2542cdd/6a70f90): bloch_results, btensor, moments, landmark_summary, timing_summary, crusher geometry scans, slice profiles and ADC echo arrays identical; convergence ODE windows shifted by -387/-420 us with identical widths (shorter untimed setup); all 38 rejection cases zero RF/ADC (codes renumbered); control_identity now records v19_on=0 rejection.",
+  "timer_arg_flags": "New since the v4 int timer copies, not this trial: the mapper flags int waittimer arguments >32767 as negative (e.g. -24996) and uses their unsigned 16-bit value (40540 ticks), the same bits the earlier long arguments and v18's waittimer(47975L) deliver. Event timing identical.",
+  "mapper_regression_tests_passed": 13,
+  "error_codes": "Renumbered; use docs/v19/compiler_compatibility/v19_error_codes.txt from this build (combined v6 table kept as combined_v6_error_codes.txt).",
+  "references_kept": [
+    "pre_method_only_v191.ppl.txt",
+    "pre_method_only_v192.ppl.txt",
+    "pre_method_only_v191.ppr",
+    "pre_method_only_v192.ppr",
+    "combined_v6_v191.fth",
+    "combined_v6_v192.fth",
+    "v18_console.fth"
+  ],
+  "upload": "docs/v19/compiler_compatibility/v19_method_only_v7.zip",
+  "files_sha256": {
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppl": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828",
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppr": "fc7f0218f5aaf7866e44ce65331a2f6c11526d0ce04f8e2e78f44dbb6cd0ebeb",
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppl": "0adcd5ada3eb156e869cdee1eea045acdb1dc2ac966bfc563599d72396ea1843",
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppr": "42ee41f60110d1ee323bae7fb548f7dc79d1dda455f5921b4a1557e038ff7c46",
+    "docs/v19/compiler_compatibility/v19_error_codes.txt": "036275421faf8130be9946c57b6de6efe82d08d5105710a669dee22c30ff09b1",
+    "examples/build_v19_ppl.py": "8965d0a160d1ecbab30161f1052733b050af5c51d25eb72d3d43378cd418ee0c"
+  },
+  "vendor_compile_success_confirmed": false,
+  "simulator_success_confirmed": false
+}

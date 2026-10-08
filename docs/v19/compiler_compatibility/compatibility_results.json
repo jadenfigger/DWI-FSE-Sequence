@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-06",
+  "scope": "Historical CPP and RF-path stage before the PPLC E106 scratch reduction",
+  "vendor_compile_success_confirmed": false,
+  "printf_literal_bound_source_characters": 48,
+  "printf_bound_is_measured_vendor_limit": false,
+  "mapper_regression_tests_passed": 5,
+  "unchanged_assets": [
+    "v18 PPL",
+    "v191 PPR",
+    "v192 PPR",
+    "research RF library"
+  ],
+  "review": "docs/v19/review/ppl_review_compiler_compatibility.md",
+  "methods": {
+    "FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppl": {
+      "previous_ppl_sha256": "b8d2c4cae6443ba150464db95fcd113a787fd70f0cf9de64bc85da7cf255625d",
+      "current_ppl_sha256": "78ca063f914561513fb6967d76e93cbc9829542b2346e507b4640846843b8e06",
+      "computational_tokens_sha256": "d8cf3fb97e1a4acf5bfaeacbc2a6a4c258003db0e4d92cc599868dec102fa09c",
+      "computational_token_count": 26598,
+      "computational_tokens_identical": true,
+      "added_print_text_and_argument_order_preserved": "independently checked in linked review",
+      "compiler_corrected_ppl_before_path_change_sha256": "41a938b532321b1b0a8554b01062f24edd79b77ab70c2e5d00303abff2ad91d7"
+    },
+    "FSE_dwi_CPMG_non_CPMG_twoTE-1.92.ppl": {
+      "previous_ppl_sha256": "7e6393eaaac57f23d1f0f5d1718315ddf29e9df7ceffd923a1fd114920d20e55",
+      "current_ppl_sha256": "83d669c59b412c5f0da833e4ff6280dd1a0b9b9c5229f764663a812486b601e4",
+      "computational_tokens_sha256": "7bc2f6524da576e57e89d7dc2731e1443f4d19ecea6551b7df5b5447168ebbf3",
+      "computational_token_count": 25360,
+      "computational_tokens_identical": true,
+      "added_print_text_and_argument_order_preserved": "independently checked in linked review",
+      "compiler_corrected_ppl_before_path_change_sha256": "f8b8896dc0da45d71659b9db06a318b6773b1f2075ece703f04cfddde70e6e77"
+    }
+  },
+  "rf_path_event_identity": "docs/v19/compiler_compatibility/rf_path_event_identity.json",
+  "full_validation_completed": true,
+  "full_validation_elapsed_s": 694.1167936325073,
+  "superseded_by": "docs/v19/compiler_compatibility/scratch_reduction_results.json"
+}

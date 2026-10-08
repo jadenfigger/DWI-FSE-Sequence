@@ -1,0 +1,555 @@
+{
+  "E1": {
+    "message": "V19 needs DWI ON, independent constant crushers, DE OFF\\n",
+    "original_arguments": []
+  },
+  "E2": {
+    "message": "V19 rejects flow comp, Dixon, 3D, skipped echoes, TREF setup\\n",
+    "original_arguments": []
+  },
+  "E3": {
+    "message": "V19 supports one centred slice (fixed tx frequency for all widths)\\n",
+    "original_arguments": []
+  },
+  "E4": {
+    "message": "V19 rejects presat, CHESS, CEST, gating and TR arrays\\n",
+    "original_arguments": []
+  },
+  "E5": {
+    "message": "V19 needs slice/read ON, gsp_lobe 0, no post-90/phcor0 trims\\n",
+    "original_arguments": []
+  },
+  "E6": {
+    "message": "V19 needs ETL 1..64 and 1..8 dephasing cycles\\n",
+    "original_arguments": []
+  },
+  "E7": {
+    "message": "V19 supports only 2 dephasing cycles; re-validate other values with examples/v19_validate_events.py\\n",
+    "original_arguments": []
+  },
+  "E8": {
+    "message": "V19 needs diff_tramp=tramp, rfgate_delay>=17, tramp+rfdelay>=163 us\\n",
+    "original_arguments": []
+  },
+  "E9": {
+    "message": "V19 slice selector outside 1..12000 DAC, or warmup outside 0..200 us\\n",
+    "original_arguments": []
+  },
+  "E10": {
+    "message": "V19 compensation flat must be a multiple of tramp/50\\n",
+    "original_arguments": []
+  },
+  "E11": {
+    "message": "V19 tdp and little delta-tramp must be multiples of tramp/50\\n",
+    "original_arguments": []
+  },
+  "E12": {
+    "message": "V19 RF multiplier outside 1..2047\\n",
+    "original_arguments": []
+  },
+  "E13": {
+    "message": "V19 refocusing flip %d outside 0.1..180 deg\\n",
+    "original_arguments": [
+      "v19_i+1"
+    ]
+  },
+  "E14": {
+    "message": "V19 selector DAC %ld outside amplitude/slew ceiling\\n",
+    "original_arguments": [
+      "templ1"
+    ]
+  },
+  "E15": {
+    "message": "V19 added-dephasing DAC %ld outside ceiling\\n",
+    "original_arguments": [
+      "templ1"
+    ]
+  },
+  "E16": {
+    "message": "V19 needs a nonzero train crusher\\n",
+    "original_arguments": []
+  },
+  "E17": {
+    "message": "V19 train crusher area must be >= 3x added dephasing (C=%ld, D=%ld DAC.us)\\n",
+    "original_arguments": [
+      "templ2",
+      "templ1*(0L+(tdp+tramp))"
+    ]
+  },
+  "E18": {
+    "message": "V19 crusher geometry unvalidated; use C/D=3.83 and C1/D=2.55, then re-validate with examples/v19_validate_events.py\\n",
+    "original_arguments": []
+  },
+  "E19": {
+    "message": "V19 needs imaging <= tip-up <= slab width\\n",
+    "original_arguments": []
+  },
+  "E20": {
+    "message": "V19 compensation DAC %ld outside amplitude/slew ceiling\\n",
+    "original_arguments": [
+      "templ1"
+    ]
+  },
+  "E21": {
+    "message": "V19 spoiler amplitude outside ceiling\\n",
+    "original_arguments": []
+  },
+  "E22": {
+    "message": "V19 spoiler moment too large for this gradient\\n",
+    "original_arguments": []
+  },
+  "E23": {
+    "message": "V19 spoiler flat %ld us outside tramp..6000 us\\n",
+    "original_arguments": [
+      "templ1"
+    ]
+  },
+  "E24": {
+    "message": "V19 RF block window infeasible (rf %d)\\n",
+    "original_arguments": [
+      "18"
+    ]
+  },
+  "E25": {
+    "message": "V19 RF block window infeasible (rf %d)\\n",
+    "original_arguments": [
+      "19"
+    ]
+  },
+  "E26": {
+    "message": "V19 RF block window infeasible (rf %d)\\n",
+    "original_arguments": [
+      "23"
+    ]
+  },
+  "E27": {
+    "message": "V19 RF block window infeasible (rf %d)\\n",
+    "original_arguments": [
+      "20"
+    ]
+  },
+  "E28": {
+    "message": "V19 RF block window infeasible (rf %d)\\n",
+    "original_arguments": [
+      "22"
+    ]
+  },
+  "E29": {
+    "message": "V19 spoiler window %ld us exceeds the 4.9-ms timer budget; raise spoiler DAC\\n",
+    "original_arguments": [
+      "v19_b_sp"
+    ]
+  },
+  "E30": {
+    "message": "V19 TE/Delta/delta too short for prep (gaps %ld %ld %ld %ld ticks)\\n",
+    "original_arguments": [
+      "v19_gap_x1",
+      "v19_gap_1r",
+      "v19_gap_r2",
+      "v19_gap_2d"
+    ]
+  },
+  "E31": {
+    "message": "V19 ESP too short after method block or before readout (%ld %ld)\\n",
+    "original_arguments": [
+      "v19_first_wait",
+      "v19_gap_ir"
+    ]
+  },
+  "E32": {
+    "message": "V19 ESP/ADC too short for readout and restoration (%ld %ld %ld)\\n",
+    "original_arguments": [
+      "v19_adc_mid",
+      "v19_post_a",
+      "v19_post_b"
+    ]
+  },
+  "E33": {
+    "message": "V19 readout/imaging/D windows outside budget (need 2*tramp+tdp>=400 us)\\n",
+    "original_arguments": []
+  },
+  "E34": {
+    "message": "V19 ESP too short for crusher + readout\\n",
+    "original_arguments": []
+  },
+  "E35": {
+    "message": "V19 matrix window 1 overrun\\n",
+    "original_arguments": []
+  },
+  "E36": {
+    "message": "V19 read prephaser DAC %ld outside ceiling\\n",
+    "original_arguments": [
+      "templ1"
+    ]
+  },
+  "E37": {
+    "message": "V19 matrix window 2 overrun\\n",
+    "original_arguments": []
+  },
+  "E38": {
+    "message": "V19 method-only PPL: v19_on must be 1\\n",
+    "original_arguments": []
+  },
+  "E39": {
+    "message": "V19 needs 1..64 diffusion acquisitions\\n",
+    "original_arguments": []
+  },
+  "E40": {
+    "message": "Illegal parameter\\n",
+    "original_arguments": []
+  },
+  "E41": {
+    "message": "Illegal parameter (2)\\n",
+    "original_arguments": []
+  },
+  "E42": {
+    "message": "Illegal parameter (3)\\n",
+    "original_arguments": []
+  },
+  "E43": {
+    "message": "No expts should be divisible by no of diffusion acqs (%d)\\n",
+    "original_arguments": [
+      "no_diff_acq"
+    ]
+  },
+  "E44": {
+    "message": "Set the Experiment Array Size to %d \\n",
+    "original_arguments": [
+      "no_diff_acq"
+    ]
+  },
+  "E45": {
+    "message": "Invalid diffusion scale\\n",
+    "original_arguments": []
+  },
+  "E46": {
+    "message": "Invalid diffusion direction\\n",
+    "original_arguments": []
+  },
+  "E47": {
+    "message": "all directions normalised to 1000\\n",
+    "original_arguments": []
+  },
+  "E48": {
+    "message": "b-value mode needs delta <= 10 ms and Delta <= 80 ms\\n",
+    "original_arguments": []
+  },
+  "E49": {
+    "message": "Max b = %ld. Raise delta, Delta or grads\\n",
+    "original_arguments": [
+      "b_max"
+    ]
+  },
+  "E50": {
+    "message": "b-value DAC search did not converge\\n",
+    "original_arguments": []
+  },
+  "E51": {
+    "message": "b-value DAC conversion outside array limits\\n",
+    "original_arguments": []
+  },
+  "E52": {
+    "message": "Diffusion DAC exceeds limit\\n",
+    "original_arguments": []
+  },
+  "E53": {
+    "message": "Diffusion DAC overflows int\\n",
+    "original_arguments": []
+  },
+  "E54": {
+    "message": "Views (including navigator) must be 1..%d; ETL must be 1..views\\n",
+    "original_arguments": [
+      "MAXPESIZE"
+    ]
+  },
+  "E55": {
+    "message": "Base TE (esp) be a multiple of eff. echo time (TE) when Diffusion is OFF \\n",
+    "original_arguments": []
+  },
+  "E56": {
+    "message": "Set PE order to 1, 5, 6 or 7 for DWI\\n",
+    "original_arguments": []
+  },
+  "E57": {
+    "message": "Set Driven Equilibrium OFF when Diffusion is ON\\n",
+    "original_arguments": []
+  },
+  "E58": {
+    "message": "PE 6/7 requires DWI ON, ETL > 1, and no discarded echoes\\n",
+    "original_arguments": []
+  },
+  "E59": {
+    "message": "PE 6/7 requires full Fourier: PF echoes = 0 or ETL\\n",
+    "original_arguments": []
+  },
+  "E60": {
+    "message": "Unsupported PE order\\n",
+    "original_arguments": []
+  },
+  "E61": {
+    "message": "Navigator leaves no imaging views\\n",
+    "original_arguments": []
+  },
+  "E62": {
+    "message": "Effective number of views must be even number\\n",
+    "original_arguments": []
+  },
+  "E63": {
+    "message": "PF eff echoes must be >= VPS\\n",
+    "original_arguments": []
+  },
+  "E64": {
+    "message": "PF eff echoes must be < 2*VPS\\n",
+    "original_arguments": []
+  },
+  "E65": {
+    "message": "no_views must be > te_eff\\n",
+    "original_arguments": []
+  },
+  "E66": {
+    "message": "te_eff must be >0\\n",
+    "original_arguments": []
+  },
+  "E67": {
+    "message": "The eff echo time is too large\\n",
+    "original_arguments": []
+  },
+  "E68": {
+    "message": "Set PE order to 5 for single echo\\n",
+    "original_arguments": []
+  },
+  "E69": {
+    "message": "Set Echo train to 1 for single echo\\n",
+    "original_arguments": []
+  },
+  "E70": {
+    "message": "Number of views / (2*views per segment) must be an integer \\n",
+    "original_arguments": []
+  },
+  "E71": {
+    "message": "Linear interleaved requires imaging views divisible by ETL\\n",
+    "original_arguments": []
+  },
+  "E72": {
+    "message": "Minimum echo train length is 4 for selected PE order\\n",
+    "original_arguments": []
+  },
+  "E73": {
+    "message": "PE order 0 exceeds scratch table capacity\\n",
+    "original_arguments": []
+  },
+  "E74": {
+    "message": "PE order 0 exceeds GP table capacity\\n",
+    "original_arguments": []
+  },
+  "E75": {
+    "message": "Internal PE table length error\\n",
+    "original_arguments": []
+  },
+  "E76": {
+    "message": "Navigators are not supported with selected PE order\\n",
+    "original_arguments": []
+  },
+  "E77": {
+    "message": "Views per segment (ETL) must be equal number of Views for this PE order\\n",
+    "original_arguments": []
+  },
+  "E78": {
+    "message": "Sampling time too long",
+    "original_arguments": []
+  },
+  "E79": {
+    "message": "Independent crusher switch must be 0 or 1\\n",
+    "original_arguments": []
+  },
+  "E80": {
+    "message": "Independent crushers require ramp 100..1000 us, multiple of 10\\n",
+    "original_arguments": []
+  },
+  "E81": {
+    "message": "Crusher amplitudes must be -32767..32767 DAC\\n",
+    "original_arguments": []
+  },
+  "E82": {
+    "message": "tcrush must be 1..5000 us and an exact multiple of tramp/50 us\\n",
+    "original_arguments": []
+  },
+  "E83": {
+    "message": "diff_tcrush must be 1..10000 us and an exact multiple of tramp/50 us\\n",
+    "original_arguments": []
+  },
+  "E84": {
+    "message": "Independent crushers require Driven Equilibrium OFF\\n",
+    "original_arguments": []
+  },
+  "E85": {
+    "message": "Invalid independent-crusher RF timing\\n",
+    "original_arguments": []
+  },
+  "E86": {
+    "message": "Independent-crusher RF plateau overflow\\n",
+    "original_arguments": []
+  },
+  "E87": {
+    "message": "Invalid crusher schedule or additive step\\n",
+    "original_arguments": []
+  },
+  "E88": {
+    "message": "Crusher ETL exceeds storage capacity\\n",
+    "original_arguments": []
+  },
+  "E89": {
+    "message": "Scheduled crushers require independent mode, DE OFF, no skipped echoes\\n",
+    "original_arguments": []
+  },
+  "E90": {
+    "message": "Crusher orientation count exceeds storage\\n",
+    "original_arguments": []
+  },
+  "E91": {
+    "message": "Invalid scheduled-crusher sampling parameters\\n",
+    "original_arguments": []
+  },
+  "E92": {
+    "message": "ADC window too short for scheduled crusher update\\n",
+    "original_arguments": []
+  },
+  "E93": {
+    "message": "Crusher amplitude/slew ceilings must be positive\\n",
+    "original_arguments": []
+  },
+  "E94": {
+    "message": "Custom crusher count must equal ETL and be 1..64\\n",
+    "original_arguments": []
+  },
+  "E95": {
+    "message": "Custom crusher storage contains invalid percentage\\n",
+    "original_arguments": []
+  },
+  "E96": {
+    "message": "Crusher progression overflow\\n",
+    "original_arguments": []
+  },
+  "E97": {
+    "message": "Invalid custom crusher percentage\\n",
+    "original_arguments": []
+  },
+  "E98": {
+    "message": "Crusher magnitude product overflow\\n",
+    "original_arguments": []
+  },
+  "E99": {
+    "message": "Crusher amplitude exceeds DAC/gradient ceiling\\n",
+    "original_arguments": []
+  },
+  "E100": {
+    "message": "Crusher ramp exceeds slew ceiling\\n",
+    "original_arguments": []
+  },
+  "E101": {
+    "message": "Refocus wait exceeds timer range\\n",
+    "original_arguments": []
+  },
+  "E102": {
+    "message": "No of slices should be an integer number of batch size\\n",
+    "original_arguments": []
+  },
+  "E103": {
+    "message": "Can't do phase oversampling with rect FOV - adjust FOVf!",
+    "original_arguments": []
+  },
+  "E104": {
+    "message": "FOV too small in PE dir\\n",
+    "original_arguments": []
+  },
+  "E105": {
+    "message": "FOV too small in slice direction",
+    "original_arguments": []
+  },
+  "E106": {
+    "message": " Slice thickness too small for pulse selected ",
+    "original_arguments": []
+  },
+  "E107": {
+    "message": "FOV too small for read comp\\n",
+    "original_arguments": []
+  },
+  "E108": {
+    "message": "Flow comp grad amp caused overflow\\n",
+    "original_arguments": []
+  },
+  "E109": {
+    "message": "Decrease bw or select a longer pulse\\n",
+    "original_arguments": []
+  },
+  "E110": {
+    "message": "PB [%d] thk too small!\\n",
+    "original_arguments": [
+      "PB_index+1"
+    ]
+  },
+  "E111": {
+    "message": "Pre-sat block thk too small!\\n",
+    "original_arguments": []
+  },
+  "E112": {
+    "message": "Number of experiments must be 3 in W-F mode!",
+    "original_arguments": []
+  },
+  "E113": {
+    "message": "Exper array size (%d) must be divisable by the TR array size (%d)!\\n",
+    "original_arguments": [
+      "no_experiments",
+      "TR_array_size"
+    ]
+  },
+  "E114": {
+    "message": "Crusher update exceeds reserved ADC instruction budget\\n",
+    "original_arguments": []
+  },
+  "E115": {
+    "message": "Diffusion gradient amp %dDAC is too high\\n",
+    "original_arguments": [
+      "diff_grad"
+    ]
+  },
+  "E116": {
+    "message": "diff_tramp (%d us) must equal tramp (%d us) for consistent DW timing\\n",
+    "original_arguments": [
+      "diff_tramp",
+      "tramp"
+    ]
+  },
+  "E117": {
+    "message": "Reduce receive frequency\\n",
+    "original_arguments": []
+  },
+  "E118": {
+    "message": "Inter-CEST delay too short, extend by %d ms\\n ",
+    "original_arguments": [
+      "-inter_cest_cal + 1"
+    ]
+  },
+  "E119": {
+    "message": ", or decrease number of slices (batch) to %d\\n",
+    "original_arguments": [
+      "((tr-1)*1000L/tr_min)"
+    ]
+  },
+  "E120": {
+    "message": "Reduce slice grad comp\\n",
+    "original_arguments": []
+  },
+  "E121": {
+    "message": "FOV in slice direction too small\\n",
+    "original_arguments": []
+  },
+  "E122": {
+    "message": "Reduce read grad comp\\n",
+    "original_arguments": []
+  },
+  "E123": {
+    "message": "Matrix setup exceeds timing budget\\n",
+    "original_arguments": []
+  }
+}

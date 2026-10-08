@@ -1,41 +1,13 @@
-# Scanner input upload checklist
+# Deployment checklist (for the user; nothing has been deployed)
 
-Supply these exact inputs to continue v191/v192 implementation. Existing v18 and five top-level PPH files are already local and must remain unchanged.
-
-## Required baseline dependencies
-
-1. `tstex_15.pph`, plus every dependency it includes.
-2. These eleven vendor libraries referenced by the actual v18 source, normally in `C:\smis\seqlib`:
-
-```text
-RFstd44.seq
-gs_240Hz.seq
-presat.seq
-opt90_a.seq
-opt90_as.seq
-asym.seq
-hypsec.seq
-rfchess.seq
-9lobsinb.seq
-19lobsinb.seq
-g3040_15.seq
-```
-
-These are vendor WavEd libraries, not Pulseq `.seq` exports. A ZIP retaining filenames is suitable. Include their editable WavEd source or sampled waveform/metadata export if available; named frames, RF board/address/wait metadata and signed phase/amplitude interpretation are necessary.
-
-## Compiler, encoding and calibration evidence
-
-- Vendor compiler/simulator build/version and compile logs for the supplied v18 PPL. If permitted and portable, supply the compiler/simulator tools and supporting files; otherwise console-generated logs/exports will support a staged workflow.
-- Machine-readable v18 played RF/gradient/ADC event export and its format documentation, including event/sample times, RF complex phase/amplitude or documented equivalent, gradient coordinates/units, ADC times/demodulation, gradient/RF delays and selected protocol. Include dummy/navigator/multislice cases when possible.
-- RF-library creation documentation and a working custom-RF example: WavEd file format, frame naming, sampled complex RF and gradient format, board dwell/sample limits, amplitude normalization, flip calibration and phase convention.
-- Scanner system/calibration export: field strength, per-axis maximum gradient amplitude and slew, physical/logical coordinate convention, DAC-to-gradient conversion, measured gradient/RF delays, RF/transmit attenuation/calibration and applicable system limits. The existing user-adjustable DAC ceilings do not certify these physical ratings.
-- Confirm whether local `scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl` is the exact October 5 acquisition source. If uncertain, upload the source from `G:\J_Figger` and its dependencies for comparison, plus the intended eight-echo companion PPR.
-
-## Exact paper-reproduction inputs, if available
-
-- Gibbons authors' sampled SLR preparation excitation/refocusing, six-subpulse spectral-spatial tip-up plus synchronized gradient, and short imaging excitation/refocusing waveforms.
-- Exact figure-specific Alsop/Le Roux and Busse refocusing angle/phase arrays, echo timings, initial states and acquisition ordering used for Figure 4 and S1.
-
-The paper gives design targets but does not publish those complete sampled coefficients/arrays. They are not prerequisites for trying a disclosed new pulse design; they are needed to claim exact coefficient/schedule reproduction. Any newly designed substitute must be measured against magnitude **and phase** targets and labeled accordingly.
-
-No scanner deployment or library overwrite is authorized by this checklist. Uploading inputs enables local implementation, event validation and independent review.
+1. Copy the six `scanner/rf/v19_*.seq` files to `g:\J_Figger\seqlib\` as new files, then open each in the WavEd viewer and confirm a visible waveform. Never overwrite vendor libraries. See [rf_install_calibration.md](rf_install_calibration.md).
+2. Copy `scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppl` / `-1.92.ppl` and the matching `.ppr` files to the working directory. Leave v18 untouched.
+3. Compile each updated PPL. The first console attempts failed in the preprocessor; the generator now expands the new helper macros itself and removes added comments. The next attempts reached PPLC and failed with E106. That trial cleared W010 but E106 stayed at the same locations. `v19_compact_fix_v2.zip` still failed E106; the cause is PPLC's limit on forward `goto` references (failure at the 147th in every build). `v19_label_fix_v3.zip` cleared E106 but aborted after 20 W007/W008 warnings. `v19_warning_fix_v4.zip` compiled (11 warnings) but its .fth reported one out-of-range branch. `v19_branch_fix_v5.zip` compiled and passed the .fth stage; the simulator then reported "step math opcodes not supported" and the v19 RF library displayed blank. `v19_rf_fix_v6.zip` overflowed the 64K program image in pplsim. Use the latest `v19_method_only_v7.zip`: method-only PPLs, **their new PPRs** (64-row diffusion tables; older PPRs no longer match the PARAMLIST), the renumbered error codes, and the unchanged RF libraries. Expect about 4 warnings (3 W008 from v18 code, W003 for the unused `pb_end` label). Before simulating v19 again, run v18 in the simulator with the same protocol to learn whether "step math" is a simulator limitation shared by v18. Expect v18's own 11 W007/W008 warnings. The accompanying error-code text file (unchanged) is needed to interpret compact fatal messages. The inherited v192 W008 may remain. Report any further compiler message.
+   - Keep the original filenames: remove download suffixes such as ` (1)`. The version-7 compiler prompt splits filenames at spaces and does not handle quoted paths correctly. Enter the complete path without quotes. The matching PPR names the original PPL filename.
+4. Controls: run the unchanged **v18 PPL with its own PPR**. The v19 PPLs no longer contain the v18 path; a v19 PPL with `v19_on=0` stops with an error before any event.
+5. Before any method scan:
+   - calibrate each new RF frame;
+   - check RF power/SAR and gradient amplitude/slew for the method protocol;
+   - verify with a scope or console trace that RF centres, ADC windows and gradient lists match `docs/v19/event_validation/timing_v19*.csv`;
+   - trim `V19_ANCHOR` / `V19_INIT_COST` if needed.
+6. Run phantom tests before in-vivo use.
