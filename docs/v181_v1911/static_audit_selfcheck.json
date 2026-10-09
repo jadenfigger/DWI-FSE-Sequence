@@ -1,0 +1,22 @@
+{
+  "long_print": {
+    "expected_failed_check": "no_added_long_string_literals",
+    "observed_failure": true
+  },
+  "comment_macro": {
+    "expected_failed_check": "no_added_macro_calls_in_slash_comments",
+    "observed_failure": true
+  },
+  "long_timer": {
+    "expected_failed_check": "warning_signatures_subset_of_v18",
+    "observed_failure": true
+  },
+  "forward_jumps": {
+    "expected_failed_check": "forward_gotos_below_historical_limit",
+    "observed_failure": true
+  },
+  "large_branch": {
+    "expected_failed_check": "conditional_bodies_within_v18_margin",
+    "observed_failure": true
+  }
+}

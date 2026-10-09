@@ -1,0 +1,2022 @@
+{
+ "models": {
+  "flat_0us": [
+   {
+    "adc_complete": 185079.1,
+    "wt24": 1026.5,
+    "wt28": 1426.5,
+    "wt40": 2626.5,
+    "list_start": [
+     [
+      1426.5,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -100.0
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6338.8
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2867.4,
+      82
+     ],
+     [
+      2867.4,
+      82
+     ],
+     [
+      2867.4,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1430.5,
+     2522.5
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1430.5,
+      2522.5,
+      2579491,
+      2860
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   },
+   {
+    "adc_complete": 185123.5,
+    "wt24": 1026.5,
+    "wt28": 1426.5,
+    "wt40": 2626.5,
+    "list_start": [
+     [
+      1426.5,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -100.0
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6338.8
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2867.4,
+      82
+     ],
+     [
+      2867.4,
+      82
+     ],
+     [
+      2867.4,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1430.5,
+     2522.5
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1430.5,
+      2522.5,
+      2579491,
+      2860
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  ],
+  "flat_0.5us": [
+   {
+    "adc_complete": 185106.6,
+    "wt24": 1025.5,
+    "wt28": 1425.5,
+    "wt40": 2625.5,
+    "list_start": [
+     [
+      1426.0,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -99.5
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6341.8
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2868.9,
+      82
+     ],
+     [
+      2868.9,
+      82
+     ],
+     [
+      2868.9,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1430.0,
+     2522.0
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1430.0,
+      2522.0,
+      2579491,
+      2860
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   },
+   {
+    "adc_complete": 185157.0,
+    "wt24": 1025.5,
+    "wt28": 1425.5,
+    "wt40": 2625.5,
+    "list_start": [
+     [
+      1426.0,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -99.5
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6341.8
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2868.9,
+      82
+     ],
+     [
+      2868.9,
+      82
+     ],
+     [
+      2868.9,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1430.0,
+     2522.0
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1430.0,
+      2522.0,
+      2579491,
+      2860
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  ],
+  "flat_1us": [
+   {
+    "adc_complete": 185134.1,
+    "wt24": 1024.5,
+    "wt28": 1424.5,
+    "wt40": 2624.5,
+    "list_start": [
+     [
+      1425.5,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -99.0
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6344.8
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2870.4,
+      82
+     ],
+     [
+      2870.4,
+      82
+     ],
+     [
+      2870.4,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1429.5,
+     2521.5
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1429.5,
+      2521.5,
+      2579491,
+      2860
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   },
+   {
+    "adc_complete": 185190.5,
+    "wt24": 1024.5,
+    "wt28": 1424.5,
+    "wt40": 2624.5,
+    "list_start": [
+     [
+      1425.5,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -99.0
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6344.8
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2870.4,
+      82
+     ],
+     [
+      2870.4,
+      82
+     ],
+     [
+      2870.4,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1429.5,
+     2521.5
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1429.5,
+      2521.5,
+      2579491,
+      2860
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  ],
+  "flat_2us": [
+   {
+    "adc_complete": 185189.1,
+    "wt24": 1022.5,
+    "wt28": 1422.5,
+    "wt40": 2622.5,
+    "list_start": [
+     [
+      1424.5,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -98.0
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6350.8
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2873.4,
+      82
+     ],
+     [
+      2873.4,
+      82
+     ],
+     [
+      2873.4,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1428.5,
+     2520.5
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1428.5,
+      2520.5,
+      2579491,
+      2860
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   },
+   {
+    "adc_complete": 185257.5,
+    "wt24": 1022.5,
+    "wt28": 1422.5,
+    "wt40": 2622.5,
+    "list_start": [
+     [
+      1424.5,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -98.0
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6350.8
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2873.4,
+      82
+     ],
+     [
+      2873.4,
+      82
+     ],
+     [
+      2873.4,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1428.5,
+     2520.5
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1428.5,
+      2520.5,
+      2579491,
+      2860
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  ],
+  "manual_x0.8": [
+   {
+    "adc_complete": 184464.9,
+    "wt24": 1026.2,
+    "wt28": 1426.2,
+    "wt40": 2626.2,
+    "list_start": [
+     [
+      1426.3,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -99.8
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6343.1
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2869.2,
+      82
+     ],
+     [
+      2869.2,
+      82
+     ],
+     [
+      2869.2,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1430.3,
+     2522.3
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   },
+   {
+    "adc_complete": 184541.9,
+    "wt24": 1026.2,
+    "wt28": 1426.2,
+    "wt40": 2626.2,
+    "list_start": [
+     [
+      1426.3,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -99.8
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6343.1
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2869.2,
+      82
+     ],
+     [
+      2869.2,
+      82
+     ],
+     [
+      2869.2,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1430.3,
+     2522.3
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  ],
+  "manual_x0.9": [
+   {
+    "adc_complete": 184388.1,
+    "wt24": 1026.1,
+    "wt28": 1426.1,
+    "wt40": 2626.1,
+    "list_start": [
+     [
+      1426.3,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -99.8
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6343.7
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2869.4,
+      82
+     ],
+     [
+      2869.4,
+      82
+     ],
+     [
+      2869.4,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1430.3,
+     2522.3
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   },
+   {
+    "adc_complete": 184469.2,
+    "wt24": 1026.1,
+    "wt28": 1426.1,
+    "wt40": 2626.1,
+    "list_start": [
+     [
+      1426.3,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -99.8
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6343.7
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2869.4,
+      82
+     ],
+     [
+      2869.4,
+      82
+     ],
+     [
+      2869.4,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1430.3,
+     2522.3
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  ],
+  "manual_x1.0": [
+   {
+    "adc_complete": 184311.3,
+    "wt24": 1026.1,
+    "wt28": 1426.1,
+    "wt40": 2626.1,
+    "list_start": [
+     [
+      1426.3,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -99.8
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6344.2
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2869.6,
+      82
+     ],
+     [
+      2869.6,
+      82
+     ],
+     [
+      2869.6,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1430.3,
+     2522.3
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   },
+   {
+    "adc_complete": 184396.5,
+    "wt24": 1026.1,
+    "wt28": 1426.1,
+    "wt40": 2626.1,
+    "list_start": [
+     [
+      1426.3,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -99.8
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6344.2
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2869.6,
+      82
+     ],
+     [
+      2869.6,
+      82
+     ],
+     [
+      2869.6,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1430.3,
+     2522.3
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  ],
+  "manual_x0.8_plus_0.5us_stmt": [
+   {
+    "adc_complete": 184492.4,
+    "wt24": 1025.2,
+    "wt28": 1425.2,
+    "wt40": 2625.2,
+    "list_start": [
+     [
+      1425.8,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -99.3
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6346.1
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2870.7,
+      82
+     ],
+     [
+      2870.7,
+      82
+     ],
+     [
+      2870.7,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1429.8,
+     2521.8
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1429.8,
+      2521.8,
+      2579491,
+      2860
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   },
+   {
+    "adc_complete": 184575.4,
+    "wt24": 1025.2,
+    "wt28": 1425.2,
+    "wt40": 2625.2,
+    "list_start": [
+     [
+      1425.8,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -99.3
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6346.1
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2870.7,
+      82
+     ],
+     [
+      2870.7,
+      82
+     ],
+     [
+      2870.7,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1429.8,
+     2521.8
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1429.8,
+      2521.8,
+      2579491,
+      2860
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  ]
+ },
+ "acq": {
+  "3730|flat_0us": {
+   "err": [],
+   "adc": 16,
+   "analysis": {
+    "adc_complete": 185079.1,
+    "wt24": 1026.5,
+    "wt28": 1426.5,
+    "wt40": 2626.5,
+    "list_start": [
+     [
+      1426.5,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -100.0
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6338.8
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2867.4,
+      82
+     ],
+     [
+      2867.4,
+      82
+     ],
+     [
+      2867.4,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1430.5,
+     2522.5
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1430.5,
+      2522.5,
+      2579491,
+      2860
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  },
+  "3730|manual_x0.8": {
+   "err": [],
+   "adc": 16,
+   "analysis": {
+    "adc_complete": 184464.9,
+    "wt24": 1026.2,
+    "wt28": 1426.2,
+    "wt40": 2626.2,
+    "list_start": [
+     [
+      1426.3,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -99.8
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6343.1
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2869.2,
+      82
+     ],
+     [
+      2869.2,
+      82
+     ],
+     [
+      2869.2,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1430.3,
+     2522.3
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  },
+  "4000|flat_0us": {
+   "err": [],
+   "adc": 16,
+   "analysis": {
+    "adc_complete": 185106.1,
+    "wt24": 999.5,
+    "wt28": 1399.5,
+    "wt40": 2599.5,
+    "list_start": [
+     [
+      1399.5,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -100.0
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6311.8
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2840.4,
+      82
+     ],
+     [
+      2840.4,
+      82
+     ],
+     [
+      2840.4,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1403.5,
+     2495.5
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1403.5,
+      2495.5,
+      2579491,
+      2860
+     ],
+     [
+      2844.4,
+      6236.4,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  },
+  "4000|manual_x0.8": {
+   "err": [],
+   "adc": 16,
+   "analysis": {
+    "adc_complete": 184491.9,
+    "wt24": 999.2,
+    "wt28": 1399.2,
+    "wt40": 2599.2,
+    "list_start": [
+     [
+      1399.3,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -99.8
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6316.1
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2842.2,
+      82
+     ],
+     [
+      2842.2,
+      82
+     ],
+     [
+      2842.2,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1403.3,
+     2495.3
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1403.3,
+      2495.3,
+      2579491,
+      2860
+     ],
+     [
+      2846.2,
+      6238.2,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  },
+  "4200|flat_0us": {
+   "err": [],
+   "adc": 16,
+   "analysis": {
+    "adc_complete": 185126.1,
+    "wt24": 979.5,
+    "wt28": 1379.5,
+    "wt40": 2579.5,
+    "list_start": [
+     [
+      1379.5,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -100.0
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6291.8
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2820.4,
+      82
+     ],
+     [
+      2820.4,
+      82
+     ],
+     [
+      2820.4,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1383.5,
+     2475.5
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1383.5,
+      2475.5,
+      2579491,
+      2860
+     ],
+     [
+      2824.4,
+      6216.4,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  },
+  "4200|manual_x0.8": {
+   "err": [],
+   "adc": 16,
+   "analysis": {
+    "adc_complete": 184511.9,
+    "wt24": 979.2,
+    "wt28": 1379.2,
+    "wt40": 2579.2,
+    "list_start": [
+     [
+      1379.3,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -99.8
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6296.1
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2822.2,
+      82
+     ],
+     [
+      2822.2,
+      82
+     ],
+     [
+      2822.2,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1383.3,
+     2475.3
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1383.3,
+      2475.3,
+      2579491,
+      2860
+     ],
+     [
+      2826.2,
+      6218.2,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  },
+  "4600|flat_0us": {
+   "err": [],
+   "adc": 16,
+   "analysis": {
+    "adc_complete": 185166.1,
+    "wt24": 939.5,
+    "wt28": 1339.5,
+    "wt40": 2539.5,
+    "list_start": [
+     [
+      1339.5,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -100.0
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6251.8
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2780.4,
+      82
+     ],
+     [
+      2780.4,
+      82
+     ],
+     [
+      2780.4,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1343.5,
+     2435.5
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1343.5,
+      2435.5,
+      2579491,
+      2860
+     ],
+     [
+      2784.4,
+      6176.4,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  },
+  "4600|manual_x0.8": {
+   "err": [],
+   "adc": 16,
+   "analysis": {
+    "adc_complete": 184551.9,
+    "wt24": 939.2,
+    "wt28": 1339.2,
+    "wt40": 2539.2,
+    "list_start": [
+     [
+      1339.3,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -99.8
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6256.1
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2782.2,
+      82
+     ],
+     [
+      2782.2,
+      82
+     ],
+     [
+      2782.2,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1343.3,
+     2435.3
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1343.3,
+      2435.3,
+      2579491,
+      2860
+     ],
+     [
+      2786.2,
+      6178.2,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  },
+  "4800|flat_0us": {
+   "err": [],
+   "adc": 16,
+   "analysis": {
+    "adc_complete": 185186.1,
+    "wt24": 919.5,
+    "wt28": 1319.5,
+    "wt40": 2519.5,
+    "list_start": [
+     [
+      1319.5,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -100.0
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6231.8
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2760.4,
+      82
+     ],
+     [
+      2760.4,
+      82
+     ],
+     [
+      2760.4,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1323.5,
+     2415.5
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1323.5,
+      2415.5,
+      2579491,
+      2860
+     ],
+     [
+      2764.4,
+      6156.4,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  },
+  "4800|manual_x0.8": {
+   "err": [],
+   "adc": 16,
+   "analysis": {
+    "adc_complete": 184571.9,
+    "wt24": 919.2,
+    "wt28": 1319.2,
+    "wt40": 2519.2,
+    "list_start": [
+     [
+      1319.3,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -99.8
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6236.1
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2762.2,
+      82
+     ],
+     [
+      2762.2,
+      82
+     ],
+     [
+      2762.2,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1323.3,
+     2415.3
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1323.3,
+      2415.3,
+      2579491,
+      2860
+     ],
+     [
+      2766.2,
+      6158.2,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  },
+  "5000|flat_0us": {
+   "err": [],
+   "adc": 16,
+   "analysis": {
+    "adc_complete": 185206.1,
+    "wt24": 899.5,
+    "wt28": 1299.5,
+    "wt40": 2499.5,
+    "list_start": [
+     [
+      1299.5,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -100.0
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6211.8
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2740.4,
+      82
+     ],
+     [
+      2740.4,
+      82
+     ],
+     [
+      2740.4,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1303.5,
+     2395.5
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1303.5,
+      2395.5,
+      2579491,
+      2860
+     ],
+     [
+      2744.4,
+      6136.4,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  },
+  "5000|manual_x0.8": {
+   "err": [],
+   "adc": 16,
+   "analysis": {
+    "adc_complete": 184591.9,
+    "wt24": 899.2,
+    "wt28": 1299.2,
+    "wt40": 2499.2,
+    "list_start": [
+     [
+      1299.3,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -99.8
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6216.1
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2742.2,
+      82
+     ],
+     [
+      2742.2,
+      82
+     ],
+     [
+      2742.2,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1303.3,
+     2395.3
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1303.3,
+      2395.3,
+      2579491,
+      2860
+     ],
+     [
+      2746.2,
+      6138.2,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  },
+  "5100|flat_0us": {
+   "err": [],
+   "adc": 16,
+   "analysis": {
+    "adc_complete": 185216.1,
+    "wt24": 889.5,
+    "wt28": 1289.5,
+    "wt40": 2489.5,
+    "list_start": [
+     [
+      1289.5,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -100.0
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6201.8
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2730.4,
+      82
+     ],
+     [
+      2730.4,
+      82
+     ],
+     [
+      2730.4,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1293.5,
+     2385.5
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1293.5,
+      2385.5,
+      2579491,
+      2860
+     ],
+     [
+      2734.4,
+      6126.4,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  },
+  "5100|manual_x0.8": {
+   "err": [],
+   "adc": 16,
+   "analysis": {
+    "adc_complete": 184601.9,
+    "wt24": 889.2,
+    "wt28": 1289.2,
+    "wt40": 2489.2,
+    "list_start": [
+     [
+      1289.3,
+      "S"
+     ]
+    ],
+    "list_dur": 1100.0,
+    "list_end_minus_wt40": [
+     -99.8
+    ],
+    "nextwaits_after_wt40": [
+     [
+      690,
+      6206.1
+     ]
+    ],
+    "gradstarts_after_wt40": [
+     [
+      2732.2,
+      82
+     ],
+     [
+      2732.2,
+      82
+     ],
+     [
+      2732.2,
+      82
+     ]
+    ],
+    "S_first_lobe_after_last_init_rel_complete": [
+     1293.3,
+     2385.3
+    ],
+    "terminal_S_busy_overlap_max_us": 0,
+    "S_lobes_all_after_last_init": [
+     [
+      1293.3,
+      2385.3,
+      2579491,
+      2860
+     ],
+     [
+      2736.2,
+      6128.2,
+      19200001,
+      6000
+     ]
+    ],
+    "overruns": [],
+    "ignored": [],
+    "issues": {
+     "S": 0,
+     "P": 0,
+     "R": 0
+    },
+    "err": []
+   }
+  },
+  "5500|flat_0us": {
+   "err": [
+    "V19 error E32"
+   ],
+   "adc": 0,
+   "analysis": {
+    "exc": "IndexError('list index out of range')"
+   }
+  },
+  "5500|manual_x0.8": {
+   "err": [
+    "V19 error E32"
+   ],
+   "adc": 0,
+   "analysis": {
+    "exc": "IndexError('list index out of range')"
+   }
+  },
+  "6000|flat_0us": {
+   "err": [
+    "V19 error E32"
+   ],
+   "adc": 0,
+   "analysis": {
+    "exc": "IndexError('list index out of range')"
+   }
+  },
+  "6000|manual_x0.8": {
+   "err": [
+    "V19 error E32"
+   ],
+   "adc": 0,
+   "analysis": {
+    "exc": "IndexError('list index out of range')"
+   }
+  },
+  "7500|flat_0us": {
+   "err": [
+    "V19 error E32"
+   ],
+   "adc": 0,
+   "analysis": {
+    "exc": "IndexError('list index out of range')"
+   }
+  },
+  "7500|manual_x0.8": {
+   "err": [
+    "V19 error E32"
+   ],
+   "adc": 0,
+   "analysis": {
+    "exc": "IndexError('list index out of range')"
+   }
+  }
+ }
+}

@@ -1,0 +1,612 @@
+{
+  "scope": "writer checks, not independent review or scanner verification",
+  "ppl_sha256": "3c90b80b31bf3cecfc38b8c1300061181fb3df0bcc3f60fb93027a45b6b51c7c",
+  "ppr_sha256": "ad82112ddfc7389a58caea6598cb5eb7583a271e71e62cd8c006190c52cdb159",
+  "reproducible": true,
+  "unsafe_protocols": {
+    "diffusion_flow_compensation": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "V181 DWI requires flow compensation off\n"
+      ]
+    },
+    "ramp_mismatch": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "diff_tramp (300 us) must equal tramp (200 us) for consistent DW timing\n"
+      ]
+    },
+    "ramp_too_short": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Independent crushers require ramp 100..1000 us, multiple of 10\n"
+      ]
+    },
+    "ramp_off_raster": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Independent crushers require ramp 100..1000 us, multiple of 10\n"
+      ]
+    },
+    "crusher_zero_duration": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "tcrush must be 1..5000 us and an exact multiple of tramp/50 us\n"
+      ]
+    },
+    "crusher_excessive_duration": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "tcrush must be 1..5000 us and an exact multiple of tramp/50 us\n"
+      ]
+    },
+    "first_crusher_zero_duration": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "diff_tcrush must be 1..10000 us and an exact multiple of tramp/50 us\n"
+      ]
+    },
+    "crusher_invalid_signed_DAC": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Crusher amplitudes must be -32767..32767 DAC\n"
+      ]
+    },
+    "crusher_amplitude_ceiling": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Crusher amplitude exceeds DAC/gradient ceiling\n"
+      ]
+    },
+    "crusher_slew_ceiling": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Crusher ramp exceeds slew ceiling\n"
+      ]
+    },
+    "invalid_amplitude_ceiling": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Crusher amplitude/slew ceilings must be positive\n"
+      ]
+    },
+    "invalid_slew_ceiling": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Crusher amplitude/slew ceilings must be positive\n"
+      ]
+    },
+    "invalid_schedule": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Invalid crusher schedule or additive step\n"
+      ]
+    },
+    "invalid_schedule_step": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Invalid crusher schedule or additive step\n"
+      ]
+    },
+    "custom_count_mismatch": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Custom crusher count must equal ETL and be 1..64\n"
+      ]
+    },
+    "custom_invalid_percentage": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Custom crusher storage contains invalid percentage\n"
+      ]
+    },
+    "schedule_without_independent_crushers": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Scheduled crushers require independent mode, DE OFF, no skipped echoes\n"
+      ]
+    },
+    "schedule_short_ADC": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "ADC window too short for scheduled crusher update\n"
+      ]
+    },
+    "driven_equilibrium": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Set Driven Equilibrium OFF when Diffusion is ON\n"
+      ]
+    },
+    "invalid_RF_gradient_lag": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Invalid independent-crusher RF timing\n"
+      ]
+    },
+    "invalid_diffusion_scale_low": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Invalid diffusion scale\n"
+      ]
+    },
+    "invalid_diffusion_scale_high": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Invalid diffusion scale\n"
+      ]
+    },
+    "invalid_direction_component": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Invalid diffusion direction\n"
+      ]
+    },
+    "nonunit_direction": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Row 0 not unit length: b-value mode needs\n",
+        "all directions normalised to 1000\n"
+      ]
+    },
+    "unachievable_b": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "b=30000 too high for current delta/Delta\n",
+        "Max b = 13342. Raise delta, Delta or grads\n"
+      ]
+    },
+    "invalid_views": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Views (including navigator) must be 1..1024; ETL must be 1..views\n"
+      ]
+    },
+    "invalid_ETL": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Views (including navigator) must be 1..1024; ETL must be 1..views\n"
+      ]
+    },
+    "navigator_without_imaging_views": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Navigator leaves no imaging views\n"
+      ]
+    },
+    "unsupported_DWI_PE_order": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Set PE order to 1, 5, 6 or 7 for DWI\n"
+      ]
+    },
+    "implicit_diffusion_TE": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Set TE explicitly when diffusion is on\n"
+      ]
+    },
+    "diffusion_TE_too_short": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "TE is too short, increase to 22 ms (=21392 us)\n"
+      ]
+    },
+    "diffusion_delta_outside_b_kernel": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "b-value mode needs delta <= 10 ms and Delta <= 80 ms\n"
+      ]
+    },
+    "diffusion_Delta_too_short": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "b=6000 too high for current delta/Delta\n",
+        "Max b = 1276. Raise delta, Delta or grads\n"
+      ]
+    },
+    "first_refocus_timer_overrange": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "b=6000 too high for current delta/Delta\n",
+        "Max b = 1069. Raise delta, Delta or grads\n"
+      ]
+    },
+    "new_first_read_DAC_ceiling": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "V181 first read prephase exceeds DAC\n"
+      ]
+    },
+    "new_first_read_slew_ceiling": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "V181 first read prephase exceeds slew\n"
+      ]
+    },
+    "new_intermediate_read_scale": {
+      "pass": true,
+      "RF": 0,
+      "ADC": 0,
+      "messages": [
+        "Reduce read grad comp\n"
+      ]
+    }
+  },
+  "schedules": {
+    "0": {
+      "manual_x0.8": {
+        "pass": true,
+        "RF": 18,
+        "ADC": 16,
+        "bad_flags": [],
+        "setup_ticks": 25592,
+        "messages": []
+      }
+    },
+    "1": {
+      "manual_x0.8": {
+        "pass": true,
+        "RF": 18,
+        "ADC": 16,
+        "bad_flags": [],
+        "setup_ticks": 25568,
+        "messages": []
+      }
+    },
+    "2": {
+      "manual_x0.8": {
+        "pass": true,
+        "RF": 18,
+        "ADC": 16,
+        "bad_flags": [],
+        "setup_ticks": 25568,
+        "messages": []
+      }
+    },
+    "3": {
+      "manual_x0.8": {
+        "pass": true,
+        "RF": 18,
+        "ADC": 16,
+        "bad_flags": [],
+        "setup_ticks": 25568,
+        "messages": []
+      }
+    },
+    "4": {
+      "manual_x0.8": {
+        "pass": true,
+        "RF": 18,
+        "ADC": 16,
+        "bad_flags": [],
+        "setup_ticks": 25568,
+        "messages": []
+      }
+    },
+    "5": {
+      "manual_x0.8": {
+        "pass": true,
+        "RF": 18,
+        "ADC": 16,
+        "bad_flags": [],
+        "setup_ticks": 25568,
+        "messages": []
+      }
+    }
+  },
+  "latency_sensitivity": {
+    "0": {
+      "manual_x0.8": {
+        "pass": true,
+        "bad_flags": []
+      }
+    },
+    "60": {
+      "manual_x0.8": {
+        "pass": false,
+        "bad_flags": [
+          {
+            "t_us": 96599.04,
+            "kind": "gradient",
+            "msg": "SetList on active channel R ignored",
+            "where": [
+              "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+              3995
+            ]
+          },
+          {
+            "t_us": 110861.18,
+            "kind": "gradient",
+            "msg": "SetList on active channel R ignored",
+            "where": [
+              "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+              3995
+            ]
+          },
+          {
+            "t_us": 124872.5,
+            "kind": "gradient",
+            "msg": "SetList on active channel R ignored",
+            "where": [
+              "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+              3995
+            ]
+          },
+          {
+            "t_us": 138883.82,
+            "kind": "gradient",
+            "msg": "SetList on active channel R ignored",
+            "where": [
+              "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+              3995
+            ]
+          },
+          {
+            "t_us": 152895.14,
+            "kind": "gradient",
+            "msg": "SetList on active channel R ignored",
+            "where": [
+              "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+              3995
+            ]
+          },
+          {
+            "t_us": 166906.46,
+            "kind": "gradient",
+            "msg": "SetList on active channel R ignored",
+            "where": [
+              "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+              3995
+            ]
+          },
+          {
+            "t_us": 180917.78,
+            "kind": "gradient",
+            "msg": "SetList on active channel R ignored",
+            "where": [
+              "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+              3995
+            ]
+          },
+          {
+            "t_us": 194929.1,
+            "kind": "gradient",
+            "msg": "SetList on active channel R ignored",
+            "where": [
+              "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+              3995
+            ]
+          },
+          {
+            "t_us": 204288.44,
+            "kind": "gradient",
+            "msg": "SetList on active channel R ignored",
+            "where": [
+              "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+              4310
+            ]
+          },
+          {
+            "t_us": 2046658.64,
+            "kind": "gradient",
+            "msg": "SetList on active channel R ignored",
+            "where": [
+              "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+              3766
+            ]
+          },
+          {
+            "t_us": 2096710.64,
+            "kind": "gradient",
+            "msg": "SetList on active channel R ignored",
+            "where": [
+              "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+              3995
+            ]
+          },
+          {
+            "t_us": 2110972.78,
+            "kind": "gradient",
+            "msg": "SetList on active channel R ignored",
+            "where": [
+              "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+              3995
+            ]
+          },
+          {
+            "t_us": 2124984.1,
+            "kind": "gradient",
+            "msg": "SetList on active channel R ignored",
+            "where": [
+              "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+              3995
+            ]
+          },
+          {
+            "t_us": 2138995.42,
+            "kind": "gradient",
+            "msg": "SetList on active channel R ignored",
+            "where": [
+              "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+              3995
+            ]
+          },
+          {
+            "t_us": 2153006.74,
+            "kind": "gradient",
+            "msg": "SetList on active channel R ignored",
+            "where": [
+              "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+              3995
+            ]
+          },
+          {
+            "t_us": 2167018.06,
+            "kind": "gradient",
+            "msg": "SetList on active channel R ignored",
+            "where": [
+              "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+              3995
+            ]
+          },
+          {
+            "t_us": 2181029.38,
+            "kind": "gradient",
+            "msg": "SetList on active channel R ignored",
+            "where": [
+              "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+              3995
+            ]
+          },
+          {
+            "t_us": 2195040.7,
+            "kind": "gradient",
+            "msg": "SetList on active channel R ignored",
+            "where": [
+              "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+              3995
+            ]
+          },
+          {
+            "t_us": 2204400.04,
+            "kind": "gradient",
+            "msg": "SetList on active channel R ignored",
+            "where": [
+              "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+              4310
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "relocation_area": {
+    "negative_secondary_ramp_sums": {
+      "0_mn_sec": -819175,
+      "mn_0_sec": -819175,
+      "0_mx_sec": 819175,
+      "mx_0_sec": 834904
+    },
+    "negative_ramp_exact_unit_factor": -1.0,
+    "old_read_prephase_DAC_us": -2667000,
+    "new_read_prephase_DAC_us": 2666700,
+    "desired_path_area_error_DAC_us": -300,
+    "desired_path_area_error_cycles_m": -0.23298135319071014,
+    "ADC_effective_read_moments": [
+      {
+        "ADC": "ADC1",
+        "time_from_excitation_us": 54043.020000000375,
+        "effective_read_cycles_m": -35.403857579722654
+      },
+      {
+        "ADC": "ADC2",
+        "time_from_excitation_us": 68054.34000000064,
+        "effective_read_cycles_m": -34.005899780190795
+      },
+      {
+        "ADC": "ADC3",
+        "time_from_excitation_us": 82065.66000000088,
+        "effective_read_cycles_m": -35.40385757972334
+      },
+      {
+        "ADC": "ADC4",
+        "time_from_excitation_us": 96076.98000000088,
+        "effective_read_cycles_m": -34.00589978018357
+      },
+      {
+        "ADC": "ADC5",
+        "time_from_excitation_us": 110088.30000000089,
+        "effective_read_cycles_m": -35.403857579730214
+      },
+      {
+        "ADC": "ADC6",
+        "time_from_excitation_us": 124099.6200000009,
+        "effective_read_cycles_m": -34.00589978018428
+      },
+      {
+        "ADC": "ADC7",
+        "time_from_excitation_us": 138110.9400000009,
+        "effective_read_cycles_m": -35.403857579731294
+      },
+      {
+        "ADC": "ADC8",
+        "time_from_excitation_us": 152122.2600000009,
+        "effective_read_cycles_m": -34.00589978018248
+      }
+    ]
+  },
+  "all_pass": false
+}

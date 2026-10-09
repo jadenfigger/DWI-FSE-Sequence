@@ -1,0 +1,720 @@
+{
+ "old_sha256": "9fca0a13eb773d0e06d7bde0175dff4a3cd84d705db4211717fee9d23168f8b1",
+ "new_sha256": "545a14ec8c65ed578ea76628796547dd463eb8cd4a2efa680de89058a837de69",
+ "ppr_sha256": "ad82112ddfc7389a58caea6598cb5eb7583a271e71e62cd8c006190c52cdb159",
+ "rf_latency_us": 3.0,
+ "cases": {
+  "default_6shots/flat_0us": {
+   "overrides": {},
+   "shots_requested": 6,
+   "identical_except_listed": [
+    "grad_sel",
+    "mats_excl_mtc"
+   ],
+   "rf": [
+    54,
+    54
+   ],
+   "adc": [
+    48,
+    48
+   ],
+   "t_end": [
+    12001452.2,
+    12001452.2
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ]
+  },
+  "default_6shots/flat_0.5us": {
+   "overrides": {},
+   "shots_requested": 6,
+   "identical_except_listed": [
+    "grad_sel",
+    "mats_excl_mtc"
+   ],
+   "rf": [
+    54,
+    54
+   ],
+   "adc": [
+    48,
+    48
+   ],
+   "t_end": [
+    12003052.2,
+    12003052.2
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ]
+  },
+  "default_6shots/flat_1us": {
+   "overrides": {},
+   "shots_requested": 6,
+   "identical_except_listed": [
+    "grad_sel",
+    "mats_excl_mtc"
+   ],
+   "rf": [
+    54,
+    54
+   ],
+   "adc": [
+    48,
+    48
+   ],
+   "t_end": [
+    12004652.2,
+    12004652.2
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ]
+  },
+  "default_6shots/flat_2us": {
+   "overrides": {},
+   "shots_requested": 6,
+   "identical_except_listed": [
+    "grad_sel",
+    "mats_excl_mtc"
+   ],
+   "rf": [
+    54,
+    54
+   ],
+   "adc": [
+    48,
+    48
+   ],
+   "t_end": [
+    12007852.2,
+    12007852.2
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ]
+  },
+  "default_6shots/manual_x0.8": {
+   "overrides": {},
+   "shots_requested": 6,
+   "identical_except_listed": [
+    "rf_events",
+    "rf_level",
+    "adc",
+    "misc",
+    "flags",
+    "grad_starts",
+    "grad_sel",
+    "grad_clock",
+    "grad_channels",
+    "mats_excl_mtc",
+    "t_end"
+   ],
+   "rf": [
+    54,
+    54
+   ],
+   "adc": [
+    48,
+    48
+   ],
+   "t_end": [
+    12036057.96,
+    12036062.68
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ]
+  },
+  "default_6shots/manual_x0.9": {
+   "overrides": {},
+   "shots_requested": 6,
+   "identical_except_listed": [
+    "rf_events",
+    "rf_level",
+    "adc",
+    "misc",
+    "flags",
+    "grad_starts",
+    "grad_sel",
+    "grad_clock",
+    "grad_channels",
+    "mats_excl_mtc",
+    "t_end"
+   ],
+   "rf": [
+    54,
+    54
+   ],
+   "adc": [
+    48,
+    48
+   ],
+   "t_end": [
+    12040383.68,
+    12040388.99
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ]
+  },
+  "default_6shots/manual_x1.0": {
+   "overrides": {},
+   "shots_requested": 6,
+   "identical_except_listed": [
+    "rf_events",
+    "rf_level",
+    "adc",
+    "misc",
+    "flags",
+    "grad_starts",
+    "grad_sel",
+    "grad_clock",
+    "grad_channels",
+    "mats_excl_mtc",
+    "t_end"
+   ],
+   "rf": [
+    54,
+    54
+   ],
+   "adc": [
+    48,
+    48
+   ],
+   "t_end": [
+    12044709.4,
+    12044715.3
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ]
+  },
+  "default_6shots/manual_x0.8_plus_0.5us_stmt": {
+   "overrides": {},
+   "shots_requested": 6,
+   "identical_except_listed": [
+    "rf_events",
+    "rf_level",
+    "adc",
+    "misc",
+    "flags",
+    "grad_starts",
+    "grad_sel",
+    "grad_clock",
+    "grad_channels",
+    "mats_excl_mtc",
+    "t_end"
+   ],
+   "rf": [
+    54,
+    54
+   ],
+   "adc": [
+    48,
+    48
+   ],
+   "t_end": [
+    12037657.96,
+    12037662.68
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ]
+  },
+  "imaging_2shots/flat_0us": {
+   "overrides": {
+    "no_disacq": 0,
+    "nav_on": 0,
+    "no_views": 128
+   },
+   "shots_requested": 2,
+   "identical_except_listed": [
+    "grad_sel",
+    "mats_excl_mtc"
+   ],
+   "rf": [
+    18,
+    18
+   ],
+   "adc": [
+    16,
+    16
+   ],
+   "t_end": [
+    4002441.0,
+    4002441.0
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ]
+  },
+  "imaging_2shots/flat_0.5us": {
+   "overrides": {
+    "no_disacq": 0,
+    "nav_on": 0,
+    "no_views": 128
+   },
+   "shots_requested": 2,
+   "identical_except_listed": [
+    "grad_sel",
+    "mats_excl_mtc"
+   ],
+   "rf": [
+    18,
+    18
+   ],
+   "adc": [
+    16,
+    16
+   ],
+   "t_end": [
+    4003428.5,
+    4003428.5
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ]
+  },
+  "imaging_2shots/flat_1us": {
+   "overrides": {
+    "no_disacq": 0,
+    "nav_on": 0,
+    "no_views": 128
+   },
+   "shots_requested": 2,
+   "identical_except_listed": [
+    "grad_sel",
+    "mats_excl_mtc"
+   ],
+   "rf": [
+    18,
+    18
+   ],
+   "adc": [
+    16,
+    16
+   ],
+   "t_end": [
+    4004416.0,
+    4004416.0
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ]
+  },
+  "imaging_2shots/flat_2us": {
+   "overrides": {
+    "no_disacq": 0,
+    "nav_on": 0,
+    "no_views": 128
+   },
+   "shots_requested": 2,
+   "identical_except_listed": [
+    "grad_sel",
+    "mats_excl_mtc"
+   ],
+   "rf": [
+    18,
+    18
+   ],
+   "adc": [
+    16,
+    16
+   ],
+   "t_end": [
+    4006391.0,
+    4006391.0
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ]
+  },
+  "imaging_2shots/manual_x0.8": {
+   "overrides": {
+    "no_disacq": 0,
+    "nav_on": 0,
+    "no_views": 128
+   },
+   "shots_requested": 2,
+   "identical_except_listed": [
+    "rf_events",
+    "rf_level",
+    "adc",
+    "misc",
+    "flags",
+    "grad_starts",
+    "grad_sel",
+    "grad_clock",
+    "grad_channels",
+    "mats_excl_mtc",
+    "t_end"
+   ],
+   "rf": [
+    18,
+    18
+   ],
+   "adc": [
+    16,
+    16
+   ],
+   "t_end": [
+    4035588.04,
+    4035592.76
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ]
+  },
+  "imaging_2shots/manual_x0.9": {
+   "overrides": {
+    "no_disacq": 0,
+    "nav_on": 0,
+    "no_views": 128
+   },
+   "shots_requested": 2,
+   "identical_except_listed": [
+    "rf_events",
+    "rf_level",
+    "adc",
+    "misc",
+    "flags",
+    "grad_starts",
+    "grad_sel",
+    "grad_clock",
+    "grad_channels",
+    "mats_excl_mtc",
+    "t_end"
+   ],
+   "rf": [
+    18,
+    18
+   ],
+   "adc": [
+    16,
+    16
+   ],
+   "t_end": [
+    4039731.42,
+    4039736.73
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ]
+  },
+  "imaging_2shots/manual_x1.0": {
+   "overrides": {
+    "no_disacq": 0,
+    "nav_on": 0,
+    "no_views": 128
+   },
+   "shots_requested": 2,
+   "identical_except_listed": [
+    "rf_events",
+    "rf_level",
+    "adc",
+    "misc",
+    "flags",
+    "grad_starts",
+    "grad_sel",
+    "grad_clock",
+    "grad_channels",
+    "mats_excl_mtc",
+    "t_end"
+   ],
+   "rf": [
+    18,
+    18
+   ],
+   "adc": [
+    16,
+    16
+   ],
+   "t_end": [
+    4043874.8,
+    4043880.7
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ]
+  },
+  "imaging_2shots/manual_x0.8_plus_0.5us_stmt": {
+   "overrides": {
+    "no_disacq": 0,
+    "nav_on": 0,
+    "no_views": 128
+   },
+   "shots_requested": 2,
+   "identical_except_listed": [
+    "rf_events",
+    "rf_level",
+    "adc",
+    "misc",
+    "flags",
+    "grad_starts",
+    "grad_sel",
+    "grad_clock",
+    "grad_channels",
+    "mats_excl_mtc",
+    "t_end"
+   ],
+   "rf": [
+    18,
+    18
+   ],
+   "adc": [
+    16,
+    16
+   ],
+   "t_end": [
+    4036575.54,
+    4036580.26
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ]
+  },
+  "diff_off/flat_0us": {
+   "overrides": {
+    "diff_on": 0
+   },
+   "shots_requested": 2,
+   "identical_except_listed": [],
+   "rf": [
+    18,
+    18
+   ],
+   "adc": [
+    16,
+    16
+   ],
+   "t_end": [
+    4002512.9,
+    4002512.9
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ]
+  },
+  "diff_off/manual_x0.8": {
+   "overrides": {
+    "diff_on": 0
+   },
+   "shots_requested": 2,
+   "identical_except_listed": [
+    "rf_events",
+    "rf_level",
+    "adc",
+    "misc",
+    "flags",
+    "grad_starts",
+    "grad_sel",
+    "grad_clock",
+    "grad_channels",
+    "mats_excl_mtc",
+    "t_end"
+   ],
+   "rf": [
+    18,
+    18
+   ],
+   "adc": [
+    16,
+    16
+   ],
+   "t_end": [
+    4035323.46,
+    4035327.38
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ]
+  },
+  "mtc_on/flat_0us": {
+   "overrides": {
+    "mtc_on": 1
+   },
+   "shots_requested": 2,
+   "identical_except_listed": [
+    "misc",
+    "printf",
+    "shots",
+    "t_end"
+   ],
+   "rf": [
+    0,
+    0
+   ],
+   "adc": [
+    0,
+    0
+   ],
+   "t_end": [
+    8122.9,
+    2378.3
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ],
+   "printf_tail": [
+    [
+     [
+      8122.9,
+      "V181 CEST/MTC not supported\n"
+     ]
+    ],
+    [
+     [
+      2378.3,
+      "V181 CEST/MTC not supported\n"
+     ]
+    ]
+   ]
+  },
+  "mtc_on/manual_x0.8": {
+   "overrides": {
+    "mtc_on": 1
+   },
+   "shots_requested": 2,
+   "identical_except_listed": [
+    "misc",
+    "printf",
+    "shots",
+    "t_end"
+   ],
+   "rf": [
+    0,
+    0
+   ],
+   "adc": [
+    0,
+    0
+   ],
+   "t_end": [
+    40817.62,
+    34211.82
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ],
+   "printf_tail": [
+    [
+     [
+      40817.6,
+      "V181 CEST/MTC not supported\n"
+     ]
+    ],
+    [
+     [
+      34211.8,
+      "V181 CEST/MTC not supported\n"
+     ]
+    ]
+   ]
+  },
+  "flow_comp_dwi/flat_0us": {
+   "overrides": {
+    "flow_comp_on": 1
+   },
+   "shots_requested": 1,
+   "identical_except_listed": [
+    "misc",
+    "printf",
+    "t_end"
+   ],
+   "rf": [
+    0,
+    0
+   ],
+   "adc": [
+    0,
+    0
+   ],
+   "t_end": [
+    2414.1,
+    2391.4
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ],
+   "printf_tail": [
+    [
+     [
+      2414.1,
+      "V181 DWI requires flow compensation off\n"
+     ]
+    ],
+    [
+     [
+      2391.4,
+      "V181 DWI requires flow compensation off\n"
+     ]
+    ]
+   ]
+  },
+  "flow_comp_dwi/manual_x0.8": {
+   "overrides": {
+    "flow_comp_on": 1
+   },
+   "shots_requested": 1,
+   "identical_except_listed": [
+    "misc",
+    "printf",
+    "t_end"
+   ],
+   "rf": [
+    0,
+    0
+   ],
+   "adc": [
+    0,
+    0
+   ],
+   "t_end": [
+    34529.38,
+    34481.32
+   ],
+   "mtc_mat_present": [
+    false,
+    false
+   ],
+   "printf_tail": [
+    [
+     [
+      34529.4,
+      "V181 DWI requires flow compensation off\n"
+     ]
+    ],
+    [
+     [
+      34481.3,
+      "V181 DWI requires flow compensation off\n"
+     ]
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+  "v181": {
+    "builder_sha256": "7c3cde764a0ac9103f780f9e4255488dae8209c1b49c5d3bdef73d147b987974",
+    "exact_regeneration": [
+      true,
+      true
+    ],
+    "ppl_sha256": "48d11db6819358e0bfe2fb62c2d48e42ab28d1ab21cd935aa6d4b68d48fd5245",
+    "ppr_sha256": "ad82112ddfc7389a58caea6598cb5eb7583a271e71e62cd8c006190c52cdb159",
+    "expected_shas": [
+      "48d11db6819358e0bfe2fb62c2d48e42ab28d1ab21cd935aa6d4b68d48fd5245",
+      "ad82112ddfc7389a58caea6598cb5eb7583a271e71e62cd8c006190c52cdb159"
+    ],
+    "ppr_first_line": ":PPL G:\\J_Figger\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl"
+  },
+  "v1911": {
+    "builder_sha256": "d26494d767319437d76b345103bac0f70a8916d9e1464c035fefd5ae885ca96d",
+    "exact_regeneration": [
+      true,
+      true
+    ],
+    "ppl_sha256": "33e7d07353078505a19d447b4cfc47bee45f16e821f9d593303f1077e6847189",
+    "ppr_sha256": "b2976e7464367a7aa6b6b8e04765cc04a3fd85c0d2ec64c9c9a57963bf9635c2",
+    "expected_shas": [
+      "33e7d07353078505a19d447b4cfc47bee45f16e821f9d593303f1077e6847189",
+      "b2976e7464367a7aa6b6b8e04765cc04a3fd85c0d2ec64c9c9a57963bf9635c2"
+    ],
+    "ppr_first_line": ":PPL FSE_dwi_CPMG_non_CPMG_twoTE-1.911.ppl"
+  }
+}

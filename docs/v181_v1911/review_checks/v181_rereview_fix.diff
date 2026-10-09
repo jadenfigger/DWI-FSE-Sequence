@@ -1,0 +1,108 @@
+@@ -2106,6 +2106,12 @@
+ 		if (report_on==1) printf("Crusher update max=%ld ticks; reserved extra=10000 ticks\n",crusher_update_max_ticks);
+ 	}
+ 
++	// V181: the relocated read prephase is not a flow-compensated waveform.
++	if ((diff_on==1)&&(flow_comp_on!=0))
++	{ printf("V181 DWI requires flow compensation off\n"); goto end; }
++	if (mtc_on!=0)
++	{ printf("V181 CEST/MTC not supported\n"); goto end; }
++
+ #ifdef VALIDATOR
+ 	if (validate==1)
+ 	{
+@@ -2406,11 +2412,7 @@
+ 		goto end;
+ 	}
+ 	
+-	// V181: the relocated read prephase is not a flow-compensated waveform.
+-	if ((diff_on==1)&&(flow_comp_on!=0))
+-	{ printf("V181 DWI requires flow compensation off\n"); goto end; }
+ 	// Set diffusion gradient strengths according to matrix directions, assume matrix is normalized to a value of 1000.
+-
+ 	tcrush1 = tcrush;
+ 	// Check if the diffusion gradients are zero; if they are, we switch the diffusion part off
+ 	diff_non_zero = 0;
+@@ -2601,6 +2603,7 @@
+ #endif
+ 
+     if(mtc_on){
++		goto end;
+ #ifdef MTC
+         frequency_buffer(5);   
+         frequency(MHz, kHz, Hz, rx1MHz);
+@@ -3177,13 +3180,12 @@
+ 	   10+ ms per slice. Diffusion mode now flows through the ENTIRE legacy
+ 	   overhead chain; only the part-1 term above differs. */
+ 	\\printf("tr_min = %ld\n",tr_min);
+-	if (mtc_on!=0)
+-	{ printf("V181 CEST/MTC not supported\n"); goto end; }
+ 	
+ 	
+ 	templ1 = (no_cest_pulses*tselmtcl + (no_cest_pulses-1)*IntToLong(inter_cest_delay)*1000L + IntToLong(mtc_tcrush+2*tramp) + IntToLong(post_cest_delay)*1000L);	
+ 	// Calculate the inter-CEST-pulse delay 
+     if(mtc_on){
++		goto end;
+ #ifdef MTC
+ 		// Should remain in us!
+ 		tr_min = tr_min + templ1;
+@@ -3337,6 +3339,26 @@
+ 		grp_dp = -gr_flow;
+ 	}
+ 	
++	// V181: an RF conjugates the old negative read prephase. Play its
++	// positive equivalent in the first read-list prelude after diffusion.
++	// Both use the same secondary ramp samples; only the plateau changes.
++	// Checked before the validate exit so validate and played paths agree.
++	v181_first_read_dp=gr_dp;
++	if (diff_on==1)
++	{
++		templ1=IntToLong(grp_dp)*(IntToLong(tref)+IntToLong(tramp));
++		templ1=templ1/(IntToLong(tdp)+IntToLong(tramp));
++		if ((templ1<-32767L)||(templ1>32767L))
++		{ printf("V181 read relocation scale outside DAC\n"); goto end; }
++		templ2=IntToLong(gr_dp)-templ1;
++		if (templ2<0L) templ2=0L-templ2;
++		if ((templ2>32767L)||(templ2>IntToLong(crusher_max_dac)))
++		{ printf("V181 first read prephase exceeds DAC\n"); goto end; }
++		if (templ2*100L>IntToLong(crusher_slew_dac_100us)*IntToLong(tramp))
++		{ printf("V181 first read prephase exceeds slew\n"); goto end; }
++		v181_first_read_dp=gr_dp-scale(grp_dp,tref+tramp,tdp+tramp);
++	}
++
+ #ifdef VALIDATOR
+ 	if (validate==1)
+ 	{
+@@ -3361,24 +3383,6 @@
+ 	// Long multiplication and the echo branch must NOT follow gettimer()+250.
+ 	post_adc_base_ticks=te_balance_bl_temp2*10L;
+ 	post_adc_train_ticks=(te_balance_bl_temp2+te_balance_bl_esp+IntToLong(crush_post_pad-crush_pre_pad))*10L;
+-	// V181: an RF conjugates the old negative read prephase. Play its
+-	// positive equivalent in the first read-list prelude after diffusion.
+-	// Both use the same secondary ramp samples; only the plateau changes.
+-	v181_first_read_dp=gr_dp;
+-	if (diff_on==1)
+-	{
+-		templ1=IntToLong(grp_dp)*(IntToLong(tref)+IntToLong(tramp));
+-		templ1=templ1/(IntToLong(tdp)+IntToLong(tramp));
+-		if ((templ1<-32767L)||(templ1>32767L))
+-		{ printf("V181 read relocation scale outside DAC\n"); goto end; }
+-		templ2=IntToLong(gr_dp)-templ1;
+-		if (templ2<0L) templ2=0L-templ2;
+-		if ((templ2>32767L)||(templ2>IntToLong(crusher_max_dac)))
+-		{ printf("V181 first read prephase exceeds DAC\n"); goto end; }
+-		if (templ2*100L>IntToLong(crusher_slew_dac_100us)*IntToLong(tramp))
+-		{ printf("V181 first read prephase exceeds slew\n"); goto end; }
+-		v181_first_read_dp=gr_dp-scale(grp_dp,tref+tramp,tdp+tramp);
+-	}
+ 	G1 = grp_dp; /* if flow_comp_on = 0 */
+ 	if (diff_on==1) G1=0;
+ 
+@@ -3561,6 +3565,7 @@
+ 	MR3040_Clock(clock);
+ 	
+     if(mtc_on){
++		goto end;
+ #ifdef MTC
+ 		cest_count = 0;								\\ CEST pulse loop counter
+ 		cest_loop:

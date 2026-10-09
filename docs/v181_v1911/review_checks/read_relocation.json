@@ -1,0 +1,2417 @@
+{
+  "scope": "Exact PWC primary all-transverse conventional spin-echo path. Finite RF, other histories and diffusion during RF excluded.",
+  "runs": {
+    "v18": {
+      "0": {
+        "inputs": {
+          "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl",
+          "ppl_sha256": "3b420376331e918b4c864e9b37937ef35fd9f49066b8d6402e44aae9da598db2",
+          "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test1e\\FSE-DWI_10-05-2026_v18_test1.ppr",
+          "ppr_sha256": "84611fcb854deab5e9e7110aa7fdd68cfed25ba17d988231ab092c51a66b8fbc",
+          "includes": {
+            "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+            "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+            "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+            "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+            "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+            "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+          },
+          "libraries": {
+            "pf1": {
+              "file": "scanner/utilities/rfstd44.seq",
+              "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+            },
+            "pf7": {
+              "file": "scanner/utilities/gs_240hz.seq",
+              "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+            },
+            "pf8": {
+              "file": "scanner/utilities/presat.seq",
+              "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+            },
+            "pf10": {
+              "file": "scanner/utilities/opt90_a.seq",
+              "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+            },
+            "pf11": {
+              "file": "scanner/utilities/opt90_as.seq",
+              "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+            },
+            "pf12": {
+              "file": "scanner/utilities/asym.seq",
+              "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+            },
+            "pf14": {
+              "file": "scanner/utilities/hypsec.seq",
+              "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+            },
+            "pf15": {
+              "file": "scanner/utilities/rfchess.seq",
+              "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+            },
+            "pf16": {
+              "file": "scanner/utilities/9lobsinb.seq",
+              "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+            },
+            "pf17": {
+              "file": "scanner/utilities/19lobsinb.seq",
+              "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+            },
+            "grad": {
+              "file": "scanner/utilities/g3040_15.seq",
+              "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+            }
+          },
+          "overrides": {
+            "acq_b": [
+              0,
+              1000,
+              6000
+            ]
+          },
+          "unused_ppr_params": [],
+          "assumptions": [
+            "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+            "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+            "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+            "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+            "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+            "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+            "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+            "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+            "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+            "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+            "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+            "hostrequest() returns 1 (no host update).",
+            "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+            "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+            "input#n reads 0 (no gating/mains trigger hardware).",
+            "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+          ],
+          "stmt_cost_us": 0.0,
+          "manual_expression_costs": true,
+          "manual_expression_cost_scale": 0.8
+        },
+        "echoes": [
+          {
+            "echo": 1,
+            "k_cycles_m_SPR": [
+              8.495038741859167,
+              0.0,
+              -0.9226173074966937
+            ],
+            "B_s_mm2_SPR": [
+              [
+                3.772959613406515,
+                0.0,
+                1.5738177718887256
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.5738177718887256,
+                0.0,
+                8.246832368530647
+              ]
+            ],
+            "trace_s_mm2": 12.019791981937162
+          },
+          {
+            "echo": 2,
+            "k_cycles_m_SPR": [
+              -4.152722597256906,
+              0.0,
+              0.00937778565184999
+            ],
+            "B_s_mm2_SPR": [
+              [
+                4.871524848229287,
+                0.0,
+                2.371338458727041
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                2.371338458727041,
+                0.0,
+                9.772639619339
+              ]
+            ],
+            "trace_s_mm2": 14.644164467568286
+          },
+          {
+            "echo": 3,
+            "k_cycles_m_SPR": [
+              8.495038741859283,
+              0.0,
+              -0.9226173074966937
+            ],
+            "B_s_mm2_SPR": [
+              [
+                5.979890797341605,
+                0.0,
+                3.1791451868613443
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                3.1791451868613443,
+                0.0,
+                11.296877725483588
+              ]
+            ],
+            "trace_s_mm2": 17.276768522825193
+          },
+          {
+            "echo": 4,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.009377785660035443
+            ],
+            "B_s_mm2_SPR": [
+              [
+                7.078456032164087,
+                0.0,
+                3.9766658736993405
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                3.9766658736993405,
+                0.0,
+                12.82268497629155
+              ]
+            ],
+            "trace_s_mm2": 19.901141008455635
+          },
+          {
+            "echo": 5,
+            "k_cycles_m_SPR": [
+              8.495038741859737,
+              0.0,
+              -0.9226173075048791
+            ],
+            "B_s_mm2_SPR": [
+              [
+                8.186821981276701,
+                0.0,
+                4.7844726018339525
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                4.7844726018339525,
+                0.0,
+                14.346923082436025
+              ]
+            ],
+            "trace_s_mm2": 22.533745063712725
+          },
+          {
+            "echo": 6,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.009377785660035443
+            ],
+            "B_s_mm2_SPR": [
+              [
+                9.285387216099183,
+                0.0,
+                5.581993288671955
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                5.581993288671955,
+                0.0,
+                15.872730333243993
+              ]
+            ],
+            "trace_s_mm2": 25.158117549343174
+          },
+          {
+            "echo": 7,
+            "k_cycles_m_SPR": [
+              8.495038741859737,
+              0.0,
+              -0.9226173075048791
+            ],
+            "B_s_mm2_SPR": [
+              [
+                10.393753165211782,
+                0.0,
+                6.38980001680656
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                6.38980001680656,
+                0.0,
+                17.396968439388466
+              ]
+            ],
+            "trace_s_mm2": 27.79072160460025
+          },
+          {
+            "echo": 8,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.009377785660035443
+            ],
+            "B_s_mm2_SPR": [
+              [
+                11.492318400034446,
+                0.0,
+                7.187320703644566
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                7.187320703644566,
+                0.0,
+                18.92277569019644
+              ]
+            ],
+            "trace_s_mm2": 30.415094090230884
+          }
+        ]
+      },
+      "100": {
+        "inputs": {
+          "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl",
+          "ppl_sha256": "3b420376331e918b4c864e9b37937ef35fd9f49066b8d6402e44aae9da598db2",
+          "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test1e\\FSE-DWI_10-05-2026_v18_test1.ppr",
+          "ppr_sha256": "84611fcb854deab5e9e7110aa7fdd68cfed25ba17d988231ab092c51a66b8fbc",
+          "includes": {
+            "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+            "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+            "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+            "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+            "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+            "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+          },
+          "libraries": {
+            "pf1": {
+              "file": "scanner/utilities/rfstd44.seq",
+              "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+            },
+            "pf7": {
+              "file": "scanner/utilities/gs_240hz.seq",
+              "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+            },
+            "pf8": {
+              "file": "scanner/utilities/presat.seq",
+              "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+            },
+            "pf10": {
+              "file": "scanner/utilities/opt90_a.seq",
+              "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+            },
+            "pf11": {
+              "file": "scanner/utilities/opt90_as.seq",
+              "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+            },
+            "pf12": {
+              "file": "scanner/utilities/asym.seq",
+              "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+            },
+            "pf14": {
+              "file": "scanner/utilities/hypsec.seq",
+              "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+            },
+            "pf15": {
+              "file": "scanner/utilities/rfchess.seq",
+              "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+            },
+            "pf16": {
+              "file": "scanner/utilities/9lobsinb.seq",
+              "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+            },
+            "pf17": {
+              "file": "scanner/utilities/19lobsinb.seq",
+              "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+            },
+            "grad": {
+              "file": "scanner/utilities/g3040_15.seq",
+              "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+            }
+          },
+          "overrides": {
+            "acq_b": [
+              100,
+              1000,
+              6000
+            ]
+          },
+          "unused_ppr_params": [],
+          "assumptions": [
+            "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+            "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+            "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+            "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+            "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+            "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+            "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+            "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+            "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+            "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+            "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+            "hostrequest() returns 1 (no host update).",
+            "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+            "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+            "input#n reads 0 (no gating/mains trigger hardware).",
+            "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+          ],
+          "stmt_cost_us": 0.0,
+          "manual_expression_costs": true,
+          "manual_expression_cost_scale": 0.8
+        },
+        "echoes": [
+          {
+            "echo": 1,
+            "k_cycles_m_SPR": [
+              8.495038741859167,
+              0.0,
+              -0.9226173074825965
+            ],
+            "B_s_mm2_SPR": [
+              [
+                3.772959613406515,
+                0.0,
+                7.435227032293635
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                7.435227032293635,
+                0.0,
+                161.24988395567894
+              ]
+            ],
+            "trace_s_mm2": 165.02284356908547
+          },
+          {
+            "echo": 2,
+            "k_cycles_m_SPR": [
+              -4.152722597256906,
+              0.0,
+              0.009377785637752822
+            ],
+            "B_s_mm2_SPR": [
+              [
+                4.871524848229287,
+                0.0,
+                8.232747719131948
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                8.232747719131948,
+                0.0,
+                162.77569120648548
+              ]
+            ],
+            "trace_s_mm2": 167.64721605471476
+          },
+          {
+            "echo": 3,
+            "k_cycles_m_SPR": [
+              8.495038741859283,
+              0.0,
+              -0.9226173074825965
+            ],
+            "B_s_mm2_SPR": [
+              [
+                5.979890797341605,
+                0.0,
+                9.040554447266258
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                9.040554447266258,
+                0.0,
+                164.29992931263
+              ]
+            ],
+            "trace_s_mm2": 170.2798201099716
+          },
+          {
+            "echo": 4,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.009377785637752822
+            ],
+            "B_s_mm2_SPR": [
+              [
+                7.078456032164087,
+                0.0,
+                9.83807513410426
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                9.83807513410426,
+                0.0,
+                165.82573656343655
+              ]
+            ],
+            "trace_s_mm2": 172.90419259560065
+          },
+          {
+            "echo": 5,
+            "k_cycles_m_SPR": [
+              8.495038741859737,
+              0.0,
+              -0.9226173074825965
+            ],
+            "B_s_mm2_SPR": [
+              [
+                8.186821981276701,
+                0.0,
+                10.645881862238875
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                10.645881862238875,
+                0.0,
+                167.3499746695867
+              ]
+            ],
+            "trace_s_mm2": 175.53679665086338
+          },
+          {
+            "echo": 6,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.009377785637752822
+            ],
+            "B_s_mm2_SPR": [
+              [
+                9.285387216099183,
+                0.0,
+                11.443402549076879
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                11.443402549076879,
+                0.0,
+                168.87578192039317
+              ]
+            ],
+            "trace_s_mm2": 178.16116913649236
+          },
+          {
+            "echo": 7,
+            "k_cycles_m_SPR": [
+              8.495038741859737,
+              0.0,
+              -0.9226173074825965
+            ],
+            "B_s_mm2_SPR": [
+              [
+                10.393753165211782,
+                0.0,
+                12.251209277211514
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                12.251209277211514,
+                0.0,
+                170.4000200265433
+              ]
+            ],
+            "trace_s_mm2": 180.7937731917551
+          },
+          {
+            "echo": 8,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.009377785637752822
+            ],
+            "B_s_mm2_SPR": [
+              [
+                11.492318400034446,
+                0.0,
+                13.048729964049517
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                13.048729964049517,
+                0.0,
+                171.92582727734975
+              ]
+            ],
+            "trace_s_mm2": 183.4181456773842
+          }
+        ]
+      },
+      "1000": {
+        "inputs": {
+          "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl",
+          "ppl_sha256": "3b420376331e918b4c864e9b37937ef35fd9f49066b8d6402e44aae9da598db2",
+          "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test1e\\FSE-DWI_10-05-2026_v18_test1.ppr",
+          "ppr_sha256": "84611fcb854deab5e9e7110aa7fdd68cfed25ba17d988231ab092c51a66b8fbc",
+          "includes": {
+            "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+            "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+            "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+            "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+            "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+            "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+          },
+          "libraries": {
+            "pf1": {
+              "file": "scanner/utilities/rfstd44.seq",
+              "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+            },
+            "pf7": {
+              "file": "scanner/utilities/gs_240hz.seq",
+              "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+            },
+            "pf8": {
+              "file": "scanner/utilities/presat.seq",
+              "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+            },
+            "pf10": {
+              "file": "scanner/utilities/opt90_a.seq",
+              "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+            },
+            "pf11": {
+              "file": "scanner/utilities/opt90_as.seq",
+              "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+            },
+            "pf12": {
+              "file": "scanner/utilities/asym.seq",
+              "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+            },
+            "pf14": {
+              "file": "scanner/utilities/hypsec.seq",
+              "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+            },
+            "pf15": {
+              "file": "scanner/utilities/rfchess.seq",
+              "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+            },
+            "pf16": {
+              "file": "scanner/utilities/9lobsinb.seq",
+              "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+            },
+            "pf17": {
+              "file": "scanner/utilities/19lobsinb.seq",
+              "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+            },
+            "grad": {
+              "file": "scanner/utilities/g3040_15.seq",
+              "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+            }
+          },
+          "overrides": {
+            "acq_b": [
+              1000,
+              1000,
+              6000
+            ]
+          },
+          "unused_ppr_params": [],
+          "assumptions": [
+            "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+            "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+            "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+            "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+            "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+            "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+            "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+            "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+            "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+            "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+            "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+            "hostrequest() returns 1 (no host update).",
+            "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+            "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+            "input#n reads 0 (no gating/mains trigger hardware).",
+            "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+          ],
+          "stmt_cost_us": 0.0,
+          "manual_expression_costs": true,
+          "manual_expression_cost_scale": 0.8
+        },
+        "echoes": [
+          {
+            "echo": 1,
+            "k_cycles_m_SPR": [
+              8.495038741859167,
+              0.0,
+              -0.9226173074471262
+            ],
+            "B_s_mm2_SPR": [
+              [
+                3.772959613406515,
+                0.0,
+                20.079381597494514
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                20.079381597494514,
+                0.0,
+                1172.1524033866906
+              ]
+            ],
+            "trace_s_mm2": 1175.9253630000971
+          },
+          {
+            "echo": 2,
+            "k_cycles_m_SPR": [
+              -4.152722597256906,
+              0.0,
+              0.009377785602282529
+            ],
+            "B_s_mm2_SPR": [
+              [
+                4.871524848229287,
+                0.0,
+                20.876902284332818
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                20.876902284332818,
+                0.0,
+                1173.678210637518
+              ]
+            ],
+            "trace_s_mm2": 1178.5497354857473
+          },
+          {
+            "echo": 3,
+            "k_cycles_m_SPR": [
+              8.495038741859283,
+              0.0,
+              -0.9226173074471262
+            ],
+            "B_s_mm2_SPR": [
+              [
+                5.979890797341605,
+                0.0,
+                21.684709012467145
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                21.684709012467145,
+                0.0,
+                1175.2024487436574
+              ]
+            ],
+            "trace_s_mm2": 1181.182339540999
+          },
+          {
+            "echo": 4,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.009377785594097077
+            ],
+            "B_s_mm2_SPR": [
+              [
+                7.078456032164087,
+                0.0,
+                22.482229699305076
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                22.482229699305076,
+                0.0,
+                1176.7282559944852
+              ]
+            ],
+            "trace_s_mm2": 1183.8067120266492
+          },
+          {
+            "echo": 5,
+            "k_cycles_m_SPR": [
+              8.495038741859737,
+              0.0,
+              -0.9226173074389408
+            ],
+            "B_s_mm2_SPR": [
+              [
+                8.186821981276701,
+                0.0,
+                23.290036427439734
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                23.290036427439734,
+                0.0,
+                1178.2524941006243
+              ]
+            ],
+            "trace_s_mm2": 1186.439316081901
+          },
+          {
+            "echo": 6,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.009377785594097077
+            ],
+            "B_s_mm2_SPR": [
+              [
+                9.285387216099183,
+                0.0,
+                24.087557114277665
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                24.087557114277665,
+                0.0,
+                1179.778301351452
+              ]
+            ],
+            "trace_s_mm2": 1189.0636885675513
+          },
+          {
+            "echo": 7,
+            "k_cycles_m_SPR": [
+              8.495038741859737,
+              0.0,
+              -0.9226173074389408
+            ],
+            "B_s_mm2_SPR": [
+              [
+                10.393753165211782,
+                0.0,
+                24.895363842412323
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                24.895363842412323,
+                0.0,
+                1181.3025394575914
+              ]
+            ],
+            "trace_s_mm2": 1191.6962926228032
+          },
+          {
+            "echo": 8,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.009377785594097077
+            ],
+            "B_s_mm2_SPR": [
+              [
+                11.492318400034446,
+                0.0,
+                25.692884529250254
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                25.692884529250254,
+                0.0,
+                1182.8283467084188
+              ]
+            ],
+            "trace_s_mm2": 1194.3206651084533
+          }
+        ]
+      },
+      "6000": {
+        "inputs": {
+          "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl",
+          "ppl_sha256": "3b420376331e918b4c864e9b37937ef35fd9f49066b8d6402e44aae9da598db2",
+          "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test1e\\FSE-DWI_10-05-2026_v18_test1.ppr",
+          "ppr_sha256": "84611fcb854deab5e9e7110aa7fdd68cfed25ba17d988231ab092c51a66b8fbc",
+          "includes": {
+            "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+            "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+            "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+            "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+            "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+            "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+          },
+          "libraries": {
+            "pf1": {
+              "file": "scanner/utilities/rfstd44.seq",
+              "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+            },
+            "pf7": {
+              "file": "scanner/utilities/gs_240hz.seq",
+              "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+            },
+            "pf8": {
+              "file": "scanner/utilities/presat.seq",
+              "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+            },
+            "pf10": {
+              "file": "scanner/utilities/opt90_a.seq",
+              "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+            },
+            "pf11": {
+              "file": "scanner/utilities/opt90_as.seq",
+              "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+            },
+            "pf12": {
+              "file": "scanner/utilities/asym.seq",
+              "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+            },
+            "pf14": {
+              "file": "scanner/utilities/hypsec.seq",
+              "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+            },
+            "pf15": {
+              "file": "scanner/utilities/rfchess.seq",
+              "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+            },
+            "pf16": {
+              "file": "scanner/utilities/9lobsinb.seq",
+              "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+            },
+            "pf17": {
+              "file": "scanner/utilities/19lobsinb.seq",
+              "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+            },
+            "grad": {
+              "file": "scanner/utilities/g3040_15.seq",
+              "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+            }
+          },
+          "overrides": {
+            "acq_b": [
+              6000,
+              1000,
+              6000
+            ]
+          },
+          "unused_ppr_params": [],
+          "assumptions": [
+            "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+            "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+            "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+            "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+            "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+            "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+            "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+            "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+            "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+            "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+            "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+            "hostrequest() returns 1 (no host update).",
+            "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+            "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+            "input#n reads 0 (no gating/mains trigger hardware).",
+            "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+          ],
+          "stmt_cost_us": 0.0,
+          "manual_expression_costs": true,
+          "manual_expression_cost_scale": 0.8
+        },
+        "echoes": [
+          {
+            "echo": 1,
+            "k_cycles_m_SPR": [
+              8.495038741859167,
+              0.0,
+              -0.9226173073816426
+            ],
+            "B_s_mm2_SPR": [
+              [
+                3.772959613406515,
+                0.0,
+                46.892738410176854
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                46.892738410176854,
+                0.0,
+                6394.376228243928
+              ]
+            ],
+            "trace_s_mm2": 6398.149187857335
+          },
+          {
+            "echo": 2,
+            "k_cycles_m_SPR": [
+              -4.152722597256906,
+              0.0,
+              0.00937778553679891
+            ],
+            "B_s_mm2_SPR": [
+              [
+                4.871524848229287,
+                0.0,
+                47.690259097015044
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                47.690259097015044,
+                0.0,
+                6395.902035494753
+              ]
+            ],
+            "trace_s_mm2": 6400.773560342983
+          },
+          {
+            "echo": 3,
+            "k_cycles_m_SPR": [
+              8.495038741859283,
+              0.0,
+              -0.9226173073816426
+            ],
+            "B_s_mm2_SPR": [
+              [
+                5.979890797341605,
+                0.0,
+                48.498065825149446
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                48.498065825149446,
+                0.0,
+                6397.426273600742
+              ]
+            ],
+            "trace_s_mm2": 6403.406164398084
+          },
+          {
+            "echo": 4,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.009377785528613458
+            ],
+            "B_s_mm2_SPR": [
+              [
+                7.078456032164087,
+                0.0,
+                49.29558651198732
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                49.29558651198732,
+                0.0,
+                6398.952080851566
+              ]
+            ],
+            "trace_s_mm2": 6406.030536883731
+          },
+          {
+            "echo": 5,
+            "k_cycles_m_SPR": [
+              8.495038741859737,
+              0.0,
+              -0.9226173073734572
+            ],
+            "B_s_mm2_SPR": [
+              [
+                8.186821981276701,
+                0.0,
+                50.10339324012201
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                50.10339324012201,
+                0.0,
+                6400.476318957556
+              ]
+            ],
+            "trace_s_mm2": 6408.663140938833
+          },
+          {
+            "echo": 6,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.009377785528613458
+            ],
+            "B_s_mm2_SPR": [
+              [
+                9.285387216099183,
+                0.0,
+                50.90091392695988
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                50.90091392695988,
+                0.0,
+                6402.00212620838
+              ]
+            ],
+            "trace_s_mm2": 6411.28751342448
+          },
+          {
+            "echo": 7,
+            "k_cycles_m_SPR": [
+              8.495038741859737,
+              0.0,
+              -0.9226173073734572
+            ],
+            "B_s_mm2_SPR": [
+              [
+                10.393753165211782,
+                0.0,
+                51.708720655094574
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                51.708720655094574,
+                0.0,
+                6403.52636431437
+              ]
+            ],
+            "trace_s_mm2": 6413.920117479582
+          },
+          {
+            "echo": 8,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.009377785528613458
+            ],
+            "B_s_mm2_SPR": [
+              [
+                11.492318400034446,
+                0.0,
+                52.50624134193245
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                52.50624134193245,
+                0.0,
+                6405.052171565194
+              ]
+            ],
+            "trace_s_mm2": 6416.544489965228
+          }
+        ]
+      }
+    },
+    "v181": {
+      "0": {
+        "inputs": {
+          "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+          "ppl_sha256": "3c90b80b31bf3cecfc38b8c1300061181fb3df0bcc3f60fb93027a45b6b51c7c",
+          "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppr",
+          "ppr_sha256": "ad82112ddfc7389a58caea6598cb5eb7583a271e71e62cd8c006190c52cdb159",
+          "includes": {
+            "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+            "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+            "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+            "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+            "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+            "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+          },
+          "libraries": {
+            "pf1": {
+              "file": "scanner/utilities/rfstd44.seq",
+              "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+            },
+            "pf7": {
+              "file": "scanner/utilities/gs_240hz.seq",
+              "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+            },
+            "pf8": {
+              "file": "scanner/utilities/presat.seq",
+              "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+            },
+            "pf10": {
+              "file": "scanner/utilities/opt90_a.seq",
+              "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+            },
+            "pf11": {
+              "file": "scanner/utilities/opt90_as.seq",
+              "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+            },
+            "pf12": {
+              "file": "scanner/utilities/asym.seq",
+              "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+            },
+            "pf14": {
+              "file": "scanner/utilities/hypsec.seq",
+              "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+            },
+            "pf15": {
+              "file": "scanner/utilities/rfchess.seq",
+              "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+            },
+            "pf16": {
+              "file": "scanner/utilities/9lobsinb.seq",
+              "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+            },
+            "pf17": {
+              "file": "scanner/utilities/19lobsinb.seq",
+              "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+            },
+            "grad": {
+              "file": "scanner/utilities/g3040_15.seq",
+              "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+            }
+          },
+          "overrides": {
+            "acq_b": [
+              0,
+              1000,
+              6000
+            ]
+          },
+          "unused_ppr_params": [],
+          "assumptions": [
+            "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+            "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+            "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+            "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+            "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+            "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+            "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+            "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+            "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+            "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+            "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+            "hostrequest() returns 1 (no host update).",
+            "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+            "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+            "input#n reads 0 (no gating/mains trigger hardware).",
+            "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+          ],
+          "stmt_cost_us": 0.0,
+          "manual_expression_costs": true,
+          "manual_expression_cost_scale": 0.8
+        },
+        "echoes": [
+          {
+            "echo": 1,
+            "k_cycles_m_SPR": [
+              8.495038741859167,
+              0.0,
+              -1.1555986606879287
+            ],
+            "B_s_mm2_SPR": [
+              [
+                3.772959613406515,
+                0.0,
+                0.00370558576819441
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.00370558576819441,
+                0.0,
+                0.2235649619669331
+              ]
+            ],
+            "trace_s_mm2": 3.9965245753734484
+          },
+          {
+            "echo": 2,
+            "k_cycles_m_SPR": [
+              -4.152722597256906,
+              0.0,
+              0.24235913884285765
+            ],
+            "B_s_mm2_SPR": [
+              [
+                4.871524848229287,
+                0.0,
+                0.8013157259267374
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.8013157259267374,
+                0.0,
+                1.749764619745256
+              ]
+            ],
+            "trace_s_mm2": 6.621289467974543
+          },
+          {
+            "echo": 3,
+            "k_cycles_m_SPR": [
+              8.495038741859283,
+              0.0,
+              -1.1555986606877013
+            ],
+            "B_s_mm2_SPR": [
+              [
+                5.979890797341605,
+                0.0,
+                1.6090313707933204
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.6090313707933204,
+                0.0,
+                3.2736106191866217
+              ]
+            ],
+            "trace_s_mm2": 9.253501416528227
+          },
+          {
+            "echo": 4,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.2423591388510431
+            ],
+            "B_s_mm2_SPR": [
+              [
+                7.0784560321640875,
+                0.0,
+                2.406641510951549
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                2.406641510951549,
+                0.0,
+                4.799810276964995
+              ]
+            ],
+            "trace_s_mm2": 11.878266309129081
+          },
+          {
+            "echo": 5,
+            "k_cycles_m_SPR": [
+              8.495038741859737,
+              0.0,
+              -1.1555986606958868
+            ],
+            "B_s_mm2_SPR": [
+              [
+                8.186821981276703,
+                0.0,
+                3.214357155818446
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                3.214357155818446,
+                0.0,
+                6.323656276406306
+              ]
+            ],
+            "trace_s_mm2": 14.510478257683008
+          },
+          {
+            "echo": 6,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.2423591388510431
+            ],
+            "B_s_mm2_SPR": [
+              [
+                9.285387216099185,
+                0.0,
+                4.011967295976682
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                4.011967295976682,
+                0.0,
+                7.849855934184506
+              ]
+            ],
+            "trace_s_mm2": 17.135243150283692
+          },
+          {
+            "echo": 7,
+            "k_cycles_m_SPR": [
+              8.495038741859737,
+              0.0,
+              -1.1555986606958868
+            ],
+            "B_s_mm2_SPR": [
+              [
+                10.393753165211786,
+                0.0,
+                4.819682940843581
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                4.819682940843581,
+                0.0,
+                9.373701933625822
+              ]
+            ],
+            "trace_s_mm2": 19.76745509883761
+          },
+          {
+            "echo": 8,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.2423591388510431
+            ],
+            "B_s_mm2_SPR": [
+              [
+                11.492318400034446,
+                0.0,
+                5.6172930810018125
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                5.6172930810018125,
+                0.0,
+                10.89990159140408
+              ]
+            ],
+            "trace_s_mm2": 22.392219991438523
+          }
+        ]
+      },
+      "100": {
+        "inputs": {
+          "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+          "ppl_sha256": "3c90b80b31bf3cecfc38b8c1300061181fb3df0bcc3f60fb93027a45b6b51c7c",
+          "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppr",
+          "ppr_sha256": "ad82112ddfc7389a58caea6598cb5eb7583a271e71e62cd8c006190c52cdb159",
+          "includes": {
+            "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+            "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+            "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+            "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+            "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+            "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+          },
+          "libraries": {
+            "pf1": {
+              "file": "scanner/utilities/rfstd44.seq",
+              "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+            },
+            "pf7": {
+              "file": "scanner/utilities/gs_240hz.seq",
+              "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+            },
+            "pf8": {
+              "file": "scanner/utilities/presat.seq",
+              "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+            },
+            "pf10": {
+              "file": "scanner/utilities/opt90_a.seq",
+              "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+            },
+            "pf11": {
+              "file": "scanner/utilities/opt90_as.seq",
+              "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+            },
+            "pf12": {
+              "file": "scanner/utilities/asym.seq",
+              "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+            },
+            "pf14": {
+              "file": "scanner/utilities/hypsec.seq",
+              "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+            },
+            "pf15": {
+              "file": "scanner/utilities/rfchess.seq",
+              "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+            },
+            "pf16": {
+              "file": "scanner/utilities/9lobsinb.seq",
+              "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+            },
+            "pf17": {
+              "file": "scanner/utilities/19lobsinb.seq",
+              "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+            },
+            "grad": {
+              "file": "scanner/utilities/g3040_15.seq",
+              "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+            }
+          },
+          "overrides": {
+            "acq_b": [
+              100,
+              1000,
+              6000
+            ]
+          },
+          "unused_ppr_params": [],
+          "assumptions": [
+            "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+            "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+            "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+            "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+            "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+            "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+            "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+            "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+            "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+            "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+            "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+            "hostrequest() returns 1 (no host update).",
+            "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+            "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+            "input#n reads 0 (no gating/mains trigger hardware).",
+            "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+          ],
+          "stmt_cost_us": 0.0,
+          "manual_expression_costs": true,
+          "manual_expression_cost_scale": 0.8
+        },
+        "echoes": [
+          {
+            "echo": 1,
+            "k_cycles_m_SPR": [
+              8.495038741859167,
+              0.0,
+              -1.1555986606736042
+            ],
+            "B_s_mm2_SPR": [
+              [
+                3.772959613406515,
+                0.0,
+                5.865114846173089
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                5.865114846173089,
+                0.0,
+                100.26842515382025
+              ]
+            ],
+            "trace_s_mm2": 104.04138476722676
+          },
+          {
+            "echo": 2,
+            "k_cycles_m_SPR": [
+              -4.152722597256906,
+              0.0,
+              0.24235913882876048
+            ],
+            "B_s_mm2_SPR": [
+              [
+                4.871524848229287,
+                0.0,
+                6.662724986331644
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                6.662724986331644,
+                0.0,
+                101.79462481160064
+              ]
+            ],
+            "trace_s_mm2": 106.66614965982993
+          },
+          {
+            "echo": 3,
+            "k_cycles_m_SPR": [
+              8.495038741859283,
+              0.0,
+              -1.1555986606736042
+            ],
+            "B_s_mm2_SPR": [
+              [
+                5.979890797341605,
+                0.0,
+                7.4704406311982385
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                7.4704406311982385,
+                0.0,
+                103.31847081104362
+              ]
+            ],
+            "trace_s_mm2": 109.29836160838524
+          },
+          {
+            "echo": 4,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.24235913882876048
+            ],
+            "B_s_mm2_SPR": [
+              [
+                7.0784560321640875,
+                0.0,
+                8.268050771356478
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                8.268050771356478,
+                0.0,
+                104.84467046882398
+              ]
+            ],
+            "trace_s_mm2": 111.92312650098806
+          },
+          {
+            "echo": 5,
+            "k_cycles_m_SPR": [
+              8.495038741859737,
+              0.0,
+              -1.1555986606736042
+            ],
+            "B_s_mm2_SPR": [
+              [
+                8.186821981276703,
+                0.0,
+                9.075766416223379
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                9.075766416223379,
+                0.0,
+                106.36851646826695
+              ]
+            ],
+            "trace_s_mm2": 114.55533844954365
+          },
+          {
+            "echo": 6,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.24235913882876048
+            ],
+            "B_s_mm2_SPR": [
+              [
+                9.285387216099185,
+                0.0,
+                9.873376556381618
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                9.873376556381618,
+                0.0,
+                107.89471612604729
+              ]
+            ],
+            "trace_s_mm2": 117.18010334214647
+          },
+          {
+            "echo": 7,
+            "k_cycles_m_SPR": [
+              8.495038741859737,
+              0.0,
+              -1.1555986606736042
+            ],
+            "B_s_mm2_SPR": [
+              [
+                10.393753165211786,
+                0.0,
+                10.681092201248513
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                10.681092201248513,
+                0.0,
+                109.41856212549025
+              ]
+            ],
+            "trace_s_mm2": 119.81231529070205
+          },
+          {
+            "echo": 8,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.24235913882876048
+            ],
+            "B_s_mm2_SPR": [
+              [
+                11.492318400034446,
+                0.0,
+                11.478702341406763
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                11.478702341406763,
+                0.0,
+                110.94476178327061
+              ]
+            ],
+            "trace_s_mm2": 122.43708018330506
+          }
+        ]
+      },
+      "1000": {
+        "inputs": {
+          "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+          "ppl_sha256": "3c90b80b31bf3cecfc38b8c1300061181fb3df0bcc3f60fb93027a45b6b51c7c",
+          "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppr",
+          "ppr_sha256": "ad82112ddfc7389a58caea6598cb5eb7583a271e71e62cd8c006190c52cdb159",
+          "includes": {
+            "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+            "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+            "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+            "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+            "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+            "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+          },
+          "libraries": {
+            "pf1": {
+              "file": "scanner/utilities/rfstd44.seq",
+              "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+            },
+            "pf7": {
+              "file": "scanner/utilities/gs_240hz.seq",
+              "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+            },
+            "pf8": {
+              "file": "scanner/utilities/presat.seq",
+              "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+            },
+            "pf10": {
+              "file": "scanner/utilities/opt90_a.seq",
+              "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+            },
+            "pf11": {
+              "file": "scanner/utilities/opt90_as.seq",
+              "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+            },
+            "pf12": {
+              "file": "scanner/utilities/asym.seq",
+              "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+            },
+            "pf14": {
+              "file": "scanner/utilities/hypsec.seq",
+              "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+            },
+            "pf15": {
+              "file": "scanner/utilities/rfchess.seq",
+              "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+            },
+            "pf16": {
+              "file": "scanner/utilities/9lobsinb.seq",
+              "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+            },
+            "pf17": {
+              "file": "scanner/utilities/19lobsinb.seq",
+              "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+            },
+            "grad": {
+              "file": "scanner/utilities/g3040_15.seq",
+              "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+            }
+          },
+          "overrides": {
+            "acq_b": [
+              1000,
+              1000,
+              6000
+            ]
+          },
+          "unused_ppr_params": [],
+          "assumptions": [
+            "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+            "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+            "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+            "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+            "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+            "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+            "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+            "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+            "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+            "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+            "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+            "hostrequest() returns 1 (no host update).",
+            "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+            "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+            "input#n reads 0 (no gating/mains trigger hardware).",
+            "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+          ],
+          "stmt_cost_us": 0.0,
+          "manual_expression_costs": true,
+          "manual_expression_cost_scale": 0.8
+        },
+        "echoes": [
+          {
+            "echo": 1,
+            "k_cycles_m_SPR": [
+              8.495038741859167,
+              0.0,
+              -1.155598660640635
+            ],
+            "B_s_mm2_SPR": [
+              [
+                3.772959613406515,
+                0.0,
+                18.50926941137399
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                18.50926941137399,
+                0.0,
+                996.9302342459446
+              ]
+            ],
+            "trace_s_mm2": 1000.7031938593511
+          },
+          {
+            "echo": 2,
+            "k_cycles_m_SPR": [
+              -4.152722597256906,
+              0.0,
+              0.24235913879556392
+            ],
+            "B_s_mm2_SPR": [
+              [
+                4.871524848229287,
+                0.0,
+                19.306879551532543
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                19.306879551532543,
+                0.0,
+                998.4564339037418
+              ]
+            ],
+            "trace_s_mm2": 1003.3279587519711
+          },
+          {
+            "echo": 3,
+            "k_cycles_m_SPR": [
+              8.495038741859283,
+              0.0,
+              -1.1555986606404076
+            ],
+            "B_s_mm2_SPR": [
+              [
+                5.979890797341605,
+                0.0,
+                20.11459519639915
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                20.11459519639915,
+                0.0,
+                999.9802799031854
+              ]
+            ],
+            "trace_s_mm2": 1005.960170700527
+          },
+          {
+            "echo": 4,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.24235913878737847
+            ],
+            "B_s_mm2_SPR": [
+              [
+                7.0784560321640875,
+                0.0,
+                20.91220533655737
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                20.91220533655737,
+                0.0,
+                1001.5064795609824
+              ]
+            ],
+            "trace_s_mm2": 1008.5849355931465
+          },
+          {
+            "echo": 5,
+            "k_cycles_m_SPR": [
+              8.495038741859737,
+              0.0,
+              -1.1555986606322222
+            ],
+            "B_s_mm2_SPR": [
+              [
+                8.186821981276703,
+                0.0,
+                21.719920981424284
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                21.719920981424284,
+                0.0,
+                1003.0303255604257
+              ]
+            ],
+            "trace_s_mm2": 1011.2171475417024
+          },
+          {
+            "echo": 6,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.24235913878737847
+            ],
+            "B_s_mm2_SPR": [
+              [
+                9.285387216099185,
+                0.0,
+                22.517531121582472
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                22.517531121582472,
+                0.0,
+                1004.5565252182228
+              ]
+            ],
+            "trace_s_mm2": 1013.8419124343219
+          },
+          {
+            "echo": 7,
+            "k_cycles_m_SPR": [
+              8.495038741859737,
+              0.0,
+              -1.1555986606322222
+            ],
+            "B_s_mm2_SPR": [
+              [
+                10.393753165211786,
+                0.0,
+                23.325246766449386
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                23.325246766449386,
+                0.0,
+                1006.0803712176661
+              ]
+            ],
+            "trace_s_mm2": 1016.4741243828779
+          },
+          {
+            "echo": 8,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.24235913878737847
+            ],
+            "B_s_mm2_SPR": [
+              [
+                11.492318400034446,
+                0.0,
+                24.12285690660757
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                24.12285690660757,
+                0.0,
+                1007.606570875463
+              ]
+            ],
+            "trace_s_mm2": 1019.0988892754975
+          }
+        ]
+      },
+      "6000": {
+        "inputs": {
+          "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+          "ppl_sha256": "3c90b80b31bf3cecfc38b8c1300061181fb3df0bcc3f60fb93027a45b6b51c7c",
+          "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppr",
+          "ppr_sha256": "ad82112ddfc7389a58caea6598cb5eb7583a271e71e62cd8c006190c52cdb159",
+          "includes": {
+            "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+            "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+            "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+            "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+            "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+            "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+          },
+          "libraries": {
+            "pf1": {
+              "file": "scanner/utilities/rfstd44.seq",
+              "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+            },
+            "pf7": {
+              "file": "scanner/utilities/gs_240hz.seq",
+              "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+            },
+            "pf8": {
+              "file": "scanner/utilities/presat.seq",
+              "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+            },
+            "pf10": {
+              "file": "scanner/utilities/opt90_a.seq",
+              "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+            },
+            "pf11": {
+              "file": "scanner/utilities/opt90_as.seq",
+              "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+            },
+            "pf12": {
+              "file": "scanner/utilities/asym.seq",
+              "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+            },
+            "pf14": {
+              "file": "scanner/utilities/hypsec.seq",
+              "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+            },
+            "pf15": {
+              "file": "scanner/utilities/rfchess.seq",
+              "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+            },
+            "pf16": {
+              "file": "scanner/utilities/9lobsinb.seq",
+              "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+            },
+            "pf17": {
+              "file": "scanner/utilities/19lobsinb.seq",
+              "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+            },
+            "grad": {
+              "file": "scanner/utilities/g3040_15.seq",
+              "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+            }
+          },
+          "overrides": {
+            "acq_b": [
+              6000,
+              1000,
+              6000
+            ]
+          },
+          "unused_ppr_params": [],
+          "assumptions": [
+            "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+            "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+            "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+            "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+            "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+            "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+            "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+            "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+            "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+            "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+            "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+            "hostrequest() returns 1 (no host update).",
+            "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+            "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+            "input#n reads 0 (no gating/mains trigger hardware).",
+            "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+          ],
+          "stmt_cost_us": 0.0,
+          "manual_expression_costs": true,
+          "manual_expression_cost_scale": 0.8
+        },
+        "echoes": [
+          {
+            "echo": 1,
+            "k_cycles_m_SPR": [
+              8.495038741859167,
+              0.0,
+              -1.1555986605715134
+            ],
+            "B_s_mm2_SPR": [
+              [
+                3.772959613406515,
+                0.0,
+                45.32262622405631
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                45.32262622405631,
+                0.0,
+                5976.893739280688
+              ]
+            ],
+            "trace_s_mm2": 5980.666698894095
+          },
+          {
+            "echo": 2,
+            "k_cycles_m_SPR": [
+              -4.152722597256906,
+              0.0,
+              0.24235913872644232
+            ],
+            "B_s_mm2_SPR": [
+              [
+                4.871524848229287,
+                0.0,
+                46.120236364214705
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                46.120236364214705,
+                0.0,
+                5978.419938938611
+              ]
+            ],
+            "trace_s_mm2": 5983.291463786841
+          },
+          {
+            "echo": 3,
+            "k_cycles_m_SPR": [
+              8.495038741859283,
+              0.0,
+              -1.155598660571286
+            ],
+            "B_s_mm2_SPR": [
+              [
+                5.979890797341605,
+                0.0,
+                46.92795200908133
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                46.92795200908133,
+                0.0,
+                5979.943784938181
+              ]
+            ],
+            "trace_s_mm2": 5985.923675735523
+          },
+          {
+            "echo": 4,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.24235913871825687
+            ],
+            "B_s_mm2_SPR": [
+              [
+                7.0784560321640875,
+                0.0,
+                47.7255621492394
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                47.7255621492394,
+                0.0,
+                5981.469984596105
+              ]
+            ],
+            "trace_s_mm2": 5988.548440628269
+          },
+          {
+            "echo": 5,
+            "k_cycles_m_SPR": [
+              8.495038741859737,
+              0.0,
+              -1.1555986605631006
+            ],
+            "B_s_mm2_SPR": [
+              [
+                8.186821981276703,
+                0.0,
+                48.533277794106354
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                48.533277794106354,
+                0.0,
+                5982.993830595675
+              ]
+            ],
+            "trace_s_mm2": 5991.180652576952
+          },
+          {
+            "echo": 6,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.24235913871825687
+            ],
+            "B_s_mm2_SPR": [
+              [
+                9.285387216099185,
+                0.0,
+                49.330887934264425
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                49.330887934264425,
+                0.0,
+                5984.520030253598
+              ]
+            ],
+            "trace_s_mm2": 5993.805417469697
+          },
+          {
+            "echo": 7,
+            "k_cycles_m_SPR": [
+              8.495038741859737,
+              0.0,
+              -1.1555986605631006
+            ],
+            "B_s_mm2_SPR": [
+              [
+                10.393753165211786,
+                0.0,
+                50.13860357913137
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                50.13860357913137,
+                0.0,
+                5986.0438762531685
+              ]
+            ],
+            "trace_s_mm2": 5996.43762941838
+          },
+          {
+            "echo": 8,
+            "k_cycles_m_SPR": [
+              -4.152722598000418,
+              0.0,
+              0.24235913871825687
+            ],
+            "B_s_mm2_SPR": [
+              [
+                11.492318400034446,
+                0.0,
+                50.93621371928945
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                50.93621371928945,
+                0.0,
+                5987.570075911091
+              ]
+            ],
+            "trace_s_mm2": 5999.062394311126
+          }
+        ]
+      }
+    }
+  }
+}

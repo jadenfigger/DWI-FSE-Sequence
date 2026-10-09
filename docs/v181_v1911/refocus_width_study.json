@@ -1,0 +1,709 @@
+{
+  "scope": "Actual archived v1.8 source mapping and stock RF, isolated finite refocus transfer study. Not a full train or scanner qualification.",
+  "baseline_inputs": {
+    "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl",
+    "ppl_sha256": "3b420376331e918b4c864e9b37937ef35fd9f49066b8d6402e44aae9da598db2",
+    "ppr": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\experiments\\FSE-DWI_10-05-2026_v18_test1e\\FSE-DWI_10-05-2026_v18_test1.ppr",
+    "ppr_sha256": "84611fcb854deab5e9e7110aa7fdd68cfed25ba17d988231ab092c51a66b8fbc",
+    "includes": {
+      "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+      "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+      "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+      "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+      "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+      "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+    },
+    "libraries": {
+      "pf1": {
+        "file": "scanner/utilities/rfstd44.seq",
+        "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+      },
+      "pf7": {
+        "file": "scanner/utilities/gs_240hz.seq",
+        "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+      },
+      "pf8": {
+        "file": "scanner/utilities/presat.seq",
+        "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+      },
+      "pf10": {
+        "file": "scanner/utilities/opt90_a.seq",
+        "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+      },
+      "pf11": {
+        "file": "scanner/utilities/opt90_as.seq",
+        "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+      },
+      "pf12": {
+        "file": "scanner/utilities/asym.seq",
+        "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+      },
+      "pf14": {
+        "file": "scanner/utilities/hypsec.seq",
+        "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+      },
+      "pf15": {
+        "file": "scanner/utilities/rfchess.seq",
+        "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+      },
+      "pf16": {
+        "file": "scanner/utilities/9lobsinb.seq",
+        "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+      },
+      "pf17": {
+        "file": "scanner/utilities/19lobsinb.seq",
+        "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+      },
+      "grad": {
+        "file": "scanner/utilities/g3040_15.seq",
+        "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+      }
+    },
+    "overrides": {},
+    "unused_ppr_params": [],
+    "assumptions": [
+      "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+      "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+      "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+      "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+      "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+      "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+      "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+      "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+      "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+      "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+      "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+      "hostrequest() returns 1 (no host update).",
+      "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+      "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+      "input#n reads 0 (no gating/mains trigger hardware).",
+      "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+    ],
+    "stmt_cost_us": 0.0,
+    "manual_expression_costs": true,
+    "manual_expression_cost_scale": 0.8
+  },
+  "raw_RF_check": {
+    "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29",
+    "independent_raw_decode_match": true,
+    "independent_quantized_sinc_formula_match": true
+  },
+  "mathematical_checks": {
+    "hard_pulse_analytic_max_error": 3.3306690738754696e-16,
+    "independent_piecewise_ODE_offsets_hz": [
+      0.0,
+      128.0,
+      1192.3
+    ],
+    "independent_piecewise_ODE_max_component_errors": [
+      1.887379141862766e-15,
+      1.1102230246251565e-15,
+      3.885780586188048e-15
+    ]
+  },
+  "actual_RF": {
+    "full_records": 668,
+    "nonzero_transmitted_records": 664,
+    "dwell_us": 2.0,
+    "multiplier": 1098,
+    "nominal_integral_flip_deg": 166.3668803207322,
+    "energy_model_Hz2_s": 747.4219737706986,
+    "energy_width_ratio": 1.0,
+    "calibration": "Stock signed integral at multiplier594 is90degrees; inferred relative scaling, not achieved scanner flip."
+  },
+  "spatial_geometry": {
+    "nominal_excited_slice_mm": 1.0,
+    "edge_region_abs_mm": [
+      0.35,
+      0.5
+    ],
+    "center_region_abs_mm": [
+      0.0,
+      0.25
+    ],
+    "sample_grid_mm": [
+      -1.5,
+      1.5
+    ],
+    "points": 1201
+  },
+  "profiles": [
+    {
+      "b1": 0.8,
+      "b0_hz": -128.0,
+      "spatial_width_requested": 1.0,
+      "selector_DAC": -2741,
+      "spatial_width_achieved": 1.0,
+      "nominal_slice_mean_conjugate_transfer": 0.8347981588932595,
+      "nominal_slice_min_conjugate_transfer": 0.3200142065317532,
+      "edge_mean_conjugate_transfer": 0.6945213504421915,
+      "center_mean_conjugate_transfer": 0.892299587854366,
+      "excitation_weighted_isolated_refocus": 0.8369937248176527,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 0.8,
+      "b0_hz": -128.0,
+      "spatial_width_requested": 1.2,
+      "selector_DAC": -2284,
+      "spatial_width_achieved": 1.2000875656742558,
+      "nominal_slice_mean_conjugate_transfer": 0.8786591297590091,
+      "nominal_slice_min_conjugate_transfer": 0.578560033120812,
+      "edge_mean_conjugate_transfer": 0.8369274205315059,
+      "center_mean_conjugate_transfer": 0.8849159607248502,
+      "excitation_weighted_isolated_refocus": 0.8802441720341607,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 0.8,
+      "b0_hz": -128.0,
+      "spatial_width_requested": 1.5,
+      "selector_DAC": -1827,
+      "spatial_width_achieved": 1.5002736726874657,
+      "nominal_slice_mean_conjugate_transfer": 0.8965643377346727,
+      "nominal_slice_min_conjugate_transfer": 0.8039977485759875,
+      "edge_mean_conjugate_transfer": 0.9131988691001733,
+      "center_mean_conjugate_transfer": 0.8761201932654449,
+      "excitation_weighted_isolated_refocus": 0.8973736297157833,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 0.8,
+      "b0_hz": 0.0,
+      "spatial_width_requested": 1.0,
+      "selector_DAC": -2741,
+      "spatial_width_achieved": 1.0,
+      "nominal_slice_mean_conjugate_transfer": 0.8460046666885811,
+      "nominal_slice_min_conjugate_transfer": 0.5059184314531477,
+      "edge_mean_conjugate_transfer": 0.7148556155900085,
+      "center_mean_conjugate_transfer": 0.8922725801814414,
+      "excitation_weighted_isolated_refocus": 0.8465727790918308,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 0.8,
+      "b0_hz": 0.0,
+      "spatial_width_requested": 1.2,
+      "selector_DAC": -2284,
+      "spatial_width_achieved": 1.2000875656742558,
+      "nominal_slice_mean_conjugate_transfer": 0.889467919973294,
+      "nominal_slice_min_conjugate_transfer": 0.7493547253137982,
+      "edge_mean_conjugate_transfer": 0.8654093465300674,
+      "center_mean_conjugate_transfer": 0.881510893980593,
+      "excitation_weighted_isolated_refocus": 0.8901280142237044,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 0.8,
+      "b0_hz": 0.0,
+      "spatial_width_requested": 1.5,
+      "selector_DAC": -1827,
+      "spatial_width_achieved": 1.5002736726874657,
+      "nominal_slice_mean_conjugate_transfer": 0.9030746676539051,
+      "nominal_slice_min_conjugate_transfer": 0.8415954946259687,
+      "edge_mean_conjugate_transfer": 0.9381648690543111,
+      "center_mean_conjugate_transfer": 0.86967606055512,
+      "excitation_weighted_isolated_refocus": 0.9036304601089559,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 0.8,
+      "b0_hz": 128.0,
+      "spatial_width_requested": 1.0,
+      "selector_DAC": -2741,
+      "spatial_width_achieved": 1.0,
+      "nominal_slice_mean_conjugate_transfer": 0.8347981588932596,
+      "nominal_slice_min_conjugate_transfer": 0.3200142065317529,
+      "edge_mean_conjugate_transfer": 0.6959769727931424,
+      "center_mean_conjugate_transfer": 0.892299587854366,
+      "excitation_weighted_isolated_refocus": 0.8369937248176528,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 0.8,
+      "b0_hz": 128.0,
+      "spatial_width_requested": 1.2,
+      "selector_DAC": -2284,
+      "spatial_width_achieved": 1.2000875656742558,
+      "nominal_slice_mean_conjugate_transfer": 0.8786591297590091,
+      "nominal_slice_min_conjugate_transfer": 0.5785600331208121,
+      "edge_mean_conjugate_transfer": 0.8374745472755512,
+      "center_mean_conjugate_transfer": 0.8849159607248499,
+      "excitation_weighted_isolated_refocus": 0.8802441720341607,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 0.8,
+      "b0_hz": 128.0,
+      "spatial_width_requested": 1.5,
+      "selector_DAC": -1827,
+      "spatial_width_achieved": 1.5002736726874657,
+      "nominal_slice_mean_conjugate_transfer": 0.8965643377346727,
+      "nominal_slice_min_conjugate_transfer": 0.8039977485759873,
+      "edge_mean_conjugate_transfer": 0.9130378437261161,
+      "center_mean_conjugate_transfer": 0.876120193265445,
+      "excitation_weighted_isolated_refocus": 0.8973736297157833,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 1.0,
+      "b0_hz": -128.0,
+      "spatial_width_requested": 1.0,
+      "selector_DAC": -2741,
+      "spatial_width_achieved": 1.0,
+      "nominal_slice_mean_conjugate_transfer": 0.831523224808854,
+      "nominal_slice_min_conjugate_transfer": 0.16768705951353183,
+      "edge_mean_conjugate_transfer": 0.560339124930908,
+      "center_mean_conjugate_transfer": 0.9830534453295181,
+      "excitation_weighted_isolated_refocus": 0.8320307084872458,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 1.0,
+      "b0_hz": -128.0,
+      "spatial_width_requested": 1.2,
+      "selector_DAC": -2284,
+      "spatial_width_achieved": 1.2000875656742558,
+      "nominal_slice_mean_conjugate_transfer": 0.9047270602454008,
+      "nominal_slice_min_conjugate_transfer": 0.40841085332781357,
+      "edge_mean_conjugate_transfer": 0.7467499646664684,
+      "center_mean_conjugate_transfer": 0.9891871665233064,
+      "excitation_weighted_isolated_refocus": 0.9048438273557866,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 1.0,
+      "b0_hz": -128.0,
+      "spatial_width_requested": 1.5,
+      "selector_DAC": -1827,
+      "spatial_width_achieved": 1.5002736726874657,
+      "nominal_slice_mean_conjugate_transfer": 0.9560509593899444,
+      "nominal_slice_min_conjugate_transfer": 0.6724544881100817,
+      "edge_mean_conjugate_transfer": 0.8859037185971457,
+      "center_mean_conjugate_transfer": 0.9917876453190343,
+      "excitation_weighted_isolated_refocus": 0.9560006388553325,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 1.0,
+      "b0_hz": 0.0,
+      "spatial_width_requested": 1.0,
+      "selector_DAC": -2741,
+      "spatial_width_achieved": 1.0,
+      "nominal_slice_mean_conjugate_transfer": 0.8424683503018936,
+      "nominal_slice_min_conjugate_transfer": 0.33495573692121766,
+      "edge_mean_conjugate_transfer": 0.5690719792226961,
+      "center_mean_conjugate_transfer": 0.9902190185775194,
+      "excitation_weighted_isolated_refocus": 0.8421929183736679,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 1.0,
+      "b0_hz": 0.0,
+      "spatial_width_requested": 1.2,
+      "selector_DAC": -2284,
+      "spatial_width_achieved": 1.2000875656742558,
+      "nominal_slice_mean_conjugate_transfer": 0.9180756719726348,
+      "nominal_slice_min_conjugate_transfer": 0.6019593694688009,
+      "edge_mean_conjugate_transfer": 0.7693039069392514,
+      "center_mean_conjugate_transfer": 0.9934896744792767,
+      "excitation_weighted_isolated_refocus": 0.9177161069783096,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 1.0,
+      "b0_hz": 0.0,
+      "spatial_width_requested": 1.5,
+      "selector_DAC": -1827,
+      "spatial_width_achieved": 1.5002736726874657,
+      "nominal_slice_mean_conjugate_transfer": 0.9678770860991793,
+      "nominal_slice_min_conjugate_transfer": 0.8279503837943174,
+      "edge_mean_conjugate_transfer": 0.9117242510721127,
+      "center_mean_conjugate_transfer": 0.9933111040205754,
+      "excitation_weighted_isolated_refocus": 0.9676153514204975,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 1.0,
+      "b0_hz": 128.0,
+      "spatial_width_requested": 1.0,
+      "selector_DAC": -2741,
+      "spatial_width_achieved": 1.0,
+      "nominal_slice_mean_conjugate_transfer": 0.831523224808854,
+      "nominal_slice_min_conjugate_transfer": 0.1676870595135315,
+      "edge_mean_conjugate_transfer": 0.5627082165517382,
+      "center_mean_conjugate_transfer": 0.9830534453295181,
+      "excitation_weighted_isolated_refocus": 0.8320307084872458,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 1.0,
+      "b0_hz": 128.0,
+      "spatial_width_requested": 1.2,
+      "selector_DAC": -2284,
+      "spatial_width_achieved": 1.2000875656742558,
+      "nominal_slice_mean_conjugate_transfer": 0.9047270602454008,
+      "nominal_slice_min_conjugate_transfer": 0.4084108533278135,
+      "edge_mean_conjugate_transfer": 0.7483105559473169,
+      "center_mean_conjugate_transfer": 0.9891871665233064,
+      "excitation_weighted_isolated_refocus": 0.9048438273557868,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 1.0,
+      "b0_hz": 128.0,
+      "spatial_width_requested": 1.5,
+      "selector_DAC": -1827,
+      "spatial_width_achieved": 1.5002736726874657,
+      "nominal_slice_mean_conjugate_transfer": 0.9560509593899444,
+      "nominal_slice_min_conjugate_transfer": 0.6724544881100818,
+      "edge_mean_conjugate_transfer": 0.88668740758394,
+      "center_mean_conjugate_transfer": 0.9917876453190343,
+      "excitation_weighted_isolated_refocus": 0.9560006388553326,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 1.1,
+      "b0_hz": -128.0,
+      "spatial_width_requested": 1.0,
+      "selector_DAC": -2741,
+      "spatial_width_achieved": 1.0,
+      "nominal_slice_mean_conjugate_transfer": 0.7635474080408372,
+      "nominal_slice_min_conjugate_transfer": 0.08315188260882515,
+      "edge_mean_conjugate_transfer": 0.4381100602788592,
+      "center_mean_conjugate_transfer": 0.9597256663844693,
+      "excitation_weighted_isolated_refocus": 0.7625543013682102,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 1.1,
+      "b0_hz": -128.0,
+      "spatial_width_requested": 1.2,
+      "selector_DAC": -2284,
+      "spatial_width_achieved": 1.2000875656742558,
+      "nominal_slice_mean_conjugate_transfer": 0.847308750511895,
+      "nominal_slice_min_conjugate_transfer": 0.28148181967386693,
+      "edge_mean_conjugate_transfer": 0.6303693086001787,
+      "center_mean_conjugate_transfer": 0.9743618562742375,
+      "excitation_weighted_isolated_refocus": 0.8459900022659945,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 1.1,
+      "b0_hz": -128.0,
+      "spatial_width_requested": 1.5,
+      "selector_DAC": -1827,
+      "spatial_width_achieved": 1.5002736726874657,
+      "nominal_slice_mean_conjugate_transfer": 0.9148017372078592,
+      "nominal_slice_min_conjugate_transfer": 0.5376515209627206,
+      "edge_mean_conjugate_transfer": 0.7942627026015667,
+      "center_mean_conjugate_transfer": 0.9844880062288489,
+      "excitation_weighted_isolated_refocus": 0.9137597604708125,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 1.1,
+      "b0_hz": 0.0,
+      "spatial_width_requested": 1.0,
+      "selector_DAC": -2741,
+      "spatial_width_achieved": 1.0,
+      "nominal_slice_mean_conjugate_transfer": 0.7729265174308384,
+      "nominal_slice_min_conjugate_transfer": 0.21684764416841246,
+      "edge_mean_conjugate_transfer": 0.43794380798118315,
+      "center_mean_conjugate_transfer": 0.9708686528388298,
+      "excitation_weighted_isolated_refocus": 0.7720419889689872,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 1.1,
+      "b0_hz": 0.0,
+      "spatial_width_requested": 1.2,
+      "selector_DAC": -2284,
+      "spatial_width_achieved": 1.2000875656742558,
+      "nominal_slice_mean_conjugate_transfer": 0.8606543592591783,
+      "nominal_slice_min_conjugate_transfer": 0.4655351846128229,
+      "edge_mean_conjugate_transfer": 0.6459725846596778,
+      "center_mean_conjugate_transfer": 0.9833898876125983,
+      "excitation_weighted_isolated_refocus": 0.8596994516309424,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 1.1,
+      "b0_hz": 0.0,
+      "spatial_width_requested": 1.5,
+      "selector_DAC": -1827,
+      "spatial_width_achieved": 1.5002736726874657,
+      "nominal_slice_mean_conjugate_transfer": 0.9287007468927724,
+      "nominal_slice_min_conjugate_transfer": 0.7094776719192983,
+      "edge_mean_conjugate_transfer": 0.8172300469918877,
+      "center_mean_conjugate_transfer": 0.9913079599666507,
+      "excitation_weighted_isolated_refocus": 0.9280930778485418,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 1.1,
+      "b0_hz": 128.0,
+      "spatial_width_requested": 1.0,
+      "selector_DAC": -2741,
+      "spatial_width_achieved": 1.0,
+      "nominal_slice_mean_conjugate_transfer": 0.7635474080408373,
+      "nominal_slice_min_conjugate_transfer": 0.08315188260882526,
+      "edge_mean_conjugate_transfer": 0.44079168822037823,
+      "center_mean_conjugate_transfer": 0.9597256663844695,
+      "excitation_weighted_isolated_refocus": 0.7625543013682101,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 1.1,
+      "b0_hz": 128.0,
+      "spatial_width_requested": 1.2,
+      "selector_DAC": -2284,
+      "spatial_width_achieved": 1.2000875656742558,
+      "nominal_slice_mean_conjugate_transfer": 0.8473087505118951,
+      "nominal_slice_min_conjugate_transfer": 0.28148181967386726,
+      "edge_mean_conjugate_transfer": 0.632416727381539,
+      "center_mean_conjugate_transfer": 0.9743618562742377,
+      "excitation_weighted_isolated_refocus": 0.8459900022659944,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    },
+    {
+      "b1": 1.1,
+      "b0_hz": 128.0,
+      "spatial_width_requested": 1.5,
+      "selector_DAC": -1827,
+      "spatial_width_achieved": 1.5002736726874657,
+      "nominal_slice_mean_conjugate_transfer": 0.9148017372078593,
+      "nominal_slice_min_conjugate_transfer": 0.5376515209627204,
+      "edge_mean_conjugate_transfer": 0.7955904995292239,
+      "center_mean_conjugate_transfer": 0.9844880062288489,
+      "excitation_weighted_isolated_refocus": 0.9137597604708122,
+      "scope": "Magnitude of isolated m-to-conjugate(m) transfer; no train, relaxation, molecular diffusion or coherent spatial averaging."
+    }
+  ],
+  "geometric_center_compensation": [
+    {
+      "refocus_index": 1,
+      "requested_width": 1.2,
+      "selector_pre_DAC_us": -2444040.113537234,
+      "selector_post_DAC_us": -2106020.2210677043,
+      "required_added_pre_DAC_us": -407488.62892612774,
+      "required_added_post_DAC_us": -351131.4268617078,
+      "uncompensated_desired_path_delta_cycles_per_m": -43.76725733003613,
+      "note": "Restores geometric-center interval areas only. Finite RF transfer changed intentionally; this is not an exact pathway-equivalence proof."
+    },
+    {
+      "refocus_index": 1,
+      "requested_width": 1.5,
+      "selector_pre_DAC_us": -2444040.113537234,
+      "selector_post_DAC_us": -2106020.2210677043,
+      "required_added_pre_DAC_us": -814977.2578522551,
+      "required_added_post_DAC_us": -702262.8537234154,
+      "uncompensated_desired_path_delta_cycles_per_m": -87.53451466007225,
+      "note": "Restores geometric-center interval areas only. Finite RF transfer changed intentionally; this is not an exact pathway-equivalence proof."
+    },
+    {
+      "refocus_index": 2,
+      "requested_width": 1.2,
+      "selector_pre_DAC_us": -2442285.873537195,
+      "selector_post_DAC_us": -2107774.4610677427,
+      "required_added_pre_DAC_us": -407196.14892612124,
+      "required_added_post_DAC_us": -351423.9068617142,
+      "uncompensated_desired_path_delta_cycles_per_m": -43.31297475548467,
+      "note": "Restores geometric-center interval areas only. Finite RF transfer changed intentionally; this is not an exact pathway-equivalence proof."
+    },
+    {
+      "refocus_index": 2,
+      "requested_width": 1.5,
+      "selector_pre_DAC_us": -2442285.873537195,
+      "selector_post_DAC_us": -2107774.4610677427,
+      "required_added_pre_DAC_us": -814392.2978522422,
+      "required_added_post_DAC_us": -702847.8137234282,
+      "uncompensated_desired_path_delta_cycles_per_m": -86.6259495109693,
+      "note": "Restores geometric-center interval areas only. Finite RF transfer changed intentionally; this is not an exact pathway-equivalence proof."
+    },
+    {
+      "refocus_index": 3,
+      "requested_width": 1.2,
+      "selector_pre_DAC_us": -2442285.873537195,
+      "selector_post_DAC_us": -2107774.4610677427,
+      "required_added_pre_DAC_us": -407196.14892612124,
+      "required_added_post_DAC_us": -351423.9068617142,
+      "uncompensated_desired_path_delta_cycles_per_m": -43.31297475548467,
+      "note": "Restores geometric-center interval areas only. Finite RF transfer changed intentionally; this is not an exact pathway-equivalence proof."
+    },
+    {
+      "refocus_index": 3,
+      "requested_width": 1.5,
+      "selector_pre_DAC_us": -2442285.873537195,
+      "selector_post_DAC_us": -2107774.4610677427,
+      "required_added_pre_DAC_us": -814392.2978522422,
+      "required_added_post_DAC_us": -702847.8137234282,
+      "uncompensated_desired_path_delta_cycles_per_m": -86.6259495109693,
+      "note": "Restores geometric-center interval areas only. Finite RF transfer changed intentionally; this is not an exact pathway-equivalence proof."
+    },
+    {
+      "refocus_index": 4,
+      "requested_width": 1.2,
+      "selector_pre_DAC_us": -2442285.8735367167,
+      "selector_post_DAC_us": -2107774.4610682214,
+      "required_added_pre_DAC_us": -407196.1489260415,
+      "required_added_post_DAC_us": -351423.906861794,
+      "uncompensated_desired_path_delta_cycles_per_m": -43.312974755360756,
+      "note": "Restores geometric-center interval areas only. Finite RF transfer changed intentionally; this is not an exact pathway-equivalence proof."
+    },
+    {
+      "refocus_index": 4,
+      "requested_width": 1.5,
+      "selector_pre_DAC_us": -2442285.8735367167,
+      "selector_post_DAC_us": -2107774.4610682214,
+      "required_added_pre_DAC_us": -814392.2978520828,
+      "required_added_post_DAC_us": -702847.8137235878,
+      "uncompensated_desired_path_delta_cycles_per_m": -86.6259495107215,
+      "note": "Restores geometric-center interval areas only. Finite RF transfer changed intentionally; this is not an exact pathway-equivalence proof."
+    },
+    {
+      "refocus_index": 5,
+      "requested_width": 1.2,
+      "selector_pre_DAC_us": -2442285.8735367167,
+      "selector_post_DAC_us": -2107774.461068221,
+      "required_added_pre_DAC_us": -407196.1489260415,
+      "required_added_post_DAC_us": -351423.90686179395,
+      "uncompensated_desired_path_delta_cycles_per_m": -43.31297475536083,
+      "note": "Restores geometric-center interval areas only. Finite RF transfer changed intentionally; this is not an exact pathway-equivalence proof."
+    },
+    {
+      "refocus_index": 5,
+      "requested_width": 1.5,
+      "selector_pre_DAC_us": -2442285.8735367167,
+      "selector_post_DAC_us": -2107774.461068221,
+      "required_added_pre_DAC_us": -814392.2978520828,
+      "required_added_post_DAC_us": -702847.8137235877,
+      "uncompensated_desired_path_delta_cycles_per_m": -86.62594951072163,
+      "note": "Restores geometric-center interval areas only. Finite RF transfer changed intentionally; this is not an exact pathway-equivalence proof."
+    },
+    {
+      "refocus_index": 6,
+      "requested_width": 1.2,
+      "selector_pre_DAC_us": -2442285.8735367167,
+      "selector_post_DAC_us": -2107774.461068221,
+      "required_added_pre_DAC_us": -407196.1489260415,
+      "required_added_post_DAC_us": -351423.90686179395,
+      "uncompensated_desired_path_delta_cycles_per_m": -43.31297475536083,
+      "note": "Restores geometric-center interval areas only. Finite RF transfer changed intentionally; this is not an exact pathway-equivalence proof."
+    },
+    {
+      "refocus_index": 6,
+      "requested_width": 1.5,
+      "selector_pre_DAC_us": -2442285.8735367167,
+      "selector_post_DAC_us": -2107774.461068221,
+      "required_added_pre_DAC_us": -814392.2978520828,
+      "required_added_post_DAC_us": -702847.8137235877,
+      "uncompensated_desired_path_delta_cycles_per_m": -86.62594951072163,
+      "note": "Restores geometric-center interval areas only. Finite RF transfer changed intentionally; this is not an exact pathway-equivalence proof."
+    },
+    {
+      "refocus_index": 7,
+      "requested_width": 1.2,
+      "selector_pre_DAC_us": -2442285.873536717,
+      "selector_post_DAC_us": -2107774.4610682214,
+      "required_added_pre_DAC_us": -407196.1489260416,
+      "required_added_post_DAC_us": -351423.906861794,
+      "uncompensated_desired_path_delta_cycles_per_m": -43.31297475536083,
+      "note": "Restores geometric-center interval areas only. Finite RF transfer changed intentionally; this is not an exact pathway-equivalence proof."
+    },
+    {
+      "refocus_index": 7,
+      "requested_width": 1.5,
+      "selector_pre_DAC_us": -2442285.873536717,
+      "selector_post_DAC_us": -2107774.4610682214,
+      "required_added_pre_DAC_us": -814392.2978520829,
+      "required_added_post_DAC_us": -702847.8137235878,
+      "uncompensated_desired_path_delta_cycles_per_m": -86.62594951072163,
+      "note": "Restores geometric-center interval areas only. Finite RF transfer changed intentionally; this is not an exact pathway-equivalence proof."
+    },
+    {
+      "refocus_index": 8,
+      "requested_width": 1.2,
+      "selector_pre_DAC_us": -2442285.8735367167,
+      "selector_post_DAC_us": -2107774.4610682214,
+      "required_added_pre_DAC_us": -407196.1489260415,
+      "required_added_post_DAC_us": -351423.906861794,
+      "uncompensated_desired_path_delta_cycles_per_m": -43.312974755360756,
+      "note": "Restores geometric-center interval areas only. Finite RF transfer changed intentionally; this is not an exact pathway-equivalence proof."
+    },
+    {
+      "refocus_index": 8,
+      "requested_width": 1.5,
+      "selector_pre_DAC_us": -2442285.8735367167,
+      "selector_post_DAC_us": -2107774.4610682214,
+      "required_added_pre_DAC_us": -814392.2978520828,
+      "required_added_post_DAC_us": -702847.8137235878,
+      "uncompensated_desired_path_delta_cycles_per_m": -86.6259495107215,
+      "note": "Restores geometric-center interval areas only. Finite RF transfer changed intentionally; this is not an exact pathway-equivalence proof."
+    }
+  ],
+  "frequency": [
+    {
+      "width": 1.0,
+      "selector_DAC": -2741,
+      "offset_frequency_Hz_per_mm": -2128.672963652455,
+      "rule": "Refocus frequency offset must scale by actual refocus/excitation Gz ratio to retain slice center."
+    },
+    {
+      "width": 1.2,
+      "selector_DAC": -2284,
+      "offset_frequency_Hz_per_mm": -1773.76470229194,
+      "rule": "Refocus frequency offset must scale by actual refocus/excitation Gz ratio to retain slice center."
+    },
+    {
+      "width": 1.5,
+      "selector_DAC": -1827,
+      "offset_frequency_Hz_per_mm": -1418.856440931425,
+      "rule": "Refocus frequency offset must scale by actual refocus/excitation Gz ratio to retain slice center."
+    }
+  ],
+  "linked_crusher_baseline_areas": [
+    {
+      "refocus_index": 1,
+      "before_DAC_us": -5009616.113537233,
+      "after_DAC_us": -4671596.221067703
+    },
+    {
+      "refocus_index": 2,
+      "before_DAC_us": -5007861.873537195,
+      "after_DAC_us": -4673350.461067742
+    },
+    {
+      "refocus_index": 3,
+      "before_DAC_us": -5007861.873537196,
+      "after_DAC_us": -4673350.461067743
+    },
+    {
+      "refocus_index": 4,
+      "before_DAC_us": -5007861.8735369565,
+      "after_DAC_us": -4673350.461067981
+    },
+    {
+      "refocus_index": 5,
+      "before_DAC_us": -5007861.873536717,
+      "after_DAC_us": -4673350.46106822
+    },
+    {
+      "refocus_index": 6,
+      "before_DAC_us": -5007861.873536716,
+      "after_DAC_us": -4673350.46106822
+    },
+    {
+      "refocus_index": 7,
+      "before_DAC_us": -5007861.873536716,
+      "after_DAC_us": -4673350.46106822
+    },
+    {
+      "refocus_index": 8,
+      "before_DAC_us": -5007861.873536717,
+      "after_DAC_us": -4673350.46106822
+    }
+  ],
+  "linked_crusher_consequence": "Shared primary gradient contains selection and crushers. Simple selector scaling reduces all crusher areas by16.7% or33.3%, violates preserved-pathway requirement, and is excluded.",
+  "implementation_recommendation": "Study supports useful spatial widening, but source must use independent refocus primary matrices, unchanged excitation and separate pre/post compensation. Current symmetric crusher primitive cannot supply both required corrections by a single amplitude change. Nonzero offsets require separate scaled refocus frequency. Do not ship simple selector scaling; require integrated finite-train and moment/pathway review."
+}

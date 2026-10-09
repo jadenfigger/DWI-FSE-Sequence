@@ -1,0 +1,686 @@
+{
+ "FSE-DWI_10-05-2026_v18_test0": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   128,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 65.13132664164563
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.97284414850931
+    }
+   ],
+   [
+    {
+     "peak_sample": 117,
+     "centroid_sample": 117.02727507193381
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-05-2026_v18_test1": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.90233065743683
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.90714133154383
+    }
+   ],
+   [
+    {
+     "peak_sample": 3,
+     "centroid_sample": 4.245975255306953
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-05-2026_v18_test1b": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.87959258181834
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.89823970255672
+    }
+   ],
+   [
+    {
+     "peak_sample": 2,
+     "centroid_sample": 3.528668930544106
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-05-2026_v18_test1c": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.8881010596257
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.91314621608679
+    }
+   ],
+   [
+    {
+     "peak_sample": 91,
+     "centroid_sample": 91.8692006882754
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-05-2026_v18_test1d": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.89813846802508
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.91662082453516
+    }
+   ],
+   [
+    {
+     "peak_sample": 14,
+     "centroid_sample": 14.502117087489433
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-05-2026_v18_test1e": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.91359431838431
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.91331026320789
+    }
+   ],
+   [
+    {
+     "peak_sample": 3,
+     "centroid_sample": 4.19617389037297
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-05-2026_v18_test1f": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.90964535063077
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.9009889654315
+    }
+   ],
+   [
+    {
+     "peak_sample": 3,
+     "centroid_sample": 4.078542153002779
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-05-2026_v18_test1g": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.91237993680656
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.91029094825618
+    }
+   ],
+   [
+    {
+     "peak_sample": 3,
+     "centroid_sample": 3.8404965453182083
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-05-2026_v18_test2": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.90601266901362
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.90482098815427
+    }
+   ],
+   [
+    {
+     "peak_sample": 3,
+     "centroid_sample": 4.437323887666143
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-05-2026_v18_test2b": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.90784470546177
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.9243250168439
+    }
+   ],
+   [
+    {
+     "peak_sample": 3,
+     "centroid_sample": 4.840442545230719
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-05-2026_v18_test2c": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.9017215356313
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.90212160322338
+    }
+   ],
+   [
+    {
+     "peak_sample": 7,
+     "centroid_sample": 6.911936468375396
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-05-2026_v18_test2d": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.9099917476687
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.92041062399859
+    }
+   ],
+   [
+    {
+     "peak_sample": 126,
+     "centroid_sample": 123.78072621636525
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-05-2026_v18_test3": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.90717290595175
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.91286018070446
+    }
+   ],
+   [
+    {
+     "peak_sample": 13,
+     "centroid_sample": 13.776034550518936
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-05-2026_v18_test3b": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.91091650373342
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.91184356202531
+    }
+   ],
+   [
+    {
+     "peak_sample": 3,
+     "centroid_sample": 4.409719569839739
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-05-2026_v18_test4": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.93064992120071
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.93222906060214
+    }
+   ],
+   [
+    {
+     "peak_sample": 5,
+     "centroid_sample": 5.832227289440474
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-05-2026_v18_test4b": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.93041057160902
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.93560059930498
+    }
+   ],
+   [
+    {
+     "peak_sample": 107,
+     "centroid_sample": 108.02128754173594
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-05-2026_v18_test5": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.92059599076595
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.9179459738401
+    }
+   ],
+   [
+    {
+     "peak_sample": 3,
+     "centroid_sample": 4.2367363365688275
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-05-2026_v18_test6": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.91285338136318
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.91963957474015
+    }
+   ],
+   [
+    {
+     "peak_sample": 3,
+     "centroid_sample": 4.595496995174678
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-05-2026_v18_test7": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.93316260663822
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.92317979730775
+    }
+   ],
+   [
+    {
+     "peak_sample": 3,
+     "centroid_sample": 4.393835143065723
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-07-2026_v18_test0": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.86952309672324
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.87062549671498
+    }
+   ],
+   [
+    {
+     "peak_sample": 89,
+     "centroid_sample": 88.43704365678593
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-07-2026_v18_test1": {
+  "dim": [
+   3,
+   1,
+   1,
+   1,
+   136,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.88017559115085
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.87740713349474
+    }
+   ],
+   [
+    {
+     "peak_sample": 40,
+     "centroid_sample": 39.89646940105786
+    }
+   ]
+  ]
+ },
+ "FSE-DWI_10-07-2026_v18_test1b": {
+  "dim": [
+   7,
+   1,
+   1,
+   1,
+   144,
+   128
+  ],
+  "per_experiment_per_echo": [
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.87810532706109
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.87787346265569
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.87681327904221
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.87644040726512
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.87323029794918
+    }
+   ],
+   [
+    {
+     "peak_sample": 65,
+     "centroid_sample": 64.86816922574869
+    }
+   ],
+   [
+    {
+     "peak_sample": 126,
+     "centroid_sample": 124.08987279359008
+    }
+   ]
+  ]
+ }
+}

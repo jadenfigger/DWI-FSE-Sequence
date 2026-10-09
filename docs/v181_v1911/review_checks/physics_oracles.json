@@ -1,0 +1,103 @@
+{
+  "pathway_tool_sha256": "f8315f5bbfb9fe40946001c1c6b83d17843162f65bf756389e1baba64f9c4ecd",
+  "cartesian_closure": {
+    "pass": true,
+    "max_error": 5.881301029635769e-16,
+    "cases": [
+      {
+        "B0_Hz": -128.0,
+        "excitation_phase_deg": 0.0,
+        "maximum_complex_error": 4.47545209131181e-16
+      },
+      {
+        "B0_Hz": -128.0,
+        "excitation_phase_deg": 45.0,
+        "maximum_complex_error": 4.440892098500626e-16
+      },
+      {
+        "B0_Hz": -128.0,
+        "excitation_phase_deg": 90.0,
+        "maximum_complex_error": 3.608224830031759e-16
+      },
+      {
+        "B0_Hz": 0.0,
+        "excitation_phase_deg": 0.0,
+        "maximum_complex_error": 4.965068306494546e-16
+      },
+      {
+        "B0_Hz": 0.0,
+        "excitation_phase_deg": 45.0,
+        "maximum_complex_error": 5.23691153334427e-16
+      },
+      {
+        "B0_Hz": 0.0,
+        "excitation_phase_deg": 90.0,
+        "maximum_complex_error": 5.134781488891349e-16
+      },
+      {
+        "B0_Hz": 128.0,
+        "excitation_phase_deg": 0.0,
+        "maximum_complex_error": 5.881301029635769e-16
+      },
+      {
+        "B0_Hz": 128.0,
+        "excitation_phase_deg": 45.0,
+        "maximum_complex_error": 4.0029660424867215e-16
+      },
+      {
+        "B0_Hz": 128.0,
+        "excitation_phase_deg": 90.0,
+        "maximum_complex_error": 4.579669976578771e-16
+      }
+    ],
+    "scope": "Independent real Cartesian rotations, B0 signs, box averaging, all RF branches, T1 recovery and T2; diffusion disabled."
+  },
+  "stored_Z_diffusion": {
+    "pass": true,
+    "path": {
+      "origin_after_rf": 0,
+      "history": "+ Z +",
+      "signal_real_imag": [
+        -0.10092889289899439,
+        -6.180112281511975e-18
+      ],
+      "signal_no_diff_abs": 0.5,
+      "k_cycles_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "b_tensor_s_mm2": [
+        [
+          800.0959301149774,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "b_trace_s_mm2": 800.0959301149774,
+      "diffusion_attenuation": 0.20185778579798877
+    },
+    "analytic_B_s_mm2": 800.0959301149773,
+    "error": 1.1368683772161603e-13,
+    "scope": "Encoded longitudinal storage with analytic buildup/storage/erase diffusion; not a finite-RF PDE."
+  },
+  "exact_PWC_integration": {
+    "pass": true,
+    "max_integral_error": 2.842170943040401e-14,
+    "coherence_signs": [
+      -1,
+      0,
+      1
+    ]
+  }
+}

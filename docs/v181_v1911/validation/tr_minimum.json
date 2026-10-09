@@ -1,0 +1,272 @@
+{
+ "v18/manual_x0.8": {
+  "min_accepted_tr_ms": 173,
+  "rejected_tr_ms": 172,
+  "two_shot_ADC": 16,
+  "two_shot_RF": 18,
+  "timer_overruns": 0,
+  "ignored_lists": 0,
+  "premature_matrix_use": {},
+  "shot1_last_gradient_output_to_shot2_first_RF_us": 12178.73999999999,
+  "shot_spacing_us": 173034.32000000114,
+  "terminal": null
+ },
+ "v18/manual_x1.0": {
+  "min_accepted_tr_ms": 173,
+  "rejected_tr_ms": 172,
+  "two_shot_ADC": 16,
+  "two_shot_RF": 18,
+  "timer_overruns": 4,
+  "ignored_lists": 0,
+  "premature_matrix_use": {},
+  "shot1_last_gradient_output_to_shot2_first_RF_us": 22187.200000000303,
+  "shot_spacing_us": 183115.80000000217,
+  "terminal": null
+ },
+ "v18/flat_2us": {
+  "min_accepted_tr_ms": 173,
+  "rejected_tr_ms": 172,
+  "two_shot_ADC": 16,
+  "two_shot_RF": 18,
+  "timer_overruns": 16,
+  "ignored_lists": 0,
+  "premature_matrix_use": {},
+  "shot1_last_gradient_output_to_shot2_first_RF_us": 12208.900000000023,
+  "shot_spacing_us": 213290.40000000008,
+  "terminal": null
+ },
+ "v181/manual_x0.8": {
+  "min_accepted_tr_ms": 174,
+  "rejected_tr_ms": 173,
+  "two_shot_ADC": 16,
+  "two_shot_RF": 18,
+  "timer_overruns": 0,
+  "ignored_lists": 0,
+  "premature_matrix_use": {},
+  "shot1_last_gradient_output_to_shot2_first_RF_us": 13178.73999999999,
+  "shot_spacing_us": 174034.3200000011,
+  "terminal": null
+ },
+ "v181/manual_x1.0": {
+  "min_accepted_tr_ms": 174,
+  "rejected_tr_ms": 173,
+  "two_shot_ADC": 16,
+  "two_shot_RF": 18,
+  "timer_overruns": 0,
+  "ignored_lists": 0,
+  "premature_matrix_use": {},
+  "shot1_last_gradient_output_to_shot2_first_RF_us": 13187.200000000303,
+  "shot_spacing_us": 174115.8000000018,
+  "terminal": null
+ },
+ "v181/flat_2us": {
+  "min_accepted_tr_ms": 174,
+  "rejected_tr_ms": 173,
+  "two_shot_ADC": 16,
+  "two_shot_RF": 18,
+  "timer_overruns": 0,
+  "ignored_lists": 0,
+  "premature_matrix_use": {},
+  "shot1_last_gradient_output_to_shot2_first_RF_us": 13208.900000000023,
+  "shot_spacing_us": 174290.40000000005,
+  "terminal": null
+ },
+ "v191_v7/manual_x0.8": {
+  "min_accepted_tr_ms": 199,
+  "rejected_tr_ms": 198,
+  "two_shot_ADC": 16,
+  "two_shot_RF": 24,
+  "timer_overruns": 0,
+  "ignored_lists": 0,
+  "premature_matrix_use": {},
+  "shot1_last_gradient_output_to_shot2_first_RF_us": 17394.640000000043,
+  "shot_spacing_us": 198845.18000000025,
+  "terminal": [
+   {
+    "shot": 1,
+    "final_receiver_complete_us": 237011.18000000215,
+    "first_S_after_final_ADC_init_us": 236835.84000000212,
+    "terminal_starts_after_receiver_busy": false,
+    "last_S_output_end_us": 241679.04000000216,
+    "S_area_final_ADC_centre_to_shot_end_cycles_m": 16914.05190184536,
+    "margin_last_output_to_next_RF_us": 17394.640000000043,
+    "margin_last_output_to_shot_label_us": 1715.9800000000396
+   },
+   {
+    "shot": 2,
+    "final_receiver_complete_us": 435933.4000000022,
+    "first_S_after_final_ADC_init_us": 435758.06000000215,
+    "terminal_starts_after_receiver_busy": false,
+    "last_S_output_end_us": 440601.26000000205,
+    "S_area_final_ADC_centre_to_shot_end_cycles_m": 16914.05190184536,
+    "margin_last_output_to_next_RF_us": null,
+    "margin_last_output_to_shot_label_us": 1715.9800000009127
+   }
+  ]
+ },
+ "v191_v7/manual_x1.0": {
+  "min_accepted_tr_ms": 199,
+  "rejected_tr_ms": 198,
+  "two_shot_ADC": 16,
+  "two_shot_RF": 24,
+  "timer_overruns": 0,
+  "ignored_lists": 0,
+  "premature_matrix_use": {},
+  "shot1_last_gradient_output_to_shot2_first_RF_us": 17397.10000000021,
+  "shot_spacing_us": 198843.90000000098,
+  "terminal": [
+   {
+    "shot": 1,
+    "final_receiver_complete_us": 247163.20000000086,
+    "first_S_after_final_ADC_init_us": 246987.60000000085,
+    "terminal_starts_after_receiver_busy": false,
+    "last_S_output_end_us": 251831.50000000093,
+    "S_area_final_ADC_centre_to_shot_end_cycles_m": 16914.05190184536,
+    "margin_last_output_to_next_RF_us": 17397.10000000021,
+    "margin_last_output_to_shot_label_us": 1866.7000000004773
+   },
+   {
+    "shot": 2,
+    "final_receiver_complete_us": 446092.3000000016,
+    "first_S_after_final_ADC_init_us": 445916.7000000016,
+    "terminal_starts_after_receiver_busy": false,
+    "last_S_output_end_us": 450760.60000000166,
+    "S_area_final_ADC_centre_to_shot_end_cycles_m": 16914.05190184536,
+    "margin_last_output_to_next_RF_us": null,
+    "margin_last_output_to_shot_label_us": 1866.7000000021071
+   }
+  ]
+ },
+ "v191_v7/flat_2us": {
+  "min_accepted_tr_ms": 199,
+  "rejected_tr_ms": 198,
+  "two_shot_ADC": 16,
+  "two_shot_RF": 24,
+  "timer_overruns": 0,
+  "ignored_lists": 0,
+  "premature_matrix_use": {},
+  "shot1_last_gradient_output_to_shot2_first_RF_us": 17426.800000000017,
+  "shot_spacing_us": 199068.30000000016,
+  "terminal": [
+   {
+    "shot": 1,
+    "final_receiver_complete_us": 199909.10000000015,
+    "first_S_after_final_ADC_init_us": 199724.80000000013,
+    "terminal_starts_after_receiver_busy": false,
+    "last_S_output_end_us": 204581.20000000016,
+    "S_area_final_ADC_centre_to_shot_end_cycles_m": 16914.05190184536,
+    "margin_last_output_to_next_RF_us": 17426.800000000017,
+    "margin_last_output_to_shot_label_us": 1199.100000000035
+   },
+   {
+    "shot": 2,
+    "final_receiver_complete_us": 399045.80000000016,
+    "first_S_after_final_ADC_init_us": 398861.5000000002,
+    "terminal_starts_after_receiver_busy": false,
+    "last_S_output_end_us": 403717.90000000014,
+    "S_area_final_ADC_centre_to_shot_end_cycles_m": 16914.05190184536,
+    "margin_last_output_to_next_RF_us": null,
+    "margin_last_output_to_shot_label_us": 1199.100000000035
+   }
+  ]
+ },
+ "v1911/manual_x0.8": {
+  "min_accepted_tr_ms": 193,
+  "rejected_tr_ms": 192,
+  "two_shot_ADC": 16,
+  "two_shot_RF": 24,
+  "timer_overruns": 0,
+  "ignored_lists": 0,
+  "premature_matrix_use": {},
+  "shot1_last_gradient_output_to_shot2_first_RF_us": 17737.640000000043,
+  "shot_spacing_us": 192849.00000000026,
+  "terminal": [
+   {
+    "shot": 1,
+    "final_receiver_complete_us": 230426.60000000204,
+    "first_S_after_final_ADC_init_us": 231916.94000000204,
+    "terminal_starts_after_receiver_busy": true,
+    "last_S_output_end_us": 236751.76000000205,
+    "S_area_final_ADC_centre_to_shot_end_cycles_m": 16914.05190184536,
+    "margin_last_output_to_next_RF_us": 17737.640000000043,
+    "margin_last_output_to_shot_label_us": 2058.9800000000396
+   },
+   {
+    "shot": 2,
+    "final_receiver_complete_us": 423352.6400000021,
+    "first_S_after_final_ADC_init_us": 424842.9800000021,
+    "terminal_starts_after_receiver_busy": true,
+    "last_S_output_end_us": 429677.80000000197,
+    "S_area_final_ADC_centre_to_shot_end_cycles_m": 16914.05190184536,
+    "margin_last_output_to_next_RF_us": null,
+    "margin_last_output_to_shot_label_us": 2058.9800000009127
+   }
+  ]
+ },
+ "v1911/manual_x1.0": {
+  "min_accepted_tr_ms": 193,
+  "rejected_tr_ms": 192,
+  "two_shot_ADC": 16,
+  "two_shot_RF": 24,
+  "timer_overruns": 0,
+  "ignored_lists": 0,
+  "premature_matrix_use": {},
+  "shot1_last_gradient_output_to_shot2_first_RF_us": 17740.10000000021,
+  "shot_spacing_us": 192846.6000000009,
+  "terminal": [
+   {
+    "shot": 1,
+    "final_receiver_complete_us": 240927.7000000008,
+    "first_S_after_final_ADC_init_us": 242418.00000000081,
+    "terminal_starts_after_receiver_busy": true,
+    "last_S_output_end_us": 247253.30000000086,
+    "S_area_final_ADC_centre_to_shot_end_cycles_m": 16914.05190184536,
+    "margin_last_output_to_next_RF_us": 17740.10000000021,
+    "margin_last_output_to_shot_label_us": 2209.7000000004773
+   },
+   {
+    "shot": 2,
+    "final_receiver_complete_us": 433859.50000000146,
+    "first_S_after_final_ADC_init_us": 435349.80000000144,
+    "terminal_starts_after_receiver_busy": true,
+    "last_S_output_end_us": 440185.1000000015,
+    "S_area_final_ADC_centre_to_shot_end_cycles_m": 16914.05190184536,
+    "margin_last_output_to_next_RF_us": null,
+    "margin_last_output_to_shot_label_us": 2209.700000002107
+   }
+  ]
+ },
+ "v1911/flat_2us": {
+  "min_accepted_tr_ms": 193,
+  "rejected_tr_ms": 192,
+  "two_shot_ADC": 16,
+  "two_shot_RF": 24,
+  "timer_overruns": 0,
+  "ignored_lists": 0,
+  "premature_matrix_use": {},
+  "shot1_last_gradient_output_to_shot2_first_RF_us": 17769.800000000017,
+  "shot_spacing_us": 193060.60000000015,
+  "terminal": [
+   {
+    "shot": 1,
+    "final_receiver_complete_us": 191958.20000000016,
+    "first_S_after_final_ADC_init_us": 193446.70000000016,
+    "terminal_starts_after_receiver_busy": true,
+    "last_S_output_end_us": 198287.60000000015,
+    "S_area_final_ADC_centre_to_shot_end_cycles_m": 16914.05190184536,
+    "margin_last_output_to_next_RF_us": 17769.800000000017,
+    "margin_last_output_to_shot_label_us": 1542.100000000035
+   },
+   {
+    "shot": 2,
+    "final_receiver_complete_us": 385087.2000000001,
+    "first_S_after_final_ADC_init_us": 386575.7000000001,
+    "terminal_starts_after_receiver_busy": true,
+    "last_S_output_end_us": 391416.6000000001,
+    "S_area_final_ADC_centre_to_shot_end_cycles_m": 16914.05190184536,
+    "margin_last_output_to_next_RF_us": null,
+    "margin_last_output_to_shot_label_us": 1542.100000000035
+   }
+  ]
+ }
+}

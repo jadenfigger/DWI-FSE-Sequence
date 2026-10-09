@@ -1,0 +1,765 @@
+{
+ "old_sha256": "3c90b80b31bf3cecfc38b8c1300061181fb3df0bcc3f60fb93027a45b6b51c7c",
+ "new_sha256": "9fca0a13eb773d0e06d7bde0175dff4a3cd84d705db4211717fee9d23168f8b1",
+ "model": "manual_x0.8",
+ "cases": {
+  "diffusion_flow_compensation": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "V181 DWI requires flow compensation off\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "V181 DWI requires flow compensation off\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "ramp_mismatch": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "diff_tramp (300 us) must equal tramp (200 us) for consistent DW timing\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "diff_tramp (300 us) must equal tramp (200 us) for consistent DW timing\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "ramp_too_short": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Independent crushers require ramp 100..1000 us, multiple of 10\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Independent crushers require ramp 100..1000 us, multiple of 10\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "ramp_off_raster": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Independent crushers require ramp 100..1000 us, multiple of 10\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Independent crushers require ramp 100..1000 us, multiple of 10\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "crusher_zero_duration": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "tcrush must be 1..5000 us and an exact multiple of tramp/50 us\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "tcrush must be 1..5000 us and an exact multiple of tramp/50 us\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "crusher_excessive_duration": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "tcrush must be 1..5000 us and an exact multiple of tramp/50 us\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "tcrush must be 1..5000 us and an exact multiple of tramp/50 us\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "first_crusher_zero_duration": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "diff_tcrush must be 1..10000 us and an exact multiple of tramp/50 us\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "diff_tcrush must be 1..10000 us and an exact multiple of tramp/50 us\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "crusher_invalid_signed_DAC": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Crusher amplitudes must be -32767..32767 DAC\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Crusher amplitudes must be -32767..32767 DAC\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "crusher_amplitude_ceiling": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Crusher amplitude exceeds DAC/gradient ceiling\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Crusher amplitude exceeds DAC/gradient ceiling\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "crusher_slew_ceiling": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Crusher ramp exceeds slew ceiling\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Crusher ramp exceeds slew ceiling\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "invalid_amplitude_ceiling": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Crusher amplitude/slew ceilings must be positive\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Crusher amplitude/slew ceilings must be positive\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "invalid_slew_ceiling": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Crusher amplitude/slew ceilings must be positive\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Crusher amplitude/slew ceilings must be positive\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "invalid_schedule": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Invalid crusher schedule or additive step\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Invalid crusher schedule or additive step\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "invalid_schedule_step": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Invalid crusher schedule or additive step\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Invalid crusher schedule or additive step\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "custom_count_mismatch": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Custom crusher count must equal ETL and be 1..64\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Custom crusher count must equal ETL and be 1..64\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "custom_invalid_percentage": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Custom crusher storage contains invalid percentage\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Custom crusher storage contains invalid percentage\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "schedule_without_independent_crushers": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Scheduled crushers require independent mode, DE OFF, no skipped echoes\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Scheduled crushers require independent mode, DE OFF, no skipped echoes\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "schedule_short_ADC": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "ADC window too short for scheduled crusher update\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "ADC window too short for scheduled crusher update\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "driven_equilibrium": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Set Driven Equilibrium OFF when Diffusion is ON\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Set Driven Equilibrium OFF when Diffusion is ON\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "invalid_RF_gradient_lag": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Invalid independent-crusher RF timing\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Invalid independent-crusher RF timing\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "invalid_diffusion_scale_low": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Invalid diffusion scale\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Invalid diffusion scale\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "invalid_diffusion_scale_high": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Invalid diffusion scale\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Invalid diffusion scale\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "invalid_direction_component": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Invalid diffusion direction\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Invalid diffusion direction\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "nonunit_direction": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Row 0 not unit length: b-value mode needs\n",
+     "all directions normalised to 1000\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Row 0 not unit length: b-value mode needs\n",
+     "all directions normalised to 1000\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "unachievable_b": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "b=30000 too high for current delta/Delta\n",
+     "Max b = 13342. Raise delta, Delta or grads\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "b=30000 too high for current delta/Delta\n",
+     "Max b = 13342. Raise delta, Delta or grads\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "invalid_views": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Views (including navigator) must be 1..1024; ETL must be 1..views\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Views (including navigator) must be 1..1024; ETL must be 1..views\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "invalid_ETL": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Views (including navigator) must be 1..1024; ETL must be 1..views\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Views (including navigator) must be 1..1024; ETL must be 1..views\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "navigator_without_imaging_views": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Navigator leaves no imaging views\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Navigator leaves no imaging views\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "unsupported_DWI_PE_order": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Set PE order to 1, 5, 6 or 7 for DWI\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Set PE order to 1, 5, 6 or 7 for DWI\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "implicit_diffusion_TE": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Set TE explicitly when diffusion is on\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Set TE explicitly when diffusion is on\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "diffusion_TE_too_short": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "TE is too short, increase to 22 ms (=21392 us)\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "TE is too short, increase to 22 ms (=21392 us)\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "diffusion_delta_outside_b_kernel": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "b-value mode needs delta <= 10 ms and Delta <= 80 ms\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "b-value mode needs delta <= 10 ms and Delta <= 80 ms\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "diffusion_Delta_too_short": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "b=6000 too high for current delta/Delta\n",
+     "Max b = 1276. Raise delta, Delta or grads\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "b=6000 too high for current delta/Delta\n",
+     "Max b = 1276. Raise delta, Delta or grads\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "first_refocus_timer_overrange": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "b=6000 too high for current delta/Delta\n",
+     "Max b = 1069. Raise delta, Delta or grads\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "b=6000 too high for current delta/Delta\n",
+     "Max b = 1069. Raise delta, Delta or grads\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "new_first_read_DAC_ceiling": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "V181 first read prephase exceeds DAC\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "V181 first read prephase exceeds DAC\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "new_first_read_slew_ceiling": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "V181 first read prephase exceeds slew\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "V181 first read prephase exceeds slew\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "new_intermediate_read_scale": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Reduce read grad comp\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Reduce read grad comp\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "cest_mtc_on": {
+   "old": {
+    "RF": 9,
+    "ADC": 8,
+    "messages": []
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "V181 CEST/MTC not supported\n"
+    ]
+   },
+   "same_messages": false,
+   "new_rejected_before_RF": true
+  },
+  "cest_mtc_on_diff_off": {
+   "old": {
+    "RF": 9,
+    "ADC": 8,
+    "messages": []
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "V181 CEST/MTC not supported\n"
+    ]
+   },
+   "same_messages": false,
+   "new_rejected_before_RF": true
+  },
+  "cest_mtc_on_array": {
+   "old": {
+    "RF": 9,
+    "ADC": 8,
+    "messages": []
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "V181 CEST/MTC not supported\n"
+    ]
+   },
+   "same_messages": false,
+   "new_rejected_before_RF": true
+  },
+  "validator_default": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Duration=126000\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Duration=126000\n"
+    ]
+   },
+   "same_messages": true,
+   "new_rejected_before_RF": true
+  },
+  "validator_cest": {
+   "old": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "Duration=126000\n"
+    ]
+   },
+   "new": {
+    "RF": 0,
+    "ADC": 0,
+    "messages": [
+     "V181 CEST/MTC not supported\n"
+    ]
+   },
+   "same_messages": false,
+   "new_rejected_before_RF": true
+  }
+ }
+}

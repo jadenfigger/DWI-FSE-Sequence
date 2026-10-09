@@ -1,0 +1,5730 @@
+{
+ "flat_0us|img": {
+  "nshots": 3,
+  "flags": {
+   "narrowing": 8,
+   "timer_arg": 21,
+   "matrix_active": 51
+  },
+  "overruns": 0,
+  "setlist_ignored": 0,
+  "err": [],
+  "shots": [
+   {
+    "shot": 1,
+    "t_end_minus_start": 1999858.6,
+    "complete_rel": 185079.1,
+    "ti_rel": 178300.3,
+    "term_create_call": 1026.5,
+    "term_ready": 1262.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.5,
+      2522.5,
+      2579491,
+      2860
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -234.3,
+      857.7,
+      -2482084
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6778.8,
+      -242.3,
+      -4735179
+     ],
+     [
+      -234.3,
+      857.7,
+      -242100
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -168.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.5,
+    "term_S_end_rel_complete": 2522.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812257.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 2,
+    "t_end_minus_start": 1999903.0,
+    "complete_rel": 185123.5,
+    "ti_rel": 178344.7,
+    "term_create_call": 1026.5,
+    "term_ready": 1262.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.5,
+      2522.5,
+      2579491,
+      2860
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -234.3,
+      857.7,
+      -2443302
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6778.8,
+      -242.3,
+      -4735179
+     ],
+     [
+      -234.3,
+      857.7,
+      -242100
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -168.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.5,
+    "term_S_end_rel_complete": 2522.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812257.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 3,
+    "t_end_minus_start": 1999903.0,
+    "complete_rel": 185123.5,
+    "ti_rel": 178344.7,
+    "term_create_call": 1026.5,
+    "term_ready": 1262.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.5,
+      2522.5,
+      2579491,
+      2860
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -234.3,
+      857.7,
+      -2404519
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6778.8,
+      -242.3,
+      -4735179
+     ],
+     [
+      -234.3,
+      857.7,
+      -242100
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -168.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.5,
+    "term_S_end_rel_complete": 2522.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812257.0,
+    "n_S_lobes_after_create": 2
+   }
+  ]
+ },
+ "flat_0us|default": {
+  "nshots": 8,
+  "flags": {
+   "narrowing": 8,
+   "timer_arg": 56,
+   "matrix_active": 136
+  },
+  "overruns": 0,
+  "setlist_ignored": 0,
+  "err": [],
+  "shots": [
+   {
+    "shot": 1,
+    "t_end_minus_start": 1999858.6,
+    "complete_rel": 185079.1,
+    "ti_rel": 178300.3,
+    "term_create_call": 1026.5,
+    "term_ready": 1262.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.5,
+      2522.5,
+      2579491,
+      2860
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6778.8,
+      -242.3,
+      -4735179
+     ],
+     [
+      -234.3,
+      857.7,
+      -242100
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -168.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.5,
+    "term_S_end_rel_complete": 2522.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812257.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 2,
+    "t_end_minus_start": 1999903.0,
+    "complete_rel": 185123.5,
+    "ti_rel": 178344.7,
+    "term_create_call": 1026.5,
+    "term_ready": 1262.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.5,
+      2522.5,
+      2579491,
+      2860
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6778.8,
+      -242.3,
+      -4735179
+     ],
+     [
+      -234.3,
+      857.7,
+      -242100
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -168.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.5,
+    "term_S_end_rel_complete": 2522.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812257.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 3,
+    "t_end_minus_start": 1999903.0,
+    "complete_rel": 185123.5,
+    "ti_rel": 178344.7,
+    "term_create_call": 1026.5,
+    "term_ready": 1262.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.5,
+      2522.5,
+      2579491,
+      2860
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6778.8,
+      -242.3,
+      -4735179
+     ],
+     [
+      -234.3,
+      857.7,
+      -242100
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -168.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.5,
+    "term_S_end_rel_complete": 2522.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812257.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 4,
+    "t_end_minus_start": 1999903.0,
+    "complete_rel": 185123.5,
+    "ti_rel": 178344.7,
+    "term_create_call": 1026.5,
+    "term_ready": 1262.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.5,
+      2522.5,
+      2579491,
+      2860
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6778.8,
+      -242.3,
+      -4735179
+     ],
+     [
+      -234.3,
+      857.7,
+      -242100
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -168.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.5,
+    "term_S_end_rel_complete": 2522.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812257.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 5,
+    "t_end_minus_start": 1999903.0,
+    "complete_rel": 185123.5,
+    "ti_rel": 178344.7,
+    "term_create_call": 1026.5,
+    "term_ready": 1262.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.5,
+      2522.5,
+      2579491,
+      2860
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6778.8,
+      -242.3,
+      -4735179
+     ],
+     [
+      -234.3,
+      857.7,
+      -242100
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -168.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.5,
+    "term_S_end_rel_complete": 2522.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812257.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 6,
+    "t_end_minus_start": 1999903.0,
+    "complete_rel": 185123.5,
+    "ti_rel": 178344.7,
+    "term_create_call": 1026.5,
+    "term_ready": 1262.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.5,
+      2522.5,
+      2579491,
+      2860
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -234.3,
+      857.7,
+      -2308915
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6778.8,
+      -242.3,
+      -4735179
+     ],
+     [
+      -234.3,
+      857.7,
+      -242100
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -168.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.5,
+    "term_S_end_rel_complete": 2522.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812257.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 7,
+    "t_end_minus_start": 1999903.0,
+    "complete_rel": 185123.5,
+    "ti_rel": 178344.7,
+    "term_create_call": 1026.5,
+    "term_ready": 1262.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.5,
+      2522.5,
+      2579491,
+      2860
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -234.3,
+      857.7,
+      -2272839
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6778.8,
+      -242.3,
+      -4735179
+     ],
+     [
+      -234.3,
+      857.7,
+      -242100
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -168.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.5,
+    "term_S_end_rel_complete": 2522.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812257.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 8,
+    "t_end_minus_start": 1999903.0,
+    "complete_rel": 185123.5,
+    "ti_rel": 178344.7,
+    "term_create_call": 1026.5,
+    "term_ready": 1262.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.5,
+      2522.5,
+      2579491,
+      2860
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -234.3,
+      857.7,
+      -2236762
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6778.8,
+      -242.3,
+      -4735179
+     ],
+     [
+      -234.3,
+      857.7,
+      -242100
+     ],
+     [
+      2871.4,
+      6263.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -168.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.5,
+    "term_S_end_rel_complete": 2522.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812257.0,
+    "n_S_lobes_after_create": 2
+   }
+  ]
+ },
+ "flat_0.5us|img": {
+  "nshots": 3,
+  "flags": {
+   "narrowing": 8,
+   "timer_arg": 21,
+   "matrix_active": 51
+  },
+  "overruns": 0,
+  "setlist_ignored": 0,
+  "err": [],
+  "shots": [
+   {
+    "shot": 1,
+    "t_end_minus_start": 1999909.1,
+    "complete_rel": 185106.6,
+    "ti_rel": 178325.3,
+    "term_create_call": 1026.0,
+    "term_ready": 1261.6,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.0,
+      2522.0,
+      2579491,
+      2860
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -236.8,
+      855.2,
+      -2482084
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6781.3,
+      -244.8,
+      -4735179
+     ],
+     [
+      -236.8,
+      855.2,
+      -242100
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -170.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.0,
+    "term_S_end_rel_complete": 2522.0,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812280.5,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 2,
+    "t_end_minus_start": 1999959.5,
+    "complete_rel": 185157.0,
+    "ti_rel": 178375.7,
+    "term_create_call": 1026.0,
+    "term_ready": 1261.6,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.0,
+      2522.0,
+      2579491,
+      2860
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -236.8,
+      855.2,
+      -2443302
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6781.3,
+      -244.8,
+      -4735179
+     ],
+     [
+      -236.8,
+      855.2,
+      -242100
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -170.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.0,
+    "term_S_end_rel_complete": 2522.0,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812280.5,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 3,
+    "t_end_minus_start": 1999959.5,
+    "complete_rel": 185157.0,
+    "ti_rel": 178375.7,
+    "term_create_call": 1026.0,
+    "term_ready": 1261.6,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.0,
+      2522.0,
+      2579491,
+      2860
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -236.8,
+      855.2,
+      -2404519
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6781.3,
+      -244.8,
+      -4735179
+     ],
+     [
+      -236.8,
+      855.2,
+      -242100
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -170.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.0,
+    "term_S_end_rel_complete": 2522.0,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812280.5,
+    "n_S_lobes_after_create": 2
+   }
+  ]
+ },
+ "flat_0.5us|default": {
+  "nshots": 8,
+  "flags": {
+   "narrowing": 8,
+   "timer_arg": 56,
+   "matrix_active": 136
+  },
+  "overruns": 0,
+  "setlist_ignored": 0,
+  "err": [],
+  "shots": [
+   {
+    "shot": 1,
+    "t_end_minus_start": 1999909.1,
+    "complete_rel": 185106.1,
+    "ti_rel": 178324.8,
+    "term_create_call": 1026.0,
+    "term_ready": 1261.6,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.0,
+      2522.0,
+      2579491,
+      2860
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6781.3,
+      -244.8,
+      -4735179
+     ],
+     [
+      -236.8,
+      855.2,
+      -242100
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -170.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.0,
+    "term_S_end_rel_complete": 2522.0,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812281.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 2,
+    "t_end_minus_start": 1999959.5,
+    "complete_rel": 185156.5,
+    "ti_rel": 178375.2,
+    "term_create_call": 1026.0,
+    "term_ready": 1261.6,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.0,
+      2522.0,
+      2579491,
+      2860
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6781.3,
+      -244.8,
+      -4735179
+     ],
+     [
+      -236.8,
+      855.2,
+      -242100
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -170.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.0,
+    "term_S_end_rel_complete": 2522.0,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812281.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 3,
+    "t_end_minus_start": 1999959.5,
+    "complete_rel": 185156.5,
+    "ti_rel": 178375.2,
+    "term_create_call": 1026.0,
+    "term_ready": 1261.6,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.0,
+      2522.0,
+      2579491,
+      2860
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6781.3,
+      -244.8,
+      -4735179
+     ],
+     [
+      -236.8,
+      855.2,
+      -242100
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -170.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.0,
+    "term_S_end_rel_complete": 2522.0,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812281.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 4,
+    "t_end_minus_start": 1999959.5,
+    "complete_rel": 185156.5,
+    "ti_rel": 178375.2,
+    "term_create_call": 1026.0,
+    "term_ready": 1261.6,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.0,
+      2522.0,
+      2579491,
+      2860
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6781.3,
+      -244.8,
+      -4735179
+     ],
+     [
+      -236.8,
+      855.2,
+      -242100
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -170.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.0,
+    "term_S_end_rel_complete": 2522.0,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812281.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 5,
+    "t_end_minus_start": 1999959.5,
+    "complete_rel": 185156.5,
+    "ti_rel": 178375.2,
+    "term_create_call": 1026.0,
+    "term_ready": 1261.6,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.0,
+      2522.0,
+      2579491,
+      2860
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6781.3,
+      -244.8,
+      -4735179
+     ],
+     [
+      -236.8,
+      855.2,
+      -242100
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -170.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.0,
+    "term_S_end_rel_complete": 2522.0,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812281.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 6,
+    "t_end_minus_start": 1999959.0,
+    "complete_rel": 185156.5,
+    "ti_rel": 178375.2,
+    "term_create_call": 1026.0,
+    "term_ready": 1261.6,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.0,
+      2522.0,
+      2579491,
+      2860
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -236.8,
+      855.2,
+      -2308915
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6781.3,
+      -244.8,
+      -4735179
+     ],
+     [
+      -236.8,
+      855.2,
+      -242100
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -170.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.0,
+    "term_S_end_rel_complete": 2522.0,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812280.5,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 7,
+    "t_end_minus_start": 1999959.5,
+    "complete_rel": 185157.0,
+    "ti_rel": 178375.7,
+    "term_create_call": 1026.0,
+    "term_ready": 1261.6,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.0,
+      2522.0,
+      2579491,
+      2860
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -236.8,
+      855.2,
+      -2272839
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6781.3,
+      -244.8,
+      -4735179
+     ],
+     [
+      -236.8,
+      855.2,
+      -242100
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -170.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.0,
+    "term_S_end_rel_complete": 2522.0,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812280.5,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 8,
+    "t_end_minus_start": 1999959.5,
+    "complete_rel": 185157.0,
+    "ti_rel": 178375.7,
+    "term_create_call": 1026.0,
+    "term_ready": 1261.6,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.0,
+      2522.0,
+      2579491,
+      2860
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -236.8,
+      855.2,
+      -2236762
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6781.3,
+      -244.8,
+      -4735179
+     ],
+     [
+      -236.8,
+      855.2,
+      -242100
+     ],
+     [
+      2872.9,
+      6264.9,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -170.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.0,
+    "term_S_end_rel_complete": 2522.0,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812280.5,
+    "n_S_lobes_after_create": 2
+   }
+  ]
+ },
+ "flat_1us|img": {
+  "nshots": 3,
+  "flags": {
+   "narrowing": 8,
+   "timer_arg": 21,
+   "matrix_active": 51
+  },
+  "overruns": 0,
+  "setlist_ignored": 0,
+  "err": [],
+  "shots": [
+   {
+    "shot": 1,
+    "t_end_minus_start": 1999959.6,
+    "complete_rel": 185134.1,
+    "ti_rel": 178350.3,
+    "term_create_call": 1025.5,
+    "term_ready": 1261.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.5,
+      2521.5,
+      2579491,
+      2860
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -239.3,
+      852.7,
+      -2482084
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6783.8,
+      -247.3,
+      -4735179
+     ],
+     [
+      -239.3,
+      852.7,
+      -242100
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -172.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.5,
+    "term_S_end_rel_complete": 2521.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812304.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 2,
+    "t_end_minus_start": 2000016.0,
+    "complete_rel": 185190.5,
+    "ti_rel": 178406.7,
+    "term_create_call": 1025.5,
+    "term_ready": 1261.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.5,
+      2521.5,
+      2579491,
+      2860
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -239.3,
+      852.7,
+      -2443302
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6783.8,
+      -247.3,
+      -4735179
+     ],
+     [
+      -239.3,
+      852.7,
+      -242100
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -172.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.5,
+    "term_S_end_rel_complete": 2521.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812304.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 3,
+    "t_end_minus_start": 2000016.0,
+    "complete_rel": 185190.5,
+    "ti_rel": 178406.7,
+    "term_create_call": 1025.5,
+    "term_ready": 1261.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.5,
+      2521.5,
+      2579491,
+      2860
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -239.3,
+      852.7,
+      -2404519
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6783.8,
+      -247.3,
+      -4735179
+     ],
+     [
+      -239.3,
+      852.7,
+      -242100
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -172.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.5,
+    "term_S_end_rel_complete": 2521.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812304.0,
+    "n_S_lobes_after_create": 2
+   }
+  ]
+ },
+ "flat_1us|default": {
+  "nshots": 8,
+  "flags": {
+   "narrowing": 8,
+   "timer_arg": 56,
+   "matrix_active": 136
+  },
+  "overruns": 0,
+  "setlist_ignored": 0,
+  "err": [],
+  "shots": [
+   {
+    "shot": 1,
+    "t_end_minus_start": 1999959.6,
+    "complete_rel": 185133.1,
+    "ti_rel": 178349.3,
+    "term_create_call": 1025.5,
+    "term_ready": 1261.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.5,
+      2521.5,
+      2579491,
+      2860
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6783.8,
+      -247.3,
+      -4735179
+     ],
+     [
+      -239.3,
+      852.7,
+      -242100
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -172.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.5,
+    "term_S_end_rel_complete": 2521.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812305.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 2,
+    "t_end_minus_start": 2000016.0,
+    "complete_rel": 185189.5,
+    "ti_rel": 178405.7,
+    "term_create_call": 1025.5,
+    "term_ready": 1261.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.5,
+      2521.5,
+      2579491,
+      2860
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6783.8,
+      -247.3,
+      -4735179
+     ],
+     [
+      -239.3,
+      852.7,
+      -242100
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -172.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.5,
+    "term_S_end_rel_complete": 2521.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812305.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 3,
+    "t_end_minus_start": 2000016.0,
+    "complete_rel": 185189.5,
+    "ti_rel": 178405.7,
+    "term_create_call": 1025.5,
+    "term_ready": 1261.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.5,
+      2521.5,
+      2579491,
+      2860
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6783.8,
+      -247.3,
+      -4735179
+     ],
+     [
+      -239.3,
+      852.7,
+      -242100
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -172.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.5,
+    "term_S_end_rel_complete": 2521.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812305.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 4,
+    "t_end_minus_start": 2000016.0,
+    "complete_rel": 185189.5,
+    "ti_rel": 178405.7,
+    "term_create_call": 1025.5,
+    "term_ready": 1261.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.5,
+      2521.5,
+      2579491,
+      2860
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6783.8,
+      -247.3,
+      -4735179
+     ],
+     [
+      -239.3,
+      852.7,
+      -242100
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -172.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.5,
+    "term_S_end_rel_complete": 2521.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812305.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 5,
+    "t_end_minus_start": 2000016.0,
+    "complete_rel": 185189.5,
+    "ti_rel": 178405.7,
+    "term_create_call": 1025.5,
+    "term_ready": 1261.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.5,
+      2521.5,
+      2579491,
+      2860
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6783.8,
+      -247.3,
+      -4735179
+     ],
+     [
+      -239.3,
+      852.7,
+      -242100
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -172.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.5,
+    "term_S_end_rel_complete": 2521.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812305.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 6,
+    "t_end_minus_start": 2000015.0,
+    "complete_rel": 185189.5,
+    "ti_rel": 178405.7,
+    "term_create_call": 1025.5,
+    "term_ready": 1261.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.5,
+      2521.5,
+      2579491,
+      2860
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -239.3,
+      852.7,
+      -2308915
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6783.8,
+      -247.3,
+      -4735179
+     ],
+     [
+      -239.3,
+      852.7,
+      -242100
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -172.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.5,
+    "term_S_end_rel_complete": 2521.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812304.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 7,
+    "t_end_minus_start": 2000016.0,
+    "complete_rel": 185190.5,
+    "ti_rel": 178406.7,
+    "term_create_call": 1025.5,
+    "term_ready": 1261.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.5,
+      2521.5,
+      2579491,
+      2860
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -239.3,
+      852.7,
+      -2272839
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6783.8,
+      -247.3,
+      -4735179
+     ],
+     [
+      -239.3,
+      852.7,
+      -242100
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -172.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.5,
+    "term_S_end_rel_complete": 2521.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812304.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 8,
+    "t_end_minus_start": 2000016.0,
+    "complete_rel": 185190.5,
+    "ti_rel": 178406.7,
+    "term_create_call": 1025.5,
+    "term_ready": 1261.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.5,
+      2521.5,
+      2579491,
+      2860
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -239.3,
+      852.7,
+      -2236762
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6783.8,
+      -247.3,
+      -4735179
+     ],
+     [
+      -239.3,
+      852.7,
+      -242100
+     ],
+     [
+      2874.4,
+      6266.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -172.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.5,
+    "term_S_end_rel_complete": 2521.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812304.0,
+    "n_S_lobes_after_create": 2
+   }
+  ]
+ },
+ "flat_2us|img": {
+  "nshots": 3,
+  "flags": {
+   "narrowing": 8,
+   "timer_arg": 21,
+   "matrix_active": 51
+  },
+  "overruns": 0,
+  "setlist_ignored": 0,
+  "err": [],
+  "shots": [
+   {
+    "shot": 1,
+    "t_end_minus_start": 2000060.6,
+    "complete_rel": 185189.1,
+    "ti_rel": 178400.3,
+    "term_create_call": 1024.5,
+    "term_ready": 1260.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1428.5,
+      2520.5,
+      2579491,
+      2860
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -244.3,
+      847.7,
+      -2482084
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6788.8,
+      -252.3,
+      -4735179
+     ],
+     [
+      -244.3,
+      847.7,
+      -242100
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -176.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1428.5,
+    "term_S_end_rel_complete": 2520.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812351.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 2,
+    "t_end_minus_start": 2000129.0,
+    "complete_rel": 185257.5,
+    "ti_rel": 178468.7,
+    "term_create_call": 1024.5,
+    "term_ready": 1260.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1428.5,
+      2520.5,
+      2579491,
+      2860
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -244.3,
+      847.7,
+      -2443302
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6788.8,
+      -252.3,
+      -4735179
+     ],
+     [
+      -244.3,
+      847.7,
+      -242100
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -176.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1428.5,
+    "term_S_end_rel_complete": 2520.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812351.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 3,
+    "t_end_minus_start": 2000129.0,
+    "complete_rel": 185257.5,
+    "ti_rel": 178468.7,
+    "term_create_call": 1024.5,
+    "term_ready": 1260.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1428.5,
+      2520.5,
+      2579491,
+      2860
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -244.3,
+      847.7,
+      -2404519
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6788.8,
+      -252.3,
+      -4735179
+     ],
+     [
+      -244.3,
+      847.7,
+      -242100
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -176.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1428.5,
+    "term_S_end_rel_complete": 2520.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812351.0,
+    "n_S_lobes_after_create": 2
+   }
+  ]
+ },
+ "flat_2us|default": {
+  "nshots": 8,
+  "flags": {
+   "narrowing": 8,
+   "timer_arg": 56,
+   "matrix_active": 136
+  },
+  "overruns": 0,
+  "setlist_ignored": 0,
+  "err": [],
+  "shots": [
+   {
+    "shot": 1,
+    "t_end_minus_start": 2000060.6,
+    "complete_rel": 185187.1,
+    "ti_rel": 178398.3,
+    "term_create_call": 1024.5,
+    "term_ready": 1260.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1428.5,
+      2520.5,
+      2579491,
+      2860
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6788.8,
+      -252.3,
+      -4735179
+     ],
+     [
+      -244.3,
+      847.7,
+      -242100
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -176.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1428.5,
+    "term_S_end_rel_complete": 2520.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812353.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 2,
+    "t_end_minus_start": 2000129.0,
+    "complete_rel": 185255.5,
+    "ti_rel": 178466.7,
+    "term_create_call": 1024.5,
+    "term_ready": 1260.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1428.5,
+      2520.5,
+      2579491,
+      2860
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6788.8,
+      -252.3,
+      -4735179
+     ],
+     [
+      -244.3,
+      847.7,
+      -242100
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -176.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1428.5,
+    "term_S_end_rel_complete": 2520.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812353.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 3,
+    "t_end_minus_start": 2000129.0,
+    "complete_rel": 185255.5,
+    "ti_rel": 178466.7,
+    "term_create_call": 1024.5,
+    "term_ready": 1260.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1428.5,
+      2520.5,
+      2579491,
+      2860
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6788.8,
+      -252.3,
+      -4735179
+     ],
+     [
+      -244.3,
+      847.7,
+      -242100
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -176.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1428.5,
+    "term_S_end_rel_complete": 2520.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812353.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 4,
+    "t_end_minus_start": 2000129.0,
+    "complete_rel": 185255.5,
+    "ti_rel": 178466.7,
+    "term_create_call": 1024.5,
+    "term_ready": 1260.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1428.5,
+      2520.5,
+      2579491,
+      2860
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6788.8,
+      -252.3,
+      -4735179
+     ],
+     [
+      -244.3,
+      847.7,
+      -242100
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -176.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1428.5,
+    "term_S_end_rel_complete": 2520.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812353.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 5,
+    "t_end_minus_start": 2000129.0,
+    "complete_rel": 185255.5,
+    "ti_rel": 178466.7,
+    "term_create_call": 1024.5,
+    "term_ready": 1260.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1428.5,
+      2520.5,
+      2579491,
+      2860
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6788.8,
+      -252.3,
+      -4735179
+     ],
+     [
+      -244.3,
+      847.7,
+      -242100
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -176.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1428.5,
+    "term_S_end_rel_complete": 2520.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812353.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 6,
+    "t_end_minus_start": 2000127.0,
+    "complete_rel": 185255.5,
+    "ti_rel": 178466.7,
+    "term_create_call": 1024.5,
+    "term_ready": 1260.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1428.5,
+      2520.5,
+      2579491,
+      2860
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -244.3,
+      847.7,
+      -2308915
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6788.8,
+      -252.3,
+      -4735179
+     ],
+     [
+      -244.3,
+      847.7,
+      -242100
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -176.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1428.5,
+    "term_S_end_rel_complete": 2520.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812351.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 7,
+    "t_end_minus_start": 2000129.0,
+    "complete_rel": 185257.5,
+    "ti_rel": 178468.7,
+    "term_create_call": 1024.5,
+    "term_ready": 1260.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1428.5,
+      2520.5,
+      2579491,
+      2860
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -244.3,
+      847.7,
+      -2272839
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6788.8,
+      -252.3,
+      -4735179
+     ],
+     [
+      -244.3,
+      847.7,
+      -242100
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -176.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1428.5,
+    "term_S_end_rel_complete": 2520.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812351.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 8,
+    "t_end_minus_start": 2000129.0,
+    "complete_rel": 185257.5,
+    "ti_rel": 178468.7,
+    "term_create_call": 1024.5,
+    "term_ready": 1260.1,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1428.5,
+      2520.5,
+      2579491,
+      2860
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -244.3,
+      847.7,
+      -2236762
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6788.8,
+      -252.3,
+      -4735179
+     ],
+     [
+      -244.3,
+      847.7,
+      -242100
+     ],
+     [
+      2877.4,
+      6269.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -176.8,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1428.5,
+    "term_S_end_rel_complete": 2520.5,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.4,
+    "S_end_to_shot_end": 1812351.0,
+    "n_S_lobes_after_create": 2
+   }
+  ]
+ },
+ "manual_x0.8|img": {
+  "nshots": 3,
+  "flags": {
+   "narrowing": 8,
+   "timer_arg": 21,
+   "matrix_active": 51
+  },
+  "overruns": 0,
+  "setlist_ignored": 0,
+  "err": [],
+  "shots": [
+   {
+    "shot": 1,
+    "t_end_minus_start": 1999849.0,
+    "complete_rel": 184464.9,
+    "ti_rel": 177685.2,
+    "term_create_call": 1026.2,
+    "term_ready": 1261.8,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -235.1,
+      856.9,
+      -2482084
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.7,
+      -243.1,
+      -4735238
+     ],
+     [
+      -235.1,
+      856.9,
+      -242100
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812861.8,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 2,
+    "t_end_minus_start": 1999926.0,
+    "complete_rel": 184541.9,
+    "ti_rel": 177762.2,
+    "term_create_call": 1026.2,
+    "term_ready": 1261.8,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -235.1,
+      856.9,
+      -2443302
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.7,
+      -243.1,
+      -4735238
+     ],
+     [
+      -235.1,
+      856.9,
+      -242100
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812861.8,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 3,
+    "t_end_minus_start": 1999926.0,
+    "complete_rel": 184541.9,
+    "ti_rel": 177762.2,
+    "term_create_call": 1026.2,
+    "term_ready": 1261.8,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -235.1,
+      856.9,
+      -2404519
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.7,
+      -243.1,
+      -4735238
+     ],
+     [
+      -235.1,
+      856.9,
+      -242100
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812861.8,
+    "n_S_lobes_after_create": 2
+   }
+  ]
+ },
+ "manual_x0.8|default": {
+  "nshots": 8,
+  "flags": {
+   "narrowing": 8,
+   "timer_arg": 56,
+   "matrix_active": 136
+  },
+  "overruns": 0,
+  "setlist_ignored": 0,
+  "err": [],
+  "shots": [
+   {
+    "shot": 1,
+    "t_end_minus_start": 1999845.0,
+    "complete_rel": 184464.4,
+    "ti_rel": 177684.7,
+    "term_create_call": 1026.2,
+    "term_ready": 1261.8,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.7,
+      -243.1,
+      -4735238
+     ],
+     [
+      -235.1,
+      856.9,
+      -242100
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812858.3,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 2,
+    "t_end_minus_start": 1999926.0,
+    "complete_rel": 184545.4,
+    "ti_rel": 177765.7,
+    "term_create_call": 1026.2,
+    "term_ready": 1261.8,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.7,
+      -243.1,
+      -4735238
+     ],
+     [
+      -235.1,
+      856.9,
+      -242100
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812858.3,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 3,
+    "t_end_minus_start": 1999926.0,
+    "complete_rel": 184545.4,
+    "ti_rel": 177765.7,
+    "term_create_call": 1026.2,
+    "term_ready": 1261.8,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.7,
+      -243.1,
+      -4735238
+     ],
+     [
+      -235.1,
+      856.9,
+      -242100
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812858.3,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 4,
+    "t_end_minus_start": 1999926.0,
+    "complete_rel": 184545.4,
+    "ti_rel": 177765.7,
+    "term_create_call": 1026.2,
+    "term_ready": 1261.8,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.7,
+      -243.1,
+      -4735238
+     ],
+     [
+      -235.1,
+      856.9,
+      -242100
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812858.3,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 5,
+    "t_end_minus_start": 1999930.0,
+    "complete_rel": 184545.4,
+    "ti_rel": 177765.7,
+    "term_create_call": 1026.2,
+    "term_ready": 1261.8,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.7,
+      -243.1,
+      -4735238
+     ],
+     [
+      -235.1,
+      856.9,
+      -242100
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812862.3,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 6,
+    "t_end_minus_start": 1999925.6,
+    "complete_rel": 184541.4,
+    "ti_rel": 177761.7,
+    "term_create_call": 1026.2,
+    "term_ready": 1261.8,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -235.1,
+      856.9,
+      -2308915
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.7,
+      -243.1,
+      -4735238
+     ],
+     [
+      -235.1,
+      856.9,
+      -242100
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812861.8,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 7,
+    "t_end_minus_start": 1999926.0,
+    "complete_rel": 184541.9,
+    "ti_rel": 177762.2,
+    "term_create_call": 1026.2,
+    "term_ready": 1261.8,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -235.1,
+      856.9,
+      -2272839
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.7,
+      -243.1,
+      -4735238
+     ],
+     [
+      -235.1,
+      856.9,
+      -242100
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812861.8,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 8,
+    "t_end_minus_start": 1999926.0,
+    "complete_rel": 184541.9,
+    "ti_rel": 177762.2,
+    "term_create_call": 1026.2,
+    "term_ready": 1261.8,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -235.1,
+      856.9,
+      -2236762
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.7,
+      -243.1,
+      -4735238
+     ],
+     [
+      -235.1,
+      856.9,
+      -242100
+     ],
+     [
+      2873.2,
+      6265.2,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812861.8,
+    "n_S_lobes_after_create": 2
+   }
+  ]
+ },
+ "manual_x0.9|img": {
+  "nshots": 3,
+  "flags": {
+   "narrowing": 8,
+   "timer_arg": 21,
+   "matrix_active": 51
+  },
+  "overruns": 0,
+  "setlist_ignored": 0,
+  "err": [],
+  "shots": [
+   {
+    "shot": 1,
+    "t_end_minus_start": 1999847.8,
+    "complete_rel": 184388.1,
+    "ti_rel": 177608.3,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -235.2,
+      856.8,
+      -2482084
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.8,
+      -243.2,
+      -4735245
+     ],
+     [
+      -235.2,
+      856.8,
+      -242100
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812937.4,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 2,
+    "t_end_minus_start": 1999928.9,
+    "complete_rel": 184469.2,
+    "ti_rel": 177689.4,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -235.2,
+      856.8,
+      -2443302
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.8,
+      -243.2,
+      -4735245
+     ],
+     [
+      -235.2,
+      856.8,
+      -242100
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812937.4,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 3,
+    "t_end_minus_start": 1999928.9,
+    "complete_rel": 184469.2,
+    "ti_rel": 177689.4,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -235.2,
+      856.8,
+      -2404519
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.8,
+      -243.2,
+      -4735245
+     ],
+     [
+      -235.2,
+      856.8,
+      -242100
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812937.4,
+    "n_S_lobes_after_create": 2
+   }
+  ]
+ },
+ "manual_x0.9|default": {
+  "nshots": 8,
+  "flags": {
+   "narrowing": 8,
+   "timer_arg": 56,
+   "matrix_active": 136
+  },
+  "overruns": 0,
+  "setlist_ignored": 0,
+  "err": [],
+  "shots": [
+   {
+    "shot": 1,
+    "t_end_minus_start": 1999843.3,
+    "complete_rel": 184387.5,
+    "ti_rel": 177607.8,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.8,
+      -243.2,
+      -4735245
+     ],
+     [
+      -235.2,
+      856.8,
+      -242100
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812933.4,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 2,
+    "t_end_minus_start": 1999928.9,
+    "complete_rel": 184473.2,
+    "ti_rel": 177693.4,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.8,
+      -243.2,
+      -4735245
+     ],
+     [
+      -235.2,
+      856.8,
+      -242100
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812933.4,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 3,
+    "t_end_minus_start": 1999928.9,
+    "complete_rel": 184473.2,
+    "ti_rel": 177693.4,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.8,
+      -243.2,
+      -4735245
+     ],
+     [
+      -235.2,
+      856.8,
+      -242100
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812933.4,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 4,
+    "t_end_minus_start": 1999928.9,
+    "complete_rel": 184473.2,
+    "ti_rel": 177693.4,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.8,
+      -243.2,
+      -4735245
+     ],
+     [
+      -235.2,
+      856.8,
+      -242100
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812933.4,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 5,
+    "t_end_minus_start": 1999933.4,
+    "complete_rel": 184473.2,
+    "ti_rel": 177693.4,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.8,
+      -243.2,
+      -4735245
+     ],
+     [
+      -235.2,
+      856.8,
+      -242100
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812937.9,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 6,
+    "t_end_minus_start": 1999928.4,
+    "complete_rel": 184468.7,
+    "ti_rel": 177688.9,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -235.2,
+      856.8,
+      -2308915
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.8,
+      -243.2,
+      -4735245
+     ],
+     [
+      -235.2,
+      856.8,
+      -242100
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812937.4,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 7,
+    "t_end_minus_start": 1999928.9,
+    "complete_rel": 184469.2,
+    "ti_rel": 177689.4,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -235.2,
+      856.8,
+      -2272839
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.8,
+      -243.2,
+      -4735245
+     ],
+     [
+      -235.2,
+      856.8,
+      -242100
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812937.4,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 8,
+    "t_end_minus_start": 1999928.9,
+    "complete_rel": 184469.2,
+    "ti_rel": 177689.4,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -235.2,
+      856.8,
+      -2236762
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.8,
+      -243.2,
+      -4735245
+     ],
+     [
+      -235.2,
+      856.8,
+      -242100
+     ],
+     [
+      2873.4,
+      6265.4,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812937.4,
+    "n_S_lobes_after_create": 2
+   }
+  ]
+ },
+ "manual_x1.0|img": {
+  "nshots": 3,
+  "flags": {
+   "narrowing": 8,
+   "timer_arg": 21,
+   "matrix_active": 51
+  },
+  "overruns": 0,
+  "setlist_ignored": 0,
+  "err": [],
+  "shots": [
+   {
+    "shot": 1,
+    "t_end_minus_start": 1999846.6,
+    "complete_rel": 184311.3,
+    "ti_rel": 177531.4,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -235.3,
+      856.7,
+      -2482084
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.9,
+      -243.3,
+      -4735252
+     ],
+     [
+      -235.3,
+      856.7,
+      -242100
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.4,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1813013.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 2,
+    "t_end_minus_start": 1999931.8,
+    "complete_rel": 184396.5,
+    "ti_rel": 177616.6,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -235.3,
+      856.7,
+      -2443302
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.9,
+      -243.3,
+      -4735252
+     ],
+     [
+      -235.3,
+      856.7,
+      -242100
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.4,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1813013.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 3,
+    "t_end_minus_start": 1999931.8,
+    "complete_rel": 184396.5,
+    "ti_rel": 177616.6,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -235.3,
+      856.7,
+      -2404519
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.9,
+      -243.3,
+      -4735252
+     ],
+     [
+      -235.3,
+      856.7,
+      -242100
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.4,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1813013.0,
+    "n_S_lobes_after_create": 2
+   }
+  ]
+ },
+ "manual_x1.0|default": {
+  "nshots": 8,
+  "flags": {
+   "narrowing": 8,
+   "timer_arg": 56,
+   "matrix_active": 136
+  },
+  "overruns": 0,
+  "setlist_ignored": 0,
+  "err": [],
+  "shots": [
+   {
+    "shot": 1,
+    "t_end_minus_start": 1999841.6,
+    "complete_rel": 184310.7,
+    "ti_rel": 177530.8,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.9,
+      -243.3,
+      -4735252
+     ],
+     [
+      -235.3,
+      856.7,
+      -242100
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.4,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1813008.6,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 2,
+    "t_end_minus_start": 1999931.8,
+    "complete_rel": 184400.9,
+    "ti_rel": 177621.0,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.9,
+      -243.3,
+      -4735252
+     ],
+     [
+      -235.3,
+      856.7,
+      -242100
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.4,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1813008.6,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 3,
+    "t_end_minus_start": 1999931.8,
+    "complete_rel": 184400.9,
+    "ti_rel": 177621.0,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.9,
+      -243.3,
+      -4735252
+     ],
+     [
+      -235.3,
+      856.7,
+      -242100
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.4,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1813008.6,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 4,
+    "t_end_minus_start": 1999931.8,
+    "complete_rel": 184400.9,
+    "ti_rel": 177621.0,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.9,
+      -243.3,
+      -4735252
+     ],
+     [
+      -235.3,
+      856.7,
+      -242100
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.4,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1813008.6,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 5,
+    "t_end_minus_start": 1999936.8,
+    "complete_rel": 184400.9,
+    "ti_rel": 177621.0,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.9,
+      -243.3,
+      -4735252
+     ],
+     [
+      -235.3,
+      856.7,
+      -242100
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.4,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1813013.6,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 6,
+    "t_end_minus_start": 1999931.2,
+    "complete_rel": 184395.9,
+    "ti_rel": 177616.0,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -235.3,
+      856.7,
+      -2308915
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.9,
+      -243.3,
+      -4735252
+     ],
+     [
+      -235.3,
+      856.7,
+      -242100
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.4,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1813013.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 7,
+    "t_end_minus_start": 1999931.8,
+    "complete_rel": 184396.5,
+    "ti_rel": 177616.6,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -235.3,
+      856.7,
+      -2272839
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.9,
+      -243.3,
+      -4735252
+     ],
+     [
+      -235.3,
+      856.7,
+      -242100
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.4,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1813013.0,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 8,
+    "t_end_minus_start": 1999931.8,
+    "complete_rel": 184396.5,
+    "ti_rel": 177616.6,
+    "term_create_call": 1026.1,
+    "term_ready": 1261.7,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1430.3,
+      2522.3,
+      2579491,
+      2860
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -235.3,
+      856.7,
+      -2236762
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6779.9,
+      -243.3,
+      -4735252
+     ],
+     [
+      -235.3,
+      856.7,
+      -242100
+     ],
+     [
+      2873.6,
+      6265.6,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -169.4,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1430.3,
+    "term_S_end_rel_complete": 2522.3,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1813013.0,
+    "n_S_lobes_after_create": 2
+   }
+  ]
+ },
+ "manual_x0.8_plus_0.5us_stmt|img": {
+  "nshots": 3,
+  "flags": {
+   "narrowing": 8,
+   "timer_arg": 21,
+   "matrix_active": 51
+  },
+  "overruns": 0,
+  "setlist_ignored": 0,
+  "err": [],
+  "shots": [
+   {
+    "shot": 1,
+    "t_end_minus_start": 1999899.5,
+    "complete_rel": 184492.4,
+    "ti_rel": 177710.2,
+    "term_create_call": 1025.7,
+    "term_ready": 1261.3,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.8,
+      2521.8,
+      2579491,
+      2860
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -237.6,
+      854.4,
+      -2482084
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6782.2,
+      -245.6,
+      -4735238
+     ],
+     [
+      -237.6,
+      854.4,
+      -242100
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -171.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.8,
+    "term_S_end_rel_complete": 2521.8,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812885.3,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 2,
+    "t_end_minus_start": 1999982.5,
+    "complete_rel": 184575.4,
+    "ti_rel": 177793.2,
+    "term_create_call": 1025.7,
+    "term_ready": 1261.3,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.8,
+      2521.8,
+      2579491,
+      2860
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -237.6,
+      854.4,
+      -2443302
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6782.2,
+      -245.6,
+      -4735238
+     ],
+     [
+      -237.6,
+      854.4,
+      -242100
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -171.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.8,
+    "term_S_end_rel_complete": 2521.8,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812885.3,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 3,
+    "t_end_minus_start": 1999982.5,
+    "complete_rel": 184575.4,
+    "ti_rel": 177793.2,
+    "term_create_call": 1025.7,
+    "term_ready": 1261.3,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.8,
+      2521.8,
+      2579491,
+      2860
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -237.6,
+      854.4,
+      -2404519
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6782.2,
+      -245.6,
+      -4735238
+     ],
+     [
+      -237.6,
+      854.4,
+      -242100
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -171.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.8,
+    "term_S_end_rel_complete": 2521.8,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812885.3,
+    "n_S_lobes_after_create": 2
+   }
+  ]
+ },
+ "manual_x0.8_plus_0.5us_stmt|default": {
+  "nshots": 8,
+  "flags": {
+   "narrowing": 8,
+   "timer_arg": 56,
+   "matrix_active": 136
+  },
+  "overruns": 0,
+  "setlist_ignored": 0,
+  "err": [],
+  "shots": [
+   {
+    "shot": 1,
+    "t_end_minus_start": 1999895.5,
+    "complete_rel": 184491.4,
+    "ti_rel": 177709.2,
+    "term_create_call": 1025.7,
+    "term_ready": 1261.3,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.8,
+      2521.8,
+      2579491,
+      2860
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6782.2,
+      -245.6,
+      -4735238
+     ],
+     [
+      -237.6,
+      854.4,
+      -242100
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -171.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.8,
+    "term_S_end_rel_complete": 2521.8,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812882.3,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 2,
+    "t_end_minus_start": 1999982.5,
+    "complete_rel": 184578.4,
+    "ti_rel": 177796.2,
+    "term_create_call": 1025.7,
+    "term_ready": 1261.3,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.8,
+      2521.8,
+      2579491,
+      2860
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6782.2,
+      -245.6,
+      -4735238
+     ],
+     [
+      -237.6,
+      854.4,
+      -242100
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -171.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.8,
+    "term_S_end_rel_complete": 2521.8,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812882.3,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 3,
+    "t_end_minus_start": 1999982.5,
+    "complete_rel": 184578.4,
+    "ti_rel": 177796.2,
+    "term_create_call": 1025.7,
+    "term_ready": 1261.3,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.8,
+      2521.8,
+      2579491,
+      2860
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6782.2,
+      -245.6,
+      -4735238
+     ],
+     [
+      -237.6,
+      854.4,
+      -242100
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -171.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.8,
+    "term_S_end_rel_complete": 2521.8,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812882.3,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 4,
+    "t_end_minus_start": 1999982.5,
+    "complete_rel": 184578.4,
+    "ti_rel": 177796.2,
+    "term_create_call": 1025.7,
+    "term_ready": 1261.3,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.8,
+      2521.8,
+      2579491,
+      2860
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6782.2,
+      -245.6,
+      -4735238
+     ],
+     [
+      -237.6,
+      854.4,
+      -242100
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -171.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.8,
+    "term_S_end_rel_complete": 2521.8,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812882.3,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 5,
+    "t_end_minus_start": 1999986.5,
+    "complete_rel": 184578.4,
+    "ti_rel": 177796.2,
+    "term_create_call": 1025.7,
+    "term_ready": 1261.3,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.8,
+      2521.8,
+      2579491,
+      2860
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6782.2,
+      -245.6,
+      -4735238
+     ],
+     [
+      -237.6,
+      854.4,
+      -242100
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -171.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.8,
+    "term_S_end_rel_complete": 2521.8,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812886.3,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 6,
+    "t_end_minus_start": 1999981.6,
+    "complete_rel": 184574.4,
+    "ti_rel": 177792.2,
+    "term_create_call": 1025.7,
+    "term_ready": 1261.3,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.8,
+      2521.8,
+      2579491,
+      2860
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -237.6,
+      854.4,
+      -2308915
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6782.2,
+      -245.6,
+      -4735238
+     ],
+     [
+      -237.6,
+      854.4,
+      -242100
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -171.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.8,
+    "term_S_end_rel_complete": 2521.8,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812885.3,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 7,
+    "t_end_minus_start": 1999982.5,
+    "complete_rel": 184575.4,
+    "ti_rel": 177793.2,
+    "term_create_call": 1025.7,
+    "term_ready": 1261.3,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.8,
+      2521.8,
+      2579491,
+      2860
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -237.6,
+      854.4,
+      -2272839
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6782.2,
+      -245.6,
+      -4735238
+     ],
+     [
+      -237.6,
+      854.4,
+      -242100
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -171.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.8,
+    "term_S_end_rel_complete": 2521.8,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812885.3,
+    "n_S_lobes_after_create": 2
+   },
+   {
+    "shot": 8,
+    "t_end_minus_start": 1999982.5,
+    "complete_rel": 184575.4,
+    "ti_rel": 177793.2,
+    "term_create_call": 1025.7,
+    "term_ready": 1261.3,
+    "S_lobes_after_last_ADCinit_rel_complete": [
+     [
+      1429.8,
+      2521.8,
+      2579491,
+      2860
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001,
+      6000
+     ]
+    ],
+    "P_lobes_rel_complete": [
+     [
+      -237.6,
+      854.4,
+      -2236762
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "R_lobes_rel_complete": [
+     [
+      -6782.2,
+      -245.6,
+      -4735238
+     ],
+     [
+      -237.6,
+      854.4,
+      -242100
+     ],
+     [
+      2874.7,
+      6266.7,
+      19200001
+     ]
+    ],
+    "PR_trailing_end_minus_create": -171.3,
+    "margin_ready_before_S_start": null,
+    "issues": {
+     "S": [],
+     "P": [],
+     "R": []
+    },
+    "term_S_start_rel_complete": 1429.8,
+    "term_S_end_rel_complete": 2521.8,
+    "term_S_area": 2579491,
+    "term_S_peak": 2860,
+    "term_ready_to_S_start": 168.6,
+    "S_end_to_shot_end": 1812885.3,
+    "n_S_lobes_after_create": 2
+   }
+  ]
+ }
+}

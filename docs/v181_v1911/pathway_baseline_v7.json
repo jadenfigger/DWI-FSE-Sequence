@@ -1,0 +1,3560 @@
+{
+  "self_checks": {
+    "passed": true,
+    "RF_vs_Cartesian_Rodrigues_max_error": 1.4895204919483639e-15,
+    "constant_gradient_exact_integral_max_error": 2.117582368135751e-21,
+    "encoded_Z_diffusion_heat_equation": {
+      "k_cycles_m": 20000.0,
+      "D_mm2_s": 0.002,
+      "duration_s": 0.05,
+      "analytic_amplitude": 0.20615299242398236,
+      "pathway_attenuation": 0.20615299242398244,
+      "PDE_refinement": [
+        {
+          "grid_points": 128,
+          "steps": 3277,
+          "amplitude": 0.20613992499537565,
+          "absolute_error": 1.3067428606711173e-05
+        },
+        {
+          "grid_points": 256,
+          "steps": 13108,
+          "amplitude": 0.20614972529193176,
+          "absolute_error": 3.267132050593924e-06
+        },
+        {
+          "grid_points": 512,
+          "steps": 52429,
+          "amplitude": 0.20615217534327906,
+          "absolute_error": 8.170807032914507e-07
+        }
+      ],
+      "missing_2pi_expression_amplitude": 0.9607894391523232
+    }
+  },
+  "before": {
+    "model": "unpruned instantaneous-RF three-state Fourier pathways; exact PWC gradient integration",
+    "limitations": [
+      "shared source ledger, no vendor execution",
+      "RF signed-area rotations, no finite slice profile",
+      "finite-RF diffusion/motion excluded",
+      "bounded to eight imaging echoes",
+      "stationary centered box voxel, not a PSF",
+      "inferred rfcal linear transmit model"
+    ],
+    "inputs": {
+      "ppl": "docs\\v181_v1911\\baseline_v7\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppl",
+      "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828",
+      "ppr": "docs\\v181_v1911\\baseline_v7\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppr",
+      "ppr_sha256": "fc7f0218f5aaf7866e44ce65331a2f6c11526d0ce04f8e2e78f44dbb6cd0ebeb",
+      "includes": {
+        "scanner/utilities/stdfn_15.pph": "6f3eb7bb49eeb04f5538388b38a352be09fb327cd2d1277d67dbf82900d9faa3",
+        "scanner/utilities/var_20.pph": "d133e9caeb36851383f3498050bebe8c4ac6910654d3e5fd5e7d531e7cc53ceb",
+        "scanner/utilities/offst_20.pph": "22229bf45bc167ff330cc33cd2c77cf640ff74463870693c0bd530ac19580516",
+        "scanner/utilities/m3040_15.pph": "ab47aeb80141f71841a2d8ac600a19b4c3dd9f4a2af56ee8cb807c85d250fc9d",
+        "scanner/utilities/m3031_15.pph": "af9949a7e29f106f8c6c4008cc5e2185b1ff07b12bf3556ffdad9210cefa107c",
+        "scanner/utilities/tstex_15.pph": "3d64239f42684fcce6d3a3e77134a9cc1aaf6a4139e514470a4777c9be1300af"
+      },
+      "libraries": {
+        "pf1": {
+          "file": "scanner/utilities/rfstd44.seq",
+          "sha256": "c84c023a8bbcd676e81a6308774570b973ee9d5cb525dcfe706589b88544df29"
+        },
+        "pf7": {
+          "file": "scanner/utilities/gs_240hz.seq",
+          "sha256": "bc38fcd811b584765eb614042116d3d7fa3579bc79d20cf422b6feb1c1d916ef"
+        },
+        "pf8": {
+          "file": "scanner/utilities/presat.seq",
+          "sha256": "5c50bb224910527572dca3ac2f160cf4d29d000922a9b0958f82d99224335134"
+        },
+        "pf10": {
+          "file": "scanner/utilities/opt90_a.seq",
+          "sha256": "4766149124c15b9e65b740b0b9dd1fe4793a2e5954e82747ebfce9bb96e08444"
+        },
+        "pf11": {
+          "file": "scanner/utilities/opt90_as.seq",
+          "sha256": "6119f50a71f181de22a9b55d2d9a1f511c5602413aa173e1e4b6e45dd817fdff"
+        },
+        "pf12": {
+          "file": "scanner/utilities/asym.seq",
+          "sha256": "f64933e944bb3455c999d85dc2c8b6c559fe24d4ab519314ae777d1b1ba941b5"
+        },
+        "pf14": {
+          "file": "scanner/utilities/hypsec.seq",
+          "sha256": "47685cc6357fc2f00a0e50b2d1da2f8ef370c63d7537db4f1a1aef72809f3aa8"
+        },
+        "pf15": {
+          "file": "scanner/utilities/rfchess.seq",
+          "sha256": "2e436f1eb025c447994f3a8996c7004dad7ca911dcbee9d343c612bf027ba28b"
+        },
+        "pf16": {
+          "file": "scanner/utilities/9lobsinb.seq",
+          "sha256": "ece93936d5ea4cde463ed900a1657d33e9d7baebb431fa1e4e7541536a0f1403"
+        },
+        "pf17": {
+          "file": "scanner/utilities/19lobsinb.seq",
+          "sha256": "3ba81bab1eecc3854ea9fb4eddfbbc6b6494fc635877b1e800081c856fc45b45"
+        },
+        "pf18": {
+          "file": "scanner/rf/v19_slrprep90.seq",
+          "sha256": "ba1c47b36159676f3b1ede6be0166222a3115e29e8dd160d3f91d60d429d610e"
+        },
+        "pf19": {
+          "file": "scanner/rf/v19_slrprep180.seq",
+          "sha256": "12893aa1c5b41b8e6b413d2c66309e1ec04be5ab0c183c68bbe77655863de432"
+        },
+        "pf20": {
+          "file": "scanner/rf/v19_slrtip90.seq",
+          "sha256": "12011e69db23614590d9f1d8b7222d28667c49e54c2a387a7f30b130a584f6df"
+        },
+        "pf21": {
+          "file": "scanner/rf/v19_slrelim90.seq",
+          "sha256": "14065908df72390a8032c1a0ebc50c60cd0281d18d9d82b03c9d50365b77c1f0"
+        },
+        "pf22": {
+          "file": "scanner/rf/v19_reexc90.seq",
+          "sha256": "3c5c0b893c7568c72dbba2aa457ba73b7df2bd59e0e610c12437d13644688e29"
+        },
+        "pf23": {
+          "file": "scanner/rf/v19_imaging180.seq",
+          "sha256": "b79da53484e0df66e7296db0896f0f73506a9b680b48779d3c1c4cc4db8f5cc9"
+        },
+        "grad": {
+          "file": "scanner/utilities/g3040_15.seq",
+          "sha256": "9cd5cec17bbd3131d1c90a647b3b84ed9934be9884dfc47c8d9b7607f3006c6b"
+        }
+      },
+      "overrides": {},
+      "unused_ppr_params": [],
+      "assumptions": [
+        "MR3040_Output(loop, addr, points, waits): outputs `points` samples, each held `waits` master-clock periods (vendor macro argument order; the manual's +1 register description is not applied).",
+        "grad.size.<frame> = sample count; grad.waits.<frame> = WavEd frame dwell field (1 for all ramp frames).",
+        "Gradient channel output = primary_sample/32767*M[id] + secondary_sample/32767*M[id+256], logical axes, identity rotation (non-zero angles rejected for physics use).",
+        "A matrix created by CREATE_MATRIX becomes valid caldelay (100 us) after the call returns; nonzero use before then is flagged.",
+        "RF frame playback starts at MR3031_go; each sample lasts frame_waits*0.1 us; output is gated by rfon level>0.",
+        "RF amplitude = sample/2047 * board_multiplier (signed real frames only).",
+        "Transmit phase = multiple*phase_increment*0.225 deg at the time of MR3031_go; receiver phase = rphase at initiate().",
+        "waittimer(T) exits T ticks after starttimer entry; if code has already used longer, the exit is extended by whole 5000-us periods (manual pp.90-91).",
+        "delay32(x) delays x * 0.1 us (usage in vendor/v18 code; not documented in the supplied manual).",
+        "scale(a,b,c) = trunc(a*b/c) evaluated in 32 bits.",
+        "aqphase(n, pc) returns 0 for phase_cycle 1, 2*(n%2) for phase_cycle 2.",
+        "hostrequest() returns 1 (no host update).",
+        "OrderTimeToPos/BatchTimeToPos return the sequential time index (single-slice use only).",
+        "acqpad(sample_period) (vendor digital-filter padding, undocumented) returns acqpad_ticks (default 3730 = 10 x var_20 tfilter initializer 373 us).",
+        "input#n reads 0 (no gating/mains trigger hardware).",
+        "complete() returns after the digital-filter flush, acqpad/10 us (+5.2 us documented). Inferred from v18 self-consistency: without it every v18 train SetList(slice_180_refocus) would hit a still-active channel and be ignored, removing refocusing slice selection that the October acquisitions demonstrably had."
+      ],
+      "stmt_cost_us": 0.0,
+      "manual_expression_costs": true,
+      "manual_expression_cost_scale": 0.8
+    },
+    "settings": {
+      "b1": 1.0,
+      "df_hz": 0.0,
+      "initial_phase_deg": 0.0,
+      "diffusivity_mm2_s": 0.002,
+      "T1_s": 1.3,
+      "T2_s": 0.032,
+      "grad_latency_us": 60.0,
+      "rf_reference_offsets_us": {},
+      "voxel_widths_m_SPR": [
+        0.001,
+        0.0002573529411764706,
+        0.0002734375
+      ]
+    },
+    "rf": [
+      {
+        "rf": 1,
+        "frame": "v19_slrprep90",
+        "reference_us": 61771.98000000198,
+        "flip_deg": 89.96036640761298,
+        "phase_deg": 0.0
+      },
+      {
+        "rf": 2,
+        "frame": "v19_slrprep180",
+        "reference_us": 88769.66000000198,
+        "flip_deg": 179.8293278735586,
+        "phase_deg": 270.0
+      },
+      {
+        "rf": 3,
+        "frame": "v19_slrtip90",
+        "reference_us": 115766.90000000197,
+        "flip_deg": 89.83015511216225,
+        "phase_deg": 180.0
+      },
+      {
+        "rf": 4,
+        "frame": "v19_reexc90",
+        "reference_us": 121481.02000000197,
+        "flip_deg": 89.92635114407591,
+        "phase_deg": 0.0
+      },
+      {
+        "rf": 5,
+        "frame": "v19_imaging180",
+        "reference_us": 128479.52000000197,
+        "flip_deg": 141.91502289924486,
+        "phase_deg": 270.0
+      },
+      {
+        "rf": 6,
+        "frame": "v19_imaging180",
+        "reference_us": 142476.460000002,
+        "flip_deg": 94.70368854860494,
+        "phase_deg": 270.0
+      },
+      {
+        "rf": 7,
+        "frame": "v19_imaging180",
+        "reference_us": 156473.40000000203,
+        "flip_deg": 69.13088244200837,
+        "phase_deg": 270.0
+      },
+      {
+        "rf": 8,
+        "frame": "v19_imaging180",
+        "reference_us": 170470.34000000206,
+        "flip_deg": 62.94844580085314,
+        "phase_deg": 270.0
+      },
+      {
+        "rf": 9,
+        "frame": "v19_imaging180",
+        "reference_us": 184467.2800000021,
+        "flip_deg": 60.13824732760077,
+        "phase_deg": 270.0
+      },
+      {
+        "rf": 10,
+        "frame": "v19_imaging180",
+        "reference_us": 198464.22000000213,
+        "flip_deg": 59.85722748027555,
+        "phase_deg": 270.0
+      },
+      {
+        "rf": 11,
+        "frame": "v19_imaging180",
+        "reference_us": 212461.16000000216,
+        "flip_deg": 59.85722748027555,
+        "phase_deg": 270.0
+      },
+      {
+        "rf": 12,
+        "frame": "v19_imaging180",
+        "reference_us": 226458.1000000022,
+        "flip_deg": 59.85722748027555,
+        "phase_deg": 270.0
+      }
+    ],
+    "echoes": [
+      {
+        "echo": 1,
+        "time_us": 135476.44000000198,
+        "rf_count": 5,
+        "transverse_history_count": 121,
+        "signal_real_imag": [
+          3.796387069419771e-05,
+          0.05085951794025412
+        ],
+        "signal_abs": 0.05085953210923699,
+        "signal_no_diff_abs": 0.053011127447538345,
+        "diffusion_signal_ratio": 0.9594123829863712,
+        "l1_amplitude": 0.05099476481871293,
+        "coherent_over_l1": 0.9973481060270267,
+        "top_paths": [
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - +",
+            "signal_real_imag": [
+              6.110229062352002e-18,
+              0.04989380666006051
+            ],
+            "signal_no_diff_abs": 0.0519606412952675,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.5910625441656521
+            ],
+            "b_tensor_s_mm2": [
+              [
+                18.613593034641166,
+                0.0,
+                3.3559294940784326
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                3.3559294940784326,
+                0.0,
+                1.6812338632264252
+              ]
+            ],
+            "b_trace_s_mm2": 20.29482689786759,
+            "diffusion_attenuation": 0.9602230730090079
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "- + Z - +",
+            "signal_real_imag": [
+              5.056361604749976e-19,
+              0.000825766516234789
+            ],
+            "signal_no_diff_abs": 0.0008509861606913869,
+            "k_cycles_m": [
+              -4065.567420936255,
+              0.0,
+              0.5910625441656521
+            ],
+            "b_tensor_s_mm2": [
+              [
+                13.360666370579878,
+                0.0,
+                -0.10797562831478247
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.10797562831478247,
+                0.0,
+                1.6812338632264252
+              ]
+            ],
+            "b_trace_s_mm2": 15.041900233806302,
+            "diffusion_attenuation": 0.9703642131663949
+          },
+          {
+            "origin_after_rf": 3,
+            "history": "- +",
+            "signal_real_imag": [
+              3.923616682102168e-20,
+              0.00010679587194266797
+            ],
+            "signal_no_diff_abs": 0.00010873230931293571,
+            "k_cycles_m": [
+              -2091.0847003659,
+              0.0,
+              0.5910625441656521
+            ],
+            "b_tensor_s_mm2": [
+              [
+                7.303635963094523,
+                0.0,
+                1.6208102156807889
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.6208102156807889,
+                0.0,
+                1.6812191342761045
+              ]
+            ],
+            "b_trace_s_mm2": 8.984855097370627,
+            "diffusion_attenuation": 0.9821907822752609
+          },
+          {
+            "origin_after_rf": 4,
+            "history": "+",
+            "signal_real_imag": [
+              3.703340476324875e-05,
+              -6.802926090726139e-21
+            ],
+            "signal_no_diff_abs": 3.868708554738757e-05,
+            "k_cycles_m": [
+              -10654.567265230131,
+              0.0,
+              -2070.3801859680566
+            ],
+            "b_tensor_s_mm2": [
+              [
+                21.63759492915577,
+                0.0,
+                1.6159891996642974
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.6159891996642974,
+                0.0,
+                0.2051554614315399
+              ]
+            ],
+            "b_trace_s_mm2": 21.842750390587312,
+            "diffusion_attenuation": 0.957254966076128
+          },
+          {
+            "origin_after_rf": 2,
+            "history": "- - +",
+            "signal_real_imag": [
+              -8.529790190151459e-21,
+              -3.482551130697533e-05
+            ],
+            "signal_no_diff_abs": 0.00013017306771750419,
+            "k_cycles_m": [
+              53.268001582006036,
+              -32013.304521730795,
+              0.5910625441656521
+            ],
+            "b_tensor_s_mm2": [
+              [
+                12.985954783918839,
+                -63.17749652969455,
+                3.5017672458718287
+              ],
+              [
+                -63.17749652969455,
+                644.5901528165609,
+                -28.081038228970883
+              ],
+              [
+                3.5017672458718287,
+                -28.081038228970883,
+                1.6812191342761045
+              ]
+            ],
+            "b_trace_s_mm2": 659.2573267347559,
+            "diffusion_attenuation": 0.2675323852899596
+          },
+          {
+            "origin_after_rf": 1,
+            "history": "Z - - +",
+            "signal_real_imag": [
+              8.354575471037019e-21,
+              3.411014292796013e-05
+            ],
+            "signal_no_diff_abs": 0.00012749911712927963,
+            "k_cycles_m": [
+              53.268001582006036,
+              -32013.304521730795,
+              0.5910625441656521
+            ],
+            "b_tensor_s_mm2": [
+              [
+                12.985954783918839,
+                -63.17749652969455,
+                3.5017672458718287
+              ],
+              [
+                -63.17749652969455,
+                644.5901528165609,
+                -28.081038228970883
+              ],
+              [
+                3.5017672458718287,
+                -28.081038228970883,
+                1.6812191342761045
+              ]
+            ],
+            "b_trace_s_mm2": 659.2573267347559,
+            "diffusion_attenuation": 0.2675323852899596
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - + - +",
+            "signal_real_imag": [
+              3.947782996899611e-21,
+              1.6118047259210614e-05
+            ],
+            "signal_no_diff_abs": 6.0245476489314046e-05,
+            "k_cycles_m": [
+              -2260.954681743451,
+              32013.304521730795,
+              0.5910625441656521
+            ],
+            "b_tensor_s_mm2": [
+              [
+                12.972562601232628,
+                20.212704553573808,
+                1.4749724638873918
+              ],
+              [
+                20.212704553573808,
+                644.5901528165609,
+                28.081038228970883
+              ],
+              [
+                1.4749724638873918,
+                28.081038228970883,
+                1.6812338632264252
+              ]
+            ],
+            "b_trace_s_mm2": 659.24394928102,
+            "diffusion_attenuation": 0.2675395431899278
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + +",
+            "signal_real_imag": [
+              -1.939520913003834e-21,
+              7.91869506519841e-06
+            ],
+            "signal_no_diff_abs": 9.194133888769434e-06,
+            "k_cycles_m": [
+              -17243.567109524007,
+              0.0,
+              -4141.351434480279
+            ],
+            "b_tensor_s_mm2": [
+              [
+                71.73017531511687,
+                0.0,
+                11.0665627915157
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                11.0665627915157,
+                0.0,
+                2.9394407581105764
+              ]
+            ],
+            "b_trace_s_mm2": 74.66961607322744,
+            "diffusion_attenuation": 0.8612768925272054
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "- + - - +",
+            "signal_real_imag": [
+              3.119223066386487e-21,
+              6.3675973116457185e-06
+            ],
+            "signal_no_diff_abs": 2.382210557492188e-05,
+            "k_cycles_m": [
+              -1921.214718988349,
+              -32013.304521730795,
+              0.5910625441656521
+            ],
+            "b_tensor_s_mm2": [
+              [
+                13.42448580385452,
+                -22.371497165430654,
+                1.7729814018762589
+              ],
+              [
+                -22.371497165430654,
+                644.5901528165609,
+                -28.081038228970883
+              ],
+              [
+                1.7729814018762589,
+                -28.081038228970883,
+                1.6812338632264252
+              ]
+            ],
+            "b_trace_s_mm2": 659.6958724836419,
+            "diffusion_attenuation": 0.26729783778429084
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "- + + - +",
+            "signal_real_imag": [
+              -3.592387879272209e-21,
+              -4.8890121921593645e-06
+            ],
+            "signal_no_diff_abs": 1.849399935300906e-05,
+            "k_cycles_m": [
+              -6209.920122884162,
+              32013.304521730795,
+              0.5910625441656521
+            ],
+            "b_tensor_s_mm2": [
+              [
+                18.9566347122707,
+                -61.39929417495399,
+                -1.9889326585058236
+              ],
+              [
+                -61.39929417495399,
+                644.5901528165609,
+                28.081038228970883
+              ],
+              [
+                -1.9889326585058236,
+                28.081038228970883,
+                1.6812338632264252
+              ]
+            ],
+            "b_trace_s_mm2": 665.228021392058,
+            "diffusion_attenuation": 0.2643566758513971
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "- + Z + +",
+            "signal_real_imag": [
+              1.1953756467880497e-21,
+              4.880491451169092e-06
+            ],
+            "signal_no_diff_abs": 6.141419176173705e-06,
+            "k_cycles_m": [
+              -21192.532550664717,
+              0.0,
+              -4141.351434480279
+            ],
+            "b_tensor_s_mm2": [
+              [
+                111.9655240592066,
+                0.0,
+                15.730053748157436
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                15.730053748157436,
+                0.0,
+                2.9394407581105764
+              ]
+            ],
+            "b_trace_s_mm2": 114.90496481731718,
+            "diffusion_attenuation": 0.7946846341483224
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - - Z +",
+            "signal_real_imag": [
+              -3.545594420648531e-06,
+              -6.513151287482904e-22
+            ],
+            "signal_no_diff_abs": 1.3414660782298874e-05,
+            "k_cycles_m": [
+              -6535.731842711869,
+              -32013.304521730795,
+              -2070.3801859680566
+            ],
+            "b_tensor_s_mm2": [
+              [
+                20.525863282523282,
+                -11.792893411194875,
+                0.9935621126021734
+              ],
+              [
+                -11.792893411194875,
+                644.5901528165609,
+                4.862375625229492
+              ],
+              [
+                0.9935621126021734,
+                4.862375625229492,
+                0.2051701903818606
+              ]
+            ],
+            "b_trace_s_mm2": 665.321186289466,
+            "diffusion_attenuation": 0.26430742291501474
+          }
+        ]
+      },
+      {
+        "echo": 2,
+        "time_us": 149473.380000002,
+        "rf_count": 6,
+        "transverse_history_count": 365,
+        "signal_real_imag": [
+          5.288769482956056e-05,
+          0.032101260269848726
+        ],
+        "signal_abs": 0.032101303836773246,
+        "signal_no_diff_abs": 0.03592350724859924,
+        "diffusion_signal_ratio": 0.8936016078448178,
+        "l1_amplitude": 0.033422763821074404,
+        "coherent_over_l1": 0.9604622768070448,
+        "top_paths": [
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - +",
+            "signal_real_imag": [
+              -4.250955079275727e-18,
+              0.01735584121983338
+            ],
+            "signal_no_diff_abs": 0.018463053193615776,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                27.71625010625306,
+                0.0,
+                3.6457929289767605
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                3.6457929289767605,
+                0.0,
+                3.2049954131778993
+              ]
+            ],
+            "b_trace_s_mm2": 30.92124551943096,
+            "diffusion_attenuation": 0.9400309384276024
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - Z +",
+            "signal_real_imag": [
+              1.830525277775389e-18,
+              0.014947373226712156
+            ],
+            "signal_no_diff_abs": 0.017682776592453927,
+            "k_cycles_m": [
+              -116.60197979557779,
+              0.0,
+              0.5910625441811135
+            ],
+            "b_tensor_s_mm2": [
+              [
+                79.9765620826672,
+                0.0,
+                15.415273132024996
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                15.415273132024996,
+                0.0,
+                4.0511936489770575
+              ]
+            ],
+            "b_trace_s_mm2": 84.02775573164426,
+            "diffusion_attenuation": 0.8453069091587632
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "- + Z + - +",
+            "signal_real_imag": [
+              -1.175605064695811e-19,
+              -0.0004799771924094005
+            ],
+            "signal_no_diff_abs": 0.0005077176249403474,
+            "k_cycles_m": [
+              -3891.478443151449,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                24.8884294153804,
+                0.0,
+                3.788498496248473
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                3.788498496248473,
+                0.0,
+                3.2049954131778993
+              ]
+            ],
+            "b_trace_s_mm2": 28.093424828558298,
+            "diffusion_attenuation": 0.9453624787317435
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "- + Z - Z +",
+            "signal_real_imag": [
+              1.6323678635997678e-19,
+              0.0002665859029291198
+            ],
+            "signal_no_diff_abs": 0.0002895999315573096,
+            "k_cycles_m": [
+              -4065.567420936288,
+              0.0,
+              0.5910625441811135
+            ],
+            "b_tensor_s_mm2": [
+              [
+                37.35075388343698,
+                0.0,
+                7.432285816894494
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                7.432285816894494,
+                0.0,
+                4.0511936489770575
+              ]
+            ],
+            "b_trace_s_mm2": 41.401947532414034,
+            "diffusion_attenuation": 0.9205316503203816
+          },
+          {
+            "origin_after_rf": 5,
+            "history": "+",
+            "signal_real_imag": [
+              5.984907290717811e-05,
+              -1.0994096335156835e-20
+            ],
+            "signal_no_diff_abs": 6.252155907062536e-05,
+            "k_cycles_m": [
+              -10654.567265230164,
+              0.0,
+              -2070.380185968041
+            ],
+            "b_tensor_s_mm2": [
+              [
+                21.637594929155817,
+                0.0,
+                1.6159891996642801
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.6159891996642801,
+                0.0,
+                0.2051554614315354
+              ]
+            ],
+            "b_trace_s_mm2": 21.84275039058735,
+            "diffusion_attenuation": 0.9572549660761279
+          },
+          {
+            "origin_after_rf": 5,
+            "history": "+",
+            "signal_real_imag": [
+              5.950138253195419e-05,
+              -1.0930226649389988e-20
+            ],
+            "signal_no_diff_abs": 6.2158343012683e-05,
+            "k_cycles_m": [
+              -10654.567265230164,
+              0.0,
+              -2070.380185968041
+            ],
+            "b_tensor_s_mm2": [
+              [
+                21.637594929155817,
+                0.0,
+                1.6159891996642801
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.6159891996642801,
+                0.0,
+                0.2051554614315354
+              ]
+            ],
+            "b_trace_s_mm2": 21.84275039058735,
+            "diffusion_attenuation": 0.9572549660761279
+          },
+          {
+            "origin_after_rf": 4,
+            "history": "Z +",
+            "signal_real_imag": [
+              -4.659244574869566e-05,
+              8.558893432588028e-21
+            ],
+            "signal_no_diff_abs": 4.867297365892201e-05,
+            "k_cycles_m": [
+              -10654.567265230164,
+              0.0,
+              -2070.380185968041
+            ],
+            "b_tensor_s_mm2": [
+              [
+                21.637594929155817,
+                0.0,
+                1.6159891996642801
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.6159891996642801,
+                0.0,
+                0.2051554614315354
+              ]
+            ],
+            "b_trace_s_mm2": 21.84275039058735,
+            "diffusion_attenuation": 0.9572549660761279
+          },
+          {
+            "origin_after_rf": 3,
+            "history": "+ - +",
+            "signal_real_imag": [
+              -1.3841321311701482e-36,
+              -3.645807953213534e-05
+            ],
+            "signal_no_diff_abs": 3.7845126530910486e-05,
+            "k_cycles_m": [
+              -1916.995722581094,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                15.464579102142128,
+                0.0,
+                3.7139789954115816
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                3.7139789954115816,
+                0.0,
+                3.2049806842275785
+              ]
+            ],
+            "b_trace_s_mm2": 18.669559786369707,
+            "diffusion_attenuation": 0.9633493893158936
+          },
+          {
+            "origin_after_rf": 3,
+            "history": "- Z +",
+            "signal_real_imag": [
+              1.2254816706948869e-20,
+              3.335605747845324e-05
+            ],
+            "signal_no_diff_abs": 3.700279838805652e-05,
+            "k_cycles_m": [
+              -2091.084700365933,
+              0.0,
+              0.5910625441811135
+            ],
+            "b_tensor_s_mm2": [
+              [
+                47.82589732437749,
+                0.0,
+                11.42061275725871
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                11.42061275725871,
+                0.0,
+                4.051178920026737
+              ]
+            ],
+            "b_trace_s_mm2": 51.87707624440423,
+            "diffusion_attenuation": 0.9014468886553092
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + +",
+            "signal_real_imag": [
+              3.2452435894675185e-21,
+              2.649942490950846e-05
+            ],
+            "signal_no_diff_abs": 3.1678917316441615e-05,
+            "k_cycles_m": [
+              -17417.65608730888,
+              0.0,
+              -4142.749392279794
+            ],
+            "b_tensor_s_mm2": [
+              [
+                84.80012812863586,
+                0.0,
+                15.022112299245292
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                15.022112299245292,
+                0.0,
+                4.464051629434017
+              ]
+            ],
+            "b_trace_s_mm2": 89.26417975806987,
+            "diffusion_attenuation": 0.8365003337962893
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + Z +",
+            "signal_real_imag": [
+              5.255816853017121e-21,
+              -2.145850075579517e-05
+            ],
+            "signal_no_diff_abs": 2.626350148883829e-05,
+            "k_cycles_m": [
+              -17243.56710952404,
+              0.0,
+              -4141.351434480263
+            ],
+            "b_tensor_s_mm2": [
+              [
+                95.72026282797398,
+                0.0,
+                18.606824236724947
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                18.606824236724947,
+                0.0,
+                5.309400543861192
+              ]
+            ],
+            "b_trace_s_mm2": 101.02966337183517,
+            "diffusion_attenuation": 0.817046453798813
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "- + Z - + +",
+            "signal_real_imag": [
+              1.1588549771506973e-20,
+              1.8925538007489785e-05
+            ],
+            "signal_no_diff_abs": 2.4401901812046784e-05,
+            "k_cycles_m": [
+              -21366.62152844959,
+              0.0,
+              -4142.749392279794
+            ],
+            "b_tensor_s_mm2": [
+              [
+                122.61037089953699,
+                0.0,
+                16.078992566222084
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                16.078992566222084,
+                0.0,
+                4.464051629434017
+              ]
+            ],
+            "b_trace_s_mm2": 127.07442252897101,
+            "diffusion_attenuation": 0.7755763527474971
+          }
+        ]
+      },
+      {
+        "echo": 3,
+        "time_us": 163470.32000000204,
+        "rf_count": 7,
+        "transverse_history_count": 1097,
+        "signal_real_imag": [
+          7.231362433136957e-05,
+          0.018665368155126462
+        ],
+        "signal_abs": 0.018665508233816536,
+        "signal_no_diff_abs": 0.02226976144265481,
+        "diffusion_signal_ratio": 0.8381548352855366,
+        "l1_amplitude": 0.022034009544210833,
+        "coherent_over_l1": 0.8471226354134294,
+        "top_paths": [
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - Z +",
+            "signal_real_imag": [
+              -3.173308201181647e-18,
+              0.012956013943738836
+            ],
+            "signal_no_diff_abs": 0.015720462821428704,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                91.12341944994286,
+                0.0,
+                15.912633814803748
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                15.912633814803748,
+                0.0,
+                5.578155844020753
+              ]
+            ],
+            "b_trace_s_mm2": 96.70157529396361,
+            "diffusion_attenuation": 0.8241496507391867
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + - +",
+            "signal_real_imag": [
+              4.2373023859702647e-19,
+              0.0034600199738573116
+            ],
+            "signal_no_diff_abs": 0.003772645421499205,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                38.524641832985424,
+                0.0,
+                7.3930318659240175
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                7.3930318659240175,
+                0.0,
+                4.726406593312357
+              ]
+            ],
+            "b_trace_s_mm2": 43.25104842629778,
+            "diffusion_attenuation": 0.917133625688666
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + Z - +",
+            "signal_real_imag": [
+              -8.165181701680145e-19,
+              0.003333688418311735
+            ],
+            "signal_no_diff_abs": 0.00373834092394476,
+            "k_cycles_m": [
+              57.48699798929374,
+              0.0,
+              1.989020343712582
+            ],
+            "b_tensor_s_mm2": [
+              [
+                51.70633761911032,
+                0.0,
+                11.186054374186059
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                11.186054374186059,
+                0.0,
+                5.574955198928537
+              ]
+            ],
+            "b_trace_s_mm2": 57.28129281803886,
+            "diffusion_attenuation": 0.8917561255472578
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - Z Z +",
+            "signal_real_imag": [
+              -1.2256497750457115e-19,
+              -0.0010008189919730789
+            ],
+            "signal_no_diff_abs": 0.0013449273892556543,
+            "k_cycles_m": [
+              -116.60197979557779,
+              0.0,
+              0.5910625441811135
+            ],
+            "b_tensor_s_mm2": [
+              [
+                141.3395311306932,
+                0.0,
+                27.474616769971554
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                27.474616769971554,
+                0.0,
+                6.421153434727685
+              ]
+            ],
+            "b_trace_s_mm2": 147.7606845654209,
+            "diffusion_attenuation": 0.7441435128531205
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "- + Z + - Z +",
+            "signal_real_imag": [
+              -9.471282270249754e-20,
+              -0.000386694444342811
+            ],
+            "signal_no_diff_abs": 0.00043229881661277486,
+            "k_cycles_m": [
+              -3891.478443151449,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                50.16295544543671,
+                0.0,
+                11.533206694937261
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                11.533206694937261,
+                0.0,
+                5.578155844020753
+              ]
+            ],
+            "b_trace_s_mm2": 55.741111289457464,
+            "diffusion_attenuation": 0.8945072932947367
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - - + +",
+            "signal_real_imag": [
+              4.573345198988751e-20,
+              0.0003734419754473608
+            ],
+            "signal_no_diff_abs": 0.0009468629968191024,
+            "k_cycles_m": [
+              -116.60197979561417,
+              0.0,
+              0.5910625441811135
+            ],
+            "b_tensor_s_mm2": [
+              [
+                441.5034025107979,
+                0.0,
+                95.24434211948933
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                95.24434211948933,
+                0.0,
+                23.692484009714708
+              ]
+            ],
+            "b_trace_s_mm2": 465.1958865205126,
+            "diffusion_attenuation": 0.39439916513994544
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "- + Z + Z - +",
+            "signal_real_imag": [
+              -2.0954587399200917e-20,
+              -8.555359559095049e-05
+            ],
+            "signal_no_diff_abs": 0.00010280106736514311,
+            "k_cycles_m": [
+              -3891.4784431514163,
+              0.0,
+              1.989020343712582
+            ],
+            "b_tensor_s_mm2": [
+              [
+                86.25139846340643,
+                0.0,
+                15.84784213419507
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                15.84784213419507,
+                0.0,
+                5.574955198928537
+              ]
+            ],
+            "b_trace_s_mm2": 91.82635366233497,
+            "diffusion_attenuation": 0.8322247792142988
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "- + Z - + - +",
+            "signal_real_imag": [
+              3.5011455868496806e-20,
+              5.717804658922581e-05
+            ],
+            "signal_no_diff_abs": 6.178655541697391e-05,
+            "k_cycles_m": [
+              -4065.567420936255,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                34.03147694738852,
+                0.0,
+                3.9321772379317346
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                3.9321772379317346,
+                0.0,
+                4.726406593312357
+              ]
+            ],
+            "b_trace_s_mm2": 38.757883540700874,
+            "diffusion_attenuation": 0.9254124332284422
+          },
+          {
+            "origin_after_rf": 6,
+            "history": "+",
+            "signal_real_imag": [
+              5.611174967768323e-05,
+              -1.0307561195599846e-20
+            ],
+            "signal_no_diff_abs": 5.861735030499786e-05,
+            "k_cycles_m": [
+              -10654.567265230164,
+              0.0,
+              -2070.380185968041
+            ],
+            "b_tensor_s_mm2": [
+              [
+                21.637594929155817,
+                0.0,
+                1.6159891996642801
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.6159891996642801,
+                0.0,
+                0.2051554614315354
+              ]
+            ],
+            "b_trace_s_mm2": 21.84275039058735,
+            "diffusion_attenuation": 0.9572549660761279
+          },
+          {
+            "origin_after_rf": 6,
+            "history": "+",
+            "signal_real_imag": [
+              5.5785771106049194e-05,
+              -1.0247679903448506e-20
+            ],
+            "signal_no_diff_abs": 5.827681556432135e-05,
+            "k_cycles_m": [
+              -10654.567265230164,
+              0.0,
+              -2070.380185968041
+            ],
+            "b_tensor_s_mm2": [
+              [
+                21.637594929155817,
+                0.0,
+                1.6159891996642801
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.6159891996642801,
+                0.0,
+                0.2051554614315354
+              ]
+            ],
+            "b_trace_s_mm2": 21.84275039058735,
+            "diffusion_attenuation": 0.9572549660761279
+          },
+          {
+            "origin_after_rf": 3,
+            "history": "+ - Z +",
+            "signal_real_imag": [
+              -9.016789815067201e-37,
+              -2.8395629140412258e-05
+            ],
+            "signal_no_diff_abs": 3.222343013165152e-05,
+            "k_cycles_m": [
+              -1916.995722581094,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                57.65115986985657,
+                0.0,
+                13.719753537669469
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                13.719753537669469,
+                0.0,
+                5.578141115070432
+              ]
+            ],
+            "b_trace_s_mm2": 63.229300984927,
+            "diffusion_attenuation": 0.8812106291726094
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + Z +",
+            "signal_real_imag": [
+              -3.0816374695560473e-21,
+              -2.5163479557547562e-05
+            ],
+            "signal_no_diff_abs": 3.1792087939920824e-05,
+            "k_cycles_m": [
+              -17417.65608730888,
+              0.0,
+              -4142.749392279794
+            ],
+            "b_tensor_s_mm2": [
+              [
+                110.07465415869217,
+                0.0,
+                22.766820497934077
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                22.766820497934077,
+                0.0,
+                6.837212060276871
+              ]
+            ],
+            "b_trace_s_mm2": 116.91186621896904,
+            "diffusion_attenuation": 0.7915013196082091
+          }
+        ]
+      },
+      {
+        "echo": 4,
+        "time_us": 177467.26000000208,
+        "rf_count": 8,
+        "transverse_history_count": 3293,
+        "signal_real_imag": [
+          9.599647762337406e-05,
+          0.0142622979838034
+        ],
+        "signal_abs": 0.014262621046025117,
+        "signal_no_diff_abs": 0.018220361310944882,
+        "diffusion_signal_ratio": 0.782784753969595,
+        "l1_amplitude": 0.017850213795631995,
+        "coherent_over_l1": 0.7990168190318946,
+        "top_paths": [
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + - Z +",
+            "signal_real_imag": [
+              4.770246233063381e-19,
+              0.0038952016502918326
+            ],
+            "signal_no_diff_abs": 0.004824530402171304,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                99.8876108810118,
+                0.0,
+                19.45237550387062
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                19.45237550387062,
+                0.0,
+                7.096366379062988
+              ]
+            ],
+            "b_trace_s_mm2": 106.98397726007478,
+            "diffusion_attenuation": 0.8073742573036286
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - Z Z +",
+            "signal_real_imag": [
+              -9.345151645405592e-19,
+              0.003815447707825659
+            ],
+            "signal_no_diff_abs": 0.005280505451540825,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                154.53058879363263,
+                0.0,
+                28.179474700630735
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                28.179474700630735,
+                0.0,
+                7.951316274863606
+              ]
+            ],
+            "b_trace_s_mm2": 162.48190506849625,
+            "diffusion_attenuation": 0.7225535022811747
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + Z - Z +",
+            "signal_real_imag": [
+              -9.154588836294476e-19,
+              0.0037376445366403823
+            ],
+            "signal_no_diff_abs": 0.004780661161123767,
+            "k_cycles_m": [
+              57.48699798929374,
+              0.0,
+              1.989020343712582
+            ],
+            "b_tensor_s_mm2": [
+              [
+                115.1135069628005,
+                0.0,
+                23.45289526001309
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                23.45289526001309,
+                0.0,
+                7.948115629771392
+              ]
+            ],
+            "b_trace_s_mm2": 123.0616225925719,
+            "diffusion_attenuation": 0.7818258627143095
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + Z - +",
+            "signal_real_imag": [
+              2.8911539789532193e-19,
+              0.0023608063818614093
+            ],
+            "signal_no_diff_abs": 0.002720459276421254,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                63.79916786304173,
+                0.0,
+                15.137740064612807
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                15.137740064612807,
+                0.0,
+                7.099567024155211
+              ]
+            ],
+            "b_trace_s_mm2": 70.89873488719694,
+            "diffusion_attenuation": 0.86779699381019
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - + - +",
+            "signal_real_imag": [
+              -1.483175082656467e-19,
+              0.0006055521819389527
+            ],
+            "signal_no_diff_abs": 0.0006754743581337917,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                48.38706068306172,
+                0.0,
+                7.685945795223271
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                7.685945795223271,
+                0.0,
+                6.250168143263835
+              ]
+            ],
+            "b_trace_s_mm2": 54.637228826325554,
+            "diffusion_attenuation": 0.8964843367437059
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - Z - + +",
+            "signal_real_imag": [
+              -7.339790251130027e-20,
+              -0.0005993393569672722
+            ],
+            "signal_no_diff_abs": 0.0017262135814379764,
+            "k_cycles_m": [
+              -116.60197979557779,
+              0.0,
+              0.5910625441811135
+            ],
+            "b_tensor_s_mm2": [
+              [
+                502.86637155882534,
+                0.0,
+                107.30368575743597
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                107.30368575743597,
+                0.0,
+                26.062443795465306
+              ]
+            ],
+            "b_trace_s_mm2": 528.9288153542907,
+            "diffusion_attenuation": 0.3471988422591418
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - - + +",
+            "signal_real_imag": [
+              -1.4248004446996696e-19,
+              0.0005817189273232377
+            ],
+            "signal_no_diff_abs": 0.0015291872782779437,
+            "k_cycles_m": [
+              57.48699798925736,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                458.02309898660167,
+                0.0,
+                96.36114405150852
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                96.36114405150852,
+                0.0,
+                25.229048140035047
+              ]
+            ],
+            "b_trace_s_mm2": 483.2521471266367,
+            "diffusion_attenuation": 0.38041051974897805
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - Z + - +",
+            "signal_real_imag": [
+              6.39648750906738e-20,
+              0.0005223128426515188
+            ],
+            "signal_no_diff_abs": 0.0006469277883541592,
+            "k_cycles_m": [
+              -116.60197979557779,
+              0.0,
+              0.5910625441811135
+            ],
+            "b_tensor_s_mm2": [
+              [
+                99.88761088101131,
+                0.0,
+                19.452375503870588
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                19.452375503870588,
+                0.0,
+                7.096366379062993
+              ]
+            ],
+            "b_trace_s_mm2": 106.98397726007431,
+            "diffusion_attenuation": 0.8073742573036293
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - Z Z Z +",
+            "signal_real_imag": [
+              -3.62425576769417e-20,
+              -0.00029594294209706143
+            ],
+            "signal_no_diff_abs": 0.0004517612802856155,
+            "k_cycles_m": [
+              -116.60197979557779,
+              0.0,
+              0.5910625441811135
+            ],
+            "b_tensor_s_mm2": [
+              [
+                202.7025001787192,
+                0.0,
+                39.53396040791811
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                39.53396040791811,
+                0.0,
+                8.791113220478312
+              ]
+            ],
+            "b_trace_s_mm2": 211.4936133991975,
+            "diffusion_attenuation": 0.655087000616694
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + Z Z - +",
+            "signal_real_imag": [
+              4.989449353122884e-20,
+              -0.00020370972906623907
+            ],
+            "signal_no_diff_abs": 0.00024080290180915337,
+            "k_cycles_m": [
+              57.48699798929374,
+              0.0,
+              1.989020343712582
+            ],
+            "b_tensor_s_mm2": [
+              [
+                75.69642513196737,
+                0.0,
+                18.72631581939534
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                18.72631581939534,
+                0.0,
+                7.944914984679165
+              ]
+            ],
+            "b_trace_s_mm2": 83.64134011664653,
+            "diffusion_attenuation": 0.8459604412395652
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - - + Z +",
+            "signal_real_imag": [
+              -2.4438712511620617e-20,
+              -0.00019955723175560323
+            ],
+            "signal_no_diff_abs": 0.000574763528752372,
+            "k_cycles_m": [
+              -116.60197979561417,
+              0.0,
+              0.5910625441811135
+            ],
+            "b_tensor_s_mm2": [
+              [
+                502.8663715588235,
+                0.0,
+                107.30368575743586
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                107.30368575743586,
+                0.0,
+                26.062443795465338
+              ]
+            ],
+            "b_trace_s_mm2": 528.9288153542889,
+            "diffusion_attenuation": 0.34719884225914305
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - - Z + +",
+            "signal_real_imag": [
+              1.6996161165887057e-20,
+              0.00013878418804279277
+            ],
+            "signal_no_diff_abs": 0.000864798857089417,
+            "k_cycles_m": [
+              -116.60197979561417,
+              0.0,
+              0.5910625441811135
+            ],
+            "b_tensor_s_mm2": [
+              [
+                869.7566892186674,
+                0.0,
+                190.8403605717434
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                190.8403605717434,
+                0.0,
+                45.03172185695987
+              ]
+            ],
+            "b_trace_s_mm2": 914.7884110756272,
+            "diffusion_attenuation": 0.16048146560910984
+          }
+        ]
+      },
+      {
+        "echo": 5,
+        "time_us": 191464.2000000021,
+        "rf_count": 9,
+        "transverse_history_count": 9881,
+        "signal_real_imag": [
+          0.00010478729320408061,
+          0.010775681465011263
+        ],
+        "signal_abs": 0.010776190950990257,
+        "signal_no_diff_abs": 0.01448244028512612,
+        "diffusion_signal_ratio": 0.7440866828263544,
+        "l1_amplitude": 0.015209324322260385,
+        "coherent_over_l1": 0.7085252916343043,
+        "top_paths": [
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + Z - Z +",
+            "signal_real_imag": [
+              3.566899071704293e-19,
+              0.0029125941244346584
+            ],
+            "signal_no_diff_abs": 0.003812585100831677,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                125.1621369110681,
+                0.0,
+                27.197083702559407
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                27.197083702559407,
+                0.0,
+                9.46952680990584
+              ]
+            ],
+            "b_trace_s_mm2": 134.63166372097393,
+            "diffusion_attenuation": 0.7639420622504414
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + - Z Z +",
+            "signal_real_imag": [
+              1.8398072728975633e-19,
+              0.0015023166468719877
+            ],
+            "signal_no_diff_abs": 0.0021137046370989197,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                161.25057992903817,
+                0.0,
+                31.51171914181722
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                31.51171914181722,
+                0.0,
+                9.466326164813617
+              ]
+            ],
+            "b_trace_s_mm2": 170.71690609385178,
+            "diffusion_attenuation": 0.7107505090843401
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - Z Z Z +",
+            "signal_real_imag": [
+              -3.589546117068654e-19,
+              0.001465543420179531
+            ],
+            "signal_no_diff_abs": 0.002313474665663773,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                217.93775813732242,
+                0.0,
+                40.44631558645772
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                40.44631558645772,
+                0.0,
+                10.32447670570646
+              ]
+            ],
+            "b_trace_s_mm2": 228.26223484302886,
+            "diffusion_attenuation": 0.6334815081102447
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + Z - Z Z +",
+            "signal_real_imag": [
+              -3.5163494459542974e-19,
+              0.0014356586112838886
+            ],
+            "signal_no_diff_abs": 0.002094484814546562,
+            "k_cycles_m": [
+              57.48699798929374,
+              0.0,
+              1.989020343712582
+            ],
+            "b_tensor_s_mm2": [
+              [
+                178.52067630649066,
+                0.0,
+                35.719736145840116
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                35.719736145840116,
+                0.0,
+                10.321276060614247
+              ]
+            ],
+            "b_trace_s_mm2": 188.8419523671049,
+            "diffusion_attenuation": 0.6854471330195328
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - + - Z +",
+            "signal_real_imag": [
+              -1.822357881622169e-19,
+              0.0007440340687988434
+            ],
+            "signal_no_diff_abs": 0.0009466429055326749,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                111.7942300267515,
+                0.0,
+                19.95278668105026
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                19.95278668105026,
+                0.0,
+                8.623328574106688
+              ]
+            ],
+            "b_trace_s_mm2": 120.4175586008582,
+            "diffusion_attenuation": 0.785971208837377
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + Z Z - +",
+            "signal_real_imag": [
+              8.462276511001833e-20,
+              0.0006909973158704696
+            ],
+            "signal_no_diff_abs": 0.0008415359903885235,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                89.07369389309802,
+                0.0,
+                22.882448263301594
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                22.882448263301594,
+                0.0,
+                9.472727454998063
+              ]
+            ],
+            "b_trace_s_mm2": 98.54642134809609,
+            "diffusion_attenuation": 0.8211143952992995
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - + Z - +",
+            "signal_real_imag": [
+              -1.6570122937119024e-19,
+              0.0006765266094949087
+            ],
+            "signal_no_diff_abs": 0.0007954964086232908,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                72.377148195919,
+                0.0,
+                15.226207240432592
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                15.226207240432592,
+                0.0,
+                8.620127929014465
+              ]
+            ],
+            "b_trace_s_mm2": 80.99727612493348,
+            "diffusion_attenuation": 0.8504458375440379
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - Z + - Z +",
+            "signal_real_imag": [
+              7.891528961913424e-20,
+              0.0006443922416984072
+            ],
+            "signal_no_diff_abs": 0.0009066363420950293,
+            "k_cycles_m": [
+              -116.60197979557779,
+              0.0,
+              0.5910625441811135
+            ],
+            "b_tensor_s_mm2": [
+              [
+                161.25057992903731,
+                0.0,
+                31.511719141817146
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                31.511719141817146,
+                0.0,
+                9.46632616481362
+              ]
+            ],
+            "b_trace_s_mm2": 170.71690609385092,
+            "diffusion_attenuation": 0.7107505090843413
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - Z + Z - +",
+            "signal_real_imag": [
+              7.127815288901217e-20,
+              0.000582030287742056
+            ],
+            "signal_no_diff_abs": 0.0007618775251456832,
+            "k_cycles_m": [
+              -116.60197979557779,
+              0.0,
+              0.5910625441811135
+            ],
+            "b_tensor_s_mm2": [
+              [
+                125.16213691106785,
+                0.0,
+                27.197083702559418
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                27.197083702559418,
+                0.0,
+                9.469526809905847
+              ]
+            ],
+            "b_trace_s_mm2": 134.6316637209737,
+            "diffusion_attenuation": 0.7639420622504417
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - Z - + +",
+            "signal_real_imag": [
+              1.0931647652242677e-19,
+              -0.00044631838583392846
+            ],
+            "signal_no_diff_abs": 0.0013382225011828455,
+            "k_cycles_m": [
+              57.48699798925736,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                521.4302683302915,
+                0.0,
+                108.6279849373355
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                108.6279849373355,
+                0.0,
+                27.602208570877902
+              ]
+            ],
+            "b_trace_s_mm2": 549.0324769011694,
+            "diffusion_attenuation": 0.3335158282269434
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - Z + - +",
+            "signal_real_imag": [
+              -8.635209727002402e-20,
+              0.00035255919229179285
+            ],
+            "signal_no_diff_abs": 0.0004485650216288518,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                111.7942300267515,
+                0.0,
+                19.95278668105026
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                19.95278668105026,
+                0.0,
+                8.623328574106688
+              ]
+            ],
+            "b_trace_s_mm2": 120.4175586008582,
+            "diffusion_attenuation": 0.785971208837377
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - Z - Z + +",
+            "signal_real_imag": [
+              -3.932476177070953e-20,
+              -0.0003211110484924221
+            ],
+            "signal_no_diff_abs": 0.0022729405953080518,
+            "k_cycles_m": [
+              -116.60197979557779,
+              0.0,
+              0.5910625441811135
+            ],
+            "b_tensor_s_mm2": [
+              [
+                931.1196582666959,
+                0.0,
+                202.89970420969019
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                202.89970420969019,
+                0.0,
+                47.401681642710464
+              ]
+            ],
+            "b_trace_s_mm2": 978.5213399094064,
+            "diffusion_attenuation": 0.14127560093531696
+          }
+        ]
+      },
+      {
+        "echo": 6,
+        "time_us": 205461.14000000214,
+        "rf_count": 10,
+        "transverse_history_count": 29645,
+        "signal_real_imag": [
+          0.00010878852592188513,
+          0.008425688170350155
+        ],
+        "signal_abs": 0.008426390454242599,
+        "signal_no_diff_abs": 0.012137711385363733,
+        "diffusion_signal_ratio": 0.6942322309956692,
+        "l1_amplitude": 0.013542032866298123,
+        "coherent_over_l1": 0.6222396989755685,
+        "top_paths": [
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + Z - Z Z +",
+            "signal_real_imag": [
+              1.542329284256702e-19,
+              0.0012594074351319348
+            ],
+            "signal_no_diff_abs": 0.0018726798987144498,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                186.5251059590945,
+                0.0,
+                39.25642734050601
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                39.25642734050601,
+                0.0,
+                11.83948659565647
+              ]
+            ],
+            "b_trace_s_mm2": 198.36459255475097,
+            "diffusion_attenuation": 0.6725161283551385
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + Z Z - Z +",
+            "signal_real_imag": [
+              1.100801430403232e-19,
+              0.0008988725820127509
+            ],
+            "signal_no_diff_abs": 0.001243518315054855,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                150.43666294112438,
+                0.0,
+                34.941791901248195
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                34.941791901248195,
+                0.0,
+                11.842687240748694
+              ]
+            ],
+            "b_trace_s_mm2": 162.27935018187307,
+            "diffusion_attenuation": 0.7228462750651962
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - + Z - Z +",
+            "signal_real_imag": [
+              -2.1466891131962088e-19,
+              0.0008764523431126494
+            ],
+            "signal_no_diff_abs": 0.0011754866874163262,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                135.7843175396088,
+                0.0,
+                27.49304812625958
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                27.49304812625958,
+                0.0,
+                10.993288359857319
+              ]
+            ],
+            "b_trace_s_mm2": 146.77760589946612,
+            "diffusion_attenuation": 0.7456080553656098
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - Z + Z - Z +",
+            "signal_real_imag": [
+              9.27210220024302e-20,
+              0.000757124601697291
+            ],
+            "signal_no_diff_abs": 0.0011258088390371985,
+            "k_cycles_m": [
+              -116.60197979557779,
+              0.0,
+              0.5910625441811135
+            ],
+            "b_tensor_s_mm2": [
+              [
+                186.52510595909385,
+                0.0,
+                39.25642734050597
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                39.25642734050597,
+                0.0,
+                11.839486595656474
+              ]
+            ],
+            "b_trace_s_mm2": 198.36459255475032,
+            "diffusion_attenuation": 0.6725161283551394
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + - Z Z Z +",
+            "signal_real_imag": [
+              7.955337612125236e-20,
+              0.0006496026133954747
+            ],
+            "signal_no_diff_abs": 0.0010382173987017907,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                222.61354897706457,
+                0.0,
+                43.571062779763814
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                43.571062779763814,
+                0.0,
+                11.836285950564248
+              ]
+            ],
+            "b_trace_s_mm2": 234.4498349276288,
+            "diffusion_attenuation": 0.6256903556112157
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - Z Z Z Z +",
+            "signal_real_imag": [
+              -1.5457792433562804e-19,
+              0.0006311122702613163
+            ],
+            "signal_no_diff_abs": 0.0011363411931785104,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                281.34492748101223,
+                0.0,
+                52.71315647228471
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                52.71315647228471,
+                0.0,
+                12.697637136549313
+              ]
+            ],
+            "b_trace_s_mm2": 294.04256461756154,
+            "diffusion_attenuation": 0.5553897667794689
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + Z - Z Z Z +",
+            "signal_real_imag": [
+              -1.5142582958043508e-19,
+              0.0006182428667835643
+            ],
+            "signal_no_diff_abs": 0.0010287769339255926,
+            "k_cycles_m": [
+              57.48699798929374,
+              0.0,
+              1.989020343712582
+            ],
+            "b_tensor_s_mm2": [
+              [
+                241.92784565018084,
+                0.0,
+                47.986577031667146
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                47.986577031667146,
+                0.0,
+                12.694436491457102
+              ]
+            ],
+            "b_trace_s_mm2": 254.62228214163795,
+            "diffusion_attenuation": 0.6009493860097367
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - Z + Z - +",
+            "signal_real_imag": [
+              -1.138320494692182e-19,
+              0.00046475461148664474
+            ],
+            "signal_no_diff_abs": 0.0006233229484876632,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                135.7843175396088,
+                0.0,
+                27.49304812625958
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                27.49304812625958,
+                0.0,
+                10.993288359857317
+              ]
+            ],
+            "b_trace_s_mm2": 146.7776058994661,
+            "diffusion_attenuation": 0.7456080553656098
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - Z + - Z +",
+            "signal_real_imag": [
+              -1.118706890797819e-19,
+              0.0004567467499922046
+            ],
+            "signal_no_diff_abs": 0.0006628341820899753,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                175.2013993704413,
+                0.0,
+                32.21962756687725
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                32.21962756687725,
+                0.0,
+                10.996489004949542
+              ]
+            ],
+            "b_trace_s_mm2": 186.19788837539085,
+            "diffusion_attenuation": 0.6890814661248177
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - + - Z Z +",
+            "signal_real_imag": [
+              -7.847685739384506e-20,
+              0.00032040608544636615
+            ],
+            "signal_no_diff_abs": 0.00046497562508571226,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                175.2013993704413,
+                0.0,
+                32.21962756687725
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                32.21962756687725,
+                0.0,
+                10.996489004949542
+              ]
+            ],
+            "b_trace_s_mm2": 186.19788837539085,
+            "diffusion_attenuation": 0.6890814661248177
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + Z Z Z - +",
+            "signal_real_imag": [
+              3.478342823643547e-20,
+              0.0002840282460269609
+            ],
+            "signal_no_diff_abs": 0.0003655715088401495,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                114.34821992315433,
+                0.0,
+                30.627156461990385
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                30.627156461990385,
+                0.0,
+                11.845887885840916
+              ]
+            ],
+            "b_trace_s_mm2": 126.19410780899526,
+            "diffusion_attenuation": 0.7769430580848564
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - + Z Z - +",
+            "signal_real_imag": [
+              -6.828563167796671e-20,
+              0.00027879724882925376
+            ],
+            "signal_no_diff_abs": 0.00034557146182550544,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                96.3672357087763,
+                0.0,
+                22.766468685641915
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                22.766468685641915,
+                0.0,
+                10.990087714765094
+              ]
+            ],
+            "b_trace_s_mm2": 107.3573234235414,
+            "diffusion_attenuation": 0.8067716221602552
+          }
+        ]
+      },
+      {
+        "echo": 7,
+        "time_us": 219458.08000000217,
+        "rf_count": 11,
+        "transverse_history_count": 88937,
+        "signal_real_imag": [
+          0.00010801825191284834,
+          0.006567254030945087
+        ],
+        "signal_abs": 0.006568142313448362,
+        "signal_no_diff_abs": 0.009817599690776663,
+        "diffusion_signal_ratio": 0.6690171243811186,
+        "l1_amplitude": 0.012081042449709471,
+        "coherent_over_l1": 0.5436734736087543,
+        "top_paths": [
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - Z + Z - Z +",
+            "signal_real_imag": [
+              -1.4830905193298478e-19,
+              0.0006055176563407643
+            ],
+            "signal_no_diff_abs": 0.0009263013316417052,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                199.19148688329858,
+                0.0,
+                39.75988901208657
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                39.75988901208657,
+                0.0,
+                13.36644879070017
+              ]
+            ],
+            "b_trace_s_mm2": 212.55793567399874,
+            "diffusion_attenuation": 0.6536940363322067
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + Z - Z Z Z +",
+            "signal_real_imag": [
+              6.745007506305357e-20,
+              0.0005507716601228609
+            ],
+            "signal_no_diff_abs": 0.0009303076669349068,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                247.8880750071209,
+                0.0,
+                51.315770978452605
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                51.315770978452605,
+                0.0,
+                14.209446381407101
+              ]
+            ],
+            "b_trace_s_mm2": 262.097521388528,
+            "diffusion_attenuation": 0.5920317328325299
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + Z Z - Z Z +",
+            "signal_real_imag": [
+              4.814091249392169e-20,
+              0.00039310038230973423
+            ],
+            "signal_no_diff_abs": 0.0006177535323915538,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                211.79963198915078,
+                0.0,
+                47.00113553919479
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                47.00113553919479,
+                0.0,
+                14.212647026499324
+              ]
+            ],
+            "b_trace_s_mm2": 226.0122790156501,
+            "diffusion_attenuation": 0.636338542311359
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - + Z - Z Z +",
+            "signal_real_imag": [
+              -9.349666858305157e-20,
+              0.000381729118339049
+            ],
+            "signal_no_diff_abs": 0.0005839568622667602,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                199.19148688329858,
+                0.0,
+                39.75988901208657
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                39.75988901208657,
+                0.0,
+                13.366448790700172
+              ]
+            ],
+            "b_trace_s_mm2": 212.55793567399874,
+            "diffusion_attenuation": 0.6536940363322067
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + Z Z Z - Z +",
+            "signal_real_imag": [
+              4.550444659665254e-20,
+              0.0003715720045023145
+            ],
+            "signal_no_diff_abs": 0.0005432647334267047,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                175.71118897118072,
+                0.0,
+                42.68650009993698
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                42.68650009993698,
+                0.0,
+                14.215847671591547
+              ]
+            ],
+            "b_trace_s_mm2": 189.92703664277226,
+            "diffusion_attenuation": 0.6839612101425789
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - + Z Z - Z +",
+            "signal_real_imag": [
+              -8.89677146465049e-20,
+              0.0003632382606497144
+            ],
+            "signal_no_diff_abs": 0.0005135432700544506,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                159.77440505246608,
+                0.0,
+                35.0333095714689
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                35.0333095714689,
+                0.0,
+                13.363248145607947
+              ]
+            ],
+            "b_trace_s_mm2": 173.13765319807402,
+            "diffusion_attenuation": 0.7073177312034497
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - Z + Z - Z Z +",
+            "signal_real_imag": [
+              4.054931691841011e-20,
+              0.00033111030010156504
+            ],
+            "signal_no_diff_abs": 0.0005592779605197728,
+            "k_cycles_m": [
+              -116.60197979557779,
+              0.0,
+              0.5910625441811135
+            ],
+            "b_tensor_s_mm2": [
+              [
+                247.88807500711985,
+                0.0,
+                51.315770978452534
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                51.315770978452534,
+                0.0,
+                14.209446381407101
+              ]
+            ],
+            "b_trace_s_mm2": 262.09752138852696,
+            "diffusion_attenuation": 0.5920317328325311
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - Z + Z Z - Z +",
+            "signal_real_imag": [
+              3.832860929832822e-20,
+              0.0003129768462630537
+            ],
+            "signal_no_diff_abs": 0.0004918401533973321,
+            "k_cycles_m": [
+              -116.60197979557779,
+              0.0,
+              0.5910625441811135
+            ],
+            "b_tensor_s_mm2": [
+              [
+                211.79963198915038,
+                0.0,
+                47.00113553919479
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                47.00113553919479,
+                0.0,
+                14.21264702649933
+              ]
+            ],
+            "b_trace_s_mm2": 226.0122790156497,
+            "diffusion_attenuation": 0.6363385423113594
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + - Z Z Z Z +",
+            "signal_real_imag": [
+              3.4790762554209e-20,
+              0.000284088135276487
+            ],
+            "signal_no_diff_abs": 0.0005157643901771636,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                283.97651802509097,
+                0.0,
+                55.63040641771041
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                55.63040641771041,
+                0.0,
+                14.206245736314878
+              ]
+            ],
+            "b_trace_s_mm2": 298.18276376140585,
+            "diffusion_attenuation": 0.5508099060094155
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - Z Z Z Z Z +",
+            "signal_real_imag": [
+              -6.732470422950928e-20,
+              0.0002748739647888003
+            ],
+            "signal_no_diff_abs": 0.0005645102107379028,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                344.75209682470205,
+                0.0,
+                64.9799973581117
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                64.9799973581117,
+                0.0,
+                15.070797567392166
+              ]
+            ],
+            "b_trace_s_mm2": 359.8228943920942,
+            "diffusion_attenuation": 0.4869246996072883
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + Z - Z Z Z Z +",
+            "signal_real_imag": [
+              -6.595184424313771e-20,
+              0.0002692688385298355
+            ],
+            "signal_no_diff_abs": 0.0005110745674441088,
+            "k_cycles_m": [
+              57.48699798929374,
+              0.0,
+              1.989020343712582
+            ],
+            "b_tensor_s_mm2": [
+              [
+                305.335014993871,
+                0.0,
+                60.253417917494176
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                60.253417917494176,
+                0.0,
+                15.067596922299957
+              ]
+            ],
+            "b_trace_s_mm2": 320.402611916171,
+            "diffusion_attenuation": 0.5268680065150821
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - Z + Z Z - +",
+            "signal_real_imag": [
+              -5.304109868244935e-20,
+              0.00021655671953488406
+            ],
+            "signal_no_diff_abs": 0.0003061661117506959,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                159.7744050524661,
+                0.0,
+                35.0333095714689
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                35.0333095714689,
+                0.0,
+                13.363248145607947
+              ]
+            ],
+            "b_trace_s_mm2": 173.13765319807405,
+            "diffusion_attenuation": 0.7073177312034497
+          }
+        ]
+      },
+      {
+        "echo": 8,
+        "time_us": 233455.0200000022,
+        "rf_count": 12,
+        "transverse_history_count": 266813,
+        "signal_real_imag": [
+          0.00010693592470786646,
+          0.005164107061334398
+        ],
+        "signal_abs": 0.005165214132339231,
+        "signal_no_diff_abs": 0.008151924228570173,
+        "diffusion_signal_ratio": 0.633619006692509,
+        "l1_amplitude": 0.010792589162947031,
+        "coherent_over_l1": 0.47858897011222973,
+        "top_paths": [
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - Z + Z Z - Z +",
+            "signal_real_imag": [
+              -6.910597758503111e-20,
+              0.00028214656516942454
+            ],
+            "signal_no_diff_abs": 0.0004549841742652378,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                223.1815743961559,
+                0.0,
+                47.300150457295885
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                47.300150457295885,
+                0.0,
+                15.7364085764508
+              ]
+            ],
+            "b_trace_s_mm2": 238.9179829726067,
+            "diffusion_attenuation": 0.6201239100790004
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - Z + Z - Z Z +",
+            "signal_real_imag": [
+              -6.459436623218884e-20,
+              0.0002637265139514591
+            ],
+            "signal_no_diff_abs": 0.00046016686103688076,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                262.5986562269884,
+                0.0,
+                52.026729897913555
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                52.026729897913555,
+                0.0,
+                15.739609221543024
+              ]
+            ],
+            "b_trace_s_mm2": 278.33826544853144,
+            "diffusion_attenuation": 0.5731106176511966
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + Z - Z Z Z Z +",
+            "signal_real_imag": [
+              2.9497673891370854e-20,
+              0.00024086678634123955
+            ],
+            "signal_no_diff_abs": 0.00046215712346354314,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                309.2510440551473,
+                0.0,
+                63.3751146163992
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                63.3751146163992,
+                0.0,
+                16.57940616715773
+              ]
+            ],
+            "b_trace_s_mm2": 325.83045022230505,
+            "diffusion_attenuation": 0.5211794303550102
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + - Z + Z - Z +",
+            "signal_real_imag": [
+              2.17139341010026e-20,
+              0.00017730772755149223
+            ],
+            "signal_no_diff_abs": 0.0002760352085820858,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                206.43615475743871,
+                0.0,
+                43.29352971235159
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                43.29352971235159,
+                0.0,
+                14.884659325742406
+              ]
+            ],
+            "b_trace_s_mm2": 221.32081408318112,
+            "diffusion_attenuation": 0.6423373614629507
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - Z Z + Z - Z +",
+            "signal_real_imag": [
+              -4.2409605241113264e-20,
+              0.0001731503535167874
+            ],
+            "signal_no_diff_abs": 0.00030212379283150743,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                262.5986562269884,
+                0.0,
+                52.026729897913555
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                52.026729897913555,
+                0.0,
+                15.739609221543024
+              ]
+            ],
+            "b_trace_s_mm2": 278.33826544853144,
+            "diffusion_attenuation": 0.5731106176511966
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + Z Z Z Z - Z +",
+            "signal_real_imag": [
+              2.114868478218563e-20,
+              0.00017269211659157706
+            ],
+            "signal_no_diff_abs": 0.0002668428163732599,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                200.985715001237,
+                0.0,
+                50.43120829862577
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                50.43120829862577,
+                0.0,
+                16.5890081024344
+              ]
+            ],
+            "b_trace_s_mm2": 217.5747231036714,
+            "diffusion_attenuation": 0.6471679430560919
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + Z Z - Z Z Z +",
+            "signal_real_imag": [
+              2.1053274384813337e-20,
+              0.00017191303157344177
+            ],
+            "signal_no_diff_abs": 0.00030688685656021737,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                273.1626010371772,
+                0.0,
+                59.06047917714139
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                59.06047917714139,
+                0.0,
+                16.582606812249953
+              ]
+            ],
+            "b_trace_s_mm2": 289.7452078494271,
+            "diffusion_attenuation": 0.5601837546917197
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + Z - Z + Z - Z +",
+            "signal_real_imag": [
+              -4.1544804560001413e-20,
+              0.00016961953678777623
+            ],
+            "signal_no_diff_abs": 0.00027352523266869014,
+            "k_cycles_m": [
+              57.48699798929374,
+              0.0,
+              1.989020343712582
+            ],
+            "b_tensor_s_mm2": [
+              [
+                223.18157439615652,
+                0.0,
+                47.30015045729591
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                47.30015045729591,
+                0.0,
+                15.73640857645081
+              ]
+            ],
+            "b_trace_s_mm2": 238.91798297260732,
+            "diffusion_attenuation": 0.6201239100789996
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - + Z Z Z - Z +",
+            "signal_real_imag": [
+              -4.14553313774196e-20,
+              0.0001692542347976675
+            ],
+            "signal_no_diff_abs": 0.0002522441161356032,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                183.7644925653234,
+                0.0,
+                42.57357101667822
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                42.57357101667822,
+                0.0,
+                15.733207931358578
+              ]
+            ],
+            "b_trace_s_mm2": 199.49770049668197,
+            "diffusion_attenuation": 0.6709937872512302
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - + Z - Z Z Z +",
+            "signal_real_imag": [
+              -4.072143927312119e-20,
+              0.00016625789289398795
+            ],
+            "signal_no_diff_abs": 0.00029009738743869317,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                262.5986562269884,
+                0.0,
+                52.026729897913555
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                52.026729897913555,
+                0.0,
+                15.739609221543025
+              ]
+            ],
+            "b_trace_s_mm2": 278.33826544853144,
+            "diffusion_attenuation": 0.5731106176511966
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z - + Z Z Z - Z Z +",
+            "signal_real_imag": [
+              1.9900279207407448e-20,
+              0.000162498111465794
+            ],
+            "signal_no_diff_abs": 0.00026988240063299606,
+            "k_cycles_m": [
+              -116.60197979554505,
+              0.0,
+              0.591062544182023
+            ],
+            "b_tensor_s_mm2": [
+              [
+                237.07415801920712,
+                0.0,
+                54.745843737883575
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                54.745843737883575,
+                0.0,
+                16.585807457342177
+              ]
+            ],
+            "b_trace_s_mm2": 253.6599654765493,
+            "diffusion_attenuation": 0.6021071069645986
+          },
+          {
+            "origin_after_rf": 0,
+            "history": "+ - Z + - + Z Z - Z Z +",
+            "signal_real_imag": [
+              -3.8748903508020355e-20,
+              0.00015820440446583813
+            ],
+            "signal_no_diff_abs": 0.0002551174078188402,
+            "k_cycles_m": [
+              57.486997989261,
+              0.0,
+              1.9890203437116725
+            ],
+            "b_tensor_s_mm2": [
+              [
+                223.18157439615587,
+                0.0,
+                47.300150457295885
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                47.300150457295885,
+                0.0,
+                15.7364085764508
+              ]
+            ],
+            "b_trace_s_mm2": 238.91798297260667,
+            "diffusion_attenuation": 0.6201239100790005
+          }
+        ]
+      }
+    ]
+  }
+}

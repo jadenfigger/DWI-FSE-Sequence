@@ -1,0 +1,146 @@
+{
+ "flat_0us": {
+  "cur": {
+   "shot_us": 171943,
+   "tr_min": 192,
+   "period_us": 1999903.0,
+   "t_690_rel": 191417.9,
+   "overruns": 0,
+   "timer_arg": 28
+  },
+  "split": {
+   "shot_us": 171943,
+   "tr_min": 192,
+   "period_us": 1999905.4,
+   "t_690_rel": 191420.3,
+   "overruns": 0,
+   "timer_arg": 24
+  }
+ },
+ "flat_0.5us": {
+  "cur": {
+   "shot_us": 171943,
+   "tr_min": 192,
+   "period_us": 1999959.5,
+   "t_690_rel": 191448.4,
+   "overruns": 0,
+   "timer_arg": 28
+  },
+  "split": {
+   "shot_us": 171943,
+   "tr_min": 192,
+   "period_us": 1999962.9,
+   "t_690_rel": 191451.8,
+   "overruns": 0,
+   "timer_arg": 24
+  }
+ },
+ "flat_1us": {
+  "cur": {
+   "shot_us": 171943,
+   "tr_min": 192,
+   "period_us": 2000016.0,
+   "t_690_rel": 191478.9,
+   "overruns": 0,
+   "timer_arg": 28
+  },
+  "split": {
+   "shot_us": 171943,
+   "tr_min": 192,
+   "period_us": 2000020.4,
+   "t_690_rel": 191483.3,
+   "overruns": 0,
+   "timer_arg": 24
+  }
+ },
+ "flat_2us": {
+  "cur": {
+   "shot_us": 171943,
+   "tr_min": 192,
+   "period_us": 2000129.0,
+   "t_690_rel": 191539.9,
+   "overruns": 0,
+   "timer_arg": 28
+  },
+  "split": {
+   "shot_us": 171943,
+   "tr_min": 192,
+   "period_us": 2000135.4,
+   "t_690_rel": 191546.3,
+   "overruns": 0,
+   "timer_arg": 24
+  }
+ },
+ "manual_x0.8": {
+  "cur": {
+   "shot_us": 171943,
+   "tr_min": 192,
+   "period_us": 1999926.04,
+   "t_690_rel": 190807.98,
+   "overruns": 0,
+   "timer_arg": 28
+  },
+  "split": {
+   "shot_us": 171943,
+   "tr_min": 192,
+   "period_us": 1999928.6,
+   "t_690_rel": 190810.54,
+   "overruns": 0,
+   "timer_arg": 24
+  }
+ },
+ "manual_x0.9": {
+  "cur": {
+   "shot_us": 171943,
+   "tr_min": 192,
+   "period_us": 1999928.92,
+   "t_690_rel": 190731.74,
+   "overruns": 0,
+   "timer_arg": 28
+  },
+  "split": {
+   "shot_us": 171943,
+   "tr_min": 192,
+   "period_us": 1999931.5,
+   "t_690_rel": 190734.32,
+   "overruns": 0,
+   "timer_arg": 24
+  }
+ },
+ "manual_x1.0": {
+  "cur": {
+   "shot_us": 171943,
+   "tr_min": 192,
+   "period_us": 1999931.8,
+   "t_690_rel": 190655.5,
+   "overruns": 0,
+   "timer_arg": 28
+  },
+  "split": {
+   "shot_us": 171943,
+   "tr_min": 192,
+   "period_us": 1999934.4,
+   "t_690_rel": 190658.1,
+   "overruns": 0,
+   "timer_arg": 24
+  }
+ },
+ "manual_x0.8_plus_0.5us_stmt": {
+  "cur": {
+   "shot_us": 171943,
+   "tr_min": 192,
+   "period_us": 1999982.54,
+   "t_690_rel": 190838.48,
+   "overruns": 0,
+   "timer_arg": 28
+  },
+  "split": {
+   "shot_us": 171943,
+   "tr_min": 192,
+   "period_us": 1999986.1,
+   "t_690_rel": 190842.04,
+   "overruns": 0,
+   "timer_arg": 24
+  }
+ }
+}

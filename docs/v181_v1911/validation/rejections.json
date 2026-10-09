@@ -1,0 +1,866 @@
+{
+ "v191_v7": {
+  "3D": {
+   "overrides": {
+    "no_views_2": 2
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 2,
+   "messages": [
+    "V19 error E2\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "multislice": {
+   "overrides": {
+    "no_slices": 2
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 3,
+   "messages": [
+    "V19 error E3\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "slice offset": {
+   "overrides": {
+    "slice_mm_10": 10
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 3,
+   "messages": [
+    "V19 error E3\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "presat": {
+   "overrides": {
+    "sat_on": 1
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 4,
+   "messages": [
+    "V19 error E4\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "flow comp": {
+   "overrides": {
+    "flow_comp_on": 1
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 2,
+   "messages": [
+    "V19 error E2\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "DE": {
+   "overrides": {
+    "de_on": 1
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 57,
+   "messages": [
+    "V19 error E57\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "gating": {
+   "overrides": {
+    "gating": 1
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 4,
+   "messages": [
+    "V19 error E4\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "crusher schedule": {
+   "overrides": {
+    "crusher_schedule": 1
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 1,
+   "messages": [
+    "V19 error E1\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "crusher too small": {
+   "overrides": {
+    "crush_amp": -2741
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 17,
+   "messages": [
+    "V19 error E17\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "TE too short": {
+   "overrides": {
+    "te": 52
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 30,
+   "messages": [
+    "V19 error E30\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "original ESP too short": {
+   "overrides": {
+    "esp": 11
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 31,
+   "messages": [
+    "V19 error E31\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "ESP below new floor": {
+   "overrides": {
+    "esp": 9
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 31,
+   "messages": [
+    "V19 error E31\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "flip out of range": {
+   "overrides": {
+    "v19_flip_tenths": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 13,
+   "messages": [
+    "V19 error E13\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "TR too short": {
+   "overrides": {
+    "tr": 150
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": null,
+   "messages": [
+    "TR too short, increase to 199 ms\n "
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "cycles not validated": {
+   "overrides": {
+    "v19_cycles": 4
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 7,
+   "messages": [
+    "V19 error E7\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "C1 small coincidence": {
+   "overrides": {
+    "diff_crush_amp": -1500
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 18,
+   "messages": [
+    "V19 error E18\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "C1 large coincidence": {
+   "overrides": {
+    "diff_crush_amp": -12000
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 18,
+   "messages": [
+    "V19 error E18\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "C outside validated window": {
+   "overrides": {
+    "crush_amp": -7700
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 18,
+   "messages": [
+    "V19 error E18\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "C1 opposite polarity": {
+   "overrides": {
+    "diff_crush_amp": 5482
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 18,
+   "messages": [
+    "V19 error E18\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "crusher polarity not validated": {
+   "overrides": {
+    "crush_amp": 8223,
+    "diff_crush_amp": 5482
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 18,
+   "messages": [
+    "V19 error E18\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "method off": {
+   "overrides": {
+    "v19_on": 0
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 38,
+   "messages": [
+    "V19 error E38\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "method invalid": {
+   "overrides": {
+    "v19_on": 2
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 38,
+   "messages": [
+    "V19 error E38\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "zero diffusion rows": {
+   "overrides": {
+    "no_diff_acq": 0
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 39,
+   "messages": [
+    "V19 error E39\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  },
+  "too many diffusion rows": {
+   "overrides": {
+    "no_diff_acq": 65
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 39,
+   "messages": [
+    "V19 error E39\n"
+   ],
+   "ppl_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828"
+  }
+ },
+ "v1911": {
+  "3D": {
+   "overrides": {
+    "no_views_2": 2
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 2,
+   "messages": [
+    "V19 error E2\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "multislice": {
+   "overrides": {
+    "no_slices": 2
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 3,
+   "messages": [
+    "V19 error E3\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "slice offset": {
+   "overrides": {
+    "slice_mm_10": 10
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 3,
+   "messages": [
+    "V19 error E3\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "presat": {
+   "overrides": {
+    "sat_on": 1
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 4,
+   "messages": [
+    "V19 error E4\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "flow comp": {
+   "overrides": {
+    "flow_comp_on": 1
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 2,
+   "messages": [
+    "V19 error E2\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "DE": {
+   "overrides": {
+    "de_on": 1
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 57,
+   "messages": [
+    "V19 error E57\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "gating": {
+   "overrides": {
+    "gating": 1
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 4,
+   "messages": [
+    "V19 error E4\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "crusher schedule": {
+   "overrides": {
+    "crusher_schedule": 1
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 1,
+   "messages": [
+    "V19 error E1\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "crusher too small": {
+   "overrides": {
+    "crush_amp": -2741
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 17,
+   "messages": [
+    "V19 error E17\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "TE too short": {
+   "overrides": {
+    "te": 52
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 30,
+   "messages": [
+    "V19 error E30\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "original ESP too short": {
+   "overrides": {
+    "esp": 11
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 32,
+   "messages": [
+    "V19 error E32\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "ESP below new floor": {
+   "overrides": {
+    "esp": 9
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 143,
+   "messages": [
+    "V19 error E143\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "flip out of range": {
+   "overrides": {
+    "v19_flip_tenths": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 13,
+   "messages": [
+    "V19 error E13\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "TR too short": {
+   "overrides": {
+    "tr": 150
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": null,
+   "messages": [
+    "TR too short, increase to 193 ms\n "
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "cycles not validated": {
+   "overrides": {
+    "v19_cycles": 4
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 7,
+   "messages": [
+    "V19 error E7\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "C1 small coincidence": {
+   "overrides": {
+    "diff_crush_amp": -1500
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 18,
+   "messages": [
+    "V19 error E18\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "C1 large coincidence": {
+   "overrides": {
+    "diff_crush_amp": -12000
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 18,
+   "messages": [
+    "V19 error E18\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "C outside validated window": {
+   "overrides": {
+    "crush_amp": -7700
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 18,
+   "messages": [
+    "V19 error E18\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "C1 opposite polarity": {
+   "overrides": {
+    "diff_crush_amp": 5482
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 18,
+   "messages": [
+    "V19 error E18\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "crusher polarity not validated": {
+   "overrides": {
+    "crush_amp": 8223,
+    "diff_crush_amp": 5482
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 18,
+   "messages": [
+    "V19 error E18\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "method off": {
+   "overrides": {
+    "v19_on": 0
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 38,
+   "messages": [
+    "V19 error E38\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "method invalid": {
+   "overrides": {
+    "v19_on": 2
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 38,
+   "messages": [
+    "V19 error E38\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "zero diffusion rows": {
+   "overrides": {
+    "no_diff_acq": 0
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 39,
+   "messages": [
+    "V19 error E39\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "too many diffusion rows": {
+   "overrides": {
+    "no_diff_acq": 65
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 39,
+   "messages": [
+    "V19 error E39\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "subject angle x": {
+   "overrides": {
+    "subj_angle_x": 10
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 146,
+   "messages": [
+    "V19 error E146\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "subject angle y": {
+   "overrides": {
+    "subj_angle_y": 10
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 146,
+   "messages": [
+    "V19 error E146\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "subject angle z": {
+   "overrides": {
+    "subj_angle_z": 10
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 146,
+   "messages": [
+    "V19 error E146\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "read angle": {
+   "overrides": {
+    "r_angle_var": [
+     10
+    ]
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 146,
+   "messages": [
+    "V19 error E146\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "phase angle": {
+   "overrides": {
+    "p_angle_var": [
+     10
+    ]
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 146,
+   "messages": [
+    "V19 error E146\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "slice angle": {
+   "overrides": {
+    "s_angle_var": [
+     10
+    ]
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 146,
+   "messages": [
+    "V19 error E146\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "phase orientation swap": {
+   "overrides": {
+    "phase_var": 1
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 146,
+   "messages": [
+    "V19 error E146\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "tramp changed": {
+   "overrides": {
+    "tramp": 300
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 82,
+   "messages": [
+    "V19 error E82\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "tdp changed (via tref_setup)": {
+   "overrides": {
+    "tref_setup": 800
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 140,
+   "messages": [
+    "V19 error E140\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "tcrush changed": {
+   "overrides": {
+    "tcrush": 1200
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 18,
+   "messages": [
+    "V19 error E18\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "rfdelay changed": {
+   "overrides": {
+    "rfdelay": 50
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 140,
+   "messages": [
+    "V19 error E140\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "ESP12": {
+   "overrides": {
+    "esp": 12
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 32,
+   "messages": [
+    "V19 error E32\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "crusher area overflow / fused DAC bound": {
+   "overrides": {
+    "crush_amp": -32767
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 18,
+   "messages": [
+    "V19 error E18\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  },
+  "crusher at DAC limit positive": {
+   "overrides": {
+    "crush_amp": 32767
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": 18,
+   "messages": [
+    "V19 error E18\n"
+   ],
+   "ppl_sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+  }
+ },
+ "v181": {
+  "CEST/MTC": {
+   "overrides": {
+    "mtc_on": 1
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": null,
+   "messages": [
+    "V181 CEST/MTC not supported\n"
+   ],
+   "ppl_sha256": "545a14ec8c65ed578ea76628796547dd463eb8cd4a2efa680de89058a837de69"
+  },
+  "diffusion with flow comp": {
+   "overrides": {
+    "flow_comp_on": 1
+   },
+   "RF_count": 0,
+   "ADC_count": 0,
+   "pass": true,
+   "error_code": null,
+   "messages": [
+    "V181 DWI requires flow compensation off\n"
+   ],
+   "ppl_sha256": "545a14ec8c65ed578ea76628796547dd463eb8cd4a2efa680de89058a837de69"
+  }
+ }
+}

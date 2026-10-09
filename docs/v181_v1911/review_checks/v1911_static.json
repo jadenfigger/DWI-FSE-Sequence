@@ -1,0 +1,58 @@
+{
+  "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.911.ppl",
+  "ppl_sha256": "33e7d07353078505a19d447b4cfc47bee45f16e821f9d593303f1077e6847189",
+  "inherited_source": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\docs\\v181_v1911\\baseline_v7\\FSE_dwi_CPMG_non_CPMG_twoTE-1.91.ppl",
+  "inherited_source_sha256": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828",
+  "method_only_budget": true,
+  "checks": {
+    "all_jump_targets_defined": true,
+    "forward_gotos_below_historical_limit": true,
+    "warning_signatures_subset_of_v18": true,
+    "conditional_bodies_within_v18_margin": true,
+    "estimated_image_within_relative_budget": true,
+    "no_added_long_string_literals": true,
+    "no_added_macro_calls_in_slash_comments": true,
+    "no_added_function_macro_definitions": true
+  },
+  "pass": true,
+  "forward_gotos": 18,
+  "undefined_labels": [],
+  "unreferenced_labels_informational": [
+    "pb_end"
+  ],
+  "new_warning_signatures": [],
+  "added_long_literals": [],
+  "added_risky_comments": [],
+  "added_function_macros": [],
+  "conditional_body_limit_nodes": 405,
+  "relative_image_limit_bytes": 52568,
+  "predicted_W007_W008": [
+    {
+      "call": "offset_frequency",
+      "argument": 0,
+      "expression": "('bin', '+', ('var', 'fov_slice_freq'), ('var', 'slice_freq_var'))"
+    },
+    {
+      "call": "inttolong",
+      "argument": 0,
+      "expression": "('var', 'slice_freq_var')"
+    },
+    {
+      "call": "waittimer",
+      "argument": 0,
+      "expression": "('var', 'templ1')"
+    }
+  ],
+  "largest_conditional_body_nodes": 379,
+  "code_nodes": 14624,
+  "array_bytes_model": 9846,
+  "string_bytes_model": 1505,
+  "estimated_image_bytes": 49373,
+  "limits": [
+    "Source model, not vendor cpp/PPLC/Forth validation.",
+    "Warning predictor covers historical W007/W008 only; unreferenced labels are informational.",
+    "48 characters is a conservative source-literal bound, not a measured console limit.",
+    "Image estimate is 2.6 bytes/AST node plus arrays and strings; fixed runtime overhead is unknown.",
+    "Includes use repository files; actual console include versions remain scanner-verify."
+  ]
+}

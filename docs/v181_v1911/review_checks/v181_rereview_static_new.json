@@ -1,0 +1,96 @@
+{
+  "ppl": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+  "ppl_sha256": "545a14ec8c65ed578ea76628796547dd463eb8cd4a2efa680de89058a837de69",
+  "inherited_source": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.8.ppl",
+  "inherited_source_sha256": "3b420376331e918b4c864e9b37937ef35fd9f49066b8d6402e44aae9da598db2",
+  "method_only_budget": false,
+  "checks": {
+    "all_jump_targets_defined": true,
+    "forward_gotos_below_historical_limit": true,
+    "warning_signatures_subset_of_v18": true,
+    "conditional_bodies_within_v18_margin": true,
+    "estimated_image_within_relative_budget": true,
+    "no_added_long_string_literals": true,
+    "no_added_macro_calls_in_slash_comments": true,
+    "no_added_function_macro_definitions": true
+  },
+  "pass": true,
+  "forward_gotos": 21,
+  "undefined_labels": [],
+  "unreferenced_labels_informational": [],
+  "new_warning_signatures": [],
+  "added_long_literals": [],
+  "added_risky_comments": [],
+  "added_function_macros": [],
+  "conditional_body_limit_nodes": 405,
+  "relative_image_limit_bytes": 56664,
+  "predicted_W007_W008": [
+    {
+      "call": "offset_frequency",
+      "argument": 0,
+      "expression": "('bin', '+', ('var', 'fov_slice_freq'), ('var', 'slice_freq_var'))"
+    },
+    {
+      "call": "inttolong",
+      "argument": 0,
+      "expression": "('var', 'slice_freq_var')"
+    },
+    {
+      "call": "waittimer",
+      "argument": 0,
+      "expression": "('var', 'templ1')"
+    },
+    {
+      "call": "waittimer",
+      "argument": 0,
+      "expression": "('num', 47975, True)"
+    },
+    {
+      "call": "waittimer",
+      "argument": 0,
+      "expression": "('bin', '-', ('var', 'templ3'), ('num', 25, False))"
+    },
+    {
+      "call": "delay",
+      "argument": 0,
+      "expression": "('var', 'sm_delta_us')"
+    },
+    {
+      "call": "waittimer",
+      "argument": 0,
+      "expression": "('var', 'refocus_wait_ticks')"
+    },
+    {
+      "call": "waittimer",
+      "argument": 0,
+      "expression": "('var', 'refocus_wait_ticks')"
+    },
+    {
+      "call": "delay",
+      "argument": 0,
+      "expression": "('var', 'sm_delta_us')"
+    },
+    {
+      "call": "delay",
+      "argument": 0,
+      "expression": "('var', 'templ2')"
+    },
+    {
+      "call": "delay",
+      "argument": 0,
+      "expression": "('var', 'templ3')"
+    }
+  ],
+  "largest_conditional_body_nodes": 369,
+  "code_nodes": 12963,
+  "array_bytes_model": 16118,
+  "string_bytes_model": 6695,
+  "estimated_image_bytes": 56517,
+  "limits": [
+    "Source model, not vendor cpp/PPLC/Forth validation.",
+    "Warning predictor covers historical W007/W008 only; unreferenced labels are informational.",
+    "48 characters is a conservative source-literal bound, not a measured console limit.",
+    "Image estimate is 2.6 bytes/AST node plus arrays and strings; fixed runtime overhead is unknown.",
+    "Includes use repository files; actual console include versions remain scanner-verify."
+  ]
+}

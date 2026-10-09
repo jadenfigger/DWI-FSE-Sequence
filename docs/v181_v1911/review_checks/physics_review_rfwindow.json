@@ -1,0 +1,118 @@
+{
+ "hashes": {
+  "v18": "3b420376331e918b4c864e9b37937ef35fd9f49066b8d6402e44aae9da598db2",
+  "v181": "545a14ec8c65ed578ea76628796547dd463eb8cd4a2efa680de89058a837de69",
+  "v7": "6a0d222b6c8689fbdee5f4ae412c4d5df0bea10a7da99a309fabf5dfab04d828",
+  "v1911": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682"
+ },
+ "rf": [
+  {
+   "rf": 0,
+   "frame": "v19_slrprep90",
+   "maxdiff_DAC_S_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_P_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_R_in[-250us,RFend+250us]": 0.0,
+   "S_first_pre_deviation_us_before_RFstart": null,
+   "S_first_post_deviation_us_after_RFend": null
+  },
+  {
+   "rf": 1,
+   "frame": "v19_slrprep180",
+   "maxdiff_DAC_S_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_P_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_R_in[-250us,RFend+250us]": 0.0,
+   "S_first_pre_deviation_us_before_RFstart": null,
+   "S_first_post_deviation_us_after_RFend": null
+  },
+  {
+   "rf": 2,
+   "frame": "v19_slrtip90",
+   "maxdiff_DAC_S_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_P_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_R_in[-250us,RFend+250us]": 0.0,
+   "S_first_pre_deviation_us_before_RFstart": null,
+   "S_first_post_deviation_us_after_RFend": null
+  },
+  {
+   "rf": 3,
+   "frame": "v19_reexc90",
+   "maxdiff_DAC_S_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_P_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_R_in[-250us,RFend+250us]": 0.0,
+   "S_first_pre_deviation_us_before_RFstart": null,
+   "S_first_post_deviation_us_after_RFend": null
+  },
+  {
+   "rf": 4,
+   "frame": "v19_imaging180",
+   "maxdiff_DAC_S_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_P_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_R_in[-250us,RFend+250us]": 0.0,
+   "S_first_pre_deviation_us_before_RFstart": 266.0,
+   "S_first_post_deviation_us_after_RFend": 263.0
+  },
+  {
+   "rf": 5,
+   "frame": "v19_imaging180",
+   "maxdiff_DAC_S_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_P_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_R_in[-250us,RFend+250us]": 0.0,
+   "S_first_pre_deviation_us_before_RFstart": 266.0,
+   "S_first_post_deviation_us_after_RFend": 263.0
+  },
+  {
+   "rf": 6,
+   "frame": "v19_imaging180",
+   "maxdiff_DAC_S_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_P_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_R_in[-250us,RFend+250us]": 0.0,
+   "S_first_pre_deviation_us_before_RFstart": 266.0,
+   "S_first_post_deviation_us_after_RFend": 263.0
+  },
+  {
+   "rf": 7,
+   "frame": "v19_imaging180",
+   "maxdiff_DAC_S_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_P_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_R_in[-250us,RFend+250us]": 0.0,
+   "S_first_pre_deviation_us_before_RFstart": 266.0,
+   "S_first_post_deviation_us_after_RFend": 263.0
+  },
+  {
+   "rf": 8,
+   "frame": "v19_imaging180",
+   "maxdiff_DAC_S_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_P_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_R_in[-250us,RFend+250us]": 0.0,
+   "S_first_pre_deviation_us_before_RFstart": 266.0,
+   "S_first_post_deviation_us_after_RFend": 263.0
+  },
+  {
+   "rf": 9,
+   "frame": "v19_imaging180",
+   "maxdiff_DAC_S_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_P_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_R_in[-250us,RFend+250us]": 0.0,
+   "S_first_pre_deviation_us_before_RFstart": 266.0,
+   "S_first_post_deviation_us_after_RFend": 263.0
+  },
+  {
+   "rf": 10,
+   "frame": "v19_imaging180",
+   "maxdiff_DAC_S_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_P_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_R_in[-250us,RFend+250us]": 0.0,
+   "S_first_pre_deviation_us_before_RFstart": 266.0,
+   "S_first_post_deviation_us_after_RFend": 263.0
+  },
+  {
+   "rf": 11,
+   "frame": "v19_imaging180",
+   "maxdiff_DAC_S_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_P_in[-250us,RFend+250us]": 0.0,
+   "maxdiff_DAC_R_in[-250us,RFend+250us]": 0.0,
+   "S_first_pre_deviation_us_before_RFstart": 266.0,
+   "S_first_post_deviation_us_after_RFend": 263.0
+  }
+ ]
+}

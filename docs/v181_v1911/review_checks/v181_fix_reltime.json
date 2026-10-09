@@ -1,0 +1,919 @@
+{
+ "old_sha256": "9fca0a13eb773d0e06d7bde0175dff4a3cd84d705db4211717fee9d23168f8b1",
+ "new_sha256": "545a14ec8c65ed578ea76628796547dd463eb8cd4a2efa680de89058a837de69",
+ "note": "times relative to first library RF of each run",
+ "cases": {
+  "default_6shots/flat_0us": {
+   "rf": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "default_6shots/flat_0.5us": {
+   "rf": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "default_6shots/flat_1us": {
+   "rf": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "default_6shots/flat_2us": {
+   "rf": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "default_6shots/manual_x0.8": {
+   "rf": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "default_6shots/manual_x0.9": {
+   "rf": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "default_6shots/manual_x1.0": {
+   "rf": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "default_6shots/manual_x0.8_plus_0.5us_stmt": {
+   "rf": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "imaging_2shots/flat_0us": {
+   "rf": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "imaging_2shots/flat_0.5us": {
+   "rf": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "imaging_2shots/flat_1us": {
+   "rf": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "imaging_2shots/flat_2us": {
+   "rf": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "imaging_2shots/manual_x0.8": {
+   "rf": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "imaging_2shots/manual_x0.9": {
+   "rf": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "imaging_2shots/manual_x1.0": {
+   "rf": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "imaging_2shots/manual_x0.8_plus_0.5us_stmt": {
+   "rf": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "diff_off_2shots/flat_0us": {
+   "rf": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "diff_off_2shots/flat_0.5us": {
+   "rf": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "diff_off_2shots/flat_1us": {
+   "rf": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "diff_off_2shots/flat_2us": {
+   "rf": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "diff_off_2shots/manual_x0.8": {
+   "rf": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "diff_off_2shots/manual_x0.9": {
+   "rf": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "diff_off_2shots/manual_x1.0": {
+   "rf": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  },
+  "diff_off_2shots/manual_x0.8_plus_0.5us_stmt": {
+   "rf": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "adc": {
+    "max_time_diff_us": 0.0,
+    "non_time_mismatches": 0
+   },
+   "grad": {
+    "S": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "P": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    },
+    "R": {
+     "max_time_diff_us": 0.0,
+     "non_time_mismatches": 0
+    }
+   },
+   "flag_kinds": [
+    [
+     "matrix_active",
+     "narrowing"
+    ],
+    [
+     "matrix_active",
+     "narrowing"
+    ]
+   ],
+   "bad_flags": [
+    0,
+    0
+   ]
+  }
+ }
+}

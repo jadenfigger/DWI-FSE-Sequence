@@ -1,0 +1,12 @@
+{
+ "target_sha256": "545a14ec8c65ed578ea76628796547dd463eb8cd4a2efa680de89058a837de69",
+ "reconstruction": "patch -R of the CR-stripped diff in v181_review_fixes.md (saved as v181_rereview_fix.diff) onto the target gives sha256 9fca0a13eb773d0e06d7bde0175dff4a3cd84d705db4211717fee9d23168f8b1 after CRLF restore, so the diff is exactly the change set and the target contains nothing else",
+ "static": {"new": {"pass": true, "estimated_image_bytes": 56517, "forward_gotos": 21, "largest_conditional_body_nodes": 369}, "old_reconstructed": {"pass": true, "estimated_image_bytes": 56501, "forward_gotos": 21}},
+ "raw_forward_goto_count": {"main_file": 18, "tstex_15_pph": 3, "total": 21, "backward_in_main": 134, "note": "every goto end in the main file is backward (end: at line 555)"},
+ "window_slack_ticks_32500_default_diff_on": {"x0.8": {"old": 9854.2, "new": 8237.4}, "x1.0": {"old": 4239.0, "new": 2257.0}, "x1.05": {"old": 2835.2, "new": 761.9}, "x1.08": {"old": 1992.9, "new": -135.2}},
+ "window_slack_ticks_32750": {"x0.8": {"old": 9490.4, "new": 11121.6}, "x1.0": {"old": 9023.0, "new": 11023.0}},
+ "first_timer_overrun_scale_1shot": {"old": "1.0852 (waittimer(8997), inherited)", "new": "1.0758 (waittimer(32500))"},
+ "v18_reference_slack_x1.0": {"27500": -613.0, "5300": -228.0, "8997": 595.0, "note": "v1.8, which ran on the scanner, overruns in the manual x1.0 model, so x1.0 is conservative"},
+ "strict_relative_event_equivalence": "9 valid protocol states x 8 cost models = 72 plus 8 (flow comp, diff off) = 80 cases, all identical (RF incl. non-library, ADC t_init/sync/t_complete/rate/phase, all S/P/R gradient segments, misc events incl waittimer, flags except narrowing, printf), relative to first library RF",
+ "rejections": "43 author cases reproduced exactly (v181_fix_reject.json equal); extra 10 cases x validate 0/1 x 2 cost models: normal-path messages identical, no RF/ADC in any rejection; validate-path messages changed only to the intended V181 messages, and mtc_on with TE short now reports CEST first (priority change)"
+}

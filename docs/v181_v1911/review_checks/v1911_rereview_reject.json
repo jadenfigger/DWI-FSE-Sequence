@@ -1,0 +1,1086 @@
+{
+ "orig19": {
+  "3D": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E2"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E2"
+   }
+  },
+  "multislice": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E3"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E3"
+   }
+  },
+  "slice offset": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E3"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E3"
+   }
+  },
+  "presat": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E4"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E4"
+   }
+  },
+  "flow comp": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E2"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E2"
+   }
+  },
+  "DE": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 0,
+    "msg": "V19 error E57"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 0,
+    "msg": "V19 error E57"
+   }
+  },
+  "gating": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E4"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E4"
+   }
+  },
+  "crusher schedule": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E1"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E1"
+   }
+  },
+  "crusher too small": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E17"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E17"
+   }
+  },
+  "TE too short": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E30"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E30"
+   }
+  },
+  "ESP too short": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E31"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E32"
+   }
+  },
+  "flip out of range": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E13"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E13"
+   }
+  },
+  "TR too short": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "TR too short, increase to 199 ms"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "TR too short, increase to 193 ms"
+   }
+  },
+  "cycles not validated": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E7"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E7"
+   }
+  },
+  "C1 small coincidence": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   }
+  },
+  "C1 large coincidence": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   }
+  },
+  "C outside validated window": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   }
+  },
+  "C1 opposite polarity": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   }
+  },
+  "crusher polarity not validated": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   }
+  }
+ },
+ "new": {
+  "ESP12": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E31"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E32"
+   }
+  },
+  "ESP11": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E31"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E32"
+   }
+  },
+  "ESP10": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E31"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E143"
+   }
+  },
+  "tramp 190 (diff_tramp same)": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 0,
+    "msg": "V19 error E82"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 0,
+    "msg": "V19 error E82"
+   }
+  },
+  "tramp 250": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   }
+  },
+  "tdp 650": {
+   "v7": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 10400,
+    "msg": ""
+   },
+   "v1911": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 8861,
+    "msg": ""
+   }
+  },
+  "tdp 750": {
+   "v7": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 10400,
+    "msg": ""
+   },
+   "v1911": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 8861,
+    "msg": ""
+   }
+  },
+  "tcrush 900": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   }
+  },
+  "tcrush 1100": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   }
+  },
+  "rfdelay 50": {
+   "v7": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 10400,
+    "msg": ""
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E140"
+   }
+  },
+  "rfdelay 70": {
+   "v7": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 10400,
+    "msg": ""
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E140"
+   }
+  },
+  "subj_angle_x": {
+   "v7": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 10400,
+    "msg": ""
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E146"
+   }
+  },
+  "subj_angle_y": {
+   "v7": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 10400,
+    "msg": ""
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E146"
+   }
+  },
+  "subj_angle_z": {
+   "v7": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 10400,
+    "msg": ""
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E146"
+   }
+  },
+  "r_angle": {
+   "v7": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 10400,
+    "msg": ""
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E146"
+   }
+  },
+  "p_angle": {
+   "v7": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 10400,
+    "msg": ""
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E146"
+   }
+  },
+  "s_angle": {
+   "v7": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 10400,
+    "msg": ""
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E146"
+   }
+  },
+  "phase_var swap": {
+   "v7": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 10400,
+    "msg": ""
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E146"
+   }
+  },
+  "r_angle[1] (not checked)": {
+   "v7": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 10400,
+    "msg": ""
+   },
+   "v1911": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 8861,
+    "msg": ""
+   }
+  },
+  "crush_amp -32000 overflow": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   }
+  },
+  "crush_amp -20000": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   }
+  },
+  "crusher_max_dac small": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 0,
+    "msg": "V19 error E99"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 0,
+    "msg": "V19 error E99"
+   }
+  },
+  "te 108 (ok?)": {
+   "v7": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 10400,
+    "msg": ""
+   },
+   "v1911": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 8861,
+    "msg": ""
+   }
+  },
+  "esp 14": {
+   "v7": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 10400,
+    "msg": ""
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E144"
+   }
+  },
+  "esp 16": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E31"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E144"
+   }
+  },
+  "esp 20": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E31"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E31"
+   }
+  },
+  "sample_period 250": {
+   "v7": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 10400,
+    "msg": ""
+   },
+   "v1911": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 8861,
+    "msg": ""
+   }
+  },
+  "sample_period 1000": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E31"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E143"
+   }
+  },
+  "no_samples 256": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E31"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E143"
+   }
+  },
+  "no_samples 64": {
+   "v7": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 10400,
+    "msg": ""
+   },
+   "v1911": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 8861,
+    "msg": ""
+   }
+  },
+  "slice_thick small gs": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E17"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E17"
+   }
+  },
+  "slice_thick big gs": {
+   "v7": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   },
+   "v1911": {
+    "rf": 0,
+    "adc": 0,
+    "grad_segments": 150,
+    "msg": "V19 error E18"
+   }
+  },
+  "etl4": {
+   "v7": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 10400,
+    "msg": ""
+   },
+   "v1911": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 8861,
+    "msg": ""
+   }
+  },
+  "etl 16": {
+   "v7": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 10400,
+    "msg": ""
+   },
+   "v1911": {
+    "rf": 12,
+    "adc": 8,
+    "grad_segments": 8861,
+    "msg": ""
+   }
+  }
+ },
+ "esp_sweep": {
+  "esp8|validate0|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E143"
+  },
+  "esp8|validate0|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E143"
+  },
+  "esp8|validate1|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E143"
+  },
+  "esp8|validate1|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E143"
+  },
+  "esp9|validate0|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E143"
+  },
+  "esp9|validate0|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E143"
+  },
+  "esp9|validate1|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E143"
+  },
+  "esp9|validate1|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E143"
+  },
+  "esp10|validate0|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E143"
+  },
+  "esp10|validate0|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E143"
+  },
+  "esp10|validate1|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E143"
+  },
+  "esp10|validate1|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E143"
+  },
+  "esp11|validate0|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E32"
+  },
+  "esp11|validate0|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E32"
+  },
+  "esp11|validate1|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E32"
+  },
+  "esp11|validate1|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E32"
+  },
+  "esp12|validate0|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E32"
+  },
+  "esp12|validate0|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E32"
+  },
+  "esp12|validate1|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E32"
+  },
+  "esp12|validate1|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E32"
+  },
+  "esp13|validate0|flat_0us": {
+   "rf": 12,
+   "adc": 8,
+   "grad_segments": 8861,
+   "msg": ""
+  },
+  "esp13|validate0|manual_x0.8": {
+   "rf": 12,
+   "adc": 8,
+   "grad_segments": 8861,
+   "msg": ""
+  },
+  "esp13|validate1|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": ""
+  },
+  "esp13|validate1|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": ""
+  },
+  "esp14|validate0|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E144"
+  },
+  "esp14|validate0|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E144"
+  },
+  "esp14|validate1|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E144"
+  },
+  "esp14|validate1|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E144"
+  },
+  "esp15|validate0|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E144"
+  },
+  "esp15|validate0|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E144"
+  },
+  "esp15|validate1|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E144"
+  },
+  "esp15|validate1|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E144"
+  },
+  "esp16|validate0|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E144"
+  },
+  "esp16|validate0|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E144"
+  },
+  "esp16|validate1|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E144"
+  },
+  "esp16|validate1|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E144"
+  },
+  "esp17|validate0|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E31"
+  },
+  "esp17|validate0|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E31"
+  },
+  "esp17|validate1|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E31"
+  },
+  "esp17|validate1|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E31"
+  },
+  "esp18|validate0|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E31"
+  },
+  "esp18|validate0|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E31"
+  },
+  "esp18|validate1|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E31"
+  },
+  "esp18|validate1|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E31"
+  },
+  "esp19|validate0|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E31"
+  },
+  "esp19|validate0|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E31"
+  },
+  "esp19|validate1|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E31"
+  },
+  "esp19|validate1|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E31"
+  },
+  "esp20|validate0|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E31"
+  },
+  "esp20|validate0|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E31"
+  },
+  "esp20|validate1|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E31"
+  },
+  "esp20|validate1|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E31"
+  },
+  "esp21|validate0|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E143"
+  },
+  "esp21|validate0|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E143"
+  },
+  "esp21|validate1|flat_0us": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E143"
+  },
+  "esp21|validate1|manual_x0.8": {
+   "rf": 0,
+   "adc": 0,
+   "grad_segments": 150,
+   "msg": "V19 error E143"
+  }
+ }
+}

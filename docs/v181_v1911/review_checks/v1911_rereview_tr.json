@@ -1,0 +1,562 @@
+{
+ "flat_0us": {
+  "v7": {
+   "v19_shot_us": 178286,
+   "train_end_rel": 194040.3,
+   "slack_us": -15754.3,
+   "tr_min": 198,
+   "period_us": 1999850.3,
+   "tr_stored_ms": 2000,
+   "tr=197": {
+    "rejected": [
+     "TR too short, increase to 199 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=198": {
+    "rejected": [
+     "TR too short, increase to 199 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=199": {
+    "rejected": [],
+    "periods_minus_TR_us": [
+     -149.7,
+     -105.3,
+     -105.3
+    ],
+    "overruns": 0,
+    "nshots": 5
+   }
+  },
+  "v1911": {
+   "v19_shot_us": 171943,
+   "train_end_rel": 187705.6,
+   "slack_us": -15762.6,
+   "tr_min": 192,
+   "period_us": 1999858.6,
+   "tr_stored_ms": 2000,
+   "tr=191": {
+    "rejected": [
+     "TR too short, increase to 193 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=192": {
+    "rejected": [
+     "TR too short, increase to 193 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=193": {
+    "rejected": [],
+    "periods_minus_TR_us": [
+     -141.4,
+     -97.0,
+     -97.0
+    ],
+    "overruns": 0,
+    "nshots": 5
+   }
+  }
+ },
+ "flat_0.5us": {
+  "v7": {
+   "v19_shot_us": 178286,
+   "train_end_rel": 194070.8,
+   "slack_us": -15784.8,
+   "tr_min": 198,
+   "period_us": 1999904.8,
+   "tr_stored_ms": 2000,
+   "tr=197": {
+    "rejected": [
+     "TR too short, increase to 199 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=198": {
+    "rejected": [
+     "TR too short, increase to 199 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=199": {
+    "rejected": [],
+    "periods_minus_TR_us": [
+     -95.2,
+     -44.8,
+     -44.8
+    ],
+    "overruns": 0,
+    "nshots": 5
+   }
+  },
+  "v1911": {
+   "v19_shot_us": 171943,
+   "train_end_rel": 187732.1,
+   "slack_us": -15789.1,
+   "tr_min": 192,
+   "period_us": 1999909.1,
+   "tr_stored_ms": 2000,
+   "tr=191": {
+    "rejected": [
+     "TR too short, increase to 193 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=192": {
+    "rejected": [
+     "TR too short, increase to 193 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=193": {
+    "rejected": [],
+    "periods_minus_TR_us": [
+     -90.9,
+     -40.5,
+     -40.5
+    ],
+    "overruns": 0,
+    "nshots": 5
+   }
+  }
+ },
+ "flat_1us": {
+  "v7": {
+   "v19_shot_us": 178286,
+   "train_end_rel": 194101.3,
+   "slack_us": -15815.3,
+   "tr_min": 198,
+   "period_us": 1999959.3,
+   "tr_stored_ms": 2000,
+   "tr=197": {
+    "rejected": [
+     "TR too short, increase to 199 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=198": {
+    "rejected": [
+     "TR too short, increase to 199 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=199": {
+    "rejected": [],
+    "periods_minus_TR_us": [
+     -40.7,
+     15.7,
+     15.7
+    ],
+    "overruns": 0,
+    "nshots": 5
+   }
+  },
+  "v1911": {
+   "v19_shot_us": 171943,
+   "train_end_rel": 187758.6,
+   "slack_us": -15815.6,
+   "tr_min": 192,
+   "period_us": 1999959.6,
+   "tr_stored_ms": 2000,
+   "tr=191": {
+    "rejected": [
+     "TR too short, increase to 193 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=192": {
+    "rejected": [
+     "TR too short, increase to 193 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=193": {
+    "rejected": [],
+    "periods_minus_TR_us": [
+     -40.4,
+     16.0,
+     16.0
+    ],
+    "overruns": 0,
+    "nshots": 5
+   }
+  }
+ },
+ "flat_2us": {
+  "v7": {
+   "v19_shot_us": 178286,
+   "train_end_rel": 194162.3,
+   "slack_us": -15876.3,
+   "tr_min": 198,
+   "period_us": 2000068.3,
+   "tr_stored_ms": 2000,
+   "tr=197": {
+    "rejected": [
+     "TR too short, increase to 199 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=198": {
+    "rejected": [
+     "TR too short, increase to 199 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=199": {
+    "rejected": [],
+    "periods_minus_TR_us": [
+     68.3,
+     136.7,
+     136.7
+    ],
+    "overruns": 0,
+    "nshots": 5
+   }
+  },
+  "v1911": {
+   "v19_shot_us": 171943,
+   "train_end_rel": 187811.6,
+   "slack_us": -15868.6,
+   "tr_min": 192,
+   "period_us": 2000060.6,
+   "tr_stored_ms": 2000,
+   "tr=191": {
+    "rejected": [
+     "TR too short, increase to 193 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=192": {
+    "rejected": [
+     "TR too short, increase to 193 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=193": {
+    "rejected": [],
+    "periods_minus_TR_us": [
+     60.6,
+     129.0,
+     129.0
+    ],
+    "overruns": 0,
+    "nshots": 5
+   }
+  }
+ },
+ "manual_x0.8": {
+  "v7": {
+   "v19_shot_us": 178286,
+   "train_end_rel": 193430.2,
+   "slack_us": -15144.2,
+   "tr_min": 198,
+   "period_us": 1999845.2,
+   "tr_stored_ms": 2000,
+   "tr=197": {
+    "rejected": [
+     "TR too short, increase to 199 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=198": {
+    "rejected": [
+     "TR too short, increase to 199 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=199": {
+    "rejected": [],
+    "periods_minus_TR_us": [
+     -154.8,
+     -77.8,
+     -77.8
+    ],
+    "overruns": 0,
+    "nshots": 5
+   }
+  },
+  "v1911": {
+   "v19_shot_us": 171943,
+   "train_end_rel": 187091.0,
+   "slack_us": -15148.0,
+   "tr_min": 192,
+   "period_us": 1999849.0,
+   "tr_stored_ms": 2000,
+   "tr=191": {
+    "rejected": [
+     "TR too short, increase to 193 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=192": {
+    "rejected": [
+     "TR too short, increase to 193 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=193": {
+    "rejected": [],
+    "periods_minus_TR_us": [
+     -151.0,
+     -74.0,
+     -74.0
+    ],
+    "overruns": 0,
+    "nshots": 5
+   }
+  }
+ },
+ "manual_x0.9": {
+  "v7": {
+   "v19_shot_us": 178286,
+   "train_end_rel": 193354.0,
+   "slack_us": -15068.0,
+   "tr_min": 198,
+   "period_us": 1999844.5,
+   "tr_stored_ms": 2000,
+   "tr=197": {
+    "rejected": [
+     "TR too short, increase to 199 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=198": {
+    "rejected": [
+     "TR too short, increase to 199 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=199": {
+    "rejected": [],
+    "periods_minus_TR_us": [
+     -155.5,
+     -74.3,
+     -74.3
+    ],
+    "overruns": 0,
+    "nshots": 5
+   }
+  },
+  "v1911": {
+   "v19_shot_us": 171943,
+   "train_end_rel": 187014.2,
+   "slack_us": -15071.2,
+   "tr_min": 192,
+   "period_us": 1999847.8,
+   "tr_stored_ms": 2000,
+   "tr=191": {
+    "rejected": [
+     "TR too short, increase to 193 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=192": {
+    "rejected": [
+     "TR too short, increase to 193 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=193": {
+    "rejected": [],
+    "periods_minus_TR_us": [
+     -152.2,
+     -71.1,
+     -71.1
+    ],
+    "overruns": 0,
+    "nshots": 5
+   }
+  }
+ },
+ "manual_x1.0": {
+  "v7": {
+   "v19_shot_us": 178286,
+   "train_end_rel": 193277.7,
+   "slack_us": -14991.7,
+   "tr_min": 198,
+   "period_us": 1999843.9,
+   "tr_stored_ms": 2000,
+   "tr=197": {
+    "rejected": [
+     "TR too short, increase to 199 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=198": {
+    "rejected": [
+     "TR too short, increase to 199 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=199": {
+    "rejected": [],
+    "periods_minus_TR_us": [
+     -156.1,
+     -70.9,
+     -70.9
+    ],
+    "overruns": 0,
+    "nshots": 5
+   }
+  },
+  "v1911": {
+   "v19_shot_us": 171943,
+   "train_end_rel": 186937.4,
+   "slack_us": -14994.4,
+   "tr_min": 192,
+   "period_us": 1999846.6,
+   "tr_stored_ms": 2000,
+   "tr=191": {
+    "rejected": [
+     "TR too short, increase to 193 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=192": {
+    "rejected": [
+     "TR too short, increase to 193 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=193": {
+    "rejected": [],
+    "periods_minus_TR_us": [
+     -153.4,
+     -68.2,
+     -68.2
+    ],
+    "overruns": 0,
+    "nshots": 5
+   }
+  }
+ },
+ "manual_x0.8_plus_0.5us_stmt": {
+  "v7": {
+   "v19_shot_us": 178286,
+   "train_end_rel": 193460.7,
+   "slack_us": -15174.7,
+   "tr_min": 198,
+   "period_us": 1999899.7,
+   "tr_stored_ms": 2000,
+   "tr=197": {
+    "rejected": [
+     "TR too short, increase to 199 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=198": {
+    "rejected": [
+     "TR too short, increase to 199 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=199": {
+    "rejected": [],
+    "periods_minus_TR_us": [
+     -100.3,
+     -17.3,
+     -17.3
+    ],
+    "overruns": 0,
+    "nshots": 5
+   }
+  },
+  "v1911": {
+   "v19_shot_us": 171943,
+   "train_end_rel": 187117.5,
+   "slack_us": -15174.5,
+   "tr_min": 192,
+   "period_us": 1999899.5,
+   "tr_stored_ms": 2000,
+   "tr=191": {
+    "rejected": [
+     "TR too short, increase to 193 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=192": {
+    "rejected": [
+     "TR too short, increase to 193 ms"
+    ],
+    "periods_minus_TR_us": [],
+    "overruns": 0,
+    "nshots": 1
+   },
+   "tr=193": {
+    "rejected": [],
+    "periods_minus_TR_us": [
+     -100.5,
+     -17.5,
+     -17.5
+    ],
+    "overruns": 0,
+    "nshots": 5
+   }
+  }
+ }
+}

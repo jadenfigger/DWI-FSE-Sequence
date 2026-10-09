@@ -1,0 +1,54 @@
+{
+  "source_sha256": "33e7d07353078505a19d447b4cfc47bee45f16e821f9d593303f1077e6847189",
+  "cases": {
+    "nominal": {
+      "rf": 12,
+      "adc": 8,
+      "error": 0,
+      "overflow_flags": [],
+      "timer_overruns": []
+    },
+    "angle": {
+      "rf": 0,
+      "adc": 0,
+      "error": 146,
+      "overflow_flags": [],
+      "timer_overruns": []
+    },
+    "ramp": {
+      "rf": 0,
+      "adc": 0,
+      "error": 82,
+      "overflow_flags": [],
+      "timer_overruns": []
+    },
+    "overflow_bound": {
+      "rf": 0,
+      "adc": 0,
+      "error": 145,
+      "overflow_flags": [],
+      "timer_overruns": []
+    },
+    "esp12": {
+      "rf": 0,
+      "adc": 0,
+      "error": 32,
+      "overflow_flags": [],
+      "timer_overruns": []
+    },
+    "tables65": {
+      "rf": 0,
+      "adc": 0,
+      "error": 39,
+      "overflow_flags": [],
+      "timer_overruns": []
+    },
+    "methodoff": {
+      "rf": 0,
+      "adc": 0,
+      "error": 38,
+      "overflow_flags": [],
+      "timer_overruns": []
+    }
+  }
+}
