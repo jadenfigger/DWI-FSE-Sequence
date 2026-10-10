@@ -1,0 +1,101 @@
+# Pulseq sequence file
+# Created by PyPulseq
+
+[VERSION]
+major 1
+minor 5
+revision 0
+
+[DEFINITIONS]
+AdcRasterTime 1e-07 
+BlockDurationRaster 1e-05 
+Description 90x-20ms-180y-20ms-echo1-5ms-180y, long ADC: echo2 at +5 ms, stimulated echo at +20 ms after the 2nd 180 (equal crushers) 
+GradientRasterTime 1e-05 
+Name ex5_unequal_first_interval 
+RadiofrequencyRasterTime 1e-06 
+TotalDuration 1 
+
+# Format of blocks:
+# NUM DUR RF  GX  GY  GZ  ADC  EXT
+[BLOCKS]
+ 1  80   0   0   0   0  0  0
+ 2  33   1   0   0   0  0  0
+ 3 1867   0   0   0   0  0  0
+ 4 233   2   0   0   1  0  0
+ 5 1587   0   0   0   0  0  0
+ 6 602   0   0   0   0  1  0
+ 7  78   0   0   0   0  0  0
+ 8 233   2   0   0   1  0  0
+ 9  27   0   0   0   0  0  0
+10 2362   0   0   0   0  2  0
+11 92898   0   0   0   0  0  0
+
+# Format of RF events:
+# id ampl. mag_id phase_id time_shape_id center delay freqPPm phasePPM freq phase use
+# ..   Hz      ..       ..            ..     us    us     ppm  rad/MHz   Hz   rad  ..
+# Field "use" is the initial of: excitation refocusing inversion saturation preparation other undefined
+[RF]
+1         1250 1 2 3 100 100 0 0 0 0 e
+2         2500 1 2 3 100 1100 0 0 0 1.5708 r
+
+# Format of arbitrary gradients:
+#   time_shape_id of 0 means default timing (stepping with grad_raster starting at 1/2 of grad_raster)
+# id amplitude first last amp_shape_id time_shape_id delay
+# ..      Hz/m  Hz/m Hz/m        ..         ..          us
+[GRADIENTS]
+1  4.87805e+06            0            0 4 5 0
+
+# Format of ADC events:
+# id num dwell delay freqPPM phasePPM freq phase phase_id
+# ..  ..    ns    us     ppm  rad/MHz   Hz   rad       ..
+[ADC]
+1 120 50000 10 0 0 0 0 0
+2 472 50000 10 0 0 0 0 0
+
+# Sequence Shapes
+[SHAPES]
+
+shape_id 1
+num_samples 2
+1
+1
+
+shape_id 2
+num_samples 2
+0
+0
+
+shape_id 3
+num_samples 2
+0
+200
+
+shape_id 4
+num_samples 8
+0
+1
+1
+0
+0
+1
+1
+0
+
+shape_id 5
+num_samples 8
+0
+18
+82
+100
+133
+151
+215
+233
+
+
+[SIGNATURE]
+# This is the hash of the Pulseq file, calculated right before the [SIGNATURE] section was added
+# It can be reproduced/verified with md5sum if the file trimmed to the position right above [SIGNATURE]
+# The new line character preceding [SIGNATURE] BELONGS to the signature (and needs to be stripped away for recalculating/verification)
+Type md5
+Hash 0325fdd06a880b78615e01d504d34238
