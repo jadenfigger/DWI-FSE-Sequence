@@ -24,6 +24,8 @@ increasing, decreasing and alternating crusher schedules.
 **Gibbons replication audit (6 October):** [measured causes of the mismatch](docs/gibbons_replication_audit.md),
 including corrected preparation-endpoint plots, a crusher phase control and an independent Bloch ODE check.
 
+**Interactive spin explorer:** [tools/spin_explorer/spin_explorer.html](tools/spin_explorer/spin_explorer.html). Open it in a browser and step through any `.seq` while a Bloch sphere, slice profile and F/Z dephasing states update. Built in: the examples, the original and crusher-schedule controls, and the Alsop/ss-MGOT adaptations, with B1/B0/T2′/RF-model/motion-phase controls ([notes](tools/spin_explorer/README.md)).
+
 **Scanner v1.7:** [implementation, experimental PPRs, validation and reproduction](docs/scanner_v17.md).
 Adds bounded signed crusher schedules, fixes independent-crusher centering and
 guards PE0 scratch memory. Select a `twoTE-1.7*.ppr` explicitly; defaults still
