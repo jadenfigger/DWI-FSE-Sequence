@@ -1,0 +1,4628 @@
+{
+  "cases": [
+    {
+      "label": "v182",
+      "model": "flat_0us",
+      "ppl_sha": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
+      "rf": 60,
+      "adc": 54,
+      "hazards": {
+        "timer_overruns": [],
+        "ignored_lists": [],
+        "premature_matrix_use": {}
+      },
+      "ledger_issues": {
+        "S": [],
+        "P": [],
+        "R": []
+      },
+      "nav": {
+        "PE_zero_tolerance_cycles_m": 0.03,
+        "max_abs_final_echo_PE_cycles_m": 6.93957128259695e-13,
+        "quantization_context": {
+          "conservative_bound_definition": "one integer DAC LSB integrated over all active P-gradient time from first RF centre to final ADC centre; this is reported for context and is not used to accept a residual",
+          "max_DAC_quantization_bound_cycles_m": 13.568834009826961
+        },
+        "shot_final_echoes": [
+          {
+            "shot": 1,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 2,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 3,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 4,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 4.711138977600168e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 5,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 2.0341949408528466e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 6,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -6.93957128259695e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          }
+        ],
+        "all_imaging_final_echoes_zero_PE": true,
+        "volume_navigator_adc_moments": [
+          {
+            "adc": "ADC1",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC2",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC3",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC4",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC5",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC6",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC7",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC8",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          }
+        ],
+        "volume_navigator_all_zero_PE": true,
+        "all_zero_PE": true
+      },
+      "echo": [
+        {
+          "shot": 1,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            10990.199999999983,
+            10990.199999999983,
+            10990.199999999983,
+            10990.199999999983,
+            10990.199999999983,
+            10990.199999999997,
+            10990.200000000012
+          ],
+          "ADC_midpoint_error_us": [
+            -5.30000000000291,
+            -5.30000000000291,
+            -5.30000000000291,
+            -5.30000000000291,
+            -5.30000000000291,
+            -5.300000000017462,
+            -5.300000000017462
+          ],
+          "max_abs_midpoint_error_us": 5.300000000017462
+        },
+        {
+          "shot": 2,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            10976.399999999907,
+            10976.399999999907,
+            10976.399999999907,
+            10976.399999999907,
+            10976.399999999907,
+            10976.399999999907,
+            10976.399999999907
+          ],
+          "ADC_midpoint_error_us": [
+            0.6000000000931323,
+            0.6000000000931323,
+            0.6000000000931323,
+            0.6000000000931323,
+            0.6000000000931323,
+            0.6000000000931323,
+            0.6000000000931323
+          ],
+          "max_abs_midpoint_error_us": 0.6000000000931323
+        },
+        {
+          "shot": 3,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            10990.19999999972,
+            10990.19999999972,
+            10990.19999999972,
+            10990.19999999972,
+            10990.19999999972,
+            10990.19999999972,
+            10990.19999999972
+          ],
+          "ADC_midpoint_error_us": [
+            -5.300000000046566,
+            -5.300000000046566,
+            -5.300000000046566,
+            -5.300000000046566,
+            -5.300000000046566,
+            -5.300000000046566,
+            -5.300000000046566
+          ],
+          "max_abs_midpoint_error_us": 5.300000000046566
+        },
+        {
+          "shot": 4,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            10990.19999999972,
+            10990.19999999972,
+            10990.200000000186,
+            10990.200000000186,
+            10990.200000000186,
+            10990.200000000186,
+            10990.200000000186
+          ],
+          "ADC_midpoint_error_us": [
+            -5.300000000046566,
+            -5.300000000046566,
+            -5.300000000279397,
+            -5.300000000279397,
+            -5.300000000279397,
+            -5.300000000279397,
+            -5.300000000279397
+          ],
+          "max_abs_midpoint_error_us": 5.300000000279397
+        },
+        {
+          "shot": 5,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            10976.400000000373,
+            10976.400000000373,
+            10976.400000000373,
+            10976.400000000373,
+            10976.400000000373,
+            10976.400000000373,
+            10976.400000000373
+          ],
+          "ADC_midpoint_error_us": [
+            0.599999999627471,
+            0.599999999627471,
+            0.599999999627471,
+            0.599999999627471,
+            0.599999999627471,
+            0.599999999627471,
+            0.599999999627471
+          ],
+          "max_abs_midpoint_error_us": 0.599999999627471
+        },
+        {
+          "shot": 6,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            10990.200000000186,
+            10990.200000000186,
+            10990.200000000186,
+            10990.200000000186,
+            10990.200000000186,
+            10990.200000000186,
+            10990.200000000186
+          ],
+          "ADC_midpoint_error_us": [
+            -5.300000000279397,
+            -5.300000000279397,
+            -5.300000000279397,
+            -5.300000000279397,
+            -5.300000000279397,
+            -5.300000000279397,
+            -5.300000000279397
+          ],
+          "max_abs_midpoint_error_us": 5.300000000279397
+        }
+      ],
+      "prints": [],
+      "vars": {
+        "tr_min": 161,
+        "tacq": 3200,
+        "phase_correction": 0
+      }
+    },
+    {
+      "label": "v182",
+      "model": "flat_0.5us",
+      "ppl_sha": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
+      "rf": 60,
+      "adc": 54,
+      "hazards": {
+        "timer_overruns": [],
+        "ignored_lists": [],
+        "premature_matrix_use": {}
+      },
+      "ledger_issues": {
+        "S": [],
+        "P": [],
+        "R": []
+      },
+      "nav": {
+        "PE_zero_tolerance_cycles_m": 0.03,
+        "max_abs_final_echo_PE_cycles_m": 6.865407925378358e-13,
+        "quantization_context": {
+          "conservative_bound_definition": "one integer DAC LSB integrated over all active P-gradient time from first RF centre to final ADC centre; this is reported for context and is not used to accept a residual",
+          "max_DAC_quantization_bound_cycles_m": 13.568834009826961
+        },
+        "shot_final_echoes": [
+          {
+            "shot": 1,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 2,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 3,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 4,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -6.865407925378358e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 5,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -5.141992767155807e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 6,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.1565952137661584e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          }
+        ],
+        "all_imaging_final_echoes_zero_PE": true,
+        "volume_navigator_adc_moments": [
+          {
+            "adc": "ADC1",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC2",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC3",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC4",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC5",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC6",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC7",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC8",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          }
+        ],
+        "volume_navigator_all_zero_PE": true,
+        "all_zero_PE": true
+      },
+      "echo": [
+        {
+          "shot": 1,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            10999.199999999983,
+            10999.199999999983,
+            10999.199999999983,
+            10999.199999999983,
+            10999.199999999983,
+            10999.199999999997,
+            10999.200000000012
+          ],
+          "ADC_midpoint_error_us": [
+            -7.80000000000291,
+            -7.80000000000291,
+            -7.80000000000291,
+            -7.80000000000291,
+            -7.80000000000291,
+            -7.800000000017462,
+            -7.800000000017462
+          ],
+          "max_abs_midpoint_error_us": 7.800000000017462
+        },
+        {
+          "shot": 2,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            10991.399999999907,
+            10991.399999999907,
+            10991.399999999907,
+            10991.399999999907,
+            10991.399999999907,
+            10991.399999999907,
+            10991.399999999907
+          ],
+          "ADC_midpoint_error_us": [
+            -2.3999999999068677,
+            -2.3999999999068677,
+            -2.3999999999068677,
+            -2.3999999999068677,
+            -2.3999999999068677,
+            -2.3999999999068677,
+            -2.3999999999068677
+          ],
+          "max_abs_midpoint_error_us": 2.3999999999068677
+        },
+        {
+          "shot": 3,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            10999.19999999972,
+            10999.19999999972,
+            10999.19999999972,
+            10999.19999999972,
+            10999.19999999972,
+            10999.19999999972,
+            10999.19999999972
+          ],
+          "ADC_midpoint_error_us": [
+            -7.800000000046566,
+            -7.800000000046566,
+            -7.800000000046566,
+            -7.800000000046566,
+            -7.800000000046566,
+            -7.800000000046566,
+            -7.800000000046566
+          ],
+          "max_abs_midpoint_error_us": 7.800000000046566
+        },
+        {
+          "shot": 4,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            10999.19999999972,
+            10999.19999999972,
+            10999.200000000186,
+            10999.200000000186,
+            10999.200000000186,
+            10999.200000000186,
+            10999.200000000186
+          ],
+          "ADC_midpoint_error_us": [
+            -7.800000000046566,
+            -7.800000000046566,
+            -7.800000000279397,
+            -7.800000000279397,
+            -7.800000000279397,
+            -7.800000000279397,
+            -7.800000000279397
+          ],
+          "max_abs_midpoint_error_us": 7.800000000279397
+        },
+        {
+          "shot": 5,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            10991.400000000373,
+            10991.400000000373,
+            10991.400000000373,
+            10991.400000000373,
+            10991.400000000373,
+            10991.400000000373,
+            10991.400000000373
+          ],
+          "ADC_midpoint_error_us": [
+            -2.400000000372529,
+            -2.400000000372529,
+            -2.400000000372529,
+            -2.400000000372529,
+            -2.400000000372529,
+            -2.400000000372529,
+            -2.400000000372529
+          ],
+          "max_abs_midpoint_error_us": 2.400000000372529
+        },
+        {
+          "shot": 6,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            10999.200000000186,
+            10999.200000000186,
+            10999.200000000186,
+            10999.200000000186,
+            10999.200000000186,
+            10999.200000000186,
+            10999.200000000186
+          ],
+          "ADC_midpoint_error_us": [
+            -7.800000000279397,
+            -7.800000000279397,
+            -7.800000000279397,
+            -7.800000000279397,
+            -7.800000000279397,
+            -7.800000000279397,
+            -7.800000000279397
+          ],
+          "max_abs_midpoint_error_us": 7.800000000279397
+        }
+      ],
+      "prints": [],
+      "vars": {
+        "tr_min": 161,
+        "tacq": 3200,
+        "phase_correction": 0
+      }
+    },
+    {
+      "label": "v182",
+      "model": "flat_1us",
+      "ppl_sha": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
+      "rf": 60,
+      "adc": 54,
+      "hazards": {
+        "timer_overruns": [],
+        "ignored_lists": [],
+        "premature_matrix_use": {}
+      },
+      "ledger_issues": {
+        "S": [],
+        "P": [],
+        "R": []
+      },
+      "nav": {
+        "PE_zero_tolerance_cycles_m": 0.03,
+        "max_abs_final_echo_PE_cycles_m": 6.858344748500397e-13,
+        "quantization_context": {
+          "conservative_bound_definition": "one integer DAC LSB integrated over all active P-gradient time from first RF centre to final ADC centre; this is reported for context and is not used to accept a residual",
+          "max_DAC_quantization_bound_cycles_m": 13.568834009826961
+        },
+        "shot_final_echoes": [
+          {
+            "shot": 1,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 2,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 3,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 4,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -6.858344748500397e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 5,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -5.141992767155807e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 6,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.1565952137661584e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          }
+        ],
+        "all_imaging_final_echoes_zero_PE": true,
+        "volume_navigator_adc_moments": [
+          {
+            "adc": "ADC1",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC2",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC3",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC4",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC5",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC6",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC7",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC8",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          }
+        ],
+        "volume_navigator_all_zero_PE": true,
+        "all_zero_PE": true
+      },
+      "echo": [
+        {
+          "shot": 1,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11008.199999999983,
+            11008.199999999983,
+            11008.199999999983,
+            11008.199999999983,
+            11008.199999999983,
+            11008.200000000012,
+            11008.200000000012
+          ],
+          "ADC_midpoint_error_us": [
+            -10.30000000000291,
+            -10.30000000000291,
+            -10.30000000000291,
+            -10.30000000000291,
+            -10.30000000000291,
+            -10.300000000017462,
+            -10.300000000017462
+          ],
+          "max_abs_midpoint_error_us": 10.300000000017462
+        },
+        {
+          "shot": 2,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11006.399999999907,
+            11006.399999999907,
+            11006.399999999907,
+            11006.399999999907,
+            11006.399999999907,
+            11006.399999999907,
+            11006.399999999907
+          ],
+          "ADC_midpoint_error_us": [
+            -5.399999999906868,
+            -5.399999999906868,
+            -5.399999999906868,
+            -5.399999999906868,
+            -5.399999999906868,
+            -5.399999999906868,
+            -5.399999999906868
+          ],
+          "max_abs_midpoint_error_us": 5.399999999906868
+        },
+        {
+          "shot": 3,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11008.19999999972,
+            11008.19999999972,
+            11008.19999999972,
+            11008.19999999972,
+            11008.19999999972,
+            11008.19999999972,
+            11008.19999999972
+          ],
+          "ADC_midpoint_error_us": [
+            -10.300000000046566,
+            -10.300000000046566,
+            -10.300000000046566,
+            -10.300000000046566,
+            -10.300000000046566,
+            -10.300000000046566,
+            -10.300000000046566
+          ],
+          "max_abs_midpoint_error_us": 10.300000000046566
+        },
+        {
+          "shot": 4,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11008.19999999972,
+            11008.19999999972,
+            11008.200000000186,
+            11008.200000000186,
+            11008.200000000186,
+            11008.200000000186,
+            11008.200000000186
+          ],
+          "ADC_midpoint_error_us": [
+            -10.300000000046566,
+            -10.300000000046566,
+            -10.300000000279397,
+            -10.300000000279397,
+            -10.300000000279397,
+            -10.300000000279397,
+            -10.300000000279397
+          ],
+          "max_abs_midpoint_error_us": 10.300000000279397
+        },
+        {
+          "shot": 5,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11006.400000000373,
+            11006.400000000373,
+            11006.400000000373,
+            11006.400000000373,
+            11006.400000000373,
+            11006.400000000373,
+            11006.400000000373
+          ],
+          "ADC_midpoint_error_us": [
+            -5.400000000372529,
+            -5.400000000372529,
+            -5.400000000372529,
+            -5.400000000372529,
+            -5.400000000372529,
+            -5.400000000372529,
+            -5.400000000372529
+          ],
+          "max_abs_midpoint_error_us": 5.400000000372529
+        },
+        {
+          "shot": 6,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11008.200000000186,
+            11008.200000000186,
+            11008.200000000186,
+            11008.200000000186,
+            11008.200000000186,
+            11008.200000000186,
+            11008.200000000186
+          ],
+          "ADC_midpoint_error_us": [
+            -10.300000000279397,
+            -10.300000000279397,
+            -10.300000000279397,
+            -10.300000000279397,
+            -10.300000000279397,
+            -10.300000000279397,
+            -10.300000000279397
+          ],
+          "max_abs_midpoint_error_us": 10.300000000279397
+        }
+      ],
+      "prints": [],
+      "vars": {
+        "tr_min": 161,
+        "tacq": 3200,
+        "phase_correction": 0
+      }
+    },
+    {
+      "label": "v182",
+      "model": "flat_2us",
+      "ppl_sha": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
+      "rf": 60,
+      "adc": 54,
+      "hazards": {
+        "timer_overruns": [],
+        "ignored_lists": [],
+        "premature_matrix_use": {}
+      },
+      "ledger_issues": {
+        "S": [],
+        "P": [],
+        "R": []
+      },
+      "nav": {
+        "PE_zero_tolerance_cycles_m": 0.03,
+        "max_abs_final_echo_PE_cycles_m": 5.954258108121354e-13,
+        "quantization_context": {
+          "conservative_bound_definition": "one integer DAC LSB integrated over all active P-gradient time from first RF centre to final ADC centre; this is reported for context and is not used to accept a residual",
+          "max_DAC_quantization_bound_cycles_m": 13.568834009826961
+        },
+        "shot_final_echoes": [
+          {
+            "shot": 1,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 2,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 3,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 4,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -5.954258108121354e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 5,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -5.141992767155807e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 6,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 9.305735536713978e-14,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          }
+        ],
+        "all_imaging_final_echoes_zero_PE": true,
+        "volume_navigator_adc_moments": [
+          {
+            "adc": "ADC1",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC2",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC3",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC4",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC5",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC6",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC7",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC8",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          }
+        ],
+        "volume_navigator_all_zero_PE": true,
+        "all_zero_PE": true
+      },
+      "echo": [
+        {
+          "shot": 1,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11026.199999999983,
+            11026.199999999983,
+            11026.199999999983,
+            11026.199999999983,
+            11026.199999999968,
+            11026.200000000012,
+            11026.200000000012
+          ],
+          "ADC_midpoint_error_us": [
+            -15.30000000000291,
+            -15.30000000000291,
+            -15.30000000000291,
+            -15.30000000000291,
+            -15.30000000000291,
+            -15.300000000017462,
+            -15.300000000017462
+          ],
+          "max_abs_midpoint_error_us": 15.300000000017462
+        },
+        {
+          "shot": 2,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11036.399999999907,
+            11036.399999999907,
+            11036.399999999907,
+            11036.399999999907,
+            11036.399999999907,
+            11036.399999999907,
+            11036.399999999907
+          ],
+          "ADC_midpoint_error_us": [
+            -11.399999999906868,
+            -11.399999999906868,
+            -11.399999999906868,
+            -11.399999999906868,
+            -11.399999999906868,
+            -11.399999999906868,
+            -11.399999999906868
+          ],
+          "max_abs_midpoint_error_us": 11.399999999906868
+        },
+        {
+          "shot": 3,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11026.19999999972,
+            11026.19999999972,
+            11026.19999999972,
+            11026.19999999972,
+            11026.19999999972,
+            11026.19999999972,
+            11026.19999999972
+          ],
+          "ADC_midpoint_error_us": [
+            -15.300000000046566,
+            -15.300000000046566,
+            -15.300000000046566,
+            -15.300000000046566,
+            -15.300000000046566,
+            -15.300000000046566,
+            -15.300000000046566
+          ],
+          "max_abs_midpoint_error_us": 15.300000000046566
+        },
+        {
+          "shot": 4,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11026.19999999972,
+            11026.19999999972,
+            11026.200000000186,
+            11026.200000000186,
+            11026.200000000186,
+            11026.200000000186,
+            11026.200000000186
+          ],
+          "ADC_midpoint_error_us": [
+            -15.300000000046566,
+            -15.300000000046566,
+            -15.300000000279397,
+            -15.300000000279397,
+            -15.300000000279397,
+            -15.300000000279397,
+            -15.300000000279397
+          ],
+          "max_abs_midpoint_error_us": 15.300000000279397
+        },
+        {
+          "shot": 5,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11036.400000000373,
+            11036.400000000373,
+            11036.400000000373,
+            11036.400000000373,
+            11036.400000000373,
+            11036.400000000373,
+            11036.400000000373
+          ],
+          "ADC_midpoint_error_us": [
+            -11.400000000372529,
+            -11.400000000372529,
+            -11.400000000372529,
+            -11.400000000372529,
+            -11.400000000372529,
+            -11.400000000372529,
+            -11.400000000372529
+          ],
+          "max_abs_midpoint_error_us": 11.400000000372529
+        },
+        {
+          "shot": 6,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11026.200000000186,
+            11026.200000000186,
+            11026.200000000186,
+            11026.200000000186,
+            11026.200000000186,
+            11026.200000000186,
+            11026.200000000186
+          ],
+          "ADC_midpoint_error_us": [
+            -15.300000000279397,
+            -15.300000000279397,
+            -15.300000000279397,
+            -15.300000000279397,
+            -15.300000000279397,
+            -15.300000000279397,
+            -15.300000000279397
+          ],
+          "max_abs_midpoint_error_us": 15.300000000279397
+        }
+      ],
+      "prints": [],
+      "vars": {
+        "tr_min": 161,
+        "tacq": 3200,
+        "phase_correction": 0
+      }
+    },
+    {
+      "label": "v182",
+      "model": "manual_x0.8",
+      "ppl_sha": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
+      "rf": 60,
+      "adc": 54,
+      "hazards": {
+        "timer_overruns": [],
+        "ignored_lists": [],
+        "premature_matrix_use": {}
+      },
+      "ledger_issues": {
+        "S": [],
+        "P": [],
+        "R": []
+      },
+      "nav": {
+        "PE_zero_tolerance_cycles_m": 0.03,
+        "max_abs_final_echo_PE_cycles_m": 6.865407925378358e-13,
+        "quantization_context": {
+          "conservative_bound_definition": "one integer DAC LSB integrated over all active P-gradient time from first RF centre to final ADC centre; this is reported for context and is not used to accept a residual",
+          "max_DAC_quantization_bound_cycles_m": 13.568834009826961
+        },
+        "shot_final_echoes": [
+          {
+            "shot": 1,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 2,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 3,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 4,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -6.865407925378358e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 5,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -5.141992767155807e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 6,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.1565952137661584e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          }
+        ],
+        "all_imaging_final_echoes_zero_PE": true,
+        "volume_navigator_adc_moments": [
+          {
+            "adc": "ADC1",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC2",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC3",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC4",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC5",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC6",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC7",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC8",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          }
+        ],
+        "volume_navigator_all_zero_PE": true,
+        "all_zero_PE": true
+      },
+      "echo": [
+        {
+          "shot": 1,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11013.320000000182,
+            11013.320000000182,
+            11013.320000000167,
+            11013.320000000036,
+            11013.320000000036,
+            11013.320000000036,
+            11013.320000000036
+          ],
+          "ADC_midpoint_error_us": [
+            -9.02000000004773,
+            -9.02000000004773,
+            -9.020000000033178,
+            -9.019999999989523,
+            -9.019999999960419,
+            -9.019999999989523,
+            -9.019999999960419
+          ],
+          "max_abs_midpoint_error_us": 9.02000000004773
+        },
+        {
+          "shot": 2,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11013.519999999087,
+            11013.519999999087,
+            11013.519999999087,
+            11013.519999999087,
+            11013.519999999087,
+            11013.519999999087,
+            11013.519999999087
+          ],
+          "ADC_midpoint_error_us": [
+            -3.4799999996321276,
+            -3.4799999996321276,
+            -3.4799999996321276,
+            -3.4799999996321276,
+            -3.4799999996321276,
+            -3.4799999996321276,
+            -3.4799999996321276
+          ],
+          "max_abs_midpoint_error_us": 3.4799999996321276
+        },
+        {
+          "shot": 3,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11013.320000000298,
+            11013.320000000298,
+            11013.320000000298,
+            11013.320000000298,
+            11013.320000000298,
+            11013.320000000298,
+            11013.320000000298
+          ],
+          "ADC_midpoint_error_us": [
+            -9.020000000018626,
+            -9.020000000018626,
+            -9.020000000018626,
+            -9.020000000018626,
+            -9.020000000018626,
+            -9.020000000018626,
+            -9.020000000018626
+          ],
+          "max_abs_midpoint_error_us": 9.020000000018626
+        },
+        {
+          "shot": 4,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11013.319999999832,
+            11013.319999999832,
+            11013.319999999832,
+            11013.319999999832,
+            11013.319999999832,
+            11013.319999999832,
+            11013.319999999832
+          ],
+          "ADC_midpoint_error_us": [
+            -9.020000000949949,
+            -9.020000000484288,
+            -9.020000000949949,
+            -9.020000000484288,
+            -9.020000000949949,
+            -9.020000000484288,
+            -9.020000000949949
+          ],
+          "max_abs_midpoint_error_us": 9.020000000949949
+        },
+        {
+          "shot": 5,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11013.520000000019,
+            11013.520000000019,
+            11013.520000000019,
+            11013.520000000019,
+            11013.520000000019,
+            11013.520000000019,
+            11013.520000000019
+          ],
+          "ADC_midpoint_error_us": [
+            -3.4799999999813735,
+            -3.480000000447035,
+            -3.4799999999813735,
+            -3.480000000447035,
+            -3.4799999999813735,
+            -3.480000000447035,
+            -3.4799999999813735
+          ],
+          "max_abs_midpoint_error_us": 3.480000000447035
+        },
+        {
+          "shot": 6,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11013.319999999832,
+            11013.319999999832,
+            11013.319999999832,
+            11013.319999999832,
+            11013.319999999832,
+            11013.319999999832,
+            11013.319999999832
+          ],
+          "ADC_midpoint_error_us": [
+            -9.020000000484288,
+            -9.020000000949949,
+            -9.020000000484288,
+            -9.020000000949949,
+            -9.020000000484288,
+            -9.020000000949949,
+            -9.020000000484288
+          ],
+          "max_abs_midpoint_error_us": 9.020000000949949
+        }
+      ],
+      "prints": [],
+      "vars": {
+        "tr_min": 161,
+        "tacq": 3200,
+        "phase_correction": 0
+      }
+    },
+    {
+      "label": "v182",
+      "model": "manual_x0.9",
+      "ppl_sha": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
+      "rf": 60,
+      "adc": 54,
+      "hazards": {
+        "timer_overruns": [],
+        "ignored_lists": [],
+        "premature_matrix_use": {}
+      },
+      "ledger_issues": {
+        "S": [],
+        "P": [],
+        "R": []
+      },
+      "nav": {
+        "PE_zero_tolerance_cycles_m": 0.03,
+        "max_abs_final_echo_PE_cycles_m": 6.865407925378358e-13,
+        "quantization_context": {
+          "conservative_bound_definition": "one integer DAC LSB integrated over all active P-gradient time from first RF centre to final ADC centre; this is reported for context and is not used to accept a residual",
+          "max_DAC_quantization_bound_cycles_m": 13.568834009826961
+        },
+        "shot_final_echoes": [
+          {
+            "shot": 1,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 2,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 3,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 4,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -6.865407925378358e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 5,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -5.141992767155807e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 6,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.1565952137661584e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          }
+        ],
+        "all_imaging_final_echoes_zero_PE": true,
+        "volume_navigator_adc_moments": [
+          {
+            "adc": "ADC1",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC2",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC3",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC4",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC5",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC6",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC7",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC8",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          }
+        ],
+        "volume_navigator_all_zero_PE": true,
+        "all_zero_PE": true
+      },
+      "echo": [
+        {
+          "shot": 1,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11016.209999999934,
+            11016.209999999934,
+            11016.2099999997,
+            11016.209999999614,
+            11016.209999999614,
+            11016.209999999614,
+            11016.209999999614
+          ],
+          "ADC_midpoint_error_us": [
+            -9.48499999998603,
+            -9.48499999998603,
+            -9.484999999869615,
+            -9.484999999927823,
+            -9.484999999927823,
+            -9.484999999927823,
+            -9.484999999927823
+          ],
+          "max_abs_midpoint_error_us": 9.48499999998603
+        },
+        {
+          "shot": 2,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11018.1599999998,
+            11018.1599999998,
+            11018.1599999998,
+            11018.1599999998,
+            11018.1599999998,
+            11018.1599999998,
+            11018.1599999998
+          ],
+          "ADC_midpoint_error_us": [
+            -3.989999999641441,
+            -3.989999999757856,
+            -3.989999999641441,
+            -3.989999999757856,
+            -3.989999999641441,
+            -3.989999999757856,
+            -3.989999999641441
+          ],
+          "max_abs_midpoint_error_us": 3.989999999757856
+        },
+        {
+          "shot": 3,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11016.210000000894,
+            11016.210000000894,
+            11016.210000000894,
+            11016.210000000894,
+            11016.210000000894,
+            11016.210000000894,
+            11016.210000000894
+          ],
+          "ADC_midpoint_error_us": [
+            -9.485000000335276,
+            -9.485000000335276,
+            -9.485000000335276,
+            -9.485000000335276,
+            -9.485000000335276,
+            -9.485000000335276,
+            -9.485000000335276
+          ],
+          "max_abs_midpoint_error_us": 9.485000000335276
+        },
+        {
+          "shot": 4,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11016.209999999031,
+            11016.209999999031,
+            11016.209999999031,
+            11016.209999999031,
+            11016.209999999031,
+            11016.209999999031,
+            11016.209999999031
+          ],
+          "ADC_midpoint_error_us": [
+            -9.485000000335276,
+            -9.485000000335276,
+            -9.485000000335276,
+            -9.485000000335276,
+            -9.485000000335276,
+            -9.485000000335276,
+            -9.485000000335276
+          ],
+          "max_abs_midpoint_error_us": 9.485000000335276
+        },
+        {
+          "shot": 5,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11018.159999999683,
+            11018.159999999683,
+            11018.159999999683,
+            11018.159999999683,
+            11018.159999999683,
+            11018.159999999683,
+            11018.159999999683
+          ],
+          "ADC_midpoint_error_us": [
+            -3.99000000115484,
+            -3.9900000006891787,
+            -3.99000000115484,
+            -3.9900000006891787,
+            -3.99000000115484,
+            -3.9900000006891787,
+            -3.99000000115484
+          ],
+          "max_abs_midpoint_error_us": 3.99000000115484
+        },
+        {
+          "shot": 6,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11016.209999999031,
+            11016.209999999031,
+            11016.209999999031,
+            11016.209999999031,
+            11016.209999999031,
+            11016.209999999031,
+            11016.209999999031
+          ],
+          "ADC_midpoint_error_us": [
+            -9.485000000335276,
+            -9.485000000335276,
+            -9.485000000335276,
+            -9.485000000335276,
+            -9.485000000335276,
+            -9.485000000335276,
+            -9.485000000335276
+          ],
+          "max_abs_midpoint_error_us": 9.485000000335276
+        }
+      ],
+      "prints": [],
+      "vars": {
+        "tr_min": 161,
+        "tacq": 3200,
+        "phase_correction": 0
+      }
+    },
+    {
+      "label": "v182",
+      "model": "manual_x1.0",
+      "ppl_sha": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
+      "rf": 60,
+      "adc": 54,
+      "hazards": {
+        "timer_overruns": [],
+        "ignored_lists": [],
+        "premature_matrix_use": {}
+      },
+      "ledger_issues": {
+        "S": [],
+        "P": [],
+        "R": []
+      },
+      "nav": {
+        "PE_zero_tolerance_cycles_m": 0.03,
+        "max_abs_final_echo_PE_cycles_m": 6.865407925378358e-13,
+        "quantization_context": {
+          "conservative_bound_definition": "one integer DAC LSB integrated over all active P-gradient time from first RF centre to final ADC centre; this is reported for context and is not used to accept a residual",
+          "max_DAC_quantization_bound_cycles_m": 13.568834009826961
+        },
+        "shot_final_echoes": [
+          {
+            "shot": 1,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 2,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 3,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 4,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -6.865407925378358e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 5,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -5.141992767155807e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 6,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.1565952137661584e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          }
+        ],
+        "all_imaging_final_echoes_zero_PE": true,
+        "volume_navigator_adc_moments": [
+          {
+            "adc": "ADC1",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC2",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC3",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC4",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC5",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC6",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC7",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC8",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          }
+        ],
+        "volume_navigator_all_zero_PE": true,
+        "all_zero_PE": true
+      },
+      "echo": [
+        {
+          "shot": 1,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11019.099999999846,
+            11019.099999999846,
+            11019.100000000137,
+            11019.10000000021,
+            11019.10000000021,
+            11019.10000000021,
+            11019.10000000021
+          ],
+          "ADC_midpoint_error_us": [
+            -9.949999999982538,
+            -9.94999999999709,
+            -9.950000000128057,
+            -9.950000000098953,
+            -9.950000000098953,
+            -9.950000000098953,
+            -9.950000000098953
+          ],
+          "max_abs_midpoint_error_us": 9.950000000128057
+        },
+        {
+          "shot": 2,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11022.79999999865,
+            11022.79999999865,
+            11022.79999999865,
+            11022.79999999865,
+            11022.79999999865,
+            11022.79999999865,
+            11022.79999999865
+          ],
+          "ADC_midpoint_error_us": [
+            -4.499999999534339,
+            -4.499999999534339,
+            -4.499999999534339,
+            -4.499999999534339,
+            -4.499999999534339,
+            -4.499999999534339,
+            -4.499999999534339
+          ],
+          "max_abs_midpoint_error_us": 4.499999999534339
+        },
+        {
+          "shot": 3,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11019.099999997532,
+            11019.099999997532,
+            11019.099999997532,
+            11019.099999997532,
+            11019.099999997532,
+            11019.099999997532,
+            11019.099999997532
+          ],
+          "ADC_midpoint_error_us": [
+            -9.949999999953434,
+            -9.949999999720603,
+            -9.949999999953434,
+            -9.949999999720603,
+            -9.949999999953434,
+            -9.949999999720603,
+            -9.949999999953434
+          ],
+          "max_abs_midpoint_error_us": 9.949999999953434
+        },
+        {
+          "shot": 4,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11019.100000003353,
+            11019.100000003353,
+            11019.100000003353,
+            11019.100000003353,
+            11019.100000003353,
+            11019.100000003353,
+            11019.100000003353
+          ],
+          "ADC_midpoint_error_us": [
+            -9.950000001583248,
+            -9.950000001583248,
+            -9.950000001583248,
+            -9.950000001583248,
+            -9.950000001583248,
+            -9.950000001583248,
+            -9.950000001583248
+          ],
+          "max_abs_midpoint_error_us": 9.950000001583248
+        },
+        {
+          "shot": 5,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11022.800000005402,
+            11022.800000005402,
+            11022.800000005402,
+            11022.800000005402,
+            11022.800000005402,
+            11022.800000005402,
+            11022.800000005402
+          ],
+          "ADC_midpoint_error_us": [
+            -4.500000001862645,
+            -4.500000001862645,
+            -4.500000001862645,
+            -4.500000001862645,
+            -4.500000001862645,
+            -4.500000001862645,
+            -4.500000001862645
+          ],
+          "max_abs_midpoint_error_us": 4.500000001862645
+        },
+        {
+          "shot": 6,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11019.100000003353,
+            11019.100000003353,
+            11019.100000003353,
+            11019.100000003353,
+            11019.100000003353,
+            11019.100000003353,
+            11019.100000003353
+          ],
+          "ADC_midpoint_error_us": [
+            -9.950000001583248,
+            -9.950000001583248,
+            -9.950000001583248,
+            -9.950000001583248,
+            -9.950000001583248,
+            -9.950000001583248,
+            -9.950000001583248
+          ],
+          "max_abs_midpoint_error_us": 9.950000001583248
+        }
+      ],
+      "prints": [],
+      "vars": {
+        "tr_min": 161,
+        "tacq": 3200,
+        "phase_correction": 0
+      }
+    },
+    {
+      "label": "v182",
+      "model": "manual_x0.8_plus_0.5us_stmt",
+      "ppl_sha": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
+      "rf": 60,
+      "adc": 54,
+      "hazards": {
+        "timer_overruns": [],
+        "ignored_lists": [],
+        "premature_matrix_use": {}
+      },
+      "ledger_issues": {
+        "S": [],
+        "P": [],
+        "R": []
+      },
+      "nav": {
+        "PE_zero_tolerance_cycles_m": 0.03,
+        "max_abs_final_echo_PE_cycles_m": 6.865407925378358e-13,
+        "quantization_context": {
+          "conservative_bound_definition": "one integer DAC LSB integrated over all active P-gradient time from first RF centre to final ADC centre; this is reported for context and is not used to accept a residual",
+          "max_DAC_quantization_bound_cycles_m": 13.568834009826961
+        },
+        "shot_final_echoes": [
+          {
+            "shot": 1,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 2,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 3,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 0.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 0.0,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 4,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -6.865407925378358e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 5,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -5.141992767155807e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 6,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.1565952137661584e-13,
+            "active_P_us_before_final_ADC": 17472.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 13.568834009826961,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          }
+        ],
+        "all_imaging_final_echoes_zero_PE": true,
+        "volume_navigator_adc_moments": [
+          {
+            "adc": "ADC1",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC2",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC3",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC4",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC5",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC6",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC7",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC8",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          }
+        ],
+        "volume_navigator_all_zero_PE": true,
+        "all_zero_PE": true
+      },
+      "echo": [
+        {
+          "shot": 1,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11022.320000000182,
+            11022.320000000182,
+            11022.320000000167,
+            11022.320000000036,
+            11022.320000000036,
+            11022.320000000036,
+            11022.320000000036
+          ],
+          "ADC_midpoint_error_us": [
+            -11.52000000004773,
+            -11.52000000004773,
+            -11.520000000033178,
+            -11.519999999989523,
+            -11.519999999960419,
+            -11.519999999989523,
+            -11.519999999960419
+          ],
+          "max_abs_midpoint_error_us": 11.52000000004773
+        },
+        {
+          "shot": 2,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11028.519999999087,
+            11028.519999999087,
+            11028.519999999087,
+            11028.519999999087,
+            11028.519999999087,
+            11028.519999999087,
+            11028.519999999087
+          ],
+          "ADC_midpoint_error_us": [
+            -6.479999999632128,
+            -6.479999999632128,
+            -6.479999999632128,
+            -6.479999999632128,
+            -6.479999999632128,
+            -6.479999999632128,
+            -6.479999999632128
+          ],
+          "max_abs_midpoint_error_us": 6.479999999632128
+        },
+        {
+          "shot": 3,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11022.320000000298,
+            11022.320000000298,
+            11022.320000000298,
+            11022.320000000298,
+            11022.320000000298,
+            11022.320000000298,
+            11022.320000000298
+          ],
+          "ADC_midpoint_error_us": [
+            -11.520000000018626,
+            -11.520000000018626,
+            -11.520000000018626,
+            -11.520000000018626,
+            -11.520000000018626,
+            -11.520000000018626,
+            -11.520000000018626
+          ],
+          "max_abs_midpoint_error_us": 11.520000000018626
+        },
+        {
+          "shot": 4,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11022.319999999832,
+            11022.319999999832,
+            11022.319999999832,
+            11022.319999999832,
+            11022.319999999832,
+            11022.319999999832,
+            11022.319999999832
+          ],
+          "ADC_midpoint_error_us": [
+            -11.520000000484288,
+            -11.520000000949949,
+            -11.520000000484288,
+            -11.520000000949949,
+            -11.520000000484288,
+            -11.520000000949949,
+            -11.520000000484288
+          ],
+          "max_abs_midpoint_error_us": 11.520000000949949
+        },
+        {
+          "shot": 5,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11028.520000000019,
+            11028.520000000019,
+            11028.520000000019,
+            11028.520000000019,
+            11028.520000000019,
+            11028.520000000019,
+            11028.520000000019
+          ],
+          "ADC_midpoint_error_us": [
+            -6.480000000447035,
+            -6.4799999999813735,
+            -6.480000000447035,
+            -6.4799999999813735,
+            -6.480000000447035,
+            -6.4799999999813735,
+            -6.480000000447035
+          ],
+          "max_abs_midpoint_error_us": 6.480000000447035
+        },
+        {
+          "shot": 6,
+          "RF_count": 10,
+          "ADC_count": 9,
+          "ESP_us": [
+            11022.319999999832,
+            11022.319999999832,
+            11022.319999999832,
+            11022.319999999832,
+            11022.319999999832,
+            11022.319999999832,
+            11022.319999999832
+          ],
+          "ADC_midpoint_error_us": [
+            -11.520000000949949,
+            -11.520000000484288,
+            -11.520000000949949,
+            -11.520000000484288,
+            -11.520000000949949,
+            -11.520000000484288,
+            -11.520000000949949
+          ],
+          "max_abs_midpoint_error_us": 11.520000000949949
+        }
+      ],
+      "prints": [],
+      "vars": {
+        "tr_min": 161,
+        "tacq": 3200,
+        "phase_correction": 0
+      }
+    },
+    {
+      "label": "v1912",
+      "model": "flat_0us",
+      "ppl_sha": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423",
+      "rf": 78,
+      "adc": 54,
+      "hazards": {
+        "timer_overruns": [],
+        "ignored_lists": [],
+        "premature_matrix_use": {}
+      },
+      "ledger_issues": {
+        "S": [],
+        "P": [],
+        "R": []
+      },
+      "nav": {
+        "PE_zero_tolerance_cycles_m": 0.03,
+        "max_abs_final_echo_PE_cycles_m": 6.159090237582231e-13,
+        "quantization_context": {
+          "conservative_bound_definition": "one integer DAC LSB integrated over all active P-gradient time from first RF centre to final ADC centre; this is reported for context and is not used to accept a residual",
+          "max_DAC_quantization_bound_cycles_m": 15.671879024628437
+        },
+        "shot_final_echoes": [
+          {
+            "shot": 1,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 2,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 3,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 4,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.4408880831040998e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 5,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.7516678657343954e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 6,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -6.159090237582231e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          }
+        ],
+        "all_imaging_final_echoes_zero_PE": true,
+        "volume_navigator_adc_moments": [
+          {
+            "adc": "ADC1",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC2",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC3",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC4",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC5",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC6",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC7",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC8",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          }
+        ],
+        "volume_navigator_all_zero_PE": true,
+        "all_zero_PE": true
+      },
+      "echo": [
+        {
+          "shot": 1,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9996.5,
+            9996.5,
+            9996.5,
+            9996.5,
+            9996.50000000003,
+            9996.50000000003,
+            9996.50000000003,
+            9996.50000000003
+          ],
+          "ADC_midpoint_error_us": [
+            -3.25,
+            -3.25,
+            -3.25,
+            -3.25,
+            -3.250000000029104,
+            -3.25,
+            -3.250000000029104,
+            -3.25
+          ],
+          "max_abs_midpoint_error_us": 3.250000000029104
+        },
+        {
+          "shot": 2,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9996.499999999884,
+            9996.499999999884,
+            9996.499999999884,
+            9996.499999999884,
+            9996.499999999884,
+            9996.499999999884,
+            9996.499999999884,
+            9996.499999999884
+          ],
+          "ADC_midpoint_error_us": [
+            -3.2499999998835847,
+            -3.25,
+            -3.2499999998835847,
+            -3.25,
+            -3.2499999998835847,
+            -3.25,
+            -3.2499999998835847,
+            -3.25
+          ],
+          "max_abs_midpoint_error_us": 3.25
+        },
+        {
+          "shot": 3,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9996.5,
+            9996.5,
+            9996.5,
+            9996.5,
+            9996.5,
+            9996.5,
+            9996.5,
+            9996.5
+          ],
+          "ADC_midpoint_error_us": [
+            -3.25,
+            -3.25,
+            -3.25,
+            -3.25,
+            -3.25,
+            -3.25,
+            -3.25,
+            -3.25
+          ],
+          "max_abs_midpoint_error_us": 3.25
+        },
+        {
+          "shot": 4,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9996.5,
+            9996.500000000466,
+            9996.500000000466,
+            9996.500000000466,
+            9996.500000000466,
+            9996.500000000466,
+            9996.500000000466,
+            9996.500000000466
+          ],
+          "ADC_midpoint_error_us": [
+            -3.25,
+            -3.2500000004656613,
+            -3.25,
+            -3.2500000004656613,
+            -3.25,
+            -3.2500000004656613,
+            -3.25,
+            -3.2500000004656613
+          ],
+          "max_abs_midpoint_error_us": 3.2500000004656613
+        },
+        {
+          "shot": 5,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9996.500000000466,
+            9996.500000000466,
+            9996.500000000466,
+            9996.500000000466,
+            9996.500000000466,
+            9996.500000000466,
+            9996.500000000466,
+            9996.500000000466
+          ],
+          "ADC_midpoint_error_us": [
+            -3.2500000004656613,
+            -3.25,
+            -3.2500000004656613,
+            -3.25,
+            -3.2500000004656613,
+            -3.25,
+            -3.2500000004656613,
+            -3.25
+          ],
+          "max_abs_midpoint_error_us": 3.2500000004656613
+        },
+        {
+          "shot": 6,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9996.500000000466,
+            9996.500000000466,
+            9996.500000000466,
+            9996.500000000466,
+            9996.500000000466,
+            9996.500000000466,
+            9996.500000000466,
+            9996.500000000466
+          ],
+          "ADC_midpoint_error_us": [
+            -3.25,
+            -3.2500000004656613,
+            -3.25,
+            -3.2500000004656613,
+            -3.25,
+            -3.2500000004656613,
+            -3.25,
+            -3.2500000004656613
+          ],
+          "max_abs_midpoint_error_us": 3.2500000004656613
+        }
+      ],
+      "prints": [],
+      "vars": {
+        "tr_min": 179,
+        "tacq": 3200,
+        "phase_correction": 0
+      }
+    },
+    {
+      "label": "v1912",
+      "model": "flat_0.5us",
+      "ppl_sha": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423",
+      "rf": 78,
+      "adc": 54,
+      "hazards": {
+        "timer_overruns": [],
+        "ignored_lists": [],
+        "premature_matrix_use": {}
+      },
+      "ledger_issues": {
+        "S": [],
+        "P": [],
+        "R": []
+      },
+      "nav": {
+        "PE_zero_tolerance_cycles_m": 0.03,
+        "max_abs_final_echo_PE_cycles_m": 6.159090237582231e-13,
+        "quantization_context": {
+          "conservative_bound_definition": "one integer DAC LSB integrated over all active P-gradient time from first RF centre to final ADC centre; this is reported for context and is not used to accept a residual",
+          "max_DAC_quantization_bound_cycles_m": 15.671879024628437
+        },
+        "shot_final_echoes": [
+          {
+            "shot": 1,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 2,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 3,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 4,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.4408880831040998e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 5,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.7516678657343954e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 6,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -6.159090237582231e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          }
+        ],
+        "all_imaging_final_echoes_zero_PE": true,
+        "volume_navigator_adc_moments": [
+          {
+            "adc": "ADC1",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC2",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC3",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC4",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC5",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC6",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC7",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC8",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          }
+        ],
+        "volume_navigator_all_zero_PE": true,
+        "all_zero_PE": true
+      },
+      "echo": [
+        {
+          "shot": 1,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10000.5,
+            10000.5,
+            10000.5,
+            10000.5,
+            10000.50000000003,
+            10000.50000000003,
+            10000.50000000003,
+            10000.50000000003
+          ],
+          "ADC_midpoint_error_us": [
+            -4.75,
+            -4.75,
+            -4.75,
+            -4.75,
+            -4.750000000029104,
+            -4.75,
+            -4.750000000029104,
+            -4.75
+          ],
+          "max_abs_midpoint_error_us": 4.750000000029104
+        },
+        {
+          "shot": 2,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10000.499999999884,
+            10000.499999999884,
+            10000.499999999884,
+            10000.499999999884,
+            10000.499999999884,
+            10000.499999999884,
+            10000.499999999884,
+            10000.499999999884
+          ],
+          "ADC_midpoint_error_us": [
+            -4.749999999883585,
+            -4.75,
+            -4.749999999883585,
+            -4.75,
+            -4.749999999883585,
+            -4.75,
+            -4.749999999883585,
+            -4.75
+          ],
+          "max_abs_midpoint_error_us": 4.75
+        },
+        {
+          "shot": 3,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10000.5,
+            10000.5,
+            10000.5,
+            10000.5,
+            10000.5,
+            10000.5,
+            10000.5,
+            10000.5
+          ],
+          "ADC_midpoint_error_us": [
+            -4.75,
+            -4.75,
+            -4.75,
+            -4.75,
+            -4.75,
+            -4.75,
+            -4.75,
+            -4.75
+          ],
+          "max_abs_midpoint_error_us": 4.75
+        },
+        {
+          "shot": 4,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10000.5,
+            10000.500000000466,
+            10000.500000000466,
+            10000.500000000466,
+            10000.500000000466,
+            10000.500000000466,
+            10000.500000000466,
+            10000.500000000466
+          ],
+          "ADC_midpoint_error_us": [
+            -4.75,
+            -4.750000000465661,
+            -4.75,
+            -4.750000000465661,
+            -4.75,
+            -4.750000000465661,
+            -4.75,
+            -4.750000000465661
+          ],
+          "max_abs_midpoint_error_us": 4.750000000465661
+        },
+        {
+          "shot": 5,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10000.500000000466,
+            10000.500000000466,
+            10000.500000000466,
+            10000.500000000466,
+            10000.500000000466,
+            10000.500000000466,
+            10000.500000000466,
+            10000.500000000466
+          ],
+          "ADC_midpoint_error_us": [
+            -4.750000000465661,
+            -4.75,
+            -4.750000000465661,
+            -4.75,
+            -4.750000000465661,
+            -4.75,
+            -4.750000000465661,
+            -4.75
+          ],
+          "max_abs_midpoint_error_us": 4.750000000465661
+        },
+        {
+          "shot": 6,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10000.500000000466,
+            10000.500000000466,
+            10000.500000000466,
+            10000.500000000466,
+            10000.500000000466,
+            10000.500000000466,
+            10000.500000000466,
+            10000.500000000466
+          ],
+          "ADC_midpoint_error_us": [
+            -4.75,
+            -4.750000000465661,
+            -4.75,
+            -4.750000000465661,
+            -4.75,
+            -4.750000000465661,
+            -4.75,
+            -4.750000000465661
+          ],
+          "max_abs_midpoint_error_us": 4.750000000465661
+        }
+      ],
+      "prints": [],
+      "vars": {
+        "tr_min": 179,
+        "tacq": 3200,
+        "phase_correction": 0
+      }
+    },
+    {
+      "label": "v1912",
+      "model": "flat_1us",
+      "ppl_sha": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423",
+      "rf": 78,
+      "adc": 54,
+      "hazards": {
+        "timer_overruns": [],
+        "ignored_lists": [],
+        "premature_matrix_use": {}
+      },
+      "ledger_issues": {
+        "S": [],
+        "P": [],
+        "R": []
+      },
+      "nav": {
+        "PE_zero_tolerance_cycles_m": 0.03,
+        "max_abs_final_echo_PE_cycles_m": 6.159090237582231e-13,
+        "quantization_context": {
+          "conservative_bound_definition": "one integer DAC LSB integrated over all active P-gradient time from first RF centre to final ADC centre; this is reported for context and is not used to accept a residual",
+          "max_DAC_quantization_bound_cycles_m": 15.671879024628437
+        },
+        "shot_final_echoes": [
+          {
+            "shot": 1,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 2,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 3,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 4,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.4408880831040998e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 5,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.7516678657343954e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 6,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -6.159090237582231e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          }
+        ],
+        "all_imaging_final_echoes_zero_PE": true,
+        "volume_navigator_adc_moments": [
+          {
+            "adc": "ADC1",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC2",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC3",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC4",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC5",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC6",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC7",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC8",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          }
+        ],
+        "volume_navigator_all_zero_PE": true,
+        "all_zero_PE": true
+      },
+      "echo": [
+        {
+          "shot": 1,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10004.5,
+            10004.5,
+            10004.5,
+            10004.5,
+            10004.50000000003,
+            10004.50000000003,
+            10004.50000000003,
+            10004.50000000003
+          ],
+          "ADC_midpoint_error_us": [
+            -6.25,
+            -6.25,
+            -6.25,
+            -6.25,
+            -6.25,
+            -6.250000000029104,
+            -6.25,
+            -6.250000000029104
+          ],
+          "max_abs_midpoint_error_us": 6.250000000029104
+        },
+        {
+          "shot": 2,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10004.499999999884,
+            10004.499999999884,
+            10004.499999999884,
+            10004.499999999884,
+            10004.499999999884,
+            10004.499999999884,
+            10004.499999999884,
+            10004.499999999884
+          ],
+          "ADC_midpoint_error_us": [
+            -6.249999999883585,
+            -6.25,
+            -6.249999999883585,
+            -6.25,
+            -6.249999999883585,
+            -6.25,
+            -6.249999999883585,
+            -6.25
+          ],
+          "max_abs_midpoint_error_us": 6.25
+        },
+        {
+          "shot": 3,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10004.5,
+            10004.5,
+            10004.5,
+            10004.5,
+            10004.5,
+            10004.5,
+            10004.5,
+            10004.5
+          ],
+          "ADC_midpoint_error_us": [
+            -6.25,
+            -6.25,
+            -6.25,
+            -6.25,
+            -6.25,
+            -6.25,
+            -6.25,
+            -6.25
+          ],
+          "max_abs_midpoint_error_us": 6.25
+        },
+        {
+          "shot": 4,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10004.500000000466,
+            10004.500000000466,
+            10004.500000000466,
+            10004.500000000466,
+            10004.500000000466,
+            10004.500000000466,
+            10004.500000000466,
+            10004.500000000466
+          ],
+          "ADC_midpoint_error_us": [
+            -6.250000000232831,
+            -6.25,
+            -6.250000000465661,
+            -6.25,
+            -6.250000000465661,
+            -6.25,
+            -6.250000000465661,
+            -6.25
+          ],
+          "max_abs_midpoint_error_us": 6.250000000465661
+        },
+        {
+          "shot": 5,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10004.500000000466,
+            10004.500000000466,
+            10004.500000000466,
+            10004.500000000466,
+            10004.500000000466,
+            10004.500000000466,
+            10004.500000000466,
+            10004.500000000466
+          ],
+          "ADC_midpoint_error_us": [
+            -6.25,
+            -6.250000000465661,
+            -6.25,
+            -6.250000000465661,
+            -6.25,
+            -6.250000000465661,
+            -6.25,
+            -6.250000000465661
+          ],
+          "max_abs_midpoint_error_us": 6.250000000465661
+        },
+        {
+          "shot": 6,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10004.500000000466,
+            10004.500000000466,
+            10004.500000000466,
+            10004.500000000466,
+            10004.500000000466,
+            10004.500000000466,
+            10004.500000000466,
+            10004.500000000466
+          ],
+          "ADC_midpoint_error_us": [
+            -6.250000000465661,
+            -6.25,
+            -6.250000000465661,
+            -6.25,
+            -6.250000000465661,
+            -6.25,
+            -6.250000000465661,
+            -6.25
+          ],
+          "max_abs_midpoint_error_us": 6.250000000465661
+        }
+      ],
+      "prints": [],
+      "vars": {
+        "tr_min": 179,
+        "tacq": 3200,
+        "phase_correction": 0
+      }
+    },
+    {
+      "label": "v1912",
+      "model": "flat_2us",
+      "ppl_sha": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423",
+      "rf": 78,
+      "adc": 54,
+      "hazards": {
+        "timer_overruns": [],
+        "ignored_lists": [],
+        "premature_matrix_use": {}
+      },
+      "ledger_issues": {
+        "S": [],
+        "P": [],
+        "R": []
+      },
+      "nav": {
+        "PE_zero_tolerance_cycles_m": 0.03,
+        "max_abs_final_echo_PE_cycles_m": 6.159090237582231e-13,
+        "quantization_context": {
+          "conservative_bound_definition": "one integer DAC LSB integrated over all active P-gradient time from first RF centre to final ADC centre; this is reported for context and is not used to accept a residual",
+          "max_DAC_quantization_bound_cycles_m": 15.671879024628437
+        },
+        "shot_final_echoes": [
+          {
+            "shot": 1,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 2,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 3,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 4,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.4408880831040998e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 5,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.7516678657343954e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 6,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -6.159090237582231e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          }
+        ],
+        "all_imaging_final_echoes_zero_PE": true,
+        "volume_navigator_adc_moments": [
+          {
+            "adc": "ADC1",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC2",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC3",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC4",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC5",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC6",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC7",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC8",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          }
+        ],
+        "volume_navigator_all_zero_PE": true,
+        "all_zero_PE": true
+      },
+      "echo": [
+        {
+          "shot": 1,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10012.5,
+            10012.5,
+            10012.5,
+            10012.5,
+            10012.50000000003,
+            10012.50000000003,
+            10012.50000000003,
+            10012.50000000003
+          ],
+          "ADC_midpoint_error_us": [
+            -9.25,
+            -9.25,
+            -9.25,
+            -9.25,
+            -9.25,
+            -9.250000000029104,
+            -9.25,
+            -9.250000000029104
+          ],
+          "max_abs_midpoint_error_us": 9.250000000029104
+        },
+        {
+          "shot": 2,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10012.499999999884,
+            10012.499999999884,
+            10012.499999999884,
+            10012.499999999884,
+            10012.499999999884,
+            10012.499999999884,
+            10012.499999999884,
+            10012.499999999884
+          ],
+          "ADC_midpoint_error_us": [
+            -9.249999999883585,
+            -9.25,
+            -9.249999999883585,
+            -9.25,
+            -9.249999999883585,
+            -9.25,
+            -9.249999999883585,
+            -9.25
+          ],
+          "max_abs_midpoint_error_us": 9.25
+        },
+        {
+          "shot": 3,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10012.5,
+            10012.5,
+            10012.5,
+            10012.5,
+            10012.5,
+            10012.5,
+            10012.5,
+            10012.5
+          ],
+          "ADC_midpoint_error_us": [
+            -9.25,
+            -9.25,
+            -9.25,
+            -9.25,
+            -9.25,
+            -9.25,
+            -9.25,
+            -9.25
+          ],
+          "max_abs_midpoint_error_us": 9.25
+        },
+        {
+          "shot": 4,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10012.500000000466,
+            10012.500000000466,
+            10012.500000000466,
+            10012.500000000466,
+            10012.500000000466,
+            10012.500000000466,
+            10012.500000000466,
+            10012.500000000466
+          ],
+          "ADC_midpoint_error_us": [
+            -9.250000000465661,
+            -9.25,
+            -9.250000000465661,
+            -9.25,
+            -9.250000000465661,
+            -9.25,
+            -9.250000000465661,
+            -9.25
+          ],
+          "max_abs_midpoint_error_us": 9.250000000465661
+        },
+        {
+          "shot": 5,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10012.500000000466,
+            10012.500000000466,
+            10012.500000000466,
+            10012.500000000466,
+            10012.500000000466,
+            10012.500000000466,
+            10012.500000000466,
+            10012.500000000466
+          ],
+          "ADC_midpoint_error_us": [
+            -9.25,
+            -9.250000000465661,
+            -9.25,
+            -9.250000000465661,
+            -9.25,
+            -9.250000000465661,
+            -9.25,
+            -9.250000000465661
+          ],
+          "max_abs_midpoint_error_us": 9.250000000465661
+        },
+        {
+          "shot": 6,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10012.500000000466,
+            10012.500000000466,
+            10012.500000000466,
+            10012.500000000466,
+            10012.500000000466,
+            10012.500000000466,
+            10012.500000000466,
+            10012.500000000466
+          ],
+          "ADC_midpoint_error_us": [
+            -9.250000000465661,
+            -9.25,
+            -9.250000000465661,
+            -9.25,
+            -9.250000000465661,
+            -9.25,
+            -9.250000000465661,
+            -9.25
+          ],
+          "max_abs_midpoint_error_us": 9.250000000465661
+        }
+      ],
+      "prints": [],
+      "vars": {
+        "tr_min": 179,
+        "tacq": 3200,
+        "phase_correction": 0
+      }
+    },
+    {
+      "label": "v1912",
+      "model": "manual_x0.8",
+      "ppl_sha": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423",
+      "rf": 78,
+      "adc": 54,
+      "hazards": {
+        "timer_overruns": [],
+        "ignored_lists": [],
+        "premature_matrix_use": {}
+      },
+      "ledger_issues": {
+        "S": [],
+        "P": [],
+        "R": []
+      },
+      "nav": {
+        "PE_zero_tolerance_cycles_m": 0.03,
+        "max_abs_final_echo_PE_cycles_m": 6.159090237582231e-13,
+        "quantization_context": {
+          "conservative_bound_definition": "one integer DAC LSB integrated over all active P-gradient time from first RF centre to final ADC centre; this is reported for context and is not used to accept a residual",
+          "max_DAC_quantization_bound_cycles_m": 15.671879024628437
+        },
+        "shot_final_echoes": [
+          {
+            "shot": 1,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 2,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 3,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 4,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.4408880831040998e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 5,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.7516678657343954e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 6,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -6.159090237582231e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          }
+        ],
+        "all_imaging_final_echoes_zero_PE": true,
+        "volume_navigator_adc_moments": [
+          {
+            "adc": "ADC1",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC2",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC3",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC4",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC5",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC6",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC7",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC8",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          }
+        ],
+        "volume_navigator_all_zero_PE": true,
+        "all_zero_PE": true
+      },
+      "echo": [
+        {
+          "shot": 1,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9997.380000000034,
+            9997.380000000034,
+            9997.380000000034,
+            9997.380000000034,
+            9997.380000000034,
+            9997.380000000034,
+            9997.380000000034,
+            9997.380000000034
+          ],
+          "ADC_midpoint_error_us": [
+            -4.329999999987194,
+            -4.330000000016298,
+            -4.329999999987194,
+            -4.330000000016298,
+            -4.329999999987194,
+            -4.330000000016298,
+            -4.329999999987194,
+            -4.330000000016298
+          ],
+          "max_abs_midpoint_error_us": 4.330000000016298
+        },
+        {
+          "shot": 2,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9997.379999999888,
+            9997.379999999888,
+            9997.379999999888,
+            9997.379999999888,
+            9997.379999999888,
+            9997.379999999888,
+            9997.379999999888,
+            9997.379999999888
+          ],
+          "ADC_midpoint_error_us": [
+            -4.3299999999580905,
+            -4.3299999999580905,
+            -4.3299999999580905,
+            -4.3299999999580905,
+            -4.3299999999580905,
+            -4.3299999999580905,
+            -4.3299999999580905,
+            -4.3299999999580905
+          ],
+          "max_abs_midpoint_error_us": 4.3299999999580905
+        },
+        {
+          "shot": 3,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9997.380000000121,
+            9997.380000000121,
+            9997.380000000121,
+            9997.380000000121,
+            9997.380000000121,
+            9997.380000000121,
+            9997.380000000121,
+            9997.380000000121
+          ],
+          "ADC_midpoint_error_us": [
+            -4.329999999841675,
+            -4.330000000074506,
+            -4.329999999841675,
+            -4.330000000074506,
+            -4.329999999841675,
+            -4.330000000074506,
+            -4.329999999841675,
+            -4.330000000074506
+          ],
+          "max_abs_midpoint_error_us": 4.330000000074506
+        },
+        {
+          "shot": 4,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9997.380000000354,
+            9997.380000000354,
+            9997.380000000354,
+            9997.380000000354,
+            9997.380000000354,
+            9997.380000000354,
+            9997.380000000354,
+            9997.380000000354
+          ],
+          "ADC_midpoint_error_us": [
+            -4.330000000074506,
+            -4.330000000540167,
+            -4.330000000074506,
+            -4.330000000540167,
+            -4.330000000074506,
+            -4.330000000540167,
+            -4.330000000074506,
+            -4.330000000540167
+          ],
+          "max_abs_midpoint_error_us": 4.330000000540167
+        },
+        {
+          "shot": 5,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9997.380000000354,
+            9997.380000000354,
+            9997.380000000354,
+            9997.380000000354,
+            9997.380000000354,
+            9997.380000000354,
+            9997.380000000354,
+            9997.380000000354
+          ],
+          "ADC_midpoint_error_us": [
+            -4.330000000074506,
+            -4.330000000540167,
+            -4.330000000074506,
+            -4.330000000540167,
+            -4.330000000074506,
+            -4.330000000540167,
+            -4.330000000074506,
+            -4.330000000540167
+          ],
+          "max_abs_midpoint_error_us": 4.330000000540167
+        },
+        {
+          "shot": 6,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9997.380000000354,
+            9997.380000000354,
+            9997.380000000354,
+            9997.380000000354,
+            9997.380000000354,
+            9997.380000000354,
+            9997.380000000354,
+            9997.380000000354
+          ],
+          "ADC_midpoint_error_us": [
+            -4.330000000540167,
+            -4.330000000074506,
+            -4.330000000540167,
+            -4.330000000074506,
+            -4.330000000540167,
+            -4.330000000074506,
+            -4.330000000540167,
+            -4.330000000074506
+          ],
+          "max_abs_midpoint_error_us": 4.330000000540167
+        }
+      ],
+      "prints": [],
+      "vars": {
+        "tr_min": 179,
+        "tacq": 3200,
+        "phase_correction": 0
+      }
+    },
+    {
+      "label": "v1912",
+      "model": "manual_x0.9",
+      "ppl_sha": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423",
+      "rf": 78,
+      "adc": 54,
+      "hazards": {
+        "timer_overruns": [],
+        "ignored_lists": [],
+        "premature_matrix_use": {}
+      },
+      "ledger_issues": {
+        "S": [],
+        "P": [],
+        "R": []
+      },
+      "nav": {
+        "PE_zero_tolerance_cycles_m": 0.03,
+        "max_abs_final_echo_PE_cycles_m": 6.159090237582231e-13,
+        "quantization_context": {
+          "conservative_bound_definition": "one integer DAC LSB integrated over all active P-gradient time from first RF centre to final ADC centre; this is reported for context and is not used to accept a residual",
+          "max_DAC_quantization_bound_cycles_m": 15.671879024628437
+        },
+        "shot_final_echoes": [
+          {
+            "shot": 1,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 2,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 3,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 4,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.4408880831040998e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 5,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.7516678657343954e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 6,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -6.159090237582231e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          }
+        ],
+        "all_imaging_final_echoes_zero_PE": true,
+        "volume_navigator_adc_moments": [
+          {
+            "adc": "ADC1",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC2",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC3",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC4",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC5",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC6",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC7",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC8",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          }
+        ],
+        "volume_navigator_all_zero_PE": true,
+        "all_zero_PE": true
+      },
+      "echo": [
+        {
+          "shot": 1,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9997.49000000002,
+            9997.49000000002,
+            9997.49000000002,
+            9997.49000000002,
+            9997.49000000002,
+            9997.49000000002,
+            9997.49000000002,
+            9997.49000000002
+          ],
+          "ADC_midpoint_error_us": [
+            -4.465000000025611,
+            -4.4649999999965075,
+            -4.465000000025611,
+            -4.4649999999965075,
+            -4.465000000025611,
+            -4.4649999999965075,
+            -4.465000000025611,
+            -4.4649999999965075
+          ],
+          "max_abs_midpoint_error_us": 4.465000000025611
+        },
+        {
+          "shot": 2,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9997.489999999874,
+            9997.489999999874,
+            9997.489999999874,
+            9997.489999999874,
+            9997.489999999874,
+            9997.489999999874,
+            9997.489999999874,
+            9997.489999999874
+          ],
+          "ADC_midpoint_error_us": [
+            -4.464999999967404,
+            -4.464999999850988,
+            -4.464999999967404,
+            -4.464999999850988,
+            -4.464999999967404,
+            -4.464999999850988,
+            -4.464999999967404,
+            -4.464999999850988
+          ],
+          "max_abs_midpoint_error_us": 4.464999999967404
+        },
+        {
+          "shot": 3,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9997.48999999999,
+            9997.48999999999,
+            9997.48999999999,
+            9997.48999999999,
+            9997.48999999999,
+            9997.48999999999,
+            9997.48999999999,
+            9997.48999999999
+          ],
+          "ADC_midpoint_error_us": [
+            -4.464999999850988,
+            -4.465000000083819,
+            -4.464999999850988,
+            -4.465000000083819,
+            -4.464999999850988,
+            -4.465000000083819,
+            -4.464999999850988,
+            -4.465000000083819
+          ],
+          "max_abs_midpoint_error_us": 4.465000000083819
+        },
+        {
+          "shot": 4,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9997.490000000224,
+            9997.490000000224,
+            9997.490000000224,
+            9997.490000000224,
+            9997.490000000224,
+            9997.490000000224,
+            9997.490000000224,
+            9997.490000000224
+          ],
+          "ADC_midpoint_error_us": [
+            -4.46500000031665,
+            -4.46500000031665,
+            -4.46500000031665,
+            -4.46500000031665,
+            -4.46500000031665,
+            -4.46500000031665,
+            -4.46500000031665,
+            -4.46500000031665
+          ],
+          "max_abs_midpoint_error_us": 4.46500000031665
+        },
+        {
+          "shot": 5,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9997.490000000224,
+            9997.490000000224,
+            9997.490000000224,
+            9997.490000000224,
+            9997.490000000224,
+            9997.490000000224,
+            9997.490000000224,
+            9997.490000000224
+          ],
+          "ADC_midpoint_error_us": [
+            -4.46500000031665,
+            -4.46500000031665,
+            -4.46500000031665,
+            -4.46500000031665,
+            -4.46500000031665,
+            -4.46500000031665,
+            -4.46500000031665,
+            -4.46500000031665
+          ],
+          "max_abs_midpoint_error_us": 4.46500000031665
+        },
+        {
+          "shot": 6,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9997.490000000224,
+            9997.490000000224,
+            9997.490000000224,
+            9997.490000000224,
+            9997.490000000224,
+            9997.490000000224,
+            9997.490000000224,
+            9997.490000000224
+          ],
+          "ADC_midpoint_error_us": [
+            -4.46500000031665,
+            -4.46500000031665,
+            -4.46500000031665,
+            -4.46500000031665,
+            -4.46500000031665,
+            -4.46500000031665,
+            -4.46500000031665,
+            -4.46500000031665
+          ],
+          "max_abs_midpoint_error_us": 4.46500000031665
+        }
+      ],
+      "prints": [],
+      "vars": {
+        "tr_min": 179,
+        "tacq": 3200,
+        "phase_correction": 0
+      }
+    },
+    {
+      "label": "v1912",
+      "model": "manual_x1.0",
+      "ppl_sha": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423",
+      "rf": 78,
+      "adc": 54,
+      "hazards": {
+        "timer_overruns": [],
+        "ignored_lists": [],
+        "premature_matrix_use": {}
+      },
+      "ledger_issues": {
+        "S": [],
+        "P": [],
+        "R": []
+      },
+      "nav": {
+        "PE_zero_tolerance_cycles_m": 0.03,
+        "max_abs_final_echo_PE_cycles_m": 6.159090237582231e-13,
+        "quantization_context": {
+          "conservative_bound_definition": "one integer DAC LSB integrated over all active P-gradient time from first RF centre to final ADC centre; this is reported for context and is not used to accept a residual",
+          "max_DAC_quantization_bound_cycles_m": 15.671879024628437
+        },
+        "shot_final_echoes": [
+          {
+            "shot": 1,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 2,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 3,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 4,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.4408880831040998e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 5,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.7516678657343954e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 6,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -6.159090237582231e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          }
+        ],
+        "all_imaging_final_echoes_zero_PE": true,
+        "volume_navigator_adc_moments": [
+          {
+            "adc": "ADC1",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC2",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC3",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC4",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC5",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC6",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC7",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC8",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          }
+        ],
+        "volume_navigator_all_zero_PE": true,
+        "all_zero_PE": true
+      },
+      "echo": [
+        {
+          "shot": 1,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9997.600000000035,
+            9997.600000000035,
+            9997.600000000035,
+            9997.600000000035,
+            9997.600000000035,
+            9997.600000000035,
+            9997.600000000035,
+            9997.600000000035
+          ],
+          "ADC_midpoint_error_us": [
+            -4.600000000034925,
+            -4.600000000034925,
+            -4.600000000034925,
+            -4.600000000034925,
+            -4.600000000034925,
+            -4.600000000034925,
+            -4.600000000034925,
+            -4.600000000034925
+          ],
+          "max_abs_midpoint_error_us": 4.600000000034925
+        },
+        {
+          "shot": 2,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9997.59999999986,
+            9997.59999999986,
+            9997.59999999986,
+            9997.59999999986,
+            9997.59999999986,
+            9997.59999999986,
+            9997.59999999986,
+            9997.59999999986
+          ],
+          "ADC_midpoint_error_us": [
+            -4.599999999860302,
+            -4.599999999860302,
+            -4.599999999860302,
+            -4.599999999860302,
+            -4.599999999860302,
+            -4.599999999860302,
+            -4.599999999860302,
+            -4.599999999860302
+          ],
+          "max_abs_midpoint_error_us": 4.599999999860302
+        },
+        {
+          "shot": 3,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9997.59999999986,
+            9997.59999999986,
+            9997.59999999986,
+            9997.59999999986,
+            9997.59999999986,
+            9997.59999999986,
+            9997.59999999986,
+            9997.59999999986
+          ],
+          "ADC_midpoint_error_us": [
+            -4.599999999860302,
+            -4.600000000093132,
+            -4.599999999860302,
+            -4.600000000093132,
+            -4.599999999860302,
+            -4.600000000093132,
+            -4.599999999860302,
+            -4.600000000093132
+          ],
+          "max_abs_midpoint_error_us": 4.600000000093132
+        },
+        {
+          "shot": 4,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9997.600000000559,
+            9997.600000000559,
+            9997.600000000559,
+            9997.600000000559,
+            9997.600000000559,
+            9997.600000000559,
+            9997.600000000559,
+            9997.600000000559
+          ],
+          "ADC_midpoint_error_us": [
+            -4.6000000005587935,
+            -4.6000000005587935,
+            -4.6000000005587935,
+            -4.6000000005587935,
+            -4.6000000005587935,
+            -4.6000000005587935,
+            -4.6000000005587935,
+            -4.6000000005587935
+          ],
+          "max_abs_midpoint_error_us": 4.6000000005587935
+        },
+        {
+          "shot": 5,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9997.600000000559,
+            9997.600000000559,
+            9997.600000000559,
+            9997.600000000559,
+            9997.600000000559,
+            9997.600000000559,
+            9997.600000000559,
+            9997.600000000559
+          ],
+          "ADC_midpoint_error_us": [
+            -4.6000000005587935,
+            -4.6000000005587935,
+            -4.6000000005587935,
+            -4.6000000005587935,
+            -4.6000000005587935,
+            -4.6000000005587935,
+            -4.6000000005587935,
+            -4.6000000005587935
+          ],
+          "max_abs_midpoint_error_us": 4.6000000005587935
+        },
+        {
+          "shot": 6,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            9997.600000000559,
+            9997.600000000559,
+            9997.600000000559,
+            9997.600000000559,
+            9997.600000000559,
+            9997.600000000559,
+            9997.600000000559,
+            9997.600000000559
+          ],
+          "ADC_midpoint_error_us": [
+            -4.6000000005587935,
+            -4.6000000005587935,
+            -4.6000000005587935,
+            -4.6000000005587935,
+            -4.6000000005587935,
+            -4.6000000005587935,
+            -4.6000000005587935,
+            -4.6000000005587935
+          ],
+          "max_abs_midpoint_error_us": 4.6000000005587935
+        }
+      ],
+      "prints": [],
+      "vars": {
+        "tr_min": 179,
+        "tacq": 3200,
+        "phase_correction": 0
+      }
+    },
+    {
+      "label": "v1912",
+      "model": "manual_x0.8_plus_0.5us_stmt",
+      "ppl_sha": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423",
+      "rf": 78,
+      "adc": 54,
+      "hazards": {
+        "timer_overruns": [],
+        "ignored_lists": [],
+        "premature_matrix_use": {}
+      },
+      "ledger_issues": {
+        "S": [],
+        "P": [],
+        "R": []
+      },
+      "nav": {
+        "PE_zero_tolerance_cycles_m": 0.03,
+        "max_abs_final_echo_PE_cycles_m": 6.159090237582231e-13,
+        "quantization_context": {
+          "conservative_bound_definition": "one integer DAC LSB integrated over all active P-gradient time from first RF centre to final ADC centre; this is reported for context and is not used to accept a residual",
+          "max_DAC_quantization_bound_cycles_m": 15.671879024628437
+        },
+        "shot_final_echoes": [
+          {
+            "shot": 1,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 2,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 3,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "active_P_us_before_final_ADC": 2708.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 2.103045014801477,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 4,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.4408880831040998e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 5,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": 1.7516678657343954e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          },
+          {
+            "shot": 6,
+            "final_adc": "ADC9",
+            "PE_k_cycles_m": -6.159090237582231e-13,
+            "active_P_us_before_final_ADC": 20180.0,
+            "one_DAC_LSB_over_active_P_us_bound_cycles_m": 15.671879024628437,
+            "selected_branch": "carrier",
+            "zero_PE": true
+          }
+        ],
+        "all_imaging_final_echoes_zero_PE": true,
+        "volume_navigator_adc_moments": [
+          {
+            "adc": "ADC1",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC2",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC3",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC4",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC5",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC6",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC7",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC8",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          },
+          {
+            "adc": "ADC9",
+            "PE_k_cycles_m": 0.0,
+            "zero_PE": true
+          }
+        ],
+        "volume_navigator_all_zero_PE": true,
+        "all_zero_PE": true
+      },
+      "echo": [
+        {
+          "shot": 1,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10001.380000000034,
+            10001.380000000034,
+            10001.380000000034,
+            10001.380000000034,
+            10001.380000000034,
+            10001.380000000034,
+            10001.380000000034,
+            10001.380000000034
+          ],
+          "ADC_midpoint_error_us": [
+            -5.829999999987194,
+            -5.830000000016298,
+            -5.829999999987194,
+            -5.830000000016298,
+            -5.829999999987194,
+            -5.830000000016298,
+            -5.829999999987194,
+            -5.830000000016298
+          ],
+          "max_abs_midpoint_error_us": 5.830000000016298
+        },
+        {
+          "shot": 2,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10001.379999999888,
+            10001.379999999888,
+            10001.379999999888,
+            10001.379999999888,
+            10001.379999999888,
+            10001.379999999888,
+            10001.379999999888,
+            10001.379999999888
+          ],
+          "ADC_midpoint_error_us": [
+            -5.8299999999580905,
+            -5.8299999999580905,
+            -5.8299999999580905,
+            -5.8299999999580905,
+            -5.8299999999580905,
+            -5.8299999999580905,
+            -5.8299999999580905,
+            -5.8299999999580905
+          ],
+          "max_abs_midpoint_error_us": 5.8299999999580905
+        },
+        {
+          "shot": 3,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10001.380000000121,
+            10001.380000000121,
+            10001.380000000121,
+            10001.380000000121,
+            10001.380000000121,
+            10001.380000000121,
+            10001.380000000121,
+            10001.380000000121
+          ],
+          "ADC_midpoint_error_us": [
+            -5.829999999841675,
+            -5.830000000074506,
+            -5.829999999841675,
+            -5.830000000074506,
+            -5.829999999841675,
+            -5.830000000074506,
+            -5.829999999841675,
+            -5.830000000074506
+          ],
+          "max_abs_midpoint_error_us": 5.830000000074506
+        },
+        {
+          "shot": 4,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10001.380000000354,
+            10001.380000000354,
+            10001.380000000354,
+            10001.380000000354,
+            10001.380000000354,
+            10001.380000000354,
+            10001.380000000354,
+            10001.380000000354
+          ],
+          "ADC_midpoint_error_us": [
+            -5.830000000540167,
+            -5.830000000074506,
+            -5.830000000540167,
+            -5.830000000074506,
+            -5.830000000540167,
+            -5.830000000074506,
+            -5.830000000540167,
+            -5.830000000074506
+          ],
+          "max_abs_midpoint_error_us": 5.830000000540167
+        },
+        {
+          "shot": 5,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10001.380000000354,
+            10001.380000000354,
+            10001.380000000354,
+            10001.380000000354,
+            10001.380000000354,
+            10001.380000000354,
+            10001.380000000354,
+            10001.380000000354
+          ],
+          "ADC_midpoint_error_us": [
+            -5.830000000540167,
+            -5.830000000074506,
+            -5.830000000540167,
+            -5.830000000074506,
+            -5.830000000540167,
+            -5.830000000074506,
+            -5.830000000540167,
+            -5.830000000074506
+          ],
+          "max_abs_midpoint_error_us": 5.830000000540167
+        },
+        {
+          "shot": 6,
+          "RF_count": 13,
+          "ADC_count": 9,
+          "ESP_us": [
+            10001.380000000354,
+            10001.380000000354,
+            10001.380000000354,
+            10001.380000000354,
+            10001.380000000354,
+            10001.380000000354,
+            10001.380000000354,
+            10001.380000000354
+          ],
+          "ADC_midpoint_error_us": [
+            -5.830000000074506,
+            -5.830000000540167,
+            -5.830000000074506,
+            -5.830000000540167,
+            -5.830000000074506,
+            -5.830000000540167,
+            -5.830000000074506,
+            -5.830000000540167
+          ],
+          "max_abs_midpoint_error_us": 5.830000000540167
+        }
+      ],
+      "prints": [],
+      "vars": {
+        "tr_min": 179,
+        "tacq": 3200,
+        "phase_correction": 0
+      }
+    }
+  ]
+}

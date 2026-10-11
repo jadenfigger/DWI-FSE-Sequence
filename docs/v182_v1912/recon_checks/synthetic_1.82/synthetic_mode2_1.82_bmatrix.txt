@@ -1,0 +1,2 @@
+# logical x=read, y=phase, z=slice; s/mm^2; columns bxx byy bzz bxy bxz byz
+0.223564962 0.0086709613 3.77140967 0.0383808245 0.00479780206 0.000558329336

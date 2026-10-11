@@ -1,0 +1,157 @@
+[
+  {
+    "Mode": "constant+linear",
+    "ReferenceShot": 10,
+    "MinimumSNR": 3.0,
+    "MinimumCoherence": 0.65,
+    "Estimates": [
+      {
+        "shot": 0,
+        "constant_rad": 1.4874801007605272,
+        "linear_rad_per_voxel": -0.009155608719408143,
+        "navigator_snr": 21766643.430494078,
+        "coherence": 0.9999999847204765,
+        "applied": true,
+        "disposition": "applied"
+      },
+      {
+        "shot": 1,
+        "constant_rad": 0.3434459056421533,
+        "linear_rad_per_voxel": -0.005636899733338384,
+        "navigator_snr": 22786361.383290853,
+        "coherence": 0.9999999773863072,
+        "applied": true,
+        "disposition": "applied"
+      },
+      {
+        "shot": 2,
+        "constant_rad": 3.347219789902915,
+        "linear_rad_per_voxel": 0.01495737552323518,
+        "navigator_snr": 17208042.401321866,
+        "coherence": 1.0000000133313773,
+        "applied": true,
+        "disposition": "applied"
+      },
+      {
+        "shot": 3,
+        "constant_rad": 0.4994503214819834,
+        "linear_rad_per_voxel": 0.005214649027016223,
+        "navigator_snr": 11804617.957019605,
+        "coherence": 0.9999999521750952,
+        "applied": true,
+        "disposition": "applied"
+      },
+      {
+        "shot": 4,
+        "constant_rad": 2.4831082424824564,
+        "linear_rad_per_voxel": 0.01325550744326476,
+        "navigator_snr": 17208040.37394169,
+        "coherence": 0.9999999718856762,
+        "applied": true,
+        "disposition": "applied"
+      },
+      {
+        "shot": 5,
+        "constant_rad": 2.669626078907613,
+        "linear_rad_per_voxel": 0.0038516640370407714,
+        "navigator_snr": 17208039.698148243,
+        "coherence": 0.9999999775772977,
+        "applied": true,
+        "disposition": "applied"
+      },
+      {
+        "shot": 6,
+        "constant_rad": 1.1190437695056208,
+        "linear_rad_per_voxel": 0.01400407878401284,
+        "navigator_snr": 17208042.401321866,
+        "coherence": 0.9999999961801173,
+        "applied": true,
+        "disposition": "applied"
+      },
+      {
+        "shot": 7,
+        "constant_rad": 3.337924493625694,
+        "linear_rad_per_voxel": 0.031102347916423002,
+        "navigator_snr": 17208041.725528497,
+        "coherence": 0.9999999714272879,
+        "applied": true,
+        "disposition": "applied"
+      },
+      {
+        "shot": 8,
+        "constant_rad": 1.5393840177588145,
+        "linear_rad_per_voxel": 0.012261893574273127,
+        "navigator_snr": 14675065.701851469,
+        "coherence": 0.9999999643223149,
+        "applied": true,
+        "disposition": "applied"
+      },
+      {
+        "shot": 9,
+        "constant_rad": 2.419482693333699,
+        "linear_rad_per_voxel": -0.008901814981433914,
+        "navigator_snr": 19044881.60259266,
+        "coherence": 0.9999999978226642,
+        "applied": true,
+        "disposition": "applied"
+      },
+      {
+        "shot": 10,
+        "constant_rad": 2.1885928045710636e-09,
+        "linear_rad_per_voxel": -1.3193973313442906e-11,
+        "navigator_snr": 24335845.264859803,
+        "coherence": 0.9999999933534082,
+        "applied": true,
+        "disposition": "applied"
+      },
+      {
+        "shot": 11,
+        "constant_rad": 1.7341829860277211,
+        "linear_rad_per_voxel": 0.025676084981960525,
+        "navigator_snr": 20857633.24982743,
+        "coherence": 0.9999999959891228,
+        "applied": true,
+        "disposition": "applied"
+      },
+      {
+        "shot": 12,
+        "constant_rad": 1.2564954431734645,
+        "linear_rad_per_voxel": 0.017713982827797563,
+        "navigator_snr": 17208041.049735107,
+        "coherence": 0.9999999302107887,
+        "applied": true,
+        "disposition": "applied"
+      },
+      {
+        "shot": 13,
+        "constant_rad": -2.9375174256793763,
+        "linear_rad_per_voxel": -0.01271292989288478,
+        "navigator_snr": 22944054.950251862,
+        "coherence": 0.9999999685241776,
+        "applied": true,
+        "disposition": "applied"
+      },
+      {
+        "shot": 14,
+        "constant_rad": 2.8119608239169476,
+        "linear_rad_per_voxel": 0.028311675818097612,
+        "navigator_snr": 21766640.86603864,
+        "coherence": 0.9999999704723189,
+        "applied": true,
+        "disposition": "applied"
+      },
+      {
+        "shot": 15,
+        "constant_rad": 0.2919929909903231,
+        "linear_rad_per_voxel": 0.015327336281513332,
+        "navigator_snr": 12781811.125486165,
+        "coherence": 0.9999999931624125,
+        "applied": true,
+        "disposition": "applied"
+      }
+    ],
+    "Units": "constant_rad; linear_rad_per_voxel at x-(samples-1)/2",
+    "Experiment": 1,
+    "Slice": 1
+  }
+]

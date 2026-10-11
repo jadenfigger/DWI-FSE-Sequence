@@ -1,0 +1,420 @@
+{
+  "reference": [
+    {
+      "version": "1.8",
+      "nominal": 0,
+      "actual": 12.026913001059668,
+      "expected": 12.026913001060034,
+      "delta": -3.659295089164516e-13
+    },
+    {
+      "version": "1.8",
+      "nominal": 100,
+      "actual": 165.0299645882039,
+      "expected": 165.02996458820832,
+      "delta": -4.405364961712621e-12
+    },
+    {
+      "version": "1.8",
+      "nominal": 1000,
+      "actual": 1175.932484019214,
+      "expected": 1175.9324840192198,
+      "delta": -5.9117155615240335e-12
+    },
+    {
+      "version": "1.8",
+      "nominal": 6000,
+      "actual": 6398.156308876452,
+      "expected": 6398.156308876456,
+      "delta": -3.637978807091713e-12
+    },
+    {
+      "version": "1.81",
+      "nominal": 0,
+      "actual": 4.003645594495885,
+      "expected": 4.003645594496319,
+      "delta": -4.3431924723336124e-13
+    },
+    {
+      "version": "1.81",
+      "nominal": 100,
+      "actual": 104.04850578634951,
+      "expected": 104.04850578634964,
+      "delta": -1.2789769243681803e-13
+    },
+    {
+      "version": "1.81",
+      "nominal": 1000,
+      "actual": 1000.7103148784777,
+      "expected": 1000.7103148784739,
+      "delta": 3.751665644813329e-12
+    },
+    {
+      "version": "1.81",
+      "nominal": 6000,
+      "actual": 5980.673819913192,
+      "expected": 5980.673819913218,
+      "delta": -2.546585164964199e-11
+    },
+    {
+      "version": "1.91",
+      "nominal": 0,
+      "actual": 20.303979689897282,
+      "expected": 20.303979689897183,
+      "delta": 9.947598300641403e-14
+    },
+    {
+      "version": "1.91",
+      "nominal": 100,
+      "actual": 120.10157331445052,
+      "expected": 120.10157331445149,
+      "delta": -9.663381206337363e-13
+    },
+    {
+      "version": "1.91",
+      "nominal": 1000,
+      "actual": 1014.5472317004072,
+      "expected": 1014.5472317003868,
+      "delta": 2.0463630789890885e-11
+    },
+    {
+      "version": "1.91",
+      "nominal": 6000,
+      "actual": 5982.202473433876,
+      "expected": 5982.2024734340575,
+      "delta": -1.8189894035458565e-10
+    },
+    {
+      "version": "1.911",
+      "nominal": 0,
+      "actual": 20.435806925611423,
+      "expected": 20.435806925611587,
+      "delta": -1.6342482922482304e-13
+    },
+    {
+      "version": "1.911",
+      "nominal": 100,
+      "actual": 120.23340055016446,
+      "expected": 120.2334005501657,
+      "delta": -1.2363443602225743e-12
+    },
+    {
+      "version": "1.911",
+      "nominal": 1000,
+      "actual": 1014.6790589361202,
+      "expected": 1014.679058936101,
+      "delta": 1.921307557495311e-11
+    },
+    {
+      "version": "1.911",
+      "nominal": 6000,
+      "actual": 5982.334300669588,
+      "expected": 5982.334300669755,
+      "delta": -1.673470251262188e-10
+    },
+    {
+      "version": "1.8",
+      "direction": "-X(read)",
+      "nominal": 1000,
+      "actual": 841.4939747926909,
+      "expected": 841.4955247348629,
+      "delta": -0.0015499421720051032
+    },
+    {
+      "version": "1.8",
+      "direction": "+Y(phase)",
+      "nominal": 1000,
+      "actual": 1008.7132294059487,
+      "expected": 1008.7147793481214,
+      "delta": -0.0015499421726872242
+    },
+    {
+      "version": "1.8",
+      "direction": "+Z(slice)",
+      "nominal": 1000,
+      "actual": 1045.7288211548114,
+      "expected": 1045.730412310071,
+      "delta": -0.0015911552595753164
+    },
+    {
+      "version": "1.81",
+      "direction": "-X(read)",
+      "nominal": 1000,
+      "actual": 1000.7103148784777,
+      "expected": 1000.7118648206515,
+      "delta": -0.0015499421738240926
+    },
+    {
+      "version": "1.81",
+      "direction": "+Y(phase)",
+      "nominal": 1000,
+      "actual": 1000.7103148784762,
+      "expected": 1000.7118648206489,
+      "delta": -0.0015499421726872242
+    },
+    {
+      "version": "1.81",
+      "direction": "+Z(slice)",
+      "nominal": 1000,
+      "actual": 1037.7259066273389,
+      "expected": 1037.7274977825982,
+      "delta": -0.0015911552593479428
+    }
+  ],
+  "archived": {
+    "A": {
+      "image_bit_identical_legacy": true,
+      "sorted_kspace_bit_identical_legacy": true,
+      "archived_nifti_max_difference": 3.5762786865234375e-07,
+      "runtime_seconds": 0.07514950004406273,
+      "effective_b": [
+        4.0036455944963905,
+        104.04850578635013,
+        502.599022776535,
+        1000.7103148784798,
+        1996.6695278585444,
+        2992.6406565518723,
+        5980.6738199132005
+      ]
+    },
+    "C": {
+      "image_bit_identical_legacy": true,
+      "sorted_kspace_bit_identical_legacy": true,
+      "archived_nifti_max_difference": 3.5762786865234375e-07,
+      "runtime_seconds": 0.07187109999358654,
+      "effective_b": [
+        12.026913001060194,
+        165.02996458820473,
+        628.8725177029476,
+        1175.9324840192162,
+        2241.1118387884258,
+        3290.2039819097995,
+        6398.156308876462
+      ]
+    },
+    "B": {
+      "image_bit_identical_legacy": true,
+      "sorted_kspace_bit_identical_legacy": true,
+      "archived_nifti_max_difference": 1.7881393432617188e-07,
+      "runtime_seconds": 0.0664847000152804,
+      "effective_b": [
+        20.435806925611328,
+        120.23340055016438,
+        517.7988772489881,
+        1014.6790589361201,
+        2008.1767020234904,
+        3001.686231373757,
+        5982.334300669589
+      ]
+    },
+    "D": {
+      "image_bit_identical_legacy": true,
+      "sorted_kspace_bit_identical_legacy": true,
+      "archived_nifti_max_difference": 1.4901161193847656e-07,
+      "runtime_seconds": 0.06738639995455742,
+      "effective_b": [
+        20.303979689897194,
+        120.10157331445039,
+        517.667050013273,
+        1014.5472317004076,
+        2008.0448747877776,
+        3001.5544041380435,
+        5982.202473433873
+      ]
+    },
+    "E": {
+      "image_bit_identical_legacy": true,
+      "sorted_kspace_bit_identical_legacy": true,
+      "archived_nifti_max_difference": 4.76837158203125e-07,
+      "runtime_seconds": 0.07736580003984272,
+      "effective_b": [
+        4.0036455944963905,
+        1000.7103148784798,
+        1000.7103148784798,
+        1000.7103148784784,
+        1037.7259066273664,
+        2992.6406565518732,
+        2992.6406565518746,
+        3056.737640949495
+      ]
+    }
+  },
+  "synthetic": {
+    "relative_complex_kspace_error": 9.355597505184269e-08,
+    "tolerance": 2e-06,
+    "recovered_relative_to_reference": true,
+    "noise_fallback_all_shots": true,
+    "raw_views": 153,
+    "imaging_views": 128,
+    "qa": {
+      "Mode": "constant+linear",
+      "ReferenceShot": 5,
+      "MinimumSNR": 3.0,
+      "MinimumCoherence": 0.65,
+      "Estimates": [
+        {
+          "shot": 0,
+          "constant_rad": -1.1821459841406625,
+          "linear_rad_per_voxel": -0.013007272538732842,
+          "navigator_snr": 6532603859128114.0,
+          "coherence": 0.9999999999999999,
+          "applied": true,
+          "disposition": "applied"
+        },
+        {
+          "shot": 1,
+          "constant_rad": -2.326180190800312,
+          "linear_rad_per_voxel": -0.009488562988215758,
+          "navigator_snr": 7790584692846893.0,
+          "coherence": 1.0,
+          "applied": true,
+          "disposition": "applied"
+        },
+        {
+          "shot": 2,
+          "constant_rad": 0.6775935639488259,
+          "linear_rad_per_voxel": 0.011105709159708708,
+          "navigator_snr": 9238496975189796.0,
+          "coherence": 0.9999999999999999,
+          "applied": true,
+          "disposition": "applied"
+        },
+        {
+          "shot": 3,
+          "constant_rad": -2.170175775568389,
+          "linear_rad_per_voxel": 0.001362985380849558,
+          "navigator_snr": 6994878550084926.0,
+          "coherence": 0.9999999999999999,
+          "applied": true,
+          "disposition": "applied"
+        },
+        {
+          "shot": 4,
+          "constant_rad": -0.18651785768998902,
+          "linear_rad_per_voxel": 0.0094038435289947,
+          "navigator_snr": 6337556640353592.0,
+          "coherence": 1.0,
+          "applied": true,
+          "disposition": "applied"
+        },
+        {
+          "shot": 5,
+          "constant_rad": 1.097392528518038e-18,
+          "linear_rad_per_voxel": -8.419568848690257e-20,
+          "navigator_snr": 9789350539429136.0,
+          "coherence": 1.0,
+          "applied": true,
+          "disposition": "applied"
+        },
+        {
+          "shot": 6,
+          "constant_rad": -1.550582341425438,
+          "linear_rad_per_voxel": 0.01015241488254936,
+          "navigator_snr": 6532603859128114.0,
+          "coherence": 0.9999999999999999,
+          "applied": true,
+          "disposition": "applied"
+        },
+        {
+          "shot": 7,
+          "constant_rad": 0.6682982844293484,
+          "linear_rad_per_voxel": 0.027250679430129578,
+          "navigator_snr": 6862183280222162.0,
+          "coherence": 1.0,
+          "applied": true,
+          "disposition": "applied"
+        },
+        {
+          "shot": 8,
+          "constant_rad": -1.1302420641555297,
+          "linear_rad_per_voxel": 0.00841022977303848,
+          "navigator_snr": 6532603859128113.0,
+          "coherence": 1.0,
+          "applied": true,
+          "disposition": "applied"
+        },
+        {
+          "shot": 9,
+          "constant_rad": -0.2501433962241712,
+          "linear_rad_per_voxel": -0.012753478668867743,
+          "navigator_snr": 9238496975189796.0,
+          "coherence": 1.0000000000000002,
+          "applied": true,
+          "disposition": "applied"
+        },
+        {
+          "shot": 10,
+          "constant_rad": -2.669626102996198,
+          "linear_rad_per_voxel": -0.003851664438685277,
+          "navigator_snr": 8161770556864506.0,
+          "coherence": 0.9999999999999999,
+          "applied": true,
+          "disposition": "applied"
+        },
+        {
+          "shot": 11,
+          "constant_rad": -0.9354431316249721,
+          "linear_rad_per_voxel": 0.02182442037445864,
+          "navigator_snr": 5842938519635167.0,
+          "coherence": 0.9999999999999999,
+          "applied": true,
+          "disposition": "applied"
+        },
+        {
+          "shot": 12,
+          "constant_rad": -1.4131306559955752,
+          "linear_rad_per_voxel": 0.013862319017126434,
+          "navigator_snr": 7663900076147974.0,
+          "coherence": 0.9999999999999999,
+          "applied": true,
+          "disposition": "applied"
+        },
+        {
+          "shot": 13,
+          "constant_rad": 0.6760417161166161,
+          "linear_rad_per_voxel": -0.016564598047407335,
+          "navigator_snr": 6532603859128113.0,
+          "coherence": 1.0000000000000002,
+          "applied": true,
+          "disposition": "applied"
+        },
+        {
+          "shot": 14,
+          "constant_rad": 0.1423346440126832,
+          "linear_rad_per_voxel": 0.024460009773080993,
+          "navigator_snr": 6532603859128115.0,
+          "coherence": 0.9999999999999997,
+          "applied": true,
+          "disposition": "applied"
+        },
+        {
+          "shot": 15,
+          "constant_rad": -2.3776331041139853,
+          "linear_rad_per_voxel": 0.011475672137985152,
+          "navigator_snr": 6482158286747156.0,
+          "coherence": 0.9999999999999999,
+          "applied": true,
+          "disposition": "applied"
+        }
+      ],
+      "Units": "constant_rad; linear_rad_per_voxel at x-(samples-1)/2"
+    },
+    "end_to_end_mode2_error": {
+      "1.82": 1.1785558484689318e-07,
+      "1.912": 1.1785558484689318e-07
+    },
+    "absent_nav_bit_identical": true,
+    "end_to_end_image_error": {
+      "1.82": 1.7491082663129763e-07,
+      "1.912": 1.7491082663129763e-07
+    },
+    "unknown_nav_rejected": true
+  },
+  "effective_b_ADC_echoes2to8_mm2_s": {
+    "A": 0.0018535015456843326,
+    "C": 0.001855005883892719,
+    "B": 0.0018449852705756937,
+    "D": 0.0018607984701752348
+  },
+  "calibration_test": "artificial factors verify mechanics only; no scanner calibration asserted"
+}

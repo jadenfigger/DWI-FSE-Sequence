@@ -1,0 +1,17 @@
+[
+  {
+    "esp": 13,
+    "dwell": 50,
+    "max_S_error_fraction_of_D": 0.0
+  },
+  {
+    "esp": 10,
+    "dwell": 25,
+    "max_S_error_fraction_of_D": 0.0
+  },
+  {
+    "esp": 11,
+    "dwell": 25,
+    "max_S_error_fraction_of_D": 0.0
+  }
+]

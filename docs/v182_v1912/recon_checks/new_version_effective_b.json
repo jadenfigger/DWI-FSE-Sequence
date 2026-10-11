@@ -1,0 +1,282 @@
+{
+  "mode2": {
+    "1.82": {
+      "EffectiveBValue": [
+        1000.797462226412
+      ],
+      "BMatrix": [
+        [
+          997.0126598907511,
+          0.0075032655928367635,
+          3.7772990700679743,
+          0.03570309251178819,
+          18.64846975767869,
+          0.0006382474534556157
+        ]
+      ],
+      "BMatrixEcho": 1,
+      "BMatrixSource": "event-model-primary-pathway",
+      "BMatrixWarnings": [
+        "Source model only: instantaneous RF primary pathway, assumed RF latency 3 us, gradient delay=rfdelay; mixed FSE pathways and measured gradient calibration are not modelled.",
+        "BMatrixEcho is the echo containing the k-space centre (centric: 1; reverse-centric: ETL; linear: ETL/2+1), represented by the first imaging shot; shot-dependent phase-encode b terms are not a volume average."
+      ],
+      "BMatrixAxes": "logical x=read, y=phase, z=slice; s/mm^2; columns bxx byy bzz bxy bxz byz",
+      "BMatrixCalibrationApplied": false,
+      "BMatrixModel": {
+        "CacheKey": "d787048dfda889a0a4c0213acd6f09bf88561456be2a27535333d76fc2de4dc6",
+        "CacheHit": true,
+        "Hashes": {
+          "PPL": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
+          "Protocol": "f07a50d78788dcd90847822ac81328eb3ff6f9c0f24a13621bfd124790a3c4a3"
+        },
+        "PPL": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.82.ppl",
+        "Branches": [
+          "primary"
+        ],
+        "ModelRevision": "primary-pwc-rf3us-gradient-rfdelay-v3-acquired-nav2-hazard-gated",
+        "RepresentativeImagingShotIndex": [
+          2
+        ]
+      }
+    },
+    "1.82_PE7": {
+      "EffectiveBValue": [
+        1013.1057952051425
+      ],
+      "BMatrix": [
+        [
+          1003.1149199627902,
+          1.7994945292832756,
+          8.191380713069053,
+          -0.021358713095758534,
+          21.859103897082925,
+          0.014653045449479447
+        ]
+      ],
+      "BMatrixEcho": 5,
+      "BMatrixSource": "event-model-primary-pathway",
+      "BMatrixWarnings": [
+        "Source model only: instantaneous RF primary pathway, assumed RF latency 3 us, gradient delay=rfdelay; mixed FSE pathways and measured gradient calibration are not modelled.",
+        "BMatrixEcho is the echo containing the k-space centre (centric: 1; reverse-centric: ETL; linear: ETL/2+1), represented by the first imaging shot; shot-dependent phase-encode b terms are not a volume average."
+      ],
+      "BMatrixAxes": "logical x=read, y=phase, z=slice; s/mm^2; columns bxx byy bzz bxy bxz byz",
+      "BMatrixCalibrationApplied": false,
+      "BMatrixModel": {
+        "CacheKey": "c93b0444b5a19de9f74e5e19f45cecd3bd2e0ac917b83d2a9536324ef20953a2",
+        "CacheHit": true,
+        "Hashes": {
+          "PPL": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
+          "Protocol": "a3135d980cabd18ba4081e4175af241022d580fa5d1cd659b3f16a88f1246eee"
+        },
+        "PPL": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.82.ppl",
+        "Branches": [
+          "primary"
+        ],
+        "ModelRevision": "primary-pwc-rf3us-gradient-rfdelay-v3-acquired-nav2-hazard-gated",
+        "RepresentativeImagingShotIndex": [
+          2
+        ]
+      }
+    },
+    "1.912": {
+      "EffectiveBValue": [
+        1014.6778922546507
+      ],
+      "BMatrix": [
+        [
+          995.755281160913,
+          0.007496748431543111,
+          18.91511434530618,
+          0.03850823292965674,
+          29.28922086835034,
+          -0.00320405585117257
+        ]
+      ],
+      "BMatrixEcho": 1,
+      "BMatrixSource": "event-model-primary-pathway",
+      "BMatrixWarnings": [
+        "Source model only: instantaneous RF primary pathway, assumed RF latency 3 us, gradient delay=rfdelay; mixed FSE pathways and measured gradient calibration are not modelled.",
+        "BMatrixEcho is the echo containing the k-space centre (centric: 1; reverse-centric: ETL; linear: ETL/2+1), represented by the first imaging shot; shot-dependent phase-encode b terms are not a volume average."
+      ],
+      "BMatrixAxes": "logical x=read, y=phase, z=slice; s/mm^2; columns bxx byy bzz bxy bxz byz",
+      "BMatrixCalibrationApplied": false,
+      "BMatrixModel": {
+        "CacheKey": "b0bd18851d5d7bb37db6dcecdcad699dad1766d7357f130cd68a843c59ee743f",
+        "CacheHit": true,
+        "Hashes": {
+          "PPL": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423",
+          "Protocol": "d14192ef5f803db0ff5a2f56b837a170afae2ec020abdb51e1b331c0c7336128"
+        },
+        "PPL": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.912.ppl",
+        "Branches": [
+          "carrier"
+        ],
+        "ModelRevision": "primary-pwc-rf3us-gradient-rfdelay-v3-acquired-nav2-hazard-gated",
+        "RepresentativeImagingShotIndex": [
+          2
+        ]
+      }
+    },
+    "1.912_3slices": {
+      "EffectiveBValue": [
+        1014.6778922546566
+      ],
+      "BMatrix": [
+        [
+          995.7552811609189,
+          0.007496748431543111,
+          18.91511434530618,
+          0.03850823292965674,
+          29.28922086835033,
+          -0.00320405585117257
+        ]
+      ],
+      "BMatrixEcho": 1,
+      "BMatrixSource": "event-model-primary-pathway",
+      "BMatrixWarnings": [
+        "Source model only: instantaneous RF primary pathway, assumed RF latency 3 us, gradient delay=rfdelay; mixed FSE pathways and measured gradient calibration are not modelled.",
+        "BMatrixEcho is the echo containing the k-space centre (centric: 1; reverse-centric: ETL; linear: ETL/2+1), represented by the first imaging shot; shot-dependent phase-encode b terms are not a volume average."
+      ],
+      "BMatrixAxes": "logical x=read, y=phase, z=slice; s/mm^2; columns bxx byy bzz bxy bxz byz",
+      "BMatrixCalibrationApplied": false,
+      "BMatrixModel": {
+        "CacheKey": "5dc1390e1e57bc9fd391d51aafe701e506106ea0b93d6efd4a062840950f96f8",
+        "CacheHit": true,
+        "Hashes": {
+          "PPL": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423",
+          "Protocol": "361feae3df92835ef695bc68aa1af580f01a5e32c9b12b595915ff2359d6348b"
+        },
+        "PPL": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.912.ppl",
+        "Branches": [
+          "carrier"
+        ],
+        "ModelRevision": "primary-pwc-rf3us-gradient-rfdelay-v3-acquired-nav2-hazard-gated",
+        "RepresentativeImagingShotIndex": [
+          4
+        ]
+      }
+    }
+  },
+  "1.82": {
+    "EffectiveBValue": [
+      4.009534994556521,
+      1000.7986299222259,
+      5981.173967956648
+    ],
+    "BMatrix": [
+      [
+        0.2235649631880054,
+        0.00867096130072205,
+        3.7772990700677935,
+        0.038380824450172234,
+        0.005397060012849552,
+        0.0006861160124689193
+      ],
+      [
+        997.0126598908574,
+        0.00867096130072205,
+        3.7772990700677935,
+        0.03838082445017421,
+        18.648469757676597,
+        0.0006861160124689193
+      ],
+      [
+        5977.38799792528,
+        0.00867096130072205,
+        3.7772990700677935,
+        0.03838082445017656,
+        45.661067970737015,
+        0.0006861160124689193
+      ]
+    ],
+    "BMatrixEcho": 1,
+    "BMatrixSource": "event-model-primary-pathway",
+    "BMatrixWarnings": [
+      "Source model only: instantaneous RF primary pathway, assumed RF latency 3 us, gradient delay=rfdelay; mixed FSE pathways and measured gradient calibration are not modelled.",
+      "BMatrixEcho is the echo containing the k-space centre (centric: 1; reverse-centric: ETL; linear: ETL/2+1), represented by the first imaging shot; shot-dependent phase-encode b terms are not a volume average."
+    ],
+    "BMatrixAxes": "logical x=read, y=phase, z=slice; s/mm^2; columns bxx byy bzz bxy bxz byz",
+    "BMatrixCalibrationApplied": false,
+    "BMatrixModel": {
+      "CacheKey": "3b032e372cd0676054ebed99e56085ffadaa75ae1e5873b87d667efcaaccfdd7",
+      "CacheHit": true,
+      "Hashes": {
+        "PPL": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
+        "Protocol": "90ef49bbfd9019c9a8e79cf5170ae2fda316f2cffaf156680126128978e73312"
+      },
+      "PPL": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.82.ppl",
+      "Branches": [
+        "primary",
+        "primary",
+        "primary"
+      ],
+      "ModelRevision": "primary-pwc-rf3us-gradient-rfdelay-v3-acquired-nav2-hazard-gated",
+      "RepresentativeImagingShotIndex": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "1.912": {
+    "EffectiveBValue": [
+      20.43580692561142,
+      1014.6790589361203,
+      5982.334300669588
+    ],
+    "BMatrix": [
+      [
+        1.5120291503996082,
+        0.008663429906203267,
+        18.915114345305607,
+        0.041396350399381054,
+        3.27464165379162,
+        -0.0034443600400060853
+      ],
+      [
+        995.7552811609086,
+        0.008663429906203267,
+        18.91511434530561,
+        0.041396350399380985,
+        29.289220868350355,
+        -0.0034443600400059994
+      ],
+      [
+        5963.410522894376,
+        0.008663429906203267,
+        18.91511434530561,
+        0.041396350399380916,
+        66.98265195671226,
+        -0.0034443600400059994
+      ]
+    ],
+    "BMatrixEcho": 1,
+    "BMatrixSource": "event-model-primary-pathway",
+    "BMatrixWarnings": [
+      "Source model only: instantaneous RF primary pathway, assumed RF latency 3 us, gradient delay=rfdelay; mixed FSE pathways and measured gradient calibration are not modelled.",
+      "BMatrixEcho is the echo containing the k-space centre (centric: 1; reverse-centric: ETL; linear: ETL/2+1), represented by the first imaging shot; shot-dependent phase-encode b terms are not a volume average."
+    ],
+    "BMatrixAxes": "logical x=read, y=phase, z=slice; s/mm^2; columns bxx byy bzz bxy bxz byz",
+    "BMatrixCalibrationApplied": false,
+    "BMatrixModel": {
+      "CacheKey": "1f82cd9d15a564c225e193c47e65843e08dfcf012ef24aa43389152ef5309203",
+      "CacheHit": true,
+      "Hashes": {
+        "PPL": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423",
+        "Protocol": "11aca86556f0cfa1c4b51f2b60615c79e320b14b37f460b7718c4c35d458f554"
+      },
+      "PPL": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.912.ppl",
+      "Branches": [
+        "carrier",
+        "carrier",
+        "carrier"
+      ],
+      "ModelRevision": "primary-pwc-rf3us-gradient-rfdelay-v3-acquired-nav2-hazard-gated",
+      "RepresentativeImagingShotIndex": [
+        1,
+        1,
+        1
+      ]
+    }
+  }
+}

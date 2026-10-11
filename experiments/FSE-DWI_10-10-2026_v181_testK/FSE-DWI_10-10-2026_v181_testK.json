@@ -1,0 +1,17 @@
+{
+  "PEOrder": 1,
+  "BValueInputMode": 1,
+  "DiffusionOn": 1,
+  "SmallDelta_ms": 4.0,
+  "BigDelta_ms": 40.0,
+  "SliceOffsets_mm": [
+    -1.2,
+    0.0,
+    1.2
+  ],
+  "SliceSpacing_mm": 1.2,
+  "bval_s_per_mm2": [
+    0.0,
+    1000.0
+  ]
+}

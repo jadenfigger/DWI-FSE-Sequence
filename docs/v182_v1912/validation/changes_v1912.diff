@@ -1,0 +1,558 @@
+--- scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.911.ppl
++++ scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.912.ppl
+@@ -1,3 +1,20 @@
++/* V1912 raw contract: nav_on 0/1 retain inherited layout.
++   nav_on 2: embedded no_views=R raw lines, views_per_seg=E imaging ETL.
++   Imaging N=(R/(E+1)-1)*E; R must be divisible by E+1.
++   Per volume and slice: leading E+1 unencoded volume navigator lines;
++   then N/E imaging shots, each E imaging lines followed by one ky=0 echo.
++   Physical raw views=R=(E+1)*(1+N/E), acquisition order unchanged across slices.
++   Appended RF uses the final imaging flip; fused lobes and rewinders persist.
++   Mode 2 mirrors the sampled P prephaser in its rewinder, cancelling its
++   exact area. Mode 0/1 retain the inherited positive-ramp rounding residual.
++   Off-centre TX offset is gated in fixed RF windows and accumulated phase is
++   compensated at each RF centre. Nominal source spans: centre=RF/2+61.1 us,
++   whole offset gate=RF+125 us. Reset frequency retains phase; it never clears
++   the accumulated history. These spans use manual costs and 3-us RF latency;
++   actual synthesizer/phase timing is a required phantom scanner check.
++   Console slice position z maps to physical selector-axis position -z, the
++   inherited positive bandwidth offset convention; angles remain locked.
++   Generated from immutable v1.911 by examples/build_v1912_ppl.py. */
+ /*******************************************************************************
+ 
+   		FSENFP.PPL
+@@ -80,7 +97,7 @@
+ SCROLLBAR "Freq (under/over)sampling ","under/none/over","%d",-1,1,0,1,oversample;
+ SCROLLBAR "Phase (under/over)sampling ","under/none/over","%d",-1,1,0,1,oversample2;
+ SCROLLBAR "Phase2 Oversample ","(Yes = 1)","%d",0,1,0,1,oversample3;
+-SCROLLBAR "Navigator?","1=yes","%d",0,1,0,1,nav_on;
++SCROLLBAR "Navigator?","0=off, 1=per volume, 2=per shot","%d",0,2,0,1,nav_on;
+ 
+ DISCARD 0, 128, 6, no_discard ;
+ EXPERIMENT_ARRAY 1,32767,1,no_experiments;
+@@ -350,7 +367,7 @@
+ 
+ #define V19_ADC_SLOW 8997L
+ 
+-#define V19_POST_RF 200L
++#define V19_POST_RF 800L
+ 
+ 
+ 
+@@ -377,6 +394,10 @@
+ 	int v19_on, v19_cycles, v19_comp_flat, v19_mode;
+ 	int v19_flip_tenths[64];
+ 	int v19_error_code;
++    int v1912_echoes, v1912_flip, v1912_i, v1912_j;
++    int v1912_freq[4], v1912_corr[5];
++    long v1912_min_esp, v1912_need, v1912_width, v1912_sep;
++    long v1912_acc, v1912_q, v1912_pos, v1912_span, v1912_centre;
+     int v1911_first_dac, v1911_pre_dac, v1911_post_dac, v1911_l_end;
+     long v1911_c_area, v1911_d_area, v1911_den, v1911_q;
+     int v1911_i_term_end;
+@@ -1004,9 +1025,18 @@
+ 		v19_error_code=60;
+ 		goto end;
+ 	}
++    if ((nav_on<0)||(nav_on>2))
++    { v19_error_code=150; goto v19_fail; }
++    if (nav_on==2)
++    {
++        if ((PE_order!=1)||(no_views%(views_per_seg+1)!=0)||
++            (no_views<2*(views_per_seg+1)))
++        { v19_error_code=151; goto v19_fail; }
++        no_views=(no_views/(views_per_seg+1))*views_per_seg;
++    }
+ 	if (PE_order != 2){
+ 		no_views_eff = no_views;
+-		if(nav_on==1) no_views_eff = no_views - views_per_seg;
++		if(nav_on>=1) no_views_eff = no_views - views_per_seg;
+ 		
+ 		if (no_views_eff<1)
+ 		{
+@@ -1069,7 +1099,7 @@
+ 
+ 	cnt = 0;
+ 
+-	if (nav_on) {
++	if (nav_on>=1) {
+ 		navigator_loop:
+ 		if (cnt<views_per_seg) {
+ 			//gp_order[cnt] = 0;
+@@ -1292,7 +1322,7 @@
+ 	// Single shot with centric order
+ 	// Requires VIEW_ORDER_1 = CENTREOUT in reconstruction, or reordering table - cengen
+ 	
+-	if (nav_on==1) {
++	if (nav_on>=1) {
+ 		v19_error_code=76;
+ 		goto end;
+ 	}
+@@ -1331,7 +1361,7 @@
+ 	// Essentially te_eff is the equal to the kernel offset to be used in reconstuction!!
+ 	// Also includes single echo when views_per_seg = 1, but te_eff should be overriden
+ 	
+-	if (nav_on==1) {
++	if (nav_on>=1) {
+ 		v19_error_code=76;
+ 		goto end;
+ 	}
+@@ -2102,7 +2132,8 @@
+ 	DELAY(tramp, clock, "0_max")
+ 	DELAY(tacq_int, clock, "0_max")
+ 	DELAY(tramp, clock, "0_max")
+-	POSPULSE_SEC(tdp, clock)
++    if (nav_on==2) { NEGPULSE_SEC(tdp, clock) }
++    else { POSPULSE_SEC(tdp, clock) }
+ 	
+ 	slice_list_rp = MR3040_InitList();
+ 	
+@@ -2162,8 +2193,7 @@
+ 		{ v19_error_code=1; goto v19_fail; }
+ 		if ((flow_comp_on!=0)||(dixon_on!=0)||(no_views_2!=1)||(echoes_to_discard!=0)||(setup_mode!=0))
+ 		{ v19_error_code=2; goto v19_fail; }
+-		if ((no_slices!=1)||(slice_mm_10!=0)||(fov_slice_off[0]!=0))
+-		{ v19_error_code=3; goto v19_fail; }
++
+ 		if ((sat_on!=0)||(chess_on!=0)||(mtc_on!=0)||(gating!=0)||(mains_gating!=0)||(TR_array_size!=0))
+ 		{ v19_error_code=4; goto v19_fail; }
+ 		if ((gs_on!=1)||(gr_on!=1)||(gsp_lobe!=0)||(post_90_delay1!=0)||(phcor0!=0))
+@@ -2339,6 +2369,38 @@
+     { v19_error_code=146; goto v19_fail; }
+     if ((tramp!=200)||(tdp!=700)||(tcrush!=1000)||(rfdelay!=60)||(v19_f_im!=1320))
+     { v19_error_code=140; goto v19_fail; }
++    v1912_i=0;
++v1912_angle_check:
++    if ((r_angle_var[v1912_i]!=0)||(p_angle_var[v1912_i]!=0)||
++        (s_angle_var[v1912_i]!=0))
++    { v19_error_code=146; goto v19_fail; }
++    v1912_i=v1912_i+1;
++    if (v1912_i<no_slices) goto v1912_angle_check;
++    v1912_q=35060690L/(0L+v19_gabs);
++    v1912_width=(v1912_q/grad_varl)*400L+
++        ((v1912_q%grad_varl)*400L+grad_varl-1L)/grad_varl;
++    v1912_need=v19_slab_pml;
++    if (v19_tip_pml>v1912_need) v1912_need=v19_tip_pml;
++    v1912_sep=(v1912_width*(v1912_need+1000L)+1999L)/2000L;
++    v1912_sep=v1912_sep+(v1912_width*750L+999L)/1000L;
++    v1912_i=0;
++v1912_slice_check:
++    v1912_j=v1912_i+1;
++v1912_pair_check:
++    if (v1912_j<no_slices)
++    {
++        v1912_need=(0L+fov_slice_off[v1912_i])-fov_slice_off[v1912_j];
++        if (v1912_need<0L) v1912_need=-v1912_need;
++        if (v1912_need<v1912_sep)
++        {
++            printf("V1912 minimum slice separation=%ld units\n",v1912_sep);
++            v19_error_code=148; goto v19_fail;
++        }
++        v1912_j=v1912_j+1;
++        goto v1912_pair_check;
++    }
++    v1912_i=v1912_i+1;
++    if (v1912_i<no_slices-1) goto v1912_slice_check;
+     v1911_c_area = (0L+crusher_saved_train)*(0L+tcrush+tramp);
+     v1911_c_area = v1911_c_area + (0L+crusher_saved_train)*19200L/10000L;
+     v1911_d_area = (0L+v19_d_dac)*(0L+tdp+tramp);
+@@ -2479,8 +2541,7 @@
+ 		v19_gap_dm = (v19_s_m - v19_s_d - v19_b_d)*10L - 2L*V19_ANCHOR;
+ 		v19_gap_ir = 200L;
+         v19_rem_im = (v19_e_1-v19_s_1)*10L-v19_off_im-V19_POST_RF-V19_ANCHOR;
+-        if ((v19_rem_im<300L)||(v19_rem_im>V19_MAX_WAIT))
+-        { v19_error_code=143; goto v19_fail; }
++
+ 		
+ 		
+ 		
+@@ -2494,13 +2555,28 @@
+ 		v19_post_b = (v19_s_1 + v19_esp_us - v19_e_1)*10L - templ1 - V19_ANCHOR;
+ 		v19_post_end = v19_post_a + V19_TAIL_US*10L;
+ 		
++        v1912_min_esp=v19_esp_us-2L*(v19_post_b-
++            (10000L+(0L+tfilter)*10L+1000L))/10L;
++        v1912_need=v19_esp_us-2L*(v19_rem_im-300L)/10L;
++        if (v1912_need>v1912_min_esp) v1912_min_esp=v1912_need;
++        v1912_need=v19_esp_us-2L*(v19_s_1-v19_len-V19_GAP_MIN);
++        if (v1912_need>v1912_min_esp) v1912_min_esp=v1912_need;
++        v1912_need=v19_esp_us-2L*(v19_e_1+3L*v19_r+(0L+tdp)-
++            v19_s_1-2656L-(0L+v19_f_im)-6L*v19_r-V19_GAP_MIN);
++        if (v1912_need>v1912_min_esp) v1912_min_esp=v1912_need;
++        v1912_min_esp=(v1912_min_esp+999L)/1000L;
++        if ((0L+esp)<v1912_min_esp)
++        {
++            printf("V1912 minimum ESP=%ld ms\n",v1912_min_esp);
++            v19_error_code=147; goto v19_fail;
++        }
+ 		if ((v19_gap_x1<V19_GAP_MIN*10L)||(v19_gap_1r<V19_GAP_MIN*10L)||(v19_gap_r2<V19_GAP_MIN*10L)||
+ 		    (v19_gap_2d<V19_GAP_MIN*10L)||(v19_gap_dm<V19_GAP_MIN*10L-2L*V19_ANCHOR))
+ 		{ v19_error_code=30; goto v19_fail; }
+ 		if ((v19_s_1-v19_len<V19_GAP_MIN)||(v19_first_wait>V19_MAX_WAIT)||(v19_gap_ir<V19_GAP_MIN*10L))
+ 		{ v19_error_code=31; goto v19_fail; }
+ 		if ((v19_adc_mid<100L)||(v19_first_wait>V19_MAX_WAIT)||(v19_post_a<(10000L+(0L+(tfilter))*10L+1000L))||(v19_post_b<(10000L+(0L+(tfilter))*10L+1000L))||
+-		    (v19_post_b>V19_MAX_WAIT)||(v19_rd_a2>V19_MAX_WAIT)||(v19_df_wait<1000L))
++		    (v19_post_b>V19_MAX_WAIT)||(v19_rd_a2>V19_MAX_WAIT)||(v19_df_wait<1000L)||(v19_rem_im>V19_MAX_WAIT))
+ 		{ v19_error_code=32; goto v19_fail; }
+ 		if ((v19_rd_a1<4000L)||(v19_go_im-v19_lead<2500L)||(v19_b_d*10L>V19_MAX_WAIT)||(v19_post_end>V19_MAX_WAIT))
+ 		{ v19_error_code=33; goto v19_fail; }
+@@ -2508,9 +2584,11 @@
+ 		{ v19_error_code=34; goto v19_fail; }
+ 		
+ 		
+-        if ((esp!=13)||(10000L+(0L+tfilter)*10L+3000L>24000L))
++        if (10000L+(0L+tfilter)*10L+3000L>24000L)
+         { v19_error_code=144; goto v19_fail; }
+-        v19_shot_us = (v19_e_1 + (0L+(views_per_seg-1))*v19_esp_us + v19_read_len + 10L + V19_TAIL_US) - (v19_s_ex - 100L);
++        v1912_echoes=views_per_seg;
++        if (nav_on==2) v1912_echoes=v1912_echoes+1;
++        v19_shot_us = (v19_e_1 + (0L+(v1912_echoes-1))*v19_esp_us + v19_read_len + 10L + V19_TAIL_US) - (v19_s_ex - 100L);
+         v19_shot_us = v19_shot_us + (templ1+40000L)/10L - (v19_read_len+10L+V19_TAIL_US);
+ 		v19_i_go_ex_m_lead = v19_go_ex-v19_lead;
+ 		v19_i_unblank = v19_unblank;
+@@ -2985,7 +3063,7 @@
+ 	current_view  = 0;
+ 	gp_loc = 0;
+     nav_cnt=1;
+-    if(nav_on==1) nav_cnt = 0;  
++    if(nav_on>=1) nav_cnt = 0;  
+ 	
+ phase_encode_loop:
+ 	view_av = 0;
+@@ -3104,10 +3182,67 @@
+ 	frequency(MHz, kHz+kHz_new2, Hz+Hz_new2, rx1MHz);
+ 	offset_frequency(fov_read_freq+rec_freq);
+ 
+-	frequency_buffer(0);                    /*  buffer 0 = tx freq */
+-	frequency(MHz, kHz+kHz_new, Hz+Hz_new, rx1MHz);
+-	offset_frequency(fov_slice_freq+slice_freq_var);
+-	reset_frequency();
++    v1912_pos=(0L+fov_slice_off[pos_index])+(0L+slice_mm_10)*40L;
++    if (v1912_pos!=0L)
++    {
++    starttimer();
++    v1912_i=0;
++v1912_freq_setup:
++    v1912_q=v19_g_ex;
++    if (v1912_i==2) v1912_q=v19_g_m;
++    if (v1912_i==3) v1912_q=v19_g_re;
++    v1912_q=v1912_q*grad_varl/32767L;
++    v1912_q=-((v1912_pos/400L)*v1912_q+
++        (v1912_pos%400L)*v1912_q/400L);
++    if ((v1912_q<-32767L)||(v1912_q>32767L))
++    { v19_error_code=149; goto v19_fail; }
++    v1912_freq[v1912_i]=v1912_q;
++    frequency_buffer(v1912_i);
++    frequency(MHz,kHz,Hz,rx1MHz);
++    offset_frequency(v1912_freq[v1912_i]);
++    v1912_i=v1912_i+1;
++    if (v1912_i==1) v1912_i=2;
++    if (v1912_i<4) goto v1912_freq_setup;
++    v1912_freq[1]=v1912_freq[0];
++    frequency_buffer(6);
++    frequency(MHz,kHz,Hz,rx1MHz);
++    reset_frequency();
++    waittimer(27000);
++    starttimer();
++    v1912_acc=0L;
++    v1912_i=0;
++v1912_phase_setup:
++    v1912_j=v1912_i+18;
++    if (v1912_i>=3) v1912_j=v1912_j+1;
++    temp=v1912_i;
++    if (temp==4) temp=3;
++    v1912_q=v1912_acc+(0L+v1912_freq[temp])*
++        ((0L+rf_length[v1912_j])*5L+(0L+v19_i_lead_m_anc)-414L);
++    v1912_q=v1912_q%10000000L;
++    if (v1912_q>=0L) v1912_q=v1912_q+3125L;
++    else v1912_q=v1912_q-3125L;
++    v1912_corr[v1912_i]=-(v1912_q/6250L);
++    v1912_q=(0L+v1912_freq[temp])*
++        ((0L+rf_length[v1912_j])*10L+(0L+v19_i_lead_m_anc)+225L);
++    v1912_acc=(v1912_acc+v1912_q)%10000000L;
++    v1912_i=v1912_i+1;
++    if (v1912_i<5) goto v1912_phase_setup;
++    v1912_span=(0L+v1912_freq[3])*((0L+rf_length[23])*10L+(0L+v19_i_lead_m_anc)+225L);
++    v1912_centre=(0L+v1912_freq[3])*((0L+rf_length[23])*5L+(0L+v19_i_lead_m_anc)-414L);
++    frequency_buffer(0);
++    }
++    else
++    {
++        frequency_buffer(0);
++        frequency(MHz,kHz,Hz,rx1MHz);
++        offset_frequency(fov_slice_freq);
++        reset_frequency();
++        v1912_i=0;
++v1912_phase_zero:
++        v1912_corr[v1912_i]=0;
++        v1912_i=v1912_i+1;
++        if (v1912_i<5) goto v1912_phase_zero;
++    }
+ 	
+ 
+ slice_block_loop:
+@@ -3169,12 +3304,12 @@
+     if ((report_on == 1)&&(diff_on==1))
+ 	{
+         \\printf("Min Big delta = %ld us, max Big delta = %ld us\n", big_delta_min, big_delta_max_4_given_TE);
+-        printf("\nDW grad: X=%d, Y=%d, Z=%d DAC\n",diff_read, diff_phase, diff_slice);
++        printf("DW DAC %d %d %d\n",diff_read, diff_phase, diff_slice);
+         if ((b_kfac > 0L)&&(templ4 >= 0L))
+-			printf("\nNominal diffusion b ~ %ld; excludes crusher\n", templ4);
++			printf("Nominal b %ld; lobes only\n", templ4);
+ 		else
+-			printf("\nb report off (needs delta<=10ms, Delta<=80ms, unit dirs)\n"); // [MERGE-2TE] F3/F6
+-        printf("DW grad array for this b-value:\n X=%ld, Y=%ld, Z=%ld,\n",acq_x[diff_acq_cnt],acq_y[diff_acq_cnt],acq_z[diff_acq_cnt]);
++			printf("b report unavailable\n"); // [MERGE-2TE] F3/F6
++        printf("DW row %ld %ld %ld\n",acq_x[diff_acq_cnt],acq_y[diff_acq_cnt],acq_z[diff_acq_cnt]);
+ 
+     }
+     
+@@ -3209,6 +3344,7 @@
+ 	// we also assume that overhead_var is always zero!
+ 	// we also assume that phcor_plus equals phcor_minus - that is true anyway but not enforced
+ 	templ1 = slice_freq_long + IntToLong(slice_freq_var);
++    if (v1912_pos!=0L) templ1=0L;
+ 	templ2 = - read_freq_long - IntToLong(rec_freq);
+ 	if (templ1>0)
+ 		phcor = phcor_plus;
+@@ -3296,6 +3432,7 @@
+ 	if (v19_mode==1)
+ 	{
+ 		tr_min = v19_shot_us + 11350L + 70L + 69L + 5000L;
++        if (v1912_pos!=0L) tr_min=tr_min+2700L;
+ #ifdef POST_ETL_CRUSHER
+ 		if (post_crush_on)
+ 			tr_min = tr_min + IntToLong(2*tramp+post_tcrush+240);
+@@ -3770,7 +3907,7 @@
+ 		MR3040_Clock(clock);
+ 		MR3040_SelectMatrix(v19_m_ex);
+ 		MR3040_SetList(v19_l_ex, CHANNEL_S);
+-		phase(phase_90);                         
++		phase(phase_90+v1912_corr[0]);                         
+ 	waittimer(1000);
+ 	
+ 	starttimer();
+@@ -3779,6 +3916,13 @@
+ 	waittimer(v19_i_go_ex_m_lead);
+ starttimer();
+ NEWSHAPE_SETUP(18, v19_mul_ex)
++
++    if (v1912_pos!=0L)
++    {
++        waittimer(225);
++        frequency_buffer(0);
++        reset_frequency();
++    }
+ waittimer(v19_i_unblank);
+ rfampon(0);
+ if (warmup>10) delay(warmup,us);
+@@ -3788,6 +3932,13 @@
+ waittimer(v19_i_offl_ex);
+ rfon(0);
+ if (use_pdd>0) userout(pdd_rx_mask);
++
++    if (v1912_pos!=0L)
++    {
++        waittimer(v19_i_offl_ex_p_post-400);
++        frequency_buffer(6);
++        reset_frequency();
++    }
+ waittimer(v19_i_offl_ex_p_post);
+ starttimer();
+ 	waittimer(v19_i_rem_ex);
+@@ -3803,7 +3954,7 @@
+ 	starttimer();
+ 		MR3040_SelectMatrix(v19_m_rf);
+ 		MR3040_SetList(v19_l_rf, CHANNEL_S);
+-		phase(phase_180);                        
++		phase(phase_180+v1912_corr[1]);                        
+ 	waittimer(1000);
+ 	delay32(v19_gap_1r);
+ 	
+@@ -3813,6 +3964,13 @@
+ 	waittimer(v19_i_go_rf_m_lead);
+ starttimer();
+ NEWSHAPE_SETUP(19, v19_mul_rf)
++
++    if (v1912_pos!=0L)
++    {
++        waittimer(225);
++        frequency_buffer(0);
++        reset_frequency();
++    }
+ waittimer(v19_i_unblank);
+ rfampon(0);
+ if (warmup>10) delay(warmup,us);
+@@ -3822,6 +3980,13 @@
+ waittimer(v19_i_offl_rf);
+ rfon(0);
+ if (use_pdd>0) userout(pdd_rx_mask);
++
++    if (v1912_pos!=0L)
++    {
++        waittimer(v19_i_offl_rf_p_post-400);
++        frequency_buffer(6);
++        reset_frequency();
++    }
+ waittimer(v19_i_offl_rf_p_post);
+ starttimer();
+ 	waittimer(v19_i_rem_rf);
+@@ -3846,7 +4011,7 @@
+ 	waittimer(v19_i_b_d_m_tail_x10);
+ 		MR3040_SelectMatrix(v19_m_m);
+ 		MR3040_SetList(v19_l_m, CHANNEL_S);
+-		phase(phase_90+2*deg_90);                
++		phase(phase_90+2*deg_90+v1912_corr[2]);                
+ 	waittimer(v19_i_b_d_x10);
+ 	delay32(v19_gap_dm);
+ 	
+@@ -3856,6 +4021,13 @@
+ 	waittimer(v19_i_go_m_m_lead);
+ starttimer();
+ NEWSHAPE_SETUP(20, v19_mul_m)
++
++    if (v1912_pos!=0L)
++    {
++        waittimer(225);
++        frequency_buffer(2);
++        reset_frequency();
++    }
+ waittimer(v19_i_unblank);
+ rfampon(0);
+ if (warmup>10) delay(warmup,us);
+@@ -3865,6 +4037,13 @@
+ waittimer(v19_i_offl_m);
+ rfon(0);
+ if (use_pdd>0) userout(pdd_rx_mask);
++
++    if (v1912_pos!=0L)
++    {
++        waittimer(v19_i_offl_m_p_post-400);
++        frequency_buffer(6);
++        reset_frequency();
++    }
+ waittimer(v19_i_offl_m_p_post);
+ starttimer();
+ 	waittimer(v19_i_rem_m);
+@@ -3879,7 +4058,7 @@
+ 		MR3040_SelectMatrix(v19_m_re);
+ 		MR3040_SetList(v19_l_re, CHANNEL_S);
+ 		MR3040_SetList(v19_l_rr, CHANNEL_R);
+-		phase(phase_90);                         
++		phase(phase_90+v1912_corr[3]);                         
+ 	waittimer(v19_i_b_sp_x10);
+ 	delay32(v19_gap_sr);
+ 	
+@@ -3889,6 +4068,13 @@
+ 	waittimer(v19_i_go_re_m_lead);
+ starttimer();
+ NEWSHAPE_SETUP(22, v19_mul_re)
++
++    if (v1912_pos!=0L)
++    {
++        waittimer(225);
++        frequency_buffer(3);
++        reset_frequency();
++    }
+ waittimer(v19_i_unblank);
+ rfampon(0);
+ if (warmup>10) delay(warmup,us);
+@@ -3898,12 +4084,19 @@
+ waittimer(v19_i_offl_re);
+ rfon(0);
+ if (use_pdd>0) userout(pdd_rx_mask);
++
++    if (v1912_pos!=0L)
++    {
++        waittimer(v19_i_offl_re_p_post-400);
++        frequency_buffer(6);
++        reset_frequency();
++    }
+ waittimer(v19_i_offl_re_p_post);
+ starttimer();
+ 	waittimer(v19_i_rem_re);
+ 		MR3040_SelectMatrix(aq_mat);
+ 		MR3040_SetList(v19_l_im, CHANNEL_S);
+-		phase(phase_180);                        
++		phase(phase_180+v1912_corr[4]);                        
+ 	
+ 	v19_wait_next = v19_i_first_wait;
+ 	goto v19_echo_loop;
+@@ -3915,11 +4108,34 @@
+     MR3040_Start(CHANNEL_S);
+     if (use_pdd>0) userout(pdd_tx_mask);
+     gp_mul = get_gp_order(current_view+echo_cnt);
++    v1912_flip=echo_cnt;
++    if (echo_cnt==views_per_seg)
++    {
++        gp_mul=0;
++        v1912_flip=views_per_seg-1;
++    }
+     gp_var = (-gp_inc*gp_mul)*nav_cnt;
++    if ((v1912_pos!=0L)&&(echo_cnt>0))
++    {
++        v1912_q=v1912_acc+v1912_centre;
++        v1912_q=v1912_q%10000000L;
++        if (v1912_q>=0L) v1912_q=v1912_q+3125L;
++        else v1912_q=v1912_q-3125L;
++        v1912_corr[4]=-(v1912_q/6250L);
++        v1912_acc=(v1912_acc+v1912_span)%10000000L;
++        phase(phase_180+v1912_corr[4]);
++    }
+     waittimer(v19_i_go_im_m_lead);
+     starttimer();
+-    NEWSHAPE_SETUP(23, v19_mul[echo_cnt])
+-    waittimer(v19_i_unblank);
++    NEWSHAPE_SETUP(23, v19_mul[v1912_flip])
++    
++    if (v1912_pos!=0L)
++    {
++        waittimer(225);
++        frequency_buffer(3);
++        reset_frequency();
++    }
++waittimer(v19_i_unblank);
+     rfampon(0);
+     if (warmup>10) delay(warmup,us);
+     waittimer(v19_i_lead_m_anc);
+@@ -3931,7 +4147,14 @@
+     waittimer(v19_i_offl_im);
+     rfon(0);
+     if (use_pdd>0) userout(pdd_rx_mask);
+-    waittimer(v19_i_offl_im_p_post);
++    
++    if (v1912_pos!=0L)
++    {
++        waittimer(v19_i_offl_im_p_post-400);
++        frequency_buffer(6);
++        reset_frequency();
++    }
++waittimer(v19_i_offl_im_p_post);
+     starttimer();
+     waittimer(v19_i_rem_im);
+     starttimer();
+@@ -3952,6 +4175,7 @@
+     waittimer(v19_i_rd_a2);
+     initiate(sample_period);
+     starttimer();
++    if (nav_on==2) gp_var=-gp_var;
+     CREATE_MATRIX(aq_mat_sec,gs_on*v1911_pre_dac,gp_on*gp_var,gr_on*gr_dp)
+     MR3040_SetList(v19_l_im,CHANNEL_S);
+     templ1=phase_ang;
+@@ -3972,10 +4196,12 @@
+     starttimer();
+     delay32(10000L);
+     complete();
+-    frequency_buffer(0);
++    if (v1912_pos!=0L) frequency_buffer(6);
++    else frequency_buffer(0);
+     reset_frequency();
+-    phase(phase_180+phase_correction);
+-    if (echo_cnt<views_per_seg)
++    if (v1912_pos!=0L) phase(phase_180+v1912_corr[4]);
++    else phase(phase_180+phase_correction);
++    if (echo_cnt<v1912_echoes)
+     {
+         v19_wait_next=v19_i_post_b;
+         goto v19_echo_loop;

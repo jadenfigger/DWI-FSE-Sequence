@@ -1,0 +1,239 @@
+{
+  "scope": "Centred single-slice minimum TR boundary confirmation for the practical table; nominal source cost model. The combined full-run v182 TR table instead uses its three-slice K seed.",
+  "source_sha256_before": {
+    "v182": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
+    "v1912": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423"
+  },
+  "source_sha256_after": {
+    "v182": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
+    "v1912": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423"
+  },
+  "inputs_stable_during_run": true,
+  "cases": [
+    {
+      "version": "v182",
+      "dwell_us": 50,
+      "nav_on": 0,
+      "minimum_esp_ms": 14,
+      "minimum_tr_ms": 174,
+      "accepted": true,
+      "one_ms_below_rejected": true,
+      "below_messages": [
+        "TR too short, increase to 174 ms"
+      ],
+      "ppr_sha256": "94aa81e0f063b5b4801deb024f56ebf5b885fdb8b03c5abd42837e6bf8404f4e",
+      "pass": true
+    },
+    {
+      "version": "v182",
+      "dwell_us": 50,
+      "nav_on": 2,
+      "minimum_esp_ms": 14,
+      "minimum_tr_ms": 188,
+      "accepted": true,
+      "one_ms_below_rejected": true,
+      "below_messages": [
+        "TR too short, increase to 188 ms"
+      ],
+      "ppr_sha256": "a4572f1bbf7ee9d74d8f12314d682f1b2125232cdc2e369f22686d8afd85ee2e",
+      "pass": true
+    },
+    {
+      "version": "v182",
+      "dwell_us": 25,
+      "nav_on": 0,
+      "minimum_esp_ms": 11,
+      "minimum_tr_ms": 151,
+      "accepted": true,
+      "one_ms_below_rejected": true,
+      "below_messages": [
+        "TR too short, increase to 151 ms"
+      ],
+      "ppr_sha256": "2857b094ed25be498c8680c9d48e6804a5de74b9c552482e8c1356f2533f9753",
+      "pass": true
+    },
+    {
+      "version": "v182",
+      "dwell_us": 25,
+      "nav_on": 2,
+      "minimum_esp_ms": 11,
+      "minimum_tr_ms": 162,
+      "accepted": true,
+      "one_ms_below_rejected": true,
+      "below_messages": [
+        "TR too short, increase to 162 ms"
+      ],
+      "ppr_sha256": "286283ac518b0754497fc32e0f6f7d0b8258022e08356d5c35d86d26e1471314",
+      "pass": true
+    },
+    {
+      "version": "v182",
+      "dwell_us": 20,
+      "nav_on": 0,
+      "minimum_esp_ms": 11,
+      "minimum_tr_ms": 151,
+      "accepted": true,
+      "one_ms_below_rejected": true,
+      "below_messages": [
+        "TR too short, increase to 151 ms"
+      ],
+      "ppr_sha256": "0105d84f4682f350154adcf4352f3da4d477c0ce5e7c982940b5744856e7cd6c",
+      "pass": true
+    },
+    {
+      "version": "v182",
+      "dwell_us": 20,
+      "nav_on": 2,
+      "minimum_esp_ms": 11,
+      "minimum_tr_ms": 162,
+      "accepted": true,
+      "one_ms_below_rejected": true,
+      "below_messages": [
+        "TR too short, increase to 162 ms"
+      ],
+      "ppr_sha256": "ebbd60b968dd5a6ee8ab5f1a36ff6149a3781331045cc4da6efaabc5ae2a28c1",
+      "pass": true
+    },
+    {
+      "version": "v182",
+      "dwell_us": 16,
+      "nav_on": 0,
+      "minimum_esp_ms": 10,
+      "minimum_tr_ms": 144,
+      "accepted": true,
+      "one_ms_below_rejected": true,
+      "below_messages": [
+        "TR too short, increase to 144 ms"
+      ],
+      "ppr_sha256": "0a15729ec468396efbf2da04698242dac670c5da7518e93d44de71960eebf160",
+      "pass": true
+    },
+    {
+      "version": "v182",
+      "dwell_us": 16,
+      "nav_on": 2,
+      "minimum_esp_ms": 10,
+      "minimum_tr_ms": 154,
+      "accepted": true,
+      "one_ms_below_rejected": true,
+      "below_messages": [
+        "TR too short, increase to 154 ms"
+      ],
+      "ppr_sha256": "ce5e52620c4c80339fb982af384a1264add16e26458b53a1724e9a034a1990bc",
+      "pass": true
+    },
+    {
+      "version": "v1912",
+      "dwell_us": 50,
+      "nav_on": 0,
+      "minimum_esp_ms": 13,
+      "minimum_tr_ms": 193,
+      "accepted": true,
+      "one_ms_below_rejected": true,
+      "below_messages": [
+        "TR too short, increase to 193 ms"
+      ],
+      "ppr_sha256": "c767480adf933f8dc26a5f034ca62170316b991037ebd6f157c4d996d1f1598d",
+      "pass": true
+    },
+    {
+      "version": "v1912",
+      "dwell_us": 50,
+      "nav_on": 2,
+      "minimum_esp_ms": 13,
+      "minimum_tr_ms": 206,
+      "accepted": true,
+      "one_ms_below_rejected": true,
+      "below_messages": [
+        "TR too short, increase to 206 ms"
+      ],
+      "ppr_sha256": "c61aff5b946be38d2d14b117b8b88453426b9b379a302ab1c2ea0fb9e8bad1ed",
+      "pass": true
+    },
+    {
+      "version": "v1912",
+      "dwell_us": 25,
+      "nav_on": 0,
+      "minimum_esp_ms": 10,
+      "minimum_tr_ms": 167,
+      "accepted": true,
+      "one_ms_below_rejected": true,
+      "below_messages": [
+        "TR too short, increase to 167 ms"
+      ],
+      "ppr_sha256": "b1922cd80bd4ed0ba164832973b61431495493295c105aedd4518cbabd7e83cb",
+      "pass": true
+    },
+    {
+      "version": "v1912",
+      "dwell_us": 25,
+      "nav_on": 2,
+      "minimum_esp_ms": 10,
+      "minimum_tr_ms": 177,
+      "accepted": true,
+      "one_ms_below_rejected": true,
+      "below_messages": [
+        "TR too short, increase to 177 ms"
+      ],
+      "ppr_sha256": "b7bdf7ac9011131079295437020642ae04e3644408e8b01c09a087cf02003d29",
+      "pass": true
+    },
+    {
+      "version": "v1912",
+      "dwell_us": 20,
+      "nav_on": 0,
+      "minimum_esp_ms": 10,
+      "minimum_tr_ms": 167,
+      "accepted": true,
+      "one_ms_below_rejected": true,
+      "below_messages": [
+        "TR too short, increase to 167 ms"
+      ],
+      "ppr_sha256": "66c191deee849d8fbd4bb836c67a60715d7ab3ad6a54a44b829ae80b6dc1af60",
+      "pass": true
+    },
+    {
+      "version": "v1912",
+      "dwell_us": 20,
+      "nav_on": 2,
+      "minimum_esp_ms": 10,
+      "minimum_tr_ms": 177,
+      "accepted": true,
+      "one_ms_below_rejected": true,
+      "below_messages": [
+        "TR too short, increase to 177 ms"
+      ],
+      "ppr_sha256": "86d144a3aff4f72fc17a45c40d9fef58eca0b1be717d9b1bdeeae8a73ac445b4",
+      "pass": true
+    },
+    {
+      "version": "v1912",
+      "dwell_us": 16,
+      "nav_on": 0,
+      "minimum_esp_ms": 10,
+      "minimum_tr_ms": 166,
+      "accepted": true,
+      "one_ms_below_rejected": true,
+      "below_messages": [
+        "TR too short, increase to 166 ms"
+      ],
+      "ppr_sha256": "d785c0ea5a238ac1331871bb99fb45fab80a777c234db04419cb2d8b35639263",
+      "pass": true
+    },
+    {
+      "version": "v1912",
+      "dwell_us": 16,
+      "nav_on": 2,
+      "minimum_esp_ms": 10,
+      "minimum_tr_ms": 176,
+      "accepted": true,
+      "one_ms_below_rejected": true,
+      "below_messages": [
+        "TR too short, increase to 176 ms"
+      ],
+      "ppr_sha256": "47d39355bdb0eb5fba3a80001fd7e672df734702328739adc8397363cfc02eba",
+      "pass": true
+    }
+  ],
+  "pass": true
+}

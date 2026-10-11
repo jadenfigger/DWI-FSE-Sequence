@@ -1,0 +1,72 @@
+{
+  "scope": "Targeted v1.912 nav0/nav1 physical identity gate against v1.911; nominal cost model only. Supplements, does not replace, the stable full-run checks.",
+  "tolerance": "mapper event signatures rounded to 1 ns; matrix values exact, matrix write timestamps informational",
+  "hashes_before": {
+    "ppl": {
+      "v1911": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682",
+      "v1912": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423"
+    },
+    "ppr": {
+      "v1911_nav0": "8aeec1601d853523421651e43925f2411159f7daf637057e3d7a7277b7fa05de",
+      "v1911_nav1": "2a516181a968a663a19e9df31540934e6c8740042d7d4cef7f7bc0ba6f703a0b",
+      "v1912_nav0": "b4e68f119d3bafbc0b8e37af133223160995f031ef020fd8dddbd38d854100f8",
+      "v1912_nav1": "fcb1756efc3198e5f6fc071970071311da2565377d6ab07a2c2aa93a5624c82e"
+    },
+    "v182_control_ppl": "9c53507fd98073a522ee0f1827d9d95d4c82920a8bac30cfc044fac59eb56e36",
+    "validator": "118fcf43b4fbdc7cbf64e1f8eed82de91509dcfcea5043dae434b8514084ae3b"
+  },
+  "hashes_after": {
+    "ppl": {
+      "v1911": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682",
+      "v1912": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423"
+    },
+    "ppr": {
+      "v1911_nav0": "8aeec1601d853523421651e43925f2411159f7daf637057e3d7a7277b7fa05de",
+      "v1911_nav1": "2a516181a968a663a19e9df31540934e6c8740042d7d4cef7f7bc0ba6f703a0b",
+      "v1912_nav0": "b4e68f119d3bafbc0b8e37af133223160995f031ef020fd8dddbd38d854100f8",
+      "v1912_nav1": "fcb1756efc3198e5f6fc071970071311da2565377d6ab07a2c2aa93a5624c82e"
+    },
+    "v182_control_ppl": "9c53507fd98073a522ee0f1827d9d95d4c82920a8bac30cfc044fac59eb56e36",
+    "validator": "118fcf43b4fbdc7cbf64e1f8eed82de91509dcfcea5043dae434b8514084ae3b"
+  },
+  "inputs_stable_during_run": true,
+  "cases": [
+    {
+      "nav_on": 0,
+      "raw_no_views": 128,
+      "shots": 1,
+      "RF_identical": true,
+      "ADC_identical": true,
+      "played_SPR_identical": {
+        "S": true,
+        "P": true,
+        "R": true
+      },
+      "matrix_values_identical": true,
+      "matrix_write_timestamps_identical": false,
+      "max_matrix_write_shift_us": 0.8,
+      "effective_RF_phase_frequency_trace_identical": false,
+      "physical_event_identity": true,
+      "pass": true
+    },
+    {
+      "nav_on": 1,
+      "raw_no_views": 136,
+      "shots": 2,
+      "RF_identical": true,
+      "ADC_identical": true,
+      "played_SPR_identical": {
+        "S": true,
+        "P": true,
+        "R": true
+      },
+      "matrix_values_identical": true,
+      "matrix_write_timestamps_identical": false,
+      "max_matrix_write_shift_us": 0.8,
+      "effective_RF_phase_frequency_trace_identical": false,
+      "physical_event_identity": true,
+      "pass": true
+    }
+  ],
+  "pass": true
+}

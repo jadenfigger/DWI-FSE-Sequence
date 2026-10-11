@@ -1,0 +1,48 @@
+[
+  {
+    "label": "v182",
+    "dwell": 50,
+    "below": 13,
+    "adc": 0,
+    "minimum": 14.0,
+    "messages": [
+      "Minimum TE = 53532 us",
+      "Minimum esp = 14 ms (13702 us)",
+      "esp too short: increase esp to at least 14 ms"
+    ]
+  },
+  {
+    "label": "v182",
+    "dwell": 25,
+    "below": 10,
+    "adc": 0,
+    "minimum": 11.0,
+    "messages": [
+      "Minimum TE = 50332 us",
+      "Minimum esp = 11 ms (10502 us)",
+      "esp too short: increase esp to at least 11 ms"
+    ]
+  },
+  {
+    "label": "v1912",
+    "dwell": 50,
+    "below": 12,
+    "adc": 0,
+    "minimum": 13.0,
+    "messages": [
+      "V1912 minimum ESP=13 ms",
+      "V19 error E147"
+    ]
+  },
+  {
+    "label": "v1912",
+    "dwell": 25,
+    "below": 9,
+    "adc": 0,
+    "minimum": 10.0,
+    "messages": [
+      "V1912 minimum ESP=10 ms",
+      "V19 error E147"
+    ]
+  }
+]

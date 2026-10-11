@@ -1,0 +1,145 @@
+{
+  "status": "reproducible quantized RF sample profile estimate; not scanner verification",
+  "method": {
+    "profile_count": 3,
+    "description": "One independent 1D spatial Bloch profile per RF pulse; no protocol/event grid.",
+    "positions": 6001,
+    "adapted_z_range_mm": [
+      -10.0,
+      10.0
+    ],
+    "dwell_us": 10,
+    "gamma_Hz_T": 42576000.0,
+    "adaptation_gradient_scale": 6.0,
+    "threshold_rule": "First outward position beyond nominal half-width where all farther profile samples through the simulated boundary remain below threshold, divided by center response.",
+    "symmetric_side_check": "Both sides evaluated independently; conservative side reported.",
+    "phase_handling": "Response norms and Mz inversion fraction are invariant to z-axis pre/post phase rotations; no phase correction is needed for these magnitude metrics."
+  },
+  "sample_provenance": {
+    "contract_json": "docs/v19/reference_rf/real_rf_contract.json",
+    "contract_json_sha256": "86b3f78ed93854f82255a4bcef0a883c6e678a2d0ea6b42d2fa70b39735303c4",
+    "contract_npz": "docs/v19/reference_rf/real_rf_contract.npz",
+    "contract_npz_sha256": "6fe60835a2916ac960d28fe8fbce1c889f75cbbc5598ed1cc0fefb77136fb446",
+    "wavEd_decoder": "dwfse/vendor_seq.py:decode",
+    "all_three_vendor_frames_match_quantized_dac_samples_exactly": true
+  },
+  "pulses": [
+    {
+      "name": "v19_slrprep90",
+      "vendor_library": "scanner/rf/v19_slrprep90.seq",
+      "vendor_library_sha256": "ba1c47b36159676f3b1ede6be0166222a3115e29e8dd160d3f91d60d429d610e",
+      "decoded_frame_name": "v19_slrprep90",
+      "decoded_sample_count": 320,
+      "decoded_wait_ticks": 100,
+      "decoded_samples_exactly_match_quantized_contract": true,
+      "numerical_csv": "docs/v19/reference_rf/v19_slrprep90.csv",
+      "numerical_csv_sha256": "66a2f4576fc9584920986b89873c4c311acada354d155f3bceae39cf9aefeade",
+      "quantized_dac_samples_sha256": "659dfb490552f0daa56838ad3f9a8f2e721d7e4b94f2224865fb809c125a323c",
+      "reference_width_mm": 18.0,
+      "adapted_width_mm": 3.0,
+      "response_metric": "Mz_to_Mxy",
+      "center_response_before_normalization": 0.9999999999999984,
+      "transition_margins": {
+        "5.00%": {
+          "margin_mm_each_side": [
+            0.6899999999999992,
+            0.6900000000000001
+          ],
+          "conservative_margin_mm": 0.6900000000000001,
+          "margin_in_1mm_slice_thicknesses": 0.6900000000000001
+        },
+        "1.00%": {
+          "margin_mm_each_side": [
+            2.6266666666666656,
+            2.6266666666666665
+          ],
+          "conservative_margin_mm": 2.6266666666666665,
+          "margin_in_1mm_slice_thicknesses": 2.6266666666666665
+        }
+      }
+    },
+    {
+      "name": "v19_slrprep180",
+      "vendor_library": "scanner/rf/v19_slrprep180.seq",
+      "vendor_library_sha256": "12893aa1c5b41b8e6b413d2c66309e1ec04be5ab0c183c68bbe77655863de432",
+      "decoded_frame_name": "v19_slrprep180",
+      "decoded_sample_count": 320,
+      "decoded_wait_ticks": 100,
+      "decoded_samples_exactly_match_quantized_contract": true,
+      "numerical_csv": "docs/v19/reference_rf/v19_slrprep180.csv",
+      "numerical_csv_sha256": "9aa0e79b8213cbdde883f85ff7b0ef8798225a18ab7a4b6f4f00b62f231c6c4a",
+      "quantized_dac_samples_sha256": "6f10c10b6ef0f9d3a75e56a33bccfd0f92986a22222bfbb815ab2f4375d33cea",
+      "reference_width_mm": 18.0,
+      "adapted_width_mm": 3.0,
+      "response_metric": "Mz_inversion_fraction",
+      "center_response_before_normalization": 1.0000000000000004,
+      "transition_margins": {
+        "5.00%": {
+          "margin_mm_each_side": [
+            0.32666666666666566,
+            0.3266666666666674
+          ],
+          "conservative_margin_mm": 0.3266666666666674,
+          "margin_in_1mm_slice_thicknesses": 0.3266666666666674
+        },
+        "1.00%": {
+          "margin_mm_each_side": [
+            0.5166666666666666,
+            0.5166666666666666
+          ],
+          "conservative_margin_mm": 0.5166666666666666,
+          "margin_in_1mm_slice_thicknesses": 0.5166666666666666
+        }
+      }
+    },
+    {
+      "name": "v19_slrtip90",
+      "vendor_library": "scanner/rf/v19_slrtip90.seq",
+      "vendor_library_sha256": "12011e69db23614590d9f1d8b7222d28667c49e54c2a387a7f30b130a584f6df",
+      "decoded_frame_name": "v19_slrtip90",
+      "decoded_sample_count": 320,
+      "decoded_wait_ticks": 100,
+      "decoded_samples_exactly_match_quantized_contract": true,
+      "numerical_csv": "docs/v19/reference_rf/v19_slrtip90.csv",
+      "numerical_csv_sha256": "26bc43927484f8485f7fd8d2ee7640e9c72659d6980ed2a48a836b253f09ef2f",
+      "quantized_dac_samples_sha256": "290466681597e62bd6cab8c6f77ff0e9467370e2f7298085bf7b330e5db38c64",
+      "reference_width_mm": 10.0,
+      "adapted_width_mm": 1.6666666666666667,
+      "response_metric": "Mxy_to_Mz",
+      "center_response_before_normalization": 0.9999999999999994,
+      "transition_margins": {
+        "5.00%": {
+          "margin_mm_each_side": [
+            0.4499999999999991,
+            0.45000000000000084
+          ],
+          "conservative_margin_mm": 0.45000000000000084,
+          "margin_in_1mm_slice_thicknesses": 0.45000000000000084
+        },
+        "1.00%": {
+          "margin_mm_each_side": [
+            1.1866666666666656,
+            1.1866666666666674
+          ],
+          "conservative_margin_mm": 1.1866666666666674,
+          "margin_in_1mm_slice_thicknesses": 1.1866666666666674
+        }
+      }
+    }
+  ],
+  "selected_spacing_margin": {
+    "value_mm": 0.75,
+    "slice_thickness_mm": 1.0,
+    "value_in_slice_thicknesses": 0.75,
+    "criterion": "5% normalized response",
+    "maximum_measured_pulse_margin_mm": 0.6900000000000001,
+    "maximum_measured_pulse_margin_in_slice_thicknesses": 0.6900000000000001,
+    "interpretation": "0.75 slice is a rounded conservative margin over the largest measured 5% transition; it is not a 1% guarantee."
+  },
+  "limitations": [
+    "The library sample match proves local binary sample identity, not vendor loading, PPL gating, transmit calibration, or scanner playback.",
+    "Bloch profiles use the contract's nominal normalized RF amplitudes and ideal centered gradients; physical B1 and gradient calibration are not measured.",
+    "Per-pulse transitions do not model cross-talk or the complete preparation, crusher, re-excitation, and acquisition pathway.",
+    "The selected 5% margin is intentionally not a 1% side-lobe guarantee; the prep90 1% margin is substantially larger."
+  ]
+}

@@ -1,6 +1,9 @@
 import os
 import re
 import json
+from pathlib import Path
+from effective_b import effective_b, write_b_sidecars
+from shot_navigator import split_mode2, correct_shot_phase
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 import matplotlib.pyplot as plt
 import numpy as np
@@ -33,6 +36,8 @@ nav_mode        = "deramp"   # "deramp" = Zhou Eq.5 analogue (remove steps, keep
 nav_apply_phase = True       # Zhou uses magnitude only; keep True but watch the printout
 nav_eps         = 0.01       # Wiener regularizer, fraction of echo-1 amplitude
 nav_report      = True       # print the envelope table + plot it
+shot_nav_mode = "constant+linear"  # "off", "constant", "constant+linear"
+b_calibration_path = Path(__file__).with_name("b_calibration.json")
 nav_report_slice = 0         # only print/plot the nav diagnostics for this slice
 
 # --- SLICE ORDER ---
@@ -149,8 +154,8 @@ def pe_rows(N, etl, pe_order):
     """Image-row indices in acquisition order; navigator is handled separately."""
     if pe_order not in (1, 6, 7):
         raise ValueError("Supported PE_order values are 1, 6, and 7.")
-    if etl < 2 or N <= 0 or N % 2 or N % etl:
-        raise ValueError("Need ETL > 1 and positive, even imaging views divisible by ETL.")
+    if etl < 1 or N <= 0 or N % 2 or N % etl:
+        raise ValueError("Need ETL >= 1 and positive, even imaging views divisible by ETL.")
     shots = N // etl
     s = np.arange(shots)[:, None]
     e = np.arange(etl)[None, :]
@@ -342,6 +347,8 @@ def nav_fit_t2_per_x(nav_lines, esp_ms, frac=0.15):
         np.fft.ifft(np.fft.ifftshift(nav_lines, axes=1), axis=1), axes=1))
 
     etl, n_samples = proj.shape
+    if etl == 1:
+        return np.full(n_samples, np.nan), np.nan, np.nan  # T2 needs at least two echoes
     te_array = np.arange(1, etl + 1) * esp_ms  # Array of echo times in ms
 
     # Mask out noise/background based on peak threshold of the first echo
@@ -389,334 +396,392 @@ def plot_t2_profile(t2_map, exp_idx, slice_idx, save_dir):
     plt.close(fig)
 
 
-kspace, dim, params = get_mrd_3d4(filename, "seq", "seq")
-print(dim)
-no_expts = dim[0]
-no_slices = dim[2]
-no_views = dim[4]
-no_samples = dim[5]
+def run_recon(filename, output_dir=None):
+    """Reconstruct an MRD; output_dir can safely redirect archived-scan outputs."""
+    filename = str(filename)
+    output_dir = str(output_dir or Path(filename).parent)
+    Path(output_dir).mkdir(parents=True, exist_ok=True)
+    kspace, dim, params = get_mrd_3d4(filename, "seq", "seq")
+    print(dim)
+    no_expts = dim[0]
+    no_slices = dim[2]
+    no_views = dim[4]
+    no_samples = dim[5]
 
-header_text = read_header_text(filename)
-check_sidecar_ppr(filename, header_text)
-diff = read_diffusion(header_text)
+    header_text = read_header_text(filename)
+    check_sidecar_ppr(filename, header_text)
+    diff = read_diffusion(header_text)
 
-etl = int(params['views_per_seg'])
-pe_order = read_pe_order(header_text, pe_order_override)
-tr = params['tr']
-te = params['te']
-esp = params['esp']
-b_mode = diff['mode']
-tcrush = params['tcrush']
-diff_tcrush = params['diff_tcrush']
-diff_on = int(params['diff_on'])
-if pe_order in (6, 7):
-    if not diff_on or ppr_var(header_text, "PF_echoes", 0) not in (0, etl):
-        raise ValueError("PE_order 6/7 require diffusion mode and full Fourier.")
-    if ppr_var(header_text, "echoes_to_discard", 0) != 0:
-        raise ValueError("PE_order 6/7 do not support discarded initial echoes.")
+    etl = int(params['views_per_seg'])
+    pe_order = read_pe_order(header_text, pe_order_override)
+    tr = params['tr']
+    te = params['te']
+    esp = params['esp']
+    b_mode = diff['mode']
+    tcrush = params['tcrush']
+    diff_tcrush = params['diff_tcrush']
+    diff_on = int(params['diff_on'])
+    if pe_order in (6, 7):
+        if not diff_on or ppr_var(header_text, "PF_echoes", 0) not in (0, etl):
+            raise ValueError("PE_order 6/7 require diffusion mode and full Fourier.")
+        if ppr_var(header_text, "echoes_to_discard", 0) != 0:
+            raise ValueError("PE_order 6/7 do not support discarded initial echoes.")
 
-print("=== MRD Header Parameters ===")
-print(f"Number of Experiments: {no_expts}")
-print(f"Number of Slices: {no_slices}")
-print(f"Number of Views: {no_views}")
-print(f"Number of Samples: {no_samples}")
-print(f"Views per Segment (ETL): {etl}")
-print(f"PE_order: {pe_order} "
-      f"({'manual override' if pe_order_override is not None else 'embedded MRD header'})")
-print(f"TR: {tr} ms")
-print(f"TE: {te} ms")
-print(f"ESP: {esp} ms")
-print(f"tcrush: {tcrush} us")
-print(f"diff tcrush: {diff_tcrush} us")
-print(f"diff on: {diff_on}")
-print(f"b-mode: {b_mode}  (0 = DAC entered, 1 = b entered)")
-print(f"delta / Delta: {diff['delta']} / {diff['big_delta']} ms")
-if diff['b'] is not None:
-    print(f"b values (s/mm^2): {np.round(diff['b'], 1)}")
-if diff['dac'] is not None:
-    print(f"gradient DAC: {np.round(diff['dac'], 1)}")
-print(f"directions:\n{np.round(diff['unit'], 3)}")
-print(f"slice interleave: {int(params.get('slice_interleave', 1))}  "
-      "(storage order in the MRD is unaffected by this; see slice_order above)")
-rx_gain = re.findall(r":_ObserveReceiverGain\s+(-?\d+)", header_text)
-tx_gain = re.findall(r":_ObserveTransmitGain\s+(-?\d+)", header_text)
-print(f"RX gain: {rx_gain}  TX gain: {tx_gain}  "
-      "-- absolute intensities are only comparable between scans at equal RX gain")
+    print("=== MRD Header Parameters ===")
+    print(f"Number of Experiments: {no_expts}")
+    print(f"Number of Slices: {no_slices}")
+    print(f"Number of Views: {no_views}")
+    print(f"Number of Samples: {no_samples}")
+    print(f"Views per Segment (ETL): {etl}")
+    print(f"PE_order: {pe_order} "
+          f"({'manual override' if pe_order_override is not None else 'embedded MRD header'})")
+    print(f"TR: {tr} ms")
+    print(f"TE: {te} ms")
+    print(f"ESP: {esp} ms")
+    print(f"tcrush: {tcrush} us")
+    print(f"diff tcrush: {diff_tcrush} us")
+    print(f"diff on: {diff_on}")
+    print(f"b-mode: {b_mode}  (0 = DAC entered, 1 = b entered)")
+    print(f"delta / Delta: {diff['delta']} / {diff['big_delta']} ms")
+    if diff['b'] is not None:
+        print(f"b values (s/mm^2): {np.round(diff['b'], 1)}")
+    if diff['dac'] is not None:
+        print(f"gradient DAC: {np.round(diff['dac'], 1)}")
+    print(f"directions:\n{np.round(diff['unit'], 3)}")
+    print(f"slice interleave: {int(params.get('slice_interleave', 1))}  "
+          "(storage order in the MRD is unaffected by this; see slice_order above)")
+    rx_gain = re.findall(r":_ObserveReceiverGain\s+(-?\d+)", header_text)
+    tx_gain = re.findall(r":_ObserveTransmitGain\s+(-?\d+)", header_text)
+    print(f"RX gain: {rx_gain}  TX gain: {tx_gain}  "
+          "-- absolute intensities are only comparable between scans at equal RX gain")
 
-nav_on = int(ppr_var(header_text, "nav_on", params.get('nav_on', 0)))
-acq_offset = etl if nav_on else 0
-N = no_views - acq_offset          # true number of image lines (128, not 160)
-
-rows = pe_rows(N, etl, pe_order)
-echo_idx = np.arange(N) % etl  # echo number (0-based) for each image acquisition
-
-k_acq_all = np.zeros((no_views, no_samples, no_slices, no_expts), dtype=np.complex64)  # raw, incl. nav
-k_sort_all = np.zeros((N, no_samples, no_slices, no_expts), dtype=np.complex64)
-img_all = np.zeros((N, no_samples, no_slices, no_expts), dtype=np.float64)
-
-for exp_idx in range(no_expts):
-    for slice_idx in range(no_slices):
-        k_acq = kspace[exp_idx, 0, slice_idx, 0, :, :]
-        k_acq_all[:, :, slice_idx, exp_idx] = k_acq
-
-        k_img = k_acq[acq_offset:, :]  # drop the nav shot, leaving true image rows
-        k_sorted = np.zeros((N, no_samples), dtype=np.complex64)
-        k_sorted[rows, :] = k_img
-
-        if nav_on:
-            nav_amp, nav_phase, nav_lines = nav_envelope(k_acq, etl)
-
-            # Calculate T2(x) per readout position (Zhou et al. style)
-            t2_map, mean_t2, std_t2 = nav_fit_t2_per_x(nav_lines, esp_ms=esp)
-
-            if nav_report and slice_idx == nav_report_slice:
-                spread = nav_profile_spread(nav_lines)
-                print(f"\n--- navigator envelope, exp {exp_idx + 1}, slice {slice_idx + 1} "
-                      f"(mode={nav_mode}, phase={'on' if nav_apply_phase else 'off'}) ---")
-                print("echo    amp   phase(deg)   spread(%)")
-                for n in range(etl):
-                    sp = f"{100 * spread[n]:8.1f}" if spread is not None else "     n/a"
-                    print(f"{n + 1:4d}  {nav_amp[n]:6.3f}  {np.degrees(nav_phase[n]):9.1f}  {sp}")
-
-                # Diagnostic for spatial variation of T2
-                print(f"\n[Zhou Diagnostic] Fitted Spatial T2(x): Mean = {mean_t2:.2f} ms | Std = {std_t2:.2f} ms")
-                if not np.isnan(mean_t2) and (std_t2 / mean_t2) > 0.10:
-                    print("  WARNING: T2 varies >10% across the object readout. A 1D scalar correction "
-                          "may leave residual phase-encode artifacts.")
-                else:
-                    print("  INFO: T2(x) is relatively uniform across the object readout. Scalar correction is sufficient.")
-
-                if plot_t2_toggle is True:
-                    # Save diagnostic plot of T2(x)
-                    plot_t2_profile(t2_map, exp_idx, slice_idx, os.path.dirname(filename))
-
-            if nav_mode != "off":
-                corr = nav_correction(nav_amp, nav_phase, echo_idx, rows, N,
-                                      nav_mode, nav_apply_phase, nav_eps, pe_order)
-                k_sorted[rows, :] *= corr[:, None]
-
-        k_sort_all[:, :, slice_idx, exp_idx] = k_sorted
-
-        img_all[:, :, slice_idx, exp_idx] = np.abs(
-            np.fft.fftshift(
-                np.fft.ifft2(np.fft.ifftshift(k_sorted, axes=(0, 1)), axes=(0, 1)),
-                axes=(0, 1),
-            )
-        )
-
-if slice_order is not None:
-    k_acq_all = k_acq_all[:, :, slice_order, :]
-    k_sort_all = k_sort_all[:, :, slice_order, :]
-    img_all = img_all[:, :, slice_order, :]
-
-if no_slices > 1:
-    report_slice_overlap(
-        read_slice_offsets(header_text),
-        read_thickness(header_text),
-        np.percentile(img_all[:, :, :, 0], 99.5, axis=(0, 1)),
-    )
-
-
-su.print_snr(
-    img_all.reshape(N, no_samples, -1),
-    labels=[f"exp {e + 1} slice {z + 1}" for z in range(no_slices) for e in range(no_expts)],
-    noise_width=16,
-    mask_method="max_fraction",
-)
-
-
-# Helper function to plot and apply formatting rules depending on the mode
-def render_plot(data, title, save_filename, is_line_plot=False):
-    fig, ax = plt.subplots(num=title if not save_images_mode else None)
-
-    if save_images_mode:
-        fig.patch.set_facecolor('black')
-        ax.set_facecolor('black')
-
-        if is_line_plot:
-            ax.axis('off')
-            ax.plot(data, label="Energy", color='white')
-        else:
-            im = ax.imshow(data, cmap="gray", aspect="equal")
-
-            # Hide tick marks/frames on main image, but keep axis space structured
-            ax.set_xticks([])
-            ax.set_yticks([])
-            for spine in ax.spines.values():
-                spine.set_visible(False)
-
-            # Fix colorbar dimensions relative to the image axis
-            divider = make_axes_locatable(ax)
-            cax = divider.append_axes("right", size="5%", pad=0.1)
-            cbar = fig.colorbar(im, cax=cax)
-
-            # Style colorbar ticks (white text, max 3 chars formatted, no extra lines)
-            cbar.ax.yaxis.set_tick_params(color='white', labelcolor='white')
-            cbar.formatter.set_powerlimits((-2, 3))
-            cbar.formatter.set_useOffset(False)
-            cbar.ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, pos: f"{val:.2g}"[:3]))
-            cbar.update_ticks()
-            cbar.outline.set_edgecolor('none')
-
-        fig.savefig(
-            os.path.join(os.path.dirname(filename), save_filename),
-            dpi=300,
-            facecolor=fig.get_facecolor(),
-            edgecolor='none',
-            bbox_inches='tight',
-            pad_inches=0.1
-        )
-        plt.close(fig)
+    nav_value = ppr_var(header_text, "nav_on", params.get('nav_on', 0))
+    if nav_value not in (0, 1, 2):
+        raise ValueError(f"Unsupported embedded nav_on={nav_value}; expected 0, 1, or 2")
+    nav_on = int(nav_value)
+    acq_offset = etl if nav_on == 1 else 0
+    if nav_on == 2:
+        declared = re.search(r":NO_VIEWS\s+\w+,\s*(\d+)", header_text)
+        if not declared:
+            raise ValueError("nav_on=2 requires embedded NO_VIEWS")
+        declared_raw = int(declared[1])
+        if declared_raw != no_views or declared_raw % (etl + 1):
+            raise ValueError("nav_on=2 requires embedded NO_VIEWS to equal MRD raw views and be divisible by ETL+1")
+        N = (declared_raw // (etl + 1) - 1) * etl
+        split_mode2(kspace[0, 0, 0, 0], etl, N)  # validate before processing
     else:
-        if is_line_plot:
-            ax.plot(data)
-            ax.set_yscale("log")
-        else:
-            im = ax.imshow(data, cmap="gray", aspect="equal")
-            divider = make_axes_locatable(ax)
-            cax = divider.append_axes("right", size="5%", pad=0.1)
-            cbar = fig.colorbar(im, cax=cax)
-            cbar.ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, pos: f"{val:.2g}"[:3]))
+        N = no_views - acq_offset          # true number of image lines (128, not 160)
 
-        ax.set_title(title)
-        if not is_line_plot and "Image" not in title:
-            ax.set_xlabel("Readout (samples)")
-            ax.set_ylabel("k_y line")
-        elif is_line_plot:
-            ax.set_xlabel("k-space row")
-            ax.set_ylabel("energy")
+    rows = pe_rows(N, etl, pe_order)
+    echo_idx = np.arange(N) % etl  # echo number (0-based) for each image acquisition
 
-# Loop over each experiment and slice to generate separate individual figures
-if save_images_mode is not None:
+    k_acq_all = np.zeros((no_views, no_samples, no_slices, no_expts), dtype=np.complex64)  # raw, incl. nav
+    k_sort_all = np.zeros((N, no_samples, no_slices, no_expts), dtype=np.complex64)
+    img_all = np.zeros((N, no_samples, no_slices, no_expts), dtype=np.float64)
+
+    shot_nav_qa = []
     for exp_idx in range(no_expts):
         for slice_idx in range(no_slices):
-            tag = f"exp_{exp_idx + 1}_slice_{slice_idx + 1}"
-            label = f"Exp {exp_idx + 1}, Slice {slice_idx + 1}"
+            k_acq = kspace[exp_idx, 0, slice_idx, 0, :, :]
+            k_acq_all[:, :, slice_idx, exp_idx] = k_acq
 
-            # 1. Reconstructed Image
-            render_plot(
-                img_all[:, :, slice_idx, exp_idx],
-                f"Reconstructed Image - {label}",
-                f"reconstructed_image_{tag}.png"
+            if nav_on == 2:
+                volume_nav, k_img, shot_nav = split_mode2(k_acq, etl, N)
+                k_img, qa = correct_shot_phase(k_img, shot_nav, etl, shot_nav_mode)
+                qa.update(Experiment=exp_idx + 1, Slice=slice_idx + 1)
+                shot_nav_qa.append(qa)
+            else:
+                k_img = k_acq[acq_offset:, :]  # unchanged mode 0/1 path
+            k_sorted = np.zeros((N, no_samples), dtype=np.complex64)
+            k_sorted[rows, :] = k_img
+
+            if nav_on in (1, 2):
+                nav_amp, nav_phase, nav_lines = nav_envelope(k_acq, etl)
+
+                # Calculate T2(x) per readout position (Zhou et al. style)
+                t2_map, mean_t2, std_t2 = nav_fit_t2_per_x(nav_lines, esp_ms=esp)
+
+                if nav_report and slice_idx == nav_report_slice:
+                    spread = nav_profile_spread(nav_lines)
+                    print(f"\n--- navigator envelope, exp {exp_idx + 1}, slice {slice_idx + 1} "
+                          f"(mode={nav_mode}, phase={'on' if nav_apply_phase else 'off'}) ---")
+                    print("echo    amp   phase(deg)   spread(%)")
+                    for n in range(etl):
+                        sp = f"{100 * spread[n]:8.1f}" if spread is not None else "     n/a"
+                        print(f"{n + 1:4d}  {nav_amp[n]:6.3f}  {np.degrees(nav_phase[n]):9.1f}  {sp}")
+
+                    # Diagnostic for spatial variation of T2
+                    print(f"\n[Zhou Diagnostic] Fitted Spatial T2(x): Mean = {mean_t2:.2f} ms | Std = {std_t2:.2f} ms")
+                    if np.isnan(mean_t2):
+                        print("  INFO: T2(x) cannot be estimated from this navigator train.")
+                    elif (std_t2 / mean_t2) > 0.10:
+                        print("  WARNING: T2 varies >10% across the object readout. A 1D scalar correction "
+                              "may leave residual phase-encode artifacts.")
+                    else:
+                        print("  INFO: T2(x) is relatively uniform across the object readout. Scalar correction is sufficient.")
+
+                    if plot_t2_toggle is True:
+                        # Save diagnostic plot of T2(x)
+                        plot_t2_profile(t2_map, exp_idx, slice_idx, output_dir)
+
+                if nav_mode != "off":
+                    corr = nav_correction(nav_amp, nav_phase, echo_idx, rows, N,
+                                          nav_mode, nav_apply_phase, nav_eps, pe_order)
+                    k_sorted[rows, :] *= corr[:, None]
+
+            k_sort_all[:, :, slice_idx, exp_idx] = k_sorted
+
+            img_all[:, :, slice_idx, exp_idx] = np.abs(
+                np.fft.fftshift(
+                    np.fft.ifft2(np.fft.ifftshift(k_sorted, axes=(0, 1)), axes=(0, 1)),
+                    axes=(0, 1),
+                )
             )
 
-            # # 2. Reordered K-Space
-            # render_plot(
-            #     np.abs(k_sort_all[:, :, slice_idx, exp_idx]),
-            #     f"Reordered Normal K-Space - {label}",
-            #     f"reordered_kspace_{tag}.png"
-            # )
+    if slice_order is not None:
+        k_acq_all = k_acq_all[:, :, slice_order, :]
+        k_sort_all = k_sort_all[:, :, slice_order, :]
+        img_all = img_all[:, :, slice_order, :]
 
-            # 3. Reordered Log K-Space
-            render_plot(
-                np.log(1 + np.abs(k_sort_all[:, :, slice_idx, exp_idx])),
-                f"Reordered Log K-Space - {label}",
-                f"reordered_log_kspace_{tag}.png"
-            )
+    if no_slices > 1:
+        report_slice_overlap(
+            read_slice_offsets(header_text),
+            read_thickness(header_text),
+            np.percentile(img_all[:, :, :, 0], 99.5, axis=(0, 1)),
+        )
 
-            # # 3. Phase of Reordered K-Space
-            # render_plot(
-            #     np.angle(k_sort_all[:, :, slice_idx, exp_idx]),
-            #     f"Phase of Reordered K-Space - {label}",
-            #     f"phase_reordered_kspace_{tag}.png"
-            # )
 
-            # # 3. Acquired K-Space
-            # render_plot(
-            #     np.log(np.abs(k_acq_all[:, :, slice_idx, exp_idx]) + 1),
-            #     f"Acquired K-Space - {label}",
-            #     f"acquired_kspace_{tag}.png"
-            # )
-
-            # # 4. Sorted Row Energy
-            # row_energy_sorted = np.sum(np.abs(k_sort_all[:, :, slice_idx, exp_idx]) ** 2, axis=1)
-            # render_plot(
-            #     row_energy_sorted,
-            #     f"Sorted Row Energy - {label}",
-            #     f"sorted_kspace_{tag}.png",
-            #     is_line_plot=True
-            # )
-
-            # # 5. Acquired Row Energy
-            # row_energy = np.sum(np.abs(k_acq_all[:, :, slice_idx, exp_idx]) ** 2, axis=1)
-            # render_plot(
-            #     row_energy,
-            #     f"Acquired Row Energy - {label}",
-            #     f"acquired_row_energy_{tag}.png",
-            #     is_line_plot=True
-            # )
-
-if save_nifti:
-    fov_mm, slice_mm = read_geometry(header_text)
-    offsets = read_slice_offsets(header_text)
-    dz_mm, z0_mm = slice_axis(offsets, slice_mm, no_slices)
-
-    stem = os.path.splitext(filename)[0]
-    step = np.arange(no_expts) % max(diff['n'], 1)     # diffusion step for each volume
-    bval = diff['b'][step] if diff['b'] is not None else None
-    dac = diff['dac'][step] if diff['dac'] is not None else None
-    bvec = diff['unit'][step]
-
-    if b_mode == 0:
-        descrip = "bmode=0 dac=" + ",".join(f"{d:g}" for d in dac)
-    else:
-        descrip = "bmode=1 b=" + ",".join(f"{b:g}" for b in bval)
-
-    write_nifti(
-        np.transpose(img_all, (1, 0, 2, 3)),           # x, y, slice, experiment
-        stem + ".nii.gz",
-        fov_mm,
-        dz_mm,
-        z0_mm,
-        descrip,
+    su.print_snr(
+        img_all.reshape(N, no_samples, -1),
+        labels=[f"exp {e + 1} slice {z + 1}" for z in range(no_slices) for e in range(no_expts)],
+        noise_width=16,
+        mask_method="max_fraction",
     )
 
-    # The NIfTI descrip field holds 80 characters, so the full table goes in a sidecar.
-    sidecar = {
-        "PEOrder": pe_order,
-        "BValueInputMode": b_mode,
-        "DiffusionOn": diff_on,
-        "SmallDelta_ms": diff['delta'],
-        "BigDelta_ms": diff['big_delta'],
-        "SliceOffsets_mm": offsets.tolist(),
-        "SliceSpacing_mm": dz_mm,
-    }
 
-    if b_mode == 0:
-        sidecar["GradientDAC"] = dac.tolist()
-    else:
-        sidecar["bval_s_per_mm2"] = bval.tolist()
+    # Helper function to plot and apply formatting rules depending on the mode
+    def render_plot(data, title, save_filename, is_line_plot=False):
+        fig, ax = plt.subplots(num=title if not save_images_mode else None)
 
-    with open(stem + ".json", "w") as fh:
-        json.dump(sidecar, fh, indent=2)
+        if save_images_mode:
+            fig.patch.set_facecolor('black')
+            ax.set_facecolor('black')
 
-    if diff_on and bval is not None:
-        with open(stem + ".bval", "w") as fh:
-            fh.write(" ".join(f"{b:g}" for b in bval) + "\n")
-        with open(stem + ".bvec", "w") as fh:
-            for axis in range(3):
-                fh.write(" ".join(f"{c:.6f}" for c in bvec[:, axis]) + "\n")
+            if is_line_plot:
+                ax.axis('off')
+                ax.plot(data, label="Energy", color='white')
+            else:
+                im = ax.imshow(data, cmap="gray", aspect="equal")
 
-if save_images_mode is False:
-    plt.show()
+                # Hide tick marks/frames on main image, but keep axis space structured
+                ax.set_xticks([])
+                ax.set_yticks([])
+                for spine in ax.spines.values():
+                    spine.set_visible(False)
+
+                # Fix colorbar dimensions relative to the image axis
+                divider = make_axes_locatable(ax)
+                cax = divider.append_axes("right", size="5%", pad=0.1)
+                cbar = fig.colorbar(im, cax=cax)
+
+                # Style colorbar ticks (white text, max 3 chars formatted, no extra lines)
+                cbar.ax.yaxis.set_tick_params(color='white', labelcolor='white')
+                cbar.formatter.set_powerlimits((-2, 3))
+                cbar.formatter.set_useOffset(False)
+                cbar.ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, pos: f"{val:.2g}"[:3]))
+                cbar.update_ticks()
+                cbar.outline.set_edgecolor('none')
+
+            fig.savefig(
+                os.path.join(output_dir, save_filename),
+                dpi=300,
+                facecolor=fig.get_facecolor(),
+                edgecolor='none',
+                bbox_inches='tight',
+                pad_inches=0.1
+            )
+            plt.close(fig)
+        else:
+            if is_line_plot:
+                ax.plot(data)
+                ax.set_yscale("log")
+            else:
+                im = ax.imshow(data, cmap="gray", aspect="equal")
+                divider = make_axes_locatable(ax)
+                cax = divider.append_axes("right", size="5%", pad=0.1)
+                cbar = fig.colorbar(im, cax=cax)
+                cbar.ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, pos: f"{val:.2g}"[:3]))
+
+            ax.set_title(title)
+            if not is_line_plot and "Image" not in title:
+                ax.set_xlabel("Readout (samples)")
+                ax.set_ylabel("k_y line")
+            elif is_line_plot:
+                ax.set_xlabel("k-space row")
+                ax.set_ylabel("energy")
+
+    # Loop over each experiment and slice to generate separate individual figures
+    if save_images_mode is not None:
+        for exp_idx in range(no_expts):
+            for slice_idx in range(no_slices):
+                tag = f"exp_{exp_idx + 1}_slice_{slice_idx + 1}"
+                label = f"Exp {exp_idx + 1}, Slice {slice_idx + 1}"
+
+                # 1. Reconstructed Image
+                render_plot(
+                    img_all[:, :, slice_idx, exp_idx],
+                    f"Reconstructed Image - {label}",
+                    f"reconstructed_image_{tag}.png"
+                )
+
+                # # 2. Reordered K-Space
+                # render_plot(
+                #     np.abs(k_sort_all[:, :, slice_idx, exp_idx]),
+                #     f"Reordered Normal K-Space - {label}",
+                #     f"reordered_kspace_{tag}.png"
+                # )
+
+                # 3. Reordered Log K-Space
+                render_plot(
+                    np.log(1 + np.abs(k_sort_all[:, :, slice_idx, exp_idx])),
+                    f"Reordered Log K-Space - {label}",
+                    f"reordered_log_kspace_{tag}.png"
+                )
+
+                # # 3. Phase of Reordered K-Space
+                # render_plot(
+                #     np.angle(k_sort_all[:, :, slice_idx, exp_idx]),
+                #     f"Phase of Reordered K-Space - {label}",
+                #     f"phase_reordered_kspace_{tag}.png"
+                # )
+
+                # # 3. Acquired K-Space
+                # render_plot(
+                #     np.log(np.abs(k_acq_all[:, :, slice_idx, exp_idx]) + 1),
+                #     f"Acquired K-Space - {label}",
+                #     f"acquired_kspace_{tag}.png"
+                # )
+
+                # # 4. Sorted Row Energy
+                # row_energy_sorted = np.sum(np.abs(k_sort_all[:, :, slice_idx, exp_idx]) ** 2, axis=1)
+                # render_plot(
+                #     row_energy_sorted,
+                #     f"Sorted Row Energy - {label}",
+                #     f"sorted_kspace_{tag}.png",
+                #     is_line_plot=True
+                # )
+
+                # # 5. Acquired Row Energy
+                # row_energy = np.sum(np.abs(k_acq_all[:, :, slice_idx, exp_idx]) ** 2, axis=1)
+                # render_plot(
+                #     row_energy,
+                #     f"Acquired Row Energy - {label}",
+                #     f"acquired_row_energy_{tag}.png",
+                #     is_line_plot=True
+                # )
+
+    if save_nifti:
+        fov_mm, slice_mm = read_geometry(header_text)
+        offsets = read_slice_offsets(header_text)
+        dz_mm, z0_mm = slice_axis(offsets, slice_mm, no_slices)
+
+        stem = os.path.join(output_dir, Path(filename).stem)
+        step = np.arange(no_expts) % max(diff['n'], 1)     # diffusion step for each volume
+        bval = diff['b'][step] if diff['b'] is not None else None
+        dac = diff['dac'][step] if diff['dac'] is not None else None
+        bvec = diff['unit'][step]
+
+        if b_mode == 0:
+            descrip = "bmode=0 dac=" + ",".join(f"{d:g}" for d in dac)
+        else:
+            descrip = "bmode=1 b=" + ",".join(f"{b:g}" for b in bval)
+
+        write_nifti(
+            np.transpose(img_all, (1, 0, 2, 3)),           # x, y, slice, experiment
+            stem + ".nii.gz",
+            fov_mm,
+            dz_mm,
+            z0_mm,
+            descrip,
+        )
+
+        # The NIfTI descrip field holds 80 characters, so the full table goes in a sidecar.
+        sidecar = {
+            "PEOrder": pe_order,
+            "BValueInputMode": b_mode,
+            "DiffusionOn": diff_on,
+            "SmallDelta_ms": diff['delta'],
+            "BigDelta_ms": diff['big_delta'],
+            "SliceOffsets_mm": offsets.tolist(),
+            "SliceSpacing_mm": dz_mm,
+        }
+
+        if b_mode == 0:
+            sidecar["GradientDAC"] = dac.tolist()
+        else:
+            sidecar["bval_s_per_mm2"] = bval.tolist()
+
+        if diff_on:
+            b_metadata = effective_b(header_text, diff, no_expts, N, pe_order,
+                                     Path(output_dir) / ".bmatrix_cache", b_calibration_path)
+            sidecar.update(b_metadata)
+            write_b_sidecars(stem, b_metadata)
+        sidecar["NavigatorMode"] = nav_on
+        if nav_on == 2:
+            sidecar["PerShotNavigator"] = shot_nav_qa
+            Path(stem + "_shot_nav_phases.json").write_text(json.dumps(shot_nav_qa, indent=2))
+            np.save(stem + "_shot_nav_phases.npy", np.asarray([
+                [[q["constant_rad"], q["linear_rad_per_voxel"], q["navigator_snr"], q["coherence"], q["applied"]]
+                 for q in qa["Estimates"]] for qa in shot_nav_qa]))
+
+        with open(stem + ".json", "w") as fh:
+            json.dump(sidecar, fh, indent=2)
+
+        if diff_on and bval is not None:
+            with open(stem + ".bval", "w") as fh:
+                fh.write(" ".join(f"{b:g}" for b in bval) + "\n")
+            with open(stem + ".bvec", "w") as fh:
+                for axis in range(3):
+                    fh.write(" ".join(f"{c:.6f}" for c in bvec[:, axis]) + "\n")
+
+    if save_images_mode is False:
+        plt.show()
 
 
-# Plot the navigator echo-train envelope if applicable
-if nav_on and nav_report and save_images_mode is False:
-    fig, ax = plt.subplots(num="Navigator echo-train envelope")
-    for exp_idx in range(no_expts):
-        a, _, _ = nav_envelope(k_acq_all[:, :, nav_report_slice, exp_idx], etl)
-        ax.plot(np.arange(1, etl + 1), a, marker="o", label=f"exp {exp_idx + 1}")
-    ax.set_xlabel("echo index")
-    ax.set_ylabel("relative amplitude")
-    ax.axhline(1.0, color="0.7", lw=0.8)
-    ax.legend()
-    ax.set_title(f"Navigator envelope (slice {nav_report_slice + 1})")
+    # Plot the navigator echo-train envelope if applicable
+    if nav_on and nav_report and save_images_mode is False:
+        fig, ax = plt.subplots(num="Navigator echo-train envelope")
+        for exp_idx in range(no_expts):
+            a, _, _ = nav_envelope(k_acq_all[:, :, nav_report_slice, exp_idx], etl)
+            ax.plot(np.arange(1, etl + 1), a, marker="o", label=f"exp {exp_idx + 1}")
+        ax.set_xlabel("echo index")
+        ax.set_ylabel("relative amplitude")
+        ax.axhline(1.0, color="0.7", lw=0.8)
+        ax.legend()
+        ax.set_title(f"Navigator envelope (slice {nav_report_slice + 1})")
 
 
-# output the RX and TX gain values from the MRD header
-rx_gain = re.findall(r":_ObserveReceiverGain\s+(-?\d+)", header_text)
-tx_gain = re.findall(r":_ObserveTransmitGain\s+(-?\d+)", header_text)
+    # output the RX and TX gain values from the MRD header
+    rx_gain = re.findall(r":_ObserveReceiverGain\s+(-?\d+)", header_text)
+    tx_gain = re.findall(r":_ObserveTransmitGain\s+(-?\d+)", header_text)
 
-print("rx_gain: ", rx_gain)
-print("tx_gain: ", tx_gain)
+    print("rx_gain: ", rx_gain)
+    print("tx_gain: ", tx_gain)
+
+    return dict(image=img_all, kspace=k_sort_all, raw=k_acq_all, header=header_text,
+                diffusion=diff, shot_navigator=shot_nav_qa)
+
+if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser(description="DW-FSE recon from embedded MRD protocol")
+    parser.add_argument("mrd", nargs="?", default=filename)
+    parser.add_argument("--output-dir")
+    parser.add_argument("--no-figures", action="store_true")
+    parser.add_argument("--shot-nav-mode", choices=("off", "constant", "constant+linear"), default=shot_nav_mode)
+    parser.add_argument("--b-calibration", default=str(b_calibration_path))
+    args = parser.parse_args()
+    if args.no_figures:
+        save_images_mode = None
+    shot_nav_mode = args.shot_nav_mode
+    b_calibration_path = args.b_calibration
+    run_recon(args.mrd, args.output_dir)

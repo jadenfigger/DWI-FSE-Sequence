@@ -349,6 +349,12 @@ class Interp:
         self.freq = {}         # buffer -> (base_khz_tuple, offset_hz, preset_offset)
         self.tx_freq_hz = 0.0
         self.rx_latched_hz = 0.0
+        # Diagnostic trace only: it does not charge costs or alter played events.
+        # The vendor documents persistent phase for sub-MHz frequency changes.
+        self.frequency_events = []
+        self.phase_events = []
+        self.frequency_mhz = {}
+        self.receiver_mhz = {}
         self.adc = []
         self.adc_open = None
         self.dummy_cycles = 0
@@ -855,9 +861,15 @@ class Interp:
 
     def b_phase(self, m):
         self.tx_phase = m
+        latency = 4.6 if self.phase_inc in (0, 100, 200, 400, 800) else 28.3
+        self.phase_events.append({"t_us": self.t + latency,
+                                  "phase_deg": self.phase_deg(m), "kind": "tx"})
 
     def b_rphase(self, m):
         self.rx_phase = m
+        latency = 4.6 if self.phase_inc in (0, 100, 200, 400, 800) else 28.3
+        self.phase_events.append({"t_us": self.t + latency,
+                                  "phase_deg": self.phase_deg(m), "kind": "rx"})
 
     def phase_deg(self, m):
         return (m * self.phase_inc * 0.225) % 360.0
@@ -876,6 +888,11 @@ class Interp:
 
     def b_frequency(self, mhz, khz, hz, rx):
         self.freq[self.freq_buf] = [(khz * 1000 + hz), 0, 0]
+        self.frequency_mhz[self.freq_buf] = mhz
+        self.receiver_mhz[self.freq_buf] = rx
+        self.frequency_events.append({"t_us": self.t, "kind": "frequency",
+                                      "buffer": self.freq_buf, "mhz": mhz,
+                                      "base_hz": khz * 1000 + hz})
         self._send_tx()
 
     def b_offset_frequency(self, hz):
@@ -888,12 +905,17 @@ class Interp:
     def b_reset_frequency(self):
         f = self.freq.setdefault(self.freq_buf, [0, 0, 0])
         f[1] = f[2]
-        self._send_tx()
+        self._send_tx(delivery_us=23.7)
 
-    def _send_tx(self):
+    def _send_tx(self, delivery_us=0.0):
         f = self.freq.get(self.freq_buf, [0, 0, 0])
         self.tx_freq_hz = f[0] + f[1]
         self.rx_latched_hz = f[0] + f[1]
+        self.frequency_events.append({"t_us": self.t + delivery_us,
+                                      "kind": "send", "buffer": self.freq_buf,
+                                      "mhz": self.frequency_mhz.get(self.freq_buf, 0),
+                                      "frequency_hz": self.tx_freq_hz,
+                                      "base_hz": f[0], "offset_hz": f[1]})
 
     def b_initiate(self, sp):
         if self.adc_open is not None:
@@ -902,6 +924,13 @@ class Interp:
                          "rx_phase_deg": self.phase_deg(self.rx_phase), "rx_freq_hz": self.rx_latched_hz,
                          "dummy_cycles": self.dummy_cycles, "Dummy_Cycles": self.dummy_cycles2,
                          "discard": self.discard_n, "vars": self.snapshot(), "sync_t": self.sync_t}
+        f = self.freq.get(self.freq_buf, [0, 0, 0])
+        self.frequency_events.append({"t_us": self.t + 2.6, "kind": "send",
+                                      "buffer": self.freq_buf,
+                                      "mhz": self.receiver_mhz.get(self.freq_buf, 0),
+                                      "frequency_hz": f[0] + f[1],
+                                      "base_hz": f[0], "offset_hz": f[1],
+                                      "mode": "receive"})
 
     def b_complete(self):
         self.advance(self.acqpad_ticks / 10.0)
@@ -912,6 +941,7 @@ class Interp:
         a["t_complete"] = self.t
         self.adc.append(a)
         self.adc_open = None
+        self._send_tx()
 
     def b_dummy_cycles(self, x):
         # PPL identifiers are case-insensitive; dummy_cycles and Dummy_Cycles are
@@ -955,6 +985,7 @@ class Interp:
                                    "mul": self.rf.mul, "waits": self.rf.waits, "n": len(samples),
                                    "duration_us": len(samples) * self.rf.waits * 0.1,
                                    "phase_units": self.tx_phase, "phase_deg": self.phase_deg(self.tx_phase),
+                                   "tx_mhz": self.frequency_mhz.get(self.freq_buf, 0),
                                    "tx_freq_hz": self.tx_freq_hz, "level": self.rf.level,
                                    "gate": self.rf.gate, "vars": self.snapshot()})
         else:

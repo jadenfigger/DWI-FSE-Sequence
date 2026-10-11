@@ -1,0 +1,73 @@
+scan,version,signal,b,direction,echo,ratio_to_b0,ratio_to_plus_x,b_eff_model,predicted_ratio_to_plus_x,D_ref_effective_b0_b1000_plusx,note
+E,v1.81,nav_E1_noise_sub,1000,+x,1,0.16702322381904167,1.0,1000.72,1.0,0.0017955116897918292,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,nav_E1_noise_sub,1000,-x,1,0.16656062902064644,0.9972303564269815,1000.72,1.0,0.0017955116897918292,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,nav_E1_noise_sub,1000,+y,1,0.16777030427694078,1.004472913651269,1000.47,1.0004489786832185,0.0017955116897918292,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,nav_E1_noise_sub,1000,+z,1,0.1461157657271399,0.8748230478741473,1037.77,0.9356407333229588,0.0017955116897918292,z cross term +37.3 s/mm2 at b1000 (FINAL_REPORT 8)
+E,v1.81,nav_E1_noise_sub,3000,+x,1,0.004239751412219704,1.0,2993.295012701892,1.0,0.0017955116897918292,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,nav_E1_noise_sub,3000,+y,1,0.004336959725821746,1.0229278332974598,2992.862,1.0007777816835024,0.0017955116897918292,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,nav_E1_noise_sub,3000,+z,1,0.0031955098872248127,0.7537021812210017,3057.467495122319,0.8911678883791366,0.0017955116897918292,z cross term +37.3 s/mm2 at b1000 (FINAL_REPORT 8)
+E,v1.81,nav_E1_raw_L2,1000,+x,1,0.16702468527502504,1.0,1000.72,1.0,0.001795502911019122,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,nav_E1_raw_L2,1000,-x,1,0.16656209476818673,0.9972304063553445,1000.72,1.0,0.001795502911019122,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,nav_E1_raw_L2,1000,+y,1,0.16777175885077353,1.0044728333091504,1000.47,1.00044897648754,0.001795502911019122,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,nav_E1_raw_L2,1000,+z,1,0.14611744754908018,0.8748254625265797,1037.77,0.9356410376434585,0.001795502911019122,z cross term +37.3 s/mm2 at b1000 (FINAL_REPORT 8)
+E,v1.81,nav_E1_raw_L2,3000,+x,1,0.004298568279219737,1.0,2993.295012701892,1.0,0.001795502911019122,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,nav_E1_raw_L2,3000,+y,1,0.004394475675025609,1.02231147432728,2992.862,1.0007777778792257,0.001795502911019122,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,nav_E1_raw_L2,3000,+z,1,0.003273145971734336,0.7614502688156597,3057.467495122319,0.8911683904237317,0.001795502911019122,z cross term +37.3 s/mm2 at b1000 (FINAL_REPORT 8)
+E,v1.81,image_interior_mean,1000,+x,1,0.16158230912925411,1.0,1000.72,1.0,0.0018287388756098326,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,image_interior_mean,1000,-x,1,0.15890250277074872,0.9834152242720967,1000.72,1.0,0.0018287388756098326,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,image_interior_mean,1000,+y,1,0.1582734203265432,0.9795219611568736,1000.47,1.0004572892437644,0.0018287388756098326,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,image_interior_mean,1000,+z,1,0.14048815041460752,0.8694525481884727,1037.77,0.9344896053761774,0.0018287388756098326,z cross term +37.3 s/mm2 at b1000 (FINAL_REPORT 8)
+E,v1.81,image_interior_mean,3000,+x,1,0.004888972338004468,1.0,2993.295012701892,1.0,0.0018287388756098326,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,image_interior_mean,3000,+y,1,0.005060003934895495,1.034983138595715,2992.862,1.0007921807711573,0.0018287388756098326,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,image_interior_mean,3000,+z,1,0.004287957519923424,0.8770672492030583,3057.467495122319,0.8892697013803187,0.0018287388756098326,z cross term +37.3 s/mm2 at b1000 (FINAL_REPORT 8)
+E,v1.81,image_interior_excess_rms,1000,+x,1,0.16144905261677395,1.0,1000.72,1.0,0.0018295666283026167,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,image_interior_excess_rms,1000,-x,1,0.1588639316466864,0.983988007806873,1000.72,1.0,0.0018295666283026167,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,image_interior_excess_rms,1000,+y,1,0.15826561342898732,0.9802820819559528,1000.47,1.0004574962765898,0.0018295666283026167,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,image_interior_excess_rms,1000,+z,1,0.14035972964339646,0.8693747492997901,1037.77,0.9344609466666939,0.0018295666283026167,z cross term +37.3 s/mm2 at b1000 (FINAL_REPORT 8)
+E,v1.81,image_interior_excess_rms,3000,+x,1,0.0039218598814296105,1.0,2993.295012701892,1.0,0.0018295666283026167,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,image_interior_excess_rms,3000,+y,1,0.004094995401549462,1.0441462788968228,2992.862,1.0007925394825907,0.0018295666283026167,polarity independent on v1.81 (FINAL_REPORT 8)
+E,v1.81,image_interior_excess_rms,3000,+z,1,0.00291768772161916,0.7439551156416109,3057.467495122319,0.8892224655664182,0.0018295666283026167,z cross term +37.3 s/mm2 at b1000 (FINAL_REPORT 8)
+E,v1.81,nav_L2_per_echo,1000,ratios,1,,,,,,minus_x/plus_x=0.9972; plus_y/plus_x=1.0045; plus_z/plus_x=0.8748
+E,v1.81,nav_L2_per_echo,1000,ratios,2,,,,,,minus_x/plus_x=1.0007; plus_y/plus_x=1.0108; plus_z/plus_x=0.8686
+E,v1.81,nav_L2_per_echo,1000,ratios,3,,,,,,minus_x/plus_x=1.0066; plus_y/plus_x=1.0112; plus_z/plus_x=0.8748
+E,v1.81,nav_L2_per_echo,1000,ratios,4,,,,,,minus_x/plus_x=1.0049; plus_y/plus_x=1.0139; plus_z/plus_x=0.8721
+E,v1.81,nav_L2_per_echo,1000,ratios,5,,,,,,minus_x/plus_x=1.0054; plus_y/plus_x=1.0150; plus_z/plus_x=0.8728
+E,v1.81,nav_L2_per_echo,1000,ratios,6,,,,,,minus_x/plus_x=0.9941; plus_y/plus_x=1.0149; plus_z/plus_x=0.8731
+E,v1.81,nav_L2_per_echo,1000,ratios,7,,,,,,minus_x/plus_x=1.0042; plus_y/plus_x=1.0163; plus_z/plus_x=0.8729
+E,v1.81,nav_L2_per_echo,1000,ratios,8,,,,,,minus_x/plus_x=0.9976; plus_y/plus_x=1.0161; plus_z/plus_x=0.8705
+G,v1.911,nav_E1_noise_sub,1000,+x,1,0.1553872116423378,1.0,1014.724268037753,1.0,0.0018725380632573921,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,nav_E1_noise_sub,1000,-x,1,0.15816033014706218,1.0178465040682203,1014.724268037753,1.0,0.0018725380632573921,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,nav_E1_noise_sub,1000,+y,1,0.1584241514646045,1.0195443356642306,1014.724268037753,1.0,0.0018725380632573921,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,nav_E1_noise_sub,1000,+z,1,0.13561761620597734,0.872772056159518,1052.024268037753,0.932537727572781,0.0018725380632573921,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,nav_E1_noise_sub,3000,+x,1,0.0034775100422828136,1.0,3001.915970289897,1.0,0.0018725380632573921,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,nav_E1_noise_sub,3000,+y,1,0.0038019814108407606,1.093305659685442,3001.915970289897,1.0,0.0018725380632573921,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,nav_E1_noise_sub,3000,+z,1,0.0023881721179072933,0.686747727215642,3066.521465412216,0.8860550042904288,0.0018725380632573921,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,nav_E1_raw_L2,1000,+x,1,0.15539779537380063,1.0,1014.724268037753,1.0,0.001872469562057188,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,nav_E1_raw_L2,1000,-x,1,0.15817071905535904,1.0178440348840747,1014.724268037753,1.0,0.001872469562057188,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,nav_E1_raw_L2,1000,+y,1,0.1584345221850939,1.019541633804962,1014.724268037753,1.0,0.001872469562057188,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,nav_E1_raw_L2,1000,+z,1,0.1356298141337632,0.8727911088282387,1052.024268037753,0.9325401102980934,0.001872469562057188,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,nav_E1_raw_L2,3000,+x,1,0.003932389268612175,1.0,3001.915970289897,1.0,0.001872469562057188,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,nav_E1_raw_L2,3000,+y,1,0.004222044996523253,1.0736589661209468,3001.915970289897,1.0,0.001872469562057188,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,nav_E1_raw_L2,3000,+z,1,0.003012307565296822,0.7660247649795695,3066.521465412216,0.8860589255833349,0.001872469562057188,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,image_interior_mean,1000,+x,1,0.1551315887251129,1.0,1014.724268037753,1.0,0.0018741939529888848,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,image_interior_mean,1000,-x,1,0.16788320277581245,1.0821986943825792,1014.724268037753,1.0,0.0018741939529888848,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,image_interior_mean,1000,+y,1,0.15945852369496907,1.0278920302783938,1014.724268037753,1.0,0.0018741939529888848,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,image_interior_mean,1000,+z,1,0.13574838657497276,0.8750531577131823,1052.024268037753,0.9324801314506577,0.0018741939529888848,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,image_interior_mean,3000,+x,1,0.009276819272902937,1.0,3001.915970289897,1.0,0.0018741939529888848,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,image_interior_mean,3000,+y,1,0.009303426519646413,1.0028681432677247,3001.915970289897,1.0,0.0018741939529888848,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,image_interior_mean,3000,+z,1,0.008915683012056629,0.9610711117439611,3066.521465412216,0.8859602195718876,0.0018741939529888848,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,image_interior_excess_rms,1000,+x,1,0.15496452360796972,1.0,1014.724268037753,1.0,0.001875277652625686,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,image_interior_excess_rms,1000,-x,1,0.16803629435431594,1.0843533115967579,1014.724268037753,1.0,0.001875277652625686,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,image_interior_excess_rms,1000,+y,1,0.15949092252397823,1.0292092590653807,1014.724268037753,1.0,0.001875277652625686,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,image_interior_excess_rms,1000,+z,1,0.13551366852069938,0.8744818837602001,1052.024268037753,0.9324424395038889,0.001875277652625686,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,image_interior_excess_rms,3000,+x,1,0.0038027415157939532,1.0,3001.915970289897,1.0,0.001875277652625686,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,image_interior_excess_rms,3000,+y,1,0.004052183508568245,1.0655953058440293,3001.915970289897,1.0,0.001875277652625686,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,image_interior_excess_rms,3000,+z,1,0.0022672379811636933,0.5962114363406394,3066.521465412216,0.8858981930532709,0.001875277652625686,ASSUMED: v1.911 y/-x equal +x; z uses the v1.81 cross term (report gives only +X rows for v1.911)
+G,v1.911,nav_L2_per_echo,1000,ratios,1,,,,,,minus_x/plus_x=1.0178; plus_y/plus_x=1.0195; plus_z/plus_x=0.8728
+G,v1.911,nav_L2_per_echo,1000,ratios,2,,,,,,minus_x/plus_x=1.0234; plus_y/plus_x=1.0083; plus_z/plus_x=0.8653
+G,v1.911,nav_L2_per_echo,1000,ratios,3,,,,,,minus_x/plus_x=1.0257; plus_y/plus_x=1.0059; plus_z/plus_x=0.8579
+G,v1.911,nav_L2_per_echo,1000,ratios,4,,,,,,minus_x/plus_x=1.0365; plus_y/plus_x=1.0053; plus_z/plus_x=0.8613
+G,v1.911,nav_L2_per_echo,1000,ratios,5,,,,,,minus_x/plus_x=1.0347; plus_y/plus_x=1.0125; plus_z/plus_x=0.8701
+G,v1.911,nav_L2_per_echo,1000,ratios,6,,,,,,minus_x/plus_x=1.0292; plus_y/plus_x=1.0102; plus_z/plus_x=0.8670
+G,v1.911,nav_L2_per_echo,1000,ratios,7,,,,,,minus_x/plus_x=1.0308; plus_y/plus_x=1.0088; plus_z/plus_x=0.8691
+G,v1.911,nav_L2_per_echo,1000,ratios,8,,,,,,minus_x/plus_x=1.0304; plus_y/plus_x=1.0019; plus_z/plus_x=0.8644

@@ -1,0 +1,12 @@
+# Preserve the reviewed scanner upload bytes and hashed validation inputs.
+scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.82.ppl -text
+scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.82.ppr -text
+scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.912.ppl -text
+scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.912.ppr -text
+docs/v182_v1912/validation/v182_items2to4_control.ppl -text
+docs/v182_v1912/test_pprs/*.ppr -text
+docs/v182_v1912/validation/*.json -text
+docs/v182_v1912/validation/finalize_event_gates.py -text
+examples/validate_v182_v1912.py -text
+# Keep the newly added acquired records byte-for-byte, including their protocols.
+experiments/FSE-DWI_10-10-2026_*/* -text

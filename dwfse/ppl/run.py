@@ -15,7 +15,11 @@ SCANNER = ROOT / "scanner"
 
 RECORD_VARS = ["echo_cnt", "total_echo_cnt", "current_view", "nav_cnt", "disacq_cnt",
                "diff_acq_cnt", "completed_ex", "gp_mul", "phase_correction", "no_acq",
-               "current_slice", "v19_stage", "v19_rf_index", "v19_echo", "current_view_2"]
+               "current_slice", "v19_stage", "v19_rf_index", "v19_echo", "current_view_2",
+               # Slice-frequency diagnostics are sampled at RF events. They do
+               # not alter interpreter timing and support per-pulse offset audits.
+               "pulse_bwdth", "scale_slice_off", "pos_index", "slice_freq_long",
+               "fov_slice_freq", "slice_freq_var", "v1912_pos", "v1912_rf_index"]
 
 
 def sha256(path):

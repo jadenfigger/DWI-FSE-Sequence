@@ -1,0 +1,350 @@
+{
+  "final_ppl_sha256": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
+  "control_ppl_sha256": "9c53507fd98073a522ee0f1827d9d95d4c82920a8bac30cfc044fac59eb56e36",
+  "protocol_sha256": "44474269a39ebaa8efed9526000413dd4f8372082f520e890e005ffa8fd4f84b",
+  "scope": "Navigator-only identity against items 2--4 control; two actual shots.",
+  "timing_signature_resolution_us": 0.001,
+  "limits": [
+    "Source mapping, not vendor compilation or scanner validation.",
+    "Matrix write timestamps can change inside padded timers while played events agree."
+  ],
+  "cases": [
+    {
+      "nav_on": 0,
+      "cost_model": "flat_0us",
+      "overrides": {
+        "nav_on": 0,
+        "no_views": 128,
+        "no_disacq": 0,
+        "slice_mm_10": 0
+      },
+      "checks": {
+        "rf_identical": true,
+        "adc_identical": true,
+        "played_SPR_identical": true,
+        "sync_to_first_rf_identical": true,
+        "matrix_values_identical": true
+      },
+      "pass": true,
+      "matrix_max_write_shift_us": 0.0,
+      "rf_count": 18,
+      "adc_count": 16
+    },
+    {
+      "nav_on": 0,
+      "cost_model": "flat_0.5us",
+      "overrides": {
+        "nav_on": 0,
+        "no_views": 128,
+        "no_disacq": 0,
+        "slice_mm_10": 0
+      },
+      "checks": {
+        "rf_identical": true,
+        "adc_identical": true,
+        "played_SPR_identical": true,
+        "sync_to_first_rf_identical": true,
+        "matrix_values_identical": true
+      },
+      "pass": true,
+      "matrix_max_write_shift_us": 0.0,
+      "rf_count": 18,
+      "adc_count": 16
+    },
+    {
+      "nav_on": 0,
+      "cost_model": "flat_1us",
+      "overrides": {
+        "nav_on": 0,
+        "no_views": 128,
+        "no_disacq": 0,
+        "slice_mm_10": 0
+      },
+      "checks": {
+        "rf_identical": true,
+        "adc_identical": true,
+        "played_SPR_identical": true,
+        "sync_to_first_rf_identical": true,
+        "matrix_values_identical": true
+      },
+      "pass": true,
+      "matrix_max_write_shift_us": 0.0,
+      "rf_count": 18,
+      "adc_count": 16
+    },
+    {
+      "nav_on": 0,
+      "cost_model": "flat_2us",
+      "overrides": {
+        "nav_on": 0,
+        "no_views": 128,
+        "no_disacq": 0,
+        "slice_mm_10": 0
+      },
+      "checks": {
+        "rf_identical": true,
+        "adc_identical": true,
+        "played_SPR_identical": true,
+        "sync_to_first_rf_identical": true,
+        "matrix_values_identical": true
+      },
+      "pass": true,
+      "matrix_max_write_shift_us": 0.0,
+      "rf_count": 18,
+      "adc_count": 16
+    },
+    {
+      "nav_on": 0,
+      "cost_model": "manual_x0.8",
+      "overrides": {
+        "nav_on": 0,
+        "no_views": 128,
+        "no_disacq": 0,
+        "slice_mm_10": 0
+      },
+      "checks": {
+        "rf_identical": true,
+        "adc_identical": true,
+        "played_SPR_identical": true,
+        "sync_to_first_rf_identical": true,
+        "matrix_values_identical": true
+      },
+      "pass": true,
+      "matrix_max_write_shift_us": 1.84,
+      "rf_count": 18,
+      "adc_count": 16
+    },
+    {
+      "nav_on": 0,
+      "cost_model": "manual_x0.9",
+      "overrides": {
+        "nav_on": 0,
+        "no_views": 128,
+        "no_disacq": 0,
+        "slice_mm_10": 0
+      },
+      "checks": {
+        "rf_identical": true,
+        "adc_identical": true,
+        "played_SPR_identical": true,
+        "sync_to_first_rf_identical": true,
+        "matrix_values_identical": true
+      },
+      "pass": true,
+      "matrix_max_write_shift_us": 2.07,
+      "rf_count": 18,
+      "adc_count": 16
+    },
+    {
+      "nav_on": 0,
+      "cost_model": "manual_x1.0",
+      "overrides": {
+        "nav_on": 0,
+        "no_views": 128,
+        "no_disacq": 0,
+        "slice_mm_10": 0
+      },
+      "checks": {
+        "rf_identical": true,
+        "adc_identical": true,
+        "played_SPR_identical": true,
+        "sync_to_first_rf_identical": true,
+        "matrix_values_identical": true
+      },
+      "pass": true,
+      "matrix_max_write_shift_us": 2.3,
+      "rf_count": 18,
+      "adc_count": 16
+    },
+    {
+      "nav_on": 0,
+      "cost_model": "manual_x0.8_plus_0.5us_stmt",
+      "overrides": {
+        "nav_on": 0,
+        "no_views": 128,
+        "no_disacq": 0,
+        "slice_mm_10": 0
+      },
+      "checks": {
+        "rf_identical": true,
+        "adc_identical": true,
+        "played_SPR_identical": true,
+        "sync_to_first_rf_identical": true,
+        "matrix_values_identical": true
+      },
+      "pass": true,
+      "matrix_max_write_shift_us": 1.84,
+      "rf_count": 18,
+      "adc_count": 16
+    },
+    {
+      "nav_on": 1,
+      "cost_model": "flat_0us",
+      "overrides": {
+        "nav_on": 1,
+        "no_views": 136,
+        "no_disacq": 0,
+        "slice_mm_10": 0
+      },
+      "checks": {
+        "rf_identical": true,
+        "adc_identical": true,
+        "played_SPR_identical": true,
+        "sync_to_first_rf_identical": true,
+        "matrix_values_identical": true
+      },
+      "pass": true,
+      "matrix_max_write_shift_us": 0.0,
+      "rf_count": 18,
+      "adc_count": 16
+    },
+    {
+      "nav_on": 1,
+      "cost_model": "flat_0.5us",
+      "overrides": {
+        "nav_on": 1,
+        "no_views": 136,
+        "no_disacq": 0,
+        "slice_mm_10": 0
+      },
+      "checks": {
+        "rf_identical": true,
+        "adc_identical": true,
+        "played_SPR_identical": true,
+        "sync_to_first_rf_identical": true,
+        "matrix_values_identical": true
+      },
+      "pass": true,
+      "matrix_max_write_shift_us": 0.0,
+      "rf_count": 18,
+      "adc_count": 16
+    },
+    {
+      "nav_on": 1,
+      "cost_model": "flat_1us",
+      "overrides": {
+        "nav_on": 1,
+        "no_views": 136,
+        "no_disacq": 0,
+        "slice_mm_10": 0
+      },
+      "checks": {
+        "rf_identical": true,
+        "adc_identical": true,
+        "played_SPR_identical": true,
+        "sync_to_first_rf_identical": true,
+        "matrix_values_identical": true
+      },
+      "pass": true,
+      "matrix_max_write_shift_us": 0.0,
+      "rf_count": 18,
+      "adc_count": 16
+    },
+    {
+      "nav_on": 1,
+      "cost_model": "flat_2us",
+      "overrides": {
+        "nav_on": 1,
+        "no_views": 136,
+        "no_disacq": 0,
+        "slice_mm_10": 0
+      },
+      "checks": {
+        "rf_identical": true,
+        "adc_identical": true,
+        "played_SPR_identical": true,
+        "sync_to_first_rf_identical": true,
+        "matrix_values_identical": true
+      },
+      "pass": true,
+      "matrix_max_write_shift_us": 0.0,
+      "rf_count": 18,
+      "adc_count": 16
+    },
+    {
+      "nav_on": 1,
+      "cost_model": "manual_x0.8",
+      "overrides": {
+        "nav_on": 1,
+        "no_views": 136,
+        "no_disacq": 0,
+        "slice_mm_10": 0
+      },
+      "checks": {
+        "rf_identical": true,
+        "adc_identical": true,
+        "played_SPR_identical": true,
+        "sync_to_first_rf_identical": true,
+        "matrix_values_identical": true
+      },
+      "pass": true,
+      "matrix_max_write_shift_us": 1.84,
+      "rf_count": 18,
+      "adc_count": 16
+    },
+    {
+      "nav_on": 1,
+      "cost_model": "manual_x0.9",
+      "overrides": {
+        "nav_on": 1,
+        "no_views": 136,
+        "no_disacq": 0,
+        "slice_mm_10": 0
+      },
+      "checks": {
+        "rf_identical": true,
+        "adc_identical": true,
+        "played_SPR_identical": true,
+        "sync_to_first_rf_identical": true,
+        "matrix_values_identical": true
+      },
+      "pass": true,
+      "matrix_max_write_shift_us": 2.07,
+      "rf_count": 18,
+      "adc_count": 16
+    },
+    {
+      "nav_on": 1,
+      "cost_model": "manual_x1.0",
+      "overrides": {
+        "nav_on": 1,
+        "no_views": 136,
+        "no_disacq": 0,
+        "slice_mm_10": 0
+      },
+      "checks": {
+        "rf_identical": true,
+        "adc_identical": true,
+        "played_SPR_identical": true,
+        "sync_to_first_rf_identical": true,
+        "matrix_values_identical": true
+      },
+      "pass": true,
+      "matrix_max_write_shift_us": 2.3,
+      "rf_count": 18,
+      "adc_count": 16
+    },
+    {
+      "nav_on": 1,
+      "cost_model": "manual_x0.8_plus_0.5us_stmt",
+      "overrides": {
+        "nav_on": 1,
+        "no_views": 136,
+        "no_disacq": 0,
+        "slice_mm_10": 0
+      },
+      "checks": {
+        "rf_identical": true,
+        "adc_identical": true,
+        "played_SPR_identical": true,
+        "sync_to_first_rf_identical": true,
+        "matrix_values_identical": true
+      },
+      "pass": true,
+      "matrix_max_write_shift_us": 1.84,
+      "rf_count": 18,
+      "adc_count": 16
+    }
+  ],
+  "pass": true
+}

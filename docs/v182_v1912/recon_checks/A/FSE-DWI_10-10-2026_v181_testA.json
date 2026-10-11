@@ -1,0 +1,124 @@
+{
+  "PEOrder": 1,
+  "BValueInputMode": 1,
+  "DiffusionOn": 1,
+  "SmallDelta_ms": 4.0,
+  "BigDelta_ms": 40.0,
+  "SliceOffsets_mm": [
+    0.0
+  ],
+  "SliceSpacing_mm": 1.2,
+  "bval_s_per_mm2": [
+    0.0,
+    100.0,
+    500.0,
+    1000.0,
+    2000.0,
+    3000.0,
+    6000.0
+  ],
+  "EffectiveBValue": [
+    4.0036455944963905,
+    104.04850578635013,
+    502.599022776535,
+    1000.7103148784798,
+    1996.6695278585444,
+    2992.6406565518723,
+    5980.6738199132005
+  ],
+  "BMatrix": [
+    [
+      0.22356496196693268,
+      0.008670961300722082,
+      3.771409671228736,
+      0.03838082445017224,
+      0.004797802057729949,
+      0.0005583293358639968
+    ],
+    [
+      100.26842515382067,
+      0.008670961300722048,
+      3.771409671228736,
+      0.03838082445017226,
+      5.866200536391914,
+      0.0005583293358639947
+    ],
+    [
+      498.8189421440055,
+      0.008670961300722048,
+      3.771409671228736,
+      0.0383808244501722,
+      13.092710902165976,
+      0.0005583293358639947
+    ],
+    [
+      996.9302342459504,
+      0.008670961300722082,
+      3.771409671228736,
+      0.03838082445017231,
+      18.51034102363933,
+      0.0005583293358639968
+    ],
+    [
+      1992.889447226015,
+      0.008670961300722048,
+      3.771409671228736,
+      0.038380824450172324,
+      26.171613390845554,
+      0.0005583293358639947
+    ],
+    [
+      2988.860575919343,
+      0.008670961300722048,
+      3.771409671228736,
+      0.03838082445017254,
+      32.051037348037056,
+      0.0005583293358639947
+    ],
+    [
+      5976.893739280671,
+      0.008670961300722048,
+      3.771409671228736,
+      0.03838082445017238,
+      45.32366798243256,
+      0.0005583293358639947
+    ]
+  ],
+  "BMatrixEcho": 1,
+  "BMatrixSource": "event-model-primary-pathway",
+  "BMatrixWarnings": [
+    "Source model only: instantaneous RF primary pathway, assumed RF latency 3 us, gradient delay=rfdelay; mixed FSE pathways and measured gradient calibration are not modelled.",
+    "BMatrixEcho is the echo containing the k-space centre (centric: 1; reverse-centric: ETL; linear: ETL/2+1), represented by the first imaging shot; shot-dependent phase-encode b terms are not a volume average."
+  ],
+  "BMatrixAxes": "logical x=read, y=phase, z=slice; s/mm^2; columns bxx byy bzz bxy bxz byz",
+  "BMatrixCalibrationApplied": false,
+  "BMatrixModel": {
+    "CacheKey": "1f160242392c0c6ccdf3dbfb8b212568be639f96280b422dd3995b47eda5b107",
+    "CacheHit": true,
+    "Hashes": {
+      "PPL": "545a14ec8c65ed578ea76628796547dd463eb8cd4a2efa680de89058a837de69",
+      "Protocol": "4ffdbf668ba49c8e9f8338410ce2e4e95b3b4e61fe52e948656f73d668fb1640"
+    },
+    "PPL": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl",
+    "Branches": [
+      "primary",
+      "primary",
+      "primary",
+      "primary",
+      "primary",
+      "primary",
+      "primary"
+    ],
+    "ModelRevision": "primary-pwc-rf3us-gradient-rfdelay-v3-acquired-nav2-hazard-gated",
+    "RepresentativeImagingShotIndex": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "NavigatorMode": 1
+}

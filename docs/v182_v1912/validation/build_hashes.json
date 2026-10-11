@@ -1,0 +1,39 @@
+{
+  "candidate_before": {
+    "scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.82.ppl": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
+    "scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.82.ppr": "44474269a39ebaa8efed9526000413dd4f8372082f520e890e005ffa8fd4f84b",
+    "scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.912.ppl": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423",
+    "scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.912.ppr": "11aca86556f0cfa1c4b51f2b60615c79e320b14b37f460b7718c4c35d458f554"
+  },
+  "candidate_after": {
+    "scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.82.ppl": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
+    "scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.82.ppr": "44474269a39ebaa8efed9526000413dd4f8372082f520e890e005ffa8fd4f84b",
+    "scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.912.ppl": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423",
+    "scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.912.ppr": "11aca86556f0cfa1c4b51f2b60615c79e320b14b37f460b7718c4c35d458f554"
+  },
+  "builder_reproduction_pass": true,
+  "immutable_baselines": {
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppl": {
+      "sha256": "545a14ec8c65ed578ea76628796547dd463eb8cd4a2efa680de89058a837de69",
+      "matches_git_HEAD_normalizing_CRLF": true,
+      "matches_initial_raw_SHA256": true
+    },
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.81.ppr": {
+      "sha256": "ad82112ddfc7389a58caea6598cb5eb7583a271e71e62cd8c006190c52cdb159",
+      "matches_git_HEAD_normalizing_CRLF": true,
+      "matches_initial_raw_SHA256": true
+    },
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.911.ppl": {
+      "sha256": "716478bb357ba1479e6cc8fcc18c1085e44b3c78ecf1bdf32bb561b171838682",
+      "matches_git_HEAD_normalizing_CRLF": true,
+      "matches_initial_raw_SHA256": true
+    },
+    "scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.911.ppr": {
+      "sha256": "b2976e7464367a7aa6b6b8e04765cc04a3fd85c0d2ec64c9c9a57963bf9635c2",
+      "matches_git_HEAD_normalizing_CRLF": true,
+      "matches_initial_raw_SHA256": true
+    }
+  },
+  "all_baselines_unchanged": true,
+  "note": "Git stores normalized line endings; baseline byte identity is against the initial raw SHA256."
+}
