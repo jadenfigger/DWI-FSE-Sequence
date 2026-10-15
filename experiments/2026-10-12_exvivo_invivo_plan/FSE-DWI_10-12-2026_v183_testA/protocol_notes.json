@@ -1,0 +1,39 @@
+{
+  "letter": "A",
+  "version": "v183",
+  "part": 0,
+  "purpose": "Frequency check 1/2: b10 at 20 kHz (compare readout position with B)",
+  "rows": [
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ]
+  ],
+  "dwell_us": 50,
+  "esp": 14,
+  "tr": 2000,
+  "te": 44,
+  "big_delta": 30000,
+  "nav_on": 1,
+  "offsets": [
+    0
+  ],
+  "matrix": 128,
+  "phmode": 0,
+  "phcal": 0,
+  "sample": "ex-vivo brain in PBS",
+  "note": "",
+  "stem": "FSE-DWI_10-12-2026_v183_testA",
+  "ppr": "FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr",
+  "ppr_sha256": "6020713aaf19ad10f6e22bf681af6cd15b41341384bde0dfb97778f482182ec7",
+  "raw_views": 136,
+  "views_per_segment": 8,
+  "nominal_duration_s": 42.0,
+  "slice_offsets_mm": [
+    0.0
+  ]
+}

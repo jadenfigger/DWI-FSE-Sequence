@@ -1,0 +1,98 @@
+{
+  "PEOrder": 1,
+  "BValueInputMode": 1,
+  "DiffusionOn": 1,
+  "SmallDelta_ms": 4.0,
+  "BigDelta_ms": 40.0,
+  "SliceOffsets_mm": [
+    0.0
+  ],
+  "SliceSpacing_mm": 1.2,
+  "bval_s_per_mm2": [
+    0.0,
+    5.0,
+    10.0,
+    20.0,
+    100.0,
+    1000.0,
+    6000.0
+  ],
+  "EffectiveBValue": [
+    0.0,
+    5.0,
+    10.0,
+    20.0,
+    100.0,
+    1000.0,
+    6000.0
+  ],
+  "BMatrix": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      5.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      10.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      20.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      100.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1000.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      6000.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "BMatrixEcho": 1,
+  "BMatrixSource": "nominal-fallback",
+  "BMatrixWarnings": [
+    "Source model only: instantaneous RF primary pathway, assumed RF latency 3 us, gradient delay=rfdelay; mixed FSE pathways and measured gradient calibration are not modelled.",
+    "Effective-b model unavailable; nominal fallback: FileNotFoundError: repo PPL not found for FSE_dwi_CPMG_non_CPMG_twoTE-1.912.ppl",
+    "BMatrixEcho is the echo containing the k-space centre (centric: 1; reverse-centric: ETL; linear: ETL/2+1), represented by the first imaging shot; shot-dependent phase-encode b terms are not a volume average."
+  ],
+  "BMatrixAxes": "logical x=read, y=phase, z=slice; s/mm^2; columns bxx byy bzz bxy bxz byz",
+  "BMatrixCalibrationApplied": false,
+  "BMatrixModel": {},
+  "NavigatorMode": 1
+}

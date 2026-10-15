@@ -1,0 +1,113 @@
+{
+  "letter": "AD",
+  "version": "v182",
+  "purpose": "Alternative final pilot: 128x128; replaces V, same slices/shells/Delta/average count",
+  "rows": [
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      1000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      1000,
+      [
+        0,
+        1000,
+        0
+      ]
+    ],
+    [
+      1000,
+      [
+        0,
+        0,
+        1000
+      ]
+    ],
+    [
+      3000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      3000,
+      [
+        0,
+        1000,
+        0
+      ]
+    ],
+    [
+      3000,
+      [
+        0,
+        0,
+        1000
+      ]
+    ],
+    [
+      6000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      6000,
+      [
+        0,
+        1000,
+        0
+      ]
+    ],
+    [
+      6000,
+      [
+        0,
+        0,
+        1000
+      ]
+    ]
+  ],
+  "priority": "alternative",
+  "dwell_us": 25,
+  "esp": 11,
+  "tr": 2000,
+  "te": 44,
+  "big_delta": 30000,
+  "nav_on": 2,
+  "offsets": [
+    -960,
+    0,
+    960
+  ],
+  "matrix": 128,
+  "expected_rejection": null,
+  "stem": "FSE-DWI_10-11-2026_v182_testAD",
+  "ppr": "FSE-DWI_10-11-2026_v182_testAD/FSE-DWI_10-11-2026_v182_testAD.ppr",
+  "ppr_sha256": "a4b97a61f4757677a2e3a479ed41fcc1a4c9ce88ea0a930109c47f0ac6a4e5c1",
+  "raw_views": 153,
+  "effective_phase_views": 136,
+  "gp_init_var": -1000,
+  "nominal_duration_s": 420.0,
+  "slice_offsets_mm": [
+    -2.4,
+    0.0,
+    2.4
+  ]
+}

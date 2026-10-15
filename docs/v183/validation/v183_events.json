@@ -1,0 +1,374 @@
+{
+ "inputs": {
+  "v181": "545a14ec8c65ed578ea76628796547dd463eb8cd4a2efa680de89058a837de69",
+  "v182": "93a91c61e02b567d6440ce0709a9b7e45663be4d267e80defd715b382396095f",
+  "v183": "591163d14d8bbd73ede352eceb51117a16568aae3c62b570046b657da499b29e"
+ },
+ "seed_ppr": "experiments\\FSE-DWI_10-10-2026_v181_testK\\FSE-DWI_10-10-2026_v181_testK.ppr",
+ "failures": [],
+ "cases": {
+  "mode1_phcal0_vs_v182/flat_0us/z0": true,
+  "zero_offset_{'v183_phmode': 0}_vs_v182/flat_0us": true,
+  "zero_offset_{'v183_phmode': 1, 'v183_phcal': 530}_vs_v182/flat_0us": true,
+  "mode1_phcal0_vs_v182/flat_0us/z1.2": true,
+  "mode1_phcal0_vs_v182/flat_0us/z-1.2": true,
+  "mode1_phcal0_vs_v182/flat_0us/z2.4": true,
+  "mode1_phcal0_vs_v182/flat_0us/z-5": true,
+  "mode1_phcal0_vs_v182/flat_0.5us/z0": true,
+  "zero_offset_{'v183_phmode': 0}_vs_v182/flat_0.5us": true,
+  "zero_offset_{'v183_phmode': 1, 'v183_phcal': 530}_vs_v182/flat_0.5us": true,
+  "mode1_phcal0_vs_v182/flat_0.5us/z1.2": true,
+  "mode1_phcal0_vs_v182/flat_0.5us/z-1.2": true,
+  "mode1_phcal0_vs_v182/flat_0.5us/z2.4": true,
+  "mode1_phcal0_vs_v182/flat_0.5us/z-5": true,
+  "mode1_phcal0_vs_v182/flat_1us/z0": true,
+  "zero_offset_{'v183_phmode': 0}_vs_v182/flat_1us": true,
+  "zero_offset_{'v183_phmode': 1, 'v183_phcal': 530}_vs_v182/flat_1us": true,
+  "mode1_phcal0_vs_v182/flat_1us/z1.2": true,
+  "mode1_phcal0_vs_v182/flat_1us/z-1.2": true,
+  "mode1_phcal0_vs_v182/flat_1us/z2.4": true,
+  "mode1_phcal0_vs_v182/flat_1us/z-5": true,
+  "mode1_phcal0_vs_v182/flat_2us/z0": true,
+  "zero_offset_{'v183_phmode': 0}_vs_v182/flat_2us": true,
+  "zero_offset_{'v183_phmode': 1, 'v183_phcal': 530}_vs_v182/flat_2us": true,
+  "mode1_phcal0_vs_v182/flat_2us/z1.2": true,
+  "mode1_phcal0_vs_v182/flat_2us/z-1.2": true,
+  "mode1_phcal0_vs_v182/flat_2us/z2.4": true,
+  "mode1_phcal0_vs_v182/flat_2us/z-5": true,
+  "mode1_phcal0_vs_v182/manual_x0.8/z0": true,
+  "zero_offset_{'v183_phmode': 0}_vs_v182/manual_x0.8": true,
+  "zero_offset_{'v183_phmode': 1, 'v183_phcal': 530}_vs_v182/manual_x0.8": true,
+  "mode1_phcal0_vs_v182/manual_x0.8/z1.2": true,
+  "mode1_phcal0_vs_v182/manual_x0.8/z-1.2": true,
+  "mode1_phcal0_vs_v182/manual_x0.8/z2.4": true,
+  "mode1_phcal0_vs_v182/manual_x0.8/z-5": true,
+  "mode1_phcal0_vs_v182/manual_x0.9/z0": true,
+  "zero_offset_{'v183_phmode': 0}_vs_v182/manual_x0.9": true,
+  "zero_offset_{'v183_phmode': 1, 'v183_phcal': 530}_vs_v182/manual_x0.9": true,
+  "mode1_phcal0_vs_v182/manual_x0.9/z1.2": true,
+  "mode1_phcal0_vs_v182/manual_x0.9/z-1.2": true,
+  "mode1_phcal0_vs_v182/manual_x0.9/z2.4": true,
+  "mode1_phcal0_vs_v182/manual_x0.9/z-5": true,
+  "mode1_phcal0_vs_v182/manual_x1.0/z0": true,
+  "zero_offset_{'v183_phmode': 0}_vs_v182/manual_x1.0": true,
+  "zero_offset_{'v183_phmode': 1, 'v183_phcal': 530}_vs_v182/manual_x1.0": true,
+  "mode1_phcal0_vs_v182/manual_x1.0/z1.2": true,
+  "mode1_phcal0_vs_v182/manual_x1.0/z-1.2": true,
+  "mode1_phcal0_vs_v182/manual_x1.0/z2.4": true,
+  "mode1_phcal0_vs_v182/manual_x1.0/z-5": true,
+  "mode1_phcal0_vs_v182/manual_x0.8_plus_0.5us_stmt/z0": true,
+  "zero_offset_{'v183_phmode': 0}_vs_v182/manual_x0.8_plus_0.5us_stmt": true,
+  "zero_offset_{'v183_phmode': 1, 'v183_phcal': 530}_vs_v182/manual_x0.8_plus_0.5us_stmt": true,
+  "mode1_phcal0_vs_v182/manual_x0.8_plus_0.5us_stmt/z1.2": true,
+  "mode1_phcal0_vs_v182/manual_x0.8_plus_0.5us_stmt/z-1.2": true,
+  "mode1_phcal0_vs_v182/manual_x0.8_plus_0.5us_stmt/z2.4": true,
+  "mode1_phcal0_vs_v182/manual_x0.8_plus_0.5us_stmt/z-5": true
+ },
+ "static": {
+  "pass": true,
+  "checks": {
+   "all_jump_targets_defined": true,
+   "forward_gotos_below_historical_limit": true,
+   "warning_signatures_subset_of_v18": true,
+   "conditional_bodies_within_v18_margin": true,
+   "estimated_image_within_relative_budget": true,
+   "no_added_long_string_literals": true,
+   "no_added_macro_calls_in_slash_comments": true,
+   "no_added_function_macro_definitions": true
+  },
+  "estimated_image_bytes": 56413,
+  "relative_image_limit_bytes": 56664,
+  "code_nodes": 12972
+ },
+ "mode0": {
+  "z1.2": {
+   "v181": {
+    "carrier_hz": 2556.0,
+    "phase_ang_units": 1150,
+    "deg_360_units": 1600,
+    "rx_increments": [
+     1150,
+     1151
+    ],
+    "train_rf_increments": [
+     1150,
+     1151
+    ]
+   },
+   "v183_mode0": {
+    "carrier_hz": 2554.0,
+    "phase_ang_units": 1138,
+    "deg_360_units": 1600,
+    "rx_increments": [
+     1138
+    ],
+    "train_rf_increments": [
+     1138
+    ]
+   },
+   "timing_equals_centred_slice": true,
+   "vendor_scheme_reproduced": true,
+   "carrier_rel_diff_vs_v181": 0.000782472613458529
+  },
+  "z-1.2": {
+   "v181": {
+    "carrier_hz": -2556.0,
+    "phase_ang_units": -1150,
+    "deg_360_units": 1600,
+    "rx_increments": [
+     449,
+     450
+    ],
+    "train_rf_increments": [
+     449,
+     450
+    ]
+   },
+   "v183_mode0": {
+    "carrier_hz": -2554.0,
+    "phase_ang_units": -1138,
+    "deg_360_units": 1600,
+    "rx_increments": [
+     462
+    ],
+    "train_rf_increments": [
+     462
+    ]
+   },
+   "timing_equals_centred_slice": true,
+   "vendor_scheme_reproduced": true,
+   "carrier_rel_diff_vs_v181": 0.000782472613458529
+  },
+  "z2.4": {
+   "v181": {
+    "carrier_hz": 5112.0,
+    "phase_ang_units": 700,
+    "deg_360_units": 1600,
+    "rx_increments": [
+     700,
+     701
+    ],
+    "train_rf_increments": [
+     700,
+     701
+    ]
+   },
+   "v183_mode0": {
+    "carrier_hz": 5109.0,
+    "phase_ang_units": 682,
+    "deg_360_units": 1600,
+    "rx_increments": [
+     682,
+     683
+    ],
+    "train_rf_increments": [
+     682,
+     683
+    ]
+   },
+   "timing_equals_centred_slice": true,
+   "vendor_scheme_reproduced": true,
+   "carrier_rel_diff_vs_v181": 0.0005868544600938967
+  },
+  "z-5": {
+   "v181": {
+    "carrier_hz": -10650.0,
+    "phase_ang_units": -792,
+    "deg_360_units": 1600,
+    "rx_increments": [
+     807,
+     808
+    ],
+    "train_rf_increments": [
+     807,
+     808
+    ]
+   },
+   "v183_mode0": {
+    "carrier_hz": -10645.0,
+    "phase_ang_units": -762,
+    "deg_360_units": 1600,
+    "rx_increments": [
+     838
+    ],
+    "train_rf_increments": [
+     838
+    ]
+   },
+   "timing_equals_centred_slice": true,
+   "vendor_scheme_reproduced": true,
+   "carrier_rel_diff_vs_v181": 0.00046948356807511736
+  }
+ },
+ "phcal_shift": {
+  "z1.2/P530": {
+   "slice_freq_hz": 2554.0,
+   "timing_and_gradients_identical": true,
+   "measured_units": [
+    0,
+    1383,
+    1167,
+    950,
+    734,
+    517,
+    300,
+    84,
+    1468
+   ],
+   "expected_units": [
+    0,
+    1383,
+    1167,
+    950,
+    734,
+    517,
+    300,
+    84,
+    1468
+   ],
+   "mismatched_pulses": [],
+   "per_pulse_deg_model": 48.73032
+  },
+  "z1.2/P-530": {
+   "slice_freq_hz": 2554.0,
+   "timing_and_gradients_identical": true,
+   "measured_units": [
+    0,
+    216,
+    433,
+    649,
+    866,
+    1083,
+    1299,
+    1516,
+    133
+   ],
+   "expected_units": [
+    0,
+    216,
+    433,
+    649,
+    866,
+    1083,
+    1299,
+    1516,
+    133
+   ],
+   "mismatched_pulses": [],
+   "per_pulse_deg_model": -48.73032
+  },
+  "z-1.2/P530": {
+   "slice_freq_hz": -2554.0,
+   "timing_and_gradients_identical": true,
+   "measured_units": [
+    0,
+    217,
+    433,
+    650,
+    866,
+    1083,
+    1300,
+    1516,
+    132
+   ],
+   "expected_units": [
+    0,
+    217,
+    433,
+    650,
+    866,
+    1083,
+    1300,
+    1516,
+    132
+   ],
+   "mismatched_pulses": [],
+   "per_pulse_deg_model": -48.73032
+  },
+  "z-1.2/P-530": {
+   "slice_freq_hz": -2554.0,
+   "timing_and_gradients_identical": true,
+   "measured_units": [
+    0,
+    1384,
+    1167,
+    951,
+    734,
+    517,
+    301,
+    84,
+    1467
+   ],
+   "expected_units": [
+    0,
+    1384,
+    1167,
+    951,
+    734,
+    517,
+    301,
+    84,
+    1467
+   ],
+   "mismatched_pulses": [],
+   "per_pulse_deg_model": 48.73032
+  },
+  "z2.4/P530": {
+   "slice_freq_hz": 5109.0,
+   "timing_and_gradients_identical": true,
+   "measured_units": [
+    0,
+    1167,
+    734,
+    301,
+    1467,
+    1034,
+    601,
+    167,
+    1334
+   ],
+   "expected_units": [
+    0,
+    1167,
+    734,
+    301,
+    1467,
+    1034,
+    601,
+    167,
+    1334
+   ],
+   "mismatched_pulses": [],
+   "per_pulse_deg_model": 97.47972
+  },
+  "z2.4/P-530": {
+   "slice_freq_hz": 5109.0,
+   "timing_and_gradients_identical": true,
+   "measured_units": [
+    0,
+    433,
+    867,
+    1300,
+    133,
+    566,
+    1000,
+    1432,
+    266
+   ],
+   "expected_units": [
+    0,
+    433,
+    867,
+    1300,
+    133,
+    566,
+    1000,
+    1432,
+    266
+   ],
+   "mismatched_pulses": [],
+   "per_pulse_deg_model": -97.47972
+  }
+ },
+ "pass": true
+}

@@ -1,0 +1,37 @@
+{
+  "letter": "H",
+  "version": "v1912",
+  "purpose": "40-kHz minimum ESP + 1 ms timing control",
+  "rows": [
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ]
+  ],
+  "priority": "core",
+  "dwell_us": 25,
+  "esp": 11,
+  "tr": 1000,
+  "te": 54,
+  "big_delta": 40000,
+  "nav_on": 1,
+  "offsets": [
+    0
+  ],
+  "matrix": 128,
+  "expected_rejection": null,
+  "stem": "FSE-DWI_10-11-2026_v1912_testH",
+  "ppr": "FSE-DWI_10-11-2026_v1912_testH/FSE-DWI_10-11-2026_v1912_testH.ppr",
+  "ppr_sha256": "312467cc7a0a1725f5e80c2a759fa48bc38ffb35518a39d9a8c845887a6d86b8",
+  "raw_views": 136,
+  "effective_phase_views": 136,
+  "gp_init_var": -1000,
+  "nominal_duration_s": 21.0,
+  "slice_offsets_mm": [
+    0.0
+  ]
+}

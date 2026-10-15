@@ -1,0 +1,41 @@
+{
+  "letter": "O",
+  "version": "v182",
+  "purpose": "Large off-centre RF phase at +/-5 mm",
+  "rows": [
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ]
+  ],
+  "priority": "core",
+  "dwell_us": 25,
+  "esp": 11,
+  "tr": 1000,
+  "te": 54,
+  "big_delta": 40000,
+  "nav_on": 2,
+  "offsets": [
+    -2000,
+    0,
+    2000
+  ],
+  "matrix": 128,
+  "expected_rejection": null,
+  "stem": "FSE-DWI_10-11-2026_v182_testO",
+  "ppr": "FSE-DWI_10-11-2026_v182_testO/FSE-DWI_10-11-2026_v182_testO.ppr",
+  "ppr_sha256": "e29fc31cbce17cacc7ad3435b305e60468ab9426ded575979a5b9519fc861d30",
+  "raw_views": 153,
+  "effective_phase_views": 136,
+  "gp_init_var": -1000,
+  "nominal_duration_s": 21.0,
+  "slice_offsets_mm": [
+    -5.0,
+    0.0,
+    5.0
+  ]
+}

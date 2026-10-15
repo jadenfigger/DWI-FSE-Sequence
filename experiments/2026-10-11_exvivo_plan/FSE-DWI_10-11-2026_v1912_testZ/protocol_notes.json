@@ -1,0 +1,38 @@
+{
+  "letter": "Z",
+  "version": "v1912",
+  "purpose": "Off-resonance follow-up: manually detune common TX/RX centre by -128 Hz",
+  "rows": [
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ]
+  ],
+  "priority": "conditional",
+  "dwell_us": 25,
+  "esp": 10,
+  "tr": 1000,
+  "te": 44,
+  "big_delta": 30000,
+  "nav_on": 2,
+  "offsets": [
+    0
+  ],
+  "matrix": 128,
+  "expected_rejection": null,
+  "manual_centre_offset_hz": -128,
+  "stem": "FSE-DWI_10-11-2026_v1912_testZ",
+  "ppr": "FSE-DWI_10-11-2026_v1912_testZ/FSE-DWI_10-11-2026_v1912_testZ.ppr",
+  "ppr_sha256": "7741bb795dc5648e4340740b7ede065ae9b5f597124964004ed67c34d24cf0c8",
+  "raw_views": 153,
+  "effective_phase_views": 136,
+  "gp_init_var": -1000,
+  "nominal_duration_s": 21.0,
+  "slice_offsets_mm": [
+    0.0
+  ]
+}

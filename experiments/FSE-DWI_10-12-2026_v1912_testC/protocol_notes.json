@@ -1,0 +1,55 @@
+{
+  "letter": "C",
+  "version": "v1912",
+  "part": 0,
+  "purpose": "ss-MGOT rescue after frequency check: b10, b1000 +x, b3000 +x; must show b-dependent signal",
+  "rows": [
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      1000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      3000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ]
+  ],
+  "dwell_us": 25,
+  "esp": 11,
+  "tr": 2000,
+  "te": 44,
+  "big_delta": 30000,
+  "nav_on": 1,
+  "offsets": [
+    0
+  ],
+  "matrix": 128,
+  "phmode": 0,
+  "phcal": 0,
+  "sample": "ex-vivo brain in PBS",
+  "note": "",
+  "stem": "FSE-DWI_10-12-2026_v1912_testC",
+  "ppr": "FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr",
+  "ppr_sha256": "c533d5e84673adc58bed05fe1eb90b4a812287c45a2d5364c4d6dcf365f3fa51",
+  "raw_views": 136,
+  "views_per_segment": 8,
+  "nominal_duration_s": 126.0,
+  "slice_offsets_mm": [
+    0.0
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "letter": "A",
+  "version": "v182",
+  "purpose": "Load/compile, low-b E1 diagnostic, tissue/PBS high-b baseline",
+  "rows": [
+    [
+      0,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      5,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      20,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      100,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      1000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      6000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ]
+  ],
+  "priority": "core",
+  "dwell_us": 50,
+  "esp": 14,
+  "tr": 1000,
+  "te": 54,
+  "big_delta": 40000,
+  "nav_on": 1,
+  "offsets": [
+    0
+  ],
+  "matrix": 128,
+  "expected_rejection": null,
+  "stem": "FSE-DWI_10-11-2026_v182_testA",
+  "ppr": "FSE-DWI_10-11-2026_v182_testA/FSE-DWI_10-11-2026_v182_testA.ppr",
+  "ppr_sha256": "c178cada5db46a0005816a0780d6655ea6db14bd5ed3d19742b9cf19f3cf8c9f",
+  "raw_views": 136,
+  "effective_phase_views": 136,
+  "gp_init_var": -1000,
+  "nominal_duration_s": 147.0,
+  "slice_offsets_mm": [
+    0.0
+  ]
+}

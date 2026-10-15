@@ -1,0 +1,91 @@
+{
+  "letter": "RR",
+  "version": "v1912",
+  "part": 3,
+  "purpose": "FALLBACK (nav 1) for R: Comparison 1 (ss-MGOT), matched to Q",
+  "rows": [
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      1000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      1000,
+      [
+        0,
+        1000,
+        0
+      ]
+    ],
+    [
+      1000,
+      [
+        0,
+        0,
+        1000
+      ]
+    ],
+    [
+      3000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      3000,
+      [
+        0,
+        1000,
+        0
+      ]
+    ],
+    [
+      3000,
+      [
+        0,
+        0,
+        1000
+      ]
+    ]
+  ],
+  "dwell_us": 25,
+  "esp": 11,
+  "tr": 2000,
+  "te": 44,
+  "big_delta": 30000,
+  "nav_on": 1,
+  "offsets": [
+    -1120,
+    0,
+    1120
+  ],
+  "matrix": 128,
+  "phmode": 0,
+  "phcal": 0,
+  "sample": "ex-vivo brain in PBS",
+  "note": "",
+  "stem": "FSE-DWI_10-12-2026_v1912_testRR",
+  "ppr": "FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr",
+  "ppr_sha256": "4737130190115cd35c51956c2298a3a245deb8fc908a300aff658c05dedb5526",
+  "raw_views": 136,
+  "views_per_segment": 8,
+  "nominal_duration_s": 294.0,
+  "slice_offsets_mm": [
+    -2.8,
+    0.0,
+    2.8
+  ]
+}

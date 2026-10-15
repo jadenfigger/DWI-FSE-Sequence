@@ -1,0 +1,45 @@
+{
+  "letter": "U",
+  "version": "v1912",
+  "purpose": "End-of-tests drift repeat against B (b10/b1000)",
+  "rows": [
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      1000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ]
+  ],
+  "priority": "core",
+  "dwell_us": 50,
+  "esp": 13,
+  "tr": 1000,
+  "te": 54,
+  "big_delta": 40000,
+  "nav_on": 1,
+  "offsets": [
+    0
+  ],
+  "matrix": 128,
+  "expected_rejection": null,
+  "stem": "FSE-DWI_10-11-2026_v1912_testU",
+  "ppr": "FSE-DWI_10-11-2026_v1912_testU/FSE-DWI_10-11-2026_v1912_testU.ppr",
+  "ppr_sha256": "65009475fba0532d9b18dfe2c4d74522aaf291940c8b5ba50b4459e609f782b3",
+  "raw_views": 136,
+  "effective_phase_views": 136,
+  "gp_init_var": -1000,
+  "nominal_duration_s": 42.0,
+  "slice_offsets_mm": [
+    0.0
+  ]
+}

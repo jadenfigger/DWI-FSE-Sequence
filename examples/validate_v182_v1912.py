@@ -550,10 +550,10 @@ def run(labels=("v182", "v1912")):
             for z in (0, 1.2, -1.2, 5, -5):
                 suffix = str(z).replace("-", "m").replace(".", "p")
                 ppr = make_ppr(label, f"{label}_{model_name}_nav2_phase_{suffix}mm",
-                               edits={"no_slices": 1, "no_disacq": 0, "nav_on": 2, "no_views": 153},
+                               edits={"no_slices": 1, "no_disacq": 0, "nav_on": 2, "no_views": 153, "views_per_seg": 9},
                                arrays={"fov_slice_off": [round(z * 400)]})
                 it = map_case(label, ppr, overrides={"no_slices": 1, "no_disacq": 0,
-                                                    "nav_on": 2, "no_views": 153},
+                                                    "nav_on": 2, "no_views": 153, "views_per_seg": 9},
                               shots=6, model=model)
                 if z == 0:
                     center_origin, reference_hz, _ = centre_frequency_anchor(it)
@@ -724,7 +724,7 @@ def run(labels=("v182", "v1912")):
         for n_slices in (1, 3):
             offsets = [0] if n_slices == 1 else ([-480, 0, 480] if label == "v182" else [-1103, 0, 1103])
             ppr = make_ppr(label, f"{label}_nav2_{n_slices}slices", edits={
-                "nav_on": 2, "no_views": 153, "no_slices": n_slices, "no_disacq": 0},
+                "nav_on": 2, "no_views": 153, "views_per_seg": 9, "no_slices": n_slices, "no_disacq": 0},
                 arrays={"fov_slice_off": offsets})
             embedded, _ = read_ppr(ppr)
             case_key = f"{label}/{n_slices}slices"
@@ -734,7 +734,7 @@ def run(labels=("v182", "v1912")):
             if embedded.get("no_views") != 153:
                 results["failures"].append(f"{case_key} embedded nav2 protocol does not declare raw no_views=153")
             for model_name, model in MODELS.items():
-                it = map_case(label, ppr, overrides={"nav_on": 2, "no_views": 153,
+                it = map_case(label, ppr, overrides={"nav_on": 2, "no_views": 153, "views_per_seg": 9,
                                                      "no_slices": n_slices, "no_disacq": 0},
                               shots=2 * n_slices, model=model)
                 _, ledgers = shot_ledgers(it)

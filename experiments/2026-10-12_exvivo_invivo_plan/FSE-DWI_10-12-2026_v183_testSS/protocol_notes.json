@@ -1,0 +1,91 @@
+{
+  "letter": "SS",
+  "version": "v183",
+  "part": 3,
+  "purpose": "FALLBACK (nav 1) for S: Comparison 2: b10 + 6 oblique directions at b2000; 3 slices",
+  "rows": [
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      2000,
+      [
+        707,
+        707,
+        0
+      ]
+    ],
+    [
+      2000,
+      [
+        707,
+        0,
+        707
+      ]
+    ],
+    [
+      2000,
+      [
+        0,
+        707,
+        707
+      ]
+    ],
+    [
+      2000,
+      [
+        707,
+        -707,
+        0
+      ]
+    ],
+    [
+      2000,
+      [
+        707,
+        0,
+        -707
+      ]
+    ],
+    [
+      2000,
+      [
+        0,
+        707,
+        -707
+      ]
+    ]
+  ],
+  "dwell_us": 25,
+  "esp": 11,
+  "tr": 2000,
+  "te": 44,
+  "big_delta": 30000,
+  "nav_on": 1,
+  "offsets": [
+    -1120,
+    0,
+    1120
+  ],
+  "matrix": 128,
+  "phmode": 0,
+  "phcal": 0,
+  "sample": "ex-vivo brain in PBS",
+  "note": "",
+  "stem": "FSE-DWI_10-12-2026_v183_testSS",
+  "ppr": "FSE-DWI_10-12-2026_v183_testSS/FSE-DWI_10-12-2026_v183_testSS.ppr",
+  "ppr_sha256": "1ec6bc49fc65dc31ce412952973909160607fbee60123c43b36d7e3e5e9701cb",
+  "raw_views": 136,
+  "views_per_segment": 8,
+  "nominal_duration_s": 294.0,
+  "slice_offsets_mm": [
+    -2.8,
+    0.0,
+    2.8
+  ]
+}

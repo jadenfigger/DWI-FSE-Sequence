@@ -1,0 +1,41 @@
+{
+  "letter": "W",
+  "version": "v1912",
+  "purpose": "NO ACQUISITION: reject one console unit below the spacing bound",
+  "rows": [
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ]
+  ],
+  "priority": "guard",
+  "dwell_us": 25,
+  "esp": 10,
+  "tr": 1000,
+  "te": 54,
+  "big_delta": 40000,
+  "nav_on": 2,
+  "offsets": [
+    -1102,
+    0,
+    1102
+  ],
+  "matrix": 128,
+  "expected_rejection": "E148; minimum separation=1103 units",
+  "stem": "FSE-DWI_10-11-2026_v1912_testW",
+  "ppr": "FSE-DWI_10-11-2026_v1912_testW/FSE-DWI_10-11-2026_v1912_testW.ppr",
+  "ppr_sha256": "f56369e6a8b623f843159e3cbbfdedf977b5509bb0a06142950cb0885ff5fced",
+  "raw_views": 153,
+  "effective_phase_views": 136,
+  "gp_init_var": -1000,
+  "nominal_duration_s": 0,
+  "slice_offsets_mm": [
+    -2.755,
+    0.0,
+    2.755
+  ]
+}

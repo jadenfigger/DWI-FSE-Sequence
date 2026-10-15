@@ -1,0 +1,37 @@
+{
+  "letter": "Y",
+  "version": "v1912",
+  "purpose": "NO ACQUISITION: reject ESP one ms below the 40-kHz minimum",
+  "rows": [
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ]
+  ],
+  "priority": "guard",
+  "dwell_us": 25,
+  "esp": 9,
+  "tr": 1000,
+  "te": 54,
+  "big_delta": 40000,
+  "nav_on": 1,
+  "offsets": [
+    0
+  ],
+  "matrix": 128,
+  "expected_rejection": "E147; minimum ESP=10 ms",
+  "stem": "FSE-DWI_10-11-2026_v1912_testY",
+  "ppr": "FSE-DWI_10-11-2026_v1912_testY/FSE-DWI_10-11-2026_v1912_testY.ppr",
+  "ppr_sha256": "e7fc0610fcf3b94b823dc7a94d8f60049c555936f69eab9fec97439b07f1bf1a",
+  "raw_views": 136,
+  "effective_phase_views": 136,
+  "gp_init_var": -1000,
+  "nominal_duration_s": 0,
+  "slice_offsets_mm": [
+    0.0
+  ]
+}

@@ -30,7 +30,7 @@ def resolve_ppl(protocol):
         raise ValueError("embedded :PPL is missing")
     name = m[1].strip().strip('"').replace("\\", "/").rsplit("/", 1)[-1]
     version = re.search(r"-([\d.]+)\.ppl$", name, re.I)
-    if not version or version[1] not in ("1.8", "1.81", "1.82", "1.91", "1.911", "1.912"):
+    if not version or version[1] not in ("1.8", "1.81", "1.82", "1.83", "1.91", "1.911", "1.912"):
         raise ValueError(f"unsupported sequence {name}")
     # Console v1.91 scans used the method-only v7 snapshot, whereas scanner/1.91
     # currently holds a different combined source. Resolve to the acquired lineage.
@@ -158,6 +158,8 @@ def effective_b(protocol, diff, no_volumes, imaging_views, pe_order=1,
     # ETL comes from embedded protocol for linear/reverse-centric centre echo.
     m = re.search(r":VIEWS_PER_SEGMENT\s+\w+,\s*(\d+)", protocol)
     etl = int(m[1]) if m else 8
+    if re.search(r"^:VAR\s+nav_on,\s*2", protocol, re.M):
+        etl -= 1   # mode 2 stores VIEWS_PER_SEGMENT = ETL+1
     echo = 1 if pe_order == 1 else (etl if pe_order == 6 else etl // 2 + 1)
     nominal = diff["b"]
     if nominal is None:

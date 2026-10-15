@@ -1,0 +1,37 @@
+{
+  "letter": "AC",
+  "version": "v1912",
+  "purpose": "Matched mixed-axis b1000 direction, for future non-axis direction sets",
+  "rows": [
+    [
+      1000,
+      [
+        577,
+        577,
+        577
+      ]
+    ]
+  ],
+  "priority": "core",
+  "dwell_us": 25,
+  "esp": 10,
+  "tr": 1000,
+  "te": 54,
+  "big_delta": 40000,
+  "nav_on": 1,
+  "offsets": [
+    0
+  ],
+  "matrix": 128,
+  "expected_rejection": null,
+  "stem": "FSE-DWI_10-11-2026_v1912_testAC",
+  "ppr": "FSE-DWI_10-11-2026_v1912_testAC/FSE-DWI_10-11-2026_v1912_testAC.ppr",
+  "ppr_sha256": "e2b96e77838d3e48ffb084aa5954282450694a26f994f5c1c2c719872353dfec",
+  "raw_views": 136,
+  "effective_phase_views": 136,
+  "gp_init_var": -1000,
+  "nominal_duration_s": 21.0,
+  "slice_offsets_mm": [
+    0.0
+  ]
+}

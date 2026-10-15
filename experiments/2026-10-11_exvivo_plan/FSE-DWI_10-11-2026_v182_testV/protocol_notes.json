@@ -1,0 +1,113 @@
+{
+  "letter": "V",
+  "version": "v182",
+  "purpose": "Final ex-vivo pilot: 256x256, 3 slices, 1 average, Delta30, 3 directions/shell",
+  "rows": [
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      1000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      1000,
+      [
+        0,
+        1000,
+        0
+      ]
+    ],
+    [
+      1000,
+      [
+        0,
+        0,
+        1000
+      ]
+    ],
+    [
+      3000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      3000,
+      [
+        0,
+        1000,
+        0
+      ]
+    ],
+    [
+      3000,
+      [
+        0,
+        0,
+        1000
+      ]
+    ],
+    [
+      6000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      6000,
+      [
+        0,
+        1000,
+        0
+      ]
+    ],
+    [
+      6000,
+      [
+        0,
+        0,
+        1000
+      ]
+    ]
+  ],
+  "priority": "core",
+  "dwell_us": 25,
+  "esp": 14,
+  "tr": 2000,
+  "te": 44,
+  "big_delta": 30000,
+  "nav_on": 2,
+  "offsets": [
+    -960,
+    0,
+    960
+  ],
+  "matrix": 256,
+  "expected_rejection": null,
+  "stem": "FSE-DWI_10-11-2026_v182_testV",
+  "ppr": "FSE-DWI_10-11-2026_v182_testV/FSE-DWI_10-11-2026_v182_testV.ppr",
+  "ppr_sha256": "89c46c2d1250b938664b0d0789607ec06b52a31c61e512690c5073285c860d80",
+  "raw_views": 297,
+  "effective_phase_views": 264,
+  "gp_init_var": -1941,
+  "nominal_duration_s": 740.0,
+  "slice_offsets_mm": [
+    -2.4,
+    0.0,
+    2.4
+  ]
+}

@@ -461,6 +461,9 @@ def run_recon(filename, output_dir=None):
     nav_on = int(nav_value)
     acq_offset = etl if nav_on == 1 else 0
     if nav_on == 2:
+        # Mode 2 stores VIEWS_PER_SEGMENT = ETL+1 (one shot incl. its navigator echo),
+        # because the console requires NO_VIEWS to be a multiple of VIEWS_PER_SEGMENT.
+        etl = etl - 1
         declared = re.search(r":NO_VIEWS\s+\w+,\s*(\d+)", header_text)
         if not declared:
             raise ValueError("nav_on=2 requires embedded NO_VIEWS")

@@ -38,9 +38,10 @@ def build():
     { v19_error_code=150; goto v19_fail; }
     if (nav_on==2)
     {
-        if ((PE_order!=1)||(no_views%(views_per_seg+1)!=0)||
-            (no_views<2*(views_per_seg+1)))
+        if ((PE_order!=1)||(views_per_seg<2)||(no_views%views_per_seg!=0)||
+            (no_views<2*views_per_seg))
         { v19_error_code=151; goto v19_fail; }
+        views_per_seg=views_per_seg-1;
         no_views=(no_views/(views_per_seg+1))*views_per_seg;
     }
 \tif (PE_order != 2){''')
@@ -297,7 +298,8 @@ v1912_phase_zero:
     if (v1912_pos!=0L) templ1=0L;''')
     # Runtime no_views counts legacy ETL slots; embedded no_views is raw lines.
     s = '''/* V1912 raw contract: nav_on 0/1 retain inherited layout.
-   nav_on 2: embedded no_views=R raw lines, views_per_seg=E imaging ETL.
+   nav_on 2: embedded no_views=R raw lines, views_per_seg=E+1 (shot
+   length; console needs R % views_per_seg == 0); imaging ETL E.
    Imaging N=(R/(E+1)-1)*E; R must be divisible by E+1.
    Per volume and slice: leading E+1 unencoded volume navigator lines;
    then N/E imaging shots, each E imaging lines followed by one ky=0 echo.

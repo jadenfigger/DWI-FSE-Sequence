@@ -1,0 +1,57 @@
+{
+  "letter": "K",
+  "version": "v182",
+  "purpose": "K-style off-centre phase and tight-gap crosstalk with shot navigators",
+  "rows": [
+    [
+      0,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      1000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ]
+  ],
+  "priority": "core",
+  "dwell_us": 25,
+  "esp": 11,
+  "tr": 1000,
+  "te": 54,
+  "big_delta": 40000,
+  "nav_on": 2,
+  "offsets": [
+    -480,
+    0,
+    480
+  ],
+  "matrix": 128,
+  "expected_rejection": null,
+  "stem": "FSE-DWI_10-11-2026_v182_testK",
+  "ppr": "FSE-DWI_10-11-2026_v182_testK/FSE-DWI_10-11-2026_v182_testK.ppr",
+  "ppr_sha256": "37a87245a9a1b407fada223d85a8e1e711c92310eec01caa963d7f3904876444",
+  "raw_views": 153,
+  "effective_phase_views": 136,
+  "gp_init_var": -1000,
+  "nominal_duration_s": 63.0,
+  "slice_offsets_mm": [
+    -1.2,
+    0.0,
+    1.2
+  ]
+}

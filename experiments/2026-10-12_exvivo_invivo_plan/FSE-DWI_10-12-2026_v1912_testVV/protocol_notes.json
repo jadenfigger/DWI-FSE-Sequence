@@ -1,0 +1,67 @@
+{
+  "letter": "VV",
+  "version": "v1912",
+  "part": 4,
+  "purpose": "FALLBACK (nav 1) for V: In vivo quick check (ss-MGOT), matched to U",
+  "rows": [
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      1000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      1000,
+      [
+        0,
+        1000,
+        0
+      ]
+    ],
+    [
+      1000,
+      [
+        0,
+        0,
+        1000
+      ]
+    ]
+  ],
+  "dwell_us": 25,
+  "esp": 11,
+  "tr": 2000,
+  "te": 44,
+  "big_delta": 30000,
+  "nav_on": 1,
+  "offsets": [
+    -1120,
+    0,
+    1120
+  ],
+  "matrix": 128,
+  "phmode": 0,
+  "phcal": 0,
+  "sample": "in-vivo rat brain, surface coil",
+  "note": "",
+  "stem": "FSE-DWI_10-12-2026_v1912_testVV",
+  "ppr": "FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr",
+  "ppr_sha256": "610ee16d38c1fb337cf6fa4a8a98dad4e4bbaf6fdd9cf84209c3de95f7e43582",
+  "raw_views": 136,
+  "views_per_segment": 8,
+  "nominal_duration_s": 168.0,
+  "slice_offsets_mm": [
+    -2.8,
+    0.0,
+    2.8
+  ]
+}

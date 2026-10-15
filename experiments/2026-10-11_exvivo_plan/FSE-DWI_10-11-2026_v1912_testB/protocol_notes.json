@@ -1,0 +1,85 @@
+{
+  "letter": "B",
+  "version": "v1912",
+  "purpose": "Load/compile, matched ss-MGOT baseline and low-b/high-b diagnostic",
+  "rows": [
+    [
+      0,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      5,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      20,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      100,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      1000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      6000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ]
+  ],
+  "priority": "core",
+  "dwell_us": 50,
+  "esp": 13,
+  "tr": 1000,
+  "te": 54,
+  "big_delta": 40000,
+  "nav_on": 1,
+  "offsets": [
+    0
+  ],
+  "matrix": 128,
+  "expected_rejection": null,
+  "stem": "FSE-DWI_10-11-2026_v1912_testB",
+  "ppr": "FSE-DWI_10-11-2026_v1912_testB/FSE-DWI_10-11-2026_v1912_testB.ppr",
+  "ppr_sha256": "00d1f43332b9fa087dd827d13f8b6cb8f0dc5b27f7b12008a6da059908480b45",
+  "raw_views": 136,
+  "effective_phase_views": 136,
+  "gp_init_var": -1000,
+  "nominal_duration_s": 147.0,
+  "slice_offsets_mm": [
+    0.0
+  ]
+}

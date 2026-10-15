@@ -1,0 +1,43 @@
+{
+  "letter": "I",
+  "version": "v183",
+  "part": 1,
+  "purpose": "Verify mode 0 at +/-5 mm",
+  "rows": [
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ]
+  ],
+  "dwell_us": 25,
+  "esp": 11,
+  "tr": 2000,
+  "te": 44,
+  "big_delta": 30000,
+  "nav_on": 1,
+  "offsets": [
+    -2000,
+    0,
+    2000
+  ],
+  "matrix": 128,
+  "phmode": 0,
+  "phcal": 0,
+  "sample": "ex-vivo brain in PBS",
+  "note": "",
+  "stem": "FSE-DWI_10-12-2026_v183_testI",
+  "ppr": "FSE-DWI_10-12-2026_v183_testI/FSE-DWI_10-12-2026_v183_testI.ppr",
+  "ppr_sha256": "8ab23cf07c47ae550d3899ade4446bff795661cf8631911dad4636bad598503a",
+  "raw_views": 136,
+  "views_per_segment": 8,
+  "nominal_duration_s": 42.0,
+  "slice_offsets_mm": [
+    -5.0,
+    0.0,
+    5.0
+  ]
+}

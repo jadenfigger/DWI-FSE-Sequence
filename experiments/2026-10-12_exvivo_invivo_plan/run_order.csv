@@ -1,0 +1,33 @@
+﻿test,version,part,purpose,volumes,dwell_us,ESP_ms,TE_ms,Delta_ms,TR_ms,matrix,slices_mm,navigator,raw_views,views_per_segment,v183_phmode,v183_phcal,scan_minutes,PPR
+A,v183,0,Frequency check 1/2: b10 at 20 kHz (compare readout position with B),1,50,14,44,30.0,2000,128,0,1,136,8,0,0,0.7,FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr
+B,v183,0,Frequency check 2/2: b10 at 40 kHz; image must register with A within 0.5 px,1,25,11,44,30.0,2000,128,0,1,136,8,0,0,0.7,FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr
+C,v1912,0,"ss-MGOT rescue after frequency check: b10, b1000 +x, b3000 +x; must show b-dependent signal",3,25,11,44,30.0,2000,128,0,1,136,8,,,2.1,FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr
+D,v183,1,"Calibration step 1: mode 0 (vendor), +/-1.2 mm",1,25,11,44,30.0,2000,128,-1.2 0 1.2,1,136,8,0,0,0.7,FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr
+E,v183,1,"Calibration step 2a: mode 1, phcal 0 (= v1.82), +/-1.2 mm",1,25,11,44,30.0,2000,128,-1.2 0 1.2,1,136,8,1,0,0.7,FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr
+F,v183,1,"Calibration step 2b: mode 1, phcal +530, +/-1.2 mm",1,25,11,44,30.0,2000,128,-1.2 0 1.2,1,136,8,1,530,0.7,FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr
+G,v183,1,"Calibration step 2c: mode 1, phcal -530, +/-1.2 mm",1,25,11,44,30.0,2000,128,-1.2 0 1.2,1,136,8,1,-530,0.7,FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr
+H,v183,1,"Verify mode 0 at the protocol spacing, +/-2.8 mm",1,25,11,44,30.0,2000,128,-2.8 0 2.8,1,136,8,0,0,0.7,FSE-DWI_10-12-2026_v183_testH/FSE-DWI_10-12-2026_v183_testH.ppr
+I,v183,1,Verify mode 0 at +/-5 mm,1,25,11,44,30.0,2000,128,-5 0 5,1,136,8,0,0,0.7,FSE-DWI_10-12-2026_v183_testI/FSE-DWI_10-12-2026_v183_testI.ppr
+J,v183,1,Verify mode 1 at +/-2.8 mm: SET v183_phcal TO THE TOOL'S RECOMMENDATION,1,25,11,44,30.0,2000,128,-2.8 0 2.8,1,136,8,1,0,0.7,FSE-DWI_10-12-2026_v183_testJ/FSE-DWI_10-12-2026_v183_testJ.ppr
+K,v183,1,Verify mode 1 at +/-5 mm: SET v183_phcal TO THE TOOL'S RECOMMENDATION,1,25,11,44,30.0,2000,128,-5 0 5,1,136,8,1,0,0.7,FSE-DWI_10-12-2026_v183_testK/FSE-DWI_10-12-2026_v183_testK.ppr
+L,v1912,1,"ss-MGOT off-centre phase (gated scheme, uncalibrated) at +/-2.8 mm; only if C showed signal",1,25,11,44,30.0,2000,128,-2.8 0 2.8,1,136,8,,,0.7,FSE-DWI_10-12-2026_v1912_testL/FSE-DWI_10-12-2026_v1912_testL.ppr
+M,v183,2,Navigator test: volume navigator only (nav 1),4,25,11,44,30.0,2000,128,0,1,136,8,0,0,2.8,FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr
+N,v183,2,"Navigator test: per-shot navigators (nav 2), otherwise identical to M",4,25,11,44,30.0,2000,128,0,2,153,9,0,0,2.8,FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr
+O,v1912,2,Navigator test ss-MGOT: nav 1,4,25,11,44,30.0,2000,128,0,1,136,8,,,2.8,FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr
+P,v1912,2,"Navigator test ss-MGOT: nav 2, otherwise identical to O",4,25,11,44,30.0,2000,128,0,2,153,9,,,2.8,FSE-DWI_10-12-2026_v1912_testP/FSE-DWI_10-12-2026_v1912_testP.ppr
+Q,v183,3,"Comparison 1: b10 + b1000/b3000 along x, y, z; 3 slices",7,25,11,44,30.0,2000,128,-2.8 0 2.8,2,153,9,0,0,4.9,FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr
+R,v1912,3,"Comparison 1 (ss-MGOT), matched to Q",7,25,11,44,30.0,2000,128,-2.8 0 2.8,2,153,9,,,4.9,FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr
+S,v183,3,Comparison 2: b10 + 6 oblique directions at b2000; 3 slices,7,25,11,44,30.0,2000,128,-2.8 0 2.8,2,153,9,0,0,4.9,FSE-DWI_10-12-2026_v183_testS/FSE-DWI_10-12-2026_v183_testS.ppr
+T,v1912,3,"Comparison 2 (ss-MGOT), matched to S",7,25,11,44,30.0,2000,128,-2.8 0 2.8,2,153,9,,,4.9,FSE-DWI_10-12-2026_v1912_testT/FSE-DWI_10-12-2026_v1912_testT.ppr
+U,v183,4,"In vivo quick check: b10 + b1000 x, y, z; 3 slices",4,25,11,44,30.0,2000,128,-2.8 0 2.8,2,153,9,0,0,2.8,FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr
+V,v1912,4,"In vivo quick check (ss-MGOT), matched to U",4,25,11,44,30.0,2000,128,-2.8 0 2.8,2,153,9,,,2.8,FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr
+W,v183,4,"In vivo full: 3 x b10 + 12 directions at b1000, b3000, b6000; 3 slices",39,25,11,44,30.0,2000,128,-2.8 0 2.8,2,153,9,0,0,27.3,FSE-DWI_10-12-2026_v183_testW/FSE-DWI_10-12-2026_v183_testW.ppr
+X,v1912,4,"In vivo full (ss-MGOT), matched to W",39,25,11,44,30.0,2000,128,-2.8 0 2.8,2,153,9,,,27.3,FSE-DWI_10-12-2026_v1912_testX/FSE-DWI_10-12-2026_v1912_testX.ppr
+QQ,v183,3,"FALLBACK (nav 1) for Q: Comparison 1: b10 + b1000/b3000 along x, y, z; 3 slices",7,25,11,44,30.0,2000,128,-2.8 0 2.8,1,136,8,0,0,4.9,FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr
+RR,v1912,3,"FALLBACK (nav 1) for R: Comparison 1 (ss-MGOT), matched to Q",7,25,11,44,30.0,2000,128,-2.8 0 2.8,1,136,8,,,4.9,FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr
+SS,v183,3,FALLBACK (nav 1) for S: Comparison 2: b10 + 6 oblique directions at b2000; 3 slices,7,25,11,44,30.0,2000,128,-2.8 0 2.8,1,136,8,0,0,4.9,FSE-DWI_10-12-2026_v183_testSS/FSE-DWI_10-12-2026_v183_testSS.ppr
+TT,v1912,3,"FALLBACK (nav 1) for T: Comparison 2 (ss-MGOT), matched to S",7,25,11,44,30.0,2000,128,-2.8 0 2.8,1,136,8,,,4.9,FSE-DWI_10-12-2026_v1912_testTT/FSE-DWI_10-12-2026_v1912_testTT.ppr
+UU,v183,4,"FALLBACK (nav 1) for U: In vivo quick check: b10 + b1000 x, y, z; 3 slices",4,25,11,44,30.0,2000,128,-2.8 0 2.8,1,136,8,0,0,2.8,FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr
+VV,v1912,4,"FALLBACK (nav 1) for V: In vivo quick check (ss-MGOT), matched to U",4,25,11,44,30.0,2000,128,-2.8 0 2.8,1,136,8,,,2.8,FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr
+WW,v183,4,"FALLBACK (nav 1) for W: In vivo full: 3 x b10 + 12 directions at b1000, b3000, b6000; 3 slices",39,25,11,44,30.0,2000,128,-2.8 0 2.8,1,136,8,0,0,27.3,FSE-DWI_10-12-2026_v183_testWW/FSE-DWI_10-12-2026_v183_testWW.ppr
+XX,v1912,4,"FALLBACK (nav 1) for X: In vivo full (ss-MGOT), matched to W",39,25,11,44,30.0,2000,128,-2.8 0 2.8,1,136,8,,,27.3,FSE-DWI_10-12-2026_v1912_testXX/FSE-DWI_10-12-2026_v1912_testXX.ppr

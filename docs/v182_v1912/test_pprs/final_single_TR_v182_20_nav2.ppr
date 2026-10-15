@@ -5,7 +5,7 @@
 :GRADIENT_STRENGTH grad_var, 4, 25447, 25447, 25910, 25925
 :NO_SAMPLES no_samples, 128
 :NO_VIEWS no_views, 153
-:VIEWS_PER_SEGMENT views_per_seg, 8
+:VIEWS_PER_SEGMENT views_per_seg, 9
 :NO_VIEWS_2 no_views_2, 1
 :VAR oversample, 0
 :VAR oversample2, 0

@@ -1,0 +1,43 @@
+{
+  "letter": "G",
+  "version": "v183",
+  "part": 1,
+  "purpose": "Calibration step 2c: mode 1, phcal -530, +/-1.2 mm",
+  "rows": [
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ]
+  ],
+  "dwell_us": 25,
+  "esp": 11,
+  "tr": 2000,
+  "te": 44,
+  "big_delta": 30000,
+  "nav_on": 1,
+  "offsets": [
+    -480,
+    0,
+    480
+  ],
+  "matrix": 128,
+  "phmode": 1,
+  "phcal": -530,
+  "sample": "ex-vivo brain in PBS",
+  "note": "",
+  "stem": "FSE-DWI_10-12-2026_v183_testG",
+  "ppr": "FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr",
+  "ppr_sha256": "40a2cbc42c735514d41e530b05789e7f7e3a512222fad818bb561f9d4bcfeb58",
+  "raw_views": 136,
+  "views_per_segment": 8,
+  "nominal_duration_s": 42.0,
+  "slice_offsets_mm": [
+    -1.2,
+    0.0,
+    1.2
+  ]
+}

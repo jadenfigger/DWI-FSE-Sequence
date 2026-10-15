@@ -1,0 +1,37 @@
+{
+  "letter": "AB",
+  "version": "v182",
+  "purpose": "Mixed-axis b1000 direction (577,577,577), for future non-axis direction sets",
+  "rows": [
+    [
+      1000,
+      [
+        577,
+        577,
+        577
+      ]
+    ]
+  ],
+  "priority": "core",
+  "dwell_us": 25,
+  "esp": 11,
+  "tr": 1000,
+  "te": 54,
+  "big_delta": 40000,
+  "nav_on": 1,
+  "offsets": [
+    0
+  ],
+  "matrix": 128,
+  "expected_rejection": null,
+  "stem": "FSE-DWI_10-11-2026_v182_testAB",
+  "ppr": "FSE-DWI_10-11-2026_v182_testAB/FSE-DWI_10-11-2026_v182_testAB.ppr",
+  "ppr_sha256": "5c6896e1e6208072d80fa3329098ca5da2041cbe12be425da6fd3919a677ba6d",
+  "raw_views": 136,
+  "effective_phase_views": 136,
+  "gp_init_var": -1000,
+  "nominal_duration_s": 21.0,
+  "slice_offsets_mm": [
+    0.0
+  ]
+}

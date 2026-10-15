@@ -1,0 +1,43 @@
+{
+  "letter": "H",
+  "version": "v183",
+  "part": 1,
+  "purpose": "Verify mode 0 at the protocol spacing, +/-2.8 mm",
+  "rows": [
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ]
+  ],
+  "dwell_us": 25,
+  "esp": 11,
+  "tr": 2000,
+  "te": 44,
+  "big_delta": 30000,
+  "nav_on": 1,
+  "offsets": [
+    -1120,
+    0,
+    1120
+  ],
+  "matrix": 128,
+  "phmode": 0,
+  "phcal": 0,
+  "sample": "ex-vivo brain in PBS",
+  "note": "",
+  "stem": "FSE-DWI_10-12-2026_v183_testH",
+  "ppr": "FSE-DWI_10-12-2026_v183_testH/FSE-DWI_10-12-2026_v183_testH.ppr",
+  "ppr_sha256": "12e40fb9f23693fcc46d24f5b389d26381955f71fe83564bd55bdcb09e7b8550",
+  "raw_views": 136,
+  "views_per_segment": 8,
+  "nominal_duration_s": 42.0,
+  "slice_offsets_mm": [
+    -2.8,
+    0.0,
+    2.8
+  ]
+}

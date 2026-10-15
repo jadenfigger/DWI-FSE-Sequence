@@ -4,6 +4,16 @@ This repo turns the MR Solutions PPL sequence `FSE_dwi_CPMG_non_CPMG_twoTE-1.6` 
 
 **Findings so far:** [REPORT.md](REPORT.md). **How the PPL maps to Pulseq (branch table, timeline, assumptions):** [docs/ppl_to_pulseq.md](docs/ppl_to_pulseq.md).
 
+## Current project guide
+
+- **Current sequence work:** [v1.83 overview and validation](docs/v183/README.md).
+- **Latest scanner work:** [October 12 report](docs/physical_scanner_experiments_2026-10-12.md), [October 11 report](docs/physical_scanner_experiments_2026-10-11.md), and the [October 12](experiments/scan_catalog_2026-10-12.md) and [October 11](experiments/scan_catalog_2026-10-11.md) scan catalogs.
+- **Preparation studies:** [Alsop and ss-MGOT comparison](docs/prepared_fse_comparison.md) and the [October 12 B1 sensitivity study](docs/data/oct12_b1_FINAL.md).
+- **Interactive sequence explorer:** [open the spin explorer](tools/spin_explorer/spin_explorer.html) or read its [guide](tools/spin_explorer/README.md).
+- **Figures:** active figure galleries remain under [docs/figures](docs/figures); the dated scanner gallery indexes its current and historical panels.
+
+Historical run and scratch outputs are archived in [cleanup-2026-10-15.zip](archive/cleanup-2026-10-15.zip). Inspect the archive with `python tools/restore_cleanup_archive.py --list`; restore a study to its original paths with, for example, `python tools/restore_cleanup_archive.py --prefix runs/magnetization_components/`. The archive is local and ignored by Git; keep it with project backups. See the [cleanup record](docs/cleanup_2026-10-15.md) for preservation details and verification.
+
 **ETL-8 improvement investigation:** [docs/ppl_improvement_report.md](docs/ppl_improvement_report.md)
 compares original behavior, crusher and RF-phase changes, diffusion-phase errors,
 and B1/B0 robustness. The original scanner files and generator defaults remain available.

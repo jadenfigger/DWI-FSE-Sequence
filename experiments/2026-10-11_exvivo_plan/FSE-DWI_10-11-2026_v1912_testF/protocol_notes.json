@@ -1,0 +1,53 @@
+{
+  "letter": "F",
+  "version": "v1912",
+  "purpose": "40-kHz ss-MGOT minimum ESP and high-b cleanliness",
+  "rows": [
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      1000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      6000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ]
+  ],
+  "priority": "core",
+  "dwell_us": 25,
+  "esp": 10,
+  "tr": 1000,
+  "te": 54,
+  "big_delta": 40000,
+  "nav_on": 1,
+  "offsets": [
+    0
+  ],
+  "matrix": 128,
+  "expected_rejection": null,
+  "stem": "FSE-DWI_10-11-2026_v1912_testF",
+  "ppr": "FSE-DWI_10-11-2026_v1912_testF/FSE-DWI_10-11-2026_v1912_testF.ppr",
+  "ppr_sha256": "5700a5b7129e15223d0eb74324fd7967eaf609e368d00110f58bf9db9b6c4e60",
+  "raw_views": 136,
+  "effective_phase_views": 136,
+  "gp_init_var": -1000,
+  "nominal_duration_s": 63.0,
+  "slice_offsets_mm": [
+    0.0
+  ]
+}

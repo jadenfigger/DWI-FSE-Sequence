@@ -23,11 +23,11 @@
       "BMatrixAxes": "logical x=read, y=phase, z=slice; s/mm^2; columns bxx byy bzz bxy bxz byz",
       "BMatrixCalibrationApplied": false,
       "BMatrixModel": {
-        "CacheKey": "d787048dfda889a0a4c0213acd6f09bf88561456be2a27535333d76fc2de4dc6",
+        "CacheKey": "ba338cc488702829af8b493e825279117a03810861987a881039ed4b2368bde5",
         "CacheHit": true,
         "Hashes": {
-          "PPL": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
-          "Protocol": "f07a50d78788dcd90847822ac81328eb3ff6f9c0f24a13621bfd124790a3c4a3"
+          "PPL": "93a91c61e02b567d6440ce0709a9b7e45663be4d267e80defd715b382396095f",
+          "Protocol": "b8e5c0afc983d096542eaab5350ed79925b44d74b917cd088ca9444114f8c877"
         },
         "PPL": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.82.ppl",
         "Branches": [
@@ -41,16 +41,16 @@
     },
     "1.82_PE7": {
       "EffectiveBValue": [
-        1013.1057952051425
+        1013.1057952051426
       ],
       "BMatrix": [
         [
-          1003.1149199627902,
-          1.7994945292832756,
+          1003.1149199627903,
+          1.799494529283292,
           8.191380713069053,
-          -0.021358713095758534,
-          21.859103897082925,
-          0.014653045449479447
+          -0.021358713095767867,
+          21.859103897082964,
+          0.01465304544947943
         ]
       ],
       "BMatrixEcho": 5,
@@ -62,11 +62,11 @@
       "BMatrixAxes": "logical x=read, y=phase, z=slice; s/mm^2; columns bxx byy bzz bxy bxz byz",
       "BMatrixCalibrationApplied": false,
       "BMatrixModel": {
-        "CacheKey": "c93b0444b5a19de9f74e5e19f45cecd3bd2e0ac917b83d2a9536324ef20953a2",
+        "CacheKey": "e5eb466a607cfe5105a8a7eb22a92a5279d4b0ecf5c802613450d21af88f29f3",
         "CacheHit": true,
         "Hashes": {
-          "PPL": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
-          "Protocol": "a3135d980cabd18ba4081e4175af241022d580fa5d1cd659b3f16a88f1246eee"
+          "PPL": "93a91c61e02b567d6440ce0709a9b7e45663be4d267e80defd715b382396095f",
+          "Protocol": "98759196422f8a95cbf794d2d9e025885a7a1243f9fb6ed32cc91adcb8877297"
         },
         "PPL": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.82.ppl",
         "Branches": [
@@ -101,11 +101,11 @@
       "BMatrixAxes": "logical x=read, y=phase, z=slice; s/mm^2; columns bxx byy bzz bxy bxz byz",
       "BMatrixCalibrationApplied": false,
       "BMatrixModel": {
-        "CacheKey": "b0bd18851d5d7bb37db6dcecdcad699dad1766d7357f130cd68a843c59ee743f",
+        "CacheKey": "07abe8c8ea02d80eefa97ae16d75e7620f257c0d7f1f55c23c773f5fdbfd437e",
         "CacheHit": true,
         "Hashes": {
-          "PPL": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423",
-          "Protocol": "d14192ef5f803db0ff5a2f56b837a170afae2ec020abdb51e1b331c0c7336128"
+          "PPL": "8ca7406ac9e2397718befa3b3d6a601b3bcf43aab8d512a829bf0e553a851e73",
+          "Protocol": "929a1940b60d5667b3cec855126a4de2de1ba036f23cf4910f6a77caa2ba5c37"
         },
         "PPL": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.912.ppl",
         "Branches": [
@@ -140,11 +140,11 @@
       "BMatrixAxes": "logical x=read, y=phase, z=slice; s/mm^2; columns bxx byy bzz bxy bxz byz",
       "BMatrixCalibrationApplied": false,
       "BMatrixModel": {
-        "CacheKey": "5dc1390e1e57bc9fd391d51aafe701e506106ea0b93d6efd4a062840950f96f8",
-        "CacheHit": true,
+        "CacheKey": "91472b29815f401f6207712d6e2ca5ab8d818df5e73d21b260f707a23b91c4bb",
+        "CacheHit": false,
         "Hashes": {
-          "PPL": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423",
-          "Protocol": "361feae3df92835ef695bc68aa1af580f01a5e32c9b12b595915ff2359d6348b"
+          "PPL": "8ca7406ac9e2397718befa3b3d6a601b3bcf43aab8d512a829bf0e553a851e73",
+          "Protocol": "0c4be780032657f93688c12dbdb38511af7b782dfbfc01a6af4c9e701e19cdde"
         },
         "PPL": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.912.ppl",
         "Branches": [
@@ -198,10 +198,10 @@
     "BMatrixAxes": "logical x=read, y=phase, z=slice; s/mm^2; columns bxx byy bzz bxy bxz byz",
     "BMatrixCalibrationApplied": false,
     "BMatrixModel": {
-      "CacheKey": "3b032e372cd0676054ebed99e56085ffadaa75ae1e5873b87d667efcaaccfdd7",
+      "CacheKey": "840c5db3a4b57138ed40ea4e10b3c7238f0320ff5e7b5ffdaf43620deb66dc08",
       "CacheHit": true,
       "Hashes": {
-        "PPL": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
+        "PPL": "93a91c61e02b567d6440ce0709a9b7e45663be4d267e80defd715b382396095f",
         "Protocol": "90ef49bbfd9019c9a8e79cf5170ae2fda316f2cffaf156680126128978e73312"
       },
       "PPL": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.82.ppl",
@@ -259,10 +259,10 @@
     "BMatrixAxes": "logical x=read, y=phase, z=slice; s/mm^2; columns bxx byy bzz bxy bxz byz",
     "BMatrixCalibrationApplied": false,
     "BMatrixModel": {
-      "CacheKey": "1f82cd9d15a564c225e193c47e65843e08dfcf012ef24aa43389152ef5309203",
+      "CacheKey": "8f616eb3c136e628918f32d72b0fe95811bd36ab624134a92860f4b49ea5e63e",
       "CacheHit": true,
       "Hashes": {
-        "PPL": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423",
+        "PPL": "8ca7406ac9e2397718befa3b3d6a601b3bcf43aab8d512a829bf0e553a851e73",
         "Protocol": "11aca86556f0cfa1c4b51f2b60615c79e320b14b37f460b7718c4c35d458f554"
       },
       "PPL": "C:\\Miscellaneous\\Coding_Projects\\Python\\mri_processing\\processing\\DWI-FSE-Sequence\\scanner\\FSE_dwi_CPMG_non_CPMG_twoTE-1.912.ppl",

@@ -1,0 +1,240 @@
+:PPL G:\N_Yamada\EPI_Diff\2024-09-10\epidw_509_SH_MAZ04.ppl
+:OBSERVE_FREQUENCY "1H 0.0", 0.0, MHz, kHz, Hz, rx1MHz
+:VAR rec_freq, 0
+:SAMPLE_PERIOD sample_period, 50, 25, "200  KHz   5 µs"
+:NO_SAMPLES no_samples, 1344
+:DISCARD no_discard, 0
+:NO_AVERAGES no_averages, 1
+:VIEW_BLOCK view_block, 1
+:PHASE_CYCLE phase_cycle, 1
+:NO_VIEWS no_views, 16
+:VIEWS_PER_SEGMENT views_per_seg, 1
+:VAR oversample, 0
+:VAR no_pts_switch, 128
+:VAR no_switches, 128
+:EXPERIMENT_ARRAY no_experiments, 11
+:VAR slab_on, 0
+:VAR slab_thickness, 20
+:VAR slab_offset, 0
+:VAR subj_angle_x, 0
+:VAR subj_angle_y, 0
+:VAR subj_angle_z, 0
+:GRADIENT_STRENGTH grad_var, 4, 25447, 25447, 25910, 25925
+:BATCH_SLICES batch_slices, 0
+:BATCH_INTERLEAVE batch_interleave, 0
+:SWZ 1
+:SLICE_THICKNESS gs_var, -688, 2
+:SLICE_SEPARATION slice_offset, 107, 0.2
+:NO_SLICES no_slices, 3
+:SLICE_BLOCK slice_block, 1
+:SLICE_INTERLEAVE slice_interleave, 3
+:SMX 0.224563
+:SWX 1
+:SMY 0.0359301
+:SWY 1
+:READ_VAR gr_var, -7358
+:PHASE_VAR gp_init_var, -1177
+:FOV 35
+:MULTI_ORIENTATION 3
+, 0
+, 0, 0
+:X_ANGLE r_angle_var, 3
+, 0
+, 0, 0
+:Y_ANGLE p_angle_var, 3
+, 0
+, 0, 0
+:Z_ANGLE s_angle_var, 3
+, 0
+, 0, 0
+:PHASE_ORIENTATION phase_var, 0
+:FOV_READ_OFF fov_read_off, 3, 0
+, 0, 0
+:FOV_PHASE_OFF fov_phase_off, 3, 0
+, 0, 0
+:FOV_SLICE_OFF fov_slice_off, 3, -440
+, 0, 440
+:FOV_OFFSETS 3
+, 0, 0, -2.2
+, 0, 0, 0
+, 0, 0, 2.2
+:VAR aspect_ratio, 1
+:VAR FOVf, 8
+:VAR tramp, 100
+:VAR tref, 500
+:VAR rfnum, 1
+:VAR obs_mod_level, 1
+:VAR rfcal, 594
+:VAR alpha, 90
+:VAR p180_scale, 200
+:VAR rfsp_on, 0
+:VAR tr, 3000
+:VAR te, 44
+:VAR te_gradient_echo_extra_us, 0
+:VAR asymm, 55
+:VAR report_on, 0
+:VAR tcrush, 500
+:VAR diff_tcrush, 500
+:VAR blip_on, 1
+:VAR gs_comp_scale, 0
+:VAR gr_comp_scale, 0
+:VAR gp_comp_scale, 0
+:VAR_ARRAY gp_comp_ms, 2, 0
+, 0
+:VAR gs_on, 1
+:VAR gr_on, 1
+:VAR gp_on, 1
+:VAR no_disaqu, 4
+:VAR diff_on, 1
+:VAR bp_diff_on, 0
+:VAR sm_delta1, 4500
+:VAR sm_delta, 4000
+:VAR big_delta, 30000
+:VAR big_delta_mult, 1
+:VAR no_b_steps, 10
+:VAR_ARRAY b_steps_array, 16, 0
+, 1000, 1000, 1000, 3000, 3000, 3000, 6000, 6000
+, 6000, 0, 0, 0, 0, 0, 0
+:VAR_ARRAY b_grads_array, 145, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+:VAR no_diff_dir, 1
+:VAR_ARRAY diff_grad_dir, 48, 1000
+, 0, 0, 1000, 0, 0, 0, 1000, 0
+, 0, 0, 1000, 1000, 0, 0, 0, 1000
+, 0, 0, 0, 1000, 1000, 0, 0, 0
+, 1000, 0, 0, 0, 1000, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0
+:VAR diff_tramp, 200
+:VAR gating, 0
+:VAR cardiac_del, 0
+:VAR slice_clustering_on, 0
+:VAR grad_spoil_on, 0
+:VAR grad_spoil_amp, 5000
+:VAR grad_spoil_post, 1
+:VAR psd, 10
+:VAR nav_on, 1
+:VAR no_navs, 1
+:VAR_ARRAY nav_ind, 67, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0
+:VAR chess_on, 1
+:VAR chess_mul, 310
+:VAR chem_shift_freq, -1400
+:VAR t_chess, 710
+:VAR tcrush_chess, 3000
+:VAR gs_chess_amp, 8000
+:VAR balanced_chess_crush, 0
+:VAR mtc_on, 0
+:VAR mtc_gaussian, 0
+:VAR mtc_mul, 256
+:VAR no_cest_pulses, 1
+:VAR tselmtc_ms, 2
+:VAR mtc_tcrush, 1000
+:VAR mtc_gr_amp, 0
+:VAR mtc_freq, 0
+:VAR mtc_freq_max, 0
+:VAR mtc_freq_step, 0
+:VAR inter_cest_delay, 15
+:VAR post_cest_delay, 0
+:VAR mtc_array_on, 0
+:VAR_ARRAY mtc_freq_array, 200, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0
+:VAR kernel_offset, 0
+:VAR tfbplat, 380
+:VAR tramb_fb_scale, 0
+:VAR blip_cor, 0
+:VAR start_blip_fb, 0
+:VAR no_shots_fb, 0
+:VAR gradient_echo, 0
+:VAR sat_on, 1
+:VAR_ARRAY PB_on, 6, 0
+, 0, 0, 0, 0, 0
+:VAR_ARRAY PB_offset, 6, -5
+, 17, 0, 0, 0, 0
+:VAR_ARRAY PB_thk, 6, 10
+, 10, 30, 30, 30, 30
+:VAR sat_tcrush, 1000
+:VAR sat_gr_amp, 16000
+:VAR rfnum_sat, 9
+:VAR p_sat_mul, 263
+:VAR inter_PB_delay, 200
+:VAR no_PB, 0
+:VAR acqtrain, 0
+:VAR bp_gr_amp, 0
+:VAR psd_shift, 6
+:VAR ramp_samples, 0
+:VAR rfdelay, 60
+:VAR rfgate_delay, 23
+:VAR tx1, 5000
+:VAR tx2, 7000
+:VAR ty1, 7000
+:VAR ty2, 5000
+:VAR tz1, 6000
+:VAR tz2, 6000
+:VAR gdx, 1000
+:VAR gdy, 1000
+:VAR gdz, 1000
+:VAR gror, -4303
+:VAR freq_step, 0
+:VAR short_blip, 1
+:VAR_ARRAY kspace_corr_factors, 6, 0
+, 0, 0, 0, 0, 0
+:VAR_ARRAY fov_scale_factors, 6, 0
+, 0, 0, 0, 0, 0
+:VAR sm_delta14, 600
+:VAR diff_grad_scale, 100
+:VAR phase_shift_on, 0
+:VAR read_interleave_on, 0
+:VAR experiment_delay, 0
+:DSP_ROUTINE dspe8ex
+:DATA_TYPE 0x15
+:RECEIVER_MASK rec_sel, 1

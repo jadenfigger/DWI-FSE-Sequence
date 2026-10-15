@@ -18,7 +18,7 @@ v1.912 builds on ss-MGOT v1.911. It adds multi-slice/off-centre support, RF phas
 | 1 | Existing per-volume navigator train; inherited layout. |
 | 2 | Per-shot navigator echo, in addition to the per-volume navigator train. |
 
-For mode 2, `NO_VIEWS` in the embedded protocol is the **total raw-line count**, while `views_per_seg` remains the imaging ETL. With `N` imaging lines and ETL `E`, the protocol has `N/E` imaging shots. Each shot has `E` imaging echoes plus one unencoded navigator echo; the per-volume navigator contributes one more `E+1` train. Therefore:
+For mode 2, `NO_VIEWS` in the embedded protocol is the **total raw-line count**, and `VIEWS_PER_SEGMENT` is the **shot length, ETL+1** (updated 2026-10-12). The console rejects a protocol whose `NO_VIEWS` is not a multiple of `VIEWS_PER_SEGMENT` ("views per segment should be a divisor of Views1"), so 153 raw lines need `VIEWS_PER_SEGMENT` = 9. The PPL subtracts 1 to get the imaging ETL, and reconstruction does the same. With `N` imaging lines and ETL `E`, the protocol has `N/E` imaging shots. Each shot has `E` imaging echoes plus one unencoded navigator echo; the per-volume navigator contributes one more `E+1` train. Therefore:
 
 `NO_VIEWS = (ETL + 1) × (1 + N / ETL)`
 

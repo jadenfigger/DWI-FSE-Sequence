@@ -1,4 +1,21 @@
 __pycache__/
+*.py[cod]
+.pytest_cache/
+*.stackdump
+# Verified local cleanup archive; keep on disk, out of source control.
+/archive/
+# Acquired scans and reconstructed volumes stay local; protocols/figures remain tracked.
+/experiments/**/*.[mM][rR][dD]
+/experiments/**/*.nii
+/experiments/**/*.nii.gz
+/experiments/**/*.[sS][uU][rR]
+/experiments/**/*.[dD][cC][mM]
+/experiments/**/*.[iI][mM][aA]
+/experiments/**/*.raw
+/experiments/**/*.dat
+/experiments/**/*.tmp
+# Local recovered scan arrays and ROI bundles containing reference images.
+/docs/data/oct*_*.npz
 # pipeline outputs (regenerate with dw.py)
 runs/
 /rf/

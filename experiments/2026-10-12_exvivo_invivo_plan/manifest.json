@@ -1,0 +1,3229 @@
+{
+  "date": "2026-10-12",
+  "fov_mm": 35,
+  "twelve_directions": [
+    [
+      -468,
+      -435,
+      769
+    ],
+    [
+      448,
+      -77,
+      891
+    ],
+    [
+      178,
+      -694,
+      698
+    ],
+    [
+      -790,
+      374,
+      486
+    ],
+    [
+      188,
+      -981,
+      55
+    ],
+    [
+      -200,
+      783,
+      589
+    ],
+    [
+      492,
+      641,
+      589
+    ],
+    [
+      -506,
+      -856,
+      110
+    ],
+    [
+      -200,
+      184,
+      962
+    ],
+    [
+      -925,
+      -280,
+      256
+    ],
+    [
+      917,
+      86,
+      389
+    ],
+    [
+      781,
+      -587,
+      214
+    ]
+  ],
+  "min_angle_between_12_dirs_deg": 39.372062905715666,
+  "ppl_sha256": {
+    "v183": "957a1408b7edc0e79aca8744dc55668943b3d710c6718255c889af4907d73a38",
+    "v1912": "8ca7406ac9e2397718befa3b3d6a601b3bcf43aab8d512a829bf0e553a851e73"
+  },
+  "protocols": [
+    {
+      "letter": "A",
+      "version": "v183",
+      "part": 0,
+      "purpose": "Frequency check 1/2: b10 at 20 kHz (compare readout position with B)",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "dwell_us": 50,
+      "esp": 14,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v183_testA",
+      "ppr": "FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr",
+      "ppr_sha256": "6020713aaf19ad10f6e22bf681af6cd15b41341384bde0dfb97778f482182ec7",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 42.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "B",
+      "version": "v183",
+      "part": 0,
+      "purpose": "Frequency check 2/2: b10 at 40 kHz; image must register with A within 0.5 px",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v183_testB",
+      "ppr": "FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr",
+      "ppr_sha256": "efe72a6a7bd266ab257c11e99f944c0995b6bf42d31b50c4be39caf1886a4399",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 42.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "C",
+      "version": "v1912",
+      "part": 0,
+      "purpose": "ss-MGOT rescue after frequency check: b10, b1000 +x, b3000 +x; must show b-dependent signal",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v1912_testC",
+      "ppr": "FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr",
+      "ppr_sha256": "c533d5e84673adc58bed05fe1eb90b4a812287c45a2d5364c4d6dcf365f3fa51",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 126.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "D",
+      "version": "v183",
+      "part": 1,
+      "purpose": "Calibration step 1: mode 0 (vendor), +/-1.2 mm",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        -480,
+        0,
+        480
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v183_testD",
+      "ppr": "FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr",
+      "ppr_sha256": "d4f24f094576460bc022dd0a0d4197bf9c3d683d52e915ccf05ed5f1d1ccb4a0",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 42.0,
+      "slice_offsets_mm": [
+        -1.2,
+        0.0,
+        1.2
+      ]
+    },
+    {
+      "letter": "E",
+      "version": "v183",
+      "part": 1,
+      "purpose": "Calibration step 2a: mode 1, phcal 0 (= v1.82), +/-1.2 mm",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        -480,
+        0,
+        480
+      ],
+      "matrix": 128,
+      "phmode": 1,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v183_testE",
+      "ppr": "FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr",
+      "ppr_sha256": "81d96af8953138442e10411996a61abb2e79f325ae3c0fc76413e1abb00b2751",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 42.0,
+      "slice_offsets_mm": [
+        -1.2,
+        0.0,
+        1.2
+      ]
+    },
+    {
+      "letter": "F",
+      "version": "v183",
+      "part": 1,
+      "purpose": "Calibration step 2b: mode 1, phcal +530, +/-1.2 mm",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        -480,
+        0,
+        480
+      ],
+      "matrix": 128,
+      "phmode": 1,
+      "phcal": 530,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v183_testF",
+      "ppr": "FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr",
+      "ppr_sha256": "f1221a48915421df81757295097d7b4e952980e56642e24a0adaadd6dc49cd88",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 42.0,
+      "slice_offsets_mm": [
+        -1.2,
+        0.0,
+        1.2
+      ]
+    },
+    {
+      "letter": "G",
+      "version": "v183",
+      "part": 1,
+      "purpose": "Calibration step 2c: mode 1, phcal -530, +/-1.2 mm",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        -480,
+        0,
+        480
+      ],
+      "matrix": 128,
+      "phmode": 1,
+      "phcal": -530,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v183_testG",
+      "ppr": "FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr",
+      "ppr_sha256": "40a2cbc42c735514d41e530b05789e7f7e3a512222fad818bb561f9d4bcfeb58",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 42.0,
+      "slice_offsets_mm": [
+        -1.2,
+        0.0,
+        1.2
+      ]
+    },
+    {
+      "letter": "H",
+      "version": "v183",
+      "part": 1,
+      "purpose": "Verify mode 0 at the protocol spacing, +/-2.8 mm",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        -1120,
+        0,
+        1120
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v183_testH",
+      "ppr": "FSE-DWI_10-12-2026_v183_testH/FSE-DWI_10-12-2026_v183_testH.ppr",
+      "ppr_sha256": "12e40fb9f23693fcc46d24f5b389d26381955f71fe83564bd55bdcb09e7b8550",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 42.0,
+      "slice_offsets_mm": [
+        -2.8,
+        0.0,
+        2.8
+      ]
+    },
+    {
+      "letter": "I",
+      "version": "v183",
+      "part": 1,
+      "purpose": "Verify mode 0 at +/-5 mm",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        -2000,
+        0,
+        2000
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v183_testI",
+      "ppr": "FSE-DWI_10-12-2026_v183_testI/FSE-DWI_10-12-2026_v183_testI.ppr",
+      "ppr_sha256": "8ab23cf07c47ae550d3899ade4446bff795661cf8631911dad4636bad598503a",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 42.0,
+      "slice_offsets_mm": [
+        -5.0,
+        0.0,
+        5.0
+      ]
+    },
+    {
+      "letter": "J",
+      "version": "v183",
+      "part": 1,
+      "purpose": "Verify mode 1 at +/-2.8 mm: SET v183_phcal TO THE TOOL'S RECOMMENDATION",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        -1120,
+        0,
+        1120
+      ],
+      "matrix": 128,
+      "phmode": 1,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "v183_phcal is 0 in the file; edit on the console",
+      "stem": "FSE-DWI_10-12-2026_v183_testJ",
+      "ppr": "FSE-DWI_10-12-2026_v183_testJ/FSE-DWI_10-12-2026_v183_testJ.ppr",
+      "ppr_sha256": "e91304a9db09e6d3b49dbbc708514804f51a2b14ebdbcceb48aa856320713a19",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 42.0,
+      "slice_offsets_mm": [
+        -2.8,
+        0.0,
+        2.8
+      ]
+    },
+    {
+      "letter": "K",
+      "version": "v183",
+      "part": 1,
+      "purpose": "Verify mode 1 at +/-5 mm: SET v183_phcal TO THE TOOL'S RECOMMENDATION",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        -2000,
+        0,
+        2000
+      ],
+      "matrix": 128,
+      "phmode": 1,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "v183_phcal is 0 in the file; edit on the console",
+      "stem": "FSE-DWI_10-12-2026_v183_testK",
+      "ppr": "FSE-DWI_10-12-2026_v183_testK/FSE-DWI_10-12-2026_v183_testK.ppr",
+      "ppr_sha256": "32ac0c9ebaff18e3151fd4697ffa5156fc763ef01a8e0a247f0e886d8d568a8c",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 42.0,
+      "slice_offsets_mm": [
+        -5.0,
+        0.0,
+        5.0
+      ]
+    },
+    {
+      "letter": "L",
+      "version": "v1912",
+      "part": 1,
+      "purpose": "ss-MGOT off-centre phase (gated scheme, uncalibrated) at +/-2.8 mm; only if C showed signal",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        -1120,
+        0,
+        1120
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v1912_testL",
+      "ppr": "FSE-DWI_10-12-2026_v1912_testL/FSE-DWI_10-12-2026_v1912_testL.ppr",
+      "ppr_sha256": "8bd266a4ccbb36e7fabea42d8d0d5614383ab02ac2d1081d3c522bb4c48f22ac",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 42.0,
+      "slice_offsets_mm": [
+        -2.8,
+        0.0,
+        2.8
+      ]
+    },
+    {
+      "letter": "M",
+      "version": "v183",
+      "part": 2,
+      "purpose": "Navigator test: volume navigator only (nav 1)",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ],
+        [
+          6000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v183_testM",
+      "ppr": "FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr",
+      "ppr_sha256": "1ce9a2169b764a8ec3378fb2f8ac37815193121f0c490d1bc6981a31a4e49c57",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 168.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "N",
+      "version": "v183",
+      "part": 2,
+      "purpose": "Navigator test: per-shot navigators (nav 2), otherwise identical to M",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ],
+        [
+          6000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 2,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v183_testN",
+      "ppr": "FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr",
+      "ppr_sha256": "5d30a7dae74e3be18812757323c6126ed44e0b5946cae6a6d32ee190aa19edc9",
+      "raw_views": 153,
+      "views_per_segment": 9,
+      "nominal_duration_s": 168.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "O",
+      "version": "v1912",
+      "part": 2,
+      "purpose": "Navigator test ss-MGOT: nav 1",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ],
+        [
+          6000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v1912_testO",
+      "ppr": "FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr",
+      "ppr_sha256": "27f9b47a81a9ed20e985eebe7dbfc30139b4a42069f6194c6c0d5ddb232cb304",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 168.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "P",
+      "version": "v1912",
+      "part": 2,
+      "purpose": "Navigator test ss-MGOT: nav 2, otherwise identical to O",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ],
+        [
+          6000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 2,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v1912_testP",
+      "ppr": "FSE-DWI_10-12-2026_v1912_testP/FSE-DWI_10-12-2026_v1912_testP.ppr",
+      "ppr_sha256": "22b6e88b88c095c0a5fe1060d67dc55ade18ec75730234d6ce810916b2985729",
+      "raw_views": 153,
+      "views_per_segment": 9,
+      "nominal_duration_s": 168.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "Q",
+      "version": "v183",
+      "part": 3,
+      "purpose": "Comparison 1: b10 + b1000/b3000 along x, y, z; 3 slices",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ],
+        [
+          3000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 2,
+      "offsets": [
+        -1120,
+        0,
+        1120
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v183_testQ",
+      "ppr": "FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr",
+      "ppr_sha256": "e0fb691f0afd8eefa84f9b90706319fb2f576ab2488cb3977a832c6f6df5e48f",
+      "raw_views": 153,
+      "views_per_segment": 9,
+      "nominal_duration_s": 294.0,
+      "slice_offsets_mm": [
+        -2.8,
+        0.0,
+        2.8
+      ]
+    },
+    {
+      "letter": "R",
+      "version": "v1912",
+      "part": 3,
+      "purpose": "Comparison 1 (ss-MGOT), matched to Q",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ],
+        [
+          3000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 2,
+      "offsets": [
+        -1120,
+        0,
+        1120
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v1912_testR",
+      "ppr": "FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr",
+      "ppr_sha256": "0f40a672784776b67ce439450c14f4ca61778e462fe855fcf2428c3407c083d9",
+      "raw_views": 153,
+      "views_per_segment": 9,
+      "nominal_duration_s": 294.0,
+      "slice_offsets_mm": [
+        -2.8,
+        0.0,
+        2.8
+      ]
+    },
+    {
+      "letter": "S",
+      "version": "v183",
+      "part": 3,
+      "purpose": "Comparison 2: b10 + 6 oblique directions at b2000; 3 slices",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          2000,
+          [
+            707,
+            707,
+            0
+          ]
+        ],
+        [
+          2000,
+          [
+            707,
+            0,
+            707
+          ]
+        ],
+        [
+          2000,
+          [
+            0,
+            707,
+            707
+          ]
+        ],
+        [
+          2000,
+          [
+            707,
+            -707,
+            0
+          ]
+        ],
+        [
+          2000,
+          [
+            707,
+            0,
+            -707
+          ]
+        ],
+        [
+          2000,
+          [
+            0,
+            707,
+            -707
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 2,
+      "offsets": [
+        -1120,
+        0,
+        1120
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v183_testS",
+      "ppr": "FSE-DWI_10-12-2026_v183_testS/FSE-DWI_10-12-2026_v183_testS.ppr",
+      "ppr_sha256": "bfdcee661fc22a65ae5dad3c1f6b214a463608dc7126e2f1d741f394672ad3ad",
+      "raw_views": 153,
+      "views_per_segment": 9,
+      "nominal_duration_s": 294.0,
+      "slice_offsets_mm": [
+        -2.8,
+        0.0,
+        2.8
+      ]
+    },
+    {
+      "letter": "T",
+      "version": "v1912",
+      "part": 3,
+      "purpose": "Comparison 2 (ss-MGOT), matched to S",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          2000,
+          [
+            707,
+            707,
+            0
+          ]
+        ],
+        [
+          2000,
+          [
+            707,
+            0,
+            707
+          ]
+        ],
+        [
+          2000,
+          [
+            0,
+            707,
+            707
+          ]
+        ],
+        [
+          2000,
+          [
+            707,
+            -707,
+            0
+          ]
+        ],
+        [
+          2000,
+          [
+            707,
+            0,
+            -707
+          ]
+        ],
+        [
+          2000,
+          [
+            0,
+            707,
+            -707
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 2,
+      "offsets": [
+        -1120,
+        0,
+        1120
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v1912_testT",
+      "ppr": "FSE-DWI_10-12-2026_v1912_testT/FSE-DWI_10-12-2026_v1912_testT.ppr",
+      "ppr_sha256": "e73ec0340944ad3b329d71d07a8e97288c824bdd10f7cac2dfef6ce0a160f3d1",
+      "raw_views": 153,
+      "views_per_segment": 9,
+      "nominal_duration_s": 294.0,
+      "slice_offsets_mm": [
+        -2.8,
+        0.0,
+        2.8
+      ]
+    },
+    {
+      "letter": "U",
+      "version": "v183",
+      "part": 4,
+      "purpose": "In vivo quick check: b10 + b1000 x, y, z; 3 slices",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 2,
+      "offsets": [
+        -1120,
+        0,
+        1120
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "in-vivo rat brain, surface coil",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v183_testU",
+      "ppr": "FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr",
+      "ppr_sha256": "e794ba94c128d7acee5c2d5d6259a30ef91d753e63e1121eaf91d4b85cb20274",
+      "raw_views": 153,
+      "views_per_segment": 9,
+      "nominal_duration_s": 168.0,
+      "slice_offsets_mm": [
+        -2.8,
+        0.0,
+        2.8
+      ]
+    },
+    {
+      "letter": "V",
+      "version": "v1912",
+      "part": 4,
+      "purpose": "In vivo quick check (ss-MGOT), matched to U",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 2,
+      "offsets": [
+        -1120,
+        0,
+        1120
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "in-vivo rat brain, surface coil",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v1912_testV",
+      "ppr": "FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr",
+      "ppr_sha256": "a9b1775d87fbbcf23ac6eb30a3c213a01d6f3de4cf9bc7afeb039075accb4f90",
+      "raw_views": 153,
+      "views_per_segment": 9,
+      "nominal_duration_s": 168.0,
+      "slice_offsets_mm": [
+        -2.8,
+        0.0,
+        2.8
+      ]
+    },
+    {
+      "letter": "W",
+      "version": "v183",
+      "part": 4,
+      "purpose": "In vivo full: 3 x b10 + 12 directions at b1000, b3000, b6000; 3 slices",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            -468,
+            -435,
+            769
+          ]
+        ],
+        [
+          1000,
+          [
+            448,
+            -77,
+            891
+          ]
+        ],
+        [
+          1000,
+          [
+            178,
+            -694,
+            698
+          ]
+        ],
+        [
+          1000,
+          [
+            -790,
+            374,
+            486
+          ]
+        ],
+        [
+          1000,
+          [
+            188,
+            -981,
+            55
+          ]
+        ],
+        [
+          1000,
+          [
+            -200,
+            783,
+            589
+          ]
+        ],
+        [
+          1000,
+          [
+            492,
+            641,
+            589
+          ]
+        ],
+        [
+          1000,
+          [
+            -506,
+            -856,
+            110
+          ]
+        ],
+        [
+          1000,
+          [
+            -200,
+            184,
+            962
+          ]
+        ],
+        [
+          1000,
+          [
+            -925,
+            -280,
+            256
+          ]
+        ],
+        [
+          1000,
+          [
+            917,
+            86,
+            389
+          ]
+        ],
+        [
+          1000,
+          [
+            781,
+            -587,
+            214
+          ]
+        ],
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            -468,
+            -435,
+            769
+          ]
+        ],
+        [
+          3000,
+          [
+            448,
+            -77,
+            891
+          ]
+        ],
+        [
+          3000,
+          [
+            178,
+            -694,
+            698
+          ]
+        ],
+        [
+          3000,
+          [
+            -790,
+            374,
+            486
+          ]
+        ],
+        [
+          3000,
+          [
+            188,
+            -981,
+            55
+          ]
+        ],
+        [
+          3000,
+          [
+            -200,
+            783,
+            589
+          ]
+        ],
+        [
+          3000,
+          [
+            492,
+            641,
+            589
+          ]
+        ],
+        [
+          3000,
+          [
+            -506,
+            -856,
+            110
+          ]
+        ],
+        [
+          3000,
+          [
+            -200,
+            184,
+            962
+          ]
+        ],
+        [
+          3000,
+          [
+            -925,
+            -280,
+            256
+          ]
+        ],
+        [
+          3000,
+          [
+            917,
+            86,
+            389
+          ]
+        ],
+        [
+          3000,
+          [
+            781,
+            -587,
+            214
+          ]
+        ],
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          6000,
+          [
+            -468,
+            -435,
+            769
+          ]
+        ],
+        [
+          6000,
+          [
+            448,
+            -77,
+            891
+          ]
+        ],
+        [
+          6000,
+          [
+            178,
+            -694,
+            698
+          ]
+        ],
+        [
+          6000,
+          [
+            -790,
+            374,
+            486
+          ]
+        ],
+        [
+          6000,
+          [
+            188,
+            -981,
+            55
+          ]
+        ],
+        [
+          6000,
+          [
+            -200,
+            783,
+            589
+          ]
+        ],
+        [
+          6000,
+          [
+            492,
+            641,
+            589
+          ]
+        ],
+        [
+          6000,
+          [
+            -506,
+            -856,
+            110
+          ]
+        ],
+        [
+          6000,
+          [
+            -200,
+            184,
+            962
+          ]
+        ],
+        [
+          6000,
+          [
+            -925,
+            -280,
+            256
+          ]
+        ],
+        [
+          6000,
+          [
+            917,
+            86,
+            389
+          ]
+        ],
+        [
+          6000,
+          [
+            781,
+            -587,
+            214
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 2,
+      "offsets": [
+        -1120,
+        0,
+        1120
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "in-vivo rat brain, surface coil",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v183_testW",
+      "ppr": "FSE-DWI_10-12-2026_v183_testW/FSE-DWI_10-12-2026_v183_testW.ppr",
+      "ppr_sha256": "baf15606e206219fd61dec22901add0be399ce052e19dc2738b078bcef182943",
+      "raw_views": 153,
+      "views_per_segment": 9,
+      "nominal_duration_s": 1638.0,
+      "slice_offsets_mm": [
+        -2.8,
+        0.0,
+        2.8
+      ]
+    },
+    {
+      "letter": "X",
+      "version": "v1912",
+      "part": 4,
+      "purpose": "In vivo full (ss-MGOT), matched to W",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            -468,
+            -435,
+            769
+          ]
+        ],
+        [
+          1000,
+          [
+            448,
+            -77,
+            891
+          ]
+        ],
+        [
+          1000,
+          [
+            178,
+            -694,
+            698
+          ]
+        ],
+        [
+          1000,
+          [
+            -790,
+            374,
+            486
+          ]
+        ],
+        [
+          1000,
+          [
+            188,
+            -981,
+            55
+          ]
+        ],
+        [
+          1000,
+          [
+            -200,
+            783,
+            589
+          ]
+        ],
+        [
+          1000,
+          [
+            492,
+            641,
+            589
+          ]
+        ],
+        [
+          1000,
+          [
+            -506,
+            -856,
+            110
+          ]
+        ],
+        [
+          1000,
+          [
+            -200,
+            184,
+            962
+          ]
+        ],
+        [
+          1000,
+          [
+            -925,
+            -280,
+            256
+          ]
+        ],
+        [
+          1000,
+          [
+            917,
+            86,
+            389
+          ]
+        ],
+        [
+          1000,
+          [
+            781,
+            -587,
+            214
+          ]
+        ],
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            -468,
+            -435,
+            769
+          ]
+        ],
+        [
+          3000,
+          [
+            448,
+            -77,
+            891
+          ]
+        ],
+        [
+          3000,
+          [
+            178,
+            -694,
+            698
+          ]
+        ],
+        [
+          3000,
+          [
+            -790,
+            374,
+            486
+          ]
+        ],
+        [
+          3000,
+          [
+            188,
+            -981,
+            55
+          ]
+        ],
+        [
+          3000,
+          [
+            -200,
+            783,
+            589
+          ]
+        ],
+        [
+          3000,
+          [
+            492,
+            641,
+            589
+          ]
+        ],
+        [
+          3000,
+          [
+            -506,
+            -856,
+            110
+          ]
+        ],
+        [
+          3000,
+          [
+            -200,
+            184,
+            962
+          ]
+        ],
+        [
+          3000,
+          [
+            -925,
+            -280,
+            256
+          ]
+        ],
+        [
+          3000,
+          [
+            917,
+            86,
+            389
+          ]
+        ],
+        [
+          3000,
+          [
+            781,
+            -587,
+            214
+          ]
+        ],
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          6000,
+          [
+            -468,
+            -435,
+            769
+          ]
+        ],
+        [
+          6000,
+          [
+            448,
+            -77,
+            891
+          ]
+        ],
+        [
+          6000,
+          [
+            178,
+            -694,
+            698
+          ]
+        ],
+        [
+          6000,
+          [
+            -790,
+            374,
+            486
+          ]
+        ],
+        [
+          6000,
+          [
+            188,
+            -981,
+            55
+          ]
+        ],
+        [
+          6000,
+          [
+            -200,
+            783,
+            589
+          ]
+        ],
+        [
+          6000,
+          [
+            492,
+            641,
+            589
+          ]
+        ],
+        [
+          6000,
+          [
+            -506,
+            -856,
+            110
+          ]
+        ],
+        [
+          6000,
+          [
+            -200,
+            184,
+            962
+          ]
+        ],
+        [
+          6000,
+          [
+            -925,
+            -280,
+            256
+          ]
+        ],
+        [
+          6000,
+          [
+            917,
+            86,
+            389
+          ]
+        ],
+        [
+          6000,
+          [
+            781,
+            -587,
+            214
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 2,
+      "offsets": [
+        -1120,
+        0,
+        1120
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "in-vivo rat brain, surface coil",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v1912_testX",
+      "ppr": "FSE-DWI_10-12-2026_v1912_testX/FSE-DWI_10-12-2026_v1912_testX.ppr",
+      "ppr_sha256": "7d477c0b5b72e72acd71d319d2897c43b27c63015f2caf3c14749e81df8d281a",
+      "raw_views": 153,
+      "views_per_segment": 9,
+      "nominal_duration_s": 1638.0,
+      "slice_offsets_mm": [
+        -2.8,
+        0.0,
+        2.8
+      ]
+    },
+    {
+      "letter": "QQ",
+      "version": "v183",
+      "part": 3,
+      "purpose": "FALLBACK (nav 1) for Q: Comparison 1: b10 + b1000/b3000 along x, y, z; 3 slices",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ],
+        [
+          3000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        -1120,
+        0,
+        1120
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v183_testQQ",
+      "ppr": "FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr",
+      "ppr_sha256": "a836d14d5ada2a0ba3dd291a7d211df0c047d42413887a2f18b53187f6e6bcbc",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 294.0,
+      "slice_offsets_mm": [
+        -2.8,
+        0.0,
+        2.8
+      ]
+    },
+    {
+      "letter": "RR",
+      "version": "v1912",
+      "part": 3,
+      "purpose": "FALLBACK (nav 1) for R: Comparison 1 (ss-MGOT), matched to Q",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ],
+        [
+          3000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        -1120,
+        0,
+        1120
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v1912_testRR",
+      "ppr": "FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr",
+      "ppr_sha256": "4737130190115cd35c51956c2298a3a245deb8fc908a300aff658c05dedb5526",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 294.0,
+      "slice_offsets_mm": [
+        -2.8,
+        0.0,
+        2.8
+      ]
+    },
+    {
+      "letter": "SS",
+      "version": "v183",
+      "part": 3,
+      "purpose": "FALLBACK (nav 1) for S: Comparison 2: b10 + 6 oblique directions at b2000; 3 slices",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          2000,
+          [
+            707,
+            707,
+            0
+          ]
+        ],
+        [
+          2000,
+          [
+            707,
+            0,
+            707
+          ]
+        ],
+        [
+          2000,
+          [
+            0,
+            707,
+            707
+          ]
+        ],
+        [
+          2000,
+          [
+            707,
+            -707,
+            0
+          ]
+        ],
+        [
+          2000,
+          [
+            707,
+            0,
+            -707
+          ]
+        ],
+        [
+          2000,
+          [
+            0,
+            707,
+            -707
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        -1120,
+        0,
+        1120
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v183_testSS",
+      "ppr": "FSE-DWI_10-12-2026_v183_testSS/FSE-DWI_10-12-2026_v183_testSS.ppr",
+      "ppr_sha256": "1ec6bc49fc65dc31ce412952973909160607fbee60123c43b36d7e3e5e9701cb",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 294.0,
+      "slice_offsets_mm": [
+        -2.8,
+        0.0,
+        2.8
+      ]
+    },
+    {
+      "letter": "TT",
+      "version": "v1912",
+      "part": 3,
+      "purpose": "FALLBACK (nav 1) for T: Comparison 2 (ss-MGOT), matched to S",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          2000,
+          [
+            707,
+            707,
+            0
+          ]
+        ],
+        [
+          2000,
+          [
+            707,
+            0,
+            707
+          ]
+        ],
+        [
+          2000,
+          [
+            0,
+            707,
+            707
+          ]
+        ],
+        [
+          2000,
+          [
+            707,
+            -707,
+            0
+          ]
+        ],
+        [
+          2000,
+          [
+            707,
+            0,
+            -707
+          ]
+        ],
+        [
+          2000,
+          [
+            0,
+            707,
+            -707
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        -1120,
+        0,
+        1120
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "ex-vivo brain in PBS",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v1912_testTT",
+      "ppr": "FSE-DWI_10-12-2026_v1912_testTT/FSE-DWI_10-12-2026_v1912_testTT.ppr",
+      "ppr_sha256": "b3229d87142018bca03d30d67337d838e6453bac19587ff4fa8bb237b7dc9f98",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 294.0,
+      "slice_offsets_mm": [
+        -2.8,
+        0.0,
+        2.8
+      ]
+    },
+    {
+      "letter": "UU",
+      "version": "v183",
+      "part": 4,
+      "purpose": "FALLBACK (nav 1) for U: In vivo quick check: b10 + b1000 x, y, z; 3 slices",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        -1120,
+        0,
+        1120
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "in-vivo rat brain, surface coil",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v183_testUU",
+      "ppr": "FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr",
+      "ppr_sha256": "ac52853dab6d2bd0e8295a002651b06b571dbda3fcec71e896dc91a145fccc79",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 168.0,
+      "slice_offsets_mm": [
+        -2.8,
+        0.0,
+        2.8
+      ]
+    },
+    {
+      "letter": "VV",
+      "version": "v1912",
+      "part": 4,
+      "purpose": "FALLBACK (nav 1) for V: In vivo quick check (ss-MGOT), matched to U",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        -1120,
+        0,
+        1120
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "in-vivo rat brain, surface coil",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v1912_testVV",
+      "ppr": "FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr",
+      "ppr_sha256": "610ee16d38c1fb337cf6fa4a8a98dad4e4bbaf6fdd9cf84209c3de95f7e43582",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 168.0,
+      "slice_offsets_mm": [
+        -2.8,
+        0.0,
+        2.8
+      ]
+    },
+    {
+      "letter": "WW",
+      "version": "v183",
+      "part": 4,
+      "purpose": "FALLBACK (nav 1) for W: In vivo full: 3 x b10 + 12 directions at b1000, b3000, b6000; 3 slices",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            -468,
+            -435,
+            769
+          ]
+        ],
+        [
+          1000,
+          [
+            448,
+            -77,
+            891
+          ]
+        ],
+        [
+          1000,
+          [
+            178,
+            -694,
+            698
+          ]
+        ],
+        [
+          1000,
+          [
+            -790,
+            374,
+            486
+          ]
+        ],
+        [
+          1000,
+          [
+            188,
+            -981,
+            55
+          ]
+        ],
+        [
+          1000,
+          [
+            -200,
+            783,
+            589
+          ]
+        ],
+        [
+          1000,
+          [
+            492,
+            641,
+            589
+          ]
+        ],
+        [
+          1000,
+          [
+            -506,
+            -856,
+            110
+          ]
+        ],
+        [
+          1000,
+          [
+            -200,
+            184,
+            962
+          ]
+        ],
+        [
+          1000,
+          [
+            -925,
+            -280,
+            256
+          ]
+        ],
+        [
+          1000,
+          [
+            917,
+            86,
+            389
+          ]
+        ],
+        [
+          1000,
+          [
+            781,
+            -587,
+            214
+          ]
+        ],
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            -468,
+            -435,
+            769
+          ]
+        ],
+        [
+          3000,
+          [
+            448,
+            -77,
+            891
+          ]
+        ],
+        [
+          3000,
+          [
+            178,
+            -694,
+            698
+          ]
+        ],
+        [
+          3000,
+          [
+            -790,
+            374,
+            486
+          ]
+        ],
+        [
+          3000,
+          [
+            188,
+            -981,
+            55
+          ]
+        ],
+        [
+          3000,
+          [
+            -200,
+            783,
+            589
+          ]
+        ],
+        [
+          3000,
+          [
+            492,
+            641,
+            589
+          ]
+        ],
+        [
+          3000,
+          [
+            -506,
+            -856,
+            110
+          ]
+        ],
+        [
+          3000,
+          [
+            -200,
+            184,
+            962
+          ]
+        ],
+        [
+          3000,
+          [
+            -925,
+            -280,
+            256
+          ]
+        ],
+        [
+          3000,
+          [
+            917,
+            86,
+            389
+          ]
+        ],
+        [
+          3000,
+          [
+            781,
+            -587,
+            214
+          ]
+        ],
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          6000,
+          [
+            -468,
+            -435,
+            769
+          ]
+        ],
+        [
+          6000,
+          [
+            448,
+            -77,
+            891
+          ]
+        ],
+        [
+          6000,
+          [
+            178,
+            -694,
+            698
+          ]
+        ],
+        [
+          6000,
+          [
+            -790,
+            374,
+            486
+          ]
+        ],
+        [
+          6000,
+          [
+            188,
+            -981,
+            55
+          ]
+        ],
+        [
+          6000,
+          [
+            -200,
+            783,
+            589
+          ]
+        ],
+        [
+          6000,
+          [
+            492,
+            641,
+            589
+          ]
+        ],
+        [
+          6000,
+          [
+            -506,
+            -856,
+            110
+          ]
+        ],
+        [
+          6000,
+          [
+            -200,
+            184,
+            962
+          ]
+        ],
+        [
+          6000,
+          [
+            -925,
+            -280,
+            256
+          ]
+        ],
+        [
+          6000,
+          [
+            917,
+            86,
+            389
+          ]
+        ],
+        [
+          6000,
+          [
+            781,
+            -587,
+            214
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        -1120,
+        0,
+        1120
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "in-vivo rat brain, surface coil",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v183_testWW",
+      "ppr": "FSE-DWI_10-12-2026_v183_testWW/FSE-DWI_10-12-2026_v183_testWW.ppr",
+      "ppr_sha256": "3bda11bd4374584941095e8afdbff1f016a2c7ca9eeff1ce6fabe919635bbbe3",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 1638.0,
+      "slice_offsets_mm": [
+        -2.8,
+        0.0,
+        2.8
+      ]
+    },
+    {
+      "letter": "XX",
+      "version": "v1912",
+      "part": 4,
+      "purpose": "FALLBACK (nav 1) for X: In vivo full (ss-MGOT), matched to W",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            -468,
+            -435,
+            769
+          ]
+        ],
+        [
+          1000,
+          [
+            448,
+            -77,
+            891
+          ]
+        ],
+        [
+          1000,
+          [
+            178,
+            -694,
+            698
+          ]
+        ],
+        [
+          1000,
+          [
+            -790,
+            374,
+            486
+          ]
+        ],
+        [
+          1000,
+          [
+            188,
+            -981,
+            55
+          ]
+        ],
+        [
+          1000,
+          [
+            -200,
+            783,
+            589
+          ]
+        ],
+        [
+          1000,
+          [
+            492,
+            641,
+            589
+          ]
+        ],
+        [
+          1000,
+          [
+            -506,
+            -856,
+            110
+          ]
+        ],
+        [
+          1000,
+          [
+            -200,
+            184,
+            962
+          ]
+        ],
+        [
+          1000,
+          [
+            -925,
+            -280,
+            256
+          ]
+        ],
+        [
+          1000,
+          [
+            917,
+            86,
+            389
+          ]
+        ],
+        [
+          1000,
+          [
+            781,
+            -587,
+            214
+          ]
+        ],
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            -468,
+            -435,
+            769
+          ]
+        ],
+        [
+          3000,
+          [
+            448,
+            -77,
+            891
+          ]
+        ],
+        [
+          3000,
+          [
+            178,
+            -694,
+            698
+          ]
+        ],
+        [
+          3000,
+          [
+            -790,
+            374,
+            486
+          ]
+        ],
+        [
+          3000,
+          [
+            188,
+            -981,
+            55
+          ]
+        ],
+        [
+          3000,
+          [
+            -200,
+            783,
+            589
+          ]
+        ],
+        [
+          3000,
+          [
+            492,
+            641,
+            589
+          ]
+        ],
+        [
+          3000,
+          [
+            -506,
+            -856,
+            110
+          ]
+        ],
+        [
+          3000,
+          [
+            -200,
+            184,
+            962
+          ]
+        ],
+        [
+          3000,
+          [
+            -925,
+            -280,
+            256
+          ]
+        ],
+        [
+          3000,
+          [
+            917,
+            86,
+            389
+          ]
+        ],
+        [
+          3000,
+          [
+            781,
+            -587,
+            214
+          ]
+        ],
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          6000,
+          [
+            -468,
+            -435,
+            769
+          ]
+        ],
+        [
+          6000,
+          [
+            448,
+            -77,
+            891
+          ]
+        ],
+        [
+          6000,
+          [
+            178,
+            -694,
+            698
+          ]
+        ],
+        [
+          6000,
+          [
+            -790,
+            374,
+            486
+          ]
+        ],
+        [
+          6000,
+          [
+            188,
+            -981,
+            55
+          ]
+        ],
+        [
+          6000,
+          [
+            -200,
+            783,
+            589
+          ]
+        ],
+        [
+          6000,
+          [
+            492,
+            641,
+            589
+          ]
+        ],
+        [
+          6000,
+          [
+            -506,
+            -856,
+            110
+          ]
+        ],
+        [
+          6000,
+          [
+            -200,
+            184,
+            962
+          ]
+        ],
+        [
+          6000,
+          [
+            -925,
+            -280,
+            256
+          ]
+        ],
+        [
+          6000,
+          [
+            917,
+            86,
+            389
+          ]
+        ],
+        [
+          6000,
+          [
+            781,
+            -587,
+            214
+          ]
+        ]
+      ],
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 1,
+      "offsets": [
+        -1120,
+        0,
+        1120
+      ],
+      "matrix": 128,
+      "phmode": 0,
+      "phcal": 0,
+      "sample": "in-vivo rat brain, surface coil",
+      "note": "",
+      "stem": "FSE-DWI_10-12-2026_v1912_testXX",
+      "ppr": "FSE-DWI_10-12-2026_v1912_testXX/FSE-DWI_10-12-2026_v1912_testXX.ppr",
+      "ppr_sha256": "ce9e98a61da9479bd581bd615aaafeeee24720cb0734dd562f3ce1de976f57ef",
+      "raw_views": 136,
+      "views_per_segment": 8,
+      "nominal_duration_s": 1638.0,
+      "slice_offsets_mm": [
+        -2.8,
+        0.0,
+        2.8
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "letter": "P",
+  "version": "v1912",
+  "part": 2,
+  "purpose": "Navigator test ss-MGOT: nav 2, otherwise identical to O",
+  "rows": [
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      1000,
+      [
+        1000,
+        0,
+        0
+      ]
+    ],
+    [
+      3000,
+      [
+        0,
+        0,
+        1000
+      ]
+    ],
+    [
+      6000,
+      [
+        0,
+        0,
+        1000
+      ]
+    ]
+  ],
+  "dwell_us": 25,
+  "esp": 11,
+  "tr": 2000,
+  "te": 44,
+  "big_delta": 30000,
+  "nav_on": 2,
+  "offsets": [
+    0
+  ],
+  "matrix": 128,
+  "phmode": 0,
+  "phcal": 0,
+  "sample": "ex-vivo brain in PBS",
+  "note": "",
+  "stem": "FSE-DWI_10-12-2026_v1912_testP",
+  "ppr": "FSE-DWI_10-12-2026_v1912_testP/FSE-DWI_10-12-2026_v1912_testP.ppr",
+  "ppr_sha256": "22b6e88b88c095c0a5fe1060d67dc55ade18ec75730234d6ce810916b2985729",
+  "raw_views": 153,
+  "views_per_segment": 9,
+  "nominal_duration_s": 168.0,
+  "slice_offsets_mm": [
+    0.0
+  ]
+}

@@ -1,0 +1,10 @@
+case,display_label,sequence,group,roi,roi_label,reference_b,snr,volume_time_s,nominal_voxel_ul,normalized_efficiency,efficiency_units,source
+Q,Q,v1.83,ex_vivo,ex_pbs,PBS,10,117.60397324707057,34.0,0.07476806640625,269.7530642216007,SNR/sqrt(s)/uL,oct12_quant_audit.json:snr_efficiency_rows
+Q,Q,v1.83,ex_vivo,ex_brain,Whole brain,10,62.43335768792404,34.0,0.07476806640625,143.20595708598012,SNR/sqrt(s)/uL,oct12_quant_audit.json:snr_efficiency_rows
+R,R,ss-MGOT,ex_vivo,ex_pbs,PBS,10,37.58986470236072,34.0,0.06646050347222222,96.99909382792468,SNR/sqrt(s)/uL,oct12_quant_audit.json:r_geometry.metrics
+R,R,ss-MGOT,ex_vivo,ex_brain,Whole brain,10,17.01701097403129,34.0,0.06646050347222222,43.9116942082854,SNR/sqrt(s)/uL,oct12_quant_audit.json:r_geometry.metrics
+test0,EPI test0,EPI,ex_vivo,ex_pbs,PBS,0,111.3262316408531,48.0,0.11393229166666667,141.03602425939349,SNR/sqrt(s)/uL,oct12_quant_audit.json:snr_efficiency_rows
+test0,EPI test0,EPI,ex_vivo,ex_brain,Whole brain,0,56.11999883471955,48.0,0.11393229166666667,71.09682417549931,SNR/sqrt(s)/uL,oct12_quant_audit.json:snr_efficiency_rows
+iA,iA,v1.83,in_vivo,iv_brain,Whole brain,10,46.80104974483643,34.0,0.07476806640625,107.34949023307479,SNR/sqrt(s)/uL,oct12_quant_audit.json:snr_efficiency_rows
+iB,iB,v1.912,in_vivo,iv_brain,Whole brain,10,11.876374782792,34.0,0.07476806640625,27.241328681742402,SNR/sqrt(s)/uL,oct12_quant_audit.json:snr_efficiency_rows
+invivoA,EPI invivoA,EPI,in_vivo,iv_brain,Whole brain,0,56.77556858349499,48.0,0.11393229166666667,71.92734677227861,SNR/sqrt(s)/uL,oct12_quant_audit.json:snr_efficiency_rows

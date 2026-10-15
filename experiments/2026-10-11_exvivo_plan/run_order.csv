@@ -1,0 +1,31 @@
+﻿test,version,priority,purpose,volumes,dwell_us,ESP_ms,TE_ms,Delta_ms,TR_ms,matrix,slices,navigator,raw_views,scan_minutes,PPR
+W,v1912,guard,NO ACQUISITION: reject one console unit below the spacing bound,1,25,10,54,40.0,1000,128,3,2,153,0.0,FSE-DWI_10-11-2026_v1912_testW/FSE-DWI_10-11-2026_v1912_testW.ppr
+X,v182,guard,NO ACQUISITION: reject ESP one ms below the 40-kHz minimum,1,25,10,54,40.0,1000,128,1,1,136,0.0,FSE-DWI_10-11-2026_v182_testX/FSE-DWI_10-11-2026_v182_testX.ppr
+Y,v1912,guard,NO ACQUISITION: reject ESP one ms below the 40-kHz minimum,1,25,9,54,40.0,1000,128,1,1,136,0.0,FSE-DWI_10-11-2026_v1912_testY/FSE-DWI_10-11-2026_v1912_testY.ppr
+A,v182,core,"Load/compile, low-b E1 diagnostic, tissue/PBS high-b baseline",7,50,14,54,40.0,1000,128,1,1,136,2.45,FSE-DWI_10-11-2026_v182_testA/FSE-DWI_10-11-2026_v182_testA.ppr
+B,v1912,core,"Load/compile, matched ss-MGOT baseline and low-b/high-b diagnostic",7,50,13,54,40.0,1000,128,1,1,136,2.45,FSE-DWI_10-11-2026_v1912_testB/FSE-DWI_10-11-2026_v1912_testB.ppr
+C,v182,core,"PBS ADC and axis calibration: +/-x,+/-y,+/-z at b500/b1000; bracketed reference",14,50,14,54,40.0,1000,128,1,1,136,4.9,FSE-DWI_10-11-2026_v182_testC/FSE-DWI_10-11-2026_v182_testC.ppr
+D,v1912,core,Matched ss-MGOT six-polarity PBS ADC/axis calibration,14,50,13,54,40.0,1000,128,1,1,136,4.9,FSE-DWI_10-11-2026_v1912_testD/FSE-DWI_10-11-2026_v1912_testD.ppr
+AB,v182,core,"Mixed-axis b1000 direction (577,577,577), for future non-axis direction sets",1,25,11,54,40.0,1000,128,1,1,136,0.35,FSE-DWI_10-11-2026_v182_testAB/FSE-DWI_10-11-2026_v182_testAB.ppr
+AC,v1912,core,"Matched mixed-axis b1000 direction, for future non-axis direction sets",1,25,10,54,40.0,1000,128,1,1,136,0.35,FSE-DWI_10-11-2026_v1912_testAC/FSE-DWI_10-11-2026_v1912_testAC.ppr
+E,v182,core,"40-kHz minimum ESP, short-T2 benefit and high-b cleanliness",3,25,11,54,40.0,1000,128,1,1,136,1.05,FSE-DWI_10-11-2026_v182_testE/FSE-DWI_10-11-2026_v182_testE.ppr
+F,v1912,core,40-kHz ss-MGOT minimum ESP and high-b cleanliness,3,25,10,54,40.0,1000,128,1,1,136,1.05,FSE-DWI_10-11-2026_v1912_testF/FSE-DWI_10-11-2026_v1912_testF.ppr
+G,v182,core,40-kHz minimum ESP + 1 ms timing control,1,25,12,54,40.0,1000,128,1,1,136,0.35,FSE-DWI_10-11-2026_v182_testG/FSE-DWI_10-11-2026_v182_testG.ppr
+H,v1912,core,40-kHz minimum ESP + 1 ms timing control,1,25,11,54,40.0,1000,128,1,1,136,0.35,FSE-DWI_10-11-2026_v1912_testH/FSE-DWI_10-11-2026_v1912_testH.ppr
+I,v182,core,20-kHz minimum ESP + 1 ms timing control,1,50,15,54,40.0,1000,128,1,1,136,0.35,FSE-DWI_10-11-2026_v182_testI/FSE-DWI_10-11-2026_v182_testI.ppr
+J,v1912,core,20-kHz minimum ESP + 1 ms timing control,1,50,14,54,40.0,1000,128,1,1,136,0.35,FSE-DWI_10-11-2026_v1912_testJ/FSE-DWI_10-11-2026_v1912_testJ.ppr
+M,v182,core,Single-slice nav2 control against E; crosstalk reference for K/O/S,2,25,11,54,40.0,1000,128,1,2,153,0.7,FSE-DWI_10-11-2026_v182_testM/FSE-DWI_10-11-2026_v182_testM.ppr
+N,v1912,core,Single-slice nav2 control against F; crosstalk reference for L/P,2,25,10,54,40.0,1000,128,1,2,153,0.7,FSE-DWI_10-11-2026_v1912_testN/FSE-DWI_10-11-2026_v1912_testN.ppr
+K,v182,core,K-style off-centre phase and tight-gap crosstalk with shot navigators,3,25,11,54,40.0,1000,128,3,2,153,1.05,FSE-DWI_10-11-2026_v182_testK/FSE-DWI_10-11-2026_v182_testK.ppr
+L,v1912,core,"Minimum-spacing multi-slice ss-MGOT phase, crosstalk and shot navigators",3,25,10,54,40.0,1000,128,3,2,153,1.05,FSE-DWI_10-11-2026_v1912_testL/FSE-DWI_10-11-2026_v1912_testL.ppr
+O,v182,core,Large off-centre RF phase at +/-5 mm,1,25,11,54,40.0,1000,128,3,2,153,0.35,FSE-DWI_10-11-2026_v182_testO/FSE-DWI_10-11-2026_v182_testO.ppr
+P,v1912,core,Large off-centre per-width RF phase at +/-5 mm,1,25,10,54,40.0,1000,128,3,2,153,0.35,FSE-DWI_10-11-2026_v1912_testP/FSE-DWI_10-11-2026_v1912_testP.ppr
+Q,v182,core,Delta30/TE44 tissue benefit and high-b gradient headroom with nav2,3,25,11,44,30.0,1000,128,1,2,153,1.05,FSE-DWI_10-11-2026_v182_testQ/FSE-DWI_10-11-2026_v182_testQ.ppr
+R,v1912,core,Matched Delta30/TE44 ss-MGOT tissue and navigator qualification,3,25,10,44,30.0,1000,128,1,2,153,1.05,FSE-DWI_10-11-2026_v1912_testR/FSE-DWI_10-11-2026_v1912_testR.ppr
+Z,v1912,conditional,Off-resonance follow-up: manually detune common TX/RX centre by -128 Hz,1,25,10,44,30.0,1000,128,1,2,153,0.35,FSE-DWI_10-11-2026_v1912_testZ/FSE-DWI_10-11-2026_v1912_testZ.ppr
+AA,v1912,conditional,Off-resonance follow-up: manually detune common TX/RX centre by +128 Hz,1,25,10,44,30.0,1000,128,1,2,153,0.35,FSE-DWI_10-11-2026_v1912_testAA/FSE-DWI_10-11-2026_v1912_testAA.ppr
+S,v182,core,2.4-mm gap crosstalk qualification before final pilot,1,25,11,54,40.0,1000,128,3,2,153,0.35,FSE-DWI_10-11-2026_v182_testS/FSE-DWI_10-11-2026_v182_testS.ppr
+T,v182,core,End-of-tests drift repeat against A (b10/b1000),2,50,14,54,40.0,1000,128,1,1,136,0.7,FSE-DWI_10-11-2026_v182_testT/FSE-DWI_10-11-2026_v182_testT.ppr
+U,v1912,core,End-of-tests drift repeat against B (b10/b1000),2,50,13,54,40.0,1000,128,1,1,136,0.7,FSE-DWI_10-11-2026_v1912_testU/FSE-DWI_10-11-2026_v1912_testU.ppr
+V,v182,core,"Final ex-vivo pilot: 256x256, 3 slices, 1 average, Delta30, 3 directions/shell",10,25,14,44,30.0,2000,256,3,2,297,12.333,FSE-DWI_10-11-2026_v182_testV/FSE-DWI_10-11-2026_v182_testV.ppr
+AD,v182,alternative,"Alternative final pilot: 128x128; replaces V, same slices/shells/Delta/average count",10,25,11,44,30.0,2000,128,3,2,153,7.0,FSE-DWI_10-11-2026_v182_testAD/FSE-DWI_10-11-2026_v182_testAD.ppr

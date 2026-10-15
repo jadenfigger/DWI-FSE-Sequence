@@ -191,6 +191,7 @@ def synthetic_check(raw, mrd=None, protocol=None):
             mode2text = one_row(protocol, 0)
             mode2text = re.sub(r"(:VAR\s+nav_on,\s*)\d+", r"\g<1>2", mode2text)
             mode2text = re.sub(r"(:NO_VIEWS\s+no_views,\s*)\d+", rf"\g<1>{len(contract)}", mode2text)
+            mode2text = re.sub(r"(:VIEWS_PER_SEGMENT\s+views_per_seg,\s*)\d+", r"\g<1>9", mode2text)  # mode 2 stores ETL+1
             for version in ("1.82", "1.912"):
                 text = re.sub(r"^:PPL.*", f":PPL FSE_dwi_CPMG_non_CPMG_twoTE-{version}.ppl", mode2text, flags=re.M)
                 path = OUT / f"synthetic_mode2_{version}.MRD"
@@ -314,6 +315,7 @@ def new_sequence_checks():
         text = one_row(protocol, 1000)
         text = re.sub(r"(:VAR\s+nav_on,\s*)\d+", r"\g<1>2", text)
         text = re.sub(r"(:NO_VIEWS\s+no_views,\s*)\d+", rf"\g<1>{(N // 8 + 1) * 9}", text)
+        text = re.sub(r"(:VIEWS_PER_SEGMENT\s+views_per_seg,\s*)\d+", r"\g<1>9", text)  # mode 2 stores ETL+1
         out["mode2"][version] = effective_b(text, recon.read_diffusion(text), 1, N, cache_dir=OUT / "cache")
         assert out["mode2"][version]["BMatrixSource"] == "event-model-primary-pathway"
         assert out["mode2"][version]["BMatrixModel"]["RepresentativeImagingShotIndex"] == [2]

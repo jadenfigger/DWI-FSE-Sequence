@@ -10,3 +10,13 @@ docs/v182_v1912/validation/finalize_event_gates.py -text
 examples/validate_v182_v1912.py -text
 # Keep the newly added acquired records byte-for-byte, including their protocols.
 experiments/FSE-DWI_10-10-2026_*/* -text
+# Preserve newly published scanner/protocol bytes without newline conversion.
+scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.0.* -text
+scanner/FSE_dwi_CPMG_non_CPMG_twoTE-1.83.* -text
+experiments/FSE-DWI_10-11-2026_*/* -text
+experiments/FSE-DWI_10-12-2026_*/* -text
+experiments/2026-10-11*/**/*.ppr -text
+experiments/2026-10-12*/**/*.ppr -text
+# Rendered report artifacts are binary, including ASCII-encoded PDFs.
+*.pdf binary
+*.pptx binary

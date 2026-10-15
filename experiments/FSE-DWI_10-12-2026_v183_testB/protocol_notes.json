@@ -1,0 +1,39 @@
+{
+  "letter": "B",
+  "version": "v183",
+  "part": 0,
+  "purpose": "Frequency check 2/2: b10 at 40 kHz; image must register with A within 0.5 px",
+  "rows": [
+    [
+      10,
+      [
+        1000,
+        0,
+        0
+      ]
+    ]
+  ],
+  "dwell_us": 25,
+  "esp": 11,
+  "tr": 2000,
+  "te": 44,
+  "big_delta": 30000,
+  "nav_on": 1,
+  "offsets": [
+    0
+  ],
+  "matrix": 128,
+  "phmode": 0,
+  "phcal": 0,
+  "sample": "ex-vivo brain in PBS",
+  "note": "",
+  "stem": "FSE-DWI_10-12-2026_v183_testB",
+  "ppr": "FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr",
+  "ppr_sha256": "efe72a6a7bd266ab257c11e99f944c0995b6bf42d31b50c4be39caf1886a4399",
+  "raw_views": 136,
+  "views_per_segment": 8,
+  "nominal_duration_s": 42.0,
+  "slice_offsets_mm": [
+    0.0
+  ]
+}

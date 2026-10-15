@@ -1,0 +1,1115 @@
+﻿scan,label,comparison,reference,field,kind,reference_value,acquired_value
+A,A,adjacent,experiments/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,B0GradientDelay,scanner_records,,0.0
+A,A,adjacent,experiments/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,RxDelay,scanner_records,,0.0
+A,A,adjacent,experiments/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,TxDelay,scanner_records,,0.0
+A,A,adjacent,experiments/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,XGradientDelay,scanner_records,,0.0
+A,A,adjacent,experiments/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,YGradientDelay,scanner_records,,0.0
+A,A,adjacent,experiments/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,ZGradientDelay,scanner_records,,0.0
+A,A,adjacent,experiments/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+A,A,adjacent,experiments/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_ObserveReceiverGain,scanner_records,,120.0
+A,A,adjacent,experiments/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+A,A,adjacent,experiments/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_pdd_rx_mask,scanner_records,,8.0
+A,A,adjacent,experiments/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_pdd_tx_mask,scanner_records,,8.0
+A,A,adjacent,experiments/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_pts_mask,scanner_records,,13.0
+A,A,adjacent,experiments/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_use_pdd,scanner_records,,0.0
+A,A,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,B0GradientDelay,scanner_records,,0.0
+A,A,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,RxDelay,scanner_records,,0.0
+A,A,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,TxDelay,scanner_records,,0.0
+A,A,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,XGradientDelay,scanner_records,,0.0
+A,A,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,YGradientDelay,scanner_records,,0.0
+A,A,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,ZGradientDelay,scanner_records,,0.0
+A,A,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+A,A,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_ObserveReceiverGain,scanner_records,,120.0
+A,A,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+A,A,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_pdd_rx_mask,scanner_records,,8.0
+A,A,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_pdd_tx_mask,scanner_records,,8.0
+A,A,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_pts_mask,scanner_records,,13.0
+A,A,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_use_pdd,scanner_records,,0.0
+B,B,adjacent,experiments/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,B0GradientDelay,scanner_records,,0.0
+B,B,adjacent,experiments/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,RxDelay,scanner_records,,0.0
+B,B,adjacent,experiments/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,TxDelay,scanner_records,,0.0
+B,B,adjacent,experiments/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,XGradientDelay,scanner_records,,0.0
+B,B,adjacent,experiments/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,YGradientDelay,scanner_records,,0.0
+B,B,adjacent,experiments/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,ZGradientDelay,scanner_records,,0.0
+B,B,adjacent,experiments/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+B,B,adjacent,experiments/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,_ObserveReceiverGain,scanner_records,,120.0
+B,B,adjacent,experiments/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+B,B,adjacent,experiments/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,_pdd_rx_mask,scanner_records,,8.0
+B,B,adjacent,experiments/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,_pdd_tx_mask,scanner_records,,8.0
+B,B,adjacent,experiments/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,_pts_mask,scanner_records,,13.0
+B,B,adjacent,experiments/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,_use_pdd,scanner_records,,0.0
+B,B,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,B0GradientDelay,scanner_records,,0.0
+B,B,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,RxDelay,scanner_records,,0.0
+B,B,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,TxDelay,scanner_records,,0.0
+B,B,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,XGradientDelay,scanner_records,,0.0
+B,B,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,YGradientDelay,scanner_records,,0.0
+B,B,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,ZGradientDelay,scanner_records,,0.0
+B,B,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+B,B,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,_ObserveReceiverGain,scanner_records,,120.0
+B,B,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+B,B,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,_pdd_rx_mask,scanner_records,,8.0
+B,B,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,_pdd_tx_mask,scanner_records,,8.0
+B,B,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,_pts_mask,scanner_records,,13.0
+B,B,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testB/FSE-DWI_10-12-2026_v183_testB.ppr,_use_pdd,scanner_records,,0.0
+C,C,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,B0GradientDelay,scanner_records,,0.0
+C,C,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,RxDelay,scanner_records,,0.0
+C,C,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,TxDelay,scanner_records,,0.0
+C,C,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,XGradientDelay,scanner_records,,0.0
+C,C,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,YGradientDelay,scanner_records,,0.0
+C,C,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,ZGradientDelay,scanner_records,,0.0
+C,C,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+C,C,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,_ObserveReceiverGain,scanner_records,,120.0
+C,C,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+C,C,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,_pdd_rx_mask,scanner_records,,8.0
+C,C,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,_pdd_tx_mask,scanner_records,,8.0
+C,C,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,_pts_mask,scanner_records,,13.0
+C,C,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,_use_pdd,scanner_records,,0.0
+C,C,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,B0GradientDelay,scanner_records,,0.0
+C,C,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,RxDelay,scanner_records,,0.0
+C,C,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,TxDelay,scanner_records,,0.0
+C,C,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,XGradientDelay,scanner_records,,0.0
+C,C,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,YGradientDelay,scanner_records,,0.0
+C,C,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,ZGradientDelay,scanner_records,,0.0
+C,C,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+C,C,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,_ObserveReceiverGain,scanner_records,,120.0
+C,C,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+C,C,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,_pdd_rx_mask,scanner_records,,8.0
+C,C,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,_pdd_tx_mask,scanner_records,,8.0
+C,C,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,_pts_mask,scanner_records,,13.0
+C,C,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testC/FSE-DWI_10-12-2026_v1912_testC.ppr,_use_pdd,scanner_records,,0.0
+D,D,adjacent,experiments/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,B0GradientDelay,scanner_records,,0.0
+D,D,adjacent,experiments/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,RxDelay,scanner_records,,0.0
+D,D,adjacent,experiments/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,TxDelay,scanner_records,,0.0
+D,D,adjacent,experiments/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,XGradientDelay,scanner_records,,0.0
+D,D,adjacent,experiments/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,YGradientDelay,scanner_records,,0.0
+D,D,adjacent,experiments/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,ZGradientDelay,scanner_records,,0.0
+D,D,adjacent,experiments/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+D,D,adjacent,experiments/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_ObserveReceiverGain,scanner_records,,120.0
+D,D,adjacent,experiments/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+D,D,adjacent,experiments/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_pdd_rx_mask,scanner_records,,8.0
+D,D,adjacent,experiments/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_pdd_tx_mask,scanner_records,,8.0
+D,D,adjacent,experiments/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_pts_mask,scanner_records,,13.0
+D,D,adjacent,experiments/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_use_pdd,scanner_records,,0.0
+D,D,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,B0GradientDelay,scanner_records,,0.0
+D,D,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,RxDelay,scanner_records,,0.0
+D,D,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,TxDelay,scanner_records,,0.0
+D,D,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,XGradientDelay,scanner_records,,0.0
+D,D,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,YGradientDelay,scanner_records,,0.0
+D,D,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,ZGradientDelay,scanner_records,,0.0
+D,D,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+D,D,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_ObserveReceiverGain,scanner_records,,120.0
+D,D,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+D,D,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_pdd_rx_mask,scanner_records,,8.0
+D,D,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_pdd_tx_mask,scanner_records,,8.0
+D,D,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_pts_mask,scanner_records,,13.0
+D,D,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_use_pdd,scanner_records,,0.0
+E,E,adjacent,experiments/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,B0GradientDelay,scanner_records,,0.0
+E,E,adjacent,experiments/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,RxDelay,scanner_records,,0.0
+E,E,adjacent,experiments/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,TxDelay,scanner_records,,0.0
+E,E,adjacent,experiments/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,XGradientDelay,scanner_records,,0.0
+E,E,adjacent,experiments/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,YGradientDelay,scanner_records,,0.0
+E,E,adjacent,experiments/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,ZGradientDelay,scanner_records,,0.0
+E,E,adjacent,experiments/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+E,E,adjacent,experiments/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_ObserveReceiverGain,scanner_records,,120.0
+E,E,adjacent,experiments/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+E,E,adjacent,experiments/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_pdd_rx_mask,scanner_records,,8.0
+E,E,adjacent,experiments/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_pdd_tx_mask,scanner_records,,8.0
+E,E,adjacent,experiments/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_pts_mask,scanner_records,,13.0
+E,E,adjacent,experiments/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_use_pdd,scanner_records,,0.0
+E,E,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,B0GradientDelay,scanner_records,,0.0
+E,E,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,RxDelay,scanner_records,,0.0
+E,E,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,TxDelay,scanner_records,,0.0
+E,E,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,XGradientDelay,scanner_records,,0.0
+E,E,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,YGradientDelay,scanner_records,,0.0
+E,E,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,ZGradientDelay,scanner_records,,0.0
+E,E,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+E,E,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_ObserveReceiverGain,scanner_records,,120.0
+E,E,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+E,E,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_pdd_rx_mask,scanner_records,,8.0
+E,E,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_pdd_tx_mask,scanner_records,,8.0
+E,E,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_pts_mask,scanner_records,,13.0
+E,E,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_use_pdd,scanner_records,,0.0
+F,F,adjacent,experiments/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,B0GradientDelay,scanner_records,,0.0
+F,F,adjacent,experiments/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,RxDelay,scanner_records,,0.0
+F,F,adjacent,experiments/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,TxDelay,scanner_records,,0.0
+F,F,adjacent,experiments/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,XGradientDelay,scanner_records,,0.0
+F,F,adjacent,experiments/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,YGradientDelay,scanner_records,,0.0
+F,F,adjacent,experiments/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,ZGradientDelay,scanner_records,,0.0
+F,F,adjacent,experiments/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+F,F,adjacent,experiments/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_ObserveReceiverGain,scanner_records,,120.0
+F,F,adjacent,experiments/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+F,F,adjacent,experiments/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_pdd_rx_mask,scanner_records,,8.0
+F,F,adjacent,experiments/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_pdd_tx_mask,scanner_records,,8.0
+F,F,adjacent,experiments/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_pts_mask,scanner_records,,13.0
+F,F,adjacent,experiments/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_use_pdd,scanner_records,,0.0
+F,F,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,B0GradientDelay,scanner_records,,0.0
+F,F,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,RxDelay,scanner_records,,0.0
+F,F,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,TxDelay,scanner_records,,0.0
+F,F,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,XGradientDelay,scanner_records,,0.0
+F,F,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,YGradientDelay,scanner_records,,0.0
+F,F,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,ZGradientDelay,scanner_records,,0.0
+F,F,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+F,F,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_ObserveReceiverGain,scanner_records,,120.0
+F,F,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+F,F,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_pdd_rx_mask,scanner_records,,8.0
+F,F,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_pdd_tx_mask,scanner_records,,8.0
+F,F,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_pts_mask,scanner_records,,13.0
+F,F,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_use_pdd,scanner_records,,0.0
+G,G,adjacent,experiments/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,B0GradientDelay,scanner_records,,0.0
+G,G,adjacent,experiments/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,RxDelay,scanner_records,,0.0
+G,G,adjacent,experiments/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,TxDelay,scanner_records,,0.0
+G,G,adjacent,experiments/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,XGradientDelay,scanner_records,,0.0
+G,G,adjacent,experiments/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,YGradientDelay,scanner_records,,0.0
+G,G,adjacent,experiments/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,ZGradientDelay,scanner_records,,0.0
+G,G,adjacent,experiments/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+G,G,adjacent,experiments/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,_ObserveReceiverGain,scanner_records,,120.0
+G,G,adjacent,experiments/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+G,G,adjacent,experiments/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,_pdd_rx_mask,scanner_records,,8.0
+G,G,adjacent,experiments/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,_pdd_tx_mask,scanner_records,,8.0
+G,G,adjacent,experiments/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,_pts_mask,scanner_records,,13.0
+G,G,adjacent,experiments/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,_use_pdd,scanner_records,,0.0
+G,G,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,B0GradientDelay,scanner_records,,0.0
+G,G,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,RxDelay,scanner_records,,0.0
+G,G,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,TxDelay,scanner_records,,0.0
+G,G,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,XGradientDelay,scanner_records,,0.0
+G,G,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,YGradientDelay,scanner_records,,0.0
+G,G,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,ZGradientDelay,scanner_records,,0.0
+G,G,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+G,G,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,_ObserveReceiverGain,scanner_records,,120.0
+G,G,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+G,G,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,_pdd_rx_mask,scanner_records,,8.0
+G,G,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,_pdd_tx_mask,scanner_records,,8.0
+G,G,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,_pts_mask,scanner_records,,13.0
+G,G,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testG/FSE-DWI_10-12-2026_v183_testG.ppr,_use_pdd,scanner_records,,0.0
+M,M,adjacent,experiments/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,B0GradientDelay,scanner_records,,0.0
+M,M,adjacent,experiments/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,RxDelay,scanner_records,,0.0
+M,M,adjacent,experiments/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,TxDelay,scanner_records,,0.0
+M,M,adjacent,experiments/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,XGradientDelay,scanner_records,,0.0
+M,M,adjacent,experiments/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,YGradientDelay,scanner_records,,0.0
+M,M,adjacent,experiments/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,ZGradientDelay,scanner_records,,0.0
+M,M,adjacent,experiments/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+M,M,adjacent,experiments/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_ObserveReceiverGain,scanner_records,,120.0
+M,M,adjacent,experiments/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+M,M,adjacent,experiments/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_pdd_rx_mask,scanner_records,,8.0
+M,M,adjacent,experiments/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_pdd_tx_mask,scanner_records,,8.0
+M,M,adjacent,experiments/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_pts_mask,scanner_records,,13.0
+M,M,adjacent,experiments/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_use_pdd,scanner_records,,0.0
+M,M,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,B0GradientDelay,scanner_records,,0.0
+M,M,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,RxDelay,scanner_records,,0.0
+M,M,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,TxDelay,scanner_records,,0.0
+M,M,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,XGradientDelay,scanner_records,,0.0
+M,M,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,YGradientDelay,scanner_records,,0.0
+M,M,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,ZGradientDelay,scanner_records,,0.0
+M,M,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+M,M,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_ObserveReceiverGain,scanner_records,,120.0
+M,M,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+M,M,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_pdd_rx_mask,scanner_records,,8.0
+M,M,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_pdd_tx_mask,scanner_records,,8.0
+M,M,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_pts_mask,scanner_records,,13.0
+M,M,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_use_pdd,scanner_records,,0.0
+MM,MM,adjacent,experiments/FSE-DWI_10-12-2026_v183_testMM/FSE-DWI_10-12-2026_v183_testMM.ppr,B0GradientDelay,scanner_records,,0.0
+MM,MM,adjacent,experiments/FSE-DWI_10-12-2026_v183_testMM/FSE-DWI_10-12-2026_v183_testMM.ppr,RxDelay,scanner_records,,0.0
+MM,MM,adjacent,experiments/FSE-DWI_10-12-2026_v183_testMM/FSE-DWI_10-12-2026_v183_testMM.ppr,TxDelay,scanner_records,,0.0
+MM,MM,adjacent,experiments/FSE-DWI_10-12-2026_v183_testMM/FSE-DWI_10-12-2026_v183_testMM.ppr,XGradientDelay,scanner_records,,0.0
+MM,MM,adjacent,experiments/FSE-DWI_10-12-2026_v183_testMM/FSE-DWI_10-12-2026_v183_testMM.ppr,YGradientDelay,scanner_records,,0.0
+MM,MM,adjacent,experiments/FSE-DWI_10-12-2026_v183_testMM/FSE-DWI_10-12-2026_v183_testMM.ppr,ZGradientDelay,scanner_records,,0.0
+MM,MM,adjacent,experiments/FSE-DWI_10-12-2026_v183_testMM/FSE-DWI_10-12-2026_v183_testMM.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+MM,MM,adjacent,experiments/FSE-DWI_10-12-2026_v183_testMM/FSE-DWI_10-12-2026_v183_testMM.ppr,_ObserveReceiverGain,scanner_records,,0.0
+MM,MM,adjacent,experiments/FSE-DWI_10-12-2026_v183_testMM/FSE-DWI_10-12-2026_v183_testMM.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+MM,MM,adjacent,experiments/FSE-DWI_10-12-2026_v183_testMM/FSE-DWI_10-12-2026_v183_testMM.ppr,_pdd_rx_mask,scanner_records,,8.0
+MM,MM,adjacent,experiments/FSE-DWI_10-12-2026_v183_testMM/FSE-DWI_10-12-2026_v183_testMM.ppr,_pdd_tx_mask,scanner_records,,8.0
+MM,MM,adjacent,experiments/FSE-DWI_10-12-2026_v183_testMM/FSE-DWI_10-12-2026_v183_testMM.ppr,_pts_mask,scanner_records,,13.0
+MM,MM,adjacent,experiments/FSE-DWI_10-12-2026_v183_testMM/FSE-DWI_10-12-2026_v183_testMM.ppr,_use_pdd,scanner_records,,0.0
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,FOV_OFFSETS,protocol,"[1.0, 0.0, 0.0, 0.0]","[1.0, 0.0, 0.0, 2.8]"
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,FOV_SLICE_OFF,protocol,"[1.0, 0.0]","[1.0, 1120.0]"
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,acq_b,protocol,"[10.0, 1000.0, 3000.0, 6000.0]",[10.0]
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,acq_x,protocol,"[1000.0, 1000.0, 0.0, 0.0]",[1000.0]
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,acq_y,protocol,"[0.0, 0.0, 0.0, 0.0]",[0.0]
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,acq_z,protocol,"[0.0, 0.0, 1000.0, 1000.0]",[0.0]
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,no_diff_acq,protocol,4.0,1.0
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,no_experiments,protocol,4.0,1.0
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,B0GradientDelay,scanner_records,,0.0
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,RxDelay,scanner_records,,0.0
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,TxDelay,scanner_records,,0.0
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,XGradientDelay,scanner_records,,0.0
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,YGradientDelay,scanner_records,,0.0
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,ZGradientDelay,scanner_records,,0.0
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_ObserveReceiverGain,scanner_records,,0.0
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_pdd_rx_mask,scanner_records,,8.0
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_pdd_tx_mask,scanner_records,,8.0
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_pts_mask,scanner_records,,13.0
+MM,MM,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testM/FSE-DWI_10-12-2026_v183_testM.ppr,_use_pdd,scanner_records,,0.0
+N,N,adjacent,experiments/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,SMY,protocol,0.0305406,0.0343582
+N,N,adjacent,experiments/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,gp_init_var,protocol,-1000.0,-1125.0
+N,N,adjacent,experiments/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,B0GradientDelay,scanner_records,,0.0
+N,N,adjacent,experiments/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,RxDelay,scanner_records,,0.0
+N,N,adjacent,experiments/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,TxDelay,scanner_records,,0.0
+N,N,adjacent,experiments/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,XGradientDelay,scanner_records,,0.0
+N,N,adjacent,experiments/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,YGradientDelay,scanner_records,,0.0
+N,N,adjacent,experiments/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,ZGradientDelay,scanner_records,,0.0
+N,N,adjacent,experiments/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+N,N,adjacent,experiments/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,_ObserveReceiverGain,scanner_records,,120.0
+N,N,adjacent,experiments/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+N,N,adjacent,experiments/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,_pdd_rx_mask,scanner_records,,8.0
+N,N,adjacent,experiments/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,_pdd_tx_mask,scanner_records,,8.0
+N,N,adjacent,experiments/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,_pts_mask,scanner_records,,13.0
+N,N,adjacent,experiments/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,_use_pdd,scanner_records,,0.0
+N,N,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,SMY,protocol,0.0305406,0.0343582
+N,N,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,gp_init_var,protocol,-1000.0,-1125.0
+N,N,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,B0GradientDelay,scanner_records,,0.0
+N,N,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,RxDelay,scanner_records,,0.0
+N,N,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,TxDelay,scanner_records,,0.0
+N,N,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,XGradientDelay,scanner_records,,0.0
+N,N,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,YGradientDelay,scanner_records,,0.0
+N,N,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,ZGradientDelay,scanner_records,,0.0
+N,N,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+N,N,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,_ObserveReceiverGain,scanner_records,,120.0
+N,N,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+N,N,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,_pdd_rx_mask,scanner_records,,8.0
+N,N,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,_pdd_tx_mask,scanner_records,,8.0
+N,N,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,_pts_mask,scanner_records,,13.0
+N,N,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testN/FSE-DWI_10-12-2026_v183_testN.ppr,_use_pdd,scanner_records,,0.0
+O,O,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,B0GradientDelay,scanner_records,,0.0
+O,O,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,RxDelay,scanner_records,,0.0
+O,O,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,TxDelay,scanner_records,,0.0
+O,O,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,XGradientDelay,scanner_records,,0.0
+O,O,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,YGradientDelay,scanner_records,,0.0
+O,O,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,ZGradientDelay,scanner_records,,0.0
+O,O,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+O,O,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,_ObserveReceiverGain,scanner_records,,120.0
+O,O,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+O,O,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,_pdd_rx_mask,scanner_records,,8.0
+O,O,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,_pdd_tx_mask,scanner_records,,8.0
+O,O,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,_pts_mask,scanner_records,,13.0
+O,O,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,_use_pdd,scanner_records,,0.0
+O,O,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,B0GradientDelay,scanner_records,,0.0
+O,O,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,RxDelay,scanner_records,,0.0
+O,O,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,TxDelay,scanner_records,,0.0
+O,O,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,XGradientDelay,scanner_records,,0.0
+O,O,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,YGradientDelay,scanner_records,,0.0
+O,O,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,ZGradientDelay,scanner_records,,0.0
+O,O,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+O,O,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,_ObserveReceiverGain,scanner_records,,120.0
+O,O,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+O,O,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,_pdd_rx_mask,scanner_records,,8.0
+O,O,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,_pdd_tx_mask,scanner_records,,8.0
+O,O,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,_pts_mask,scanner_records,,13.0
+O,O,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testO/FSE-DWI_10-12-2026_v1912_testO.ppr,_use_pdd,scanner_records,,0.0
+Q,Q,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,B0GradientDelay,scanner_records,,0.0
+Q,Q,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,RxDelay,scanner_records,,0.0
+Q,Q,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,TxDelay,scanner_records,,0.0
+Q,Q,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,XGradientDelay,scanner_records,,0.0
+Q,Q,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,YGradientDelay,scanner_records,,0.0
+Q,Q,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,ZGradientDelay,scanner_records,,0.0
+Q,Q,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+Q,Q,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_ObserveReceiverGain,scanner_records,,120.0
+Q,Q,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+Q,Q,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_pdd_rx_mask,scanner_records,,8.0
+Q,Q,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_pdd_tx_mask,scanner_records,,8.0
+Q,Q,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_pts_mask,scanner_records,,13.0
+Q,Q,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_use_pdd,scanner_records,,0.0
+Q,Q,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,VIEWS_PER_SEGMENT,protocol,9.0,8.0
+Q,Q,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,nav_on,protocol,2.0,1.0
+Q,Q,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,no_views,protocol,153.0,136.0
+Q,Q,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,B0GradientDelay,scanner_records,,0.0
+Q,Q,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,RxDelay,scanner_records,,0.0
+Q,Q,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,TxDelay,scanner_records,,0.0
+Q,Q,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,XGradientDelay,scanner_records,,0.0
+Q,Q,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,YGradientDelay,scanner_records,,0.0
+Q,Q,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,ZGradientDelay,scanner_records,,0.0
+Q,Q,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+Q,Q,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_ObserveReceiverGain,scanner_records,,120.0
+Q,Q,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+Q,Q,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_pdd_rx_mask,scanner_records,,8.0
+Q,Q,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_pdd_tx_mask,scanner_records,,8.0
+Q,Q,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_pts_mask,scanner_records,,13.0
+Q,Q,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_use_pdd,scanner_records,,0.0
+Q,Q,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,B0GradientDelay,scanner_records,,0.0
+Q,Q,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,RxDelay,scanner_records,,0.0
+Q,Q,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,TxDelay,scanner_records,,0.0
+Q,Q,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,XGradientDelay,scanner_records,,0.0
+Q,Q,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,YGradientDelay,scanner_records,,0.0
+Q,Q,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,ZGradientDelay,scanner_records,,0.0
+Q,Q,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+Q,Q,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_ObserveReceiverGain,scanner_records,,120.0
+Q,Q,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+Q,Q,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_pdd_rx_mask,scanner_records,,8.0
+Q,Q,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_pdd_tx_mask,scanner_records,,8.0
+Q,Q,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_pts_mask,scanner_records,,13.0
+Q,Q,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_use_pdd,scanner_records,,0.0
+Q1,Q1,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ1/FSE-DWI_10-12-2026_v183_testQ1.ppr,B0GradientDelay,scanner_records,,0.0
+Q1,Q1,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ1/FSE-DWI_10-12-2026_v183_testQ1.ppr,RxDelay,scanner_records,,0.0
+Q1,Q1,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ1/FSE-DWI_10-12-2026_v183_testQ1.ppr,TxDelay,scanner_records,,0.0
+Q1,Q1,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ1/FSE-DWI_10-12-2026_v183_testQ1.ppr,XGradientDelay,scanner_records,,0.0
+Q1,Q1,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ1/FSE-DWI_10-12-2026_v183_testQ1.ppr,YGradientDelay,scanner_records,,0.0
+Q1,Q1,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ1/FSE-DWI_10-12-2026_v183_testQ1.ppr,ZGradientDelay,scanner_records,,0.0
+Q1,Q1,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ1/FSE-DWI_10-12-2026_v183_testQ1.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+Q1,Q1,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ1/FSE-DWI_10-12-2026_v183_testQ1.ppr,_ObserveReceiverGain,scanner_records,,0.0
+Q1,Q1,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ1/FSE-DWI_10-12-2026_v183_testQ1.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+Q1,Q1,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ1/FSE-DWI_10-12-2026_v183_testQ1.ppr,_pdd_rx_mask,scanner_records,,8.0
+Q1,Q1,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ1/FSE-DWI_10-12-2026_v183_testQ1.ppr,_pdd_tx_mask,scanner_records,,8.0
+Q1,Q1,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ1/FSE-DWI_10-12-2026_v183_testQ1.ppr,_pts_mask,scanner_records,,13.0
+Q1,Q1,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQ1/FSE-DWI_10-12-2026_v183_testQ1.ppr,_use_pdd,scanner_records,,0.0
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,FOV_OFFSETS,protocol,"[3.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8]","[7.0, 0.0, 0.0, -5.2, 0.0, 0.0, -4.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8, 0.0, 0.0, 4.0, 0.0, 0.0, 5.2]"
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,FOV_PHASE_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,FOV_READ_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,FOV_SLICE_OFF,protocol,"[3.0, -1120.0, 0.0, 1120.0]","[7.0, -2080.0, -1600.0, -1120.0, 0.0, 1120.0, 1600.0, 2080.0]"
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,MULTI_ORIENTATION,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,NO_SLICES,protocol,3.0,7.0
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,VIEWS_PER_SEGMENT,protocol,9.0,8.0
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,X_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,Y_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,Z_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,nav_on,protocol,2.0,1.0
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,no_views,protocol,153.0,136.0
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,slice_offset,protocol,"[2996.0, 2.8]","[1284.0, 1.2]"
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,B0GradientDelay,scanner_records,,0.0
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,RxDelay,scanner_records,,0.0
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,TxDelay,scanner_records,,0.0
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,XGradientDelay,scanner_records,,0.0
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,YGradientDelay,scanner_records,,0.0
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,ZGradientDelay,scanner_records,,0.0
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_ObserveReceiverGain,scanner_records,,0.0
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_pdd_rx_mask,scanner_records,,8.0
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_pdd_tx_mask,scanner_records,,8.0
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_pts_mask,scanner_records,,13.0
+Q1,Q1,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQ/FSE-DWI_10-12-2026_v183_testQ.ppr,_use_pdd,scanner_records,,0.0
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,FOV_OFFSETS,protocol,"[3.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8]","[7.0, 0.0, 0.0, -5.2, 0.0, 0.0, -4.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8, 0.0, 0.0, 4.0, 0.0, 0.0, 5.2]"
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,FOV_PHASE_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,FOV_READ_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,FOV_SLICE_OFF,protocol,"[3.0, -1120.0, 0.0, 1120.0]","[7.0, -2080.0, -1600.0, -1120.0, 0.0, 1120.0, 1600.0, 2080.0]"
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,MULTI_ORIENTATION,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,NO_SLICES,protocol,3.0,7.0
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,X_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,Y_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,Z_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,slice_offset,protocol,"[2996.0, 2.8]","[1284.0, 1.2]"
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,B0GradientDelay,scanner_records,,0.0
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,RxDelay,scanner_records,,0.0
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,TxDelay,scanner_records,,0.0
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,XGradientDelay,scanner_records,,0.0
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,YGradientDelay,scanner_records,,0.0
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,ZGradientDelay,scanner_records,,0.0
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_ObserveReceiverGain,scanner_records,,0.0
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_pdd_rx_mask,scanner_records,,8.0
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_pdd_tx_mask,scanner_records,,8.0
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_pts_mask,scanner_records,,13.0
+Q1,Q1,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_use_pdd,scanner_records,,0.0
+QQ,QQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,B0GradientDelay,scanner_records,,0.0
+QQ,QQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,RxDelay,scanner_records,,0.0
+QQ,QQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,TxDelay,scanner_records,,0.0
+QQ,QQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,XGradientDelay,scanner_records,,0.0
+QQ,QQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,YGradientDelay,scanner_records,,0.0
+QQ,QQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,ZGradientDelay,scanner_records,,0.0
+QQ,QQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+QQ,QQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_ObserveReceiverGain,scanner_records,,0.0
+QQ,QQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+QQ,QQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_pdd_rx_mask,scanner_records,,8.0
+QQ,QQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_pdd_tx_mask,scanner_records,,8.0
+QQ,QQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_pts_mask,scanner_records,,13.0
+QQ,QQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_use_pdd,scanner_records,,0.0
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,acq_b,protocol,"[10.0, 1000.0, 1000.0, 1000.0, 3000.0, 3000.0, 3000.0]",[10.0]
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,acq_x,protocol,"[1000.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0]",[1000.0]
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,acq_y,protocol,"[0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0]",[0.0]
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,acq_z,protocol,"[0.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0]",[0.0]
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,no_diff_acq,protocol,7.0,1.0
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,no_experiments,protocol,7.0,1.0
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,phcor_minus,protocol,23.0,29.0
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,phcor_plus,protocol,23.0,29.0
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,B0GradientDelay,scanner_records,,0.0
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,RxDelay,scanner_records,,0.0
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,TxDelay,scanner_records,,0.0
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,XGradientDelay,scanner_records,,0.0
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,YGradientDelay,scanner_records,,0.0
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,ZGradientDelay,scanner_records,,0.0
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_ObserveReceiverGain,scanner_records,,0.0
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_pdd_rx_mask,scanner_records,,8.0
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_pdd_tx_mask,scanner_records,,8.0
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_pts_mask,scanner_records,,13.0
+QQ,QQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_use_pdd,scanner_records,,0.0
+QQQ,QQQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQQ/FSE-DWI_10-12-2026_v183_testQQQ.ppr,B0GradientDelay,scanner_records,,0.0
+QQQ,QQQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQQ/FSE-DWI_10-12-2026_v183_testQQQ.ppr,RxDelay,scanner_records,,0.0
+QQQ,QQQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQQ/FSE-DWI_10-12-2026_v183_testQQQ.ppr,TxDelay,scanner_records,,0.0
+QQQ,QQQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQQ/FSE-DWI_10-12-2026_v183_testQQQ.ppr,XGradientDelay,scanner_records,,0.0
+QQQ,QQQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQQ/FSE-DWI_10-12-2026_v183_testQQQ.ppr,YGradientDelay,scanner_records,,0.0
+QQQ,QQQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQQ/FSE-DWI_10-12-2026_v183_testQQQ.ppr,ZGradientDelay,scanner_records,,0.0
+QQQ,QQQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQQ/FSE-DWI_10-12-2026_v183_testQQQ.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+QQQ,QQQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQQ/FSE-DWI_10-12-2026_v183_testQQQ.ppr,_ObserveReceiverGain,scanner_records,,0.0
+QQQ,QQQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQQ/FSE-DWI_10-12-2026_v183_testQQQ.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+QQQ,QQQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQQ/FSE-DWI_10-12-2026_v183_testQQQ.ppr,_pdd_rx_mask,scanner_records,,8.0
+QQQ,QQQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQQ/FSE-DWI_10-12-2026_v183_testQQQ.ppr,_pdd_tx_mask,scanner_records,,8.0
+QQQ,QQQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQQ/FSE-DWI_10-12-2026_v183_testQQQ.ppr,_pts_mask,scanner_records,,13.0
+QQQ,QQQ,adjacent,experiments/FSE-DWI_10-12-2026_v183_testQQQ/FSE-DWI_10-12-2026_v183_testQQQ.ppr,_use_pdd,scanner_records,,0.0
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,acq_b,protocol,"[10.0, 1000.0, 1000.0, 1000.0, 3000.0, 3000.0, 3000.0]",[10.0]
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,acq_x,protocol,"[1000.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0]",[1000.0]
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,acq_y,protocol,"[0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0]",[0.0]
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,acq_z,protocol,"[0.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0]",[0.0]
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,no_diff_acq,protocol,7.0,1.0
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,no_experiments,protocol,7.0,1.0
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,slice_offset,protocol,"[2996.0, 2.8]","[1284.0, 1.2]"
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,B0GradientDelay,scanner_records,,0.0
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,RxDelay,scanner_records,,0.0
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,TxDelay,scanner_records,,0.0
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,XGradientDelay,scanner_records,,0.0
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,YGradientDelay,scanner_records,,0.0
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,ZGradientDelay,scanner_records,,0.0
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_ObserveReceiverGain,scanner_records,,0.0
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_pdd_rx_mask,scanner_records,,8.0
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_pdd_tx_mask,scanner_records,,8.0
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_pts_mask,scanner_records,,13.0
+QQQ,QQQ,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testQQ/FSE-DWI_10-12-2026_v183_testQQ.ppr,_use_pdd,scanner_records,,0.0
+R,R,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,SMY,protocol,0.0305406,0.0343582
+R,R,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,gp_init_var,protocol,-1000.0,-1125.0
+R,R,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,B0GradientDelay,scanner_records,,0.0
+R,R,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,RxDelay,scanner_records,,0.0
+R,R,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,TxDelay,scanner_records,,0.0
+R,R,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,XGradientDelay,scanner_records,,0.0
+R,R,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,YGradientDelay,scanner_records,,0.0
+R,R,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,ZGradientDelay,scanner_records,,0.0
+R,R,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+R,R,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,_ObserveReceiverGain,scanner_records,,0.0
+R,R,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+R,R,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,_pdd_rx_mask,scanner_records,,8.0
+R,R,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,_pdd_tx_mask,scanner_records,,8.0
+R,R,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,_pts_mask,scanner_records,,13.0
+R,R,adjacent,experiments/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,_use_pdd,scanner_records,,0.0
+R,R,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,SMY,protocol,0.0305406,0.0343582
+R,R,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,gp_init_var,protocol,-1000.0,-1125.0
+R,R,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,B0GradientDelay,scanner_records,,0.0
+R,R,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,RxDelay,scanner_records,,0.0
+R,R,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,TxDelay,scanner_records,,0.0
+R,R,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,XGradientDelay,scanner_records,,0.0
+R,R,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,YGradientDelay,scanner_records,,0.0
+R,R,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,ZGradientDelay,scanner_records,,0.0
+R,R,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+R,R,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,_ObserveReceiverGain,scanner_records,,0.0
+R,R,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+R,R,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,_pdd_rx_mask,scanner_records,,8.0
+R,R,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,_pdd_tx_mask,scanner_records,,8.0
+R,R,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,_pts_mask,scanner_records,,13.0
+R,R,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testR/FSE-DWI_10-12-2026_v1912_testR.ppr,_use_pdd,scanner_records,,0.0
+R,R,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr,SMY,protocol,0.0305406,0.0343582
+R,R,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr,VIEWS_PER_SEGMENT,protocol,8.0,9.0
+R,R,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr,gp_init_var,protocol,-1000.0,-1125.0
+R,R,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr,nav_on,protocol,1.0,2.0
+R,R,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr,no_views,protocol,136.0,153.0
+R,R,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr,B0GradientDelay,scanner_records,,0.0
+R,R,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr,RxDelay,scanner_records,,0.0
+R,R,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr,TxDelay,scanner_records,,0.0
+R,R,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr,XGradientDelay,scanner_records,,0.0
+R,R,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr,YGradientDelay,scanner_records,,0.0
+R,R,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr,ZGradientDelay,scanner_records,,0.0
+R,R,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+R,R,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr,_ObserveReceiverGain,scanner_records,,0.0
+R,R,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+R,R,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr,_pdd_rx_mask,scanner_records,,8.0
+R,R,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr,_pdd_tx_mask,scanner_records,,8.0
+R,R,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr,_pts_mask,scanner_records,,13.0
+R,R,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testRR/FSE-DWI_10-12-2026_v1912_testRR.ppr,_use_pdd,scanner_records,,0.0
+epi0,EPI-test0,adjacent,experiments/EPI-DWI_10-12-2026_test0/EPI-DWI_10-12-2026_test0.ppr,te,protocol,32.0,42.0
+epi0,EPI-test0,adjacent,experiments/EPI-DWI_10-12-2026_test0/EPI-DWI_10-12-2026_test0.ppr,B0GradientDelay,scanner_records,,0.0
+epi0,EPI-test0,adjacent,experiments/EPI-DWI_10-12-2026_test0/EPI-DWI_10-12-2026_test0.ppr,RxDelay,scanner_records,,0.0
+epi0,EPI-test0,adjacent,experiments/EPI-DWI_10-12-2026_test0/EPI-DWI_10-12-2026_test0.ppr,TxDelay,scanner_records,,0.0
+epi0,EPI-test0,adjacent,experiments/EPI-DWI_10-12-2026_test0/EPI-DWI_10-12-2026_test0.ppr,XGradientDelay,scanner_records,,0.0
+epi0,EPI-test0,adjacent,experiments/EPI-DWI_10-12-2026_test0/EPI-DWI_10-12-2026_test0.ppr,YGradientDelay,scanner_records,,0.0
+epi0,EPI-test0,adjacent,experiments/EPI-DWI_10-12-2026_test0/EPI-DWI_10-12-2026_test0.ppr,ZGradientDelay,scanner_records,,0.0
+epi0,EPI-test0,adjacent,experiments/EPI-DWI_10-12-2026_test0/EPI-DWI_10-12-2026_test0.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+epi0,EPI-test0,adjacent,experiments/EPI-DWI_10-12-2026_test0/EPI-DWI_10-12-2026_test0.ppr,_ObserveReceiverGain,scanner_records,,0.0
+epi0,EPI-test0,adjacent,experiments/EPI-DWI_10-12-2026_test0/EPI-DWI_10-12-2026_test0.ppr,_ObserveTransmitGain,scanner_records,,-128.0
+epi0,EPI-test0,adjacent,experiments/EPI-DWI_10-12-2026_test0/EPI-DWI_10-12-2026_test0.ppr,_pdd_rx_mask,scanner_records,,8.0
+epi0,EPI-test0,adjacent,experiments/EPI-DWI_10-12-2026_test0/EPI-DWI_10-12-2026_test0.ppr,_pdd_tx_mask,scanner_records,,8.0
+epi0,EPI-test0,adjacent,experiments/EPI-DWI_10-12-2026_test0/EPI-DWI_10-12-2026_test0.ppr,_pts_mask,scanner_records,,13.0
+epi0,EPI-test0,adjacent,experiments/EPI-DWI_10-12-2026_test0/EPI-DWI_10-12-2026_test0.ppr,_use_pdd,scanner_records,,0.0
+iA,iA,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoA/FSE-DWI_10-12-2026_v183_testA.ppr,B0GradientDelay,scanner_records,,0.0
+iA,iA,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoA/FSE-DWI_10-12-2026_v183_testA.ppr,RxDelay,scanner_records,,0.0
+iA,iA,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoA/FSE-DWI_10-12-2026_v183_testA.ppr,TxDelay,scanner_records,,0.0
+iA,iA,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoA/FSE-DWI_10-12-2026_v183_testA.ppr,XGradientDelay,scanner_records,,0.0
+iA,iA,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoA/FSE-DWI_10-12-2026_v183_testA.ppr,YGradientDelay,scanner_records,,0.0
+iA,iA,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoA/FSE-DWI_10-12-2026_v183_testA.ppr,ZGradientDelay,scanner_records,,0.0
+iA,iA,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoA/FSE-DWI_10-12-2026_v183_testA.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iA,iA,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoA/FSE-DWI_10-12-2026_v183_testA.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iA,iA,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoA/FSE-DWI_10-12-2026_v183_testA.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iA,iA,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoA/FSE-DWI_10-12-2026_v183_testA.ppr,_pdd_rx_mask,scanner_records,,8.0
+iA,iA,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoA/FSE-DWI_10-12-2026_v183_testA.ppr,_pdd_tx_mask,scanner_records,,8.0
+iA,iA,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoA/FSE-DWI_10-12-2026_v183_testA.ppr,_pts_mask,scanner_records,,13.0
+iA,iA,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoA/FSE-DWI_10-12-2026_v183_testA.ppr,_use_pdd,scanner_records,,0.0
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,FOV_OFFSETS,protocol,"[3.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8]","[7.0, 0.0, 0.0, -5.2, 0.0, 0.0, -4.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8, 0.0, 0.0, 4.0, 0.0, 0.0, 5.2]"
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,FOV_PHASE_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,FOV_READ_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,FOV_SLICE_OFF,protocol,"[3.0, -1120.0, 0.0, 1120.0]","[7.0, -2080.0, -1600.0, -1120.0, 0.0, 1120.0, 1600.0, 2080.0]"
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,MULTI_ORIENTATION,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,NO_SLICES,protocol,3.0,7.0
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,VIEWS_PER_SEGMENT,protocol,9.0,8.0
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,X_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,Y_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,Z_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,acq_b,protocol,"[10.0, 1000.0, 1000.0, 1000.0]","[10.0, 1000.0, 1000.0, 1000.0, 3000.0, 3000.0, 3000.0, 6000.0, 6000.0, 6000.0]"
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,acq_x,protocol,"[1000.0, 1000.0, 0.0, 0.0]","[1000.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0]"
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,acq_y,protocol,"[0.0, 0.0, 1000.0, 0.0]","[0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0]"
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,acq_z,protocol,"[0.0, 0.0, 0.0, 1000.0]","[0.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0]"
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,nav_on,protocol,2.0,1.0
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,no_diff_acq,protocol,4.0,10.0
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,no_experiments,protocol,4.0,10.0
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,no_views,protocol,153.0,136.0
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,slice_offset,protocol,"[2996.0, 2.8]","[1284.0, 1.2]"
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,B0GradientDelay,scanner_records,,0.0
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,RxDelay,scanner_records,,0.0
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,TxDelay,scanner_records,,0.0
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,XGradientDelay,scanner_records,,0.0
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,YGradientDelay,scanner_records,,0.0
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,ZGradientDelay,scanner_records,,0.0
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_pdd_rx_mask,scanner_records,,8.0
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_pdd_tx_mask,scanner_records,,8.0
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_pts_mask,scanner_records,,13.0
+iA,iA,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_use_pdd,scanner_records,,0.0
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,FOV_OFFSETS,protocol,"[3.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8]","[7.0, 0.0, 0.0, -5.2, 0.0, 0.0, -4.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8, 0.0, 0.0, 4.0, 0.0, 0.0, 5.2]"
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,FOV_PHASE_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,FOV_READ_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,FOV_SLICE_OFF,protocol,"[3.0, -1120.0, 0.0, 1120.0]","[7.0, -2080.0, -1600.0, -1120.0, 0.0, 1120.0, 1600.0, 2080.0]"
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,MULTI_ORIENTATION,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,NO_SLICES,protocol,3.0,7.0
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,X_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,Y_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,Z_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,acq_b,protocol,"[10.0, 1000.0, 1000.0, 1000.0]","[10.0, 1000.0, 1000.0, 1000.0, 3000.0, 3000.0, 3000.0, 6000.0, 6000.0, 6000.0]"
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,acq_x,protocol,"[1000.0, 1000.0, 0.0, 0.0]","[1000.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0]"
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,acq_y,protocol,"[0.0, 0.0, 1000.0, 0.0]","[0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0]"
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,acq_z,protocol,"[0.0, 0.0, 0.0, 1000.0]","[0.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0]"
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,no_diff_acq,protocol,4.0,10.0
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,no_experiments,protocol,4.0,10.0
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,slice_offset,protocol,"[2996.0, 2.8]","[1284.0, 1.2]"
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,B0GradientDelay,scanner_records,,0.0
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,RxDelay,scanner_records,,0.0
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,TxDelay,scanner_records,,0.0
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,XGradientDelay,scanner_records,,0.0
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,YGradientDelay,scanner_records,,0.0
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,ZGradientDelay,scanner_records,,0.0
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_pdd_rx_mask,scanner_records,,8.0
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_pdd_tx_mask,scanner_records,,8.0
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_pts_mask,scanner_records,,13.0
+iA,iA,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_use_pdd,scanner_records,,0.0
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,FOV_OFFSETS,protocol,"[1.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, -5.2, 0.0, 0.0, -4.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8, 0.0, 0.0, 4.0, 0.0, 0.0, 5.2]"
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,FOV_PHASE_OFF,protocol,"[1.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,FOV_READ_OFF,protocol,"[1.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,FOV_SLICE_OFF,protocol,"[1.0, 0.0]","[7.0, -2080.0, -1600.0, -1120.0, 0.0, 1120.0, 1600.0, 2080.0]"
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,MULTI_ORIENTATION,protocol,"[1.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,NO_SLICES,protocol,1.0,7.0
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,SMX,protocol,0.0224563,0.0449126
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,X_ANGLE,protocol,"[1.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,Y_ANGLE,protocol,"[1.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,Z_ANGLE,protocol,"[1.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,acq_b,protocol,[10.0],"[10.0, 1000.0, 1000.0, 1000.0, 3000.0, 3000.0, 3000.0, 6000.0, 6000.0, 6000.0]"
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,acq_x,protocol,[1000.0],"[1000.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0]"
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,acq_y,protocol,[0.0],"[0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0]"
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,acq_z,protocol,[0.0],"[0.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0]"
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,esp,protocol,14.0,11.0
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,gr_var,protocol,-735.0,-1471.0
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,no_diff_acq,protocol,1.0,10.0
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,no_experiments,protocol,1.0,10.0
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,sample_period,protocol,"[500.0, 12.0, 20.0, 50.0]","[250.0, 17.0, 40.0, 25.0]"
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,B0GradientDelay,scanner_records,,0.0
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,RxDelay,scanner_records,,0.0
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,TxDelay,scanner_records,,0.0
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,XGradientDelay,scanner_records,,0.0
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,YGradientDelay,scanner_records,,0.0
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,ZGradientDelay,scanner_records,,0.0
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_pdd_rx_mask,scanner_records,,8.0
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_pdd_tx_mask,scanner_records,,8.0
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_pts_mask,scanner_records,,13.0
+iA,iA,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testA/FSE-DWI_10-12-2026_v183_testA.ppr,_use_pdd,scanner_records,,0.0
+iB,iB,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoB/FSE-DWI_10-12-2026_v1912_invivoB.ppr,B0GradientDelay,scanner_records,,0.0
+iB,iB,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoB/FSE-DWI_10-12-2026_v1912_invivoB.ppr,RxDelay,scanner_records,,0.0
+iB,iB,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoB/FSE-DWI_10-12-2026_v1912_invivoB.ppr,TxDelay,scanner_records,,0.0
+iB,iB,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoB/FSE-DWI_10-12-2026_v1912_invivoB.ppr,XGradientDelay,scanner_records,,0.0
+iB,iB,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoB/FSE-DWI_10-12-2026_v1912_invivoB.ppr,YGradientDelay,scanner_records,,0.0
+iB,iB,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoB/FSE-DWI_10-12-2026_v1912_invivoB.ppr,ZGradientDelay,scanner_records,,0.0
+iB,iB,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoB/FSE-DWI_10-12-2026_v1912_invivoB.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iB,iB,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoB/FSE-DWI_10-12-2026_v1912_invivoB.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iB,iB,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoB/FSE-DWI_10-12-2026_v1912_invivoB.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iB,iB,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoB/FSE-DWI_10-12-2026_v1912_invivoB.ppr,_pdd_rx_mask,scanner_records,,8.0
+iB,iB,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoB/FSE-DWI_10-12-2026_v1912_invivoB.ppr,_pdd_tx_mask,scanner_records,,8.0
+iB,iB,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoB/FSE-DWI_10-12-2026_v1912_invivoB.ppr,_pts_mask,scanner_records,,13.0
+iB,iB,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoB/FSE-DWI_10-12-2026_v1912_invivoB.ppr,_use_pdd,scanner_records,,0.0
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,VIEWS_PER_SEGMENT,protocol,9.0,8.0
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,acq_b,protocol,"[10.0, 1000.0, 1000.0, 1000.0]","[10.0, 1000.0, 1000.0, 1000.0, 3000.0, 3000.0, 3000.0, 6000.0, 6000.0, 6000.0]"
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,acq_x,protocol,"[1000.0, 1000.0, 0.0, 0.0]","[1000.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0]"
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,acq_y,protocol,"[0.0, 0.0, 1000.0, 0.0]","[0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0]"
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,acq_z,protocol,"[0.0, 0.0, 0.0, 1000.0]","[0.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0]"
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,nav_on,protocol,2.0,1.0
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,no_diff_acq,protocol,4.0,10.0
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,no_experiments,protocol,4.0,10.0
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,no_views,protocol,153.0,136.0
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,B0GradientDelay,scanner_records,,0.0
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,RxDelay,scanner_records,,0.0
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,TxDelay,scanner_records,,0.0
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,XGradientDelay,scanner_records,,0.0
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,YGradientDelay,scanner_records,,0.0
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,ZGradientDelay,scanner_records,,0.0
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,_pdd_rx_mask,scanner_records,,8.0
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,_pdd_tx_mask,scanner_records,,8.0
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,_pts_mask,scanner_records,,13.0
+iB,iB,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,_use_pdd,scanner_records,,0.0
+iB,iB,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,acq_b,protocol,"[10.0, 1000.0, 1000.0, 1000.0]","[10.0, 1000.0, 1000.0, 1000.0, 3000.0, 3000.0, 3000.0, 6000.0, 6000.0, 6000.0]"
+iB,iB,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,acq_x,protocol,"[1000.0, 1000.0, 0.0, 0.0]","[1000.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0]"
+iB,iB,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,acq_y,protocol,"[0.0, 0.0, 1000.0, 0.0]","[0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0]"
+iB,iB,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,acq_z,protocol,"[0.0, 0.0, 0.0, 1000.0]","[0.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0, 0.0, 0.0, 1000.0]"
+iB,iB,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,no_diff_acq,protocol,4.0,10.0
+iB,iB,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,no_experiments,protocol,4.0,10.0
+iB,iB,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,B0GradientDelay,scanner_records,,0.0
+iB,iB,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,RxDelay,scanner_records,,0.0
+iB,iB,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,TxDelay,scanner_records,,0.0
+iB,iB,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,XGradientDelay,scanner_records,,0.0
+iB,iB,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,YGradientDelay,scanner_records,,0.0
+iB,iB,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,ZGradientDelay,scanner_records,,0.0
+iB,iB,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iB,iB,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iB,iB,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iB,iB,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,_pdd_rx_mask,scanner_records,,8.0
+iB,iB,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,_pdd_tx_mask,scanner_records,,8.0
+iB,iB,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,_pts_mask,scanner_records,,13.0
+iB,iB,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,_use_pdd,scanner_records,,0.0
+iC,iC,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoC/FSE-DWI_10-12-2026_v1912_invivoC.ppr,B0GradientDelay,scanner_records,,0.0
+iC,iC,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoC/FSE-DWI_10-12-2026_v1912_invivoC.ppr,RxDelay,scanner_records,,0.0
+iC,iC,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoC/FSE-DWI_10-12-2026_v1912_invivoC.ppr,TxDelay,scanner_records,,0.0
+iC,iC,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoC/FSE-DWI_10-12-2026_v1912_invivoC.ppr,XGradientDelay,scanner_records,,0.0
+iC,iC,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoC/FSE-DWI_10-12-2026_v1912_invivoC.ppr,YGradientDelay,scanner_records,,0.0
+iC,iC,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoC/FSE-DWI_10-12-2026_v1912_invivoC.ppr,ZGradientDelay,scanner_records,,0.0
+iC,iC,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoC/FSE-DWI_10-12-2026_v1912_invivoC.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iC,iC,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoC/FSE-DWI_10-12-2026_v1912_invivoC.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iC,iC,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoC/FSE-DWI_10-12-2026_v1912_invivoC.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iC,iC,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoC/FSE-DWI_10-12-2026_v1912_invivoC.ppr,_pdd_rx_mask,scanner_records,,8.0
+iC,iC,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoC/FSE-DWI_10-12-2026_v1912_invivoC.ppr,_pdd_tx_mask,scanner_records,,8.0
+iC,iC,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoC/FSE-DWI_10-12-2026_v1912_invivoC.ppr,_pts_mask,scanner_records,,13.0
+iC,iC,adjacent,experiments/FSE-DWI_10-12-2026_v1912_invivoC/FSE-DWI_10-12-2026_v1912_invivoC.ppr,_use_pdd,scanner_records,,0.0
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,FOV_OFFSETS,protocol,"[3.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8]","[1.0, 0.0, 0.0, 0.0]"
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,FOV_PHASE_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[1.0, 0.0]"
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,FOV_READ_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[1.0, 0.0]"
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,FOV_SLICE_OFF,protocol,"[3.0, -1120.0, 0.0, 1120.0]","[1.0, 0.0]"
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,MULTI_ORIENTATION,protocol,"[3.0, 0.0, 0.0, 0.0]","[1.0, 0.0]"
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,NO_SLICES,protocol,3.0,1.0
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,VIEWS_PER_SEGMENT,protocol,9.0,8.0
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,X_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[1.0, 0.0]"
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,Y_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[1.0, 0.0]"
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,Z_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[1.0, 0.0]"
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,acq_b,protocol,"[10.0, 1000.0, 1000.0, 1000.0]","[10.0, 6000.0, 6000.0, 6000.0]"
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,nav_on,protocol,2.0,1.0
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,no_views,protocol,153.0,136.0
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,B0GradientDelay,scanner_records,,0.0
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,RxDelay,scanner_records,,0.0
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,TxDelay,scanner_records,,0.0
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,XGradientDelay,scanner_records,,0.0
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,YGradientDelay,scanner_records,,0.0
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,ZGradientDelay,scanner_records,,0.0
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,_pdd_rx_mask,scanner_records,,8.0
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,_pdd_tx_mask,scanner_records,,8.0
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,_pts_mask,scanner_records,,13.0
+iC,iC,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testV/FSE-DWI_10-12-2026_v1912_testV.ppr,_use_pdd,scanner_records,,0.0
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,FOV_OFFSETS,protocol,"[3.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8]","[1.0, 0.0, 0.0, 0.0]"
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,FOV_PHASE_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[1.0, 0.0]"
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,FOV_READ_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[1.0, 0.0]"
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,FOV_SLICE_OFF,protocol,"[3.0, -1120.0, 0.0, 1120.0]","[1.0, 0.0]"
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,MULTI_ORIENTATION,protocol,"[3.0, 0.0, 0.0, 0.0]","[1.0, 0.0]"
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,NO_SLICES,protocol,3.0,1.0
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,X_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[1.0, 0.0]"
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,Y_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[1.0, 0.0]"
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,Z_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[1.0, 0.0]"
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,acq_b,protocol,"[10.0, 1000.0, 1000.0, 1000.0]","[10.0, 6000.0, 6000.0, 6000.0]"
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,B0GradientDelay,scanner_records,,0.0
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,RxDelay,scanner_records,,0.0
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,TxDelay,scanner_records,,0.0
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,XGradientDelay,scanner_records,,0.0
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,YGradientDelay,scanner_records,,0.0
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,ZGradientDelay,scanner_records,,0.0
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,_pdd_rx_mask,scanner_records,,8.0
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,_pdd_tx_mask,scanner_records,,8.0
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,_pts_mask,scanner_records,,13.0
+iC,iC,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v1912_testVV/FSE-DWI_10-12-2026_v1912_testVV.ppr,_use_pdd,scanner_records,,0.0
+iD,iD,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoD/FSE-DWI_10-12-2026_v183_testD.ppr,B0GradientDelay,scanner_records,,0.0
+iD,iD,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoD/FSE-DWI_10-12-2026_v183_testD.ppr,RxDelay,scanner_records,,0.0
+iD,iD,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoD/FSE-DWI_10-12-2026_v183_testD.ppr,TxDelay,scanner_records,,0.0
+iD,iD,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoD/FSE-DWI_10-12-2026_v183_testD.ppr,XGradientDelay,scanner_records,,0.0
+iD,iD,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoD/FSE-DWI_10-12-2026_v183_testD.ppr,YGradientDelay,scanner_records,,0.0
+iD,iD,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoD/FSE-DWI_10-12-2026_v183_testD.ppr,ZGradientDelay,scanner_records,,0.0
+iD,iD,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoD/FSE-DWI_10-12-2026_v183_testD.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iD,iD,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoD/FSE-DWI_10-12-2026_v183_testD.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iD,iD,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoD/FSE-DWI_10-12-2026_v183_testD.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iD,iD,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoD/FSE-DWI_10-12-2026_v183_testD.ppr,_pdd_rx_mask,scanner_records,,8.0
+iD,iD,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoD/FSE-DWI_10-12-2026_v183_testD.ppr,_pdd_tx_mask,scanner_records,,8.0
+iD,iD,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoD/FSE-DWI_10-12-2026_v183_testD.ppr,_pts_mask,scanner_records,,13.0
+iD,iD,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoD/FSE-DWI_10-12-2026_v183_testD.ppr,_use_pdd,scanner_records,,0.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,FOV_OFFSETS,protocol,"[3.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8]","[7.0, 0.0, 0.0, -5.2, 0.0, 0.0, -4.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8, 0.0, 0.0, 4.0, 0.0, 0.0, 5.2]"
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,FOV_PHASE_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,FOV_READ_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,FOV_SLICE_OFF,protocol,"[3.0, -1120.0, 0.0, 1120.0]","[7.0, -2080.0, -1600.0, -1120.0, 0.0, 1120.0, 1600.0, 2080.0]"
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,MULTI_ORIENTATION,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,NO_SLICES,protocol,3.0,7.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,VIEWS_PER_SEGMENT,protocol,9.0,8.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,X_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,Y_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,Z_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,acq_b,protocol,"[10.0, 1000.0, 1000.0, 1000.0]","[10.0, 6000.0]"
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,acq_x,protocol,"[1000.0, 1000.0, 0.0, 0.0]","[0.0, 0.0]"
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,acq_y,protocol,"[0.0, 0.0, 1000.0, 0.0]","[1000.0, 1000.0]"
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,acq_z,protocol,"[0.0, 0.0, 0.0, 1000.0]","[0.0, 0.0]"
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,nav_on,protocol,2.0,1.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,no_diff_acq,protocol,4.0,2.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,no_experiments,protocol,4.0,2.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,no_views,protocol,153.0,136.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,slice_offset,protocol,"[2996.0, 2.8]","[1284.0, 1.2]"
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,tr,protocol,2000.0,3000.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,B0GradientDelay,scanner_records,,0.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,RxDelay,scanner_records,,0.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,TxDelay,scanner_records,,0.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,XGradientDelay,scanner_records,,0.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,YGradientDelay,scanner_records,,0.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,ZGradientDelay,scanner_records,,0.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_pdd_rx_mask,scanner_records,,8.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_pdd_tx_mask,scanner_records,,8.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_pts_mask,scanner_records,,13.0
+iD,iD,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_use_pdd,scanner_records,,0.0
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,FOV_OFFSETS,protocol,"[3.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8]","[7.0, 0.0, 0.0, -5.2, 0.0, 0.0, -4.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8, 0.0, 0.0, 4.0, 0.0, 0.0, 5.2]"
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,FOV_PHASE_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,FOV_READ_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,FOV_SLICE_OFF,protocol,"[3.0, -1120.0, 0.0, 1120.0]","[7.0, -2080.0, -1600.0, -1120.0, 0.0, 1120.0, 1600.0, 2080.0]"
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,MULTI_ORIENTATION,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,NO_SLICES,protocol,3.0,7.0
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,X_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,Y_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,Z_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,acq_b,protocol,"[10.0, 1000.0, 1000.0, 1000.0]","[10.0, 6000.0]"
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,acq_x,protocol,"[1000.0, 1000.0, 0.0, 0.0]","[0.0, 0.0]"
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,acq_y,protocol,"[0.0, 0.0, 1000.0, 0.0]","[1000.0, 1000.0]"
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,acq_z,protocol,"[0.0, 0.0, 0.0, 1000.0]","[0.0, 0.0]"
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,no_diff_acq,protocol,4.0,2.0
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,no_experiments,protocol,4.0,2.0
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,slice_offset,protocol,"[2996.0, 2.8]","[1284.0, 1.2]"
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,tr,protocol,2000.0,3000.0
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,B0GradientDelay,scanner_records,,0.0
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,RxDelay,scanner_records,,0.0
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,TxDelay,scanner_records,,0.0
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,XGradientDelay,scanner_records,,0.0
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,YGradientDelay,scanner_records,,0.0
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,ZGradientDelay,scanner_records,,0.0
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_pdd_rx_mask,scanner_records,,8.0
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_pdd_tx_mask,scanner_records,,8.0
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_pts_mask,scanner_records,,13.0
+iD,iD,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_use_pdd,scanner_records,,0.0
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,FOV_OFFSETS,protocol,"[3.0, 0.0, 0.0, -1.2, 0.0, 0.0, 0.0, 0.0, 0.0, 1.2]","[7.0, 0.0, 0.0, -5.2, 0.0, 0.0, -4.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8, 0.0, 0.0, 4.0, 0.0, 0.0, 5.2]"
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,FOV_PHASE_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,FOV_READ_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,FOV_SLICE_OFF,protocol,"[3.0, -480.0, 0.0, 480.0]","[7.0, -2080.0, -1600.0, -1120.0, 0.0, 1120.0, 1600.0, 2080.0]"
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,MULTI_ORIENTATION,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,NO_SLICES,protocol,3.0,7.0
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,X_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,Y_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,Z_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,acq_b,protocol,[10.0],"[10.0, 6000.0]"
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,acq_x,protocol,[1000.0],"[0.0, 0.0]"
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,acq_y,protocol,[0.0],"[1000.0, 1000.0]"
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,acq_z,protocol,[0.0],"[0.0, 0.0]"
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,no_diff_acq,protocol,1.0,2.0
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,no_experiments,protocol,1.0,2.0
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,tr,protocol,2000.0,3000.0
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,B0GradientDelay,scanner_records,,0.0
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,RxDelay,scanner_records,,0.0
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,TxDelay,scanner_records,,0.0
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,XGradientDelay,scanner_records,,0.0
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,YGradientDelay,scanner_records,,0.0
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,ZGradientDelay,scanner_records,,0.0
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_pdd_rx_mask,scanner_records,,8.0
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_pdd_tx_mask,scanner_records,,8.0
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_pts_mask,scanner_records,,13.0
+iD,iD,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testD/FSE-DWI_10-12-2026_v183_testD.ppr,_use_pdd,scanner_records,,0.0
+iE,iE,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoE/FSE-DWI_10-12-2026_v183_testE.ppr,B0GradientDelay,scanner_records,,0.0
+iE,iE,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoE/FSE-DWI_10-12-2026_v183_testE.ppr,RxDelay,scanner_records,,0.0
+iE,iE,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoE/FSE-DWI_10-12-2026_v183_testE.ppr,TxDelay,scanner_records,,0.0
+iE,iE,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoE/FSE-DWI_10-12-2026_v183_testE.ppr,XGradientDelay,scanner_records,,0.0
+iE,iE,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoE/FSE-DWI_10-12-2026_v183_testE.ppr,YGradientDelay,scanner_records,,0.0
+iE,iE,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoE/FSE-DWI_10-12-2026_v183_testE.ppr,ZGradientDelay,scanner_records,,0.0
+iE,iE,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoE/FSE-DWI_10-12-2026_v183_testE.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iE,iE,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoE/FSE-DWI_10-12-2026_v183_testE.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iE,iE,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoE/FSE-DWI_10-12-2026_v183_testE.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iE,iE,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoE/FSE-DWI_10-12-2026_v183_testE.ppr,_pdd_rx_mask,scanner_records,,8.0
+iE,iE,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoE/FSE-DWI_10-12-2026_v183_testE.ppr,_pdd_tx_mask,scanner_records,,8.0
+iE,iE,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoE/FSE-DWI_10-12-2026_v183_testE.ppr,_pts_mask,scanner_records,,13.0
+iE,iE,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoE/FSE-DWI_10-12-2026_v183_testE.ppr,_use_pdd,scanner_records,,0.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,FOV_OFFSETS,protocol,"[3.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8]","[7.0, 0.0, 0.0, -5.2, 0.0, 0.0, -4.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8, 0.0, 0.0, 4.0, 0.0, 0.0, 5.2]"
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,FOV_PHASE_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,FOV_READ_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,FOV_SLICE_OFF,protocol,"[3.0, -1120.0, 0.0, 1120.0]","[7.0, -1040.0, -800.0, -560.0, 0.0, 560.0, 800.0, 1040.0]"
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,MULTI_ORIENTATION,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,NO_SLICES,protocol,3.0,7.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,VIEWS_PER_SEGMENT,protocol,9.0,8.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,X_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,Y_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,Z_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,acq_b,protocol,"[10.0, 1000.0, 1000.0, 1000.0]","[10.0, 6000.0]"
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,acq_x,protocol,"[1000.0, 1000.0, 0.0, 0.0]","[0.0, 0.0]"
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,acq_y,protocol,"[0.0, 0.0, 1000.0, 0.0]","[1000.0, 1000.0]"
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,acq_z,protocol,"[0.0, 0.0, 0.0, 1000.0]","[0.0, 0.0]"
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,big_delta,protocol,30000.0,40000.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,gs_var,protocol,"[-1377.0, 1.0]","[-688.0, 2.0]"
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,nav_on,protocol,2.0,1.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,no_diff_acq,protocol,4.0,2.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,no_experiments,protocol,4.0,2.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,no_views,protocol,153.0,136.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,slice_offset,protocol,"[2996.0, 2.8]","[642.0, 1.2]"
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,te,protocol,44.0,54.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,tr,protocol,2000.0,3000.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,B0GradientDelay,scanner_records,,0.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,RxDelay,scanner_records,,0.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,TxDelay,scanner_records,,0.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,XGradientDelay,scanner_records,,0.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,YGradientDelay,scanner_records,,0.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,ZGradientDelay,scanner_records,,0.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_pdd_rx_mask,scanner_records,,8.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_pdd_tx_mask,scanner_records,,8.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_pts_mask,scanner_records,,13.0
+iE,iE,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_use_pdd,scanner_records,,0.0
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,FOV_OFFSETS,protocol,"[3.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8]","[7.0, 0.0, 0.0, -5.2, 0.0, 0.0, -4.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8, 0.0, 0.0, 4.0, 0.0, 0.0, 5.2]"
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,FOV_PHASE_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,FOV_READ_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,FOV_SLICE_OFF,protocol,"[3.0, -1120.0, 0.0, 1120.0]","[7.0, -1040.0, -800.0, -560.0, 0.0, 560.0, 800.0, 1040.0]"
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,MULTI_ORIENTATION,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,NO_SLICES,protocol,3.0,7.0
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,X_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,Y_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,Z_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,acq_b,protocol,"[10.0, 1000.0, 1000.0, 1000.0]","[10.0, 6000.0]"
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,acq_x,protocol,"[1000.0, 1000.0, 0.0, 0.0]","[0.0, 0.0]"
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,acq_y,protocol,"[0.0, 0.0, 1000.0, 0.0]","[1000.0, 1000.0]"
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,acq_z,protocol,"[0.0, 0.0, 0.0, 1000.0]","[0.0, 0.0]"
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,big_delta,protocol,30000.0,40000.0
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,gs_var,protocol,"[-1377.0, 1.0]","[-688.0, 2.0]"
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,no_diff_acq,protocol,4.0,2.0
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,no_experiments,protocol,4.0,2.0
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,slice_offset,protocol,"[2996.0, 2.8]","[642.0, 1.2]"
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,te,protocol,44.0,54.0
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,tr,protocol,2000.0,3000.0
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,B0GradientDelay,scanner_records,,0.0
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,RxDelay,scanner_records,,0.0
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,TxDelay,scanner_records,,0.0
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,XGradientDelay,scanner_records,,0.0
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,YGradientDelay,scanner_records,,0.0
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,ZGradientDelay,scanner_records,,0.0
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_pdd_rx_mask,scanner_records,,8.0
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_pdd_tx_mask,scanner_records,,8.0
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_pts_mask,scanner_records,,13.0
+iE,iE,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_use_pdd,scanner_records,,0.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,FOV_OFFSETS,protocol,"[3.0, 0.0, 0.0, -1.2, 0.0, 0.0, 0.0, 0.0, 0.0, 1.2]","[7.0, 0.0, 0.0, -5.2, 0.0, 0.0, -4.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8, 0.0, 0.0, 4.0, 0.0, 0.0, 5.2]"
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,FOV_PHASE_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,FOV_READ_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,FOV_SLICE_OFF,protocol,"[3.0, -480.0, 0.0, 480.0]","[7.0, -1040.0, -800.0, -560.0, 0.0, 560.0, 800.0, 1040.0]"
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,MULTI_ORIENTATION,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,NO_SLICES,protocol,3.0,7.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,X_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,Y_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,Z_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,acq_b,protocol,[10.0],"[10.0, 6000.0]"
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,acq_x,protocol,[1000.0],"[0.0, 0.0]"
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,acq_y,protocol,[0.0],"[1000.0, 1000.0]"
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,acq_z,protocol,[0.0],"[0.0, 0.0]"
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,big_delta,protocol,30000.0,40000.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,gs_var,protocol,"[-1377.0, 1.0]","[-688.0, 2.0]"
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,no_diff_acq,protocol,1.0,2.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,no_experiments,protocol,1.0,2.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,slice_offset,protocol,"[1284.0, 1.2]","[642.0, 1.2]"
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,te,protocol,44.0,54.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,tr,protocol,2000.0,3000.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,v183_phmode,protocol,1.0,0.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,B0GradientDelay,scanner_records,,0.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,RxDelay,scanner_records,,0.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,TxDelay,scanner_records,,0.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,XGradientDelay,scanner_records,,0.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,YGradientDelay,scanner_records,,0.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,ZGradientDelay,scanner_records,,0.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_pdd_rx_mask,scanner_records,,8.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_pdd_tx_mask,scanner_records,,8.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_pts_mask,scanner_records,,13.0
+iE,iE,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testE/FSE-DWI_10-12-2026_v183_testE.ppr,_use_pdd,scanner_records,,0.0
+iF,iF,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoF/FSE-DWI_10-12-2026_v183_testF.ppr,B0GradientDelay,scanner_records,,0.0
+iF,iF,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoF/FSE-DWI_10-12-2026_v183_testF.ppr,RxDelay,scanner_records,,0.0
+iF,iF,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoF/FSE-DWI_10-12-2026_v183_testF.ppr,TxDelay,scanner_records,,0.0
+iF,iF,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoF/FSE-DWI_10-12-2026_v183_testF.ppr,XGradientDelay,scanner_records,,0.0
+iF,iF,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoF/FSE-DWI_10-12-2026_v183_testF.ppr,YGradientDelay,scanner_records,,0.0
+iF,iF,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoF/FSE-DWI_10-12-2026_v183_testF.ppr,ZGradientDelay,scanner_records,,0.0
+iF,iF,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoF/FSE-DWI_10-12-2026_v183_testF.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iF,iF,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoF/FSE-DWI_10-12-2026_v183_testF.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iF,iF,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoF/FSE-DWI_10-12-2026_v183_testF.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iF,iF,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoF/FSE-DWI_10-12-2026_v183_testF.ppr,_pdd_rx_mask,scanner_records,,8.0
+iF,iF,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoF/FSE-DWI_10-12-2026_v183_testF.ppr,_pdd_tx_mask,scanner_records,,8.0
+iF,iF,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoF/FSE-DWI_10-12-2026_v183_testF.ppr,_pts_mask,scanner_records,,13.0
+iF,iF,adjacent,experiments/FSE-DWI_10-12-2026_v183_invivoF/FSE-DWI_10-12-2026_v183_testF.ppr,_use_pdd,scanner_records,,0.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,FOV_OFFSETS,protocol,"[3.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8]","[7.0, 0.0, 0.0, -5.2, 0.0, 0.0, -4.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8, 0.0, 0.0, 4.0, 0.0, 0.0, 5.2]"
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,FOV_PHASE_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,FOV_READ_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,FOV_SLICE_OFF,protocol,"[3.0, -1120.0, 0.0, 1120.0]","[7.0, -1040.0, -800.0, -560.0, 0.0, 560.0, 800.0, 1040.0]"
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,MULTI_ORIENTATION,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,NO_SLICES,protocol,3.0,7.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,SMY,protocol,0.0305406,0.0323371
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,VIEWS_PER_SEGMENT,protocol,9.0,16.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,X_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,Y_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,Z_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,acq_b,protocol,"[10.0, 1000.0, 1000.0, 1000.0]","[10.0, 6000.0]"
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,acq_x,protocol,"[1000.0, 1000.0, 0.0, 0.0]","[0.0, 0.0]"
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,acq_y,protocol,"[0.0, 0.0, 1000.0, 0.0]","[1000.0, 1000.0]"
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,acq_z,protocol,"[0.0, 0.0, 0.0, 1000.0]","[0.0, 0.0]"
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,big_delta,protocol,30000.0,40000.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,gp_init_var,protocol,-1000.0,-1059.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,gs_var,protocol,"[-1377.0, 1.0]","[-688.0, 2.0]"
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,nav_on,protocol,2.0,1.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,no_diff_acq,protocol,4.0,2.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,no_experiments,protocol,4.0,2.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,no_views,protocol,153.0,144.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,slice_offset,protocol,"[2996.0, 2.8]","[642.0, 1.2]"
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,te,protocol,44.0,54.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,tr,protocol,2000.0,3000.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,B0GradientDelay,scanner_records,,0.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,RxDelay,scanner_records,,0.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,TxDelay,scanner_records,,0.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,XGradientDelay,scanner_records,,0.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,YGradientDelay,scanner_records,,0.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,ZGradientDelay,scanner_records,,0.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_pdd_rx_mask,scanner_records,,8.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_pdd_tx_mask,scanner_records,,8.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_pts_mask,scanner_records,,13.0
+iF,iF,planned,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testU/FSE-DWI_10-12-2026_v183_testU.ppr,_use_pdd,scanner_records,,0.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,FOV_OFFSETS,protocol,"[3.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8]","[7.0, 0.0, 0.0, -5.2, 0.0, 0.0, -4.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8, 0.0, 0.0, 4.0, 0.0, 0.0, 5.2]"
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,FOV_PHASE_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,FOV_READ_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,FOV_SLICE_OFF,protocol,"[3.0, -1120.0, 0.0, 1120.0]","[7.0, -1040.0, -800.0, -560.0, 0.0, 560.0, 800.0, 1040.0]"
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,MULTI_ORIENTATION,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,NO_SLICES,protocol,3.0,7.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,SMY,protocol,0.0305406,0.0323371
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,VIEWS_PER_SEGMENT,protocol,8.0,16.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,X_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,Y_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,Z_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,acq_b,protocol,"[10.0, 1000.0, 1000.0, 1000.0]","[10.0, 6000.0]"
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,acq_x,protocol,"[1000.0, 1000.0, 0.0, 0.0]","[0.0, 0.0]"
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,acq_y,protocol,"[0.0, 0.0, 1000.0, 0.0]","[1000.0, 1000.0]"
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,acq_z,protocol,"[0.0, 0.0, 0.0, 1000.0]","[0.0, 0.0]"
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,big_delta,protocol,30000.0,40000.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,gp_init_var,protocol,-1000.0,-1059.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,gs_var,protocol,"[-1377.0, 1.0]","[-688.0, 2.0]"
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,no_diff_acq,protocol,4.0,2.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,no_experiments,protocol,4.0,2.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,no_views,protocol,136.0,144.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,slice_offset,protocol,"[2996.0, 2.8]","[642.0, 1.2]"
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,te,protocol,44.0,54.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,tr,protocol,2000.0,3000.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,B0GradientDelay,scanner_records,,0.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,RxDelay,scanner_records,,0.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,TxDelay,scanner_records,,0.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,XGradientDelay,scanner_records,,0.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,YGradientDelay,scanner_records,,0.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,ZGradientDelay,scanner_records,,0.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_pdd_rx_mask,scanner_records,,8.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_pdd_tx_mask,scanner_records,,8.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_pts_mask,scanner_records,,13.0
+iF,iF,planned_nav1_fallback,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testUU/FSE-DWI_10-12-2026_v183_testUU.ppr,_use_pdd,scanner_records,,0.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,FOV_OFFSETS,protocol,"[3.0, 0.0, 0.0, -1.2, 0.0, 0.0, 0.0, 0.0, 0.0, 1.2]","[7.0, 0.0, 0.0, -5.2, 0.0, 0.0, -4.0, 0.0, 0.0, -2.8, 0.0, 0.0, 0.0, 0.0, 0.0, 2.8, 0.0, 0.0, 4.0, 0.0, 0.0, 5.2]"
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,FOV_PHASE_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,FOV_READ_OFF,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,FOV_SLICE_OFF,protocol,"[3.0, -480.0, 0.0, 480.0]","[7.0, -1040.0, -800.0, -560.0, 0.0, 560.0, 800.0, 1040.0]"
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,MULTI_ORIENTATION,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,NO_SLICES,protocol,3.0,7.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,SMY,protocol,0.0305406,0.0323371
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,VIEWS_PER_SEGMENT,protocol,8.0,16.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,X_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,Y_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,Z_ANGLE,protocol,"[3.0, 0.0, 0.0, 0.0]","[7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,acq_b,protocol,[10.0],"[10.0, 6000.0]"
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,acq_x,protocol,[1000.0],"[0.0, 0.0]"
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,acq_y,protocol,[0.0],"[1000.0, 1000.0]"
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,acq_z,protocol,[0.0],"[0.0, 0.0]"
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,big_delta,protocol,30000.0,40000.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,gp_init_var,protocol,-1000.0,-1059.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,gs_var,protocol,"[-1377.0, 1.0]","[-688.0, 2.0]"
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,no_diff_acq,protocol,1.0,2.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,no_experiments,protocol,1.0,2.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,no_views,protocol,136.0,144.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,slice_offset,protocol,"[1284.0, 1.2]","[642.0, 1.2]"
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,te,protocol,44.0,54.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,tr,protocol,2000.0,3000.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,v183_phcal,protocol,530.0,0.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,v183_phmode,protocol,1.0,0.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,B0GradientDelay,scanner_records,,0.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,RxDelay,scanner_records,,0.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,TxDelay,scanner_records,,0.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,XGradientDelay,scanner_records,,0.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,YGradientDelay,scanner_records,,0.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,ZGradientDelay,scanner_records,,0.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_ObserveReceiverGain,scanner_records,,180.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_pdd_rx_mask,scanner_records,,8.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_pdd_tx_mask,scanner_records,,8.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_pts_mask,scanner_records,,13.0
+iF,iF,plan_named_in_adjacent_file,experiments/2026-10-12_exvivo_invivo_plan/FSE-DWI_10-12-2026_v183_testF/FSE-DWI_10-12-2026_v183_testF.ppr,_use_pdd,scanner_records,,0.0
+epiA,EPI-invivoA,adjacent,experiments/EPI-DWI_10-12-2026_invivoA/EPI-DWI_10-12-2026_test0.ppr,B0GradientDelay,scanner_records,,0.0
+epiA,EPI-invivoA,adjacent,experiments/EPI-DWI_10-12-2026_invivoA/EPI-DWI_10-12-2026_test0.ppr,RxDelay,scanner_records,,0.0
+epiA,EPI-invivoA,adjacent,experiments/EPI-DWI_10-12-2026_invivoA/EPI-DWI_10-12-2026_test0.ppr,TxDelay,scanner_records,,0.0
+epiA,EPI-invivoA,adjacent,experiments/EPI-DWI_10-12-2026_invivoA/EPI-DWI_10-12-2026_test0.ppr,XGradientDelay,scanner_records,,0.0
+epiA,EPI-invivoA,adjacent,experiments/EPI-DWI_10-12-2026_invivoA/EPI-DWI_10-12-2026_test0.ppr,YGradientDelay,scanner_records,,0.0
+epiA,EPI-invivoA,adjacent,experiments/EPI-DWI_10-12-2026_invivoA/EPI-DWI_10-12-2026_test0.ppr,ZGradientDelay,scanner_records,,0.0
+epiA,EPI-invivoA,adjacent,experiments/EPI-DWI_10-12-2026_invivoA/EPI-DWI_10-12-2026_test0.ppr,_DecoupleTransmitGain,scanner_records,,-453.0
+epiA,EPI-invivoA,adjacent,experiments/EPI-DWI_10-12-2026_invivoA/EPI-DWI_10-12-2026_test0.ppr,_ObserveReceiverGain,scanner_records,,180.0
+epiA,EPI-invivoA,adjacent,experiments/EPI-DWI_10-12-2026_invivoA/EPI-DWI_10-12-2026_test0.ppr,_ObserveTransmitGain,scanner_records,,-197.0
+epiA,EPI-invivoA,adjacent,experiments/EPI-DWI_10-12-2026_invivoA/EPI-DWI_10-12-2026_test0.ppr,_pdd_rx_mask,scanner_records,,8.0
+epiA,EPI-invivoA,adjacent,experiments/EPI-DWI_10-12-2026_invivoA/EPI-DWI_10-12-2026_test0.ppr,_pdd_tx_mask,scanner_records,,8.0
+epiA,EPI-invivoA,adjacent,experiments/EPI-DWI_10-12-2026_invivoA/EPI-DWI_10-12-2026_test0.ppr,_pts_mask,scanner_records,,13.0
+epiA,EPI-invivoA,adjacent,experiments/EPI-DWI_10-12-2026_invivoA/EPI-DWI_10-12-2026_test0.ppr,_use_pdd,scanner_records,,0.0

@@ -1,0 +1,1733 @@
+{
+  "fov_mm": 35,
+  "assumption": "Fixed brain in PBS; record fixation and measured temperature on scanner.",
+  "core_duration_s": 2357.0,
+  "conditional_duration_s": 42.0,
+  "alternative_total_duration_s": 2037.0,
+  "ppl_sha256": {
+    "v182": "7257c4b2cada0e293b973402c0b897f57a47be6e6c36a592c2b04fe34aad133e",
+    "v1912": "07b202660258a5c6843ffb88c4b2bfe630261a36d4d64d5b7f02594839444423"
+  },
+  "protocols": [
+    {
+      "letter": "A",
+      "version": "v182",
+      "purpose": "Load/compile, low-b E1 diagnostic, tissue/PBS high-b baseline",
+      "rows": [
+        [
+          0,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          5,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          20,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          100,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          6000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 50,
+      "esp": 14,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v182_testA",
+      "ppr": "FSE-DWI_10-11-2026_v182_testA/FSE-DWI_10-11-2026_v182_testA.ppr",
+      "ppr_sha256": "c178cada5db46a0005816a0780d6655ea6db14bd5ed3d19742b9cf19f3cf8c9f",
+      "raw_views": 136,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 147.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "B",
+      "version": "v1912",
+      "purpose": "Load/compile, matched ss-MGOT baseline and low-b/high-b diagnostic",
+      "rows": [
+        [
+          0,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          5,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          20,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          100,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          6000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 50,
+      "esp": 13,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v1912_testB",
+      "ppr": "FSE-DWI_10-11-2026_v1912_testB/FSE-DWI_10-11-2026_v1912_testB.ppr",
+      "ppr_sha256": "00d1f43332b9fa087dd827d13f8b6cb8f0dc5b27f7b12008a6da059908480b45",
+      "raw_views": 136,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 147.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "C",
+      "version": "v182",
+      "purpose": "PBS ADC and axis calibration: +/-x,+/-y,+/-z at b500/b1000; bracketed reference",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          500,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          500,
+          [
+            -1000,
+            0,
+            0
+          ]
+        ],
+        [
+          500,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          500,
+          [
+            0,
+            -1000,
+            0
+          ]
+        ],
+        [
+          500,
+          [
+            0,
+            0,
+            1000
+          ]
+        ],
+        [
+          500,
+          [
+            0,
+            0,
+            -1000
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            -1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            -1000,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            0,
+            -1000
+          ]
+        ],
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 50,
+      "esp": 14,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v182_testC",
+      "ppr": "FSE-DWI_10-11-2026_v182_testC/FSE-DWI_10-11-2026_v182_testC.ppr",
+      "ppr_sha256": "19861004375fc4b32b6255bf893118a9d721c4b7225b4cc5dfa55ecaf66eb3ea",
+      "raw_views": 136,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 294.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "D",
+      "version": "v1912",
+      "purpose": "Matched ss-MGOT six-polarity PBS ADC/axis calibration",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          500,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          500,
+          [
+            -1000,
+            0,
+            0
+          ]
+        ],
+        [
+          500,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          500,
+          [
+            0,
+            -1000,
+            0
+          ]
+        ],
+        [
+          500,
+          [
+            0,
+            0,
+            1000
+          ]
+        ],
+        [
+          500,
+          [
+            0,
+            0,
+            -1000
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            -1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            -1000,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            0,
+            -1000
+          ]
+        ],
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 50,
+      "esp": 13,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v1912_testD",
+      "ppr": "FSE-DWI_10-11-2026_v1912_testD/FSE-DWI_10-11-2026_v1912_testD.ppr",
+      "ppr_sha256": "a5822b8f5e078369736383046bf5607edf93c535b94c85b342692d882909df9d",
+      "raw_views": 136,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 294.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "E",
+      "version": "v182",
+      "purpose": "40-kHz minimum ESP, short-T2 benefit and high-b cleanliness",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          6000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v182_testE",
+      "ppr": "FSE-DWI_10-11-2026_v182_testE/FSE-DWI_10-11-2026_v182_testE.ppr",
+      "ppr_sha256": "be5bc943a1aa1b097ea98b6d74a99fa94c74a7b59b0b6ac93c12dd94ca4b4452",
+      "raw_views": 136,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 63.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "F",
+      "version": "v1912",
+      "purpose": "40-kHz ss-MGOT minimum ESP and high-b cleanliness",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          6000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 25,
+      "esp": 10,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v1912_testF",
+      "ppr": "FSE-DWI_10-11-2026_v1912_testF/FSE-DWI_10-11-2026_v1912_testF.ppr",
+      "ppr_sha256": "5700a5b7129e15223d0eb74324fd7967eaf609e368d00110f58bf9db9b6c4e60",
+      "raw_views": 136,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 63.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "G",
+      "version": "v182",
+      "purpose": "40-kHz minimum ESP + 1 ms timing control",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 25,
+      "esp": 12,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v182_testG",
+      "ppr": "FSE-DWI_10-11-2026_v182_testG/FSE-DWI_10-11-2026_v182_testG.ppr",
+      "ppr_sha256": "c05f3d87bcef2464a0d08e2a777f65d0b7349cf3432cbae9d87d2f02de9a6f7e",
+      "raw_views": 136,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 21.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "H",
+      "version": "v1912",
+      "purpose": "40-kHz minimum ESP + 1 ms timing control",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v1912_testH",
+      "ppr": "FSE-DWI_10-11-2026_v1912_testH/FSE-DWI_10-11-2026_v1912_testH.ppr",
+      "ppr_sha256": "312467cc7a0a1725f5e80c2a759fa48bc38ffb35518a39d9a8c845887a6d86b8",
+      "raw_views": 136,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 21.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "I",
+      "version": "v182",
+      "purpose": "20-kHz minimum ESP + 1 ms timing control",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 50,
+      "esp": 15,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v182_testI",
+      "ppr": "FSE-DWI_10-11-2026_v182_testI/FSE-DWI_10-11-2026_v182_testI.ppr",
+      "ppr_sha256": "229d4de8a422a3f116f09d73cf2591812f7ff4bcb43e611941449b48b1943d2e",
+      "raw_views": 136,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 21.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "J",
+      "version": "v1912",
+      "purpose": "20-kHz minimum ESP + 1 ms timing control",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 50,
+      "esp": 14,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v1912_testJ",
+      "ppr": "FSE-DWI_10-11-2026_v1912_testJ/FSE-DWI_10-11-2026_v1912_testJ.ppr",
+      "ppr_sha256": "415db23bbe31e056b2dc3040c91aedd160243de5482a5e030a2f20e24bd0337f",
+      "raw_views": 136,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 21.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "K",
+      "version": "v182",
+      "purpose": "K-style off-centre phase and tight-gap crosstalk with shot navigators",
+      "rows": [
+        [
+          0,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 2,
+      "offsets": [
+        -480,
+        0,
+        480
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v182_testK",
+      "ppr": "FSE-DWI_10-11-2026_v182_testK/FSE-DWI_10-11-2026_v182_testK.ppr",
+      "ppr_sha256": "37a87245a9a1b407fada223d85a8e1e711c92310eec01caa963d7f3904876444",
+      "raw_views": 153,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 63.0,
+      "slice_offsets_mm": [
+        -1.2,
+        0.0,
+        1.2
+      ]
+    },
+    {
+      "letter": "L",
+      "version": "v1912",
+      "purpose": "Minimum-spacing multi-slice ss-MGOT phase, crosstalk and shot navigators",
+      "rows": [
+        [
+          0,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 25,
+      "esp": 10,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 2,
+      "offsets": [
+        -1103,
+        0,
+        1103
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v1912_testL",
+      "ppr": "FSE-DWI_10-11-2026_v1912_testL/FSE-DWI_10-11-2026_v1912_testL.ppr",
+      "ppr_sha256": "4e37811a87601b666c09b444db2424f37041d652938864521f2c3bd9f222fa9b",
+      "raw_views": 153,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 63.0,
+      "slice_offsets_mm": [
+        -2.7575,
+        0.0,
+        2.7575
+      ]
+    },
+    {
+      "letter": "M",
+      "version": "v182",
+      "purpose": "Single-slice nav2 control against E; crosstalk reference for K/O/S",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 2,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v182_testM",
+      "ppr": "FSE-DWI_10-11-2026_v182_testM/FSE-DWI_10-11-2026_v182_testM.ppr",
+      "ppr_sha256": "5b4e65cbb629d7da0b938a7224810467d8a5c121cef3f3516bd24ca99a003d45",
+      "raw_views": 153,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 42.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "N",
+      "version": "v1912",
+      "purpose": "Single-slice nav2 control against F; crosstalk reference for L/P",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 25,
+      "esp": 10,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 2,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v1912_testN",
+      "ppr": "FSE-DWI_10-11-2026_v1912_testN/FSE-DWI_10-11-2026_v1912_testN.ppr",
+      "ppr_sha256": "73463c8ccd1a135c2a276a95589c032707ffcea05d3d6b64696da170b0189636",
+      "raw_views": 153,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 42.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "O",
+      "version": "v182",
+      "purpose": "Large off-centre RF phase at +/-5 mm",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 2,
+      "offsets": [
+        -2000,
+        0,
+        2000
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v182_testO",
+      "ppr": "FSE-DWI_10-11-2026_v182_testO/FSE-DWI_10-11-2026_v182_testO.ppr",
+      "ppr_sha256": "e29fc31cbce17cacc7ad3435b305e60468ab9426ded575979a5b9519fc861d30",
+      "raw_views": 153,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 21.0,
+      "slice_offsets_mm": [
+        -5.0,
+        0.0,
+        5.0
+      ]
+    },
+    {
+      "letter": "P",
+      "version": "v1912",
+      "purpose": "Large off-centre per-width RF phase at +/-5 mm",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 25,
+      "esp": 10,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 2,
+      "offsets": [
+        -2000,
+        0,
+        2000
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v1912_testP",
+      "ppr": "FSE-DWI_10-11-2026_v1912_testP/FSE-DWI_10-11-2026_v1912_testP.ppr",
+      "ppr_sha256": "fd1de5d8ba6d1bef45d9ee6cf91e8af0b8d6a28cb605361152cbe2d17d0a6420",
+      "raw_views": 153,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 21.0,
+      "slice_offsets_mm": [
+        -5.0,
+        0.0,
+        5.0
+      ]
+    },
+    {
+      "letter": "Q",
+      "version": "v182",
+      "purpose": "Delta30/TE44 tissue benefit and high-b gradient headroom with nav2",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          6000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 1000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 2,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v182_testQ",
+      "ppr": "FSE-DWI_10-11-2026_v182_testQ/FSE-DWI_10-11-2026_v182_testQ.ppr",
+      "ppr_sha256": "5aa711794e6b150f103c7f409f50357ba8d1d8966dace6ad568d5699d9c5ef58",
+      "raw_views": 153,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 63.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "R",
+      "version": "v1912",
+      "purpose": "Matched Delta30/TE44 ss-MGOT tissue and navigator qualification",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          6000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 25,
+      "esp": 10,
+      "tr": 1000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 2,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v1912_testR",
+      "ppr": "FSE-DWI_10-11-2026_v1912_testR/FSE-DWI_10-11-2026_v1912_testR.ppr",
+      "ppr_sha256": "4796cc55d2ead5d049ad2c136dc3f25c1152141567f9f02818fb6ce2339e207a",
+      "raw_views": 153,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 63.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "S",
+      "version": "v182",
+      "purpose": "2.4-mm gap crosstalk qualification before final pilot",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 2,
+      "offsets": [
+        -960,
+        0,
+        960
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v182_testS",
+      "ppr": "FSE-DWI_10-11-2026_v182_testS/FSE-DWI_10-11-2026_v182_testS.ppr",
+      "ppr_sha256": "72a0ede64238f95f6b10f99151aebf55cd8b82e6f4d9667e596a6229f0bdac15",
+      "raw_views": 153,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 21.0,
+      "slice_offsets_mm": [
+        -2.4,
+        0.0,
+        2.4
+      ]
+    },
+    {
+      "letter": "T",
+      "version": "v182",
+      "purpose": "End-of-tests drift repeat against A (b10/b1000)",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 50,
+      "esp": 14,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v182_testT",
+      "ppr": "FSE-DWI_10-11-2026_v182_testT/FSE-DWI_10-11-2026_v182_testT.ppr",
+      "ppr_sha256": "ca93746e6e75531fc102a99d791bee2b4ac52157036964470e58b33665db13cc",
+      "raw_views": 136,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 42.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "U",
+      "version": "v1912",
+      "purpose": "End-of-tests drift repeat against B (b10/b1000)",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 50,
+      "esp": 13,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v1912_testU",
+      "ppr": "FSE-DWI_10-11-2026_v1912_testU/FSE-DWI_10-11-2026_v1912_testU.ppr",
+      "ppr_sha256": "65009475fba0532d9b18dfe2c4d74522aaf291940c8b5ba50b4459e609f782b3",
+      "raw_views": 136,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 42.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "V",
+      "version": "v182",
+      "purpose": "Final ex-vivo pilot: 256x256, 3 slices, 1 average, Delta30, 3 directions/shell",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ],
+        [
+          3000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ],
+        [
+          6000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          6000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          6000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 25,
+      "esp": 14,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 2,
+      "offsets": [
+        -960,
+        0,
+        960
+      ],
+      "matrix": 256,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v182_testV",
+      "ppr": "FSE-DWI_10-11-2026_v182_testV/FSE-DWI_10-11-2026_v182_testV.ppr",
+      "ppr_sha256": "89c46c2d1250b938664b0d0789607ec06b52a31c61e512690c5073285c860d80",
+      "raw_views": 297,
+      "effective_phase_views": 264,
+      "gp_init_var": -1941,
+      "nominal_duration_s": 740.0,
+      "slice_offsets_mm": [
+        -2.4,
+        0.0,
+        2.4
+      ]
+    },
+    {
+      "letter": "W",
+      "version": "v1912",
+      "purpose": "NO ACQUISITION: reject one console unit below the spacing bound",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "guard",
+      "dwell_us": 25,
+      "esp": 10,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 2,
+      "offsets": [
+        -1102,
+        0,
+        1102
+      ],
+      "matrix": 128,
+      "expected_rejection": "E148; minimum separation=1103 units",
+      "stem": "FSE-DWI_10-11-2026_v1912_testW",
+      "ppr": "FSE-DWI_10-11-2026_v1912_testW/FSE-DWI_10-11-2026_v1912_testW.ppr",
+      "ppr_sha256": "f56369e6a8b623f843159e3cbbfdedf977b5509bb0a06142950cb0885ff5fced",
+      "raw_views": 153,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 0,
+      "slice_offsets_mm": [
+        -2.755,
+        0.0,
+        2.755
+      ]
+    },
+    {
+      "letter": "X",
+      "version": "v182",
+      "purpose": "NO ACQUISITION: reject ESP one ms below the 40-kHz minimum",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "guard",
+      "dwell_us": 25,
+      "esp": 10,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": "minimum esp=11 ms",
+      "stem": "FSE-DWI_10-11-2026_v182_testX",
+      "ppr": "FSE-DWI_10-11-2026_v182_testX/FSE-DWI_10-11-2026_v182_testX.ppr",
+      "ppr_sha256": "a9da98b6d6e359ee6f6a2700514ec0fb91c474ab494364a0ff23e84eed675234",
+      "raw_views": 136,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "Y",
+      "version": "v1912",
+      "purpose": "NO ACQUISITION: reject ESP one ms below the 40-kHz minimum",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "guard",
+      "dwell_us": 25,
+      "esp": 9,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": "E147; minimum ESP=10 ms",
+      "stem": "FSE-DWI_10-11-2026_v1912_testY",
+      "ppr": "FSE-DWI_10-11-2026_v1912_testY/FSE-DWI_10-11-2026_v1912_testY.ppr",
+      "ppr_sha256": "e7fc0610fcf3b94b823dc7a94d8f60049c555936f69eab9fec97439b07f1bf1a",
+      "raw_views": 136,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "Z",
+      "version": "v1912",
+      "purpose": "Off-resonance follow-up: manually detune common TX/RX centre by -128 Hz",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "conditional",
+      "dwell_us": 25,
+      "esp": 10,
+      "tr": 1000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 2,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "manual_centre_offset_hz": -128,
+      "stem": "FSE-DWI_10-11-2026_v1912_testZ",
+      "ppr": "FSE-DWI_10-11-2026_v1912_testZ/FSE-DWI_10-11-2026_v1912_testZ.ppr",
+      "ppr_sha256": "7741bb795dc5648e4340740b7ede065ae9b5f597124964004ed67c34d24cf0c8",
+      "raw_views": 153,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 21.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "AA",
+      "version": "v1912",
+      "purpose": "Off-resonance follow-up: manually detune common TX/RX centre by +128 Hz",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ]
+      ],
+      "priority": "conditional",
+      "dwell_us": 25,
+      "esp": 10,
+      "tr": 1000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 2,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "manual_centre_offset_hz": 128,
+      "stem": "FSE-DWI_10-11-2026_v1912_testAA",
+      "ppr": "FSE-DWI_10-11-2026_v1912_testAA/FSE-DWI_10-11-2026_v1912_testAA.ppr",
+      "ppr_sha256": "7741bb795dc5648e4340740b7ede065ae9b5f597124964004ed67c34d24cf0c8",
+      "raw_views": 153,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 21.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "AB",
+      "version": "v182",
+      "purpose": "Mixed-axis b1000 direction (577,577,577), for future non-axis direction sets",
+      "rows": [
+        [
+          1000,
+          [
+            577,
+            577,
+            577
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v182_testAB",
+      "ppr": "FSE-DWI_10-11-2026_v182_testAB/FSE-DWI_10-11-2026_v182_testAB.ppr",
+      "ppr_sha256": "5c6896e1e6208072d80fa3329098ca5da2041cbe12be425da6fd3919a677ba6d",
+      "raw_views": 136,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 21.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "AC",
+      "version": "v1912",
+      "purpose": "Matched mixed-axis b1000 direction, for future non-axis direction sets",
+      "rows": [
+        [
+          1000,
+          [
+            577,
+            577,
+            577
+          ]
+        ]
+      ],
+      "priority": "core",
+      "dwell_us": 25,
+      "esp": 10,
+      "tr": 1000,
+      "te": 54,
+      "big_delta": 40000,
+      "nav_on": 1,
+      "offsets": [
+        0
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v1912_testAC",
+      "ppr": "FSE-DWI_10-11-2026_v1912_testAC/FSE-DWI_10-11-2026_v1912_testAC.ppr",
+      "ppr_sha256": "e2b96e77838d3e48ffb084aa5954282450694a26f994f5c1c2c719872353dfec",
+      "raw_views": 136,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 21.0,
+      "slice_offsets_mm": [
+        0.0
+      ]
+    },
+    {
+      "letter": "AD",
+      "version": "v182",
+      "purpose": "Alternative final pilot: 128x128; replaces V, same slices/shells/Delta/average count",
+      "rows": [
+        [
+          10,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          1000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ],
+        [
+          3000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          3000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ],
+        [
+          6000,
+          [
+            1000,
+            0,
+            0
+          ]
+        ],
+        [
+          6000,
+          [
+            0,
+            1000,
+            0
+          ]
+        ],
+        [
+          6000,
+          [
+            0,
+            0,
+            1000
+          ]
+        ]
+      ],
+      "priority": "alternative",
+      "dwell_us": 25,
+      "esp": 11,
+      "tr": 2000,
+      "te": 44,
+      "big_delta": 30000,
+      "nav_on": 2,
+      "offsets": [
+        -960,
+        0,
+        960
+      ],
+      "matrix": 128,
+      "expected_rejection": null,
+      "stem": "FSE-DWI_10-11-2026_v182_testAD",
+      "ppr": "FSE-DWI_10-11-2026_v182_testAD/FSE-DWI_10-11-2026_v182_testAD.ppr",
+      "ppr_sha256": "a4b97a61f4757677a2e3a479ed41fcc1a4c9ce88ea0a930109c47f0ac6a4e5c1",
+      "raw_views": 153,
+      "effective_phase_views": 136,
+      "gp_init_var": -1000,
+      "nominal_duration_s": 420.0,
+      "slice_offsets_mm": [
+        -2.4,
+        0.0,
+        2.4
+      ]
+    }
+  ]
+}
